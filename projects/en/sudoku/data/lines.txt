@@ -1,0 +1,175 @@
+## Cold open   []
+p1 0 0.02 3.50 here's something that's true of every sudoku you have ever finished
+p1 1 3.89 6.33 take the sixteen cells that form a ring around the middle box
+p1 2 6.86 10.78 now take the four little two by two squares in the corners that's sixteen cells too
+p1 3 11.19 14.91 whatever puzzle you solved those two groups hold exactly the same digits
+p1 4 15.36 20.05 not the same pattern the same collection of numbers every time in every sudoku ever made
+p1 5 21.04 26.09 it sounds like a coincidence it isn't and the reason fits into about one minute of careful thinking
+p1 6 27.52 30.00 so in this video i want to answer three questions with you
+p1 7 30.39 31.99 one why does that hidden ring exist
+p1 8 32.40 36.06 two how far does the same trick go and what does it have to do with algebra
+p1 9 36.60 41.27 and three how few clues can a sudoku have and how do you prove that one fewer is impossible
+p1 10 42.26 45.03 and to get there we only need the one rule you already know
+## One rule, three ways   [ACT ONE — The rules, and a very big number]
+p2 0 0.02 1.46 a sudoku is a nine by nine grid
+p2 1 1.85 4.91 every row has to contain the digits one to nine each exactly once
+p2 2 5.38 8.87 so does every column and so does each of the nine three by three boxes
+p2 3 9.90 13.06 you start with some digits already filled in those are the clues
+p2 4 13.53 15.77 and a fair puzzle has exactly one way to finish it
+## Not from Japan   [ACT ONE — The rules, and a very big number]
+p2 5 17.45 21.16 you might think sudoku comes from japan the name does but the puzzle doesn't
+p2 6 21.62 27.25 it was first printed in nineteen seventy-nine in an american puzzle magazine under the name number place
+p2 7 27.68 31.39 the setter was most likely howard garns a retired architect from indiana
+p2 8 31.82 36.62 a japanese publisher nikoli picked it up in nineteen eighty-four and gave it the name sudoku
+p2 9 37.05 42.64 and it only became a worldwide craze in two thousand and four when british newspapers started printing it
+## How many grids?   [ACT ONE — The rules, and a very big number]
+p2 10 44.32 46.02 so how many different finished grids are there
+p2 11 46.41 51.28 in two thousand and five it was counted exactly about six point seven times ten to the twenty-one
+p2 12 51.67 54.28 that's six thousand seven hundred billion billion grids
+p2 13 54.71 58.02 keep that number in mind it's going to come back and cause a lot of trouble
+## Counting without knowing   [ACT TWO — The ring]
+p2 14 60.46 62.46 here's the key idea and it's surprisingly simple
+p2 15 62.85 68.55 take any row of a finished sudoku you don't know where each digit is but you know exactly which digits are there
+p2 16 69.02 70.96 one to nine once each call that one full set
+p2 17 71.37 73.48 the same is true for any column and for any box
+p2 18 74.61 81.37 so if i colour some whole rows columns or boxes i can say exactly what the coloured cells hold in total without solving anything
+p2 19 81.76 83.66 puzzle solvers call this set equivalence
+## Red and blue   [ACT TWO — The ring]
+p2 20 85.33 90.55 let's colour four things in red row three row seven and the two boxes on the left and right of the middle
+p2 21 91.02 94.28 four regions so the red cells hold four full sets of one to nine
+p2 22 94.70 97.81 now colour four columns in blue the first two and the last two
+p2 23 98.24 100.19 that's also four full sets of one to nine
+p2 24 101.17 104.86 so red and blue hold exactly the same digits four of each from one to nine
+## Take away the overlap   [ACT TWO — The ring]
+p2 25 106.49 108.58 now look at the cells that are both red and blue
+p2 26 109.01 114.07 take one of them out of both groups whatever digit is hiding there we've removed it from both sides
+p2 27 114.56 116.70 so red and blue still hold the same digits
+p2 28 117.13 120.89 do that with every cell that has both colours and the balance never changes
+## What's left   [ACT TWO — The ring]
+p2 29 122.57 123.35 here's what remains
+p2 30 123.81 126.59 in red sixteen cells forming a ring around the middle box
+p2 31 127.28 129.57 in blue the four two by two squares in the corners
+p2 32 129.98 131.90 and they must hold exactly the same digits
+p2 33 132.91 136.69 this is the phistomefel ring named after the german puzzle setter who noticed it
+p2 34 137.30 140.72 next time you finish a sudoku check it it works on every single one
+p2 35 141.11 143.76 and notice that we never solved anything we only counted
+## Four rows, five columns   [ACT THREE — Other shapes]
+p2 36 146.22 148.48 so can the same trick make other shapes it can
+p2 37 148.87 151.84 this time colour the top four rows in red that's four full sets
+p2 38 152.27 155.66 and colour the five columns on the right in blue that's five full sets
+p2 39 156.13 158.02 blue has exactly one set more than red
+## Squares appear   [ACT THREE — Other shapes]
+p2 40 159.66 163.90 now remove every cell that's both colours that's a four by five block along the top
+p2 41 164.31 166.78 what's left in red is a four by four square top left
+p2 42 167.19 169.89 what's left in blue is a five by five square bottom right
+p2 43 170.34 174.71 and since we removed the same cells from both blue still has exactly one full set more
+p2 44 175.72 181.13 so the big square holds everything the small square holds plus one more of each digit from one to nine
+p2 45 181.52 183.97 count the cells twenty-five minus sixteen is nine
+p2 46 184.38 187.06 five squared minus four squared is exactly one full set
+p2 47 187.47 191.94 and if you add up the digits the big square always beats the small one by exactly forty-five
+p2 48 192.97 199.79 the dutch setter aad van de wetering found a trick of exactly this kind a square in one corner tied to a square in the opposite corner
+p2 49 200.59 202.52 and puzzle setters have taken it much further
+## A puzzle built from algebra   [ACT FOUR — Difference of Squares]
+p2 50 204.97 208.95 here's a puzzle called difference of squares set by mathguy underscore twelve
+p2 51 209.36 212.06 it follows the normal sudoku rules plus a few extra ones
+p2 52 212.49 215.11 digits in a cage add up to the number written in its corner
+p2 53 215.76 218.27 digits along an arrow add up to the digit in its circle
+p2 54 218.96 222.40 and digits on a purple line are a run of consecutive numbers in any order
+p2 55 223.69 226.43 but some of the cages don't show a number they show letters
+p2 56 226.88 228.81 this cage adds up to x this one adds up to y
+p2 57 229.22 232.80 this long cage adds up to y squared and this big one adds up to x squared
+p2 58 233.19 235.31 two single cells are each equal to x minus y
+p2 59 235.72 238.50 and x and y are positive whole numbers with x bigger than y
+p2 60 239.51 242.09 almost nothing else is given so where do you even start
+## Red, blue, and one box   [ACT FOUR — Difference of Squares]
+p2 61 243.75 245.22 you start with the same colouring
+p2 62 245.61 248.44 red the top four rows blue the five columns on the right
+p2 63 248.83 253.72 take away the overlap and the five by five square holds one more full set than the four by four square
+p2 64 254.73 258.13 now take the top left box out of red as well that's one more full set gone
+p2 65 258.54 261.30 so blue now holds exactly two full sets more than red
+p2 66 261.69 264.58 and look what's left in red it's exactly the y squared cage
+## Balance the books   [ACT FOUR — Difference of Squares]
+p2 67 266.24 268.75 blue is two sets ahead so let's give red two more sets
+p2 68 269.22 272.58 add the whole of the last column to red and the whole of the bottom row
+p2 69 272.99 275.32 now red and blue hold exactly the same digits again
+p2 70 275.74 279.37 notice the bottom right corner cell it's in red twice now and in blue once
+p2 71 280.38 283.19 remove everything that's in both colours one copy at a time
+p2 72 283.58 284.85 then let the arrows do the rest
+p2 73 285.26 289.12 these two red cells on an arrow add up to that blue circle so take out all three
+p2 74 289.56 290.92 the same happens here at the bottom
+p2 75 291.31 296.39 and the corner cell still red once is the circle of this arrow whose three cells are blue out they go
+## The equation   [ACT FOUR — Difference of Squares]
+p2 76 298.09 298.91 here's what survives
+p2 77 299.30 300.85 in blue only the x squared cage
+p2 78 301.26 305.48 in red the y squared cage the x cage at the top right and the y cage at the bottom left
+p2 79 305.91 307.90 so x squared equals y squared plus x plus y
+p2 80 309.11 310.76 that's algebra and we can finish it
+p2 81 311.15 314.14 move y squared across x squared minus y squared equals x plus y
+p2 82 314.71 318.32 the left side is a difference of squares so it's x minus y times x plus y
+p2 83 318.71 320.98 and x plus y isn't zero so x minus y must be one
+p2 84 321.37 326.50 the puzzle's title wasn't decoration the grid itself is a difference of squares and so is the equation
+## Two ones, and a range   [ACT FOUR — Difference of Squares]
+p2 85 328.18 329.83 so both x minus y cells are ones
+p2 86 330.25 336.90 that puts a one in the bottom row so the y cage two different cells in that row must be at least two plus three y is at least five
+p2 87 337.31 339.02 and the y squared cage can't be too big
+p2 88 339.45 346.85 its column part and its row part are runs of three at most seven plus eight plus nine each and the corner cell has to be different from all of them
+p2 89 347.24 351.67 so the most it can hold is fifty-four sixty-four is out of reach so y is at most seven
+p2 90 352.22 354.03 y is five six or seven and x is one more
+## The rest of the grid   [ACT FOUR — Difference of Squares]
+p2 91 355.67 358.02 pinning down exactly which takes many more steps
+p2 92 358.47 363.10 when the cracking the cryptic channel solved it on video the full solve took close to an hour
+p2 93 363.53 365.51 here is where it lands x is eight y is seven
+p2 94 365.92 369.98 the y squared cage adds up to forty-nine the x squared cage adds up to sixty-four
+p2 95 370.40 374.15 and sixty-four minus forty-nine is fifteen which is exactly eight plus seven
+## How few?   [ACT FIVE — Seventeen clues]
+p2 96 376.59 379.48 newspaper sudokus usually give you around twenty-five clues
+p2 97 379.91 384.94 so here's a natural question what's the fewest clues a puzzle can have and still have only one answer
+p2 98 385.97 389.87 for years people found puzzles with seventeen clues tens of thousands of them
+p2 99 390.30 391.98 but nobody ever found one with sixteen
+p2 100 392.39 395.42 every sixteen-clue puzzle anyone tried had more than one answer
+p2 101 395.83 399.86 that's a strong hint but not finding something isn't a proof that it doesn't exist
+## Too big to search   [ACT FIVE — Seventeen clues]
+p2 102 401.52 403.58 the obvious way to prove it is to check everything
+p2 103 403.98 409.74 take every possible grid try every way to keep just sixteen clues and see whether any of them has only one answer
+p2 104 410.15 413.29 but there are about six point seven times ten to the twenty-one grids
+p2 105 413.72 418.78 and in each grid there are about three point four times ten to the sixteen ways to choose sixteen cells
+p2 106 419.23 421.17 even for a supercomputer that's hopeless
+## Families of grids   [ACT FIVE — Seventeen clues]
+p2 107 422.87 426.21 so the first step was to stop checking grids that are really the same
+p2 108 426.64 430.34 swap two rows inside the same band of three and you still have a valid grid
+p2 109 430.75 437.82 swap two whole bands swap columns the same way turn the grid on its side or relabel the digits swapping every three with every five
+p2 110 438.27 441.55 all of these give valid grids and they keep a puzzle's clue count too
+p2 111 441.96 446.07 so grids come in big families and you only need to check one grid from each family
+p2 112 446.48 450.97 that cuts six point seven times ten to the twenty-one down to about five point five billion
+## Patterns that must be broken   [ACT FIVE — Seventeen clues]
+p2 113 452.61 454.19 the second step cuts down the clues
+p2 114 454.62 461.41 suppose a seven and a nine sit in one row and another seven and nine sit in the same two columns a few rows down in the same two boxes
+p2 115 461.88 466.83 then you could swap the sevens and the nines in those four cells and the grid would still be perfectly valid
+p2 116 467.24 471.27 so a puzzle with only one answer must have a clue in at least one of those four cells
+p2 117 471.68 473.82 these sets of cells are called unavoidable sets
+p2 118 474.31 479.80 find enough of them and most ways of placing sixteen clues fail immediately without any solving at all
+## Seven million hours   [ACT FIVE — Seventeen clues]
+p2 119 481.48 488.94 in two thousand and eleven gary mcguire a mathematician at university college dublin ran this search with bastian tugemann and gilles civario
+p2 120 489.41 494.88 it took about seven million hours of computer time running for the whole year on a supercomputer in ireland
+p2 121 495.31 498.75 and it found nothing no sixteen-clue sudoku with a unique answer exists
+p2 122 499.22 502.15 since seventeen-clue puzzles do exist seventeen is the minimum
+p2 123 502.56 504.98 they announced it in january two thousand and twelve
+## A computer can do it   [ACT SIX — Just logic?]
+p2 124 507.42 510.91 some people including some mathematicians find sudoku a little dull
+p2 125 511.34 515.69 it's pure logic and a computer can solve any newspaper sudoku in a fraction of a second
+p2 126 517.04 519.38 and that's true but notice what the computer can't do
+p2 127 519.87 522.14 it can solve a grid without ever noticing the ring
+p2 128 522.53 528.94 it can't tell you why the ring is there or that a square of twenty-five cells beats a square of sixteen by exactly forty-five
+p2 129 529.33 535.56 even the seventeen-clue proof only finished in a year because people first understood the families and the unavoidable sets
+p2 130 536.01 539.24 the search was computing knowing what to search was mathematics
+## Putting it together   [ACT SIX — Just logic?]
+p2 131 540.96 542.07 so the three questions
+p2 132 542.52 549.92 why does the ring exist because two groups of whole rows columns and boxes hold the same digits and taking away the overlap keeps them equal
+p2 133 550.31 559.58 how far does the trick go far enough to turn the grid into algebra five squared minus four squared is one full set of digits and a whole puzzle can hide x squared minus y squared
+p2 134 559.97 565.58 and how few clues can a sudoku have seventeen proven by cutting a hopeless search down to a year of computing
+## Next time   [ACT SIX — Just logic?]
+p2 135 567.22 570.17 next time you finish a sudoku don't throw it away straight away
+p2 136 570.66 574.30 circle the ring around the middle box and the four corners and compare
+p2 137 574.71 579.73 then add up the four by four square in the top left and the five by five square in the bottom right
+p2 138 580.12 582.12 the difference will be forty-five every time
+p2 139 583.12 584.90 thanks for watching see you in the next one

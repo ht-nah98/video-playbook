@@ -1,0 +1,133 @@
+{
+ "duration": 66.531,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [
+  {
+   "text": "If you spend enough time on social media, sooner or later you will meet a little sum that looks like nothing special, with thousands of people fighting about it in the comments.",
+   "leaked": "I've barely even started packing."
+  }
+ ],
+ "beats": [
+  {
+   "text": "If you spend enough time on social media, sooner or later you will meet a little sum that looks like nothing special, with thousands of people fighting about it in the comments.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 0.0,
+   "end": 8.913,
+   "wav": "audio/voice/f9b824422285e512.wav"
+  },
+  {
+   "text": "The classic one goes like this: six divided by two, times the bracket one plus two. What is it?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 9.263,
+   "end": 13.922,
+   "wav": "audio/voice/7b6a53a51c6dcae3.wav"
+  },
+  {
+   "text": "Half the internet swears the answer is nine. The other half is just as sure it is one.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 14.872,
+   "end": 19.041,
+   "wav": "audio/voice/edb9a372bcc431be.wav"
+  },
+  {
+   "text": "And the funny part is that both sides are confident they followed the very same rule. PEMDAS.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 19.391,
+   "end": 24.099,
+   "wav": "audio/voice/a739190be76a6718.wav"
+  },
+  {
+   "text": "You probably learned it in primary school, as the order of operations.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 25.049,
+   "end": 28.225,
+   "wav": "audio/voice/0e3f8ce53321fad5.wav"
+  },
+  {
+   "text": "Brackets first, then powers, then multiplication and division, and addition and subtraction last of all.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 28.575,
+   "end": 33.905,
+   "wav": "audio/voice/550b8c705155e550.wav"
+  },
+  {
+   "text": "So today, we are going to ask where that order actually comes from.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 34.855,
+   "end": 37.73,
+   "wav": "audio/voice/a9966cf2886cc90f.wav"
+  },
+  {
+   "text": "Is it an unbreakable truth of mathematics, like one plus one making two?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 38.08,
+   "end": 41.683,
+   "wav": "audio/voice/a33fb56ca2345da0.wav"
+  },
+  {
+   "text": "Or is it a rule of the game, something people sat down and agreed on, simply because it was convenient?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 42.033,
+   "end": 47.085,
+   "wav": "audio/voice/7d200751a03d048e.wav"
+  },
+  {
+   "text": "Here is where I stand. PEMDAS is a convention, made by people. But a convention is not the same thing as an arbitrary choice.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 48.035,
+   "end": 54.305,
+   "wav": "audio/voice/713d525c6f128c6a.wav"
+  },
+  {
+   "text": "And the best evidence that it is a convention, is exactly those sums the internet cannot stop arguing about.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 54.655,
+   "end": 59.951,
+   "wav": "audio/voice/175f0ad1304850de.wav"
+  },
+  {
+   "text": "To see why, we first have to look at what the rule really says, because a lot of us remember it slightly wrong.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 60.301,
+   "end": 65.581,
+   "wav": "audio/voice/33bce660ac2a966e.wav"
+  }
+ ]
+}

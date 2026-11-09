@@ -1,0 +1,1318 @@
+{
+ "duration": 578.637,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Imagine you are a shepherd, thousands of years ago, counting your sheep.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": "act",
+   "start": 0.0,
+   "end": 3.592,
+   "wav": "audio/voice/7b5f2d95b466267f.wav"
+  },
+  {
+   "text": "What is the first number you need? One, of course. Then two, then three.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 3.942,
+   "end": 7.395,
+   "wav": "audio/voice/7a535313344fbd2e.wav"
+  },
+  {
+   "text": "You never need to count zero sheep, because if there are no sheep, what exactly are you counting?",
+   "idea": true,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 7.745,
+   "end": 12.374,
+   "wav": "audio/voice/a3671359b8959f7b.wav"
+  },
+  {
+   "text": "Zero is useless for counting, and that is why the Romans never needed it.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 13.324,
+   "end": 16.829,
+   "wav": "audio/voice/1b892e35b4ea0aa1.wav"
+  },
+  {
+   "text": "Roman numerals have I, V, X, L, C, D and M, but no sign at all for zero.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 17.179,
+   "end": 20.417,
+   "wav": "audio/voice/794c7f1a0dfcd28f.wav"
+  },
+  {
+   "text": "And with them, the Romans did their sums, built their bridges, and kept their accounts, perfectly well.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 20.767,
+   "end": 25.877,
+   "wav": "audio/voice/786ed9fd1ae9b82e.wav"
+  },
+  {
+   "text": "The trouble only begins when you write numbers by position.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 26.827,
+   "end": 29.756,
+   "wav": "audio/voice/3063e5c9cf8d37db.wav"
+  },
+  {
+   "text": "Try writing three hundred and five in columns.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 30.106,
+   "end": 32.152,
+   "wav": "audio/voice/130cb2b00a9c24e8.wav"
+  },
+  {
+   "text": "A three in the hundreds column, a five in the ones column, and in the tens column, something that says: empty.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 32.502,
+   "end": 38.038,
+   "wav": "audio/voice/8c620a21962532fa.wav"
+  },
+  {
+   "text": "Leave that something out, and your reader sees thirty-five.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 38.388,
+   "end": 41.149,
+   "wav": "audio/voice/19404a1d7bfd8de1.wav"
+  },
+  {
+   "text": "The Babylonians, who counted in sixties rather than tens, lived with exactly this problem for more than a thousand years.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 42.099,
+   "end": 48.195,
+   "wav": "audio/voice/7c125565f9ad4280.wav"
+  },
+  {
+   "text": "Then, a few centuries before our era, their scribes began pressing a small sign of two slanted wedges into the gaps.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 48.545,
+   "end": 54.62,
+   "wav": "audio/voice/52a001336b4cd1a8.wav"
+  },
+  {
+   "text": "But that sign did one job, and only one. It held a place.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 54.97,
+   "end": 57.579,
+   "wav": "audio/voice/90972dd62bc593de.wav"
+  },
+  {
+   "text": "It was never written at the end of a number, and nobody ever added, subtracted, or multiplied with it.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 57.929,
+   "end": 63.015,
+   "wav": "audio/voice/fa8ca30fd07c120c.wav"
+  },
+  {
+   "text": "Other people came close, too.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 63.965,
+   "end": 65.517,
+   "wav": "audio/voice/8c990a3b060355bd.wav"
+  },
+  {
+   "text": "Egyptian scribes had a word for a balance of nothing in their accounts, and the Maya, on the other side of the world, invented a zero of their own.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 65.868,
+   "end": 73.541,
+   "wav": "audio/voice/1cd7855df609d4ea.wav"
+  },
+  {
+   "text": "But a sign for an empty place is still not a number.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 73.891,
+   "end": 76.148,
+   "wav": "audio/voice/9d21988e424bfe59.wav"
+  },
+  {
+   "text": "The real leap came from India.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 77.098,
+   "end": 78.484,
+   "wav": "audio/voice/c838cc7769a40206.wav"
+  },
+  {
+   "text": "In the year six twenty-eight, the mathematician Brahmagupta wrote a book in which zero was treated, for the first time, as a number like any other.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 78.834,
+   "end": 86.506,
+   "wav": "audio/voice/9223807354d9efad.wav"
+  },
+  {
+   "text": "He wrote down its rules. Any number plus zero stays the same. A number minus itself is zero. Any number times zero is zero.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 86.856,
+   "end": 93.098,
+   "wav": "audio/voice/2af45e448d88d547.wav"
+  },
+  {
+   "text": "For the first time in history, nothing had become a mathematical object.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 93.448,
+   "end": 97.062,
+   "wav": "audio/voice/04cdac3e1b10ee07.wav"
+  },
+  {
+   "text": "From India, the idea travelled to the scholars of the Islamic world, among them al-Khwarizmi in Baghdad.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 98.012,
+   "end": 103.215,
+   "wav": "audio/voice/8fc7d66a8627f001.wav"
+  },
+  {
+   "text": "And in twelve oh two, Fibonacci brought it to Europe, which took several more centuries to fully accept it.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "Why zero came so late",
+   "opens": null,
+   "start": 103.565,
+   "end": 109.147,
+   "wav": "audio/voice/91aa20bb4ca8f2c4.wav"
+  },
+  {
+   "text": "So when we talk about zero, we are really talking about two very different things.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": "stop",
+   "start": 110.747,
+   "end": 114.674,
+   "wav": "audio/voice/6d1921329e779c96.wav"
+  },
+  {
+   "text": "The first job is holding a place, and it is the easy one.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": null,
+   "start": 115.624,
+   "end": 118.316,
+   "wav": "audio/voice/fae266c2780508ae.wav"
+  },
+  {
+   "text": "In three hundred and five, the zero simply says that the tens column is empty.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": null,
+   "start": 118.666,
+   "end": 122.462,
+   "wav": "audio/voice/0347d36c6ccec52f.wav"
+  },
+  {
+   "text": "It is a piece of notation that lets you tell thirty-five from three hundred and five, and from three thousand and fifty.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": null,
+   "start": 122.812,
+   "end": 128.862,
+   "wav": "audio/voice/118481463038e0a8.wav"
+  },
+  {
+   "text": "Nothing more.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": null,
+   "start": 129.212,
+   "end": 129.675,
+   "wav": "audio/voice/f9345d05093727ad.wav"
+  },
+  {
+   "text": "The second job is the hard one. Zero is also a real number.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": null,
+   "start": 130.625,
+   "end": 133.335,
+   "wav": "audio/voice/f2d1e21a31e7c1b3.wav"
+  },
+  {
+   "text": "It sits on the number line, right between the positive numbers and the negative ones.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": null,
+   "start": 133.685,
+   "end": 137.974,
+   "wav": "audio/voice/af1d167756fa9903.wav"
+  },
+  {
+   "text": "It is what you get from five minus five. It is how many apples are in an empty basket. It is the origin of every graph you have ever drawn.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": null,
+   "start": 138.324,
+   "end": 145.289,
+   "wav": "audio/voice/8c7f8243d9a4f96c.wav"
+  },
+  {
+   "text": "Brahmagupta was the first to say it out loud: zero is not just a placeholder, it is a number that can take part in a calculation.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": null,
+   "start": 145.639,
+   "end": 152.003,
+   "wav": "audio/voice/da93792239be52b3.wav"
+  },
+  {
+   "text": "And from that very moment, he ran into the problem this whole video is about.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": null,
+   "start": 152.353,
+   "end": 156.001,
+   "wav": "audio/voice/ab8a69c0be1cca52.wav"
+  },
+  {
+   "text": "Division.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Nothing",
+   "section": "The two jobs of zero",
+   "opens": null,
+   "start": 156.351,
+   "end": 156.749,
+   "wav": "audio/voice/f714f10d21f2a75a.wav"
+  },
+  {
+   "text": "Notice how well zero gets along with addition, subtraction and multiplication.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": "act",
+   "start": 159.149,
+   "end": 162.867,
+   "wav": "audio/voice/0f8b454af60c115b.wav"
+  },
+  {
+   "text": "Add zero to any number, and nothing changes. Seven plus zero is still seven.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 163.817,
+   "end": 167.696,
+   "wav": "audio/voice/490eb8b924e6331d.wav"
+  },
+  {
+   "text": "In addition, zero is the neutral element. It leaves its partner exactly as it found it.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 168.046,
+   "end": 172.337,
+   "wav": "audio/voice/2954262e7ac6022a.wav"
+  },
+  {
+   "text": "Subtraction works too. Seven minus zero is seven, and seven minus seven is zero. Everything fits.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 173.287,
+   "end": 178.454,
+   "wav": "audio/voice/9d58f45cd824f5ba.wav"
+  },
+  {
+   "text": "Multiplication is a little more dramatic, but just as consistent. Any number times zero is zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 179.404,
+   "end": 184.197,
+   "wav": "audio/voice/20c5a898a6bcdc1f.wav"
+  },
+  {
+   "text": "You can picture it. Seven baskets with zero apples in each, and you have no apples at all.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 184.547,
+   "end": 188.833,
+   "wav": "audio/voice/2bb993e3f393c7ec.wav"
+  },
+  {
+   "text": "Zero baskets with seven apples in each, and you still have none.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 189.183,
+   "end": 192.282,
+   "wav": "audio/voice/c8aa173f4facb75a.wav"
+  },
+  {
+   "text": "In multiplication, zero is a black hole. Everything that touches it gets pulled in.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 192.632,
+   "end": 196.741,
+   "wav": "audio/voice/2cf04257c4b607fb.wav"
+  },
+  {
+   "text": "But with division, the story falls apart.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 197.691,
+   "end": 199.571,
+   "wav": "audio/voice/e86f099244bc773f.wav"
+  },
+  {
+   "text": "Brahmagupta wrote that zero divided by zero is zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 199.921,
+   "end": 202.613,
+   "wav": "audio/voice/6ac9f64e6150f505.wav"
+  },
+  {
+   "text": "About five hundred years later, another Indian mathematician, Bhaskara, said that a number divided by zero is infinite, and he gave it a name: khahara, the quantity whose divisor is zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 202.963,
+   "end": 212.733,
+   "wav": "audio/voice/909e05eba7a5d26f.wav"
+  },
+  {
+   "text": "In the modern sense, both of them were wrong.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 213.083,
+   "end": 214.897,
+   "wav": "audio/voice/2ba57095b9f81444.wav"
+  },
+  {
+   "text": "Or, more precisely, neither definition fits with the rest of arithmetic.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 215.247,
+   "end": 218.975,
+   "wav": "audio/voice/284b52e7f5c28beb.wav"
+  },
+  {
+   "text": "So what went wrong?",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Everything works, except division",
+   "opens": null,
+   "start": 219.325,
+   "end": 220.226,
+   "wav": "audio/voice/816b0f887bb52a0a.wav"
+  },
+  {
+   "text": "To see why dividing by zero breaks, you have to look again at what division actually is.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": "stop",
+   "start": 221.826,
+   "end": 226.326,
+   "wav": "audio/voice/24ccf5439305b6bb.wav"
+  },
+  {
+   "text": "Division is multiplication, run backwards.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 226.676,
+   "end": 228.87,
+   "wav": "audio/voice/a403ff66190c3122.wav"
+  },
+  {
+   "text": "When you write twelve divided by three equals four, what you are really saying is this.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 229.82,
+   "end": 234.078,
+   "wav": "audio/voice/c80f8ebbbee4b05d.wav"
+  },
+  {
+   "text": "There is exactly one number, four, such that four times three is twelve.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 234.428,
+   "end": 237.951,
+   "wav": "audio/voice/138d68ccc8637a50.wav"
+  },
+  {
+   "text": "Dividing is simply finding the missing factor in a multiplication.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 238.301,
+   "end": 241.579,
+   "wav": "audio/voice/11e10f091f51a99e.wav"
+  },
+  {
+   "text": "Now apply that same definition to zero.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 241.929,
+   "end": 243.985,
+   "wav": "audio/voice/8478aa01b6e16931.wav"
+  },
+  {
+   "text": "Say you want twelve divided by zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 244.935,
+   "end": 246.664,
+   "wav": "audio/voice/1da201fe9fa85910.wav"
+  },
+  {
+   "text": "You are looking for some number, call it x, such that x times zero is twelve.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 247.014,
+   "end": 250.693,
+   "wav": "audio/voice/697c3c3ebcd94b50.wav"
+  },
+  {
+   "text": "But you have just seen that every number times zero is zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 251.043,
+   "end": 253.744,
+   "wav": "audio/voice/09656dfeb0077fe3.wav"
+  },
+  {
+   "text": "There is no x anywhere that you can multiply by zero and get twelve.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 254.094,
+   "end": 257.221,
+   "wav": "audio/voice/53cf06c59cf291b8.wav"
+  },
+  {
+   "text": "So twelve divided by zero is not a hard question. It is a question with no answer to find.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 257.571,
+   "end": 261.994,
+   "wav": "audio/voice/56b40d5b6cfce093.wav"
+  },
+  {
+   "text": "What about zero divided by zero?",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 262.944,
+   "end": 264.493,
+   "wav": "audio/voice/86471cd70704a829.wav"
+  },
+  {
+   "text": "Now you want an x such that x times zero is zero, and this time, the trouble runs the other way.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 264.843,
+   "end": 269.462,
+   "wav": "audio/voice/d3c28872dc81a297.wav"
+  },
+  {
+   "text": "Every x works. One times zero is zero. Two times zero is zero. A million times zero is still zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 269.812,
+   "end": 274.819,
+   "wav": "audio/voice/ed6d15fe0a9e8178.wav"
+  },
+  {
+   "text": "There are infinitely many answers.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 275.169,
+   "end": 276.967,
+   "wav": "audio/voice/431f3c7e8d93a7d1.wav"
+  },
+  {
+   "text": "But division, by its very definition, has to give one answer, and only one.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 277.917,
+   "end": 281.64,
+   "wav": "audio/voice/97745301493b0f71.wav"
+  },
+  {
+   "text": "So mathematicians say that twelve divided by zero is undefined, because there is no answer.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 281.99,
+   "end": 286.609,
+   "wav": "audio/voice/04ad2293edb5c6e3.wav"
+  },
+  {
+   "text": "And zero divided by zero is undefined too, but because there are too many.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 286.959,
+   "end": 290.568,
+   "wav": "audio/voice/5b989aefd661496c.wav"
+  },
+  {
+   "text": "Two different kinds of undefined, and both of them rob division of the one thing that makes it useful: a single answer.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "What division really is",
+   "opens": null,
+   "start": 290.918,
+   "end": 297.01,
+   "wav": "audio/voice/9b295c706de4fe4f.wav"
+  },
+  {
+   "text": "There is another way to feel why dividing by zero breaks.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": "stop",
+   "start": 298.61,
+   "end": 301.285,
+   "wav": "audio/voice/b4e68f9a76318366.wav"
+  },
+  {
+   "text": "Instead of dividing by zero itself, divide by numbers that get closer and closer to it.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 301.635,
+   "end": 306.015,
+   "wav": "audio/voice/aafd098397a69af9.wav"
+  },
+  {
+   "text": "One divided by one tenth is ten.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 306.965,
+   "end": 308.487,
+   "wav": "audio/voice/cee5d5adef58b464.wav"
+  },
+  {
+   "text": "One divided by one hundredth is a hundred.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 308.837,
+   "end": 310.79,
+   "wav": "audio/voice/870d16321911672f.wav"
+  },
+  {
+   "text": "One divided by one thousandth is a thousand.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 311.14,
+   "end": 313.237,
+   "wav": "audio/voice/3cb5d5500b14045a.wav"
+  },
+  {
+   "text": "The smaller the number you divide by, the bigger the result. It looks as if dividing by zero should give you infinity.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 313.587,
+   "end": 319.33,
+   "wav": "audio/voice/dcb5d2e5408fe1df.wav"
+  },
+  {
+   "text": "But now come at zero from the other side.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 320.28,
+   "end": 322.129,
+   "wav": "audio/voice/1a7c87ed9745ec80.wav"
+  },
+  {
+   "text": "One divided by minus one tenth is minus ten. By minus one hundredth, minus a hundred. By minus one thousandth, minus a thousand.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 322.479,
+   "end": 328.977,
+   "wav": "audio/voice/2256986f2595ae0a.wav"
+  },
+  {
+   "text": "From the negative side, the result races off towards minus infinity.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 329.327,
+   "end": 332.714,
+   "wav": "audio/voice/ba4de1c70fadff90.wav"
+  },
+  {
+   "text": "So which is it? Should one divided by zero be plus infinity, or minus infinity?",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 333.664,
+   "end": 337.498,
+   "wav": "audio/voice/b00580a1792fcc30.wav"
+  },
+  {
+   "text": "It depends on which side you come from.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 337.848,
+   "end": 339.297,
+   "wav": "audio/voice/2d3d6f2b04bd32a0.wav"
+  },
+  {
+   "text": "Two roads lead to two destinations with opposite signs, so there is no single place where they both arrive.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 339.647,
+   "end": 345.054,
+   "wav": "audio/voice/24abcd2ba558eefa.wav"
+  },
+  {
+   "text": "That is why, in calculus, the limit of one over x, as x goes to zero, does not exist.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 345.404,
+   "end": 349.402,
+   "wav": "audio/voice/565411b7d093e2c1.wav"
+  },
+  {
+   "text": "It isn't some strange, exotic number. It simply isn't there.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 349.752,
+   "end": 352.701,
+   "wav": "audio/voice/84ce88c8245ebbb9.wav"
+  },
+  {
+   "text": "And zero over zero is even more slippery.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 353.651,
+   "end": 355.722,
+   "wav": "audio/voice/573d864c455a0918.wav"
+  },
+  {
+   "text": "Take x over x. As x shrinks towards zero, the answer is always one.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 356.072,
+   "end": 359.353,
+   "wav": "audio/voice/f768468f8ac95527.wav"
+  },
+  {
+   "text": "Take two x over x, and the answer is always two.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 359.703,
+   "end": 361.919,
+   "wav": "audio/voice/b091d97fc85e786c.wav"
+  },
+  {
+   "text": "Take x squared over x, and the answer slides down to zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 362.269,
+   "end": 364.999,
+   "wav": "audio/voice/6b73e2b9ab9cf183.wav"
+  },
+  {
+   "text": "Every one of them looks like zero over zero at the end, yet the answer can be anything at all, depending on how you got there.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 365.349,
+   "end": 371.241,
+   "wav": "audio/voice/67de49457ca9bdcd.wav"
+  },
+  {
+   "text": "That is why zero over zero is called an indeterminate form.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The broken operation",
+   "section": "Getting closer to zero",
+   "opens": null,
+   "start": 371.591,
+   "end": 374.374,
+   "wav": "audio/voice/9f67970df427dbba.wav"
+  },
+  {
+   "text": "By now, you might be thinking: why not just define one divided by zero as infinity, and be done with it?",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": "act",
+   "start": 376.774,
+   "end": 381.872,
+   "wav": "audio/voice/42ca2cc64b7cf69e.wav"
+  },
+  {
+   "text": "The trouble is that the rest of arithmetic starts to crack.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 382.822,
+   "end": 385.96,
+   "wav": "audio/voice/cfbccf6d9ece207e.wav"
+  },
+  {
+   "text": "Remember the rule that ties division to multiplication: if a divided by b is c, then c times b must be a.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 386.31,
+   "end": 391.394,
+   "wav": "audio/voice/ed63949040eeeb90.wav"
+  },
+  {
+   "text": "So if one divided by zero is infinity, then infinity times zero must be one.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 391.744,
+   "end": 395.675,
+   "wav": "audio/voice/12f6c4434a28d968.wav"
+  },
+  {
+   "text": "But by the same argument, two divided by zero is infinity too, so infinity times zero must also be two.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 396.025,
+   "end": 401.252,
+   "wav": "audio/voice/3351dcd739f81d62.wav"
+  },
+  {
+   "text": "One expression, two different answers. One equals two.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 401.602,
+   "end": 404.22,
+   "wav": "audio/voice/98aa4beb500a36dd.wav"
+  },
+  {
+   "text": "Or try treating infinity as an ordinary number.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 405.17,
+   "end": 407.281,
+   "wav": "audio/voice/7bb525856b1e66cc.wav"
+  },
+  {
+   "text": "Add one to infinity, and you still have infinity. Add two to infinity, and you still have infinity.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 407.631,
+   "end": 412.468,
+   "wav": "audio/voice/c766a7b7c366e853.wav"
+  },
+  {
+   "text": "So one plus infinity equals two plus infinity.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 412.818,
+   "end": 415.295,
+   "wav": "audio/voice/01be93aea0f325bd.wav"
+  },
+  {
+   "text": "Now take infinity away from both sides, the way you would with any number, and you are left with one equals two.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 415.645,
+   "end": 421.364,
+   "wav": "audio/voice/572d99ad36dcf53a.wav"
+  },
+  {
+   "text": "And yet, mathematics does not actually forbid you from defining one divided by zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 422.314,
+   "end": 426.639,
+   "wav": "audio/voice/c2a77f55807e65c1.wav"
+  },
+  {
+   "text": "On a surface called the Riemann sphere, one divided by zero really is infinity, and it is perfectly legal.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 426.989,
+   "end": 432.317,
+   "wav": "audio/voice/908010ee15f2e380.wav"
+  },
+  {
+   "text": "But look at what it costs.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 432.667,
+   "end": 434.0,
+   "wav": "audio/voice/346b622ece2d46d4.wav"
+  },
+  {
+   "text": "That infinity has no sign. It is not bigger than five, and not smaller than minus five.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 434.351,
+   "end": 438.429,
+   "wav": "audio/voice/ad2f537ecf851c66.wav"
+  },
+  {
+   "text": "Zero times infinity, infinity minus infinity, and zero over zero still have no answer.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 438.779,
+   "end": 443.371,
+   "wav": "audio/voice/919553fc13498996.wav"
+  },
+  {
+   "text": "So mathematics never says you can't. It says: if you do, you have to pay, by giving something else up.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Why not just call it infinity?",
+   "opens": null,
+   "start": 443.721,
+   "end": 448.597,
+   "wav": "audio/voice/c3ffea354e0703ae.wav"
+  },
+  {
+   "text": "So what does your computer do, when you ask it to divide by zero?",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": "stop",
+   "start": 450.197,
+   "end": 453.06,
+   "wav": "audio/voice/478c72516bf9998e.wav"
+  },
+  {
+   "text": "With whole numbers, most programming languages simply stop, with an error.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 454.01,
+   "end": 457.859,
+   "wav": "audio/voice/4738d998a234befc.wav"
+  },
+  {
+   "text": "It is the most honest answer there is. The machine tells you straight out: I can't compute this.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 458.209,
+   "end": 463.026,
+   "wav": "audio/voice/74735d5a9c5d010a.wav"
+  },
+  {
+   "text": "But with decimal numbers, computers follow a standard called I triple E seven five four, and it handles things differently.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 463.976,
+   "end": 470.581,
+   "wav": "audio/voice/d5607d4f3e144e22.wav"
+  },
+  {
+   "text": "A positive number divided by zero gives Infinity. A negative number divided by zero gives minus Infinity.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 470.931,
+   "end": 476.535,
+   "wav": "audio/voice/f88f9cc4e8acc414.wav"
+  },
+  {
+   "text": "And zero divided by zero gives a special value called NaN, which stands for Not a Number.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 476.885,
+   "end": 481.138,
+   "wav": "audio/voice/b14313e7b99bd050.wav"
+  },
+  {
+   "text": "Here is a detail that echoes everything we have seen.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 482.088,
+   "end": 484.409,
+   "wav": "audio/voice/9f8902cd48827ba2.wav"
+  },
+  {
+   "text": "The standard actually keeps two zeros, a plus zero and a minus zero, so that it can remember which side you came from.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 484.759,
+   "end": 490.985,
+   "wav": "audio/voice/aabaa7ebe2d51aa0.wav"
+  },
+  {
+   "text": "One divided by plus zero is Infinity. One divided by minus zero is minus Infinity.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 491.335,
+   "end": 495.558,
+   "wav": "audio/voice/2e86d39b5300ef33.wav"
+  },
+  {
+   "text": "And NaN has a very strange property. It is not equal to itself.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 496.508,
+   "end": 499.672,
+   "wav": "audio/voice/7782b9bbe3dd9fec.wav"
+  },
+  {
+   "text": "Compare NaN with NaN, and the computer answers: false.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 500.022,
+   "end": 502.609,
+   "wav": "audio/voice/a7a2b0a3e65feb73.wav"
+  },
+  {
+   "text": "Ask it for infinity times zero, or infinity minus infinity, and it answers NaN again.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 502.959,
+   "end": 507.268,
+   "wav": "audio/voice/626cc8d7d3aabbcb.wav"
+  },
+  {
+   "text": "The machine has learned exactly the lesson we just worked out by hand.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 507.618,
+   "end": 510.77,
+   "wav": "audio/voice/07b3f1b12c491d4e.wav"
+  },
+  {
+   "text": "None of this means the standard has solved division by zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 511.72,
+   "end": 514.419,
+   "wav": "audio/voice/bef0e8e4de76777c.wav"
+  },
+  {
+   "text": "It is a practical agreement, so that a program does not crash halfway through a calculation.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 514.769,
+   "end": 519.157,
+   "wav": "audio/voice/73d383fa1407937e.wav"
+  },
+  {
+   "text": "The mathematical problem is still there. It has just been wrapped up in a special value, and set aside.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "What your computer does",
+   "opens": null,
+   "start": 519.507,
+   "end": 524.359,
+   "wav": "audio/voice/154afda38c730aaf.wav"
+  },
+  {
+   "text": "Zero is one of the most important inventions in all of mathematics.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": "stop",
+   "start": 525.959,
+   "end": 529.364,
+   "wav": "audio/voice/254bb3b7164afbb6.wav"
+  },
+  {
+   "text": "Without it, there is no origin on a graph, no calculus, no computer.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": null,
+   "start": 529.714,
+   "end": 532.761,
+   "wav": "audio/voice/807942759ceca3c5.wav"
+  },
+  {
+   "text": "But it came with a boundary attached. You cannot divide by it.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": null,
+   "start": 533.111,
+   "end": 536.167,
+   "wav": "audio/voice/59e7e877e208326e.wav"
+  },
+  {
+   "text": "And mathematics has filled holes like this before.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": null,
+   "start": 537.117,
+   "end": 539.52,
+   "wav": "audio/voice/793450cd8c23b0ee.wav"
+  },
+  {
+   "text": "When subtraction ran out of answers, we invented negative numbers. When division ran out, we invented fractions.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": null,
+   "start": 539.87,
+   "end": 545.663,
+   "wav": "audio/voice/ca74c863a0db3310.wav"
+  },
+  {
+   "text": "When square roots ran out, we invented i.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": null,
+   "start": 546.013,
+   "end": 547.91,
+   "wav": "audio/voice/12965ef5d1e820b5.wav"
+  },
+  {
+   "text": "Each time, a new kind of number filled the gap, and the old rules kept working.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": null,
+   "start": 548.26,
+   "end": 552.141,
+   "wav": "audio/voice/80d1f8e73e78f44f.wav"
+  },
+  {
+   "text": "Dividing by zero is the one hole among the four operations that no new kind of number can fill for free.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": null,
+   "start": 553.091,
+   "end": 558.42,
+   "wav": "audio/voice/b18431ae4ced411e.wav"
+  },
+  {
+   "text": "Every time someone has tried to step across it, the system has made them pay, by giving up another rule in exchange.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": null,
+   "start": 558.77,
+   "end": 564.566,
+   "wav": "audio/voice/0554cb37cd61184b.wav"
+  },
+  {
+   "text": "So dividing by zero is not an arbitrary ban.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": null,
+   "start": 564.916,
+   "end": 567.195,
+   "wav": "audio/voice/7115925ebaa8f2b0.wav"
+  },
+  {
+   "text": "It is a hole that cannot be filled, and that hole shows you just how tightly everything else is woven together.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Looking back",
+   "opens": null,
+   "start": 567.545,
+   "end": 573.181,
+   "wav": "audio/voice/6dde9fe9c501d77b.wav"
+  },
+  {
+   "text": "Thank you for watching all the way to the end, and see you in the next video.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The price",
+   "section": "Outro",
+   "opens": "stop",
+   "start": 574.781,
+   "end": 578.287,
+   "wav": "audio/voice/036d1033f10d7c15.wav"
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — miệng nói</title>
+<style>html,body{margin:0;background:#E4DCCD;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử miệng nói (engine/talk.js): năm tư thế của bài sudoku nói theo lời đọc p1 (data/p1.mouth.json).
+//   node engine/render/shoot.js video --page tools/lab/talk.html --audio projects/en/sudoku/audio/p1.wav --from 0 --to 12 --out out/_lab/talk.mp4
+import { toCanvas } from '../../engine/mascot.js';
+import { CROP } from '../../assets/character-v2/crop.js';
+import { makeEnv, mouthOpen, drawMouth } from '../../engine/talk.js';
+const g = document.getElementById('cv').getContext('2d'), IM = {};
+const POSES = [['wave', 250, 640], ['ponder', 660, 700], ['point', 1060, 560], ['calculator', 1430, 700], ['ok', 1760, 700]];
+let env, ready = false;
+(async () => {
+  env = makeEnv(await (await fetch('../../projects/en/sudoku/data/p1.mouth.json')).json());
+  await Promise.all(POSES.map(([p]) => new Promise((res, rej) => { const im = new Image(); im.onload = () => { IM[p] = toCanvas(im); res(); };
+    im.onerror = rej; im.src = `../../assets/character-v2/cut/pose-${p}.png`; })));
+  ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = '#E4DCCD'; g.fillRect(0, 0, 1920, 1080);
+  for (const [p, cx, h] of POSES) {
+    const im = IM[p], crop = CROP[p] ?? 1, sh0 = im.height * crop, s = h / sh0, w = im.width * s, x0 = cx - w / 2, y0 = 1080 - h;
+    g.drawImage(im, 0, 0, im.width, sh0, x0, y0, w, h);
+    drawMouth(g, p, { x0, y0, s }, mouthOpen(env, t), im.width);
+  }
+  g.fillStyle = '#2A2622'; g.font = '500 24px monospace'; g.fillText(`t ${t.toFixed(2)}  open ${env.at(t).toFixed(2)}`, 40, 50);
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 46 };
+</script>

@@ -1,0 +1,974 @@
+[
+{
+"t": 0.0,
+"kind": "tex-crackle-78rpm-loop",
+"db": -28,
+"end": 793.433
+},
+{
+"t": 0.0,
+"kind": "_music",
+"file": "projects/hist/wrong-turn/assets/music/wt-1-coldopen.m4a"
+},
+{
+"t": 3.231,
+"kind": "boom-deep",
+"db": -2
+},
+{
+"t": 4.595,
+"kind": "pop",
+"db": -2
+},
+{
+"t": 7.413,
+"kind": "shutter",
+"db": -1
+},
+{
+"t": 7.513,
+"kind": "amb-crowd-murmur-loop",
+"db": -22,
+"end": 24.623
+},
+{
+"t": 12.782,
+"kind": "cash-register",
+"db": -3
+},
+{
+"t": 16.919,
+"kind": "clock-tick",
+"db": -6,
+"end": 17.519000000000002
+},
+{
+"t": 18.041,
+"kind": "thud",
+"db": 0
+},
+{
+"t": 20.947,
+"kind": "whoosh",
+"db": 0
+},
+{
+"t": 21.908,
+"kind": "clock-tick",
+"db": -4,
+"end": 22.91
+},
+{
+"t": 22.61,
+"kind": "hush",
+"end": 22.91
+},
+{
+"t": 22.96,
+"kind": "boom",
+"db": 4
+},
+{
+"t": 24.965,
+"kind": "typewriter-soft",
+"db": -4
+},
+{
+"t": 30.544,
+"kind": "whoosh-soft",
+"db": -3
+},
+{
+"t": 32.5,
+"kind": "boing",
+"db": -2
+},
+{
+"t": 33.282,
+"kind": "stamp",
+"db": 6
+},
+{
+"t": 35.194,
+"kind": "whoosh-long",
+"db": -1
+},
+{
+"t": 36.196,
+"kind": "ding",
+"db": -3
+},
+{
+"t": 36.677,
+"kind": "page-flip",
+"db": 0
+},
+{
+"t": 42.017,
+"kind": "ding",
+"db": -2
+},
+{
+"t": 45.15,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 45.27,
+"kind": "pop",
+"db": -3
+},
+{
+"t": 45.39,
+"kind": "pop",
+"db": -2
+},
+{
+"t": 45.51,
+"kind": "pop",
+"db": -1
+},
+{
+"t": 45.63,
+"kind": "pop",
+"db": 0
+},
+{
+"t": 47.475,
+"kind": "_music",
+"file": "projects/hist/wrong-turn/assets/music/wt-2-theme.m4a"
+},
+{
+"t": 55.169,
+"kind": "pop",
+"db": -1
+},
+{
+"t": 58.023,
+"kind": "pop",
+"db": -2
+},
+{
+"t": 63.309,
+"kind": "pop",
+"db": -2
+},
+{
+"t": 64.931,
+"kind": "whoosh-short",
+"db": -3
+},
+{
+"t": 69.647,
+"kind": "crowd-murmur",
+"db": -8,
+"end": 71.068
+},
+{
+"t": 74.732,
+"kind": "stamp",
+"db": 3
+},
+{
+"t": 78.769,
+"kind": "snap",
+"db": 0
+},
+{
+"t": 80.753,
+"kind": "boom-deep",
+"db": -6
+},
+{
+"t": 88.717,
+"kind": "stamp",
+"db": 2
+},
+{
+"t": 90.38,
+"kind": "stamp",
+"db": 5
+},
+{
+"t": 94.335,
+"kind": "engine",
+"db": -6,
+"end": 95.617
+},
+{
+"t": 96.918,
+"kind": "thud",
+"db": 0
+},
+{
+"t": 97.94,
+"kind": "hush",
+"end": 99.201
+},
+{
+"t": 111.465,
+"kind": "clock-tick",
+"db": -6,
+"end": 112.827
+},
+{
+"t": 117.574,
+"kind": "pop",
+"db": 2
+},
+{
+"t": 120.088,
+"kind": "boom-deep",
+"db": -8
+},
+{
+"t": 124.797,
+"kind": "_music",
+"file": "projects/hist/wrong-turn/assets/music/wt-1-coldopen.m4a",
+"from": 47
+},
+{
+"t": 127.043,
+"kind": "shutter",
+"db": -2
+},
+{
+"t": 133.412,
+"kind": "thud",
+"db": 0
+},
+{
+"t": 136.161,
+"kind": "amb-wind-drone-loop",
+"db": -12,
+"end": 137.561
+},
+{
+"t": 144.871,
+"kind": "ding",
+"db": -1
+},
+{
+"t": 147.569,
+"kind": "pop",
+"db": 0
+},
+{
+"t": 149.496,
+"kind": "page-flip",
+"db": -2
+},
+{
+"t": 156.047,
+"kind": "crowd-murmur",
+"db": -6,
+"end": 157.547
+},
+{
+"t": 167.71,
+"kind": "pen-sign",
+"db": -2,
+"end": 168.91
+},
+{
+"t": 169.636,
+"kind": "stamp",
+"db": 4
+},
+{
+"t": 174.522,
+"kind": "crowd-murmur",
+"db": -12,
+"end": 177.593
+},
+{
+"t": 180.966,
+"kind": "pop",
+"db": 0
+},
+{
+"t": 187.744,
+"kind": "whoosh-soft",
+"db": -6
+},
+{
+"t": 191.523,
+"kind": "ding",
+"db": 2
+},
+{
+"t": 196.827,
+"kind": "stamp",
+"db": 2
+},
+{
+"t": 199.953,
+"kind": "boom-deep",
+"db": -6
+},
+{
+"t": 206.517,
+"kind": "snap",
+"db": -1
+},
+{
+"t": 214.687,
+"kind": "hurray",
+"db": -6
+},
+{
+"t": 219.378,
+"kind": "boom-deep",
+"db": -2
+},
+{
+"t": 224.578,
+"kind": "whoosh-long",
+"db": -3
+},
+{
+"t": 228.667,
+"kind": "stamp",
+"db": 2
+},
+{
+"t": 233.492,
+"kind": "hush",
+"end": 234.575
+},
+{
+"t": 234.375,
+"kind": "boom-deep",
+"db": 0
+},
+{
+"t": 236.338,
+"kind": "_music",
+"file": "projects/hist/wrong-turn/assets/music/wt-3-conspiracy.m4a"
+},
+{
+"t": 237.799,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 237.959,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 238.119,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 238.279,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 238.439,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 238.599,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 244.828,
+"kind": "stamp",
+"db": 2
+},
+{
+"t": 246.44,
+"kind": "thud",
+"db": -2
+},
+{
+"t": 247.501,
+"kind": "thud",
+"db": 0
+},
+{
+"t": 249.243,
+"kind": "glass-clink",
+"db": -4
+},
+{
+"t": 256.117,
+"kind": "boing",
+"db": -3
+},
+{
+"t": 257.17,
+"kind": "boom-deep",
+"db": -6
+},
+{
+"t": 262.599,
+"kind": "pop",
+"db": -2
+},
+{
+"t": 269.061,
+"kind": "stamp",
+"db": 3
+},
+{
+"t": 276.713,
+"kind": "snap",
+"db": -2
+},
+{
+"t": 280.896,
+"kind": "whoosh-soft",
+"db": -3
+},
+{
+"t": 287.255,
+"kind": "clock-tick",
+"db": -8,
+"end": 289.038
+},
+{
+"t": 289.658,
+"kind": "_music",
+"file": "projects/hist/wrong-turn/assets/music/wt-4-bumbling.m4a"
+},
+{
+"t": 290.819,
+"kind": "ding",
+"db": 2
+},
+{
+"t": 299.921,
+"kind": "slam-paper",
+"db": 2
+},
+{
+"t": 301.573,
+"kind": "amb-crowd-murmur-loop",
+"db": -20,
+"end": 367.595
+},
+{
+"t": 304.117,
+"kind": "engine",
+"db": -6
+},
+{
+"t": 315.232,
+"kind": "cricket",
+"db": -6
+},
+{
+"t": 326.518,
+"kind": "impact",
+"db": 0
+},
+{
+"t": 327.379,
+"kind": "whoosh",
+"db": -2
+},
+{
+"t": 331.111,
+"kind": "boing",
+"db": 0
+},
+{
+"t": 333.752,
+"kind": "boom",
+"db": 5
+},
+{
+"t": 339.989,
+"kind": "glass-clink",
+"db": -4
+},
+{
+"t": 340.792,
+"kind": "whoosh-long",
+"db": -2
+},
+{
+"t": 345.556,
+"kind": "stamp",
+"db": 2
+},
+{
+"t": 347.645,
+"kind": "splash",
+"db": 0
+},
+{
+"t": 351.108,
+"kind": "bonk",
+"db": -2
+},
+{
+"t": 354.358,
+"kind": "bonk",
+"db": 2
+},
+{
+"t": 358.539,
+"kind": "engine",
+"db": -4
+},
+{
+"t": 366.533,
+"kind": "whoosh",
+"db": 0
+},
+{
+"t": 370.901,
+"kind": "stamp",
+"db": 4
+},
+{
+"t": 374.391,
+"kind": "hush",
+"end": 376.441
+},
+{
+"t": 374.441,
+"kind": "stamp",
+"db": 4
+},
+{
+"t": 374.741,
+"kind": "hurray",
+"db": -6
+},
+{
+"t": 376.935,
+"kind": "whoosh-long",
+"db": 0
+},
+{
+"t": 377.538,
+"kind": "_music",
+"file": "projects/hist/wrong-turn/assets/music/wt-2-theme.m4a"
+},
+{
+"t": 382.785,
+"kind": "page-flip",
+"db": -2
+},
+{
+"t": 393.601,
+"kind": "thud",
+"db": 2
+},
+{
+"t": 394.362,
+"kind": "impact",
+"db": 2
+},
+{
+"t": 400.191,
+"kind": "page-flip",
+"db": -3
+},
+{
+"t": 400.983,
+"kind": "_quiet",
+"end": 410.399
+},
+{
+"t": 412.115,
+"kind": "ding",
+"db": 2
+},
+{
+"t": 414.666,
+"kind": "cricket",
+"db": -6
+},
+{
+"t": 429.32,
+"kind": "boing",
+"db": -3
+},
+{
+"t": 432.418,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 432.518,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 432.618,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 432.718,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 432.818,
+"kind": "pop",
+"db": -4
+},
+{
+"t": 435.953,
+"kind": "ding",
+"db": 2
+},
+{
+"t": 444.065,
+"kind": "pen-sign",
+"db": -6,
+"end": 445.449
+},
+{
+"t": 446.762,
+"kind": "stamp",
+"db": 1
+},
+{
+"t": 449.076,
+"kind": "hush",
+"end": 449.89
+},
+{
+"t": 450.536,
+"kind": "ding",
+"db": 2
+},
+{
+"t": 451.766,
+"kind": "stamp",
+"db": 6
+},
+{
+"t": 453.47,
+"kind": "_music",
+"file": "projects/hist/wrong-turn/assets/music/wt-5-suspense.m4a"
+},
+{
+"t": 453.87,
+"kind": "amb-crowd-murmur-loop",
+"db": -22,
+"end": 503.361
+},
+{
+"t": 456.154,
+"kind": "engine",
+"db": -4
+},
+{
+"t": 458.838,
+"kind": "whoosh-soft",
+"db": -2
+},
+{
+"t": 470.975,
+"kind": "ding",
+"db": -2
+},
+{
+"t": 477.337,
+"kind": "honk",
+"db": 2
+},
+{
+"t": 483.357,
+"kind": "whoosh",
+"db": 2
+},
+{
+"t": 485.701,
+"kind": "thud",
+"db": 2
+},
+{
+"t": 486.903,
+"kind": "pop",
+"db": -2
+},
+{
+"t": 490.658,
+"kind": "clock-tick",
+"db": -6,
+"end": 491.158
+},
+{
+"t": 499.416,
+"kind": "hush",
+"end": 499.677
+},
+{
+"t": 499.677,
+"kind": "stamp",
+"db": 5
+},
+{
+"t": 502.461,
+"kind": "_quiet",
+"end": 532.308
+},
+{
+"t": 503.361,
+"kind": "amb-wind-drone-loop",
+"db": -20,
+"end": 532.308
+},
+{
+"t": 505.186,
+"kind": "gun",
+"db": 6
+},
+{
+"t": 505.658,
+"kind": "gun",
+"db": 6
+},
+{
+"t": 532.308,
+"kind": "_music",
+"file": "projects/hist/wrong-turn/assets/music/wt-3-conspiracy.m4a"
+},
+{
+"t": 541.745,
+"kind": "shutter",
+"db": -2
+},
+{
+"t": 542.906,
+"kind": "shutter",
+"db": -2
+},
+{
+"t": 543.947,
+"kind": "shutter",
+"db": -2
+},
+{
+"t": 545.729,
+"kind": "shutter",
+"db": -2
+},
+{
+"t": 566.116,
+"kind": "glass-clink",
+"db": -4
+},
+{
+"t": 571.861,
+"kind": "pour",
+"db": -6
+},
+{
+"t": 574.695,
+"kind": "cash-register",
+"db": -2
+},
+{
+"t": 582.921,
+"kind": "whoosh-soft",
+"db": -3
+},
+{
+"t": 589.039,
+"kind": "slam-paper",
+"db": 2
+},
+{
+"t": 592.383,
+"kind": "clock-tick",
+"db": -6,
+"end": 593.865
+},
+{
+"t": 596.858,
+"kind": "pen-sign",
+"db": -4,
+"end": 600.002
+},
+{
+"t": 600.002,
+"kind": "stamp",
+"db": 2
+},
+{
+"t": 613.325,
+"kind": "boom",
+"db": 2
+},
+{
+"t": 618.251,
+"kind": "morse",
+"db": -4
+},
+{
+"t": 620.011,
+"kind": "_music",
+"file": "projects/hist/wrong-turn/assets/music/wt-6-escalation.m4a"
+},
+{
+"t": 624.797,
+"kind": "bonk",
+"db": 2
+},
+{
+"t": 627.651,
+"kind": "thud",
+"db": 0
+},
+{
+"t": 630.199,
+"kind": "boom-deep",
+"db": 0
+},
+{
+"t": 633.209,
+"kind": "boom-deep",
+"db": 2
+},
+{
+"t": 636.905,
+"kind": "boom",
+"db": 0
+},
+{
+"t": 648.286,
+"kind": "paper-crumple",
+"db": 0
+},
+{
+"t": 649.247,
+"kind": "boom",
+"db": 4
+},
+{
+"t": 661.731,
+"kind": "morse",
+"db": -6
+},
+{
+"t": 674.36,
+"kind": "cheer",
+"db": -2,
+"end": 679.435
+},
+{
+"t": 679.917,
+"kind": "hush",
+"end": 682.288
+},
+{
+"t": 682.34,
+"kind": "page-flip",
+"db": 0
+},
+{
+"t": 695.234,
+"kind": "ding",
+"db": 0
+},
+{
+"t": 704.958,
+"kind": "_quiet",
+"end": 744.564
+},
+{
+"t": 704.958,
+"kind": "amb-wind-drone-loop",
+"db": -20,
+"end": 744.564
+},
+{
+"t": 715.365,
+"kind": "boom-deep",
+"db": -12
+},
+{
+"t": 716.107,
+"kind": "boom-deep",
+"db": -12
+},
+{
+"t": 717.23,
+"kind": "boom-deep",
+"db": -12
+},
+{
+"t": 717.832,
+"kind": "boom-deep",
+"db": -12
+},
+{
+"t": 734.767,
+"kind": "thud",
+"db": -4
+},
+{
+"t": 744.564,
+"kind": "_music",
+"file": "projects/hist/wrong-turn/assets/music/wt-7-reflect.m4a"
+},
+{
+"t": 760.254,
+"kind": "bonk",
+"db": -4
+},
+{
+"t": 760.815,
+"kind": "bonk",
+"db": -4
+},
+{
+"t": 762.156,
+"kind": "bonk",
+"db": -4
+},
+{
+"t": 763.357,
+"kind": "bonk",
+"db": -4
+},
+{
+"t": 767.18,
+"kind": "bonk",
+"db": -2
+},
+{
+"t": 770.735,
+"kind": "cricket",
+"db": -8
+},
+{
+"t": 772.806,
+"kind": "hush",
+"end": 774.698
+},
+{
+"t": 774.298,
+"kind": "stamp",
+"db": 6
+},
+{
+"t": 776.895,
+"kind": "boom-deep",
+"db": -4
+},
+{
+"t": 783.039,
+"kind": "whoosh-soft",
+"db": -2
+},
+{
+"t": 788.733,
+"kind": "_music",
+"file": "projects/hist/_kit/music/m-sting-end-card.ogg"
+}
+]

@@ -1,0 +1,1118 @@
+{
+ "duration": 548.004,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Let's begin with the most visual way to see it.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Down the powers of two",
+   "opens": "act",
+   "start": 0.0,
+   "end": 1.923,
+   "wav": "audio/voice/e392f6790a62d7ee.wav"
+  },
+  {
+   "text": "Write the powers of two in a column. Two to the fourth is sixteen. Two cubed is eight. Two squared is four. And two to the first is two.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Down the powers of two",
+   "opens": null,
+   "start": 2.273,
+   "end": 8.979,
+   "wav": "audio/voice/e44918b8d05cb14d.wav"
+  },
+  {
+   "text": "Now notice what happens each time the exponent goes down by one. The answer is divided by two.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Down the powers of two",
+   "opens": null,
+   "start": 9.329,
+   "end": 13.77,
+   "wav": "audio/voice/7272ff0012c7f669.wav"
+  },
+  {
+   "text": "Sixteen to eight, divide by two. Eight to four, divide by two. Four to two, divide by two again.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Down the powers of two",
+   "opens": null,
+   "start": 14.12,
+   "end": 18.788,
+   "wav": "audio/voice/8d3805aeb6889bfd.wav"
+  },
+  {
+   "text": "So what should the next step be? Two divided by two is one.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Down the powers of two",
+   "opens": null,
+   "start": 19.138,
+   "end": 22.001,
+   "wav": "audio/voice/622f99d62a2bd702.wav"
+  },
+  {
+   "text": "If the pattern keeps going, two to the zero is one.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Down the powers of two",
+   "opens": null,
+   "start": 22.351,
+   "end": 24.614,
+   "wav": "audio/voice/92113e04ada895c0.wav"
+  },
+  {
+   "text": "Let's check with another number, just to be sure. Take ten.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Try another number",
+   "opens": "stop",
+   "start": 26.214,
+   "end": 28.973,
+   "wav": "audio/voice/2efc6afe93b3e892.wav"
+  },
+  {
+   "text": "Ten cubed is a thousand. Ten squared is a hundred. Ten to the first is ten.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Try another number",
+   "opens": null,
+   "start": 29.323,
+   "end": 33.071,
+   "wav": "audio/voice/d3e3d68c1074b09c.wav"
+  },
+  {
+   "text": "Each step down divides by ten. And ten divided by ten is one.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Try another number",
+   "opens": null,
+   "start": 33.421,
+   "end": 36.405,
+   "wav": "audio/voice/9a68f63074f77fc0.wav"
+  },
+  {
+   "text": "So ten to the zero is one as well.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Try another number",
+   "opens": null,
+   "start": 36.755,
+   "end": 38.371,
+   "wav": "audio/voice/358a98a0fd5901f8.wav"
+  },
+  {
+   "text": "Start from any number you like, as long as it isn't zero, and the staircase always lands on one. On the last step, you are dividing the number by itself.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "Try another number",
+   "opens": null,
+   "start": 38.721,
+   "end": 46.503,
+   "wav": "audio/voice/92335172482a9125.wav"
+  },
+  {
+   "text": "This is the easiest way to see it. But a pattern is a hint, not a reason.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "A pattern is not a proof",
+   "opens": "stop",
+   "start": 48.103,
+   "end": 51.539,
+   "wav": "audio/voice/c14075f9b3d9a7ee.wav"
+  },
+  {
+   "text": "Who says the pattern has to keep going, past the last step we actually understand?",
+   "idea": false,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "A pattern is not a proof",
+   "opens": null,
+   "start": 51.889,
+   "end": 55.841,
+   "wav": "audio/voice/f5078f207daa61b3.wav"
+  },
+  {
+   "text": "Mathematics needs something stronger. A reason why a to the zero has to be one.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Follow the pattern",
+   "section": "A pattern is not a proof",
+   "opens": null,
+   "start": 56.191,
+   "end": 59.937,
+   "wav": "audio/voice/16ac1819253cb3f3.wav"
+  },
+  {
+   "text": "There is one rule about powers that everybody learns.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "The rule you already know",
+   "opens": "act",
+   "start": 62.337,
+   "end": 64.994,
+   "wav": "audio/voice/f5881eebb6e65b7d.wav"
+  },
+  {
+   "text": "a to the m, times a to the n, equals a to the m plus n.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "The rule you already know",
+   "opens": null,
+   "start": 65.344,
+   "end": 67.78,
+   "wav": "audio/voice/74b362f67b5cbc49.wav"
+  },
+  {
+   "text": "For example, two cubed times two squared is two to the three plus two. That's two to the fifth, thirty-two.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "The rule you already know",
+   "opens": null,
+   "start": 68.13,
+   "end": 73.652,
+   "wav": "audio/voice/eb17b404553b9a4f.wav"
+  },
+  {
+   "text": "You can check it. Eight times four really is thirty-two.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "The rule you already know",
+   "opens": null,
+   "start": 74.002,
+   "end": 76.614,
+   "wav": "audio/voice/524ace71608b24f3.wav"
+  },
+  {
+   "text": "The rule works because you are only counting twos. Three of them, then two more, five altogether.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "The rule you already know",
+   "opens": null,
+   "start": 76.964,
+   "end": 81.801,
+   "wav": "audio/voice/3561283cc5b0c219.wav"
+  },
+  {
+   "text": "Now let's ask the rule about a to the zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Put in a zero",
+   "opens": "stop",
+   "start": 83.401,
+   "end": 85.314,
+   "wav": "audio/voice/cf4d74bbad252702.wav"
+  },
+  {
+   "text": "Take any number a that isn't zero, and any exponent m.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Put in a zero",
+   "opens": null,
+   "start": 85.664,
+   "end": 88.379,
+   "wav": "audio/voice/08bbb1adc38190c9.wav"
+  },
+  {
+   "text": "The rule says a to the m, times a to the zero, equals a to the m plus zero. And m plus zero is just m.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Put in a zero",
+   "opens": null,
+   "start": 88.729,
+   "end": 93.535,
+   "wav": "audio/voice/c2decd1ea13c5935.wav"
+  },
+  {
+   "text": "So a to the m, times a to the zero, gives back a to the m.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Put in a zero",
+   "opens": null,
+   "start": 93.885,
+   "end": 96.479,
+   "wav": "audio/voice/830cd25a0ee16866.wav"
+  },
+  {
+   "text": "Whatever a to the zero is, multiplying by it changes nothing.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Put in a zero",
+   "opens": null,
+   "start": 96.829,
+   "end": 99.764,
+   "wav": "audio/voice/47c56fa2360e0690.wav"
+  },
+  {
+   "text": "And because a to the m isn't zero, we can divide both sides by it. What's left is a to the zero equals one.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Put in a zero",
+   "opens": null,
+   "start": 100.114,
+   "end": 105.313,
+   "wav": "audio/voice/1f760c309a44cbe8.wav"
+  },
+  {
+   "text": "Hold on to that small step, \"because it isn't zero\". It is going to matter later.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Put in a zero",
+   "opens": null,
+   "start": 105.663,
+   "end": 109.519,
+   "wav": "audio/voice/8d29b082ef5b4b61.wav"
+  },
+  {
+   "text": "There is another way to say the same thing.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Or divide",
+   "opens": "stop",
+   "start": 111.119,
+   "end": 112.809,
+   "wav": "audio/voice/562191a427f44ad3.wav"
+  },
+  {
+   "text": "Any number divided by itself is one, so a to the m divided by a to the m is one.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Or divide",
+   "opens": null,
+   "start": 113.159,
+   "end": 116.978,
+   "wav": "audio/voice/f0d9bc732e49610e.wav"
+  },
+  {
+   "text": "But the division rule for powers says a to the m divided by a to the m is a to the m minus m. That's a to the zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Or divide",
+   "opens": null,
+   "start": 117.328,
+   "end": 122.725,
+   "wav": "audio/voice/32f090ac4f336987.wav"
+  },
+  {
+   "text": "Two roads, same place. A to the zero is one.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Or divide",
+   "opens": null,
+   "start": 123.075,
+   "end": 125.068,
+   "wav": "audio/voice/f4a748b80f33ae49.wav"
+  },
+  {
+   "text": "So what about the question we started with? What does it mean to multiply zero times?",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Multiplying zero times",
+   "opens": "stop",
+   "start": 126.668,
+   "end": 130.632,
+   "wav": "audio/voice/96a25521a7a2b4b4.wav"
+  },
+  {
+   "text": "Think about where a calculation starts.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Multiplying zero times",
+   "opens": null,
+   "start": 130.982,
+   "end": 132.957,
+   "wav": "audio/voice/1c3f3281c2ffe9fc.wav"
+  },
+  {
+   "text": "When you add up a list of numbers, you start from zero, because adding zero changes nothing. Add up no numbers at all, and you get zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Multiplying zero times",
+   "opens": null,
+   "start": 133.307,
+   "end": 140.034,
+   "wav": "audio/voice/f612f339c82c5267.wav"
+  },
+  {
+   "text": "When you multiply a list of numbers, you start from one, because multiplying by one changes nothing.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Multiplying zero times",
+   "opens": null,
+   "start": 140.384,
+   "end": 145.339,
+   "wav": "audio/voice/cecc9b1b889310c2.wav"
+  },
+  {
+   "text": "Two cubed is really one, times two, times two, times two.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Multiplying zero times",
+   "opens": null,
+   "start": 145.689,
+   "end": 148.25,
+   "wav": "audio/voice/8fe7c76fb7c6e0f8.wav"
+  },
+  {
+   "text": "Take the twos away, one at a time, and you are left with the starting point. One.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Multiplying zero times",
+   "opens": null,
+   "start": 148.6,
+   "end": 152.674,
+   "wav": "audio/voice/6037a3bacd6e1ce8.wav"
+  },
+  {
+   "text": "Multiplying zero times isn't nothing. It's not having done anything yet, and for multiplication, that place is one.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "Multiplying zero times",
+   "opens": null,
+   "start": 153.024,
+   "end": 158.8,
+   "wav": "audio/voice/c691185e89325a5b.wav"
+  },
+  {
+   "text": "So is this a convention?",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "A choice, then no choice",
+   "opens": "stop",
+   "start": 160.4,
+   "end": 161.381,
+   "wav": "audio/voice/40f7d1354c5889a0.wav"
+  },
+  {
+   "text": "Here is the honest answer. The rule for multiplying powers was first proved for counting exponents. One, two, three, and so on.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "A choice, then no choice",
+   "opens": null,
+   "start": 161.731,
+   "end": 168.266,
+   "wav": "audio/voice/5afc78ce6d585afc.wav"
+  },
+  {
+   "text": "Asking it to work for zero as well is a choice. It's the same choice we met in the last video, about negative numbers. Keep the rules that already work.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "A choice, then no choice",
+   "opens": null,
+   "start": 168.616,
+   "end": 176.358,
+   "wav": "audio/voice/d78a52d87120c10c.wav"
+  },
+  {
+   "text": "But once you make that choice, nothing else is a choice. A to the zero is forced to be one.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "A choice, then no choice",
+   "opens": null,
+   "start": 176.708,
+   "end": 180.976,
+   "wav": "audio/voice/31011a03cfe07411.wav"
+  },
+  {
+   "text": "And for every number except zero, nobody has found a good reason to choose anything else.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Forced by a rule",
+   "section": "A choice, then no choice",
+   "opens": null,
+   "start": 181.326,
+   "end": 185.481,
+   "wav": "audio/voice/d27651be6a263d15.wav"
+  },
+  {
+   "text": "Everything has been tidy so far. Now put zero in place of a, and watch what happens.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The staircase stops",
+   "opens": "act",
+   "start": 187.881,
+   "end": 192.074,
+   "wav": "audio/voice/3e1cd975d3a08ade.wav"
+  },
+  {
+   "text": "The staircase first. Zero cubed is zero. Zero squared is zero. Zero to the first is zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The staircase stops",
+   "opens": null,
+   "start": 192.424,
+   "end": 196.899,
+   "wav": "audio/voice/bc7d56fddd8dd181.wav"
+  },
+  {
+   "text": "To take the next step down, you would divide by zero. And dividing by zero isn't allowed.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The staircase stops",
+   "opens": null,
+   "start": 197.249,
+   "end": 201.743,
+   "wav": "audio/voice/fa16f392de8f719d.wav"
+  },
+  {
+   "text": "The staircase stops, one step early.",
+   "idea": true,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The staircase stops",
+   "opens": null,
+   "start": 202.093,
+   "end": 203.781,
+   "wav": "audio/voice/179ae3a1ae1862c1.wav"
+  },
+  {
+   "text": "What about the multiplication rule? It doesn't break. It does something stranger. It goes quiet.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The rule goes quiet",
+   "opens": "stop",
+   "start": 205.381,
+   "end": 210.209,
+   "wav": "audio/voice/7fe641798e7a6ca7.wav"
+  },
+  {
+   "text": "Remember the small step. Because a to the m isn't zero, we could divide.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The rule goes quiet",
+   "opens": null,
+   "start": 210.559,
+   "end": 214.091,
+   "wav": "audio/voice/74084ec89096ad84.wav"
+  },
+  {
+   "text": "With zero, a to the m is zero. Now the rule says zero, times zero to the zero, equals zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The rule goes quiet",
+   "opens": null,
+   "start": 214.441,
+   "end": 218.786,
+   "wav": "audio/voice/c37773bc3a05a62c.wav"
+  },
+  {
+   "text": "But zero times anything is zero. Put in one, put in seven, put in a million. Every value passes.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The rule goes quiet",
+   "opens": null,
+   "start": 219.136,
+   "end": 223.952,
+   "wav": "audio/voice/d9d039ff5f5bc07a.wav"
+  },
+  {
+   "text": "The rule has stopped deciding.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The rule goes quiet",
+   "opens": null,
+   "start": 224.302,
+   "end": 225.789,
+   "wav": "audio/voice/d8cae4f20d220d90.wav"
+  },
+  {
+   "text": "It still narrows things down a little. Use it with both exponents zero, and it says zero to the zero, times itself, equals zero to the zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The rule goes quiet",
+   "opens": null,
+   "start": 226.139,
+   "end": 233.412,
+   "wav": "audio/voice/a3c967830f508b8c.wav"
+  },
+  {
+   "text": "Only two numbers equal their own square. Zero, and one.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The rule goes quiet",
+   "opens": null,
+   "start": 233.762,
+   "end": 236.5,
+   "wav": "audio/voice/ae071e052040508f.wav"
+  },
+  {
+   "text": "So the rule throws out every number except those two. It just won't pick between them.",
+   "idea": true,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "The rule goes quiet",
+   "opens": null,
+   "start": 236.85,
+   "end": 241.264,
+   "wav": "audio/voice/6fd494ed445afffc.wav"
+  },
+  {
+   "text": "And those two candidates come from two patterns that both feel natural.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "Two patterns, one square",
+   "opens": "stop",
+   "start": 242.864,
+   "end": 246.396,
+   "wav": "audio/voice/ddc451b206570a1c.wav"
+  },
+  {
+   "text": "Picture a table of x to the power of y. Along the row where the exponent is zero, every answer is one. Five to the zero, two to the zero, a half to the zero. One, one, one.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "Two patterns, one square",
+   "opens": null,
+   "start": 246.746,
+   "end": 255.359,
+   "wav": "audio/voice/039aaf6a0a2af3ee.wav"
+  },
+  {
+   "text": "Down the column where the base is zero, every answer is zero. Zero to the third, zero squared, zero to the first. Zero, zero, zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "Two patterns, one square",
+   "opens": null,
+   "start": 255.709,
+   "end": 262.225,
+   "wav": "audio/voice/0ccbc215bd40f954.wav"
+  },
+  {
+   "text": "Both lines run into the same square. Zero to the zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "Two patterns, one square",
+   "opens": null,
+   "start": 262.575,
+   "end": 265.199,
+   "wav": "audio/voice/1da3e424a7791431.wav"
+  },
+  {
+   "text": "One pattern says one. The other says zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "Two patterns, one square",
+   "opens": null,
+   "start": 265.549,
+   "end": 267.508,
+   "wav": "audio/voice/549a385e9e0568cb.wav"
+  },
+  {
+   "text": "So which one wins? It depends on what kind of mathematics you are doing.",
+   "idea": true,
+   "act": "ACT THREE \u2014 When the base is zero",
+   "section": "Two patterns, one square",
+   "opens": null,
+   "start": 267.858,
+   "end": 271.317,
+   "wav": "audio/voice/7e63190609fb0a15.wav"
+  },
+  {
+   "text": "Here is another way to read a power, and in one part of mathematics it settles the question.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Counting the ways",
+   "opens": "act",
+   "start": 273.717,
+   "end": 278.23,
+   "wav": "audio/voice/46b0895e5f65957e.wav"
+  },
+  {
+   "text": "Two cubed counts the ways to fill three boxes, when each box gets one of two symbols.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Counting the ways",
+   "opens": null,
+   "start": 278.58,
+   "end": 282.55,
+   "wav": "audio/voice/bfd2ad136dcef8a3.wav"
+  },
+  {
+   "text": "There are eight ways. Two choices, then two, then two.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Counting the ways",
+   "opens": null,
+   "start": 282.9,
+   "end": 285.31,
+   "wav": "audio/voice/99cf323232ac7481.wav"
+  },
+  {
+   "text": "In general, a to the n counts the ways to fill n boxes, with a choices for each box.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Counting the ways",
+   "opens": null,
+   "start": 285.66,
+   "end": 289.651,
+   "wav": "audio/voice/914cb8cfab8662e6.wav"
+  },
+  {
+   "text": "Now take zero boxes. How many ways are there to fill no boxes at all? Exactly one. You do nothing, and you're done.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Counting the ways",
+   "opens": null,
+   "start": 290.001,
+   "end": 295.842,
+   "wav": "audio/voice/03e08f5a22dfb6b7.wav"
+  },
+  {
+   "text": "That stays true even when you have zero symbols to choose from.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Counting the ways",
+   "opens": null,
+   "start": 296.192,
+   "end": 299.247,
+   "wav": "audio/voice/c871df8db236980d.wav"
+  },
+  {
+   "text": "So in counting, zero to the zero is one. It isn't a convention there. You count, and you get one.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Counting the ways",
+   "opens": null,
+   "start": 299.597,
+   "end": 304.338,
+   "wav": "audio/voice/e6499088db637a8c.wav"
+  },
+  {
+   "text": "Algebra leans on the same answer, because so many formulas quietly assume it.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Formulas that need it",
+   "opens": "stop",
+   "start": 305.938,
+   "end": 309.637,
+   "wav": "audio/voice/2b1095e75d3a5719.wav"
+  },
+  {
+   "text": "Take a polynomial. Three, plus two x, plus x squared.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Formulas that need it",
+   "opens": null,
+   "start": 309.987,
+   "end": 312.618,
+   "wav": "audio/voice/595c9983fcb83492.wav"
+  },
+  {
+   "text": "Mathematicians often write it as a sum of terms, each one a number times x to some power. The first term is three times x to the zero.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Formulas that need it",
+   "opens": null,
+   "start": 312.968,
+   "end": 319.576,
+   "wav": "audio/voice/81353087788ce67e.wav"
+  },
+  {
+   "text": "Put x equals zero, and the answer should obviously be three. That only works if zero to the zero is one.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Formulas that need it",
+   "opens": null,
+   "start": 319.926,
+   "end": 325.155,
+   "wav": "audio/voice/a4033549a8be4f9e.wav"
+  },
+  {
+   "text": "The binomial theorem, the expansion of x plus y to the n that goes back to Newton, has the same problem.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Formulas that need it",
+   "opens": null,
+   "start": 325.505,
+   "end": 330.696,
+   "wav": "audio/voice/de0191a214c7143a.wav"
+  },
+  {
+   "text": "Its first term is x to the zero, times y to the n. Put x equals zero, and the whole thing should be y to the n. Again, it only works if zero to the zero is one.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Formulas that need it",
+   "opens": null,
+   "start": 331.046,
+   "end": 338.958,
+   "wav": "audio/voice/629a1ac48df2fd78.wav"
+  },
+  {
+   "text": "And the series that defines e to the x begins with x to the zero, divided by zero factorial. Zero factorial is also one, by the way. Hold that thought.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Formulas that need it",
+   "opens": null,
+   "start": 339.308,
+   "end": 346.955,
+   "wav": "audio/voice/1a7a44c08b3628c6.wav"
+  },
+  {
+   "text": "At x equals zero you want e to the zero, which is one. Once more, you need zero to the zero to be one.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Formulas that need it",
+   "opens": null,
+   "start": 347.305,
+   "end": 352.174,
+   "wav": "audio/voice/70b066d20b70b0a8.wav"
+  },
+  {
+   "text": "In nineteen ninety-two, the computer scientist Donald Knuth wrote about this in a paper called Two Notes on Notation.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Ten thousand times no",
+   "opens": "stop",
+   "start": 353.774,
+   "end": 359.763,
+   "wav": "audio/voice/6926cf9837411541.wav"
+  },
+  {
+   "text": "To the people who wanted zero to the zero left undefined, his answer was: no, no, ten thousand times no.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Ten thousand times no",
+   "opens": null,
+   "start": 360.113,
+   "end": 365.357,
+   "wav": "audio/voice/41d49128a7f58327.wav"
+  },
+  {
+   "text": "The binomial theorem, he argued, is far too important to be broken over one square of the table.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Ten thousand times no",
+   "opens": null,
+   "start": 365.707,
+   "end": 370.414,
+   "wav": "audio/voice/a1d530fe5421ec53.wav"
+  },
+  {
+   "text": "Most programming languages make the same choice. That's why Python and JavaScript answer one.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 When counting decides",
+   "section": "Ten thousand times no",
+   "opens": null,
+   "start": 370.764,
+   "end": 375.657,
+   "wav": "audio/voice/82dba92695cd0024.wav"
+  },
+  {
+   "text": "So why do some calculators refuse?",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "A shape, not a number",
+   "opens": "act",
+   "start": 378.057,
+   "end": 379.824,
+   "wav": "audio/voice/aab5b1c6be01f9a7.wav"
+  },
+  {
+   "text": "Because in calculus, zero to the zero has a second life. It is called an indeterminate form.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "A shape, not a number",
+   "opens": null,
+   "start": 380.174,
+   "end": 384.935,
+   "wav": "audio/voice/28b7ca3fa7d5d835.wav"
+  },
+  {
+   "text": "This is the part that convinces many people that zero to the zero has no value at all, so it's worth getting right.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "A shape, not a number",
+   "opens": null,
+   "start": 385.285,
+   "end": 390.996,
+   "wav": "audio/voice/c8a27c86d1b40adc.wav"
+  },
+  {
+   "text": "Take x to the y, and let both x and y slide towards zero.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "Two paths to the corner",
+   "opens": "stop",
+   "start": 392.596,
+   "end": 395.34,
+   "wav": "audio/voice/04b2ee4919a44c60.wav"
+  },
+  {
+   "text": "First path. Keep y at zero, and let x shrink. Every value along the way is x to the zero, which is one. The limit is one.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "Two paths to the corner",
+   "opens": null,
+   "start": 395.69,
+   "end": 401.848,
+   "wav": "audio/voice/3d823c0a0356f4b5.wav"
+  },
+  {
+   "text": "Second path. Keep x at zero, and let y shrink towards zero from above. Every value is zero to a positive power, which is zero. The limit is zero.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "Two paths to the corner",
+   "opens": null,
+   "start": 402.198,
+   "end": 409.775,
+   "wav": "audio/voice/9ee64a6bdce8515f.wav"
+  },
+  {
+   "text": "Two paths into the same corner, and two different answers.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "Two paths to the corner",
+   "opens": null,
+   "start": 410.125,
+   "end": 412.839,
+   "wav": "audio/voice/70e83199bd1f2177.wav"
+  },
+  {
+   "text": "And it's worse than that. Choose the path cleverly, and you can make the limit come out as two, or a half, or any positive number you like.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "Two paths to the corner",
+   "opens": null,
+   "start": 413.189,
+   "end": 419.975,
+   "wav": "audio/voice/f5152eaaf5861c57.wav"
+  },
+  {
+   "text": "There is a curved path along which x to the y is exactly two, at every single point.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "Two paths to the corner",
+   "opens": null,
+   "start": 420.325,
+   "end": 424.551,
+   "wav": "audio/voice/7ab60052bc5ae686.wav"
+  },
+  {
+   "text": "So there is no number you could place in that corner that every path agrees on.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "Two paths to the corner",
+   "opens": null,
+   "start": 424.901,
+   "end": 428.739,
+   "wav": "audio/voice/82a20764815e91d9.wav"
+  },
+  {
+   "text": "That is why calculus calls zero to the zero an indeterminate form.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "What indeterminate means",
+   "opens": "stop",
+   "start": 430.339,
+   "end": 433.714,
+   "wav": "audio/voice/3b495d52435a0949.wav"
+  },
+  {
+   "text": "Indeterminate doesn't mean the expression has no value.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "What indeterminate means",
+   "opens": null,
+   "start": 434.064,
+   "end": 436.274,
+   "wav": "audio/voice/95e2a38b6f2be4df.wav"
+  },
+  {
+   "text": "It means that when a limit takes the shape of zero to the zero, you can't read the answer off the shape. You have to work it out, case by case.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "What indeterminate means",
+   "opens": null,
+   "start": 436.624,
+   "end": 443.49,
+   "wav": "audio/voice/7fea78d0b44a8aee.wav"
+  },
+  {
+   "text": "Sometimes it comes out as one. As x shrinks towards zero, x to the x dips down, and then climbs back up to one.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "What indeterminate means",
+   "opens": null,
+   "start": 443.84,
+   "end": 449.328,
+   "wav": "audio/voice/11e18a15ce42f51c.wav"
+  },
+  {
+   "text": "Sometimes it's two, or a half, or something else entirely.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "What indeterminate means",
+   "opens": null,
+   "start": 449.678,
+   "end": 452.372,
+   "wav": "audio/voice/db5312f60664007f.wav"
+  },
+  {
+   "text": "This argument is almost two hundred years old.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "An old argument",
+   "opens": "stop",
+   "start": 453.972,
+   "end": 455.953,
+   "wav": "audio/voice/55cbbaabb684fb03.wav"
+  },
+  {
+   "text": "In eighteen twenty-one, Augustin-Louis Cauchy put zero to the zero in his table of undefined forms, in his famous course on analysis.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "An old argument",
+   "opens": null,
+   "start": 456.303,
+   "end": 462.97,
+   "wav": "audio/voice/87a50186fc5f4457.wav"
+  },
+  {
+   "text": "In eighteen thirty-three, a paper by Guglielmo Libri argued that it should be one, and August M\u00f6bius stepped in with a proof to back him up.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "An old argument",
+   "opens": null,
+   "start": 463.32,
+   "end": 470.438,
+   "wav": "audio/voice/27d8c6e892802e1b.wav"
+  },
+  {
+   "text": "The proof was wrong. But the argument it started is still going on in classrooms today.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 When limits decide",
+   "section": "An old argument",
+   "opens": null,
+   "start": 470.788,
+   "end": 475.09,
+   "wav": "audio/voice/e75b23b6ce292faa.wav"
+  },
+  {
+   "text": "Anything except zero, to the power of zero, is one. Multiplying zero times leaves you where multiplication starts, and the staircase of powers lands there too.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": "act",
+   "start": 477.49,
+   "end": 485.726,
+   "wav": "audio/voice/e559cf86c263a331.wav"
+  },
+  {
+   "text": "It's a choice in only one sense. We chose to keep the rules of powers working, and once we did, a to the zero had to be one.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 486.076,
+   "end": 492.12,
+   "wav": "audio/voice/00b5ff633c40d156.wav"
+  },
+  {
+   "text": "And zero to the zero lives two lives. As a value, in counting, in algebra, and in almost every programming language, it is one.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 492.47,
+   "end": 499.047,
+   "wav": "audio/voice/d223c70d2b9e1ba8.wav"
+  },
+  {
+   "text": "As the shape of a limit in calculus, it is indeterminate, and you have to calculate.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 499.397,
+   "end": 503.457,
+   "wav": "audio/voice/b4760ff8787f7550.wav"
+  },
+  {
+   "text": "Those two facts don't contradict each other. One is about a number. The other is about where a moving quantity is heading.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 503.807,
+   "end": 509.776,
+   "wav": "audio/voice/854f0b55e3f7d21d.wav"
+  },
+  {
+   "text": "That's also why the machines disagree. The ones that say one are doing algebra. The ones that show an error are holding up a warning sign.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 510.126,
+   "end": 517.103,
+   "wav": "audio/voice/6f59a4286f02b605.wav"
+  },
+  {
+   "text": "So if a test asks you for zero to the zero, answer the way your course defines it. Many school textbooks call it undefined, and that is the answer they expect.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 517.453,
+   "end": 525.43,
+   "wav": "audio/voice/0eb4d6386a5cc438.wav"
+  },
+  {
+   "text": "Here is something to notice on your own.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Next time",
+   "opens": "stop",
+   "start": 527.03,
+   "end": 528.55,
+   "wav": "audio/voice/07a1553515ba1de2.wav"
+  },
+  {
+   "text": "Zero factorial is one, too. And zero factorial is the product of no numbers at all.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 528.9,
+   "end": 532.969,
+   "wav": "audio/voice/8d7a5f8cbdba24dc.wav"
+  },
+  {
+   "text": "Where have we seen that before?",
+   "idea": true,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 533.319,
+   "end": 534.546,
+   "wav": "audio/voice/49a99c12686af7f5.wav"
+  },
+  {
+   "text": "Thank you for watching all the way to the end.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 535.496,
+   "end": 537.745,
+   "wav": "audio/voice/68f0d722151e0fa3.wav"
+  },
+  {
+   "text": "What do you think zero to the zero should be? One, zero, or undefined? Tell me in the comments.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 538.095,
+   "end": 542.703,
+   "wav": "audio/voice/68ab95e771c2c68c.wav"
+  },
+  {
+   "text": "And subscribe to ninety-nine percent from scratch, so you don't miss the next one. See you soon.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 543.053,
+   "end": 547.654,
+   "wav": "audio/voice/976e73861b7dda55.wav"
+  }
+ ]
+}

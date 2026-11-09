@@ -1,0 +1,3887 @@
+[
+{
+"w": "99",
+"start": 1.0,
+"end": 1.68,
+"conf": 0.713,
+"src": "whisper"
+},
+{
+"w": "%",
+"start": 1.68,
+"end": 2.08,
+"conf": 0.789,
+"src": "whisper"
+},
+{
+"w": "loading",
+"start": 2.08,
+"end": 3.9,
+"conf": 0.584,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 3.9,
+"end": 4.76,
+"conf": 0.25,
+"src": "whisper"
+},
+{
+"w": "speed",
+"start": 4.76,
+"end": 5.2,
+"conf": 0.987,
+"src": "whisper"
+},
+{
+"w": "different",
+"start": 5.36,
+"end": 6.08,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "place",
+"start": 6.08,
+"end": 6.54,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 6.54,
+"end": 7.28,
+"conf": 0.474,
+"src": "whisper"
+},
+{
+"w": "change",
+"start": 7.28,
+"end": 7.62,
+"conf": 0.985,
+"src": "whisper"
+},
+{
+"w": "different",
+"start": 8.14,
+"end": 8.6,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "paths",
+"start": 8.6,
+"end": 9.0,
+"conf": 0.907,
+"src": "whisper"
+},
+{
+"w": "what",
+"start": 9.0,
+"end": 9.48,
+"conf": 0.774,
+"src": "whisper"
+},
+{
+"w": "do",
+"start": 9.48,
+"end": 9.62,
+"conf": 0.48,
+"src": "whisper"
+},
+{
+"w": "we",
+"start": 9.62,
+"end": 9.82,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "lose",
+"start": 9.82,
+"end": 10.16,
+"conf": 0.801,
+"src": "whisper"
+},
+{
+"w": "two",
+"start": 13.76,
+"end": 14.44,
+"conf": 0.762,
+"src": "whisper"
+},
+{
+"w": "cars",
+"start": 15.001,
+"end": 15.281,
+"conf": 0.452,
+"src": "ctc"
+},
+{
+"w": "moving",
+"start": 15.08,
+"end": 15.38,
+"conf": 0.895,
+"src": "whisper"
+},
+{
+"w": "down",
+"start": 15.38,
+"end": 15.68,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 15.68,
+"end": 15.8,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 15.8,
+"end": 16.0,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "straight",
+"start": 16.0,
+"end": 16.3,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "line",
+"start": 16.3,
+"end": 16.64,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 16.64,
+"end": 17.18,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "speed",
+"start": 17.18,
+"end": 17.56,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "every",
+"start": 17.62,
+"end": 17.92,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "second",
+"start": 17.92,
+"end": 18.24,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 18.28,
+"end": 18.44,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "every",
+"start": 18.44,
+"end": 18.82,
+"conf": 0.931,
+"src": "whisper"
+},
+{
+"w": "time",
+"start": 18.82,
+"end": 19.14,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "one",
+"start": 19.14,
+"end": 19.48,
+"conf": 0.932,
+"src": "whisper"
+},
+{
+"w": "reads",
+"start": 19.48,
+"end": 19.74,
+"conf": 0.986,
+"src": "whisper"
+},
+{
+"w": "12",
+"start": 19.74,
+"end": 20.0,
+"conf": 0.885,
+"src": "whisper"
+},
+{
+"w": "one",
+"start": 20.18,
+"end": 20.4,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "reads",
+"start": 20.4,
+"end": 20.7,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "112",
+"start": 20.7,
+"end": 21.1,
+"conf": 0.985,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 21.541,
+"end": 21.781,
+"conf": 0.523,
+"src": "ctc"
+},
+{
+"w": "motion",
+"start": 21.821,
+"end": 22.101,
+"conf": 0.525,
+"src": "ctc"
+},
+{
+"w": "on",
+"start": 21.94,
+"end": 22.2,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 22.2,
+"end": 22.32,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "meter",
+"start": 22.32,
+"end": 22.56,
+"conf": 0.965,
+"src": "whisper"
+},
+{
+"w": "something",
+"start": 22.741,
+"end": 23.001,
+"conf": 0.481,
+"src": "ctc"
+},
+{
+"w": "disappeared",
+"start": 23.081,
+"end": 23.981,
+"conf": 0.469,
+"src": "ctc"
+},
+{
+"w": "take",
+"start": 23.38,
+"end": 24.12,
+"conf": 0.988,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 24.12,
+"end": 24.64,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "position",
+"start": 24.761,
+"end": 25.161,
+"conf": 0.583,
+"src": "ctc"
+},
+{
+"w": "differentiate",
+"start": 25.12,
+"end": 25.48,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "anything",
+"start": 25.48,
+"end": 26.84,
+"conf": 0.977,
+"src": "whisper"
+},
+{
+"w": "constant",
+"start": 26.84,
+"end": 27.56,
+"conf": 0.948,
+"src": "whisper"
+},
+{
+"w": "it's",
+"start": 27.84,
+"end": 28.14,
+"conf": 0.886,
+"src": "whisper"
+},
+{
+"w": "a",
+"start": 28.14,
+"end": 28.16,
+"conf": 0.955,
+"src": "whisper"
+},
+{
+"w": "race",
+"start": 28.16,
+"end": 28.44,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "run",
+"start": 28.44,
+"end": 28.96,
+"conf": 0.198,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 28.96,
+"end": 29.1,
+"conf": 0.989,
+"src": "whisper"
+},
+{
+"w": "backward",
+"start": 29.1,
+"end": 29.52,
+"conf": 0.793,
+"src": "whisper"
+},
+{
+"w": "what",
+"start": 29.62,
+"end": 29.86,
+"conf": 0.968,
+"src": "whisper"
+},
+{
+"w": "comes",
+"start": 29.86,
+"end": 30.24,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "through",
+"start": 30.24,
+"end": 30.56,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "not",
+"start": 30.72,
+"end": 30.96,
+"conf": 0.987,
+"src": "whisper"
+},
+{
+"w": "just",
+"start": 30.96,
+"end": 31.18,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "one",
+"start": 31.18,
+"end": 31.44,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "curve",
+"start": 31.44,
+"end": 31.84,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "a",
+"start": 31.96,
+"end": 32.08,
+"conf": 0.982,
+"src": "whisper"
+},
+{
+"w": "family",
+"start": 32.08,
+"end": 32.46,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "of",
+"start": 32.46,
+"end": 32.72,
+"conf": 0.988,
+"src": "whisper"
+},
+{
+"w": "you",
+"start": 32.72,
+"end": 33.04,
+"conf": 0.861,
+"src": "whisper"
+},
+{
+"w": "if",
+"start": 33.04,
+"end": 33.9,
+"conf": 0.058,
+"src": "whisper"
+},
+{
+"w": "a",
+"start": 33.9,
+"end": 34.08,
+"conf": 0.544,
+"src": "whisper"
+},
+{
+"w": "x",
+"start": 34.342,
+"end": 34.362,
+"conf": 0.876,
+"src": "ctc"
+},
+{
+"w": "plus",
+"start": 34.28,
+"end": 34.56,
+"conf": 0.927,
+"src": "whisper"
+},
+{
+"w": "z",
+"start": 34.56,
+"end": 34.84,
+"conf": 0.217,
+"src": "whisper"
+},
+{
+"w": "that's",
+"start": 34.96,
+"end": 35.22,
+"conf": 0.982,
+"src": "whisper"
+},
+{
+"w": "from",
+"start": 35.22,
+"end": 35.3,
+"conf": 0.0,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 35.3,
+"end": 35.4,
+"conf": 0.398,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 35.4,
+"end": 35.6,
+"conf": 0.85,
+"src": "whisper"
+},
+{
+"w": "memory",
+"start": 35.722,
+"end": 36.142,
+"conf": 0.45,
+"src": "ctc"
+},
+{
+"w": "same",
+"start": 35.98,
+"end": 36.96,
+"conf": 0.948,
+"src": "whisper"
+},
+{
+"w": "slope",
+"start": 36.96,
+"end": 37.28,
+"conf": 0.979,
+"src": "whisper"
+},
+{
+"w": "different",
+"start": 37.42,
+"end": 37.7,
+"conf": 0.985,
+"src": "whisper"
+},
+{
+"w": "history",
+"start": 37.7,
+"end": 38.1,
+"conf": 0.873,
+"src": "whisper"
+},
+{
+"w": "moving",
+"start": 38.1,
+"end": 38.86,
+"conf": 0.819,
+"src": "whisper"
+},
+{
+"w": "high",
+"start": 38.86,
+"end": 39.16,
+"conf": 0.711,
+"src": "whisper"
+},
+{
+"w": "or",
+"start": 39.16,
+"end": 39.34,
+"conf": 0.552,
+"src": "whisper"
+},
+{
+"w": "moving",
+"start": 39.34,
+"end": 39.52,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "low",
+"start": 39.52,
+"end": 39.8,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 40.42,
+"end": 40.94,
+"conf": 0.456,
+"src": "whisper"
+},
+{
+"w": "derivative",
+"start": 40.94,
+"end": 41.46,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "we'll",
+"start": 41.46,
+"end": 41.84,
+"conf": 0.808,
+"src": "whisper"
+},
+{
+"w": "never",
+"start": 41.84,
+"end": 42.02,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "know",
+"start": 42.02,
+"end": 42.28,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "if",
+"start": 42.98,
+"end": 43.5,
+"conf": 0.908,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 43.5,
+"end": 43.94,
+"conf": 0.99,
+"src": "whisper"
+},
+{
+"w": "rate",
+"start": 43.94,
+"end": 44.18,
+"conf": 0.846,
+"src": "whisper"
+},
+{
+"w": "for",
+"start": 44.18,
+"end": 44.36,
+"conf": 0.029,
+"src": "whisper"
+},
+{
+"w": "god",
+"start": 44.36,
+"end": 44.64,
+"conf": 0.77,
+"src": "whisper"
+},
+{
+"w": "is",
+"start": 44.64,
+"end": 44.82,
+"conf": 0.004,
+"src": "whisper"
+},
+{
+"w": "what",
+"start": 44.82,
+"end": 44.96,
+"conf": 0.08,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 44.96,
+"end": 45.06,
+"conf": 0.923,
+"src": "whisper"
+},
+{
+"w": "journey",
+"start": 45.06,
+"end": 45.32,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "began",
+"start": 45.32,
+"end": 45.7,
+"conf": 0.813,
+"src": "whisper"
+},
+{
+"w": "maybe",
+"start": 46.263,
+"end": 46.463,
+"conf": 0.542,
+"src": "ctc"
+},
+{
+"w": "going",
+"start": 46.32,
+"end": 46.6,
+"conf": 0.961,
+"src": "whisper"
+},
+{
+"w": "backward",
+"start": 46.6,
+"end": 47.0,
+"conf": 0.635,
+"src": "whisper"
+},
+{
+"w": "can't",
+"start": 47.0,
+"end": 47.3,
+"conf": 0.934,
+"src": "whisper"
+},
+{
+"w": "give",
+"start": 47.3,
+"end": 47.36,
+"conf": 0.987,
+"src": "whisper"
+},
+{
+"w": "one",
+"start": 47.36,
+"end": 47.54,
+"conf": 0.987,
+"src": "whisper"
+},
+{
+"w": "answer",
+"start": 47.54,
+"end": 47.82,
+"conf": 0.98,
+"src": "whisper"
+},
+{
+"w": "again",
+"start": 48.223,
+"end": 48.483,
+"conf": 0.462,
+"src": "ctc"
+},
+{
+"w": "but",
+"start": 48.32,
+"end": 48.62,
+"conf": 0.859,
+"src": "whisper"
+},
+{
+"w": "maybe",
+"start": 48.62,
+"end": 48.88,
+"conf": 0.98,
+"src": "whisper"
+},
+{
+"w": "we",
+"start": 48.88,
+"end": 49.04,
+"conf": 0.991,
+"src": "whisper"
+},
+{
+"w": "don't",
+"start": 49.04,
+"end": 49.36,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "need",
+"start": 49.36,
+"end": 49.62,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "what",
+"start": 49.62,
+"end": 50.0,
+"conf": 0.603,
+"src": "whisper"
+},
+{
+"w": "we",
+"start": 50.0,
+"end": 50.1,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "started",
+"start": 50.1,
+"end": 50.46,
+"conf": 0.991,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 50.46,
+"end": 50.62,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "be",
+"start": 50.62,
+"end": 50.82,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "maybe",
+"start": 50.82,
+"end": 51.32,
+"conf": 0.983,
+"src": "whisper"
+},
+{
+"w": "all",
+"start": 51.32,
+"end": 51.56,
+"conf": 0.962,
+"src": "whisper"
+},
+{
+"w": "we",
+"start": 51.56,
+"end": 51.7,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "need",
+"start": 51.7,
+"end": 52.1,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "is",
+"start": 52.1,
+"end": 52.48,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 52.48,
+"end": 52.58,
+"conf": 0.813,
+"src": "whisper"
+},
+{
+"w": "change",
+"start": 52.58,
+"end": 52.88,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "we",
+"start": 52.88,
+"end": 53.1,
+"conf": 0.922,
+"src": "whisper"
+},
+{
+"w": "could",
+"start": 53.1,
+"end": 53.2,
+"conf": 0.107,
+"src": "whisper"
+},
+{
+"w": "see",
+"start": 53.2,
+"end": 53.5,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "add",
+"start": 53.5,
+"end": 54.06,
+"conf": 0.977,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 54.06,
+"end": 54.2,
+"conf": 0.934,
+"src": "whisper"
+},
+{
+"w": "up",
+"start": 54.2,
+"end": 54.42,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 54.42,
+"end": 54.68,
+"conf": 0.931,
+"src": "whisper"
+},
+{
+"w": "by",
+"start": 54.68,
+"end": 54.92,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 54.92,
+"end": 55.34,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "let",
+"start": 55.34,
+"end": 56.16,
+"conf": 0.924,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 56.16,
+"end": 56.28,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "change",
+"start": 56.28,
+"end": 56.64,
+"conf": 0.735,
+"src": "whisper"
+},
+{
+"w": "in",
+"start": 56.64,
+"end": 56.92,
+"conf": 0.344,
+"src": "whisper"
+},
+{
+"w": "find",
+"start": 56.96,
+"end": 57.2,
+"conf": 0.982,
+"src": "whisper"
+},
+{
+"w": "its",
+"start": 57.2,
+"end": 57.48,
+"conf": 0.321,
+"src": "whisper"
+},
+{
+"w": "shape",
+"start": 57.48,
+"end": 57.84,
+"conf": 0.959,
+"src": "whisper"
+},
+{
+"w": "space",
+"start": 57.84,
+"end": 58.36,
+"conf": 0.191,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 58.36,
+"end": 58.42,
+"conf": 0.015,
+"src": "whisper"
+},
+{
+"w": "grow",
+"start": 58.42,
+"end": 58.42,
+"conf": 0.002,
+"src": "whisper"
+},
+{
+"w": "stick",
+"start": 58.42,
+"end": 58.6,
+"conf": 0.102,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 58.6,
+"end": 58.8,
+"conf": 0.977,
+"src": "whisper"
+},
+{
+"w": "end",
+"start": 58.8,
+"end": 59.06,
+"conf": 0.322,
+"src": "whisper"
+},
+{
+"w": "take",
+"start": 59.12,
+"end": 59.24,
+"conf": 0.969,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 59.24,
+"end": 59.42,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "difference",
+"start": 59.42,
+"end": 59.88,
+"conf": 0.99,
+"src": "whisper"
+},
+{
+"w": "let",
+"start": 60.54,
+"end": 61.06,
+"conf": 0.765,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 61.06,
+"end": 61.26,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "constant",
+"start": 61.26,
+"end": 61.64,
+"conf": 0.939,
+"src": "whisper"
+},
+{
+"w": "fade",
+"start": 61.64,
+"end": 62.14,
+"conf": 0.989,
+"src": "whisper"
+},
+{
+"w": "away",
+"start": 62.14,
+"end": 62.96,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "rate",
+"start": 62.96,
+"end": 63.74,
+"conf": 0.837,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 63.74,
+"end": 63.88,
+"conf": 0.838,
+"src": "whisper"
+},
+{
+"w": "amount",
+"start": 63.88,
+"end": 64.14,
+"conf": 0.972,
+"src": "whisper"
+},
+{
+"w": "height",
+"start": 64.34,
+"end": 64.6,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 64.6,
+"end": 64.82,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "area",
+"start": 64.82,
+"end": 65.26,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "different",
+"start": 65.26,
+"end": 65.82,
+"conf": 0.937,
+"src": "whisper"
+},
+{
+"w": "things",
+"start": 65.82,
+"end": 66.26,
+"conf": 0.975,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 66.26,
+"end": 66.48,
+"conf": 0.969,
+"src": "whisper"
+},
+{
+"w": "melody",
+"start": 66.48,
+"end": 66.98,
+"conf": 0.573,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 67.38,
+"end": 67.56,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "machine",
+"start": 67.56,
+"end": 67.96,
+"conf": 0.958,
+"src": "whisper"
+},
+{
+"w": "different",
+"start": 67.96,
+"end": 68.62,
+"conf": 0.495,
+"src": "whisper"
+},
+{
+"w": "input",
+"start": 68.62,
+"end": 69.66,
+"conf": 0.952,
+"src": "whisper"
+},
+{
+"w": "add",
+"start": 69.66,
+"end": 70.52,
+"conf": 0.6,
+"src": "whisper"
+},
+{
+"w": "up",
+"start": 70.52,
+"end": 70.8,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "add",
+"start": 70.82,
+"end": 71.06,
+"conf": 0.902,
+"src": "whisper"
+},
+{
+"w": "up",
+"start": 71.06,
+"end": 71.26,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "what",
+"start": 71.26,
+"end": 71.44,
+"conf": 0.423,
+"src": "whisper"
+},
+{
+"w": "you",
+"start": 71.44,
+"end": 71.62,
+"conf": 0.986,
+"src": "whisper"
+},
+{
+"w": "need",
+"start": 71.62,
+"end": 71.94,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "now",
+"start": 71.94,
+"end": 72.88,
+"conf": 0.439,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 72.88,
+"end": 73.62,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "tank",
+"start": 73.784,
+"end": 74.004,
+"conf": 0.461,
+"src": "ctc"
+},
+{
+"w": "fills",
+"start": 73.9,
+"end": 74.14,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "up",
+"start": 74.14,
+"end": 74.62,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "but",
+"start": 74.62,
+"end": 74.76,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 74.76,
+"end": 74.86,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "flow",
+"start": 74.944,
+"end": 75.224,
+"conf": 0.618,
+"src": "ctc"
+},
+{
+"w": "keeps",
+"start": 75.324,
+"end": 75.564,
+"conf": 0.713,
+"src": "ctc"
+},
+{
+"w": "changing",
+"start": 75.38,
+"end": 75.94,
+"conf": 0.95,
+"src": "whisper"
+},
+{
+"w": "3t",
+"start": 75.94,
+"end": 76.5,
+"conf": 0.711,
+"src": "whisper"
+},
+{
+"w": "squared",
+"start": 76.764,
+"end": 77.204,
+"conf": 0.575,
+"src": "ctc"
+},
+{
+"w": "every",
+"start": 77.12,
+"end": 77.32,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "second",
+"start": 77.32,
+"end": 77.62,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "rearranging",
+"start": 77.805,
+"end": 78.545,
+"conf": 0.507,
+"src": "ctc"
+},
+{
+"w": "one",
+"start": 78.885,
+"end": 78.945,
+"conf": 0.467,
+"src": "ctc"
+},
+{
+"w": "rate",
+"start": 78.88,
+"end": 79.12,
+"conf": 0.692,
+"src": "whisper"
+},
+{
+"w": "times",
+"start": 79.325,
+"end": 79.625,
+"conf": 0.592,
+"src": "ctc"
+},
+{
+"w": "time",
+"start": 79.42,
+"end": 79.76,
+"conf": 0.982,
+"src": "whisper"
+},
+{
+"w": "won't",
+"start": 79.88,
+"end": 80.1,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "get",
+"start": 80.1,
+"end": 80.32,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 80.32,
+"end": 80.5,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "right",
+"start": 80.625,
+"end": 80.865,
+"conf": 0.685,
+"src": "ctc"
+},
+{
+"w": "one",
+"start": 80.885,
+"end": 81.105,
+"conf": 0.474,
+"src": "ctc"
+},
+{
+"w": "big",
+"start": 81.205,
+"end": 81.405,
+"conf": 0.589,
+"src": "ctc"
+},
+{
+"w": "rectangle",
+"start": 81.545,
+"end": 82.085,
+"conf": 0.484,
+"src": "ctc"
+},
+{
+"w": "doesn't",
+"start": 81.78,
+"end": 82.42,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "fit",
+"start": 82.42,
+"end": 82.74,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 82.74,
+"end": 82.92,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "line",
+"start": 82.92,
+"end": 83.12,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "so",
+"start": 83.12,
+"end": 83.36,
+"conf": 0.982,
+"src": "whisper"
+},
+{
+"w": "break",
+"start": 83.36,
+"end": 83.44,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 83.44,
+"end": 83.54,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "down",
+"start": 83.685,
+"end": 83.925,
+"conf": 0.453,
+"src": "ctc"
+},
+{
+"w": "two",
+"start": 83.9,
+"end": 84.0,
+"conf": 0.952,
+"src": "whisper"
+},
+{
+"w": "strips",
+"start": 84.0,
+"end": 84.36,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "four",
+"start": 84.48,
+"end": 84.6,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "strips",
+"start": 84.825,
+"end": 85.145,
+"conf": 0.551,
+"src": "ctc"
+},
+{
+"w": "eight",
+"start": 85.14,
+"end": 85.32,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "then",
+"start": 85.32,
+"end": 85.56,
+"conf": 0.66,
+"src": "whisper"
+},
+{
+"w": "more",
+"start": 85.56,
+"end": 85.9,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "smaller",
+"start": 86.125,
+"end": 87.025,
+"conf": 0.461,
+"src": "ctc"
+},
+{
+"w": "and",
+"start": 87.0,
+"end": 87.04,
+"conf": 0.89,
+"src": "whisper"
+},
+{
+"w": "smaller",
+"start": 87.165,
+"end": 87.465,
+"conf": 0.583,
+"src": "ctc"
+},
+{
+"w": "closer",
+"start": 87.485,
+"end": 87.765,
+"conf": 0.494,
+"src": "ctc"
+},
+{
+"w": "than",
+"start": 87.6,
+"end": 87.88,
+"conf": 0.983,
+"src": "whisper"
+},
+{
+"w": "before",
+"start": 88.145,
+"end": 88.565,
+"conf": 0.589,
+"src": "ctc"
+},
+{
+"w": "every",
+"start": 88.32,
+"end": 88.72,
+"conf": 0.651,
+"src": "whisper"
+},
+{
+"w": "little",
+"start": 88.965,
+"end": 89.165,
+"conf": 0.518,
+"src": "ctc"
+},
+{
+"w": "width",
+"start": 89.04,
+"end": 89.38,
+"conf": 0.893,
+"src": "whisper"
+},
+{
+"w": "every",
+"start": 89.625,
+"end": 89.765,
+"conf": 0.453,
+"src": "ctc"
+},
+{
+"w": "change",
+"start": 89.845,
+"end": 90.205,
+"conf": 0.671,
+"src": "ctc"
+},
+{
+"w": "in",
+"start": 90.04,
+"end": 90.24,
+"conf": 0.95,
+"src": "whisper"
+},
+{
+"w": "height",
+"start": 90.24,
+"end": 90.56,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "add",
+"start": 90.56,
+"end": 91.18,
+"conf": 0.985,
+"src": "whisper"
+},
+{
+"w": "them",
+"start": 91.18,
+"end": 91.36,
+"conf": 0.921,
+"src": "whisper"
+},
+{
+"w": "together",
+"start": 91.36,
+"end": 91.76,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "from",
+"start": 91.76,
+"end": 92.08,
+"conf": 0.958,
+"src": "whisper"
+},
+{
+"w": "left",
+"start": 92.08,
+"end": 92.4,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 92.4,
+"end": 92.66,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "right",
+"start": 92.66,
+"end": 93.08,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "and",
+"start": 93.08,
+"end": 93.34,
+"conf": 0.895,
+"src": "whisper"
+},
+{
+"w": "as",
+"start": 93.34,
+"end": 93.72,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 93.72,
+"end": 93.94,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "pieces",
+"start": 93.94,
+"end": 94.42,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "fade",
+"start": 94.42,
+"end": 94.96,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "away",
+"start": 94.96,
+"end": 95.42,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 95.42,
+"end": 95.6,
+"conf": 0.751,
+"src": "whisper"
+},
+{
+"w": "staircase",
+"start": 95.6,
+"end": 95.9,
+"conf": 0.958,
+"src": "whisper"
+},
+{
+"w": "and",
+"start": 95.9,
+"end": 96.4,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 96.4,
+"end": 96.5,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "curb",
+"start": 96.5,
+"end": 96.74,
+"conf": 0.759,
+"src": "whisper"
+},
+{
+"w": "begin",
+"start": 96.826,
+"end": 97.086,
+"conf": 0.624,
+"src": "ctc"
+},
+{
+"w": "to",
+"start": 96.96,
+"end": 97.14,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "look",
+"start": 97.14,
+"end": 97.36,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 97.36,
+"end": 97.6,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 97.6,
+"end": 98.0,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "no",
+"start": 98.0,
+"end": 98.3,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "single",
+"start": 98.486,
+"end": 98.966,
+"conf": 0.53,
+"src": "ctc"
+},
+{
+"w": "moment",
+"start": 98.84,
+"end": 99.58,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "can",
+"start": 99.58,
+"end": 100.1,
+"conf": 0.913,
+"src": "whisper"
+},
+{
+"w": "tell",
+"start": 100.386,
+"end": 100.586,
+"conf": 0.672,
+"src": "ctc"
+},
+{
+"w": "us",
+"start": 100.42,
+"end": 100.74,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 100.74,
+"end": 100.88,
+"conf": 0.958,
+"src": "whisper"
+},
+{
+"w": "whole",
+"start": 100.88,
+"end": 101.12,
+"conf": 0.99,
+"src": "whisper"
+},
+{
+"w": "so",
+"start": 101.12,
+"end": 101.46,
+"conf": 0.988,
+"src": "whisper"
+},
+{
+"w": "gather",
+"start": 101.626,
+"end": 101.946,
+"conf": 0.532,
+"src": "ctc"
+},
+{
+"w": "every",
+"start": 101.966,
+"end": 102.146,
+"conf": 0.464,
+"src": "ctc"
+},
+{
+"w": "change",
+"start": 102.206,
+"end": 102.446,
+"conf": 0.731,
+"src": "ctc"
+},
+{
+"w": "and",
+"start": 102.32,
+"end": 102.44,
+"conf": 0.957,
+"src": "whisper"
+},
+{
+"w": "let",
+"start": 102.44,
+"end": 102.58,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 102.646,
+"end": 102.766,
+"conf": 0.614,
+"src": "ctc"
+},
+{
+"w": "pieces",
+"start": 102.7,
+"end": 102.96,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "form",
+"start": 102.96,
+"end": 103.2,
+"conf": 0.834,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 103.2,
+"end": 103.34,
+"conf": 0.789,
+"src": "whisper"
+},
+{
+"w": "total",
+"start": 103.34,
+"end": 103.6,
+"conf": 0.978,
+"src": "whisper"
+},
+{
+"w": "what",
+"start": 103.6,
+"end": 103.82,
+"conf": 0.797,
+"src": "whisper"
+},
+{
+"w": "looked",
+"start": 103.82,
+"end": 104.12,
+"conf": 0.706,
+"src": "whisper"
+},
+{
+"w": "like",
+"start": 104.386,
+"end": 104.606,
+"conf": 0.677,
+"src": "ctc"
+},
+{
+"w": "motion",
+"start": 104.686,
+"end": 105.246,
+"conf": 0.515,
+"src": "ctc"
+},
+{
+"w": "becomes",
+"start": 104.84,
+"end": 105.78,
+"conf": 0.515,
+"src": "whisper"
+},
+{
+"w": "something",
+"start": 105.78,
+"end": 106.2,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "we",
+"start": 106.2,
+"end": 106.56,
+"conf": 0.981,
+"src": "whisper"
+},
+{
+"w": "can",
+"start": 106.56,
+"end": 106.88,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "see",
+"start": 106.88,
+"end": 107.22,
+"conf": 0.87,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 107.22,
+"end": 107.88,
+"conf": 0.857,
+"src": "whisper"
+},
+{
+"w": "by",
+"start": 107.88,
+"end": 108.1,
+"conf": 0.986,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 108.1,
+"end": 108.52,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "accumulation",
+"start": 108.52,
+"end": 109.62,
+"conf": 0.966,
+"src": "whisper"
+},
+{
+"w": "is",
+"start": 109.62,
+"end": 110.38,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 110.38,
+"end": 110.58,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "key",
+"start": 110.58,
+"end": 111.04,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "add",
+"start": 112.86,
+"end": 113.46,
+"conf": 0.973,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 113.46,
+"end": 113.6,
+"conf": 0.971,
+"src": "whisper"
+},
+{
+"w": "up",
+"start": 113.6,
+"end": 113.78,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 113.78,
+"end": 114.08,
+"conf": 0.957,
+"src": "whisper"
+},
+{
+"w": "by",
+"start": 114.08,
+"end": 114.36,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 114.36,
+"end": 114.76,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 114.76,
+"end": 114.96,
+"conf": 0.029,
+"src": "whisper"
+},
+{
+"w": "by",
+"start": 114.96,
+"end": 114.98,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 114.98,
+"end": 115.34,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "put",
+"start": 115.34,
+"end": 115.52,
+"conf": 0.443,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 115.52,
+"end": 115.66,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "change",
+"start": 115.66,
+"end": 115.88,
+"conf": 0.46,
+"src": "whisper"
+},
+{
+"w": "find",
+"start": 115.88,
+"end": 116.44,
+"conf": 0.048,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 116.44,
+"end": 116.78,
+"conf": 0.198,
+"src": "whisper"
+},
+{
+"w": "shape",
+"start": 116.78,
+"end": 117.1,
+"conf": 0.675,
+"src": "whisper"
+},
+{
+"w": "start",
+"start": 117.62,
+"end": 117.96,
+"conf": 0.328,
+"src": "whisper"
+},
+{
+"w": "again",
+"start": 117.96,
+"end": 118.28,
+"conf": 0.694,
+"src": "whisper"
+},
+{
+"w": "take",
+"start": 118.44,
+"end": 118.62,
+"conf": 0.959,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 118.62,
+"end": 118.78,
+"conf": 0.96,
+"src": "whisper"
+},
+{
+"w": "different",
+"start": 118.78,
+"end": 119.3,
+"conf": 0.633,
+"src": "whisper"
+},
+{
+"w": "let",
+"start": 119.88,
+"end": 120.44,
+"conf": 0.903,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 120.44,
+"end": 120.62,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "constant",
+"start": 120.62,
+"end": 121.04,
+"conf": 0.989,
+"src": "whisper"
+},
+{
+"w": "fade",
+"start": 121.04,
+"end": 121.54,
+"conf": 0.978,
+"src": "whisper"
+},
+{
+"w": "away",
+"start": 121.54,
+"end": 122.3,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "rate",
+"start": 122.78,
+"end": 123.12,
+"conf": 0.847,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 123.12,
+"end": 123.26,
+"conf": 0.931,
+"src": "whisper"
+},
+{
+"w": "amount",
+"start": 123.26,
+"end": 123.52,
+"conf": 0.958,
+"src": "whisper"
+},
+{
+"w": "height",
+"start": 123.72,
+"end": 123.98,
+"conf": 0.98,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 123.98,
+"end": 124.22,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "area",
+"start": 124.22,
+"end": 124.62,
+"conf": 0.991,
+"src": "whisper"
+},
+{
+"w": "different",
+"start": 124.62,
+"end": 125.16,
+"conf": 0.758,
+"src": "whisper"
+},
+{
+"w": "things",
+"start": 125.16,
+"end": 125.62,
+"conf": 0.986,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 125.68,
+"end": 125.9,
+"conf": 0.93,
+"src": "whisper"
+},
+{
+"w": "melody",
+"start": 125.9,
+"end": 126.48,
+"conf": 0.593,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 126.78,
+"end": 126.96,
+"conf": 0.986,
+"src": "whisper"
+},
+{
+"w": "machine",
+"start": 126.96,
+"end": 127.34,
+"conf": 0.91,
+"src": "whisper"
+},
+{
+"w": "different",
+"start": 127.34,
+"end": 127.72,
+"conf": 0.931,
+"src": "whisper"
+},
+{
+"w": "input",
+"start": 127.72,
+"end": 128.18,
+"conf": 0.989,
+"src": "whisper"
+},
+{
+"w": "add",
+"start": 128.18,
+"end": 128.58,
+"conf": 0.102,
+"src": "whisper"
+},
+{
+"w": "up",
+"start": 128.58,
+"end": 128.98,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "what",
+"start": 128.98,
+"end": 129.36,
+"conf": 0.919,
+"src": "whisper"
+},
+{
+"w": "you",
+"start": 129.36,
+"end": 129.74,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "need",
+"start": 129.74,
+"end": 130.18,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "take",
+"start": 131.26,
+"end": 131.6,
+"conf": 0.888,
+"src": "whisper"
+},
+{
+"w": "an",
+"start": 131.6,
+"end": 131.84,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "antiderivative",
+"start": 131.988,
+"end": 132.788,
+"conf": 0.519,
+"src": "ctc"
+},
+{
+"w": "check",
+"start": 133.148,
+"end": 133.328,
+"conf": 0.532,
+"src": "ctc"
+},
+{
+"w": "both",
+"start": 133.468,
+"end": 133.708,
+"conf": 0.571,
+"src": "ctc"
+},
+{
+"w": "ends",
+"start": 133.848,
+"end": 134.128,
+"conf": 0.509,
+"src": "ctc"
+},
+{
+"w": "f",
+"start": 134.44,
+"end": 134.78,
+"conf": 0.698,
+"src": "whisper"
+},
+{
+"w": "of",
+"start": 134.78,
+"end": 134.88,
+"conf": 0.933,
+"src": "whisper"
+},
+{
+"w": "b",
+"start": 134.88,
+"end": 135.06,
+"conf": 0.679,
+"src": "whisper"
+},
+{
+"w": "minus",
+"start": 135.06,
+"end": 136.08,
+"conf": 0.294,
+"src": "whisper"
+},
+{
+"w": "f",
+"start": 136.08,
+"end": 136.3,
+"conf": 0.901,
+"src": "whisper"
+},
+{
+"w": "of",
+"start": 136.3,
+"end": 136.48,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "a",
+"start": 136.48,
+"end": 136.62,
+"conf": 0.563,
+"src": "whisper"
+},
+{
+"w": "c",
+"start": 136.62,
+"end": 137.1,
+"conf": 0.881,
+"src": "whisper"
+},
+{
+"w": "on",
+"start": 137.528,
+"end": 137.588,
+"conf": 0.552,
+"src": "ctc"
+},
+{
+"w": "the",
+"start": 137.5,
+"end": 137.62,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "left",
+"start": 137.62,
+"end": 137.92,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "c",
+"start": 138.0,
+"end": 138.1,
+"conf": 0.988,
+"src": "whisper"
+},
+{
+"w": "on",
+"start": 138.1,
+"end": 138.48,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 138.48,
+"end": 138.58,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "right",
+"start": 138.58,
+"end": 138.84,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "subtract",
+"start": 139.38,
+"end": 139.82,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "and",
+"start": 139.82,
+"end": 140.7,
+"conf": 0.448,
+"src": "whisper"
+},
+{
+"w": "it's",
+"start": 140.7,
+"end": 140.84,
+"conf": 0.985,
+"src": "whisper"
+},
+{
+"w": "gone",
+"start": 140.84,
+"end": 141.06,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 141.32,
+"end": 141.66,
+"conf": 0.973,
+"src": "whisper"
+},
+{
+"w": "family",
+"start": 141.808,
+"end": 142.148,
+"conf": 0.606,
+"src": "ctc"
+},
+{
+"w": "becomes",
+"start": 142.02,
+"end": 142.44,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "one",
+"start": 142.44,
+"end": 142.8,
+"conf": 0.953,
+"src": "whisper"
+},
+{
+"w": "num",
+"start": 142.8,
+"end": 143.12,
+"conf": 0.162,
+"src": "whisper"
+},
+{
+"w": "now",
+"start": 143.12,
+"end": 143.24,
+"conf": 0.767,
+"src": "whisper"
+},
+{
+"w": "take",
+"start": 143.368,
+"end": 143.548,
+"conf": 0.464,
+"src": "ctc"
+},
+{
+"w": "a",
+"start": 143.44,
+"end": 143.58,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "curve",
+"start": 143.58,
+"end": 143.98,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "above",
+"start": 143.98,
+"end": 144.26,
+"conf": 0.979,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 144.26,
+"end": 144.48,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "ground",
+"start": 144.608,
+"end": 144.948,
+"conf": 0.545,
+"src": "ctc"
+},
+{
+"w": "then",
+"start": 144.76,
+"end": 145.54,
+"conf": 0.049,
+"src": "whisper"
+},
+{
+"w": "little",
+"start": 145.54,
+"end": 145.84,
+"conf": 0.907,
+"src": "whisper"
+},
+{
+"w": "strips",
+"start": 146.088,
+"end": 146.449,
+"conf": 0.461,
+"src": "ctc"
+},
+{
+"w": "all",
+"start": 146.26,
+"end": 146.54,
+"conf": 0.979,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 146.54,
+"end": 146.64,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "way",
+"start": 146.709,
+"end": 146.909,
+"conf": 0.456,
+"src": "ctc"
+},
+{
+"w": "around",
+"start": 146.84,
+"end": 147.22,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "height",
+"start": 147.22,
+"end": 148.14,
+"conf": 0.526,
+"src": "whisper"
+},
+{
+"w": "times",
+"start": 148.14,
+"end": 148.44,
+"conf": 0.685,
+"src": "whisper"
+},
+{
+"w": "width",
+"start": 148.44,
+"end": 148.76,
+"conf": 0.901,
+"src": "whisper"
+},
+{
+"w": "one",
+"start": 148.92,
+"end": 149.3,
+"conf": 0.968,
+"src": "whisper"
+},
+{
+"w": "little",
+"start": 149.3,
+"end": 149.66,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 149.66,
+"end": 150.0,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "add",
+"start": 150.0,
+"end": 150.58,
+"conf": 0.942,
+"src": "whisper"
+},
+{
+"w": "every",
+"start": 150.58,
+"end": 150.88,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 150.88,
+"end": 151.24,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "and",
+"start": 151.24,
+"end": 151.46,
+"conf": 0.909,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 151.46,
+"end": 151.56,
+"conf": 0.946,
+"src": "whisper"
+},
+{
+"w": "surface",
+"start": 151.56,
+"end": 151.92,
+"conf": 0.974,
+"src": "whisper"
+},
+{
+"w": "appears",
+"start": 151.92,
+"end": 152.42,
+"conf": 0.963,
+"src": "whisper"
+},
+{
+"w": "now",
+"start": 152.42,
+"end": 153.02,
+"conf": 0.951,
+"src": "whisper"
+},
+{
+"w": "take",
+"start": 153.02,
+"end": 153.24,
+"conf": 0.841,
+"src": "whisper"
+},
+{
+"w": "a",
+"start": 153.24,
+"end": 153.42,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "solid",
+"start": 153.42,
+"end": 153.72,
+"conf": 0.988,
+"src": "whisper"
+},
+{
+"w": "cut",
+"start": 153.88,
+"end": 154.52,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 154.52,
+"end": 154.7,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "thin",
+"start": 154.7,
+"end": 154.9,
+"conf": 0.973,
+"src": "whisper"
+},
+{
+"w": "look",
+"start": 154.9,
+"end": 155.44,
+"conf": 0.983,
+"src": "whisper"
+},
+{
+"w": "at",
+"start": 155.44,
+"end": 155.62,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 155.62,
+"end": 155.72,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "slice",
+"start": 155.72,
+"end": 155.96,
+"conf": 0.881,
+"src": "whisper"
+},
+{
+"w": "not",
+"start": 156.06,
+"end": 156.24,
+"conf": 0.99,
+"src": "whisper"
+},
+{
+"w": "only",
+"start": 156.24,
+"end": 156.74,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 156.74,
+"end": 156.98,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "skin",
+"start": 156.98,
+"end": 157.34,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "every",
+"start": 157.34,
+"end": 157.96,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "cross",
+"start": 157.96,
+"end": 158.32,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "-section",
+"start": 158.32,
+"end": 158.66,
+"conf": 0.756,
+"src": "whisper"
+},
+{
+"w": "as",
+"start": 158.66,
+"end": 158.9,
+"conf": 0.12,
+"src": "whisper"
+},
+{
+"w": "an",
+"start": 158.889,
+"end": 159.129,
+"conf": 0.452,
+"src": "ctc"
+},
+{
+"w": "area",
+"start": 159.04,
+"end": 159.34,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "inside",
+"start": 159.34,
+"end": 159.74,
+"conf": 0.99,
+"src": "whisper"
+},
+{
+"w": "add",
+"start": 159.74,
+"end": 160.44,
+"conf": 0.983,
+"src": "whisper"
+},
+{
+"w": "those",
+"start": 160.44,
+"end": 160.8,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "areas",
+"start": 160.8,
+"end": 161.22,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "from",
+"start": 161.22,
+"end": 161.5,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "side",
+"start": 161.769,
+"end": 162.069,
+"conf": 0.607,
+"src": "ctc"
+},
+{
+"w": "to",
+"start": 161.86,
+"end": 162.06,
+"conf": 0.979,
+"src": "whisper"
+},
+{
+"w": "side",
+"start": 162.209,
+"end": 162.729,
+"conf": 0.736,
+"src": "ctc"
+},
+{
+"w": "and",
+"start": 162.749,
+"end": 162.809,
+"conf": 0.452,
+"src": "ctc"
+},
+{
+"w": "suddenly",
+"start": 162.829,
+"end": 163.249,
+"conf": 0.521,
+"src": "ctc"
+},
+{
+"w": "height",
+"start": 163.1,
+"end": 163.54,
+"conf": 0.741,
+"src": "whisper"
+},
+{
+"w": "became",
+"start": 163.54,
+"end": 163.94,
+"conf": 0.99,
+"src": "whisper"
+},
+{
+"w": "area",
+"start": 163.94,
+"end": 164.76,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "area",
+"start": 164.76,
+"end": 165.46,
+"conf": 0.777,
+"src": "whisper"
+},
+{
+"w": "became",
+"start": 165.46,
+"end": 165.98,
+"conf": 0.984,
+"src": "whisper"
+},
+{
+"w": "volume",
+"start": 165.98,
+"end": 166.64,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "nothing",
+"start": 166.64,
+"end": 166.92,
+"conf": 0.752,
+"src": "whisper"
+},
+{
+"w": "changed",
+"start": 167.15,
+"end": 167.53,
+"conf": 0.817,
+"src": "ctc"
+},
+{
+"w": "inside",
+"start": 167.61,
+"end": 168.11,
+"conf": 0.671,
+"src": "ctc"
+},
+{
+"w": "the",
+"start": 167.74,
+"end": 168.12,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "machine",
+"start": 168.12,
+"end": 168.42,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "only",
+"start": 168.42,
+"end": 169.46,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "what",
+"start": 169.46,
+"end": 169.7,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "we",
+"start": 169.7,
+"end": 170.0,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "chose",
+"start": 170.0,
+"end": 170.4,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "defeated",
+"start": 170.4,
+"end": 171.48,
+"conf": 0.747,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 171.48,
+"end": 172.84,
+"conf": 0.722,
+"src": "whisper"
+},
+{
+"w": "array",
+"start": 172.84,
+"end": 173.48,
+"conf": 0.477,
+"src": "whisper"
+},
+{
+"w": "becomes",
+"start": 173.48,
+"end": 174.02,
+"conf": 0.751,
+"src": "whisper"
+},
+{
+"w": "an",
+"start": 174.02,
+"end": 174.34,
+"conf": 0.791,
+"src": "whisper"
+},
+{
+"w": "amount",
+"start": 174.34,
+"end": 174.66,
+"conf": 0.936,
+"src": "whisper"
+},
+{
+"w": "of",
+"start": 174.66,
+"end": 174.74,
+"conf": 0.812,
+"src": "whisper"
+},
+{
+"w": "volume",
+"start": 174.74,
+"end": 174.74,
+"conf": 0.013,
+"src": "whisper"
+},
+{
+"w": "a",
+"start": 174.74,
+"end": 175.64,
+"conf": 0.157,
+"src": "whisper"
+},
+{
+"w": "height",
+"start": 175.64,
+"end": 175.98,
+"conf": 0.916,
+"src": "whisper"
+},
+{
+"w": "becomes",
+"start": 175.98,
+"end": 176.44,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "an",
+"start": 176.44,
+"end": 176.86,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "area",
+"start": 176.86,
+"end": 177.28,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "a",
+"start": 177.28,
+"end": 177.96,
+"conf": 0.47,
+"src": "whisper"
+},
+{
+"w": "slice",
+"start": 177.96,
+"end": 178.38,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "becomes",
+"start": 178.38,
+"end": 178.9,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "a",
+"start": 178.9,
+"end": 179.42,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "volume",
+"start": 179.42,
+"end": 179.78,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 179.78,
+"end": 180.14,
+"conf": 0.944,
+"src": "whisper"
+},
+{
+"w": "operation",
+"start": 180.14,
+"end": 180.76,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "different",
+"start": 181.18,
+"end": 181.58,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "thing",
+"start": 181.58,
+"end": 182.1,
+"conf": 0.954,
+"src": "whisper"
+},
+{
+"w": "we",
+"start": 182.1,
+"end": 182.4,
+"conf": 0.508,
+"src": "whisper"
+},
+{
+"w": "choose",
+"start": 182.4,
+"end": 182.66,
+"conf": 0.911,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 182.66,
+"end": 182.96,
+"conf": 0.215,
+"src": "whisper"
+},
+{
+"w": "accumulate",
+"start": 182.96,
+"end": 183.86,
+"conf": 0.989,
+"src": "whisper"
+},
+{
+"w": "water",
+"start": 183.86,
+"end": 184.92,
+"conf": 0.558,
+"src": "whisper"
+},
+{
+"w": "mass",
+"start": 184.92,
+"end": 185.26,
+"conf": 0.788,
+"src": "whisper"
+},
+{
+"w": "energy",
+"start": 185.26,
+"end": 186.32,
+"conf": 0.648,
+"src": "whisper"
+},
+{
+"w": "different",
+"start": 187.14,
+"end": 187.38,
+"conf": 0.98,
+"src": "whisper"
+},
+{
+"w": "stories",
+"start": 187.38,
+"end": 187.96,
+"conf": 0.462,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 188.02,
+"end": 188.44,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "machinery",
+"start": 188.44,
+"end": 190.04,
+"conf": 0.984,
+"src": "whisper"
+},
+{
+"w": "add",
+"start": 191.92,
+"end": 192.64,
+"conf": 0.986,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 192.64,
+"end": 192.78,
+"conf": 0.926,
+"src": "whisper"
+},
+{
+"w": "up",
+"start": 192.78,
+"end": 193.0,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 193.0,
+"end": 193.24,
+"conf": 0.969,
+"src": "whisper"
+},
+{
+"w": "by",
+"start": 193.24,
+"end": 193.48,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 193.48,
+"end": 193.84,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "don't",
+"start": 193.84,
+"end": 194.22,
+"conf": 0.982,
+"src": "whisper"
+},
+{
+"w": "memorize",
+"start": 194.22,
+"end": 194.62,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "what",
+"start": 194.62,
+"end": 195.06,
+"conf": 0.987,
+"src": "whisper"
+},
+{
+"w": "you",
+"start": 195.06,
+"end": 195.22,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "can't",
+"start": 195.22,
+"end": 195.46,
+"conf": 0.899,
+"src": "whisper"
+},
+{
+"w": "see",
+"start": 195.46,
+"end": 195.72,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "lose",
+"start": 195.72,
+"end": 196.62,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 196.62,
+"end": 196.74,
+"conf": 0.981,
+"src": "whisper"
+},
+{
+"w": "start",
+"start": 196.74,
+"end": 197.02,
+"conf": 0.964,
+"src": "whisper"
+},
+{
+"w": "recover",
+"start": 197.1,
+"end": 197.36,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 197.36,
+"end": 197.66,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "family",
+"start": 197.66,
+"end": 197.96,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "take",
+"start": 197.96,
+"end": 198.8,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 198.8,
+"end": 199.18,
+"conf": 0.913,
+"src": "whisper"
+},
+{
+"w": "change",
+"start": 199.18,
+"end": 199.56,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "and",
+"start": 199.56,
+"end": 199.82,
+"conf": 0.995,
+"src": "whisper"
+},
+{
+"w": "set",
+"start": 199.82,
+"end": 200.04,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 200.04,
+"end": 200.24,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "free",
+"start": 200.24,
+"end": 200.64,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "rate",
+"start": 201.56,
+"end": 202.28,
+"conf": 0.694,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 202.28,
+"end": 202.46,
+"conf": 0.861,
+"src": "whisper"
+},
+{
+"w": "amount",
+"start": 202.46,
+"end": 202.7,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "height",
+"start": 202.92,
+"end": 203.14,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 203.14,
+"end": 203.42,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "area",
+"start": 203.42,
+"end": 203.84,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "area",
+"start": 203.84,
+"end": 204.48,
+"conf": 0.688,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 204.48,
+"end": 204.74,
+"conf": 0.845,
+"src": "whisper"
+},
+{
+"w": "volume",
+"start": 204.74,
+"end": 205.16,
+"conf": 0.949,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 205.32,
+"end": 205.6,
+"conf": 0.932,
+"src": "whisper"
+},
+{
+"w": "idea",
+"start": 205.6,
+"end": 206.08,
+"conf": 0.466,
+"src": "whisper"
+},
+{
+"w": "underneath",
+"start": 206.78,
+"end": 207.34,
+"conf": 0.932,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 207.34,
+"end": 207.72,
+"conf": 0.993,
+"src": "whisper"
+},
+{
+"w": "machine",
+"start": 207.852,
+"end": 208.272,
+"conf": 0.49,
+"src": "ctc"
+},
+{
+"w": "different",
+"start": 208.18,
+"end": 208.4,
+"conf": 0.994,
+"src": "whisper"
+},
+{
+"w": "input",
+"start": 208.4,
+"end": 208.92,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "now",
+"start": 208.92,
+"end": 209.54,
+"conf": 0.966,
+"src": "whisper"
+},
+{
+"w": "you",
+"start": 209.54,
+"end": 209.72,
+"conf": 0.989,
+"src": "whisper"
+},
+{
+"w": "know",
+"start": 209.72,
+"end": 209.92,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "what",
+"start": 209.92,
+"end": 210.2,
+"conf": 0.951,
+"src": "whisper"
+},
+{
+"w": "it's",
+"start": 210.2,
+"end": 210.36,
+"conf": 0.979,
+"src": "whisper"
+},
+{
+"w": "built",
+"start": 210.36,
+"end": 210.58,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 210.58,
+"end": 210.78,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "do",
+"start": 210.78,
+"end": 211.06,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "why",
+"start": 211.06,
+"end": 211.46,
+"conf": 0.916,
+"src": "whisper"
+},
+{
+"w": "does",
+"start": 211.46,
+"end": 211.74,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 211.74,
+"end": 211.9,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "work",
+"start": 211.9,
+"end": 212.16,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "i'm",
+"start": 212.3,
+"end": 212.72,
+"conf": 0.801,
+"src": "whisper"
+},
+{
+"w": "scratched",
+"start": 212.72,
+"end": 213.1,
+"conf": 0.501,
+"src": "whisper"
+},
+{
+"w": "i'm",
+"start": 213.36,
+"end": 213.96,
+"conf": 0.855,
+"src": "whisper"
+},
+{
+"w": "scratched",
+"start": 213.96,
+"end": 214.5,
+"conf": 0.988,
+"src": "whisper"
+},
+{
+"w": "i'm",
+"start": 214.56,
+"end": 215.34,
+"conf": 0.915,
+"src": "whisper"
+},
+{
+"w": "scratched",
+"start": 215.34,
+"end": 215.7,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "i'm",
+"start": 215.78,
+"end": 216.44,
+"conf": 0.986,
+"src": "whisper"
+},
+{
+"w": "scratched",
+"start": 216.44,
+"end": 216.66,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "reverse",
+"start": 218.02,
+"end": 218.58,
+"conf": 0.927,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 218.58,
+"end": 218.76,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "add",
+"start": 218.82,
+"end": 219.22,
+"conf": 0.09,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 219.22,
+"end": 219.4,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "slice",
+"start": 219.44,
+"end": 219.74,
+"conf": 0.999,
+"src": "whisper"
+},
+{
+"w": "it",
+"start": 219.74,
+"end": 220.24,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "see",
+"start": 220.24,
+"end": 220.66,
+"conf": 0.992,
+"src": "whisper"
+},
+{
+"w": "derivative",
+"start": 221.173,
+"end": 221.833,
+"conf": 0.496,
+"src": "ctc"
+},
+{
+"w": "thing",
+"start": 221.68,
+"end": 221.94,
+"conf": 0.219,
+"src": "whisper"
+},
+{
+"w": "to",
+"start": 221.94,
+"end": 222.1,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "grow",
+"start": 222.1,
+"end": 222.32,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "geometry",
+"start": 222.733,
+"end": 223.313,
+"conf": 0.679,
+"src": "ctc"
+},
+{
+"w": "piece",
+"start": 222.88,
+"end": 223.56,
+"conf": 0.987,
+"src": "whisper"
+},
+{
+"w": "by",
+"start": 223.56,
+"end": 223.8,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "piece",
+"start": 223.8,
+"end": 224.18,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "the",
+"start": 224.44,
+"end": 224.58,
+"conf": 0.998,
+"src": "whisper"
+},
+{
+"w": "total",
+"start": 224.58,
+"end": 224.84,
+"conf": 0.95,
+"src": "whisper"
+},
+{
+"w": "grows",
+"start": 224.84,
+"end": 225.14,
+"conf": 0.958,
+"src": "whisper"
+},
+{
+"w": "same",
+"start": 225.14,
+"end": 226.08,
+"conf": 0.685,
+"src": "whisper"
+},
+{
+"w": "machine",
+"start": 226.08,
+"end": 226.48,
+"conf": 0.996,
+"src": "whisper"
+},
+{
+"w": "now",
+"start": 226.7,
+"end": 227.5,
+"conf": 0.997,
+"src": "whisper"
+},
+{
+"w": "you",
+"start": 227.5,
+"end": 227.66,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "know",
+"start": 227.66,
+"end": 227.88,
+"conf": 1.0,
+"src": "whisper"
+},
+{
+"w": "99",
+"start": 228.66,
+"end": 229.22,
+"conf": 0.93,
+"src": "whisper"
+},
+{
+"w": "%",
+"start": 229.22,
+"end": 229.68,
+"conf": 0.97,
+"src": "whisper"
+},
+{
+"w": "loading",
+"start": 229.68,
+"end": 230.4,
+"conf": 0.954,
+"src": "whisper"
+}
+]

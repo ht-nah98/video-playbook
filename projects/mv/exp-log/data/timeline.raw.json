@@ -1,0 +1,5121 @@
+{
+ "sections": [
+  {
+   "name": "Intro — Digital Voice",
+   "start": 2.76,
+   "end": 11.04
+  },
+  {
+   "name": "Verse 1 — Rap",
+   "start": 11.8,
+   "end": 37.78
+  },
+  {
+   "name": "Pre-Chorus — Sung",
+   "start": 37.78,
+   "end": 46.38
+  },
+  {
+   "name": "Chorus — Sung",
+   "start": 46.52,
+   "end": 59.7
+  },
+  {
+   "name": "Post-Chorus — Rap Tag",
+   "start": 60.2,
+   "end": 64.32
+  },
+  {
+   "name": "Verse 2 — Rap",
+   "start": 64.32,
+   "end": 90.28
+  },
+  {
+   "name": "Pre-Chorus — Sung",
+   "start": 90.468,
+   "end": 98.88
+  },
+  {
+   "name": "Chorus — Sung",
+   "start": 98.88,
+   "end": 112.46
+  },
+  {
+   "name": "Beat Switch — Rap",
+   "start": 112.8,
+   "end": 125.851
+  },
+  {
+   "name": "Instrument Drop",
+   "start": 125.66,
+   "end": 139.772
+  },
+  {
+   "name": "Beat Re-Entry — Rap",
+   "start": 140.092,
+   "end": 155.7
+  },
+  {
+   "name": "Bridge — Sung, Half-Time",
+   "start": 155.7,
+   "end": 167.74
+  },
+  {
+   "name": "Final Rap",
+   "start": 168.58,
+   "end": 186.74
+  },
+  {
+   "name": "Final Chorus — Bigger, Sung + Rap Layers",
+   "start": 186.876,
+   "end": 208.6
+  },
+  {
+   "name": "Group Chant",
+   "start": 208.6,
+   "end": 210.44
+  },
+  {
+   "name": "Final Hook — Sung + Digital Voice",
+   "start": 211.48,
+   "end": 221.1
+  }
+ ],
+ "lines": [
+  {
+   "section": "Intro — Digital Voice",
+   "text": "Ninety-nine percent...",
+   "start": 2.76,
+   "end": 3.61,
+   "words": [
+    {
+     "w": "ninety",
+     "start": 2.76,
+     "end": 3.01,
+     "interp": true
+    },
+    {
+     "w": "nine",
+     "start": 3.06,
+     "end": 3.31,
+     "interp": true
+    },
+    {
+     "w": "percent",
+     "start": 3.36,
+     "end": 3.61,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Intro — Digital Voice",
+   "text": "Loading.",
+   "start": 3.66,
+   "end": 4.62,
+   "words": [
+    {
+     "w": "loading",
+     "start": 3.66,
+     "end": 4.62
+    }
+   ]
+  },
+  {
+   "section": "Intro — Digital Voice",
+   "text": "Two to the three?",
+   "start": 4.78,
+   "end": 6.78,
+   "words": [
+    {
+     "w": "two",
+     "start": 4.78,
+     "end": 6.3
+    },
+    {
+     "w": "to",
+     "start": 6.3,
+     "end": 6.46
+    },
+    {
+     "w": "the",
+     "start": 6.46,
+     "end": 6.56
+    },
+    {
+     "w": "three",
+     "start": 6.56,
+     "end": 6.78
+    }
+   ]
+  },
+  {
+   "section": "Intro — Digital Voice",
+   "text": "Easy.",
+   "start": 6.96,
+   "end": 7.8,
+   "words": [
+    {
+     "w": "easy",
+     "start": 6.96,
+     "end": 7.8
+    }
+   ]
+  },
+  {
+   "section": "Intro — Digital Voice",
+   "text": "Two to the root two?",
+   "start": 8.0,
+   "end": 9.54,
+   "words": [
+    {
+     "w": "two",
+     "start": 8.0,
+     "end": 8.86
+    },
+    {
+     "w": "to",
+     "start": 8.86,
+     "end": 8.96
+    },
+    {
+     "w": "the",
+     "start": 8.96,
+     "end": 9.04
+    },
+    {
+     "w": "root",
+     "start": 9.04,
+     "end": 9.26
+    },
+    {
+     "w": "two",
+     "start": 9.26,
+     "end": 9.54
+    }
+   ]
+  },
+  {
+   "section": "Intro — Digital Voice",
+   "text": "Wait.",
+   "start": 9.68,
+   "end": 11.04,
+   "words": [
+    {
+     "w": "wait",
+     "start": 9.68,
+     "end": 11.04
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "Two times two times two,",
+   "start": 11.8,
+   "end": 13.38,
+   "words": [
+    {
+     "w": "two",
+     "start": 11.8,
+     "end": 12.24
+    },
+    {
+     "w": "times",
+     "start": 12.24,
+     "end": 12.64
+    },
+    {
+     "w": "two",
+     "start": 12.64,
+     "end": 12.86
+    },
+    {
+     "w": "times",
+     "start": 12.86,
+     "end": 13.18
+    },
+    {
+     "w": "two",
+     "start": 13.18,
+     "end": 13.38
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "yeah, I know that game.",
+   "start": 13.46,
+   "end": 14.26,
+   "words": [
+    {
+     "w": "yeah",
+     "start": 13.46,
+     "end": 13.6
+    },
+    {
+     "w": "i",
+     "start": 13.6,
+     "end": 13.76
+    },
+    {
+     "w": "know",
+     "start": 13.821,
+     "end": 13.941
+    },
+    {
+     "w": "that",
+     "start": 13.96,
+     "end": 14.16,
+     "interp": true
+    },
+    {
+     "w": "game",
+     "start": 13.98,
+     "end": 14.26
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "Three little factors,",
+   "start": 14.26,
+   "end": 15.661,
+   "words": [
+    {
+     "w": "three",
+     "start": 14.26,
+     "end": 14.68
+    },
+    {
+     "w": "little",
+     "start": 14.921,
+     "end": 15.121
+    },
+    {
+     "w": "factors",
+     "start": 15.181,
+     "end": 15.661
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "power gets the name.",
+   "start": 15.6,
+   "end": 16.481,
+   "words": [
+    {
+     "w": "power",
+     "start": 15.6,
+     "end": 15.82
+    },
+    {
+     "w": "gets",
+     "start": 15.82,
+     "end": 16.02
+    },
+    {
+     "w": "the",
+     "start": 16.02,
+     "end": 16.14
+    },
+    {
+     "w": "name",
+     "start": 16.281,
+     "end": 16.481
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "But root two on top—",
+   "start": 16.501,
+   "end": 17.38,
+   "words": [
+    {
+     "w": "but",
+     "start": 16.501,
+     "end": 16.641
+    },
+    {
+     "w": "root",
+     "start": 16.58,
+     "end": 16.84
+    },
+    {
+     "w": "two",
+     "start": 16.84,
+     "end": 17.08
+    },
+    {
+     "w": "on",
+     "start": 17.08,
+     "end": 17.22
+    },
+    {
+     "w": "top",
+     "start": 17.22,
+     "end": 17.38
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "how many times is that?",
+   "start": 17.42,
+   "end": 18.36,
+   "words": [
+    {
+     "w": "how",
+     "start": 17.42,
+     "end": 17.52
+    },
+    {
+     "w": "many",
+     "start": 17.581,
+     "end": 17.761
+    },
+    {
+     "w": "times",
+     "start": 17.861,
+     "end": 18.122
+    },
+    {
+     "w": "is",
+     "start": 17.94,
+     "end": 18.18
+    },
+    {
+     "w": "that",
+     "start": 18.18,
+     "end": 18.36
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "Can't repeat multiplication",
+   "start": 18.42,
+   "end": 19.562,
+   "words": [
+    {
+     "w": "can't",
+     "start": 18.42,
+     "end": 18.64
+    },
+    {
+     "w": "repeat",
+     "start": 18.64,
+     "end": 18.76
+    },
+    {
+     "w": "multiplication",
+     "start": 18.942,
+     "end": 19.562
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "one-point-four-one-four like that.",
+   "start": 19.52,
+   "end": 20.742,
+   "words": [
+    {
+     "w": "one",
+     "start": 19.52,
+     "end": 19.64
+    },
+    {
+     "w": "point",
+     "start": 19.792,
+     "end": 19.992,
+     "interp": true
+    },
+    {
+     "w": "four",
+     "start": 19.945,
+     "end": 20.145,
+     "interp": true
+    },
+    {
+     "w": "one",
+     "start": 20.097,
+     "end": 20.297,
+     "interp": true
+    },
+    {
+     "w": "four",
+     "start": 20.25,
+     "end": 20.45,
+     "interp": true
+    },
+    {
+     "w": "like",
+     "start": 20.402,
+     "end": 20.522
+    },
+    {
+     "w": "that",
+     "start": 20.542,
+     "end": 20.742
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "So maybe the meaning",
+   "start": 20.62,
+   "end": 21.702,
+   "words": [
+    {
+     "w": "so",
+     "start": 20.62,
+     "end": 20.82
+    },
+    {
+     "w": "maybe",
+     "start": 21.082,
+     "end": 21.282
+    },
+    {
+     "w": "the",
+     "start": 21.18,
+     "end": 21.38
+    },
+    {
+     "w": "meaning",
+     "start": 21.482,
+     "end": 21.702
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "was never just the count.",
+   "start": 21.722,
+   "end": 22.64,
+   "words": [
+    {
+     "w": "was",
+     "start": 21.722,
+     "end": 21.822
+    },
+    {
+     "w": "never",
+     "start": 21.78,
+     "end": 21.96
+    },
+    {
+     "w": "just",
+     "start": 22.142,
+     "end": 22.382
+    },
+    {
+     "w": "the",
+     "start": 22.401,
+     "end": 22.601,
+     "interp": true
+    },
+    {
+     "w": "count",
+     "start": 22.42,
+     "end": 22.64
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "Maybe there is one deeper law",
+   "start": 22.822,
+   "end": 23.882,
+   "words": [
+    {
+     "w": "maybe",
+     "start": 22.822,
+     "end": 23.022
+    },
+    {
+     "w": "there",
+     "start": 23.042,
+     "end": 23.222
+    },
+    {
+     "w": "is",
+     "start": 23.12,
+     "end": 23.28
+    },
+    {
+     "w": "one",
+     "start": 23.422,
+     "end": 23.482
+    },
+    {
+     "w": "deeper",
+     "start": 23.38,
+     "end": 23.56
+    },
+    {
+     "w": "law",
+     "start": 23.782,
+     "end": 23.882
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "that everything comes out from.",
+   "start": 23.8,
+   "end": 25.142,
+   "words": [
+    {
+     "w": "that",
+     "start": 23.8,
+     "end": 23.94
+    },
+    {
+     "w": "everything",
+     "start": 24.062,
+     "end": 24.482
+    },
+    {
+     "w": "comes",
+     "start": 24.562,
+     "end": 24.702
+    },
+    {
+     "w": "out",
+     "start": 24.58,
+     "end": 24.8
+    },
+    {
+     "w": "from",
+     "start": 24.922,
+     "end": 25.142
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "Same base multiplying,",
+   "start": 25.382,
+   "end": 26.321,
+   "words": [
+    {
+     "w": "same",
+     "start": 25.382,
+     "end": 25.582
+    },
+    {
+     "w": "base",
+     "start": 25.642,
+     "end": 25.862
+    },
+    {
+     "w": "multiplying",
+     "start": 26.121,
+     "end": 26.321,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "exponents combine.",
+   "start": 26.38,
+   "end": 27.222,
+   "words": [
+    {
+     "w": "exponents",
+     "start": 26.38,
+     "end": 26.68
+    },
+    {
+     "w": "combine",
+     "start": 26.822,
+     "end": 27.222
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "Keep that rule alive",
+   "start": 27.502,
+   "end": 28.06,
+   "words": [
+    {
+     "w": "keep",
+     "start": 27.502,
+     "end": 27.622
+    },
+    {
+     "w": "that",
+     "start": 27.48,
+     "end": 27.68
+    },
+    {
+     "w": "rule",
+     "start": 27.762,
+     "end": 27.922
+    },
+    {
+     "w": "alive",
+     "start": 27.82,
+     "end": 28.06
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "and the rest falls into line.",
+   "start": 28.06,
+   "end": 29.24,
+   "words": [
+    {
+     "w": "and",
+     "start": 28.06,
+     "end": 28.34
+    },
+    {
+     "w": "the",
+     "start": 28.34,
+     "end": 28.46
+    },
+    {
+     "w": "rest",
+     "start": 28.46,
+     "end": 28.64
+    },
+    {
+     "w": "falls",
+     "start": 28.64,
+     "end": 28.76
+    },
+    {
+     "w": "into",
+     "start": 28.88,
+     "end": 29.08,
+     "interp": true
+    },
+    {
+     "w": "line",
+     "start": 29.0,
+     "end": 29.24
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "Zero has no choice.",
+   "start": 29.24,
+   "end": 30.54,
+   "words": [
+    {
+     "w": "zero",
+     "start": 29.24,
+     "end": 29.72
+    },
+    {
+     "w": "has",
+     "start": 29.72,
+     "end": 30.0
+    },
+    {
+     "w": "no",
+     "start": 30.0,
+     "end": 30.2
+    },
+    {
+     "w": "choice",
+     "start": 30.2,
+     "end": 30.54
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "Negative turns around.",
+   "start": 30.763,
+   "end": 31.52,
+   "words": [
+    {
+     "w": "negative",
+     "start": 30.763,
+     "end": 31.183
+    },
+    {
+     "w": "turns",
+     "start": 30.84,
+     "end": 31.3
+    },
+    {
+     "w": "around",
+     "start": 31.3,
+     "end": 31.52
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "Fractions pull out roots",
+   "start": 31.52,
+   "end": 32.46,
+   "words": [
+    {
+     "w": "fractions",
+     "start": 31.52,
+     "end": 31.94
+    },
+    {
+     "w": "pull",
+     "start": 31.94,
+     "end": 32.1
+    },
+    {
+     "w": "out",
+     "start": 32.17,
+     "end": 32.37,
+     "interp": true
+    },
+    {
+     "w": "roots",
+     "start": 32.24,
+     "end": 32.46
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "when the same law holds its ground.",
+   "start": 32.46,
+   "end": 33.883,
+   "words": [
+    {
+     "w": "when",
+     "start": 32.46,
+     "end": 32.62
+    },
+    {
+     "w": "the",
+     "start": 32.62,
+     "end": 32.74
+    },
+    {
+     "w": "same",
+     "start": 32.863,
+     "end": 33.083
+    },
+    {
+     "w": "law",
+     "start": 32.96,
+     "end": 33.2
+    },
+    {
+     "w": "holds",
+     "start": 33.2,
+     "end": 33.44
+    },
+    {
+     "w": "its",
+     "start": 33.44,
+     "end": 33.58
+    },
+    {
+     "w": "ground",
+     "start": 33.643,
+     "end": 33.883
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "Step by step,",
+   "start": 33.903,
+   "end": 34.603,
+   "words": [
+    {
+     "w": "step",
+     "start": 33.903,
+     "end": 34.123
+    },
+    {
+     "w": "by",
+     "start": 33.94,
+     "end": 34.22
+    },
+    {
+     "w": "step",
+     "start": 34.363,
+     "end": 34.603
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "the old rule stretches through.",
+   "start": 34.56,
+   "end": 35.58,
+   "words": [
+    {
+     "w": "the",
+     "start": 34.56,
+     "end": 34.68
+    },
+    {
+     "w": "old",
+     "start": 34.68,
+     "end": 34.86
+    },
+    {
+     "w": "rule",
+     "start": 35.023,
+     "end": 35.183
+    },
+    {
+     "w": "stretches",
+     "start": 35.06,
+     "end": 35.24
+    },
+    {
+     "w": "through",
+     "start": 35.24,
+     "end": 35.58
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "We didn't pick the meaning.",
+   "start": 35.683,
+   "end": 36.583,
+   "words": [
+    {
+     "w": "we",
+     "start": 35.683,
+     "end": 35.743
+    },
+    {
+     "w": "didn't",
+     "start": 35.72,
+     "end": 36.0
+    },
+    {
+     "w": "pick",
+     "start": 36.063,
+     "end": 36.183
+    },
+    {
+     "w": "the",
+     "start": 36.1,
+     "end": 36.24
+    },
+    {
+     "w": "meaning",
+     "start": 36.283,
+     "end": 36.583
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "We followed",
+   "start": 36.603,
+   "end": 36.962,
+   "words": [
+    {
+     "w": "we",
+     "start": 36.603,
+     "end": 36.663
+    },
+    {
+     "w": "followed",
+     "start": 36.761,
+     "end": 36.962,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Rap",
+   "text": "what had to stay true.",
+   "start": 36.86,
+   "end": 37.78,
+   "words": [
+    {
+     "w": "what",
+     "start": 36.86,
+     "end": 37.04
+    },
+    {
+     "w": "had",
+     "start": 37.143,
+     "end": 37.243
+    },
+    {
+     "w": "to",
+     "start": 37.2,
+     "end": 37.3
+    },
+    {
+     "w": "stay",
+     "start": 37.383,
+     "end": 37.563
+    },
+    {
+     "w": "true",
+     "start": 37.48,
+     "end": 37.78
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "Keep the rule alive,",
+   "start": 37.78,
+   "end": 38.76,
+   "words": [
+    {
+     "w": "keep",
+     "start": 37.78,
+     "end": 38.2
+    },
+    {
+     "w": "the",
+     "start": 38.2,
+     "end": 38.38
+    },
+    {
+     "w": "rule",
+     "start": 38.38,
+     "end": 38.54
+    },
+    {
+     "w": "alive",
+     "start": 38.54,
+     "end": 38.76
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "follow where it goes.",
+   "start": 39.08,
+   "end": 39.98,
+   "words": [
+    {
+     "w": "follow",
+     "start": 39.08,
+     "end": 39.4
+    },
+    {
+     "w": "where",
+     "start": 39.4,
+     "end": 39.6
+    },
+    {
+     "w": "it",
+     "start": 39.6,
+     "end": 39.74
+    },
+    {
+     "w": "goes",
+     "start": 39.74,
+     "end": 39.98
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "Every step reveals",
+   "start": 39.98,
+   "end": 40.92,
+   "words": [
+    {
+     "w": "every",
+     "start": 39.98,
+     "end": 40.42
+    },
+    {
+     "w": "step",
+     "start": 40.42,
+     "end": 40.66
+    },
+    {
+     "w": "reveals",
+     "start": 40.66,
+     "end": 40.92
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "something we already know.",
+   "start": 40.92,
+   "end": 42.06,
+   "words": [
+    {
+     "w": "something",
+     "start": 40.92,
+     "end": 41.22
+    },
+    {
+     "w": "we",
+     "start": 41.22,
+     "end": 41.44
+    },
+    {
+     "w": "already",
+     "start": 41.44,
+     "end": 41.7
+    },
+    {
+     "w": "know",
+     "start": 41.7,
+     "end": 42.06
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "But turn the question round,",
+   "start": 42.06,
+   "end": 43.21,
+   "words": [
+    {
+     "w": "but",
+     "start": 42.06,
+     "end": 42.4
+    },
+    {
+     "w": "turn",
+     "start": 42.4,
+     "end": 42.56
+    },
+    {
+     "w": "the",
+     "start": 42.63,
+     "end": 42.83,
+     "interp": true
+    },
+    {
+     "w": "question",
+     "start": 42.7,
+     "end": 42.92
+    },
+    {
+     "w": "round",
+     "start": 43.01,
+     "end": 43.21,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "and everything will change—",
+   "start": 43.1,
+   "end": 44.18,
+   "words": [
+    {
+     "w": "and",
+     "start": 43.1,
+     "end": 43.26
+    },
+    {
+     "w": "everything",
+     "start": 43.26,
+     "end": 43.52
+    },
+    {
+     "w": "will",
+     "start": 43.52,
+     "end": 43.88
+    },
+    {
+     "w": "change",
+     "start": 43.88,
+     "end": 44.18
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "What if the exponent",
+   "start": 44.18,
+   "end": 45.12,
+   "words": [
+    {
+     "w": "what",
+     "start": 44.18,
+     "end": 44.56
+    },
+    {
+     "w": "if",
+     "start": 44.56,
+     "end": 44.72
+    },
+    {
+     "w": "the",
+     "start": 44.72,
+     "end": 44.84
+    },
+    {
+     "w": "exponent",
+     "start": 44.84,
+     "end": 45.12
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "is the thing we cannot name?",
+   "start": 45.12,
+   "end": 46.38,
+   "words": [
+    {
+     "w": "is",
+     "start": 45.12,
+     "end": 45.52
+    },
+    {
+     "w": "the",
+     "start": 45.52,
+     "end": 45.6
+    },
+    {
+     "w": "thing",
+     "start": 45.6,
+     "end": 45.8
+    },
+    {
+     "w": "we",
+     "start": 45.8,
+     "end": 45.9
+    },
+    {
+     "w": "cannot",
+     "start": 45.9,
+     "end": 46.1
+    },
+    {
+     "w": "name",
+     "start": 46.1,
+     "end": 46.38
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Run it forward,",
+   "start": 46.52,
+   "end": 46.94,
+   "words": [
+    {
+     "w": "run",
+     "start": 46.52,
+     "end": 46.56
+    },
+    {
+     "w": "it",
+     "start": 46.56,
+     "end": 46.66
+    },
+    {
+     "w": "forward",
+     "start": 46.66,
+     "end": 46.94
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "run it back.",
+   "start": 47.28,
+   "end": 48.3,
+   "words": [
+    {
+     "w": "run",
+     "start": 47.28,
+     "end": 47.86
+    },
+    {
+     "w": "it",
+     "start": 47.86,
+     "end": 48.04
+    },
+    {
+     "w": "back",
+     "start": 48.04,
+     "end": 48.3
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Same connection,",
+   "start": 48.47,
+   "end": 49.06,
+   "words": [
+    {
+     "w": "same",
+     "start": 48.47,
+     "end": 48.67,
+     "interp": true
+    },
+    {
+     "w": "connection",
+     "start": 48.64,
+     "end": 49.06
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "different track.",
+   "start": 49.58,
+   "end": 50.38,
+   "words": [
+    {
+     "w": "different",
+     "start": 49.58,
+     "end": 50.02
+    },
+    {
+     "w": "track",
+     "start": 50.02,
+     "end": 50.38
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Give me the exponent—",
+   "start": 50.44,
+   "end": 51.34,
+   "words": [
+    {
+     "w": "give",
+     "start": 50.44,
+     "end": 50.58
+    },
+    {
+     "w": "me",
+     "start": 50.58,
+     "end": 50.76
+    },
+    {
+     "w": "the",
+     "start": 50.76,
+     "end": 50.94
+    },
+    {
+     "w": "exponent",
+     "start": 50.94,
+     "end": 51.34
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "I'll give you the value.",
+   "start": 51.34,
+   "end": 52.94,
+   "words": [
+    {
+     "w": "i'll",
+     "start": 51.34,
+     "end": 52.0
+    },
+    {
+     "w": "give",
+     "start": 52.184,
+     "end": 52.364
+    },
+    {
+     "w": "you",
+     "start": 52.384,
+     "end": 52.484
+    },
+    {
+     "w": "the",
+     "start": 52.44,
+     "end": 52.58
+    },
+    {
+     "w": "value",
+     "start": 52.58,
+     "end": 52.94
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Give me the value—",
+   "start": 53.244,
+   "end": 53.98,
+   "words": [
+    {
+     "w": "give",
+     "start": 53.244,
+     "end": 53.384
+    },
+    {
+     "w": "me",
+     "start": 53.404,
+     "end": 53.484
+    },
+    {
+     "w": "the",
+     "start": 53.42,
+     "end": 53.6
+    },
+    {
+     "w": "value",
+     "start": 53.6,
+     "end": 53.98
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "find the exponent.",
+   "start": 53.98,
+   "end": 55.14,
+   "words": [
+    {
+     "w": "find",
+     "start": 53.98,
+     "end": 54.36
+    },
+    {
+     "w": "the",
+     "start": 54.36,
+     "end": 54.62
+    },
+    {
+     "w": "exponent",
+     "start": 54.62,
+     "end": 55.14
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Turn it around,",
+   "start": 55.28,
+   "end": 55.94,
+   "words": [
+    {
+     "w": "turn",
+     "start": 55.28,
+     "end": 55.44
+    },
+    {
+     "w": "it",
+     "start": 55.44,
+     "end": 55.62
+    },
+    {
+     "w": "around",
+     "start": 55.62,
+     "end": 55.94
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "see what was there.",
+   "start": 56.24,
+   "end": 57.1,
+   "words": [
+    {
+     "w": "see",
+     "start": 56.24,
+     "end": 56.4
+    },
+    {
+     "w": "what",
+     "start": 56.4,
+     "end": 56.64
+    },
+    {
+     "w": "was",
+     "start": 56.64,
+     "end": 56.84
+    },
+    {
+     "w": "there",
+     "start": 56.84,
+     "end": 57.1
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Forward and backward—",
+   "start": 57.1,
+   "end": 58.26,
+   "words": [
+    {
+     "w": "forward",
+     "start": 57.1,
+     "end": 57.68
+    },
+    {
+     "w": "and",
+     "start": 57.68,
+     "end": 57.92
+    },
+    {
+     "w": "backward",
+     "start": 57.92,
+     "end": 58.26
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "same idea,",
+   "start": 58.4,
+   "end": 58.98,
+   "words": [
+    {
+     "w": "same",
+     "start": 58.4,
+     "end": 58.62
+    },
+    {
+     "w": "idea",
+     "start": 58.62,
+     "end": 58.98
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "everywhere.",
+   "start": 58.98,
+   "end": 59.7,
+   "words": [
+    {
+     "w": "everywhere",
+     "start": 58.98,
+     "end": 59.7
+    }
+   ]
+  },
+  {
+   "section": "Post-Chorus — Rap Tag",
+   "text": "Backward question.",
+   "start": 60.2,
+   "end": 61.5,
+   "words": [
+    {
+     "w": "backward",
+     "start": 60.2,
+     "end": 60.9
+    },
+    {
+     "w": "question",
+     "start": 60.9,
+     "end": 61.5
+    }
+   ]
+  },
+  {
+   "section": "Post-Chorus — Rap Tag",
+   "text": "Missing exponent.",
+   "start": 61.5,
+   "end": 62.6,
+   "words": [
+    {
+     "w": "missing",
+     "start": 61.5,
+     "end": 62.26
+    },
+    {
+     "w": "exponent",
+     "start": 62.26,
+     "end": 62.6
+    }
+   ]
+  },
+  {
+   "section": "Post-Chorus — Rap Tag",
+   "text": "Now it has a name—",
+   "start": 62.98,
+   "end": 63.82,
+   "words": [
+    {
+     "w": "now",
+     "start": 62.98,
+     "end": 63.14
+    },
+    {
+     "w": "it",
+     "start": 63.14,
+     "end": 63.32
+    },
+    {
+     "w": "has",
+     "start": 63.32,
+     "end": 63.46
+    },
+    {
+     "w": "a",
+     "start": 63.46,
+     "end": 63.58
+    },
+    {
+     "w": "name",
+     "start": 63.58,
+     "end": 63.82
+    }
+   ]
+  },
+  {
+   "section": "Post-Chorus — Rap Tag",
+   "text": "logarithm.",
+   "start": 63.82,
+   "end": 64.32,
+   "words": [
+    {
+     "w": "logarithm",
+     "start": 63.82,
+     "end": 64.32
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "Money in the bank,",
+   "start": 64.32,
+   "end": 65.745,
+   "words": [
+    {
+     "w": "money",
+     "start": 64.32,
+     "end": 65.06
+    },
+    {
+     "w": "in",
+     "start": 65.345,
+     "end": 65.385
+    },
+    {
+     "w": "the",
+     "start": 65.405,
+     "end": 65.465
+    },
+    {
+     "w": "bank",
+     "start": 65.565,
+     "end": 65.745
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "same percent every month.",
+   "start": 65.959,
+   "end": 66.826,
+   "words": [
+    {
+     "w": "same",
+     "start": 65.959,
+     "end": 66.159,
+     "interp": true
+    },
+    {
+     "w": "percent",
+     "start": 66.172,
+     "end": 66.372,
+     "interp": true
+    },
+    {
+     "w": "every",
+     "start": 66.386,
+     "end": 66.546
+    },
+    {
+     "w": "month",
+     "start": 66.626,
+     "end": 66.826
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "One little multiplier,",
+   "start": 67.026,
+   "end": 67.836,
+   "words": [
+    {
+     "w": "one",
+     "start": 67.026,
+     "end": 67.106
+    },
+    {
+     "w": "little",
+     "start": 67.166,
+     "end": 67.366
+    },
+    {
+     "w": "multiplier",
+     "start": 67.636,
+     "end": 67.836,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "again and again it comes.",
+   "start": 67.906,
+   "end": 69.006,
+   "words": [
+    {
+     "w": "again",
+     "start": 67.906,
+     "end": 68.126
+    },
+    {
+     "w": "and",
+     "start": 67.96,
+     "end": 68.14
+    },
+    {
+     "w": "again",
+     "start": 68.266,
+     "end": 68.606
+    },
+    {
+     "w": "it",
+     "start": 68.4,
+     "end": 68.64
+    },
+    {
+     "w": "comes",
+     "start": 68.746,
+     "end": 69.006
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "Don't ask,",
+   "start": 68.96,
+   "end": 69.44,
+   "words": [
+    {
+     "w": "don't",
+     "start": 68.96,
+     "end": 69.2
+    },
+    {
+     "w": "ask",
+     "start": 69.2,
+     "end": 69.44
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "“How much after ten?”",
+   "start": 69.5,
+   "end": 70.28,
+   "words": [
+    {
+     "w": "how",
+     "start": 69.5,
+     "end": 69.6
+    },
+    {
+     "w": "much",
+     "start": 69.686,
+     "end": 69.846
+    },
+    {
+     "w": "after",
+     "start": 69.76,
+     "end": 69.9
+    },
+    {
+     "w": "ten",
+     "start": 70.08,
+     "end": 70.28,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "Ask the harder question—",
+   "start": 70.26,
+   "end": 71.306,
+   "words": [
+    {
+     "w": "ask",
+     "start": 70.26,
+     "end": 70.46,
+     "interp": true
+    },
+    {
+     "w": "the",
+     "start": 70.44,
+     "end": 70.5
+    },
+    {
+     "w": "harder",
+     "start": 70.646,
+     "end": 70.846
+    },
+    {
+     "w": "question",
+     "start": 70.866,
+     "end": 71.306
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "“When will it double?”",
+   "start": 71.12,
+   "end": 72.38,
+   "words": [
+    {
+     "w": "when",
+     "start": 71.12,
+     "end": 71.76
+    },
+    {
+     "w": "will",
+     "start": 71.76,
+     "end": 71.96
+    },
+    {
+     "w": "it",
+     "start": 71.96,
+     "end": 72.14
+    },
+    {
+     "w": "double",
+     "start": 72.14,
+     "end": 72.38
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "Now the unknown",
+   "start": 72.46,
+   "end": 73.846,
+   "words": [
+    {
+     "w": "now",
+     "start": 72.46,
+     "end": 72.62
+    },
+    {
+     "w": "the",
+     "start": 72.62,
+     "end": 73.18
+    },
+    {
+     "w": "unknown",
+     "start": 73.366,
+     "end": 73.846
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "isn't sitting in a sum.",
+   "start": 73.46,
+   "end": 74.74,
+   "words": [
+    {
+     "w": "isn't",
+     "start": 73.46,
+     "end": 74.04
+    },
+    {
+     "w": "sitting",
+     "start": 74.106,
+     "end": 74.386
+    },
+    {
+     "w": "in",
+     "start": 74.406,
+     "end": 74.486
+    },
+    {
+     "w": "a",
+     "start": 74.503,
+     "end": 74.703,
+     "interp": true
+    },
+    {
+     "w": "sum",
+     "start": 74.52,
+     "end": 74.74
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "It isn't multiplying,",
+   "start": 75.106,
+   "end": 75.946,
+   "words": [
+    {
+     "w": "it",
+     "start": 75.106,
+     "end": 75.206
+    },
+    {
+     "w": "isn't",
+     "start": 75.06,
+     "end": 75.36
+    },
+    {
+     "w": "multiplying",
+     "start": 75.426,
+     "end": 75.946
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "so division cannot run.",
+   "start": 75.966,
+   "end": 76.986,
+   "words": [
+    {
+     "w": "so",
+     "start": 75.966,
+     "end": 76.046
+    },
+    {
+     "w": "division",
+     "start": 76.146,
+     "end": 76.466
+    },
+    {
+     "w": "cannot",
+     "start": 76.486,
+     "end": 76.746
+    },
+    {
+     "w": "run",
+     "start": 76.846,
+     "end": 76.986
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "It's hiding in the exponent,",
+   "start": 76.88,
+   "end": 78.387,
+   "words": [
+    {
+     "w": "it's",
+     "start": 76.88,
+     "end": 77.26
+    },
+    {
+     "w": "hiding",
+     "start": 77.326,
+     "end": 77.606
+    },
+    {
+     "w": "in",
+     "start": 77.666,
+     "end": 77.706
+    },
+    {
+     "w": "the",
+     "start": 77.66,
+     "end": 77.74
+    },
+    {
+     "w": "exponent",
+     "start": 77.826,
+     "end": 78.387
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "out of reach of what we knew.",
+   "start": 78.22,
+   "end": 79.58,
+   "words": [
+    {
+     "w": "out",
+     "start": 78.22,
+     "end": 78.46
+    },
+    {
+     "w": "of",
+     "start": 78.46,
+     "end": 78.56
+    },
+    {
+     "w": "reach",
+     "start": 78.56,
+     "end": 78.72
+    },
+    {
+     "w": "of",
+     "start": 78.72,
+     "end": 78.86
+    },
+    {
+     "w": "what",
+     "start": 78.967,
+     "end": 79.127
+    },
+    {
+     "w": "we",
+     "start": 79.207,
+     "end": 79.287
+    },
+    {
+     "w": "knew",
+     "start": 79.26,
+     "end": 79.58
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "What exponent turns",
+   "start": 79.607,
+   "end": 80.787,
+   "words": [
+    {
+     "w": "what",
+     "start": 79.607,
+     "end": 79.967
+    },
+    {
+     "w": "exponent",
+     "start": 79.987,
+     "end": 80.447
+    },
+    {
+     "w": "turns",
+     "start": 80.527,
+     "end": 80.787
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "this base into two?",
+   "start": 80.807,
+   "end": 81.7,
+   "words": [
+    {
+     "w": "this",
+     "start": 80.807,
+     "end": 80.967
+    },
+    {
+     "w": "base",
+     "start": 81.087,
+     "end": 81.347
+    },
+    {
+     "w": "into",
+     "start": 81.2,
+     "end": 81.44
+    },
+    {
+     "w": "two",
+     "start": 81.44,
+     "end": 81.7
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "That's the whole question.",
+   "start": 81.78,
+   "end": 82.867,
+   "words": [
+    {
+     "w": "that's",
+     "start": 81.78,
+     "end": 81.96
+    },
+    {
+     "w": "the",
+     "start": 81.96,
+     "end": 82.02
+    },
+    {
+     "w": "whole",
+     "start": 82.107,
+     "end": 82.367
+    },
+    {
+     "w": "question",
+     "start": 82.387,
+     "end": 82.867
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "Nothing strange inside.",
+   "start": 82.82,
+   "end": 84.027,
+   "words": [
+    {
+     "w": "nothing",
+     "start": 82.82,
+     "end": 83.02
+    },
+    {
+     "w": "strange",
+     "start": 83.187,
+     "end": 83.527
+    },
+    {
+     "w": "inside",
+     "start": 83.547,
+     "end": 84.027
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "We could say it in a sentence—",
+   "start": 84.047,
+   "end": 84.96,
+   "words": [
+    {
+     "w": "we",
+     "start": 84.047,
+     "end": 84.107
+    },
+    {
+     "w": "could",
+     "start": 84.04,
+     "end": 84.16
+    },
+    {
+     "w": "say",
+     "start": 84.287,
+     "end": 84.427
+    },
+    {
+     "w": "it",
+     "start": 84.34,
+     "end": 84.52
+    },
+    {
+     "w": "in",
+     "start": 84.607,
+     "end": 84.667
+    },
+    {
+     "w": "a",
+     "start": 84.64,
+     "end": 84.68
+    },
+    {
+     "w": "sentence",
+     "start": 84.68,
+     "end": 84.96
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "we just couldn't write it right.",
+   "start": 85.04,
+   "end": 85.98,
+   "words": [
+    {
+     "w": "we",
+     "start": 85.04,
+     "end": 85.16
+    },
+    {
+     "w": "just",
+     "start": 85.16,
+     "end": 85.26
+    },
+    {
+     "w": "couldn't",
+     "start": 85.26,
+     "end": 85.56
+    },
+    {
+     "w": "write",
+     "start": 85.56,
+     "end": 85.7
+    },
+    {
+     "w": "it",
+     "start": 85.7,
+     "end": 85.82
+    },
+    {
+     "w": "right",
+     "start": 85.82,
+     "end": 85.98
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "So give that exponent",
+   "start": 86.147,
+   "end": 87.107,
+   "words": [
+    {
+     "w": "so",
+     "start": 86.147,
+     "end": 86.247
+    },
+    {
+     "w": "give",
+     "start": 86.447,
+     "end": 86.567
+    },
+    {
+     "w": "that",
+     "start": 86.46,
+     "end": 86.62
+    },
+    {
+     "w": "exponent",
+     "start": 86.727,
+     "end": 87.107
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "a symbol and a name.",
+   "start": 86.9,
+   "end": 89.05,
+   "words": [
+    {
+     "w": "a",
+     "start": 86.9,
+     "end": 87.14
+    },
+    {
+     "w": "symbol",
+     "start": 87.207,
+     "end": 87.507
+    },
+    {
+     "w": "and",
+     "start": 87.36,
+     "end": 87.56
+    },
+    {
+     "w": "a",
+     "start": 88.64,
+     "end": 88.74
+    },
+    {
+     "w": "name",
+     "start": 88.85,
+     "end": 89.05,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "A logarithm isn't magic.",
+   "start": 88.96,
+   "end": 88.96,
+   "words": [
+    {
+     "w": "a",
+     "start": 88.96,
+     "end": 88.96
+    },
+    {
+     "w": "logarithm",
+     "start": 88.96,
+     "end": 89.16,
+     "interp": true
+    },
+    {
+     "w": "isn't",
+     "start": 88.96,
+     "end": 89.16,
+     "interp": true
+    },
+    {
+     "w": "magic",
+     "start": 88.96,
+     "end": 88.96
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "It was already",
+   "start": 88.98,
+   "end": 89.847,
+   "words": [
+    {
+     "w": "it",
+     "start": 88.98,
+     "end": 89.08
+    },
+    {
+     "w": "was",
+     "start": 89.08,
+     "end": 89.28
+    },
+    {
+     "w": "already",
+     "start": 89.447,
+     "end": 89.847
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap",
+   "text": "in the game.",
+   "start": 89.66,
+   "end": 90.28,
+   "words": [
+    {
+     "w": "in",
+     "start": 89.66,
+     "end": 89.98
+    },
+    {
+     "w": "the",
+     "start": 89.98,
+     "end": 90.06
+    },
+    {
+     "w": "game",
+     "start": 90.06,
+     "end": 90.28
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "We already knew the question,",
+   "start": 90.468,
+   "end": 91.4,
+   "words": [
+    {
+     "w": "we",
+     "start": 90.468,
+     "end": 90.548
+    },
+    {
+     "w": "already",
+     "start": 90.568,
+     "end": 90.908
+    },
+    {
+     "w": "knew",
+     "start": 90.76,
+     "end": 91.04
+    },
+    {
+     "w": "the",
+     "start": 91.04,
+     "end": 91.14
+    },
+    {
+     "w": "question",
+     "start": 91.14,
+     "end": 91.4
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "we just couldn't write it down.",
+   "start": 91.46,
+   "end": 92.54,
+   "words": [
+    {
+     "w": "we",
+     "start": 91.46,
+     "end": 91.56
+    },
+    {
+     "w": "just",
+     "start": 91.56,
+     "end": 91.7
+    },
+    {
+     "w": "couldn't",
+     "start": 91.7,
+     "end": 92.0
+    },
+    {
+     "w": "write",
+     "start": 92.048,
+     "end": 92.268
+    },
+    {
+     "w": "it",
+     "start": 92.12,
+     "end": 92.26
+    },
+    {
+     "w": "down",
+     "start": 92.26,
+     "end": 92.54
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "Turn the language backward,",
+   "start": 92.868,
+   "end": 93.688,
+   "words": [
+    {
+     "w": "turn",
+     "start": 92.868,
+     "end": 93.008
+    },
+    {
+     "w": "the",
+     "start": 92.92,
+     "end": 93.04
+    },
+    {
+     "w": "language",
+     "start": 93.168,
+     "end": 93.388
+    },
+    {
+     "w": "backward",
+     "start": 93.408,
+     "end": 93.688
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "and the answer can be found.",
+   "start": 93.5,
+   "end": 94.728,
+   "words": [
+    {
+     "w": "and",
+     "start": 93.5,
+     "end": 93.72
+    },
+    {
+     "w": "the",
+     "start": 93.72,
+     "end": 93.82
+    },
+    {
+     "w": "answer",
+     "start": 93.988,
+     "end": 94.148
+    },
+    {
+     "w": "can",
+     "start": 94.208,
+     "end": 94.308
+    },
+    {
+     "w": "be",
+     "start": 94.328,
+     "end": 94.388
+    },
+    {
+     "w": "found",
+     "start": 94.488,
+     "end": 94.728
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "What looked unfamiliar",
+   "start": 94.62,
+   "end": 95.788,
+   "words": [
+    {
+     "w": "what",
+     "start": 94.62,
+     "end": 94.8
+    },
+    {
+     "w": "looked",
+     "start": 94.8,
+     "end": 95.16
+    },
+    {
+     "w": "unfamiliar",
+     "start": 95.308,
+     "end": 95.788
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "was waiting there all along—",
+   "start": 95.808,
+   "end": 96.72,
+   "words": [
+    {
+     "w": "was",
+     "start": 95.808,
+     "end": 95.928
+    },
+    {
+     "w": "waiting",
+     "start": 95.86,
+     "end": 96.06
+    },
+    {
+     "w": "there",
+     "start": 96.228,
+     "end": 96.368
+    },
+    {
+     "w": "all",
+     "start": 96.28,
+     "end": 96.42
+    },
+    {
+     "w": "along",
+     "start": 96.42,
+     "end": 96.72
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "The same idea",
+   "start": 96.72,
+   "end": 97.68,
+   "words": [
+    {
+     "w": "the",
+     "start": 96.72,
+     "end": 97.02
+    },
+    {
+     "w": "same",
+     "start": 97.02,
+     "end": 97.24
+    },
+    {
+     "w": "idea",
+     "start": 97.24,
+     "end": 97.68
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "heard from the other side.",
+   "start": 97.68,
+   "end": 98.88,
+   "words": [
+    {
+     "w": "heard",
+     "start": 97.68,
+     "end": 98.04
+    },
+    {
+     "w": "from",
+     "start": 98.04,
+     "end": 98.22
+    },
+    {
+     "w": "the",
+     "start": 98.22,
+     "end": 98.38
+    },
+    {
+     "w": "other",
+     "start": 98.38,
+     "end": 98.58
+    },
+    {
+     "w": "side",
+     "start": 98.58,
+     "end": 98.88
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Run it forward,",
+   "start": 98.88,
+   "end": 99.46,
+   "words": [
+    {
+     "w": "run",
+     "start": 98.88,
+     "end": 99.1
+    },
+    {
+     "w": "it",
+     "start": 99.1,
+     "end": 99.18
+    },
+    {
+     "w": "forward",
+     "start": 99.18,
+     "end": 99.46
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "run it back.",
+   "start": 99.78,
+   "end": 100.8,
+   "words": [
+    {
+     "w": "run",
+     "start": 99.78,
+     "end": 100.34
+    },
+    {
+     "w": "it",
+     "start": 100.34,
+     "end": 100.54
+    },
+    {
+     "w": "back",
+     "start": 100.54,
+     "end": 100.8
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Same connection,",
+   "start": 100.97,
+   "end": 101.58,
+   "words": [
+    {
+     "w": "same",
+     "start": 100.97,
+     "end": 101.17,
+     "interp": true
+    },
+    {
+     "w": "connection",
+     "start": 101.14,
+     "end": 101.58
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "different track.",
+   "start": 102.06,
+   "end": 102.9,
+   "words": [
+    {
+     "w": "different",
+     "start": 102.06,
+     "end": 102.5
+    },
+    {
+     "w": "track",
+     "start": 102.5,
+     "end": 102.9
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Give me the exponent—",
+   "start": 102.96,
+   "end": 103.86,
+   "words": [
+    {
+     "w": "give",
+     "start": 102.96,
+     "end": 103.12
+    },
+    {
+     "w": "me",
+     "start": 103.12,
+     "end": 103.26
+    },
+    {
+     "w": "the",
+     "start": 103.26,
+     "end": 103.46
+    },
+    {
+     "w": "exponent",
+     "start": 103.46,
+     "end": 103.86
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "I'll give you the value.",
+   "start": 103.86,
+   "end": 105.649,
+   "words": [
+    {
+     "w": "i'll",
+     "start": 103.86,
+     "end": 104.52
+    },
+    {
+     "w": "give",
+     "start": 104.52,
+     "end": 104.7
+    },
+    {
+     "w": "you",
+     "start": 104.7,
+     "end": 104.92
+    },
+    {
+     "w": "the",
+     "start": 104.92,
+     "end": 105.06
+    },
+    {
+     "w": "value",
+     "start": 105.209,
+     "end": 105.649
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Give me the value—",
+   "start": 105.749,
+   "end": 106.5,
+   "words": [
+    {
+     "w": "give",
+     "start": 105.749,
+     "end": 105.889
+    },
+    {
+     "w": "me",
+     "start": 105.909,
+     "end": 105.989
+    },
+    {
+     "w": "the",
+     "start": 105.94,
+     "end": 106.1
+    },
+    {
+     "w": "value",
+     "start": 106.1,
+     "end": 106.5
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "find the exponent.",
+   "start": 106.5,
+   "end": 107.64,
+   "words": [
+    {
+     "w": "find",
+     "start": 106.5,
+     "end": 106.86
+    },
+    {
+     "w": "the",
+     "start": 106.86,
+     "end": 107.1
+    },
+    {
+     "w": "exponent",
+     "start": 107.1,
+     "end": 107.64
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Turn it around,",
+   "start": 107.82,
+   "end": 108.48,
+   "words": [
+    {
+     "w": "turn",
+     "start": 107.82,
+     "end": 107.92
+    },
+    {
+     "w": "it",
+     "start": 107.92,
+     "end": 108.12
+    },
+    {
+     "w": "around",
+     "start": 108.12,
+     "end": 108.48
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "see what was there.",
+   "start": 108.74,
+   "end": 109.62,
+   "words": [
+    {
+     "w": "see",
+     "start": 108.74,
+     "end": 108.9
+    },
+    {
+     "w": "what",
+     "start": 108.9,
+     "end": 109.14
+    },
+    {
+     "w": "was",
+     "start": 109.14,
+     "end": 109.36
+    },
+    {
+     "w": "there",
+     "start": 109.36,
+     "end": 109.62
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "Forward and backward—",
+   "start": 109.62,
+   "end": 110.78,
+   "words": [
+    {
+     "w": "forward",
+     "start": 109.62,
+     "end": 110.2
+    },
+    {
+     "w": "and",
+     "start": 110.2,
+     "end": 110.42
+    },
+    {
+     "w": "backward",
+     "start": 110.42,
+     "end": 110.78
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "same idea,",
+   "start": 110.92,
+   "end": 111.58,
+   "words": [
+    {
+     "w": "same",
+     "start": 110.92,
+     "end": 111.14
+    },
+    {
+     "w": "idea",
+     "start": 111.14,
+     "end": 111.58
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Sung",
+   "text": "everywhere.",
+   "start": 111.58,
+   "end": 112.46,
+   "words": [
+    {
+     "w": "everywhere",
+     "start": 111.58,
+     "end": 112.46
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "Same old laws",
+   "start": 112.8,
+   "end": 113.84,
+   "words": [
+    {
+     "w": "same",
+     "start": 112.8,
+     "end": 113.26
+    },
+    {
+     "w": "old",
+     "start": 113.26,
+     "end": 113.6
+    },
+    {
+     "w": "laws",
+     "start": 113.6,
+     "end": 113.84
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "coming through again.",
+   "start": 113.84,
+   "end": 114.6,
+   "words": [
+    {
+     "w": "coming",
+     "start": 113.84,
+     "end": 114.1
+    },
+    {
+     "w": "through",
+     "start": 114.1,
+     "end": 114.28
+    },
+    {
+     "w": "again",
+     "start": 114.28,
+     "end": 114.6
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "Multiply the values—",
+   "start": 114.81,
+   "end": 115.63,
+   "words": [
+    {
+     "w": "multiply",
+     "start": 114.81,
+     "end": 115.21
+    },
+    {
+     "w": "the",
+     "start": 115.16,
+     "end": 115.24
+    },
+    {
+     "w": "values",
+     "start": 115.37,
+     "end": 115.63
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "exponents add within.",
+   "start": 115.65,
+   "end": 116.65,
+   "words": [
+    {
+     "w": "exponents",
+     "start": 115.65,
+     "end": 116.07
+    },
+    {
+     "w": "add",
+     "start": 115.94,
+     "end": 116.14
+    },
+    {
+     "w": "within",
+     "start": 116.29,
+     "end": 116.65
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "Now read it backward,",
+   "start": 116.99,
+   "end": 117.97,
+   "words": [
+    {
+     "w": "now",
+     "start": 116.99,
+     "end": 117.15
+    },
+    {
+     "w": "read",
+     "start": 117.27,
+     "end": 117.39
+    },
+    {
+     "w": "it",
+     "start": 117.41,
+     "end": 117.47
+    },
+    {
+     "w": "backward",
+     "start": 117.53,
+     "end": 117.97
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "watch the language shift.",
+   "start": 118.05,
+   "end": 118.79,
+   "words": [
+    {
+     "w": "watch",
+     "start": 118.05,
+     "end": 118.17
+    },
+    {
+     "w": "the",
+     "start": 118.08,
+     "end": 118.18
+    },
+    {
+     "w": "language",
+     "start": 118.33,
+     "end": 118.57
+    },
+    {
+     "w": "shift",
+     "start": 118.59,
+     "end": 118.79
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "Multiplication turns to addition—",
+   "start": 118.87,
+   "end": 120.1,
+   "words": [
+    {
+     "w": "multiplication",
+     "start": 118.87,
+     "end": 119.47
+    },
+    {
+     "w": "turns",
+     "start": 119.53,
+     "end": 119.75
+    },
+    {
+     "w": "to",
+     "start": 119.77,
+     "end": 119.85
+    },
+    {
+     "w": "addition",
+     "start": 119.8,
+     "end": 120.1
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "same engine,",
+   "start": 120.47,
+   "end": 121.19,
+   "words": [
+    {
+     "w": "same",
+     "start": 120.47,
+     "end": 120.67
+    },
+    {
+     "w": "engine",
+     "start": 120.79,
+     "end": 121.19
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "different script.",
+   "start": 121.27,
+   "end": 121.73,
+   "words": [
+    {
+     "w": "different",
+     "start": 121.27,
+     "end": 121.47
+    },
+    {
+     "w": "script",
+     "start": 121.49,
+     "end": 121.73
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "Not a bag of rules.",
+   "start": 121.68,
+   "end": 122.57,
+   "words": [
+    {
+     "w": "not",
+     "start": 121.68,
+     "end": 121.82
+    },
+    {
+     "w": "a",
+     "start": 121.97,
+     "end": 121.99
+    },
+    {
+     "w": "bag",
+     "start": 122.07,
+     "end": 122.17
+    },
+    {
+     "w": "of",
+     "start": 122.12,
+     "end": 122.22
+    },
+    {
+     "w": "rules",
+     "start": 122.35,
+     "end": 122.57
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "Not a trick to memorize.",
+   "start": 122.5,
+   "end": 123.65,
+   "words": [
+    {
+     "w": "not",
+     "start": 122.5,
+     "end": 122.62
+    },
+    {
+     "w": "a",
+     "start": 122.75,
+     "end": 122.77
+    },
+    {
+     "w": "trick",
+     "start": 122.85,
+     "end": 122.97
+    },
+    {
+     "w": "to",
+     "start": 122.9,
+     "end": 123.0
+    },
+    {
+     "w": "memorize",
+     "start": 123.15,
+     "end": 123.65
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "Just the old exponent laws",
+   "start": 123.67,
+   "end": 124.665,
+   "words": [
+    {
+     "w": "just",
+     "start": 123.67,
+     "end": 123.79
+    },
+    {
+     "w": "the",
+     "start": 123.68,
+     "end": 123.82
+    },
+    {
+     "w": "old",
+     "start": 123.97,
+     "end": 124.07
+    },
+    {
+     "w": "exponent",
+     "start": 124.09,
+     "end": 124.43
+    },
+    {
+     "w": "laws",
+     "start": 124.465,
+     "end": 124.665,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Rap",
+   "text": "seen from the other side.",
+   "start": 124.5,
+   "end": 125.851,
+   "words": [
+    {
+     "w": "seen",
+     "start": 124.5,
+     "end": 124.72
+    },
+    {
+     "w": "from",
+     "start": 124.99,
+     "end": 125.11
+    },
+    {
+     "w": "the",
+     "start": 124.98,
+     "end": 125.14
+    },
+    {
+     "w": "other",
+     "start": 125.33,
+     "end": 125.47
+    },
+    {
+     "w": "side",
+     "start": 125.53,
+     "end": 125.851
+    }
+   ]
+  },
+  {
+   "section": "Instrument Drop",
+   "text": "Put them on the axes.",
+   "start": 125.66,
+   "end": 127.5,
+   "words": [
+    {
+     "w": "put",
+     "start": 125.66,
+     "end": 126.56
+    },
+    {
+     "w": "them",
+     "start": 126.56,
+     "end": 126.76
+    },
+    {
+     "w": "on",
+     "start": 126.76,
+     "end": 126.92
+    },
+    {
+     "w": "the",
+     "start": 126.92,
+     "end": 127.06
+    },
+    {
+     "w": "axes",
+     "start": 127.3,
+     "end": 127.5,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Instrument Drop",
+   "text": "Exponential—",
+   "start": 127.54,
+   "end": 128.0,
+   "words": [
+    {
+     "w": "exponential",
+     "start": 127.54,
+     "end": 128.0
+    }
+   ]
+  },
+  {
+   "section": "Instrument Drop",
+   "text": "rising to the right.",
+   "start": 128.0,
+   "end": 130.04,
+   "words": [
+    {
+     "w": "rising",
+     "start": 128.0,
+     "end": 129.0
+    },
+    {
+     "w": "to",
+     "start": 129.0,
+     "end": 129.32
+    },
+    {
+     "w": "the",
+     "start": 129.32,
+     "end": 129.58
+    },
+    {
+     "w": "right",
+     "start": 129.58,
+     "end": 130.04
+    }
+   ]
+  },
+  {
+   "section": "Instrument Drop",
+   "text": "Logarithm beside it—",
+   "start": 130.04,
+   "end": 131.82,
+   "words": [
+    {
+     "w": "logarithm",
+     "start": 130.04,
+     "end": 130.98
+    },
+    {
+     "w": "beside",
+     "start": 130.98,
+     "end": 131.42
+    },
+    {
+     "w": "it",
+     "start": 131.42,
+     "end": 131.82
+    }
+   ]
+  },
+  {
+   "section": "Instrument Drop",
+   "text": "different shape in sight.",
+   "start": 131.84,
+   "end": 133.92,
+   "words": [
+    {
+     "w": "different",
+     "start": 131.84,
+     "end": 132.18
+    },
+    {
+     "w": "shape",
+     "start": 132.18,
+     "end": 132.56
+    },
+    {
+     "w": "in",
+     "start": 133.14,
+     "end": 133.34,
+     "interp": true
+    },
+    {
+     "w": "sight",
+     "start": 133.72,
+     "end": 133.92,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Instrument Drop",
+   "text": "Draw one line:",
+   "start": 134.3,
+   "end": 136.02,
+   "words": [
+    {
+     "w": "draw",
+     "start": 134.3,
+     "end": 134.78
+    },
+    {
+     "w": "one",
+     "start": 134.78,
+     "end": 135.26
+    },
+    {
+     "w": "line",
+     "start": 135.26,
+     "end": 136.02
+    }
+   ]
+  },
+  {
+   "section": "Instrument Drop",
+   "text": "y equals x.",
+   "start": 136.12,
+   "end": 137.5,
+   "words": [
+    {
+     "w": "y",
+     "start": 136.12,
+     "end": 136.28
+    },
+    {
+     "w": "equals",
+     "start": 136.28,
+     "end": 136.96
+    },
+    {
+     "w": "x",
+     "start": 136.96,
+     "end": 137.5
+    }
+   ]
+  },
+  {
+   "section": "Instrument Drop",
+   "text": "Fold the whole picture—",
+   "start": 137.5,
+   "end": 138.56,
+   "words": [
+    {
+     "w": "fold",
+     "start": 137.5,
+     "end": 137.92
+    },
+    {
+     "w": "the",
+     "start": 137.92,
+     "end": 138.06
+    },
+    {
+     "w": "whole",
+     "start": 138.06,
+     "end": 138.2
+    },
+    {
+     "w": "picture",
+     "start": 138.2,
+     "end": 138.56
+    }
+   ]
+  },
+  {
+   "section": "Instrument Drop",
+   "text": "watch what happens next.",
+   "start": 138.64,
+   "end": 139.772,
+   "words": [
+    {
+     "w": "watch",
+     "start": 138.64,
+     "end": 138.8
+    },
+    {
+     "w": "what",
+     "start": 138.8,
+     "end": 138.98
+    },
+    {
+     "w": "happens",
+     "start": 139.132,
+     "end": 139.432
+    },
+    {
+     "w": "next",
+     "start": 139.532,
+     "end": 139.772
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "X becomes Y.",
+   "start": 140.092,
+   "end": 140.6,
+   "words": [
+    {
+     "w": "x",
+     "start": 140.092,
+     "end": 140.112
+    },
+    {
+     "w": "becomes",
+     "start": 140.232,
+     "end": 140.512
+    },
+    {
+     "w": "y",
+     "start": 140.36,
+     "end": 140.6
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "Y becomes X.",
+   "start": 141.192,
+   "end": 141.832,
+   "words": [
+    {
+     "w": "y",
+     "start": 141.192,
+     "end": 141.212
+    },
+    {
+     "w": "becomes",
+     "start": 141.272,
+     "end": 141.632
+    },
+    {
+     "w": "x",
+     "start": 141.812,
+     "end": 141.832
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "Every point switches",
+   "start": 142.212,
+   "end": 142.932,
+   "words": [
+    {
+     "w": "every",
+     "start": 142.212,
+     "end": 142.352
+    },
+    {
+     "w": "point",
+     "start": 142.432,
+     "end": 142.632
+    },
+    {
+     "w": "switches",
+     "start": 142.652,
+     "end": 142.932
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "when the mirror reflects.",
+   "start": 142.952,
+   "end": 144.312,
+   "words": [
+    {
+     "w": "when",
+     "start": 142.952,
+     "end": 143.072
+    },
+    {
+     "w": "the",
+     "start": 143.092,
+     "end": 143.152
+    },
+    {
+     "w": "mirror",
+     "start": 143.12,
+     "end": 143.3
+    },
+    {
+     "w": "reflects",
+     "start": 143.512,
+     "end": 144.312
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "Zero-one turns",
+   "start": 143.74,
+   "end": 145.061,
+   "words": [
+    {
+     "w": "zero",
+     "start": 143.74,
+     "end": 144.36
+    },
+    {
+     "w": "one",
+     "start": 144.61,
+     "end": 144.81,
+     "interp": true
+    },
+    {
+     "w": "turns",
+     "start": 144.861,
+     "end": 145.061,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "into one-zero clean.",
+   "start": 145.111,
+   "end": 146.172,
+   "words": [
+    {
+     "w": "into",
+     "start": 145.111,
+     "end": 145.311,
+     "interp": true
+    },
+    {
+     "w": "one",
+     "start": 145.362,
+     "end": 145.562,
+     "interp": true
+    },
+    {
+     "w": "zero",
+     "start": 145.612,
+     "end": 145.812
+    },
+    {
+     "w": "clean",
+     "start": 145.912,
+     "end": 146.172
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "Input becomes output",
+   "start": 146.232,
+   "end": 146.992,
+   "words": [
+    {
+     "w": "input",
+     "start": 146.232,
+     "end": 146.412
+    },
+    {
+     "w": "becomes",
+     "start": 146.432,
+     "end": 146.712
+    },
+    {
+     "w": "output",
+     "start": 146.732,
+     "end": 146.992
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "on the other side of the screen.",
+   "start": 147.072,
+   "end": 148.272,
+   "words": [
+    {
+     "w": "on",
+     "start": 147.072,
+     "end": 147.112
+    },
+    {
+     "w": "the",
+     "start": 147.132,
+     "end": 147.192
+    },
+    {
+     "w": "other",
+     "start": 147.312,
+     "end": 147.432
+    },
+    {
+     "w": "side",
+     "start": 147.512,
+     "end": 147.812
+    },
+    {
+     "w": "of",
+     "start": 147.62,
+     "end": 147.82
+    },
+    {
+     "w": "the",
+     "start": 147.892,
+     "end": 147.952
+    },
+    {
+     "w": "screen",
+     "start": 147.972,
+     "end": 148.272
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "What went forward",
+   "start": 148.1,
+   "end": 148.96,
+   "words": [
+    {
+     "w": "what",
+     "start": 148.1,
+     "end": 148.34
+    },
+    {
+     "w": "went",
+     "start": 148.51,
+     "end": 148.71,
+     "interp": true
+    },
+    {
+     "w": "forward",
+     "start": 148.68,
+     "end": 148.96
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "now comes back.",
+   "start": 149.132,
+   "end": 149.893,
+   "words": [
+    {
+     "w": "now",
+     "start": 149.132,
+     "end": 149.312
+    },
+    {
+     "w": "comes",
+     "start": 149.392,
+     "end": 149.592
+    },
+    {
+     "w": "back",
+     "start": 149.672,
+     "end": 149.893
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "Same relationship,",
+   "start": 150.193,
+   "end": 150.893,
+   "words": [
+    {
+     "w": "same",
+     "start": 150.193,
+     "end": 150.333
+    },
+    {
+     "w": "relationship",
+     "start": 150.353,
+     "end": 150.893
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "different track.",
+   "start": 151.293,
+   "end": 152.033,
+   "words": [
+    {
+     "w": "different",
+     "start": 151.293,
+     "end": 151.713
+    },
+    {
+     "w": "track",
+     "start": 151.773,
+     "end": 152.033
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "Two different graphs?",
+   "start": 151.88,
+   "end": 152.953,
+   "words": [
+    {
+     "w": "two",
+     "start": 151.88,
+     "end": 152.08
+    },
+    {
+     "w": "different",
+     "start": 152.353,
+     "end": 152.573
+    },
+    {
+     "w": "graphs",
+     "start": 152.593,
+     "end": 152.953
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "Look again.",
+   "start": 153.173,
+   "end": 153.613,
+   "words": [
+    {
+     "w": "look",
+     "start": 153.173,
+     "end": 153.273
+    },
+    {
+     "w": "again",
+     "start": 153.333,
+     "end": 153.613
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "One is the other",
+   "start": 153.46,
+   "end": 154.713,
+   "words": [
+    {
+     "w": "one",
+     "start": 153.46,
+     "end": 154.02
+    },
+    {
+     "w": "is",
+     "start": 154.273,
+     "end": 154.313
+    },
+    {
+     "w": "the",
+     "start": 154.24,
+     "end": 154.36
+    },
+    {
+     "w": "other",
+     "start": 154.553,
+     "end": 154.713
+    }
+   ]
+  },
+  {
+   "section": "Beat Re-Entry — Rap",
+   "text": "seen through the mirror.",
+   "start": 155.013,
+   "end": 155.7,
+   "words": [
+    {
+     "w": "seen",
+     "start": 155.013,
+     "end": 155.213
+    },
+    {
+     "w": "through",
+     "start": 155.233,
+     "end": 155.393
+    },
+    {
+     "w": "the",
+     "start": 155.28,
+     "end": 155.42
+    },
+    {
+     "w": "mirror",
+     "start": 155.42,
+     "end": 155.7
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Sung, Half-Time",
+   "text": "What does this exponent produce?",
+   "start": 155.7,
+   "end": 157.52,
+   "words": [
+    {
+     "w": "what",
+     "start": 155.7,
+     "end": 156.12
+    },
+    {
+     "w": "does",
+     "start": 156.12,
+     "end": 156.32
+    },
+    {
+     "w": "this",
+     "start": 156.32,
+     "end": 156.54
+    },
+    {
+     "w": "exponent",
+     "start": 156.54,
+     "end": 156.9
+    },
+    {
+     "w": "produce",
+     "start": 156.9,
+     "end": 157.52
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Sung, Half-Time",
+   "text": "What exponent produced this?",
+   "start": 157.96,
+   "end": 159.94,
+   "words": [
+    {
+     "w": "what",
+     "start": 157.96,
+     "end": 158.12
+    },
+    {
+     "w": "exponent",
+     "start": 158.12,
+     "end": 158.48
+    },
+    {
+     "w": "produced",
+     "start": 158.48,
+     "end": 159.04
+    },
+    {
+     "w": "this",
+     "start": 159.04,
+     "end": 159.94
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Sung, Half-Time",
+   "text": "Two questions",
+   "start": 160.06,
+   "end": 161.2,
+   "words": [
+    {
+     "w": "two",
+     "start": 160.06,
+     "end": 160.44
+    },
+    {
+     "w": "questions",
+     "start": 160.44,
+     "end": 161.2
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Sung, Half-Time",
+   "text": "facing one another.",
+   "start": 161.2,
+   "end": 162.04,
+   "words": [
+    {
+     "w": "facing",
+     "start": 161.2,
+     "end": 161.5
+    },
+    {
+     "w": "one",
+     "start": 161.5,
+     "end": 161.72
+    },
+    {
+     "w": "another",
+     "start": 161.72,
+     "end": 162.04
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Sung, Half-Time",
+   "text": "One moves forward.",
+   "start": 162.04,
+   "end": 163.26,
+   "words": [
+    {
+     "w": "one",
+     "start": 162.04,
+     "end": 162.52
+    },
+    {
+     "w": "moves",
+     "start": 162.52,
+     "end": 162.86
+    },
+    {
+     "w": "forward",
+     "start": 162.86,
+     "end": 163.26
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Sung, Half-Time",
+   "text": "One comes back.",
+   "start": 163.46,
+   "end": 164.24,
+   "words": [
+    {
+     "w": "one",
+     "start": 163.46,
+     "end": 163.62
+    },
+    {
+     "w": "comes",
+     "start": 163.62,
+     "end": 163.92
+    },
+    {
+     "w": "back",
+     "start": 163.92,
+     "end": 164.24
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Sung, Half-Time",
+   "text": "Meet them at the mirror—",
+   "start": 164.24,
+   "end": 165.28,
+   "words": [
+    {
+     "w": "meet",
+     "start": 164.24,
+     "end": 164.7
+    },
+    {
+     "w": "them",
+     "start": 164.7,
+     "end": 164.82
+    },
+    {
+     "w": "at",
+     "start": 164.82,
+     "end": 164.94
+    },
+    {
+     "w": "the",
+     "start": 164.94,
+     "end": 165.04
+    },
+    {
+     "w": "mirror",
+     "start": 165.04,
+     "end": 165.28
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Sung, Half-Time",
+   "text": "and they become",
+   "start": 165.28,
+   "end": 166.42,
+   "words": [
+    {
+     "w": "and",
+     "start": 165.28,
+     "end": 165.48
+    },
+    {
+     "w": "they",
+     "start": 165.48,
+     "end": 165.64
+    },
+    {
+     "w": "become",
+     "start": 165.64,
+     "end": 166.42
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Sung, Half-Time",
+   "text": "the same.",
+   "start": 166.42,
+   "end": 167.74,
+   "words": [
+    {
+     "w": "the",
+     "start": 166.42,
+     "end": 167.34
+    },
+    {
+     "w": "same",
+     "start": 167.34,
+     "end": 167.74
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "And if the curve",
+   "start": 168.58,
+   "end": 169.62,
+   "words": [
+    {
+     "w": "and",
+     "start": 168.58,
+     "end": 169.18
+    },
+    {
+     "w": "if",
+     "start": 169.18,
+     "end": 169.24
+    },
+    {
+     "w": "the",
+     "start": 169.24,
+     "end": 169.32
+    },
+    {
+     "w": "curve",
+     "start": 169.32,
+     "end": 169.62
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "never turns around,",
+   "start": 169.62,
+   "end": 170.48,
+   "words": [
+    {
+     "w": "never",
+     "start": 169.62,
+     "end": 169.82
+    },
+    {
+     "w": "turns",
+     "start": 169.82,
+     "end": 170.18
+    },
+    {
+     "w": "around",
+     "start": 170.18,
+     "end": 170.48
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "every positive target",
+   "start": 170.874,
+   "end": 171.854,
+   "words": [
+    {
+     "w": "every",
+     "start": 170.874,
+     "end": 171.014
+    },
+    {
+     "w": "positive",
+     "start": 171.094,
+     "end": 171.454
+    },
+    {
+     "w": "target",
+     "start": 171.474,
+     "end": 171.854
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "gets exactly one way found.",
+   "start": 171.874,
+   "end": 173.234,
+   "words": [
+    {
+     "w": "gets",
+     "start": 171.874,
+     "end": 172.034
+    },
+    {
+     "w": "exactly",
+     "start": 172.054,
+     "end": 172.374
+    },
+    {
+     "w": "one",
+     "start": 172.574,
+     "end": 172.654
+    },
+    {
+     "w": "way",
+     "start": 172.734,
+     "end": 172.834
+    },
+    {
+     "w": "found",
+     "start": 172.954,
+     "end": 173.234
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "One height.",
+   "start": 173.634,
+   "end": 173.84,
+   "words": [
+    {
+     "w": "one",
+     "start": 173.634,
+     "end": 173.714
+    },
+    {
+     "w": "height",
+     "start": 173.62,
+     "end": 173.84
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "One crossing.",
+   "start": 174.155,
+   "end": 174.575,
+   "words": [
+    {
+     "w": "one",
+     "start": 174.155,
+     "end": 174.235
+    },
+    {
+     "w": "crossing",
+     "start": 174.275,
+     "end": 174.575
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "One exponent there.",
+   "start": 174.715,
+   "end": 175.595,
+   "words": [
+    {
+     "w": "one",
+     "start": 174.715,
+     "end": 174.795
+    },
+    {
+     "w": "exponent",
+     "start": 174.895,
+     "end": 175.355
+    },
+    {
+     "w": "there",
+     "start": 175.375,
+     "end": 175.595
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "No second answer",
+   "start": 175.935,
+   "end": 176.52,
+   "words": [
+    {
+     "w": "no",
+     "start": 175.935,
+     "end": 175.995
+    },
+    {
+     "w": "second",
+     "start": 176.155,
+     "end": 176.415
+    },
+    {
+     "w": "answer",
+     "start": 176.28,
+     "end": 176.52
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "waiting anywhere.",
+   "start": 176.52,
+   "end": 177.755,
+   "words": [
+    {
+     "w": "waiting",
+     "start": 176.52,
+     "end": 176.8
+    },
+    {
+     "w": "anywhere",
+     "start": 177.075,
+     "end": 177.755
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "That's why the question",
+   "start": 177.915,
+   "end": 178.835,
+   "words": [
+    {
+     "w": "that's",
+     "start": 177.915,
+     "end": 178.115,
+     "interp": true
+    },
+    {
+     "w": "why",
+     "start": 178.075,
+     "end": 178.275,
+     "interp": true
+    },
+    {
+     "w": "the",
+     "start": 178.235,
+     "end": 178.515
+    },
+    {
+     "w": "question",
+     "start": 178.535,
+     "end": 178.835
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "had an answer from the start.",
+   "start": 178.84,
+   "end": 179.74,
+   "words": [
+    {
+     "w": "had",
+     "start": 178.84,
+     "end": 178.86
+    },
+    {
+     "w": "an",
+     "start": 179.015,
+     "end": 179.135
+    },
+    {
+     "w": "answer",
+     "start": 179.04,
+     "end": 179.22
+    },
+    {
+     "w": "from",
+     "start": 179.355,
+     "end": 179.475
+    },
+    {
+     "w": "the",
+     "start": 179.495,
+     "end": 179.555
+    },
+    {
+     "w": "start",
+     "start": 179.5,
+     "end": 179.74
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "Not because a textbook",
+   "start": 180.195,
+   "end": 181.115,
+   "words": [
+    {
+     "w": "not",
+     "start": 180.195,
+     "end": 180.295
+    },
+    {
+     "w": "because",
+     "start": 180.315,
+     "end": 180.595
+    },
+    {
+     "w": "a",
+     "start": 180.635,
+     "end": 180.655
+    },
+    {
+     "w": "textbook",
+     "start": 180.715,
+     "end": 181.115
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "declared that part.",
+   "start": 181.135,
+   "end": 182.015,
+   "words": [
+    {
+     "w": "declared",
+     "start": 181.135,
+     "end": 181.495
+    },
+    {
+     "w": "that",
+     "start": 181.22,
+     "end": 181.54
+    },
+    {
+     "w": "part",
+     "start": 181.795,
+     "end": 182.015
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "Follow the curve.",
+   "start": 182.335,
+   "end": 182.8,
+   "words": [
+    {
+     "w": "follow",
+     "start": 182.335,
+     "end": 182.555
+    },
+    {
+     "w": "the",
+     "start": 182.4,
+     "end": 182.58
+    },
+    {
+     "w": "curve",
+     "start": 182.58,
+     "end": 182.8
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "Follow the law.",
+   "start": 182.995,
+   "end": 183.575,
+   "words": [
+    {
+     "w": "follow",
+     "start": 182.995,
+     "end": 183.235
+    },
+    {
+     "w": "the",
+     "start": 183.08,
+     "end": 183.3
+    },
+    {
+     "w": "law",
+     "start": 183.435,
+     "end": 183.575
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "Follow the reason through.",
+   "start": 183.675,
+   "end": 184.515,
+   "words": [
+    {
+     "w": "follow",
+     "start": 183.675,
+     "end": 183.895
+    },
+    {
+     "w": "the",
+     "start": 183.72,
+     "end": 183.94
+    },
+    {
+     "w": "reason",
+     "start": 184.095,
+     "end": 184.275
+    },
+    {
+     "w": "through",
+     "start": 184.295,
+     "end": 184.515
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "What looked like two ideas—",
+   "start": 184.38,
+   "end": 185.22,
+   "words": [
+    {
+     "w": "what",
+     "start": 184.38,
+     "end": 184.62
+    },
+    {
+     "w": "looked",
+     "start": 184.62,
+     "end": 184.78
+    },
+    {
+     "w": "like",
+     "start": 184.915,
+     "end": 184.995
+    },
+    {
+     "w": "two",
+     "start": 184.92,
+     "end": 185.02
+    },
+    {
+     "w": "ideas",
+     "start": 185.02,
+     "end": 185.22
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "was one idea",
+   "start": 185.435,
+   "end": 185.976,
+   "words": [
+    {
+     "w": "was",
+     "start": 185.435,
+     "end": 185.535
+    },
+    {
+     "w": "one",
+     "start": 185.615,
+     "end": 185.695
+    },
+    {
+     "w": "idea",
+     "start": 185.796,
+     "end": 185.976
+    }
+   ]
+  },
+  {
+   "section": "Final Rap",
+   "text": "seen from two views.",
+   "start": 186.076,
+   "end": 186.74,
+   "words": [
+    {
+     "w": "seen",
+     "start": 186.076,
+     "end": 186.196
+    },
+    {
+     "w": "from",
+     "start": 186.216,
+     "end": 186.316
+    },
+    {
+     "w": "two",
+     "start": 186.24,
+     "end": 186.4
+    },
+    {
+     "w": "views",
+     "start": 186.4,
+     "end": 186.74
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Run it forward,",
+   "start": 186.876,
+   "end": 187.26,
+   "words": [
+    {
+     "w": "run",
+     "start": 186.876,
+     "end": 186.976
+    },
+    {
+     "w": "it",
+     "start": 186.92,
+     "end": 187.02
+    },
+    {
+     "w": "forward",
+     "start": 187.02,
+     "end": 187.26
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "run it back.",
+   "start": 187.52,
+   "end": 188.62,
+   "words": [
+    {
+     "w": "run",
+     "start": 187.52,
+     "end": 187.86
+    },
+    {
+     "w": "it",
+     "start": 187.86,
+     "end": 188.38
+    },
+    {
+     "w": "back",
+     "start": 188.38,
+     "end": 188.62
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Fold the graph—",
+   "start": 188.62,
+   "end": 189.76,
+   "words": [
+    {
+     "w": "fold",
+     "start": 188.62,
+     "end": 189.28
+    },
+    {
+     "w": "the",
+     "start": 189.28,
+     "end": 189.46
+    },
+    {
+     "w": "graph",
+     "start": 189.46,
+     "end": 189.76
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "watch them match.",
+   "start": 190.26,
+   "end": 190.78,
+   "words": [
+    {
+     "w": "watch",
+     "start": 190.26,
+     "end": 190.38
+    },
+    {
+     "w": "them",
+     "start": 190.45,
+     "end": 190.65,
+     "interp": true
+    },
+    {
+     "w": "match",
+     "start": 190.52,
+     "end": 190.78
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Exponential goes forward.",
+   "start": 191.34,
+   "end": 192.76,
+   "words": [
+    {
+     "w": "exponential",
+     "start": 191.34,
+     "end": 191.82
+    },
+    {
+     "w": "goes",
+     "start": 191.82,
+     "end": 192.3
+    },
+    {
+     "w": "forward",
+     "start": 192.3,
+     "end": 192.76
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Logarithm comes back.",
+   "start": 193.42,
+   "end": 194.48,
+   "words": [
+    {
+     "w": "logarithm",
+     "start": 193.42,
+     "end": 193.9
+    },
+    {
+     "w": "comes",
+     "start": 193.9,
+     "end": 194.14
+    },
+    {
+     "w": "back",
+     "start": 194.14,
+     "end": 194.48
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Two directions—",
+   "start": 194.48,
+   "end": 195.9,
+   "words": [
+    {
+     "w": "two",
+     "start": 194.48,
+     "end": 195.14
+    },
+    {
+     "w": "directions",
+     "start": 195.14,
+     "end": 195.9
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "one connection.",
+   "start": 196.14,
+   "end": 196.86,
+   "words": [
+    {
+     "w": "one",
+     "start": 196.14,
+     "end": 196.3
+    },
+    {
+     "w": "connection",
+     "start": 196.3,
+     "end": 196.86
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "No tricks.",
+   "start": 196.86,
+   "end": 197.7,
+   "words": [
+    {
+     "w": "no",
+     "start": 196.86,
+     "end": 197.44
+    },
+    {
+     "w": "tricks",
+     "start": 197.44,
+     "end": 197.7
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "No guessing.",
+   "start": 197.8,
+   "end": 198.42,
+   "words": [
+    {
+     "w": "no",
+     "start": 197.8,
+     "end": 197.92
+    },
+    {
+     "w": "guessing",
+     "start": 197.92,
+     "end": 198.42
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "No rules falling from the sky.",
+   "start": 198.44,
+   "end": 200.1,
+   "words": [
+    {
+     "w": "no",
+     "start": 198.44,
+     "end": 198.72
+    },
+    {
+     "w": "rules",
+     "start": 198.72,
+     "end": 199.06
+    },
+    {
+     "w": "falling",
+     "start": 199.06,
+     "end": 199.4
+    },
+    {
+     "w": "from",
+     "start": 199.4,
+     "end": 199.48
+    },
+    {
+     "w": "the",
+     "start": 199.48,
+     "end": 199.74
+    },
+    {
+     "w": "sky",
+     "start": 199.74,
+     "end": 200.1
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Follow what must stay true",
+   "start": 200.1,
+   "end": 201.7,
+   "words": [
+    {
+     "w": "follow",
+     "start": 200.1,
+     "end": 200.64
+    },
+    {
+     "w": "what",
+     "start": 200.64,
+     "end": 200.88
+    },
+    {
+     "w": "must",
+     "start": 200.88,
+     "end": 201.18
+    },
+    {
+     "w": "stay",
+     "start": 201.18,
+     "end": 201.44
+    },
+    {
+     "w": "true",
+     "start": 201.44,
+     "end": 201.7
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "and the reason comes alive.",
+   "start": 201.81,
+   "end": 202.96,
+   "words": [
+    {
+     "w": "and",
+     "start": 201.81,
+     "end": 202.01,
+     "interp": true
+    },
+    {
+     "w": "the",
+     "start": 201.92,
+     "end": 202.04
+    },
+    {
+     "w": "reason",
+     "start": 202.04,
+     "end": 202.3
+    },
+    {
+     "w": "comes",
+     "start": 202.3,
+     "end": 202.52
+    },
+    {
+     "w": "alive",
+     "start": 202.52,
+     "end": 202.96
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Same law.",
+   "start": 203.48,
+   "end": 204.34,
+   "words": [
+    {
+     "w": "same",
+     "start": 203.48,
+     "end": 203.72
+    },
+    {
+     "w": "law",
+     "start": 204.08,
+     "end": 204.34
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Different direction.",
+   "start": 204.52,
+   "end": 205.44,
+   "words": [
+    {
+     "w": "different",
+     "start": 204.52,
+     "end": 204.88
+    },
+    {
+     "w": "direction",
+     "start": 204.88,
+     "end": 205.44
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Same curve.",
+   "start": 206.08,
+   "end": 206.54,
+   "words": [
+    {
+     "w": "same",
+     "start": 206.08,
+     "end": 206.2
+    },
+    {
+     "w": "curve",
+     "start": 206.2,
+     "end": 206.54
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Different reflection.",
+   "start": 206.74,
+   "end": 207.44,
+   "words": [
+    {
+     "w": "different",
+     "start": 206.74,
+     "end": 207.06
+    },
+    {
+     "w": "reflection",
+     "start": 207.06,
+     "end": 207.44
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Sung + Rap Layers",
+   "text": "Why does it work?",
+   "start": 207.44,
+   "end": 208.6,
+   "words": [
+    {
+     "w": "why",
+     "start": 207.44,
+     "end": 208.1
+    },
+    {
+     "w": "does",
+     "start": 208.1,
+     "end": 208.28
+    },
+    {
+     "w": "it",
+     "start": 208.28,
+     "end": 208.44
+    },
+    {
+     "w": "work",
+     "start": 208.44,
+     "end": 208.6
+    }
+   ]
+  },
+  {
+   "section": "Group Chant",
+   "text": "From scratch!",
+   "start": 208.6,
+   "end": 209.46,
+   "words": [
+    {
+     "w": "from",
+     "start": 208.6,
+     "end": 208.82
+    },
+    {
+     "w": "scratch",
+     "start": 208.82,
+     "end": 209.46
+    }
+   ]
+  },
+  {
+   "section": "Group Chant",
+   "text": "From scratch!",
+   "start": 209.54,
+   "end": 210.44,
+   "words": [
+    {
+     "w": "from",
+     "start": 209.54,
+     "end": 209.92
+    },
+    {
+     "w": "scratch",
+     "start": 209.92,
+     "end": 210.44
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Sung + Digital Voice",
+   "text": "Forward—",
+   "start": 211.48,
+   "end": 212.38,
+   "words": [
+    {
+     "w": "forward",
+     "start": 211.48,
+     "end": 212.38
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Sung + Digital Voice",
+   "text": "exponential.",
+   "start": 212.68,
+   "end": 213.66,
+   "words": [
+    {
+     "w": "exponential",
+     "start": 212.68,
+     "end": 213.66
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Sung + Digital Voice",
+   "text": "Backward—",
+   "start": 214.48,
+   "end": 215.4,
+   "words": [
+    {
+     "w": "backward",
+     "start": 214.48,
+     "end": 215.4
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Sung + Digital Voice",
+   "text": "logarithm.",
+   "start": 215.46,
+   "end": 216.36,
+   "words": [
+    {
+     "w": "logarithm",
+     "start": 215.46,
+     "end": 216.36
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Sung + Digital Voice",
+   "text": "Two directions.",
+   "start": 216.36,
+   "end": 217.9,
+   "words": [
+    {
+     "w": "two",
+     "start": 216.36,
+     "end": 217.18
+    },
+    {
+     "w": "directions",
+     "start": 217.18,
+     "end": 217.9
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Sung + Digital Voice",
+   "text": "One story.",
+   "start": 218.12,
+   "end": 218.74,
+   "words": [
+    {
+     "w": "one",
+     "start": 218.12,
+     "end": 218.28
+    },
+    {
+     "w": "story",
+     "start": 218.28,
+     "end": 218.74
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Sung + Digital Voice",
+   "text": "Ninety-nine percent...",
+   "start": 219.09,
+   "end": 219.99,
+   "words": [
+    {
+     "w": "ninety",
+     "start": 219.09,
+     "end": 219.29,
+     "interp": true
+    },
+    {
+     "w": "nine",
+     "start": 219.44,
+     "end": 219.64,
+     "interp": true
+    },
+    {
+     "w": "percent",
+     "start": 219.79,
+     "end": 219.99,
+     "interp": true
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Sung + Digital Voice",
+   "text": "Loading.",
+   "start": 220.14,
+   "end": 221.1,
+   "words": [
+    {
+     "w": "loading",
+     "start": 220.14,
+     "end": 221.1
+    }
+   ]
+  }
+ ]
+}

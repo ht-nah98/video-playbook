@@ -1,0 +1,56 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — hero clip</title>
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Clip thử nhân vật xuyên suốt (người que khăn đỏ, 2026-10-23) — kịch bản ở tools/lab/hero-scene.js.
+// node tools/lab/stick2-qa.mjs tools/lab/hero-scene.js        (gác số mọi khung)
+// node engine/render/shoot.js stills --page tools/lab/hero-clip.html --t 1,3.6,6.3,8,10.9 --outdir out/_lab/hero-clip
+import { actor, clone, H, DIR, GY, BOX, CS, SCENE } from './hero-scene.js';
+import { hero, card, star, INK, RED, PAPER } from '../../engine/hero.js';
+const g = document.getElementById('cv').getContext('2d');
+const GREEN = '#1B6B43';
+let fontsReady = false;
+Promise.all([new FontFace('Archivo', 'url("../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load()
+  .then(f => document.fonts.add(f)).catch(() => {})]).then(() => { fontsReady = true; });
+const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
+
+function slot(x, name, t, done) {
+  const w = CS * 1.5, h = CS * 0.95;
+  g.save(); g.setLineDash(done ? [] : [12, 9]); g.strokeStyle = done ? GREEN : RED; g.lineWidth = 4;
+  g.beginPath(); g.roundRect(x - w / 2, GY - h + 4, w, h, 10); g.stroke(); g.restore();
+  g.fillStyle = done ? GREEN : RED; g.font = '800 40px Archivo, sans-serif'; g.textAlign = 'center'; g.fillText(name, x, GY + 56);
+}
+function puff(x, y, k) {                                    // vòng khói khi bản sao bật ra
+  if (k <= 0 || k >= 1) return;
+  g.save(); g.globalAlpha = 1 - k; g.strokeStyle = INK; g.lineWidth = 4;
+  for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4, r0 = 40 + 90 * k, r1 = r0 + 22;
+    g.beginPath(); g.moveTo(x + Math.cos(a) * r0, y + Math.sin(a) * r0); g.lineTo(x + Math.cos(a) * r1, y + Math.sin(a) * r1); g.stroke(); }
+  g.restore();
+}
+
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = PAPER; g.fillRect(0, 0, 1920, 1080);
+  g.strokeStyle = 'rgba(34,48,60,0.35)'; g.lineWidth = 4; g.beginPath(); g.moveTo(140, GY); g.lineTo(1780, GY); g.stroke();
+  slot(BOX.A, 'A', t, false); slot(BOX.B, 'B', t, t > 9.5);
+  const A = actor(t), held = t >= 6.25 && t < 9.45;
+  if (A.card && !held && t >= 4.25) card(g, A.card.x, A.card.y, CS, '1/6', A.card.rot);
+  // bản sao (sau người chính)
+  for (const i of [1, 0]) { const c = clone(t, i); if (!c) continue;
+    puff(c.hip[0], c.hip[1] - 0.2 * H, (t - 9.95 - 0.12 * i) / 0.45);
+    hero(g, 'C', c.hip[0], 0, c.pose, { h: H, dir: DIR, hip: c.hip, hands: c.hands, squash: c.squash, eye: c.eye, scale: c.pop, t: t + i }); }
+  const J = hero(g, 'C', A.hip[0], 0, A.pose, { h: H, dir: DIR, hip: A.hip, feet: A.feet, hands: A.hands, squash: A.squash ?? 1, eye: A.eye, wind: A.wind ?? 0, t });
+  if (A.card && (held || t < 4.25)) card(g, A.card.x, A.card.y, CS, '1/6', A.card.rot);
+  if (held && A.hands) {                                     // nắm tay vẽ ĐÈ mép thẻ → thấy tay đang kẹp thẻ
+    g.save(); g.strokeStyle = INK; g.lineWidth = 0.06 * H; g.lineCap = 'round';
+    for (const a of [J.armL, J.armR]) { const m = [a.m[0] + (a.e[0] - a.m[0]) * 0.8, a.m[1] + (a.e[1] - a.m[1]) * 0.8];   // chỉ nắm tay ở mép thẻ
+      g.beginPath(); g.moveTo(...m); g.lineTo(...a.e); g.stroke(); }
+    g.restore(); }
+  if (t > 3.55 && t < 4.5) { const f = clamp((4.5 - t) / 0.3);  // sao quay quanh đầu
+    for (let i = 0; i < 3; i++) { const a = t * 7 + i * 2.1; g.save(); g.globalAlpha = f;
+      star(g, J.C[0] + Math.cos(a) * J.r * 1.6, J.C[1] - J.r * 1.05 + Math.sin(a) * J.r * 0.4, 13 - i * 2); g.restore(); } }
+  g.fillStyle = 'rgba(34,48,60,0.45)'; g.font = '600 24px Archivo, sans-serif'; g.textAlign = 'left';
+  g.fillText(`hero clip · ${A.phase} · t ${t.toFixed(2)}`, 60, 70);
+}
+window.__intro = { get ready() { return fontsReady; }, still: frame, frame, DUR: SCENE.dur };
+</script>

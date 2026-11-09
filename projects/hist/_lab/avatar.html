@@ -1,0 +1,90 @@
+<!doctype html><meta charset="utf-8">
+<title>hist lab — avatar kênh Blunderstory</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Avatar kênh Blunderstory (người dùng chốt tên 2026-10-29). Người dẫn vẽ nét của kênh (_kit/narrator.js), mặt to, nền một
+// màu đậm, viền dày — YouTube cắt tròn, hiện 176 / 88 / 48 px. Ảnh vuông 1080 ở giữa khung (x 420–1500), cắt bằng PIL khi xuất.
+//   t 0.5 = A "oops" (đỏ) · t 1.5 = B đắc ý (vàng tia) · t 2.5 = C tài xế (xanh đậm, vô-lăng) · t 3.5 = bảng so cỡ
+//   t 4.5 = B nền TRẮNG (người dùng 2026-10-30, bản đăng) · t 5.5 / 6.5 = watermark chỉ đầu trên nền trắng / đen → PIL tách
+//   t 10.5 = BẢNG 12 biểu cảm × mũ / chi tiết · t 11.5 … 22.5 = từng bản 1080 (xuất avatar) · t 7.5 / 8.5 / 9.5 = avatar trắng + MŨ (người dùng 10-30 thích mũ rơm ở berlin): rơm · mũ thám hiểm · nhị giác Napoleon
+//   alpha bằng hai nền (alpha = 1 − (trắng − đen)) → PNG trong suốt. Watermark vẽ h nhỏ rồi phóng → nét dày, đọc được ở ~60 px.
+import { INK } from '../_kit/mapkit.js';
+import * as S from '../_kit/stage.js';
+import { bindNarrator, narrator, hatOn } from '../_kit/narrator.js';
+const g = document.getElementById('cv').getContext('2d');
+const { W, H } = S;
+let ready = false;
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f))])
+  .then(() => { S.bindStage(g, {}); bindNarrator(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+const X0 = 420, CX = 960, CY = 540, R = 540;
+function burst(cx, cy, rr, cols, n = 20) { for (let i = 0; i < n; i++) { const a0 = i / n * Math.PI * 2, a1 = (i + 1) / n * Math.PI * 2; g.fillStyle = cols[i % 2]; g.beginPath(); g.moveTo(cx, cy); g.arc(cx, cy, rr, a0, a1); g.closePath(); g.fill(); } }
+function wheel(x, y, r) { g.save(); g.strokeStyle = INK; g.lineWidth = r * 0.17; g.beginPath(); g.arc(x, y, r, 0, 7); g.stroke();
+  for (let i = 0; i < 3; i++) { const a = i * 2.094 + Math.PI / 2; g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a) * r, y + Math.sin(a) * r); g.stroke(); }
+  g.fillStyle = INK; g.beginPath(); g.arc(x, y, r * 0.2, 0, 7); g.fill(); g.restore(); }
+function drop(x, y, s) { g.save(); g.fillStyle = '#9AD0F5'; g.strokeStyle = INK; g.lineWidth = 10 * s; g.beginPath(); g.moveTo(x, y - 60 * s);
+  g.bezierCurveTo(x + 40 * s, y - 5 * s, x + 34 * s, y + 34 * s, x, y + 34 * s); g.bezierCurveTo(x - 34 * s, y + 34 * s, x - 40 * s, y - 5 * s, x, y - 60 * s); g.fill(); g.stroke(); g.restore(); }
+
+// một avatar trong ô vuông 1080 tâm (CX, CY)
+function avatar(k) {
+  g.save(); g.beginPath(); g.rect(X0, 0, 1080, 1080); g.clip();
+  if (k === 0) { g.fillStyle = '#E3141B'; g.fillRect(X0, 0, 1080, 1080);
+    narrator(CX, 1350, 1140, { v: 'C', outfit: 'plain', mood: 'shock', mouth: 'grit', look: 0 }); drop(CX + 350, 300, 1.7); }
+  if (k === 1) { burst(CX, CY, 900, ['#F7C948', '#F2A93B']);
+    narrator(CX, 1350, 1140, { v: 'C', outfit: 'plain', mood: 'smug', mouth: 'grin', look: 0 }); }
+  if (k === 3) { g.fillStyle = '#FFFFFF'; g.fillRect(X0, 0, 1080, 1080);
+    narrator(CX, 1350, 1140, { v: 'C', outfit: 'plain', mood: 'smug', mouth: 'grin', look: 0 }); }
+  if (k === 2) { g.fillStyle = '#1E3A5F'; g.fillRect(X0, 0, 1080, 1080);
+    narrator(CX, 1350, 1140, { v: 'C', outfit: 'plain', mood: 'smug', mouth: 'grin', look: 0 }); wheel(CX - 270, 960, 230); }
+  g.restore();
+}
+// watermark: chỉ cái đầu (cắt ngang dưới cằm), nét dày; bg = nền ('#FFF' / '#000') để tách alpha
+function mark(bg) { const h = 300, s = 3.45, y = 300, hy = y - 0.70 * h, r = 0.36 * h;
+  g.save(); g.fillStyle = bg; g.fillRect(X0, 0, 1080, 1080); g.translate(CX, CY); g.scale(s, s); g.translate(-CX, -(hy - r * 0.3));
+  g.beginPath(); g.rect(CX - 2 * r, hy - 3 * r, 4 * r, 4 * r + 4); g.clip();
+  narrator(CX, y, h, { v: 'C', outfit: 'plain', mood: 'smug', mouth: 'grin', look: 0 }); g.restore(); }
+// 12 biểu cảm × mũ / chi tiết (người dùng 10-30: "thêm biểu cảm, trang phục, chi tiết để tôi xem")
+const LOOKS = [
+  ['đắc ý · rơm', 'straw', { mood: 'smug', mouth: 'grin' }], ['cười híp · rơm', 'straw', { mood: 'joy', mouth: 'tongue' }],
+  ['nháy mắt · thám hiểm', 'pith', { mood: 'wink', mouth: 'grin' }], ['mắt sao · Napoleon', 'bicorne', { mood: 'star', mouth: 'wide', fx: ['shine'] }],
+  ['sốc · mồ hôi', null, { mood: 'shock', mouth: 'o', fx: ['sweat'] }], ['giận · gân', 'viking', { mood: 'angry', mouth: 'grit', fx: ['vein'] }],
+  ['khóc · mếu', null, { mood: 'teary', mouth: 'pout' }], ['choáng · xoáy', null, { mood: 'dizzy', mouth: 'wavy' }],
+  ['liếc · phóng viên', null, { mood: 'side', mouth: 'smile', outfit: 'reporter' }], ['vua · đỏ mặt', 'crown', { mood: 'joy', mouth: 'grin', fx: ['blush'] }],
+  ['buồn ngủ · mũ ngủ', 'night', { mood: 'closed', mouth: 'o' }], ['Caesar · đắc ý', 'laurel', { mood: 'wink', mouth: 'smile', fx: ['shine'] }]];
+// FIT[k] = [dịch lên px, phóng] — mũ thấp (phóng viên, không mũ) để trống đỉnh → nâng + phóng cho khối đầu cân giữa vòng tròn (người dùng 10-30, bản 9)
+const FIT = { 8: [-120, 1.1] };
+function look(k) { const [, hatK, o] = LOOKS[k], [dy, z] = FIT[k] ?? [0, 1]; g.save(); g.beginPath(); g.rect(X0, 0, 1080, 1080); g.clip(); g.fillStyle = '#FFFFFF'; g.fillRect(X0, 0, 1080, 1080);
+  g.translate(CX, CY + dy); g.scale(z, z); g.translate(-CX, -CY);
+  narrator(CX, 1380, 1000, { v: 'C', outfit: 'plain', look: 0, ...o }); if (hatK) hatOn(CX, 1380, 1000, hatK); g.restore(); }
+function board() { g.fillStyle = '#ECECEC'; g.fillRect(0, 0, W, H);
+  LOOKS.forEach(([name], k) => { const col = k % 6, row = Math.floor(k / 6), d = 250, x = 70 + col * 305, y = 60 + row * 500;
+    g.save(); g.beginPath(); g.arc(x + d / 2, y + d / 2, d / 2, 0, 7); g.clip(); g.translate(x + d / 2, y + d / 2); g.scale(d / 1080, d / 1080); g.translate(-CX, -CY); look(k); g.restore();
+    g.save(); g.beginPath(); g.arc(x + d / 2, y + d + 70, 30, 0, 7); g.clip(); g.translate(x + d / 2, y + d + 70); g.scale(60 / 1080, 60 / 1080); g.translate(-CX, -CY); look(k); g.restore();   // cỡ nhỏ ~ YouTube
+    S.label(`${k + 1}. ${name}`, x + d / 2, y + d + 150, 22, 1, INK); }); }
+function hatted(kind) { g.save(); g.beginPath(); g.rect(X0, 0, 1080, 1080); g.clip(); g.fillStyle = '#FFFFFF'; g.fillRect(X0, 0, 1080, 1080);
+  narrator(CX, 1380, 1000, { v: 'C', outfit: 'plain', mood: 'smug', mouth: 'grin', look: 0 }); hatOn(CX, 1380, 1000, kind); g.restore(); }
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1;
+  g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H);
+  if (!ready) return;
+  if (t < 3) { avatar(Math.floor(t)); return; }
+  if (t >= 4 && t < 5) { avatar(3); return; }
+  if (t >= 10 && t < 11) { board(); return; }
+  if (t >= 11) { look(Math.min(11, Math.floor(t - 11))); return; }
+  if (t >= 7) { hatted(['straw', 'pith', 'bicorne'][Math.min(2, Math.floor(t - 7))]); return; }
+  if (t >= 5) { g.save(); g.beginPath(); g.rect(X0, 0, 1080, 1080); g.clip(); mark(t < 6 ? '#FFFFFF' : '#000000'); g.restore(); return; }
+  // bảng so: mỗi phương án ở 176 / 88 / 48 px, cắt tròn như YouTube (vẽ lại ở cỡ nhỏ = co toàn khung)
+  S.label('Blunderstory — avatar ở cỡ YouTube (176 · 88 · 48 px)', 960, 70, 44, 1, INK);
+  ['A  oops', 'B  đắc ý', 'C  tài xế'].forEach((name, k) => { const y = 200 + k * 290;
+    S.label(name, 210, y + 88, 40, 1, INK, { align: 'left' });
+    [[176, 520], [88, 800], [48, 960]].forEach(([d, x]) => { g.save(); g.beginPath(); g.arc(x + d / 2, y + 88, d / 2, 0, 7); g.clip();
+      const s = d / 1080; g.translate(x + d / 2, y + 88); g.scale(s, s); g.translate(-CX, -CY); avatar(k); g.restore(); });
+    // giả lập dòng kênh trên trang xem: avatar 40 px + tên
+    g.save(); g.fillStyle = '#FFF'; g.fillRect(1080, y + 40, 700, 96); g.beginPath(); g.arc(1130, y + 88, 20, 0, 7); g.clip();
+    g.translate(1130, y + 88); g.scale(40 / 1080, 40 / 1080); g.translate(-CX, -CY); avatar(k); g.restore();
+    g.save(); g.font = '700 30px Archivo, sans-serif'; g.fillStyle = '#0F0F0F'; g.textBaseline = 'middle'; g.fillText('Blunderstory', 1170, y + 76);
+    g.font = '400 22px Archivo, sans-serif'; g.fillStyle = '#606060'; g.fillText('History’s biggest disasters, tiny stupid mistakes', 1170, y + 106); g.restore(); });
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 23, LEAD: 0, error: null };
+</script>

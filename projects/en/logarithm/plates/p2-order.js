@@ -1,0 +1,21 @@
+// Thứ tự cảnh của trang p2.html. Mỗi tên = plates/<tên>.js (export default class — BRIEF-PLATES.md).
+export const ALL = [
+  'b01-forwards',
+  'b02-backwards',
+  'b03-few-more',
+  'b04-start',
+  'b05-zeros',
+  'b06-ant-whale',
+  'b07-adding',
+  'b08-napier',
+  'b09-quakes',
+  'b10-decibels',
+  'b11-lemons',
+  'b12-senses',
+  'b13-strange-base',
+  'b14-interest',
+  'b15-doubling',
+  'b16-why-72',
+  'b17-together',
+  'b18-next-time',
+];

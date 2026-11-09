@@ -1,0 +1,68 @@
+<!doctype html><meta charset="utf-8"><title>Becker redo</title>
+<!-- Làm lại 60 s đầu "Animation vs. Coding" bằng người que khăn đỏ nét mềm — kịch bản ở becker-redo-scene.js. -->
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+import { H, GY, DUR, actor, laptop, code, flyers, camera, clamp, win } from './becker-redo-scene.js';
+import { hero, INK, PAPER, RED } from '../../engine/hero.js';
+const g = document.getElementById('cv').getContext('2d');
+let fontsReady = false;
+Promise.all([new FontFace('Plex', 'url("../../assets/fonts/IBMPlexMono-Medium.ttf")').load().then(f => document.fonts.add(f))])
+  .then(() => { fontsReady = true; }, () => { fontsReady = true; });
+const COL = { kw: '#0F7A7C', par: '#A8740A', str: '#B8462A', num: '#6B3FB0', id: '#2A63A8', op: INK };
+function tokens(s) {
+  const r = []; let i = 0;
+  while (i < s.length) {
+    const c = s[i];
+    if (c === '"') { let j = s.indexOf('"', i + 1); j = j < 0 ? s.length : j + 1; r.push([s.slice(i, j), COL.str]); i = j; continue; }
+    if (/[a-z]/.test(c)) { let j = i; while (j < s.length && /[a-z]/.test(s[j])) j++; const w = s.slice(i, j); r.push([w, /^(print|pri|prin|p|pr)$/.test(w) && w !== 'a' ? (w === 'a' ? COL.id : COL.kw) : COL.id]); i = j; continue; }
+    if (/[0-9]/.test(c)) { r.push([c, COL.num]); i++; continue; }
+    if ('()'.includes(c)) { r.push([c, COL.par]); i++; continue; }
+    r.push([c, COL.op]); i++;
+  }
+  return r;
+}
+function drawCode(t) {
+  const C = code(t), x0 = 640, y0 = 370, lh = 62, fs = 46;
+  g.font = `500 ${fs}px Plex, monospace`; g.textBaseline = 'middle'; g.textAlign = 'left';
+  const cw = g.measureText('M').width;
+  if (C.err) {                                            // NameError: nền đỏ sẫm sau chữ + nhãn nhỏ
+    const w = cw * Math.max(1, C.lines[0].length) + 24, k = clamp((t - 15.25) / 0.12);
+    g.fillStyle = `rgba(160,40,40,${0.85 * k})`; g.fillRect(x0 - 12, y0 - lh / 2, w, lh);
+    g.fillStyle = `rgba(190,40,40,${k})`; g.font = `500 18px Plex, monospace`; g.fillText('NameError', x0, y0 + lh / 2 + 14); g.font = `500 ${fs}px Plex, monospace`;
+  }
+  if (C.sel) { const w = cw * Math.max(...C.lines.map(l => l.length)) + 16; g.fillStyle = 'rgba(42,99,168,0.22)'; g.fillRect(x0 - 8, y0 - lh / 2, w, lh * C.lines.length); }
+  C.lines.forEach((ln, i) => {
+    let x = x0;
+    for (const [s, c] of tokens(ln)) { g.fillStyle = C.err ? '#FFFFFF' : c; g.fillText(s, x, y0 + i * lh); x += cw * s.length; }
+    if (i === C.lines.length - 1 && C.cursor) { g.fillStyle = INK; g.fillRect(x + 2, y0 + i * lh + fs * 0.42, cw * 0.9, 4); }
+  });
+  if (C.out) { g.fillStyle = INK; g.font = `500 54px Plex, monospace`; g.fillText(C.out, 520, 640); }
+}
+function drawLaptop(L, dir, t) {
+  const red = t > 15.25 && t < 15.75, w = 0.22 * H;
+  g.save(); g.translate(L.c[0], L.c[1]); g.rotate(L.ang); g.scale(dir, 1);
+  g.lineJoin = 'round'; g.strokeStyle = INK; g.lineWidth = 4;
+  g.fillStyle = red ? '#E06A5A' : '#C9D0D6';
+  // đế (nghiêng 3/4) + màn hình mở ngả về phía người
+  g.beginPath(); g.moveTo(-w / 2, 0); g.lineTo(w / 2, 0); g.lineTo(w / 2 + 14, -12); g.lineTo(-w / 2 + 14, -12); g.closePath(); g.fill(); g.stroke();
+  g.beginPath(); g.moveTo(w / 2 + 14, -12); g.lineTo(w / 2 - 2, -12 - 0.17 * H); g.lineTo(-w / 2 + 6, -10 - 0.17 * H); g.lineTo(-w / 2 + 14, -12); g.closePath();
+  g.fillStyle = red ? '#D9481E' : '#E6EAED'; g.fill(); g.stroke();
+  g.restore();
+}
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = PAPER; g.fillRect(0, 0, 1920, 1080);
+  const cam = camera(t);
+  g.setTransform(cam.z, 0, 0, cam.z, 960 - cam.x * cam.z, 540 - cam.y * cam.z);
+  g.fillStyle = 'rgba(34,48,60,0.08)'; g.fillRect(-400, GY, 2800, 600);         // mặt đất rất nhạt
+  drawCode(t);
+  const A = actor(t), L = laptop(t, A);
+  if (!L.held) drawLaptop(L, 1, t);
+  hero(g, 'C', A.hip[0], 0, A.pose, { soft: true, h: H, dir: A.dir, hip: A.hip, feet: A.feet, hands: A.hands, rot: A.rot, squash: A.squash, eye: A.eye, wind: A.wind, t });
+  if (L.held) drawLaptop(L, A.dir, t);
+  for (const f of flyers(t, A)) { g.save(); g.translate(...f.p); g.rotate(f.rot); g.fillStyle = INK; g.font = `500 ${f.size}px Plex, monospace`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(f.txt, 0, 0); g.restore(); }
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  if (t < 1) { g.fillStyle = `rgba(20,24,28,${1 - win(t, 0, 1)})`; g.fillRect(0, 0, 1920, 1080); }
+}
+window.__intro = { get ready() { return fontsReady; }, still: frame, frame, DUR };
+</script>

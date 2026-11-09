@@ -1,0 +1,360 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — awasekagami</title>
+<style>
+  @font-face{font-family:"Shippori Mincho";src:url("../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  html,body{margin:0;background:#0E1424;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — 「合わせ鏡」 (ja/chirality). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/awasekagami.html --dur 2 --t 0.5,1.5 --outdir out/_lab/awasekagami
+// Ý: cả bài diễn ra ở HAI PHÍA của MỘT tấm gương tráng bạc dựng đứng trên bàn thí nghiệm graphite tối. Chirality = "giống hệt mà không chồng được" — gương là
+//   phép thử duy nhất cần có: vật bên trái luôn có bản sao bên phải; khi bản sao KHÔNG chồng khít, mặt gương rạn một vệt nhỏ. Mặt bàn bóng → mọi vật có bóng soi mờ.
+// Gương: dải bạc đứng (gradient #5D6678→#C9D2E0→#F4F7FB), chân kẹp graphite, quầng sáng lạnh; ở đồ thị gương CHÍNH LÀ trục dọc (0% ở giữa, 左/右 hai bên).
+// Màu: nền #0E1424 · bàn #141B2E→#0A0F1B · gương #C9D2E0 · chữ #EDE6D6 · 左 hổ phách #F2A541 · 右 azure #4BA3E3 · khung xương/trục #8A93A6 · ✗ đỏ #F0605D CHỈ cho "không khớp".
+//   Nguyên tố: H #E6EAF0 · C #4A5366 · F #C3DE72 · Cl #3FA468 · Br #9A5234 (+ chữ ký hiệu trên quả cầu); phía trái/phải đọc bằng VỊ TRÍ + viền sáng hổ phách/azure.
+// Chữ: Shippori Mincho Bold (tiêu đề: viết ngược gương rồi lật — ảnh tĩnh: đã lật, bóng chữ ngược mờ bên kia gương) · Noto Sans JP (nhãn, số, công thức; ✓✗ vẽ tay).
+// Tiếng: lật gương/chuyển cảnh = whoosh + shimmer · phân tử hiện = chip (gõ thuỷ tinh) · khớp ✓ = correct nhẹ · lệch ✗ = error + nứt kính (mới: ガラスのひび, CC0) ·
+//   bước mạng nhện = tick cao dần, 99% = suzu · đồng xu = coin · trang sử = page.
+// Các phần khác: Pasteur = hai đống tinh thể hai bên gương, ピンセット gắp; 偏光 = chùm sáng xuyên kính xoay trái/phải · carvone = hai lọ ミント | キャラウェイ soi nhau,
+//   làn hương cuộn ngược chiều · thalidomide = điềm tĩnh: hai phân tử phẳng hai mặt, gương mờ đi (cơ thể tự đổi R⇄S — gương không ngăn được), không hình nạn nhân ·
+//   Frank 3 điều kiện = ba ô kính khắc chữ dọc mép gương · sàn nhảy 56/38/6 = các cặp nhảy hai bên gương, cặp lẫn đứng sát gương · đồng xu 37 lần 19/18 = xu lăn trên
+//   bàn, mỗi lần rơi về một phía gương · まとめ = gương hạ xuống, chỉ còn một phía (sự sống một tay), dấu tay mascot trên kính.
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const MIN = '"Shippori Mincho"', NOTO = '"Noto Sans JP"';
+const C = { bg: '#0E1424', silver: '#C9D2E0', text: '#EDE6D6', L: '#F2A541', R: '#4BA3E3', bone: '#8A93A6', bad: '#F0605D', dim: '#AEB6C6' };
+const EL = { H: { c: '#E6EAF0', r: 0.30, ink: '#0E1424' }, C: { c: '#4A5366', r: 0.40, ink: '#EDE6D6' }, F: { c: '#C3DE72', r: 0.40, ink: '#0E1424' },
+  Cl: { c: '#3FA468', r: 0.50, ink: '#0E1424' }, Br: { c: '#9A5234', r: 0.56, ink: '#EDE6D6' } };
+const IM = {}, SH = {}; let BG, MOL, MOLS, ready = false;
+const MX = 930;                                                    // đường gương — CÙNG một chỗ ở cả hai khung
+const MIR_TOP = 168, MIR_FOOT = 905;
+
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { const r = ev(s); if (r !== v) throw new Error(`sai: ${s} = ${r} ≠ ${v}`); return v; };
+const lum = hex => { const v = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(c => c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4); return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]; };
+const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+const needC = (a, b, k, what) => { const c = contrast(a, b); if (c < k) throw new Error(`tương phản ${what} ${c.toFixed(2)} < ${k}`); return c; };
+for (const [k, v] of Object.entries({ text: C.text, L: C.L, R: C.R, bone: C.bone, bad: C.bad, dim: C.dim, silver: C.silver })) needC(v, C.bg, 4.5, k);
+for (const [k, e] of Object.entries(EL)) needC(e.ink, e.c, 4.5, 'chữ trên ' + k);
+
+// ---- vector ----
+const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]], dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+const norm = a => { const l = Math.hypot(...a); return a.map(x => x / l); };
+const mul = (M, v) => M.map(r => dot(r, v));
+const rotY = a => [[Math.cos(a), 0, Math.sin(a)], [0, 1, 0], [-Math.sin(a), 0, Math.cos(a)]];
+const rotX = a => [[1, 0, 0], [0, Math.cos(a), -Math.sin(a)], [0, Math.sin(a), Math.cos(a)]];
+const mm = (A, B) => A.map(r => [0, 1, 2].map(j => r[0] * B[0][j] + r[1] * B[1][j] + r[2] * B[2][j]));
+const T = M => [0, 1, 2].map(i => M.map(r => r[i]));
+const frameOf = (u, v) => { const e1 = norm(u), e2 = norm(sub(v, e1.map(x => x * dot(v, e1)))); return [e1, e2, cross(e1, e2)]; };   // hàng = trục
+
+// CIP từ hình học: nhìn từ phía đối diện nhóm ưu tiên thấp nhất, a→b→c theo chiều kim đồng hồ ⇔ R  ⇔  (a×b + b×c + c×a)·d > 0
+const PRI = { Br: 35, Cl: 17, F: 9, H: 1 };
+function cipOf(atoms) {
+  const c = atoms.find(a => a.el === 'C'), sub4 = atoms.filter(a => a !== c).sort((p, q) => PRI[q.el] - PRI[p.el]).map(a => sub(a.p, c.p));
+  const [a, b, cc, d] = sub4, n = [cross(a, b), cross(b, cc), cross(cc, a)].reduce((s, v) => s.map((x, i) => x + v[i]));
+  return dot(n, d) > 0 ? 'R' : 'S';
+}
+
+// ---- nền: tường graphite + bàn thí nghiệm bóng (vẽ MỘT lần) ----
+const BENCH = 842;
+function background() {
+  const c = mk(), x = c.getContext('2d');
+  let gr = x.createLinearGradient(0, 0, 0, BENCH); gr.addColorStop(0, '#0B1020'); gr.addColorStop(1, '#131A2D'); x.fillStyle = gr; x.fillRect(0, 0, W, BENCH);
+  gr = x.createRadialGradient(MX, 470, 40, MX, 470, 980); gr.addColorStop(0, 'rgba(120,140,180,0.13)'); gr.addColorStop(1, 'rgba(0,0,0,0)'); x.fillStyle = gr; x.fillRect(0, 0, W, BENCH);
+  // ô gạch men tường lab rất mờ
+  x.strokeStyle = 'rgba(160,175,205,0.035)'; x.lineWidth = 1;
+  for (let y = 40; y < BENCH; y += 92) { x.beginPath(); x.moveTo(0, y + 0.5); x.lineTo(W, y + 0.5); x.stroke(); }
+  for (let r = 0, y = 40; y < BENCH; y += 92, r++) for (let X = (r % 2) * 92 - 92; X < W; X += 184) { x.beginPath(); x.moveTo(X + 0.5, y); x.lineTo(X + 0.5, y + 92); x.stroke(); }
+  // mặt bàn
+  gr = x.createLinearGradient(0, BENCH, 0, H); gr.addColorStop(0, '#1B2338'); gr.addColorStop(0.25, '#121A2C'); gr.addColorStop(1, '#090D18'); x.fillStyle = gr; x.fillRect(0, BENCH, W, H - BENCH);
+  for (let i = 0; i < 70; i++) { const y = BENCH + 6 + (H - BENCH) * hash(i * 3.1) ** 1.6; x.fillStyle = `rgba(150,165,200,${0.015 + 0.02 * hash(i * 7.7)})`; x.fillRect(0, y, W, 1); }
+  x.fillStyle = 'rgba(201,210,224,0.20)'; x.fillRect(0, BENCH, W, 1.5);          // mép sau bàn bắt sáng
+  // vệt sáng dưới chân gương trên mặt bàn bóng
+  gr = x.createRadialGradient(MX, MIR_FOOT + 10, 4, MX, MIR_FOOT + 10, 360); gr.addColorStop(0, 'rgba(201,210,224,0.20)'); gr.addColorStop(1, 'rgba(201,210,224,0)');
+  x.save(); x.translate(MX, MIR_FOOT + 10); x.scale(1, 0.16); x.translate(-MX, -MIR_FOOT - 10); x.fillStyle = gr; x.fillRect(MX - 400, MIR_FOOT - 400, 800, 800); x.restore();
+  const v = x.createRadialGradient(W / 2, H / 2, 500, W / 2, H / 2, 1250); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,0.5)'); x.fillStyle = v; x.fillRect(0, 0, W, H);
+  return c;
+}
+
+// ---- gương tráng bạc (cùng một vật ở mọi khung) ----
+function mirror(crack) {
+  const w = 32, x0 = MX - w / 2;
+  // quầng sáng lạnh
+  let gr = g.createLinearGradient(MX - 120, 0, MX + 120, 0);
+  gr.addColorStop(0, 'rgba(201,210,224,0)'); gr.addColorStop(0.5, 'rgba(201,210,224,0.10)'); gr.addColorStop(1, 'rgba(201,210,224,0)');
+  g.fillStyle = gr; g.fillRect(MX - 120, MIR_TOP, 240, MIR_FOOT - MIR_TOP);
+  // thân bạc
+  gr = g.createLinearGradient(x0, 0, x0 + w, 0);
+  gr.addColorStop(0, '#4E576A'); gr.addColorStop(0.18, '#9AA4B6'); gr.addColorStop(0.42, '#F4F7FB'); gr.addColorStop(0.58, '#C9D2E0'); gr.addColorStop(0.85, '#7E889B'); gr.addColorStop(1, '#3E4658');
+  g.fillStyle = gr; g.fillRect(x0, MIR_TOP, w, MIR_FOOT - MIR_TOP);
+  // dải phản chiếu mờ chạy dọc kính (ánh của căn phòng)
+  for (let i = 0; i < 9; i++) { const y = MIR_TOP + (MIR_FOOT - MIR_TOP) * hash(i * 5.3 + 1), h = 30 + 120 * hash(i * 2.9);
+    g.fillStyle = `rgba(255,255,255,${0.10 + 0.18 * hash(i * 1.7)})`; g.fillRect(x0 + 6 + 6 * hash(i), y, 2 + 3 * hash(i * 4.1), h); }
+  g.strokeStyle = 'rgba(14,20,36,0.7)'; g.lineWidth = 1; g.strokeRect(x0 + 0.5, MIR_TOP + 0.5, w - 1, MIR_FOOT - MIR_TOP - 1);
+  // nắp + chân kẹp graphite
+  const cap = (y, h, ww) => { const gg = g.createLinearGradient(0, y, 0, y + h); gg.addColorStop(0, '#5A6378'); gg.addColorStop(1, '#262D3F');
+    g.fillStyle = gg; g.beginPath(); g.roundRect(MX - ww / 2, y, ww, h, 4); g.fill(); g.fillStyle = 'rgba(201,210,224,0.35)'; g.fillRect(MX - ww / 2 + 3, y + 1, ww - 6, 1.5); };
+  cap(MIR_TOP - 12, 14, 40);
+  cap(MIR_FOOT - 10, 24, 110);
+  // bóng soi của gương trên mặt bàn
+  gr = g.createLinearGradient(0, MIR_FOOT + 14, 0, MIR_FOOT + 130); gr.addColorStop(0, 'rgba(201,210,224,0.22)'); gr.addColorStop(1, 'rgba(201,210,224,0)');
+  g.fillStyle = gr; g.fillRect(x0 + 3, MIR_FOOT + 14, w - 6, 116);
+  if (crack) cracks(crack.y, crack.n);
+}
+// vết rạn: tia gãy khúc từ một điểm trên kính — chỉ khi "không chồng khít"
+function cracks(cy, n) {
+  g.save(); g.beginPath(); g.rect(MX - 16, MIR_TOP, 32, MIR_FOOT - MIR_TOP); g.clip();
+  g.lineCap = 'round';
+  for (let i = 0; i < n; i++) {
+    const a = (i / n) * Math.PI * 2 + hash(i * 3.3) * 0.6; let px = MX - 2 + 4 * hash(i * 9.1), py = cy, len = 26 + 70 * hash(i * 1.9);
+    const pts = [[px, py]];
+    for (let k = 1; k <= 4; k++) { const aa = a + (hash(i * 11 + k) - 0.5) * 0.9; px += Math.cos(aa) * len / 4 * 0.55; py += Math.sin(aa) * len / 4 * 1.5; pts.push([px, py]); }
+    for (const [lw, col] of [[2.6, 'rgba(14,20,36,0.85)'], [1.1, 'rgba(255,255,255,0.95)']]) {
+      g.strokeStyle = col; g.lineWidth = lw; g.beginPath(); pts.forEach(([u, v], k) => k ? g.lineTo(u, v) : g.moveTo(u, v)); g.stroke(); }
+  }
+  g.restore();
+  // điểm vỡ loé nhẹ ngoài kính
+  const gr = g.createRadialGradient(MX, cy, 0, MX, cy, 46); gr.addColorStop(0, 'rgba(255,255,255,0.35)'); gr.addColorStop(1, 'rgba(255,255,255,0)'); g.fillStyle = gr; g.fillRect(MX - 46, cy - 46, 92, 92);
+}
+
+// ---- chữ ----
+function text(s, x, y, { font = `500 32px ${NOTO}`, color = C.text, align = 'left', base = 'alphabetic', shadow = true } = {}) {
+  g.font = font; g.textAlign = align; g.textBaseline = base;
+  if (shadow) { g.fillStyle = 'rgba(5,8,16,0.85)'; g.fillText(s, x + 2, y + 3); }
+  g.fillStyle = color; g.fillText(s, x, y); return g.measureText(s).width;
+}
+// tiêu đề Mincho bên trái gương + bóng chữ viết ngược mờ ở phía bên kia (dư ảnh của cú lật)
+function title(s, size = 66) {
+  g.font = `700 ${size}px ${MIN}`; const w = g.measureText(s).width, x = MX - 44 - w, y = 118;
+  g.save(); g.translate(2 * MX, 0); g.scale(-1, 1); g.globalAlpha = 0.16; g.fillStyle = C.silver; g.textAlign = 'left'; g.textBaseline = 'alphabetic'; g.fillText(s, x, y); g.restore();
+  text(s, x, y, { font: `700 ${size}px ${MIN}` });
+  g.fillStyle = C.L; g.fillRect(x, y + 18, 54, 3);
+  if (x < 96) throw new Error('tiêu đề tràn vùng an toàn');
+}
+const tick = (x, y, s = 16, col = C.R) => { g.save(); g.strokeStyle = col; g.lineWidth = 5; g.lineCap = 'round'; g.lineJoin = 'round'; g.beginPath(); g.moveTo(x - s * 0.7, y); g.lineTo(x - s * 0.15, y + s * 0.6); g.lineTo(x + s * 0.8, y - s * 0.6); g.stroke(); g.restore(); };
+const cross_ = (x, y, s = 14, col = C.bad) => { g.save(); g.strokeStyle = col; g.lineWidth = 5.5; g.lineCap = 'round'; g.beginPath(); g.moveTo(x - s, y - s); g.lineTo(x + s, y + s); g.moveTo(x + s, y - s); g.lineTo(x - s, y + s); g.stroke(); g.restore(); };
+const badge = (x, y, r, fn) => { g.save(); g.fillStyle = 'rgba(10,14,26,0.88)'; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); g.restore(); fn(); };
+
+// ---- mascot (giữa đùi, bóng mờ dựng sẵn lúc nạp) ----
+function figure(pose, x0, h, tint) {
+  const im = IM[pose], s = h / im.height, w = im.width * s, y0 = H - h, S = SH[pose];
+  g.save(); g.globalAlpha = 0.45; g.drawImage(S, x0 - 30 * s + 18, y0 - 30 * s + 10, S.width * s, S.height * s); g.restore();
+  const c = mk(Math.ceil(w), Math.ceil(h)), x = c.getContext('2d'); x.drawImage(im, 0, 0, w, h); x.globalCompositeOperation = 'source-atop';
+  x.fillStyle = 'rgba(40,60,110,0.10)'; x.fillRect(0, 0, w, h);                          // phòng tối, ánh lạnh
+  const gr = x.createLinearGradient(tint.from, 0, tint.to, 0); gr.addColorStop(0, 'rgba(201,210,224,0.16)'); gr.addColorStop(0.35, 'rgba(201,210,224,0)'); x.fillStyle = gr; x.fillRect(0, 0, w, h);   // ánh gương hắt
+  g.drawImage(c, x0, y0); return { x: x0, y: y0, w, h, s };
+}
+
+// ---- phân tử: phối cảnh, quả cầu sắp theo z ----
+// vị trí nhìn: tìm bằng lưới góc (tối đa khoảng hở 2D giữa các quả cầu, H ở trên, Br quay về gương) → bốn nhóm toả ra thành tứ diện, không quả nào che quả nào
+const rotZ = a => [[Math.cos(a), -Math.sin(a), 0], [Math.sin(a), Math.cos(a), 0], [0, 0, 1]];
+const viewFor = () => mm(rotZ(5.4978), mm(rotX(0.1309), rotY(1.1781)));
+function place(atoms, M) { return atoms.map(a => ({ el: a.el, p: mul(M, [a.x, a.y, a.z]) })); }
+const mirrorX = atoms => atoms.map(a => ({ el: a.el, p: [-a.p[0], a.p[1], a.p[2]] }));       // phản chiếu qua mặt gương (x → −x), đúng tuyệt đối
+const proj = (p, cx, cy, s) => { const D = 9, k = D / (D - p[2]); return { x: cx + p[0] * s * k, y: cy - p[1] * s * k, k }; };
+function drawMol(atoms, bonds, cx, cy, s, side, { ghost = false } = {}) {
+  const P = atoms.map(a => proj(a.p, cx, cy, s)), items = [];
+  bonds.forEach(b => { const A = atoms[b.a].p, B = atoms[b.b].p, mid = A.map((v, i) => (v + B[i]) / 2);
+    items.push({ z: (A[2] + mid[2]) / 2 - 0.05, bond: [b.a, b.b, 0] }, { z: (B[2] + mid[2]) / 2 - 0.05, bond: [b.a, b.b, 1] }); });
+  atoms.forEach((a, i) => items.push({ z: a.p[2], atom: i }));
+  items.sort((p, q) => p.z - q.z);
+  const rim = side === 'L' ? C.L : C.R;
+  const out = [];
+  for (const it of items) {
+    if (it.bond) {
+      const [a, b, half] = it.bond, A = P[a], B = P[b], M = { x: (A.x + B.x) / 2, y: (A.y + B.y) / 2 };
+      const L = Math.hypot(B.x - A.x, B.y - A.y), ux = (B.x - A.x) / L, uy = (B.y - A.y) / L, ra = EL[atoms[a].el].r * s * A.k * 0.72, rb = EL[atoms[b].el].r * s * B.k * 0.72;
+      const [u, v] = half ? [M, { x: B.x - ux * rb, y: B.y - uy * rb }] : [{ x: A.x + ux * ra, y: A.y + uy * ra }, M];      // không đè chữ ký hiệu
+      if (ghost) continue;
+      g.lineCap = 'round'; g.strokeStyle = '#2A3246'; g.lineWidth = 16; g.beginPath(); g.moveTo(u.x, u.y); g.lineTo(v.x, v.y); g.stroke();
+      g.strokeStyle = C.bone; g.lineWidth = 9; g.beginPath(); g.moveTo(u.x, u.y); g.lineTo(v.x, v.y); g.stroke();
+      g.strokeStyle = 'rgba(255,255,255,0.28)'; g.lineWidth = 2.5; g.beginPath(); g.moveTo(u.x - 2, u.y - 2); g.lineTo(v.x - 2, v.y - 2); g.stroke();
+      continue;
+    }
+    const a = atoms[it.atom], e = EL[a.el], q = P[it.atom], r = e.r * s * q.k;
+    out[it.atom] = { x: q.x, y: q.y, r };
+    if (ghost) {                                                       // bản sao xoay thử: vỏ kính hổ phách, nét đứt
+      g.save(); g.fillStyle = 'rgba(242,165,65,0.10)'; g.beginPath(); g.arc(q.x, q.y, r, 0, 7); g.fill();
+      g.setLineDash([9, 7]); g.strokeStyle = C.L; g.lineWidth = 3; g.stroke(); g.restore();
+      if (ghost.letters && ghost.letters.includes(a.el)) { g.font = `700 ${Math.round(r * 0.62)}px ${NOTO}`; g.textAlign = 'center'; g.textBaseline = 'middle';
+        const lx = q.x + r * 0.55, ly = q.y - r * 0.62, br = r * 0.42; g.fillStyle = 'rgba(10,14,26,0.92)'; g.beginPath(); g.roundRect(lx - br, ly - br, 2 * br + 40, 2 * br, br); g.fill();
+        g.strokeStyle = C.bad; g.lineWidth = 2; g.stroke(); g.fillStyle = C.L; g.fillText(a.el, lx, ly + 1); cross_(lx + br + 14, ly, 9); }
+      continue;
+    }
+    const gr = g.createRadialGradient(q.x - r * 0.38, q.y - r * 0.42, r * 0.08, q.x, q.y, r);
+    gr.addColorStop(0, '#FFFFFF'); gr.addColorStop(0.22, e.c); gr.addColorStop(0.85, e.c); gr.addColorStop(1, '#151B2B');
+    g.fillStyle = gr; g.beginPath(); g.arc(q.x, q.y, r, 0, 7); g.fill();
+    // viền sáng theo phía (vị trí + màu)
+    g.save(); g.strokeStyle = rim; g.lineWidth = 3; g.globalAlpha = 0.9;
+    g.beginPath(); side === 'L' ? g.arc(q.x, q.y, r - 1.5, -1.0, 0.9) : g.arc(q.x, q.y, r - 1.5, Math.PI - 0.9, Math.PI + 1.0); g.stroke(); g.restore();
+    { g.font = `700 ${Math.round(r * (a.el.length > 1 ? 0.78 : 0.95))}px ${NOTO}`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = e.ink; g.fillText(a.el, q.x + 1, q.y + 2); }
+  }
+  return out;
+}
+function floorShadow(cx, w) {                                         // bóng mềm trên mặt bàn
+  const y = BENCH + 46, gr = g.createRadialGradient(cx, y, 2, cx, y, w);
+  gr.addColorStop(0, 'rgba(0,0,0,0.55)'); gr.addColorStop(1, 'rgba(0,0,0,0)');
+  g.save(); g.translate(cx, y); g.scale(1, 0.14); g.translate(-cx, -y); g.fillStyle = gr; g.fillRect(cx - w, y - w, 2 * w, 2 * w); g.restore();
+}
+function arrow(pts, col, lw = 4, head = 16) {
+  g.save(); g.strokeStyle = col; g.fillStyle = col; g.lineWidth = lw; g.lineCap = 'round';
+  g.beginPath(); g.moveTo(...pts[0]); if (pts.length === 3) g.quadraticCurveTo(...pts[1], ...pts[2]); else g.lineTo(...pts[1]); g.stroke();
+  const [e, f] = [pts[pts.length - 1], pts[pts.length - 2]], a = Math.atan2(e[1] - f[1], e[0] - f[0]);
+  g.beginPath(); g.moveTo(e[0] + Math.cos(a) * 4, e[1] + Math.sin(a) * 4); g.lineTo(e[0] - Math.cos(a - 0.45) * head, e[1] - Math.sin(a - 0.45) * head); g.lineTo(e[0] - Math.cos(a + 0.45) * head, e[1] - Math.sin(a + 0.45) * head); g.fill(); g.restore();
+}
+
+// ---- mô hình tự xúc tác (dãy lặp) ----
+const f = x => 2 * x / (1 + x * x);
+const ITER = (() => { const s = [0.02]; for (let i = 0; i < 7; i++) s.push(f(s[s.length - 1])); return s; })();
+const SEQ = ITER.map(v => Math.round(v * 100));
+const SOAI_1995 = [2, 10, 57, 81, 88];                                // Soai et al., Nature 1995 — hằng số nguồn (CONTENT.md), KHÔNG tính
+
+const frames = [
+  () => {                                              // 0 · ACT 1 手の形をした分子
+    const { atoms: raw, bonds, stereo } = MOL;
+    const VIEW = viewFor(raw), left = place(raw, VIEW), right = mirrorX(left);
+    const fileCip = stereo[0].cip;
+    must(`'${fileCip}'`, 'R');
+    must(`'${cipOf(place(raw, [[1, 0, 0], [0, 1, 0], [0, 0, 1]]))}'`, fileCip);               // hình học khớp nhãn file
+    must(`'${cipOf(left)}'`, 'R'); must(`'${cipOf(right)}'`, 'S');                              // xoay giữ tay, gương đổi tay
+    must(`'${cipOf(place(MOLS.atoms, VIEW))}'`, MOLS.stereo[0].cip);                            // file S độc lập cũng ra S
+    must(`${raw.length}`, 5); must(`${new Set(raw.filter(a => a.el !== 'C').map(a => a.el)).size}`, 4);   // 4 nhóm khác nhau
+    // xoay thử bản trái để H và Br khớp ảnh gương → F, Cl lệch nhau
+    const ci = left.findIndex(a => a.el === 'C'), cL = left[ci].p, cR = right[ci].p, iH = left.findIndex(a => a.el === 'H'), iBr = left.findIndex(a => a.el === 'Br');
+    const FL = frameOf(sub(left[iH].p, cL), sub(left[iBr].p, cL)), FR = frameOf(sub(right[iH].p, cR), sub(right[iBr].p, cR)), Rm = mm(T(FR), FL);
+    const trial = left.map(a => ({ el: a.el, p: mul(Rm, sub(a.p, cL)).map((v, i) => v + cR[i]) }));
+    const dist = (i, j) => Math.hypot(...sub(trial[i].p, right[j].p));
+    const iF = left.findIndex(a => a.el === 'F'), iCl = left.findIndex(a => a.el === 'Cl');
+    const okH = dist(iH, iH) < 0.05, okBr = dist(iBr, iBr) < 0.05, swap = dist(iF, iCl) < dist(iF, iF) && dist(iCl, iF) < dist(iCl, iCl);
+    must(`${okH && okBr && swap}`, true);
+    must(`'${cipOf(trial)}'`, 'R');                                                              // xoay xong vẫn là R — không thành S
+
+    const LX = 560, RX = 2 * MX - LX, CY = 480, S = 142;
+    floorShadow(LX, 230); floorShadow(RX, 230);
+    // bóng soi mờ dưới mặt bàn bóng
+    for (const [mol, cx, side] of [[left, LX, 'L'], [right, RX, 'R']]) { g.save(); g.globalAlpha = 0.12; g.translate(0, 2 * (BENCH + 60)); g.scale(1, -1); drawMol(mol, bonds, cx, CY, S, side); g.restore(); }
+    g.save(); const fade = g.createLinearGradient(0, BENCH, 0, H); fade.addColorStop(0, 'rgba(14,20,36,0)'); fade.addColorStop(1, 'rgba(9,13,24,0.9)'); g.fillStyle = fade; g.fillRect(0, BENCH, W, H - BENCH); g.restore();
+
+    mirror({ y: CY - 10, n: 7 });
+    const AL = drawMol(left, bonds, LX, CY, S, 'L');
+    const AR = drawMol(right, bonds, RX, CY, S, 'R');
+    const AG = drawMol(trial, bonds, RX, CY, S, 'R', { ghost: { letters: ['F', 'Cl'] } });
+    // ✓ / ✗ ở 4 nhóm
+    const cG = AG[ci], mark = (i, ok) => { const a = AG[i], d = norm([a.x - cG.x, a.y - cG.y, 0]), k = a.r + (ok ? 30 : 44), x = a.x + d[0] * k, y = a.y + d[1] * k;
+      badge(x, y, 22, () => ok ? tick(x, y, 14, C.R) : cross_(x, y, 11)); };
+    mark(iH, true); mark(iBr, true);                                        // ✗ của F, Cl nằm trong nhãn bóng (drawMol)
+    // ghost F nằm ở chỗ Cl thật: nhãn nhỏ
+
+    title('手の形をした分子');
+    // nhãn 不斉炭素原子 → C trái
+    const c0 = AL[ci];
+    text('不斉炭素原子', 130, 300, { font: `700 38px ${NOTO}`, color: C.L });
+    text('4種類のちがう原子', 130, 346, { font: `400 28px ${NOTO}`, color: C.dim });
+    arrow([[260, 366], [300, 470], [c0.x - c0.r - 8, c0.y + 6]], C.L, 3.5, 14);
+    // xoay thử
+    arrow([[LX + 40, 236], [MX, 150], [RX - 40, 236]], C.L, 4, 18);
+    text('回して重ねると…', MX + 40, 168, { font: `500 30px ${NOTO}`, color: C.text });
+    text('2つしか重ならない', RX, 836, { font: `700 32px ${NOTO}`, color: C.text, align: 'center' });
+    // R / S từ file
+    const tag = (s, x, col) => { g.save(); g.fillStyle = 'rgba(10,14,26,0.85)'; g.strokeStyle = col; g.lineWidth = 2.5; g.beginPath(); g.roundRect(x - 40, 726, 80, 50, 25); g.fill(); g.stroke(); g.restore();
+      text(s, x, 761, { font: `700 32px ${NOTO}`, color: col, align: 'center', shadow: false }); };
+    tag(cipOf(left) + '体', LX, C.L); tag(cipOf(right) + '体', RX, C.R);
+    // 鏡像異性体 — ngoặc nối hai bên, trên mặt bàn
+    g.save(); g.strokeStyle = C.silver; g.lineWidth = 2.5; g.beginPath(); g.moveTo(LX, 786); g.lineTo(LX, 950); g.lineTo(MX - 130, 950); g.moveTo(MX + 130, 950); g.lineTo(RX, 950); g.lineTo(RX, 860); g.stroke(); g.restore();
+    text('鏡像異性体', MX, 964, { font: `700 44px ${MIN}`, color: C.text, align: 'center' });
+    // mascot giơ lòng bàn tay, mép phải
+    figure('pose-halt', 1560, 740, { from: 0, to: 300 });
+  },
+  () => {                                              // 1 · ACT 6 曲線を何度もたどる
+    must(`[${SEQ}].join()`, '2,4,8,16,31,56,86,99');
+    must(`${SOAI_1995.length - 1}`, 4);
+    must(`${Math.abs(f(1) - 1) < 1e-12 && f(0) === 0}`, true);                                // 0 và 1 là điểm cố định
+    // trục: gương = trục dọc. x∈[−1,1] (左…右), y∈[0,1]
+    const PW = 400, X0 = MX, Y0 = 800, PH = 500;
+    const sx = v => X0 + v * PW, sy = v => Y0 - v * PH;
+    // lưới
+    g.save(); g.strokeStyle = 'rgba(138,147,166,0.16)'; g.lineWidth = 1;
+    for (const v of [0.25, 0.5, 0.75, 1]) { g.beginPath(); g.moveTo(sx(-1), sy(v)); g.lineTo(sx(1), sy(v)); g.stroke(); }
+    for (const v of [-1, -0.75, -0.5, -0.25, 0.25, 0.5, 0.75, 1]) { g.beginPath(); g.moveTo(sx(v), sy(0)); g.lineTo(sx(v), sy(1)); g.stroke(); }
+    g.restore();
+    g.strokeStyle = C.bone; g.lineWidth = 2.5; g.beginPath(); g.moveTo(sx(-1.04), sy(0)); g.lineTo(sx(1.04), sy(0)); g.stroke();
+    mirror(null);
+    // đường chéo (|x|) và đường cong (|f|), hai bên gương
+    const curve = (fn, col, lw, dash = []) => { g.save(); g.strokeStyle = col; g.lineWidth = lw; g.setLineDash(dash); g.lineJoin = 'round';
+      for (const sgn of [-1, 1]) { g.beginPath(); for (let i = 0; i <= 200; i++) { const v = i / 200; const X = sx(sgn * v), Y = sy(fn(v)); i ? g.lineTo(X, Y) : g.moveTo(X, Y); } g.stroke(); } g.restore(); };
+    curve(v => v, C.bone, 3, [10, 8]);
+    // mạng nhện: phải = azure (thật), trái = ảnh gương hổ phách
+    const web = (sgn, col, alpha) => { g.save(); g.globalAlpha = alpha; g.strokeStyle = col; g.lineWidth = 3; g.lineJoin = 'round'; g.beginPath();
+      let x = ITER[0]; g.moveTo(sx(sgn * x), sy(0));
+      for (let i = 0; i < 7; i++) { const y = f(x); g.lineTo(sx(sgn * x), sy(y)); g.lineTo(sx(sgn * y), sy(y)); x = y; }
+      g.stroke(); g.restore(); };
+    web(-1, C.L, 0.55); web(1, C.R, 1);
+    g.save(); g.lineWidth = 5; g.lineCap = 'round';
+    for (const [sgn, col] of [[-1, C.L], [1, C.R]]) { g.strokeStyle = col; g.beginPath(); for (let i = 0; i <= 240; i++) { const v = i / 240, X = sx(sgn * v), Y = sy(f(v)); i ? g.lineTo(X, Y) : g.moveTo(X, Y); } g.stroke(); }
+    g.restore();
+    // điểm bậc + nhãn (bên phải)
+    ITER.forEach((v, i) => { if (i === 0) return; const X = sx(v), Y = sy(v); g.fillStyle = C.text; g.beginPath(); g.arc(X, Y, 5.5, 0, 7); g.fill(); });
+    const lab = [[4, 'r'], [5, 'r'], [6, 'r'], [7, 'r']];
+    for (const [i] of lab) { const v = ITER[i], up = i >= 6; text(`${SEQ[i]}%`, sx(v) + 16, sy(v) + (up ? 12 : 34), { font: `700 28px ${NOTO}`, color: C.R }); }
+    text('2%から', sx(0.02) + 36, sy(0) - 14, { font: `700 28px ${NOTO}`, color: C.R });
+    text('直線', sx(0.72) + 26, sy(0.72) + 40, { font: `500 28px ${NOTO}`, color: C.bone });
+    text('曲線', sx(0.52) - 6, sy(f(0.52)) - 22, { font: `700 30px ${NOTO}`, color: C.R, align: 'right' });
+    // trục — nhãn
+    text('↑ できた分子のかたより', MX + 30, sy(1) - 52, { font: `500 30px ${NOTO}`, color: C.text });
+    for (const v of [0.5, 1]) text(`${v * 100}%`, MX + 18, sy(v) + 10, { font: `500 28px ${NOTO}`, color: C.dim });
+    badge(MX, Y0 + 30, 22, () => text('0', MX, Y0 + 40, { font: `700 28px ${NOTO}`, color: C.text, align: 'center', shadow: false }));
+    text('左 100%', sx(-1), Y0 + 40, { font: `700 28px ${NOTO}`, color: C.L, align: 'center' });
+    text('右 100%', sx(1), Y0 + 40, { font: `700 28px ${NOTO}`, color: C.R, align: 'center' });
+    text('触媒のかたより', sx(0.5), Y0 + 40, { font: `500 28px ${NOTO}`, color: C.text, align: 'center' });
+    text('触媒のかたより', sx(-0.5), Y0 + 40, { font: `500 28px ${NOTO}`, color: C.text, align: 'center' });
+    // dãy mô hình trên mặt bàn
+    g.font = `700 36px ${NOTO}`; const parts = SEQ.map(v => `${v}`), arrowW = 46;
+    const ws = parts.map(p => g.measureText(p).width), pct = g.measureText('%').width, total = ws.reduce((a, b) => a + b, 0) + arrowW * 7 + pct;
+    let x = MX + 44; const y = 962;
+    const tagW = text('モデル', MX - 60 - 90, y, { font: `700 30px ${NOTO}`, color: C.bg, shadow: false });
+    g.save(); g.fillStyle = C.bone; g.beginPath(); g.roundRect(MX - 162 - 0, y - 34, tagW + 24, 46, 6); g.fill(); g.restore(); text('モデル', MX - 150, y, { font: `700 30px ${NOTO}`, color: C.bg, shadow: false });
+    parts.forEach((p, i) => { const col = i === 7 ? C.text : C.R; text(p + (i === 7 ? '%' : ''), x, y, { font: `700 36px ${NOTO}`, color: col }); x += ws[i] + (i === 7 ? pct : 0);
+      if (i < 7) { arrow([[x + 10, y - 12], [x + arrowW - 10, y - 12]], C.dim, 2.5, 10); x += arrowW; } });
+    // cột phải: công thức + ô 実験 1995
+    const BX = 1440, BW = 384;
+    text('y＝2x/(1+x²)', BX + BW / 2, 290, { font: `700 44px ${NOTO}`, color: C.text, align: 'center' });
+    text('出てきた y を、次の x へ', BX + BW / 2, 338, { font: `400 28px ${NOTO}`, color: C.dim, align: 'center' });
+    g.save(); g.fillStyle = 'rgba(8,12,22,0.75)'; g.strokeStyle = C.silver; g.lineWidth = 2; g.beginPath(); g.roundRect(BX, 400, BW, 400, 10); g.fill(); g.stroke(); g.restore();
+    text('実験 1995', BX + 24, 450, { font: `700 34px ${MIN}`, color: C.text });
+    text('硤合反応', BX + BW - 24, 450, { font: `500 28px ${NOTO}`, color: C.dim, align: 'right' });
+    const bx0 = BX + 40, bw = 50, gap = (BW - 80 - 5 * bw) / 4, by = 730, bh = 200;
+    SOAI_1995.forEach((v, i) => { const X = bx0 + i * (bw + gap), hh = bh * v / 100;
+      const gr = g.createLinearGradient(0, by - hh, 0, by); gr.addColorStop(0, '#E8EDF5'); gr.addColorStop(1, '#8A93A6'); g.fillStyle = gr; g.fillRect(X, by - hh, bw, hh);
+      text(`${v}%`, X + bw / 2, by - hh - 12, { font: `700 28px ${NOTO}`, color: C.text, align: 'center' });
+      text(i === 0 ? '最初' : `${i}回`, X + bw / 2, by + 38, { font: `500 28px ${NOTO}`, color: C.dim, align: 'center' }); });
+    g.strokeStyle = C.bone; g.lineWidth = 2; g.beginPath(); g.moveTo(BX + 28, by + 0.5); g.lineTo(BX + BW - 28, by + 0.5); g.stroke();
+
+    title('曲線を何度もたどる', 62);
+    figure('pose-pointer', -140, 800, { from: 600, to: 200 });
+  },
+];
+
+(async () => {
+  const JA = '手の形をした分子曲線を何度もたどる鏡像異性体不斉炭素原子4種類のちがう回して重ねると…2つしか重ならないできたかたより触媒左右%直モデル出てきたを次へ実験硤合反応最初0123456789RS体y＝x/(1+²)?FClBrHC';
+  await Promise.all([
+    ...['700 66px', '700 44px', '700 34px'].map(fz => document.fonts.load(`${fz} ${MIN}`, JA)),
+    ...['400 28px', '500 30px', '700 36px'].map(fz => document.fonts.load(`${fz} ${NOTO}`, JA)),
+  ]);
+  const get = n => fetch(`../../projects/ja/chirality/data/molecules/${n}.json`).then(r => { if (!r.ok) throw new Error('json ' + n); return r.json(); });
+  [MOL, MOLS] = await Promise.all([get('R-CHFClBr'), get('S-CHFClBr')]);
+  await Promise.all(['pose-halt', 'pose-pointer'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im);
+      const s = mk(im.width + 60, im.height + 60), x = s.getContext('2d'); x.filter = 'blur(18px) brightness(0)'; x.drawImage(im, 30, 30); x.filter = 'none'; SH[p] = s; res(); };
+    im.onerror = () => rej(new Error('img ' + p)); im.src = `../../assets/character-v2/cut/${p}.png`; })));
+  BG = background(); ready = true;
+})().catch(e => { window.__intro.error = String(e); console.error(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.drawImage(BG, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

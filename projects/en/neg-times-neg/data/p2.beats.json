@@ -1,0 +1,1158 @@
+{
+ "duration": 597.098,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Today a negative number feels completely natural. That is mostly because you were taught it as a child, not because it is obvious.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "A length can't be negative",
+   "opens": "act",
+   "start": 0.0,
+   "end": 6.399,
+   "wav": "audio/voice/6579d5f136d986c3.wav"
+  },
+  {
+   "text": "The ancient Greeks thought about mathematics through geometry. A number was a length, an area, a quantity of something.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "A length can't be negative",
+   "opens": null,
+   "start": 6.749,
+   "end": 12.855,
+   "wav": "audio/voice/9907ec515593c6c9.wav"
+  },
+  {
+   "text": "And a length cannot be less than nothing.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "A length can't be negative",
+   "opens": null,
+   "start": 13.205,
+   "end": 14.89,
+   "wav": "audio/voice/a09468c314bacdea.wav"
+  },
+  {
+   "text": "So when Diophantus of Alexandria, around the year two hundred and fifty, met the equation four x plus twenty equals four, he called it absurd.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "A length can't be negative",
+   "opens": null,
+   "start": 15.24,
+   "end": 22.695,
+   "wav": "audio/voice/f0ff8b32e4bbadb8.wav"
+  },
+  {
+   "text": "The only answer would be negative, and to him, a negative answer simply was not an answer.",
+   "idea": true,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "A length can't be negative",
+   "opens": null,
+   "start": 23.045,
+   "end": 27.637,
+   "wav": "audio/voice/8f755e58c84b7e5e.wav"
+  },
+  {
+   "text": "In other places, negative numbers were already being put to work.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Debts and fortunes",
+   "opens": "stop",
+   "start": 29.237,
+   "end": 32.333,
+   "wav": "audio/voice/440a82edd4f76344.wav"
+  },
+  {
+   "text": "In China, the book known as The Nine Chapters on the Mathematical Art used red counting rods for positive amounts and black rods for negative ones, with rules for adding and subtracting them.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Debts and fortunes",
+   "opens": null,
+   "start": 32.683,
+   "end": 42.701,
+   "wav": "audio/voice/f23c976022e291d0.wav"
+  },
+  {
+   "text": "And in the year six twenty-eight, in India, Brahmagupta wrote down rules for calculating with fortunes and debts.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Debts and fortunes",
+   "opens": null,
+   "start": 43.051,
+   "end": 48.917,
+   "wav": "audio/voice/5065ddf86de12e71.wav"
+  },
+  {
+   "text": "Among them is the oldest written version of our rule that survives: the product of two debts is a fortune.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Debts and fortunes",
+   "opens": null,
+   "start": 49.267,
+   "end": 54.634,
+   "wav": "audio/voice/a238538ffb64f303.wav"
+  },
+  {
+   "text": "But Brahmagupta gave it as a rule, explained through debts and fortunes. He did not prove it the way a mathematician would today.",
+   "idea": true,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Debts and fortunes",
+   "opens": null,
+   "start": 54.984,
+   "end": 61.485,
+   "wav": "audio/voice/1ee18da3c1515f1a.wav"
+  },
+  {
+   "text": "Europe was even more suspicious.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Fictitious, absurd, meaningless",
+   "opens": "stop",
+   "start": 63.085,
+   "end": 64.519,
+   "wav": "audio/voice/24a2cac677898e81.wav"
+  },
+  {
+   "text": "In fifteen forty-five, Gerolamo Cardano called negative numbers fictitious.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Fictitious, absurd, meaningless",
+   "opens": null,
+   "start": 64.869,
+   "end": 68.815,
+   "wav": "audio/voice/0838dd36e9afea05.wav"
+  },
+  {
+   "text": "In seventeen fifty-nine, the English mathematician Francis Maseres wrote a whole dissertation arguing that the negative sign should be kept out of algebra.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Fictitious, absurd, meaningless",
+   "opens": null,
+   "start": 69.165,
+   "end": 77.227,
+   "wav": "audio/voice/fcc77ef261466542.wav"
+  },
+  {
+   "text": "And in seventeen ninety-six, William Frend published a textbook of algebra that refused to use negative numbers at all.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Fictitious, absurd, meaningless",
+   "opens": null,
+   "start": 77.577,
+   "end": 83.797,
+   "wav": "audio/voice/367056fdbbd536ad.wav"
+  },
+  {
+   "text": "That is more than a thousand years after Brahmagupta first wrote the rule down.",
+   "idea": false,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Fictitious, absurd, meaningless",
+   "opens": null,
+   "start": 84.147,
+   "end": 88.218,
+   "wav": "audio/voice/8dcea4e523e9d575.wav"
+  },
+  {
+   "text": "If negative times negative were so obvious that it needed no proof, it would not have taken that long.",
+   "idea": true,
+   "act": "ACT ONE \u2014 A number nobody wanted",
+   "section": "Fictitious, absurd, meaningless",
+   "opens": null,
+   "start": 88.568,
+   "end": 93.55,
+   "wav": "audio/voice/2488e29bfe8f781c.wav"
+  },
+  {
+   "text": "You have probably met a few explanations already. Let's look at them honestly.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The debt story",
+   "opens": "act",
+   "start": 95.95,
+   "end": 99.718,
+   "wav": "audio/voice/ed5c912a4ff0098c.wav"
+  },
+  {
+   "text": "The first one is about debt.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The debt story",
+   "opens": null,
+   "start": 100.068,
+   "end": 101.236,
+   "wav": "audio/voice/4180feca7602bcca.wav"
+  },
+  {
+   "text": "If you owe three million, that is minus three million in your accounts.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The debt story",
+   "opens": null,
+   "start": 101.586,
+   "end": 105.055,
+   "wav": "audio/voice/63336ce11b555aae.wav"
+  },
+  {
+   "text": "If someone takes that debt away, they have subtracted minus three million, and you are three million richer.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The debt story",
+   "opens": null,
+   "start": 105.405,
+   "end": 110.943,
+   "wav": "audio/voice/0961e51f99bd957c.wav"
+  },
+  {
+   "text": "So subtracting a negative is the same as adding a positive. For subtraction, this story works beautifully.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The debt story",
+   "opens": null,
+   "start": 111.293,
+   "end": 116.706,
+   "wav": "audio/voice/b112358057b98df9.wav"
+  },
+  {
+   "text": "But try it for multiplication, and it starts to creak.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The debt story",
+   "opens": null,
+   "start": 117.056,
+   "end": 119.588,
+   "wav": "audio/voice/85114d668ec74044.wav"
+  },
+  {
+   "text": "Negative three times negative two becomes something like, take away a debt of two, three times over.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The debt story",
+   "opens": null,
+   "start": 119.938,
+   "end": 124.907,
+   "wav": "audio/voice/82838944d1c81d15.wav"
+  },
+  {
+   "text": "You can make yourself accept that. But notice that you are no longer seeing it. You are leaning on a feeling.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The debt story",
+   "opens": null,
+   "start": 125.257,
+   "end": 130.859,
+   "wav": "audio/voice/d1cbce2898184c2b.wav"
+  },
+  {
+   "text": "The second explanation uses a pattern.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The pattern",
+   "opens": "stop",
+   "start": 132.459,
+   "end": 134.098,
+   "wav": "audio/voice/53b814d447ffc140.wav"
+  },
+  {
+   "text": "Three times minus two is minus six. Two times minus two is minus four.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The pattern",
+   "opens": null,
+   "start": 134.448,
+   "end": 137.963,
+   "wav": "audio/voice/9f71a23e39cb18fb.wav"
+  },
+  {
+   "text": "One times minus two is minus two. Zero times minus two is zero.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The pattern",
+   "opens": null,
+   "start": 138.313,
+   "end": 141.347,
+   "wav": "audio/voice/d6a21217f4f7f30b.wav"
+  },
+  {
+   "text": "Each time the first number drops by one, the answer goes up by two.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The pattern",
+   "opens": null,
+   "start": 141.697,
+   "end": 144.824,
+   "wav": "audio/voice/fa1c16d927fc0307.wav"
+  },
+  {
+   "text": "So if the pattern keeps going, minus one times minus two has to be two, and minus two times minus two has to be four.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The pattern",
+   "opens": null,
+   "start": 145.174,
+   "end": 150.967,
+   "wav": "audio/voice/53502b99756c2e72.wav"
+  },
+  {
+   "text": "It is convincing. But it rests on one big assumption: that the pattern has to continue.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The pattern",
+   "opens": null,
+   "start": 151.317,
+   "end": 155.583,
+   "wav": "audio/voice/2325f1a75d0f0e35.wav"
+  },
+  {
+   "text": "Why should it? That is exactly the question we are trying to answer, and the pattern cannot answer it for us.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The pattern",
+   "opens": null,
+   "start": 155.933,
+   "end": 161.2,
+   "wav": "audio/voice/88c4d506b4ed060f.wav"
+  },
+  {
+   "text": "The third explanation is a picture on the number line.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The about-turn",
+   "opens": "stop",
+   "start": 162.8,
+   "end": 165.232,
+   "wav": "audio/voice/4ff8eb28f9869f32.wav"
+  },
+  {
+   "text": "Multiplying by a negative number is like turning around, a turn of one hundred and eighty degrees.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The about-turn",
+   "opens": null,
+   "start": 165.582,
+   "end": 170.601,
+   "wav": "audio/voice/097c73ac0ba0b58e.wav"
+  },
+  {
+   "text": "Turn around once, and you face the other way. Turn around twice, and you are facing forwards again.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The about-turn",
+   "opens": null,
+   "start": 170.951,
+   "end": 175.851,
+   "wav": "audio/voice/acd5539138e3e198.wav"
+  },
+  {
+   "text": "This is a lovely picture, and it will matter a great deal later, when you meet complex numbers.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The about-turn",
+   "opens": null,
+   "start": 176.201,
+   "end": 180.903,
+   "wav": "audio/voice/eb8be6a68ae17bf8.wav"
+  },
+  {
+   "text": "But for ordinary numbers, it is still a picture. It describes the rule. It does not prove it.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "The about-turn",
+   "opens": null,
+   "start": 181.253,
+   "end": 185.642,
+   "wav": "audio/voice/2ee166bdb92fa5aa.wav"
+  },
+  {
+   "text": "Even the great Leonhard Euler, in his algebra textbook of seventeen seventy, gave an argument that only sounds like a proof.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "Even Euler",
+   "opens": "stop",
+   "start": 187.242,
+   "end": 193.528,
+   "wav": "audio/voice/f17b316230598526.wav"
+  },
+  {
+   "text": "Minus a times minus b, he said, must be either a b or minus a b.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "Even Euler",
+   "opens": null,
+   "start": 193.878,
+   "end": 196.906,
+   "wav": "audio/voice/5aac7ddb96f872ca.wav"
+  },
+  {
+   "text": "But minus a b is already taken, by minus a times b. So the only thing left is a b.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "Even Euler",
+   "opens": null,
+   "start": 197.256,
+   "end": 201.22,
+   "wav": "audio/voice/8b21bd6175766ab4.wav"
+  },
+  {
+   "text": "Why must there be only two choices? And why can't two different products give the same answer? Euler doesn't say.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "Even Euler",
+   "opens": null,
+   "start": 201.57,
+   "end": 207.204,
+   "wav": "audio/voice/be12d888ebc81093.wav"
+  },
+  {
+   "text": "All of these make the rule feel reasonable. But feeling right is not the same as being proved.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "Feeling is not proof",
+   "opens": "stop",
+   "start": 208.804,
+   "end": 212.93,
+   "wav": "audio/voice/02052f29f51fc00b.wav"
+  },
+  {
+   "text": "A real proof does not lean on feelings, or stories, or trust.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "Feeling is not proof",
+   "opens": null,
+   "start": 213.28,
+   "end": 216.201,
+   "wav": "audio/voice/5db8d5d8d7830c1a.wav"
+  },
+  {
+   "text": "It starts only from things you have already agreed to, and shows that the conclusion has no other way to come out.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "Feeling is not proof",
+   "opens": null,
+   "start": 216.551,
+   "end": 222.295,
+   "wav": "audio/voice/6cd1b7cdb5292c33.wav"
+  },
+  {
+   "text": "So let's do that now.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Explanations that feel right",
+   "section": "Feeling is not proof",
+   "opens": null,
+   "start": 222.645,
+   "end": 223.781,
+   "wav": "audio/voice/712acb21cc2f5d51.wav"
+  },
+  {
+   "text": "We are going to prove that minus a times minus b equals a times b, for any numbers a and b.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "The rules you already use",
+   "opens": "act",
+   "start": 226.181,
+   "end": 230.545,
+   "wav": "audio/voice/289c3e6722c76e0c.wav"
+  },
+  {
+   "text": "To do it, I need you to agree to a few rules. You have been using every one of them since primary school. I am only giving them names.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "The rules you already use",
+   "opens": null,
+   "start": 230.895,
+   "end": 237.802,
+   "wav": "audio/voice/24553246ce410aa2.wav"
+  },
+  {
+   "text": "First, the distributive law. A times, b plus c, equals a times b, plus a times c.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "The rules you already use",
+   "opens": null,
+   "start": 238.752,
+   "end": 242.601,
+   "wav": "audio/voice/05c31949fe203ad2.wav"
+  },
+  {
+   "text": "You use it every time you multiply in your head. Twenty-three times seven is twenty times seven plus three times seven, one hundred and forty plus twenty-one, one hundred and sixty-one.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "The rules you already use",
+   "opens": null,
+   "start": 242.951,
+   "end": 252.536,
+   "wav": "audio/voice/de0fb32291af4cd1.wav"
+  },
+  {
+   "text": "Second, opposites. Every number has an opposite, and a number plus its opposite is zero. Three plus minus three is zero. That is what a negative number is.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "The rules you already use",
+   "opens": null,
+   "start": 252.886,
+   "end": 261.051,
+   "wav": "audio/voice/be9c94bac13ef1bc.wav"
+  },
+  {
+   "text": "And a number has only one opposite. If two numbers add up to zero, each one is the other's opposite.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "The rules you already use",
+   "opens": null,
+   "start": 261.401,
+   "end": 266.407,
+   "wav": "audio/voice/8c8457746c16f72c.wav"
+  },
+  {
+   "text": "Third, zero. Adding zero to a number leaves it unchanged.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "The rules you already use",
+   "opens": null,
+   "start": 266.757,
+   "end": 269.569,
+   "wav": "audio/voice/e143eeb936a89af3.wav"
+  },
+  {
+   "text": "And finally, the order and the grouping of a sum or a product don't matter. Two times three is three times two.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "The rules you already use",
+   "opens": null,
+   "start": 269.919,
+   "end": 275.484,
+   "wav": "audio/voice/9762359f26913d08.wav"
+  },
+  {
+   "text": "Together, these rules are what modern mathematicians call a ring. You don't need to remember the name. You only need to agree that these are the rules you already use.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "The rules you already use",
+   "opens": null,
+   "start": 276.434,
+   "end": 284.812,
+   "wav": "audio/voice/a1f91cb84f26ae8c.wav"
+  },
+  {
+   "text": "I'll do the proof with real numbers first, three and two, and keep the letters alongside for anyone who wants them.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Zero times anything",
+   "opens": "stop",
+   "start": 286.412,
+   "end": 292.157,
+   "wav": "audio/voice/69ce4bf969949613.wav"
+  },
+  {
+   "text": "Step one is a small fact that sounds too obvious to need proving: zero times anything is zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Zero times anything",
+   "opens": null,
+   "start": 292.507,
+   "end": 297.239,
+   "wav": "audio/voice/be85212614088360.wav"
+  },
+  {
+   "text": "Take zero times two. Since zero plus zero is zero, zero times two is the same as, zero plus zero, times two.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Zero times anything",
+   "opens": null,
+   "start": 297.589,
+   "end": 302.912,
+   "wav": "audio/voice/6f2d8e1f5d0da0f9.wav"
+  },
+  {
+   "text": "By the distributive law, that is zero times two, plus zero times two.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Zero times anything",
+   "opens": null,
+   "start": 303.262,
+   "end": 306.633,
+   "wav": "audio/voice/8c7559b953d15c28.wav"
+  },
+  {
+   "text": "So zero times two equals zero times two plus zero times two.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Zero times anything",
+   "opens": null,
+   "start": 306.983,
+   "end": 309.997,
+   "wav": "audio/voice/9a3fa32a4bb22522.wav"
+  },
+  {
+   "text": "Now add the opposite of zero times two to both sides, and you are left with zero equals zero times two.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Zero times anything",
+   "opens": null,
+   "start": 310.347,
+   "end": 315.327,
+   "wav": "audio/voice/12c693571bcac207.wav"
+  },
+  {
+   "text": "So zero times two is zero. Not because we said so, but because the rules leave it no choice.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Zero times anything",
+   "opens": null,
+   "start": 315.677,
+   "end": 320.354,
+   "wav": "audio/voice/67ee026953dd04cb.wav"
+  },
+  {
+   "text": "Step two. What is minus three times two?",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a positive",
+   "opens": "stop",
+   "start": 321.954,
+   "end": 323.987,
+   "wav": "audio/voice/b0fa9ae77731d0bf.wav"
+  },
+  {
+   "text": "Start with three plus minus three. That is zero. So, three plus minus three, times two, is zero times two, which we just showed is zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a positive",
+   "opens": null,
+   "start": 324.337,
+   "end": 331.266,
+   "wav": "audio/voice/2956b7715694d28b.wav"
+  },
+  {
+   "text": "But by the distributive law, the same thing is three times two, plus minus three times two. That is six, plus minus three times two.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a positive",
+   "opens": null,
+   "start": 331.616,
+   "end": 338.373,
+   "wav": "audio/voice/6c491536f48ee94e.wav"
+  },
+  {
+   "text": "So six plus minus three times two equals zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a positive",
+   "opens": null,
+   "start": 338.723,
+   "end": 340.955,
+   "wav": "audio/voice/419cc149d5523fc6.wav"
+  },
+  {
+   "text": "Two numbers that add up to zero are opposites. So minus three times two is the opposite of six, which is minus six.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a positive",
+   "opens": null,
+   "start": 341.305,
+   "end": 347.192,
+   "wav": "audio/voice/69850b896fbce9b1.wav"
+  },
+  {
+   "text": "Step three, the one we came for. Minus three times minus two.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a negative",
+   "opens": "stop",
+   "start": 348.792,
+   "end": 351.69,
+   "wav": "audio/voice/410625bf556dd038.wav"
+  },
+  {
+   "text": "Start with minus three times, two plus minus two.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a negative",
+   "opens": null,
+   "start": 352.04,
+   "end": 354.618,
+   "wav": "audio/voice/9389ed8c2b3fafc9.wav"
+  },
+  {
+   "text": "Inside the brackets is zero, so the whole thing is minus three times zero, and by step one, that is zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a negative",
+   "opens": null,
+   "start": 354.968,
+   "end": 360.056,
+   "wav": "audio/voice/7de49736aad4cfed.wav"
+  },
+  {
+   "text": "By the distributive law, the same thing is minus three times two, plus minus three times minus two.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a negative",
+   "opens": null,
+   "start": 360.406,
+   "end": 365.447,
+   "wav": "audio/voice/fce71d997994ac85.wav"
+  },
+  {
+   "text": "From step two, minus three times two is minus six. So minus six, plus minus three times minus two, equals zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a negative",
+   "opens": null,
+   "start": 365.797,
+   "end": 371.404,
+   "wav": "audio/voice/d78bc117df31f2c0.wav"
+  },
+  {
+   "text": "Two numbers that add up to zero are opposites. So minus three times minus two is the opposite of minus six.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a negative",
+   "opens": null,
+   "start": 371.754,
+   "end": 377.234,
+   "wav": "audio/voice/4a2a991cfb100e57.wav"
+  },
+  {
+   "text": "And the opposite of minus six is six.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a negative",
+   "opens": null,
+   "start": 377.584,
+   "end": 379.272,
+   "wav": "audio/voice/f272a6c749d20fee.wav"
+  },
+  {
+   "text": "Minus three times minus two is six.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a negative",
+   "opens": null,
+   "start": 379.622,
+   "end": 381.193,
+   "wav": "audio/voice/fc37a6bc019c92e4.wav"
+  },
+  {
+   "text": "Nothing in those steps used anything special about three and two. Put a and b in their place, and every line still holds.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a negative",
+   "opens": null,
+   "start": 382.143,
+   "end": 388.477,
+   "wav": "audio/voice/0e205562dac86c11.wav"
+  },
+  {
+   "text": "Minus a times minus b equals a times b.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "A negative times a negative",
+   "opens": null,
+   "start": 388.827,
+   "end": 390.636,
+   "wav": "audio/voice/d9e65882e3719c5f.wav"
+  },
+  {
+   "text": "If you followed that, notice what did not happen.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Nobody chose",
+   "opens": "stop",
+   "start": 392.236,
+   "end": 394.447,
+   "wav": "audio/voice/7210641be2ef04b0.wav"
+  },
+  {
+   "text": "At no point did we decide that negative times negative is positive. Nobody banged on the table and said, let it be so.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Nobody chose",
+   "opens": null,
+   "start": 394.797,
+   "end": 400.678,
+   "wav": "audio/voice/bbd1ed718901770a.wav"
+  },
+  {
+   "text": "We used the distributive law, the meaning of an opposite, and the behaviour of zero.",
+   "idea": false,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Nobody chose",
+   "opens": null,
+   "start": 401.028,
+   "end": 405.146,
+   "wav": "audio/voice/e8366fe534b28cb8.wav"
+  },
+  {
+   "text": "The answer fell out on its own.",
+   "idea": true,
+   "act": "ACT THREE \u2014 The proof",
+   "section": "Nobody chose",
+   "opens": null,
+   "start": 405.496,
+   "end": 406.733,
+   "wav": "audio/voice/9ccc5cd1a9d5dd5d.wav"
+  },
+  {
+   "text": "But you might push back, and it's a very good question.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "The real choice",
+   "opens": "act",
+   "start": 409.133,
+   "end": 411.417,
+   "wav": "audio/voice/2bedcacebcf173a8.wav"
+  },
+  {
+   "text": "You used the distributive law. How do you know it has to work for negative numbers? Maybe that is where the convention is hiding.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "The real choice",
+   "opens": null,
+   "start": 411.767,
+   "end": 418.038,
+   "wav": "audio/voice/47a5ff84672dc474.wav"
+  },
+  {
+   "text": "And that is exactly right. This is the one place where people really did make a choice.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "The real choice",
+   "opens": null,
+   "start": 418.388,
+   "end": 422.607,
+   "wav": "audio/voice/9e91ae93bd73177f.wav"
+  },
+  {
+   "text": "Every time mathematicians widened the world of numbers, from counting numbers to negatives, from whole numbers to fractions, they faced the same question.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "The real choice",
+   "opens": null,
+   "start": 422.957,
+   "end": 430.965,
+   "wav": "audio/voice/477d52324fa2d75d.wav"
+  },
+  {
+   "text": "How should adding and multiplying work out here, in the new territory?",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "The real choice",
+   "opens": null,
+   "start": 431.315,
+   "end": 434.801,
+   "wav": "audio/voice/7a7022c862df29e4.wav"
+  },
+  {
+   "text": "In eighteen thirty, the English mathematician George Peacock gave an answer, and in eighteen sixty-seven Hermann Hankel in Germany put it even more sharply.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "The real choice",
+   "opens": null,
+   "start": 435.151,
+   "end": 443.051,
+   "wav": "audio/voice/0c2b8a8020d244b8.wav"
+  },
+  {
+   "text": "It's often called the principle of permanence. When you extend the numbers, keep the old rules working, as far as you possibly can.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "The real choice",
+   "opens": null,
+   "start": 443.401,
+   "end": 450.063,
+   "wav": "audio/voice/c8d3b4da01f2cae1.wav"
+  },
+  {
+   "text": "So let's see what happens if you don't. Suppose we decide, just for fun, that minus one times minus one is minus one, and we keep everything else.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": "stop",
+   "start": 451.663,
+   "end": 458.932,
+   "wav": "audio/voice/0beef8b9d2d6eaa9.wav"
+  },
+  {
+   "text": "Take minus one times, one plus minus one.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 459.282,
+   "end": 461.157,
+   "wav": "audio/voice/b44caaa3ddf4097d.wav"
+  },
+  {
+   "text": "Inside the brackets is zero, so the answer is minus one times zero, which is zero.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 461.507,
+   "end": 465.559,
+   "wav": "audio/voice/37fe647c531f14bd.wav"
+  },
+  {
+   "text": "But the distributive law says it's also minus one times one, plus minus one times minus one.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 465.909,
+   "end": 470.311,
+   "wav": "audio/voice/b9f4d122d3240bf0.wav"
+  },
+  {
+   "text": "That's minus one, plus our new minus one. Minus two.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 470.661,
+   "end": 472.959,
+   "wav": "audio/voice/7ec7cdd66ca97a8c.wav"
+  },
+  {
+   "text": "So zero equals minus two.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 473.309,
+   "end": 474.909,
+   "wav": "audio/voice/09f56ca14016ec6d.wav"
+  },
+  {
+   "text": "One small change, and arithmetic collapses.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 475.259,
+   "end": 477.315,
+   "wav": "audio/voice/ab18a3c83a03be32.wav"
+  },
+  {
+   "text": "To make negative times negative come out negative, it is not enough to pick a different convention.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 478.265,
+   "end": 483.22,
+   "wav": "audio/voice/c1928361406a7745.wav"
+  },
+  {
+   "text": "You would have to throw away the distributive law, or the meaning of an opposite.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 483.57,
+   "end": 487.278,
+   "wav": "audio/voice/381ba9f7359a3472.wav"
+  },
+  {
+   "text": "And without the distributive law, a lot more goes with it. Doing sums in your head stops working.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 487.628,
+   "end": 492.345,
+   "wav": "audio/voice/2741c095c8218058.wav"
+  },
+  {
+   "text": "The formula for a plus b, all squared, stops being true.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 492.695,
+   "end": 495.388,
+   "wav": "audio/voice/ba4512e5d44fe17c.wav"
+  },
+  {
+   "text": "Even the idea that one expression can be rewritten in another, equivalent form falls apart.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 495.738,
+   "end": 500.461,
+   "wav": "audio/voice/a46011564c80cfce.wav"
+  },
+  {
+   "text": "You would no longer be in the numbers you know. You would be in some strange other system, perhaps consistent, but almost useless.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "Try to break it",
+   "opens": null,
+   "start": 500.811,
+   "end": 507.033,
+   "wav": "audio/voice/93a0542f7297f473.wav"
+  },
+  {
+   "text": "So here is the honest answer to the convention question.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "What we chose",
+   "opens": "stop",
+   "start": 508.633,
+   "end": 510.703,
+   "wav": "audio/voice/6b44bf201d93bbef.wav"
+  },
+  {
+   "text": "There was one choice, and people did make it: negative numbers should obey the same rules as every other number.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "What we chose",
+   "opens": null,
+   "start": 511.053,
+   "end": 516.39,
+   "wav": "audio/voice/ec361a0b4b35906b.wav"
+  },
+  {
+   "text": "Once you make that choice, nothing else is a choice. The distributive law forces zero times anything to be zero.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "What we chose",
+   "opens": null,
+   "start": 516.74,
+   "end": 522.342,
+   "wav": "audio/voice/f6dabd36937c2465.wav"
+  },
+  {
+   "text": "The meaning of an opposite forces a negative times a positive to be negative.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "What we chose",
+   "opens": null,
+   "start": 522.692,
+   "end": 526.231,
+   "wav": "audio/voice/d9e41d03777ed650.wav"
+  },
+  {
+   "text": "And together, they force a negative times a negative to be positive. There is no other way for it to come out.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Convention, or forced?",
+   "section": "What we chose",
+   "opens": null,
+   "start": 526.581,
+   "end": 532.049,
+   "wav": "audio/voice/c48c1edbdc4d5f93.wav"
+  },
+  {
+   "text": "People refused negative numbers for more than a thousand years, because they thought of numbers as lengths and amounts, and nothing can be less than nothing.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": "act",
+   "start": 534.449,
+   "end": 542.278,
+   "wav": "audio/voice/39d264a294dc46bd.wav"
+  },
+  {
+   "text": "The usual explanations, debts, patterns, turning around, are good ways to remember the rule. But they make it feel right. They don't prove it.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 542.628,
+   "end": 549.906,
+   "wav": "audio/voice/7e3026f3d01f5d5b.wav"
+  },
+  {
+   "text": "And the rule is not a convention someone picked. The only choice was to keep the old rules, and once that choice is made, negative times negative has to be positive.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 550.256,
+   "end": 558.879,
+   "wav": "audio/voice/e05986378142ff92.wav"
+  },
+  {
+   "text": "Here is something to think about.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": "stop",
+   "start": 560.479,
+   "end": 561.685,
+   "wav": "audio/voice/73c2e39437f06c2a.wav"
+  },
+  {
+   "text": "Multiplying by minus one turns the number line around, a turn of one hundred and eighty degrees.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 562.035,
+   "end": 567.043,
+   "wav": "audio/voice/d006c9fc4ca6297f.wav"
+  },
+  {
+   "text": "So what would you multiply by, to turn only halfway, ninety degrees?",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 567.393,
+   "end": 570.811,
+   "wav": "audio/voice/21fae13f731ee100.wav"
+  },
+  {
+   "text": "Do it twice, and you would have turned all the way around. So that number, times itself, would be minus one.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 571.161,
+   "end": 576.702,
+   "wav": "audio/voice/7903fa47535d8fcc.wav"
+  },
+  {
+   "text": "No ordinary number can do that. Mathematicians took a long time to accept it, too. But that is a story for another video.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 577.052,
+   "end": 583.149,
+   "wav": "audio/voice/0235a5b6757f23f3.wav"
+  },
+  {
+   "text": "Thank you for watching all the way to the end.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 584.099,
+   "end": 585.909,
+   "wav": "audio/voice/68f0d722151e0fa3.wav"
+  },
+  {
+   "text": "If there's a rule in maths that you were always told to just accept, tell me in the comments. It might be the next video.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 586.259,
+   "end": 592.266,
+   "wav": "audio/voice/83fe683fb944a52f.wav"
+  },
+  {
+   "text": "And subscribe to ninety-nine percent from scratch, so you don't miss it. See you soon.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 592.616,
+   "end": 596.748,
+   "wav": "audio/voice/9c7026283fcacc48.wav"
+  }
+ ]
+}

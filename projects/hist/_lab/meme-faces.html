@@ -1,0 +1,58 @@
+<!doctype html><meta charset="utf-8">
+<title>hist lab — biểu cảm kiểu meme</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử biểu cảm KIỂU MEME (người dùng 2026-10-30: "vẽ được mấy kiểu meme này + nhiều tư thế biểu cảm khác không?").
+// Vẽ lại TINH THẦN bằng nét người dẫn (_kit/narrator.js, phần "BIỂU CẢM KIỂU MEME"), không chép nét gốc — LESSONS §231.
+// Đây là vốn để THỬ xem hiệu quả, không phải bộ cố định: mỗi tập vẫn phối mới theo tình huống.
+//   t 0.5 = toàn thân (dùng trong cảnh) · t 1.5 = bán thân cận mặt + cỡ thumbnail nhỏ (168 px) · t 2.5 = phối vào tình huống
+import { INK } from '../_kit/mapkit.js';
+import * as S from '../_kit/stage.js';
+import { bindNarrator, narrator, hatOn } from '../_kit/narrator.js';
+const g = document.getElementById('cv').getContext('2d');
+const { W, H } = S;
+let ready = false;
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f))])
+  .then(() => { S.bindStage(g, {}); bindNarrator(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+const LOOKS = [
+  ['cười toe "epic"', { mood: 'epic', mouth: 'epic', arms: 'thumb' }],
+  ['facepalm', { mood: 'closed', mouth: 'flat', arms: 'facepalm' }],
+  ['trân trối vô hồn', { mood: 'void', mouth: 'flat', arms: 'pockets', fx: ['gloom'] }],
+  ['liếc nghi ngờ', { mood: 'sus', mouth: 'flat', arms: 'cross' }],
+  ['cười gượng', { mood: 'joy', mouth: 'grit', arms: 'shrug', fx: ['sweat'] }],
+  ['mặt đơ', { mood: 'derp', mouth: 'tongue', arms: 'rest' }],
+  ['khóc hai dòng', { mood: 'sob', mouth: 'wail', arms: 'rest' }],
+  ['nhếch mép đắc ý', { mood: 'smug', mouth: 'smirk', arms: 'cross', fx: ['shine'] }],
+  ['hét (ý tranh Munch, PD)', { mood: 'shock', mouth: 'scream', arms: 'cheeks' }],
+  ['nổ não', { mood: 'star', mouth: 'wide', arms: 'shrug', fx: ['boom'] }],
+  ['hôn tay "tuyệt hảo"', { mood: 'closed', mouth: 'kiss', arms: 'kiss', fx: ['shine'] }],
+  ['bối rối ???', { mood: 'side', mouth: 'wavy', arms: 'think', fx: ['qmark'] }]];
+const BG = ['#FFF3C4', '#E4E9F2', '#DCD6E8', '#E8E2D2', '#FCE3D2', '#E2F0DD', '#D6E8F5', '#FFF3C4', '#F5D6D6', '#FFE8B8', '#F7E1EA', '#DDE9F7'];
+
+function cell(k, x, y, w, hh) { g.fillStyle = BG[k]; g.beginPath(); g.roundRect(x, y, w, hh, 18); g.fill(); }
+function full() { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H);
+  LOOKS.forEach(([name, o], k) => { const col = k % 6, row = Math.floor(k / 6), x = 20 + col * 315, y = 15 + row * 525;
+    cell(k, x, y, 300, 505); g.save(); g.beginPath(); g.roundRect(x, y, 300, 505, 18); g.clip(); narrator(x + 150, y + 425, 290, { v: 'B', outfit: 'plain', look: 0, t: 0.3, ...o }); g.restore();
+    S.label(`${k + 1}. ${name}`, x + 150, y + 468, 24, 1, INK); }); }
+// bán thân cận mặt ở 280 px + cùng khung thu về 84 px (≈ mặt trong thumbnail 168 px trên điện thoại)
+function bust() { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H);
+  LOOKS.forEach(([name, o], k) => { const col = k % 6, row = Math.floor(k / 6), x = 20 + col * 315, y = 20 + row * 530;
+    const drawIt = (cx, cy, d) => { g.save(); g.beginPath(); g.roundRect(cx - d / 2, cy - d / 2, d, d, d * 0.08); g.clip(); g.fillStyle = BG[k]; g.fillRect(cx - d / 2, cy - d / 2, d, d);
+      g.translate(cx, cy); g.scale(d / 1000, d / 1000); narrator(0, 840, 1000, { v: 'C', outfit: 'plain', look: 0, t: 0.3, ...o }); g.restore(); };
+    drawIt(x + 150, y + 160, 290); drawIt(x + 150, y + 380, 84);
+    S.label(`${k + 1}. ${name}`, x + 150, y + 488, 24, 1, INK); }); }
+// phối vào tình huống kênh sử: biểu cảm + mũ / đồ / đạo cụ (ví dụ, không phải bộ cố định)
+function mix() { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H);
+  const P = [['Napoleon: nổ não', { mood: 'star', mouth: 'wide', arms: 'shrug', fx: ['boom'] }, 'bicorne'],
+    ['lính gác 1453: facepalm', { mood: 'closed', mouth: 'flat', arms: 'facepalm', outfit: 'soldier' }, null],
+    ['vua thua trận: khóc', { mood: 'sob', mouth: 'wail', arms: 'rest' }, 'crown'],
+    ['phóng viên: nghi ngờ', { mood: 'sus', mouth: 'flat', arms: 'cross', outfit: 'reporter' }, null]];
+  P.forEach(([name, o, hatK], k) => { const x = 30 + k * 470; cell(k * 3, x, 60, 440, 900);
+    g.save(); g.beginPath(); g.roundRect(x, 60, 440, 900, 18); g.clip(); narrator(x + 220, 860, 600, { v: 'B', look: 0, t: 0.3, outfit: 'plain', ...o }); if (hatK) hatOn(x + 220, 860, 600, hatK, { v: 'B' }); g.restore();
+    S.label(name, x + 220, 920, 30, 1, INK); }); }
+function frame(t) { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); if (!ready) return;
+  if (t < 1) full(); else if (t < 2) bust(); else mix(); }
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 3, LEAD: 0, error: null };
+</script>

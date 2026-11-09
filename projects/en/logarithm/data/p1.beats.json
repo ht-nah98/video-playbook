@@ -1,0 +1,64 @@
+{
+ "duration": 25.072,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "lang": "en",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "At eight percent, one number tells you when your money doubles: seventy-two divided by eight \u2014 about nine years.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "At eight percent, one number tells you when your money doubles: seventy-two divided by eight \u2014 about nine years.",
+   "start": 0.0,
+   "end": 5.526,
+   "wav": "audio/voice/36911ed4d9ec428a.wav"
+  },
+  {
+   "text": "At six percent, twelve years. At twelve percent, six. At three percent, twenty-four.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "At six percent, twelve years. At twelve percent, six. At three percent, twenty-four.",
+   "start": 6.476,
+   "end": 10.675,
+   "wav": "audio/voice/8934e880b00d0a51.wav"
+  },
+  {
+   "text": "The exact answer at eight percent is nine years and two days.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "The exact answer at eight percent is nine years and two days.",
+   "start": 11.625,
+   "end": 14.493,
+   "wav": "audio/voice/b4c1da639cf8787b.wav"
+  },
+  {
+   "text": "It is not a banker's superstition. It is a logarithm. So why does seventy-two work \u2014 and what is a logarithm, really?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "It is not a banker's superstition. It is a logarithm. So why does seventy-two work \u2014 and what is a logarithm, really?",
+   "start": 15.443,
+   "end": 21.272,
+   "wav": "audio/voice/50c56776872e4a53.wav"
+  },
+  {
+   "text": "Let's ask a power question backwards.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Let's ask a power question backwards.",
+   "start": 22.222,
+   "end": 24.122,
+   "wav": "audio/voice/094a8ff0b1b25562.wav"
+  }
+ ]
+}

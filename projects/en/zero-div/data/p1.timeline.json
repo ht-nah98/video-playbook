@@ -1,0 +1,1270 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 51.717
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Type one divided by zero into any calculator, and it refuses.",
+   "idea": false,
+   "start": 0.02,
+   "end": 2.918,
+   "words": [
+    {
+     "w": "type",
+     "start": 0.02,
+     "end": 0.201,
+     "conf": 0.806
+    },
+    {
+     "w": "one",
+     "start": 0.262,
+     "end": 0.342,
+     "conf": 0.634
+    },
+    {
+     "w": "divided",
+     "start": 0.362,
+     "end": 0.664,
+     "conf": 0.993
+    },
+    {
+     "w": "by",
+     "start": 0.684,
+     "end": 0.785,
+     "conf": 0.998
+    },
+    {
+     "w": "zero",
+     "start": 0.865,
+     "end": 1.087,
+     "conf": 0.696
+    },
+    {
+     "w": "into",
+     "start": 1.187,
+     "end": 1.288,
+     "conf": 0.747
+    },
+    {
+     "w": "any",
+     "start": 1.368,
+     "end": 1.469,
+     "conf": 0.691
+    },
+    {
+     "w": "calculator",
+     "start": 1.549,
+     "end": 2.113,
+     "conf": 0.882
+    },
+    {
+     "w": "and",
+     "start": 2.234,
+     "end": 2.294,
+     "conf": 0.657
+    },
+    {
+     "w": "it",
+     "start": 2.314,
+     "end": 2.375,
+     "conf": 0.989
+    },
+    {
+     "w": "refuses",
+     "start": 2.395,
+     "end": 2.918,
+     "conf": 0.848
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Every other division has an answer. This one does not. Why?",
+   "idea": true,
+   "start": 3.348,
+   "end": 6.309,
+   "words": [
+    {
+     "w": "every",
+     "start": 3.348,
+     "end": 3.509,
+     "conf": 0.998
+    },
+    {
+     "w": "other",
+     "start": 3.57,
+     "end": 3.731,
+     "conf": 0.971
+    },
+    {
+     "w": "division",
+     "start": 3.751,
+     "end": 4.134,
+     "conf": 0.886
+    },
+    {
+     "w": "has",
+     "start": 4.214,
+     "end": 4.315,
+     "conf": 0.685
+    },
+    {
+     "w": "an",
+     "start": 4.376,
+     "end": 4.416,
+     "conf": 0.494
+    },
+    {
+     "w": "answer",
+     "start": 4.476,
+     "end": 4.778,
+     "conf": 0.783
+    },
+    {
+     "w": "this",
+     "start": 4.799,
+     "end": 5.181,
+     "conf": 0.507
+    },
+    {
+     "w": "one",
+     "start": 5.242,
+     "end": 5.302,
+     "conf": 0.362
+    },
+    {
+     "w": "does",
+     "start": 5.322,
+     "end": 5.443,
+     "conf": 0.822
+    },
+    {
+     "w": "not",
+     "start": 5.504,
+     "end": 5.685,
+     "conf": 0.977
+    },
+    {
+     "w": "why",
+     "start": 6.108,
+     "end": 6.309,
+     "conf": 0.627
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Division is really a question: what number, times zero, gives you one?",
+   "idea": false,
+   "start": 7.32,
+   "end": 10.792,
+   "words": [
+    {
+     "w": "division",
+     "start": 7.32,
+     "end": 7.681,
+     "conf": 0.891
+    },
+    {
+     "w": "is",
+     "start": 7.742,
+     "end": 7.822,
+     "conf": 0.998
+    },
+    {
+     "w": "really",
+     "start": 7.862,
+     "end": 8.063,
+     "conf": 0.847
+    },
+    {
+     "w": "a",
+     "start": 8.123,
+     "end": 8.143,
+     "conf": 0.021
+    },
+    {
+     "w": "question",
+     "start": 8.163,
+     "end": 8.564,
+     "conf": 0.987
+    },
+    {
+     "w": "what",
+     "start": 8.805,
+     "end": 8.926,
+     "conf": 0.462
+    },
+    {
+     "w": "number",
+     "start": 8.986,
+     "end": 9.247,
+     "conf": 0.959
+    },
+    {
+     "w": "times",
+     "start": 9.608,
+     "end": 9.889,
+     "conf": 0.895
+    },
+    {
+     "w": "zero",
+     "start": 9.949,
+     "end": 10.19,
+     "conf": 0.688
+    },
+    {
+     "w": "gives",
+     "start": 10.331,
+     "end": 10.491,
+     "conf": 0.798
+    },
+    {
+     "w": "you",
+     "start": 10.511,
+     "end": 10.612,
+     "conf": 0.885
+    },
+    {
+     "w": "one",
+     "start": 10.692,
+     "end": 10.792,
+     "conf": 0.892
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Try any number you like. One, five, a hundred.",
+   "idea": false,
+   "start": 11.182,
+   "end": 13.278,
+   "words": [
+    {
+     "w": "try",
+     "start": 11.182,
+     "end": 11.343,
+     "conf": 0.999
+    },
+    {
+     "w": "any",
+     "start": 11.404,
+     "end": 11.484,
+     "conf": 0.667
+    },
+    {
+     "w": "number",
+     "start": 11.565,
+     "end": 11.746,
+     "conf": 0.699
+    },
+    {
+     "w": "you",
+     "start": 11.766,
+     "end": 11.847,
+     "conf": 0.992
+    },
+    {
+     "w": "like",
+     "start": 11.887,
+     "end": 12.129,
+     "conf": 0.76
+    },
+    {
+     "w": "one",
+     "start": 12.411,
+     "end": 12.532,
+     "conf": 0.642
+    },
+    {
+     "w": "five",
+     "start": 12.552,
+     "end": 12.895,
+     "conf": 0.28
+    },
+    {
+     "w": "a",
+     "start": 12.915,
+     "end": 12.935,
+     "conf": 0.109
+    },
+    {
+     "w": "hundred",
+     "start": 12.996,
+     "end": 13.278,
+     "conf": 0.348
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Times zero, it always comes back as zero. Never one.",
+   "idea": true,
+   "start": 13.668,
+   "end": 16.219,
+   "words": [
+    {
+     "w": "times",
+     "start": 13.668,
+     "end": 13.929,
+     "conf": 0.803
+    },
+    {
+     "w": "zero",
+     "start": 13.989,
+     "end": 14.251,
+     "conf": 0.929
+    },
+    {
+     "w": "it",
+     "start": 14.411,
+     "end": 14.451,
+     "conf": 0.495
+    },
+    {
+     "w": "always",
+     "start": 14.532,
+     "end": 14.733,
+     "conf": 0.848
+    },
+    {
+     "w": "comes",
+     "start": 14.793,
+     "end": 14.994,
+     "conf": 0.806
+    },
+    {
+     "w": "back",
+     "start": 15.054,
+     "end": 15.195,
+     "conf": 0.784
+    },
+    {
+     "w": "as",
+     "start": 15.275,
+     "end": 15.315,
+     "conf": 0.456
+    },
+    {
+     "w": "zero",
+     "start": 15.375,
+     "end": 15.596,
+     "conf": 0.714
+    },
+    {
+     "w": "never",
+     "start": 15.797,
+     "end": 15.958,
+     "conf": 0.532
+    },
+    {
+     "w": "one",
+     "start": 16.139,
+     "end": 16.219,
+     "conf": 0.398
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So this is not a rule some teacher made up to annoy you.",
+   "idea": false,
+   "start": 17.209,
+   "end": 19.617,
+   "words": [
+    {
+     "w": "so",
+     "start": 17.209,
+     "end": 17.289,
+     "conf": 0.998
+    },
+    {
+     "w": "this",
+     "start": 17.37,
+     "end": 17.55,
+     "conf": 0.827
+    },
+    {
+     "w": "is",
+     "start": 17.63,
+     "end": 17.671,
+     "conf": 0.498
+    },
+    {
+     "w": "not",
+     "start": 17.731,
+     "end": 17.831,
+     "conf": 0.675
+    },
+    {
+     "w": "a",
+     "start": 17.891,
+     "end": 17.911,
+     "conf": 0.004
+    },
+    {
+     "w": "rule",
+     "start": 18.012,
+     "end": 18.293,
+     "conf": 0.711
+    },
+    {
+     "w": "some",
+     "start": 18.373,
+     "end": 18.513,
+     "conf": 0.747
+    },
+    {
+     "w": "teacher",
+     "start": 18.533,
+     "end": 18.774,
+     "conf": 0.94
+    },
+    {
+     "w": "made",
+     "start": 18.794,
+     "end": 18.975,
+     "conf": 0.795
+    },
+    {
+     "w": "up",
+     "start": 18.995,
+     "end": 19.075,
+     "conf": 0.996
+    },
+    {
+     "w": "to",
+     "start": 19.095,
+     "end": 19.176,
+     "conf": 0.642
+    },
+    {
+     "w": "annoy",
+     "start": 19.236,
+     "end": 19.477,
+     "conf": 0.588
+    },
+    {
+     "w": "you",
+     "start": 19.557,
+     "end": 19.617,
+     "conf": 0.596
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It is a hole in arithmetic itself, and in almost fourteen hundred years, nobody has managed to patch it.",
+   "idea": false,
+   "start": 20.027,
+   "end": 25.17,
+   "words": [
+    {
+     "w": "it",
+     "start": 20.027,
+     "end": 20.087,
+     "conf": 0.854
+    },
+    {
+     "w": "is",
+     "start": 20.107,
+     "end": 20.188,
+     "conf": 0.968
+    },
+    {
+     "w": "a",
+     "start": 20.228,
+     "end": 20.248,
+     "conf": 0.001
+    },
+    {
+     "w": "hole",
+     "start": 20.348,
+     "end": 20.63,
+     "conf": 0.964
+    },
+    {
+     "w": "in",
+     "start": 20.65,
+     "end": 20.71,
+     "conf": 0.993
+    },
+    {
+     "w": "arithmetic",
+     "start": 20.77,
+     "end": 21.273,
+     "conf": 0.809
+    },
+    {
+     "w": "itself",
+     "start": 21.353,
+     "end": 21.714,
+     "conf": 0.832
+    },
+    {
+     "w": "and",
+     "start": 22.056,
+     "end": 22.136,
+     "conf": 0.685
+    },
+    {
+     "w": "in",
+     "start": 22.197,
+     "end": 22.237,
+     "conf": 0.499
+    },
+    {
+     "w": "almost",
+     "start": 22.297,
+     "end": 22.578,
+     "conf": 0.959
+    },
+    {
+     "w": "fourteen",
+     "start": 22.679,
+     "end": 23.04,
+     "conf": 0.486
+    },
+    {
+     "w": "hundred",
+     "start": 23.08,
+     "end": 23.402,
+     "conf": 0.666
+    },
+    {
+     "w": "years",
+     "start": 23.482,
+     "end": 23.743,
+     "conf": 0.856
+    },
+    {
+     "w": "nobody",
+     "start": 23.924,
+     "end": 24.165,
+     "conf": 0.833
+    },
+    {
+     "w": "has",
+     "start": 24.225,
+     "end": 24.306,
+     "conf": 0.974
+    },
+    {
+     "w": "managed",
+     "start": 24.366,
+     "end": 24.647,
+     "conf": 0.856
+    },
+    {
+     "w": "to",
+     "start": 24.667,
+     "end": 24.728,
+     "conf": 0.689
+    },
+    {
+     "w": "patch",
+     "start": 24.748,
+     "end": 25.029,
+     "conf": 0.994
+    },
+    {
+     "w": "it",
+     "start": 25.089,
+     "end": 25.17,
+     "conf": 0.5
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And that one hole turns out to be the best proof we have that mathematics is not a pile of rules, but a system.",
+   "idea": true,
+   "start": 25.58,
+   "end": 31.042,
+   "words": [
+    {
+     "w": "and",
+     "start": 25.58,
+     "end": 25.66,
+     "conf": 0.991
+    },
+    {
+     "w": "that",
+     "start": 25.68,
+     "end": 25.821,
+     "conf": 0.948
+    },
+    {
+     "w": "one",
+     "start": 26.002,
+     "end": 26.142,
+     "conf": 0.998
+    },
+    {
+     "w": "hole",
+     "start": 26.203,
+     "end": 26.464,
+     "conf": 0.845
+    },
+    {
+     "w": "turns",
+     "start": 26.504,
+     "end": 26.745,
+     "conf": 0.974
+    },
+    {
+     "w": "out",
+     "start": 26.785,
+     "end": 26.865,
+     "conf": 0.666
+    },
+    {
+     "w": "to",
+     "start": 26.885,
+     "end": 26.946,
+     "conf": 0.728
+    },
+    {
+     "w": "be",
+     "start": 26.966,
+     "end": 27.026,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 27.046,
+     "end": 27.167,
+     "conf": 0.738
+    },
+    {
+     "w": "best",
+     "start": 27.227,
+     "end": 27.428,
+     "conf": 0.792
+    },
+    {
+     "w": "proof",
+     "start": 27.508,
+     "end": 27.709,
+     "conf": 0.819
+    },
+    {
+     "w": "we",
+     "start": 27.789,
+     "end": 27.829,
+     "conf": 0.5
+    },
+    {
+     "w": "have",
+     "start": 27.89,
+     "end": 28.131,
+     "conf": 0.998
+    },
+    {
+     "w": "that",
+     "start": 28.151,
+     "end": 28.271,
+     "conf": 0.996
+    },
+    {
+     "w": "mathematics",
+     "start": 28.331,
+     "end": 29.034,
+     "conf": 0.899
+    },
+    {
+     "w": "is",
+     "start": 29.215,
+     "end": 29.255,
+     "conf": 0.499
+    },
+    {
+     "w": "not",
+     "start": 29.315,
+     "end": 29.416,
+     "conf": 0.881
+    },
+    {
+     "w": "a",
+     "start": 29.436,
+     "end": 29.456,
+     "conf": 0.99
+    },
+    {
+     "w": "pile",
+     "start": 29.536,
+     "end": 29.777,
+     "conf": 0.648
+    },
+    {
+     "w": "of",
+     "start": 29.797,
+     "end": 29.837,
+     "conf": 0.972
+    },
+    {
+     "w": "rules",
+     "start": 29.918,
+     "end": 30.239,
+     "conf": 0.809
+    },
+    {
+     "w": "but",
+     "start": 30.44,
+     "end": 30.54,
+     "conf": 0.665
+    },
+    {
+     "w": "a",
+     "start": 30.56,
+     "end": 30.581,
+     "conf": 0.993
+    },
+    {
+     "w": "system",
+     "start": 30.741,
+     "end": 31.042,
+     "conf": 0.793
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Zero was the last of the familiar numbers to arrive, and it brought that hole along with it.",
+   "idea": false,
+   "start": 32.032,
+   "end": 36.371,
+   "words": [
+    {
+     "w": "zero",
+     "start": 32.032,
+     "end": 32.273,
+     "conf": 0.77
+    },
+    {
+     "w": "was",
+     "start": 32.333,
+     "end": 32.434,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 32.454,
+     "end": 32.534,
+     "conf": 0.995
+    },
+    {
+     "w": "last",
+     "start": 32.594,
+     "end": 32.876,
+     "conf": 0.79
+    },
+    {
+     "w": "of",
+     "start": 32.916,
+     "end": 32.956,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 32.976,
+     "end": 33.056,
+     "conf": 0.921
+    },
+    {
+     "w": "familiar",
+     "start": 33.077,
+     "end": 33.458,
+     "conf": 0.87
+    },
+    {
+     "w": "numbers",
+     "start": 33.518,
+     "end": 33.78,
+     "conf": 0.983
+    },
+    {
+     "w": "to",
+     "start": 33.8,
+     "end": 33.88,
+     "conf": 0.667
+    },
+    {
+     "w": "arrive",
+     "start": 33.96,
+     "end": 34.362,
+     "conf": 0.749
+    },
+    {
+     "w": "and",
+     "start": 34.824,
+     "end": 34.904,
+     "conf": 0.99
+    },
+    {
+     "w": "it",
+     "start": 34.924,
+     "end": 34.985,
+     "conf": 0.998
+    },
+    {
+     "w": "brought",
+     "start": 35.045,
+     "end": 35.226,
+     "conf": 0.836
+    },
+    {
+     "w": "that",
+     "start": 35.246,
+     "end": 35.406,
+     "conf": 0.998
+    },
+    {
+     "w": "hole",
+     "start": 35.527,
+     "end": 35.808,
+     "conf": 0.972
+    },
+    {
+     "w": "along",
+     "start": 35.828,
+     "end": 36.069,
+     "conf": 0.869
+    },
+    {
+     "w": "with",
+     "start": 36.13,
+     "end": 36.25,
+     "conf": 0.75
+    },
+    {
+     "w": "it",
+     "start": 36.27,
+     "end": 36.371,
+     "conf": 0.666
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So in this video, we'll find out why zero was so hard to accept as a number at all.",
+   "idea": false,
+   "start": 36.821,
+   "end": 40.746,
+   "words": [
+    {
+     "w": "so",
+     "start": 36.821,
+     "end": 36.881,
+     "conf": 0.999
+    },
+    {
+     "w": "in",
+     "start": 36.941,
+     "end": 37.001,
+     "conf": 0.995
+    },
+    {
+     "w": "this",
+     "start": 37.021,
+     "end": 37.141,
+     "conf": 0.998
+    },
+    {
+     "w": "video",
+     "start": 37.181,
+     "end": 37.442,
+     "conf": 0.833
+    },
+    {
+     "w": "we'll",
+     "start": 37.742,
+     "end": 37.862,
+     "conf": 0.591
+    },
+    {
+     "w": "find",
+     "start": 37.922,
+     "end": 38.103,
+     "conf": 0.783
+    },
+    {
+     "w": "out",
+     "start": 38.123,
+     "end": 38.223,
+     "conf": 0.988
+    },
+    {
+     "w": "why",
+     "start": 38.243,
+     "end": 38.383,
+     "conf": 0.905
+    },
+    {
+     "w": "zero",
+     "start": 38.463,
+     "end": 38.703,
+     "conf": 0.647
+    },
+    {
+     "w": "was",
+     "start": 38.803,
+     "end": 38.884,
+     "conf": 0.665
+    },
+    {
+     "w": "so",
+     "start": 39.004,
+     "end": 39.064,
+     "conf": 0.5
+    },
+    {
+     "w": "hard",
+     "start": 39.224,
+     "end": 39.424,
+     "conf": 0.75
+    },
+    {
+     "w": "to",
+     "start": 39.444,
+     "end": 39.524,
+     "conf": 0.666
+    },
+    {
+     "w": "accept",
+     "start": 39.584,
+     "end": 39.925,
+     "conf": 0.831
+    },
+    {
+     "w": "as",
+     "start": 39.965,
+     "end": 40.045,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 40.065,
+     "end": 40.085,
+     "conf": 0.997
+    },
+    {
+     "w": "number",
+     "start": 40.145,
+     "end": 40.406,
+     "conf": 0.944
+    },
+    {
+     "w": "at",
+     "start": 40.486,
+     "end": 40.526,
+     "conf": 0.5
+    },
+    {
+     "w": "all",
+     "start": 40.666,
+     "end": 40.746,
+     "conf": 0.57
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Why dividing by zero makes no sense, no matter which way you look at it.",
+   "idea": false,
+   "start": 41.176,
+   "end": 44.502,
+   "words": [
+    {
+     "w": "why",
+     "start": 41.176,
+     "end": 41.296,
+     "conf": 0.658
+    },
+    {
+     "w": "dividing",
+     "start": 41.316,
+     "end": 41.697,
+     "conf": 0.871
+    },
+    {
+     "w": "by",
+     "start": 41.717,
+     "end": 41.837,
+     "conf": 0.995
+    },
+    {
+     "w": "zero",
+     "start": 41.937,
+     "end": 42.218,
+     "conf": 0.646
+    },
+    {
+     "w": "makes",
+     "start": 42.398,
+     "end": 42.639,
+     "conf": 0.795
+    },
+    {
+     "w": "no",
+     "start": 42.779,
+     "end": 42.859,
+     "conf": 0.5
+    },
+    {
+     "w": "sense",
+     "start": 43.28,
+     "end": 43.56,
+     "conf": 0.655
+    },
+    {
+     "w": "no",
+     "start": 43.6,
+     "end": 43.64,
+     "conf": 0.549
+    },
+    {
+     "w": "matter",
+     "start": 43.66,
+     "end": 43.841,
+     "conf": 0.853
+    },
+    {
+     "w": "which",
+     "start": 43.861,
+     "end": 43.981,
+     "conf": 0.964
+    },
+    {
+     "w": "way",
+     "start": 44.001,
+     "end": 44.101,
+     "conf": 0.61
+    },
+    {
+     "w": "you",
+     "start": 44.121,
+     "end": 44.201,
+     "conf": 0.746
+    },
+    {
+     "w": "look",
+     "start": 44.221,
+     "end": 44.362,
+     "conf": 0.893
+    },
+    {
+     "w": "at",
+     "start": 44.382,
+     "end": 44.442,
+     "conf": 0.942
+    },
+    {
+     "w": "it",
+     "start": 44.462,
+     "end": 44.502,
+     "conf": 0.418
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And what your computer actually does when you ask it anyway.",
+   "idea": false,
+   "start": 44.892,
+   "end": 47.18,
+   "words": [
+    {
+     "w": "and",
+     "start": 44.892,
+     "end": 44.992,
+     "conf": 0.925
+    },
+    {
+     "w": "what",
+     "start": 45.012,
+     "end": 45.153,
+     "conf": 0.635
+    },
+    {
+     "w": "your",
+     "start": 45.173,
+     "end": 45.253,
+     "conf": 0.651
+    },
+    {
+     "w": "computer",
+     "start": 45.273,
+     "end": 45.655,
+     "conf": 0.956
+    },
+    {
+     "w": "actually",
+     "start": 45.735,
+     "end": 45.996,
+     "conf": 0.676
+    },
+    {
+     "w": "does",
+     "start": 46.056,
+     "end": 46.257,
+     "conf": 0.509
+    },
+    {
+     "w": "when",
+     "start": 46.277,
+     "end": 46.417,
+     "conf": 0.551
+    },
+    {
+     "w": "you",
+     "start": 46.438,
+     "end": 46.498,
+     "conf": 0.978
+    },
+    {
+     "w": "ask",
+     "start": 46.618,
+     "end": 46.739,
+     "conf": 0.822
+    },
+    {
+     "w": "it",
+     "start": 46.799,
+     "end": 46.839,
+     "conf": 0.033
+    },
+    {
+     "w": "anyway",
+     "start": 46.899,
+     "end": 47.18,
+     "conf": 0.685
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "But first, we have to go back to a time when nobody needed zero at all.",
+   "idea": true,
+   "start": 47.57,
+   "end": 50.747,
+   "words": [
+    {
+     "w": "but",
+     "start": 47.57,
+     "end": 47.651,
+     "conf": 0.837
+    },
+    {
+     "w": "first",
+     "start": 47.711,
+     "end": 48.073,
+     "conf": 0.999
+    },
+    {
+     "w": "we",
+     "start": 48.234,
+     "end": 48.294,
+     "conf": 0.998
+    },
+    {
+     "w": "have",
+     "start": 48.334,
+     "end": 48.455,
+     "conf": 0.996
+    },
+    {
+     "w": "to",
+     "start": 48.475,
+     "end": 48.535,
+     "conf": 0.721
+    },
+    {
+     "w": "go",
+     "start": 48.555,
+     "end": 48.616,
+     "conf": 0.996
+    },
+    {
+     "w": "back",
+     "start": 48.716,
+     "end": 48.817,
+     "conf": 0.784
+    },
+    {
+     "w": "to",
+     "start": 48.857,
+     "end": 48.917,
+     "conf": 0.925
+    },
+    {
+     "w": "a",
+     "start": 48.977,
+     "end": 48.998,
+     "conf": 0.023
+    },
+    {
+     "w": "time",
+     "start": 49.018,
+     "end": 49.339,
+     "conf": 0.997
+    },
+    {
+     "w": "when",
+     "start": 49.359,
+     "end": 49.48,
+     "conf": 0.98
+    },
+    {
+     "w": "nobody",
+     "start": 49.54,
+     "end": 49.802,
+     "conf": 0.836
+    },
+    {
+     "w": "needed",
+     "start": 49.882,
+     "end": 50.123,
+     "conf": 0.795
+    },
+    {
+     "w": "zero",
+     "start": 50.144,
+     "end": 50.385,
+     "conf": 0.709
+    },
+    {
+     "w": "at",
+     "start": 50.465,
+     "end": 50.525,
+     "conf": 0.998
+    },
+    {
+     "w": "all",
+     "start": 50.626,
+     "end": 50.747,
+     "conf": 0.658
+    }
+   ]
+  }
+ ]
+}

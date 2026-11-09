@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — mirror</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;}
+  html,body{margin:0;background:#0B0F1E;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// node engine/render/shoot.js stills --page tools/lab/mirror.html --dur 2 --t 0.3,1.0,1.8 --outdir out/_lab/mirror
+import { line, drawMirrorLine, drawReflected, clipSide } from '../../engine/mirror.js';
+import { Mascot, POSES_V2 } from '../../engine/mascot.js';
+const g = document.getElementById('cv').getContext('2d');
+const L = line(420, 1080, 1500, 0), m = new Mascot(); let ready = false;
+(async () => { await document.fonts.load('900 150px "Archivo"'); await m.load('../../assets/character-v2/cut', POSES_V2); ready = true; })();
+function forward(ctx) {                          // nửa đi xuôi: "3 → 8" vàng + đường cong mũ
+  ctx.fillStyle = '#FFB547'; ctx.font = '900 150px "Archivo"'; ctx.fillText('3 → 8', 1150, 900);
+  ctx.strokeStyle = '#FFB547'; ctx.lineWidth = 6; ctx.beginPath();
+  for (let x = 0; x <= 1; x += 0.01) { const px = 700 + x * 1100, py = 1060 - (Math.pow(2, x * 4) - 1) / 15 * 700; x ? ctx.lineTo(px, py) : ctx.moveTo(px, py); }
+  ctx.stroke();
+}
+function frame(t) {
+  g.setTransform(1,0,0,1,0,0); g.fillStyle = '#0B0F1E'; g.fillRect(0,0,1920,1080);
+  g.save(); clipSide(g, L, 1); g.fillStyle = 'rgba(255,181,71,0.06)'; g.fillRect(0,0,1920,1080); g.restore();
+  g.save(); clipSide(g, L, -1); g.fillStyle = 'rgba(63,184,255,0.06)'; g.fillRect(0,0,1920,1080); g.restore();
+  forward(g);
+  if (t > 0.9) drawReflected(g, L, forward, { tintAlpha: 0.85, alpha: Math.min(1, (t - 0.9) * 3) });
+  drawMirrorLine(g, L, Math.min(1, t * 2));
+  m.draw(g, 'point', 960, 1060, 620, { ring: 0 });
+}
+window.__intro = { get ready(){ return ready; }, still: frame, frame, DUR: 2 };
+</script>

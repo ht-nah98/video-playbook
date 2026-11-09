@@ -1,0 +1,29 @@
+<!doctype html><meta charset="utf-8"><title>Lab — nhân vật chữ cái</title>
+<!-- Bàn thử 2026-11-02: thay người que bằng nhân vật chữ λ / φ / 9 (cùng ý nhân vật toán có mắt, không chép pi creature). Diễn bằng mắt + biến dạng thân. -->
+<style>html,body{margin:0;background:#0D1B2A;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+import { C, FONT, bg, txt, seg, dot, mark, unit, onCircle } from '../../projects/en/_kit/system.js';
+const g = document.getElementById('cv').getContext('2d'); let ready = false;
+Promise.all([['Archivo', 'Archivo[wdth,wght].ttf', '100 900'], ['IBM Plex Mono', 'IBMPlexMono-Medium.ttf', '500']].map(([n, f, w]) => new FontFace(n, `url("../../assets/fonts/${f}")`, { weight: w }).load().then(x => document.fonts.add(x)))).then(() => { ready = true; });
+const ORANGE = '#F4A259', GY = 900, DUR = 13, e = k => { k = Math.max(0, Math.min(1, k)); return k * k * (3 - 2 * k); }, win = (t, a, b) => e((t - a) / (b - a));
+// diễn: lean nghiêng, sy kéo cao, hop nảy, wide mở mắt, smile cười, frown bối rối
+function act(t, ph) { const u = t - ph, surprise = win(u, 5, 5.15) * (1 - win(u, 6.6, 7.1)), happy = win(u, 8, 8.3), puzzled = win(u, 2.4, 2.8) * (1 - win(u, 4.8, 5));
+  const bounce = happy * Math.abs(Math.sin((u - 8) * 4.2)) * Math.max(0, 1 - (u - 8) / 3.2);
+  return { lean: .03 * Math.sin(u * 1.1) - .16 * puzzled - .07 * surprise + .05 * happy, sy: 1 + .012 * Math.sin(u * 2) + .2 * surprise - .05 * puzzled + .05 * bounce - .1 * win(u, 4.85, 5) * (1 - win(u, 5, 5.12)), hop: 110 * bounce + 45 * surprise, wide: surprise, smile: happy, frown: puzzled, blink: (u % 3.7) < .1 ? 1 : 0 }; }
+function eyes(x, y, r, gap, look, s) { for (const d of [-1, 1]) { const ex = x + d * gap, ry = r * (1 + .3 * s.wide) * (1 - .92 * s.blink); g.fillStyle = '#FFF'; g.beginPath(); g.ellipse(ex, y, r, ry, 0, 0, 7); g.fill(); if (s.blink) continue; g.fillStyle = '#10202F'; g.beginPath(); g.arc(ex + look[0] * r * .45, y + look[1] * r * .45, r * .52, 0, 7); g.fill(); g.fillStyle = '#FFF'; g.beginPath(); g.arc(ex + look[0] * r * .45 + r * .17, y + look[1] * r * .45 - r * .17, r * .14, 0, 7); g.fill(); } }
+function mouth(x, y, w, s) { g.strokeStyle = '#10202F'; g.lineWidth = 7; g.lineCap = 'round'; g.beginPath(); if (s.wide > .5) { g.fillStyle = '#10202F'; g.ellipse(x, y + 4, w * .28, w * .4, 0, 0, 7); g.fill(); return; } const b = 16 * s.smile - 10 * s.frown; g.moveTo(x - w / 2, y + (s.frown ? 5 * s.frown : 0)); g.quadraticCurveTo(x, y + b * 1.7, x + w / 2, y - 5 * s.frown); g.stroke(); }
+function frame_(x, s, fn) { g.save(); g.translate(x, GY - s.hop); g.transform(1 / Math.sqrt(s.sy), 0, -s.lean, s.sy, 0, 0); fn(); g.restore(); }
+const stroke = (w, f) => { g.strokeStyle = ORANGE; g.lineWidth = w; g.lineCap = 'round'; g.lineJoin = 'round'; g.beginPath(); f(); g.stroke(); };
+function lambda(x, s, lk) { frame_(x, s, () => { // chân dài từ móc đầu chéo xuống phải, chân ngắn trái
+    stroke(54, () => { g.moveTo(-104, -428); g.bezierCurveTo(-58, -486, -2, -440, 24, -340); g.lineTo(82, -96); g.quadraticCurveTo(100, -22, 150, -20); });
+    stroke(54, () => { g.moveTo(12, -270); g.lineTo(-104, -26); });
+    eyes(-22, -400, 36, 38, lk, s); }); }
+function phi(x, s, lk) { frame_(x, s, () => { stroke(44, () => { g.moveTo(0, -470); g.lineTo(0, -22); }); g.fillStyle = ORANGE; g.beginPath(); g.ellipse(0, -248, 148, 148, 0, 0, 7); g.fill(); eyes(0, -284, 40, 58, lk, s); mouth(0, -196, 80, s); }); }
+function nine(x, s, lk) { frame_(x, s, () => { stroke(60, () => { g.moveTo(112, -300); g.bezierCurveTo(124, -160, 96, -60, -40, -26); }); g.fillStyle = ORANGE; g.beginPath(); g.arc(0, -318, 142, 0, 7); g.fill(); eyes(0, -350, 40, 56, lk, s); mouth(0, -262, 76, s); }); }
+function frame(t) { g.setTransform(1, 0, 0, 1, 0, 0); bg(g); seg(g, 80, GY, 1840, GY, C.dim, 4);
+  const cx = 960, cy = 190, r = 120, th = t * 1.25, [mx, my] = onCircle(cx, cy, r, th); unit(g, cx, cy, r, { axis: .6 }); seg(g, mx, cy, mx, my, C.sin, 7); dot(g, mx, my, 11, C.ink);
+  [[lambda, 360, 'λ', 0], [phi, 960, 'φ', .12], [nine, 1560, '9', .24]].forEach(([f, x, lab, ph]) => { const s = act(t, ph); let dx = mx - x, dy = my - (GY - 400), d = Math.hypot(dx, dy) || 1; f(x, s, [dx / d, dy / d]);
+    mark(g, '?', x + 190, GY - 520, win(t - ph, 2.6, 2.9) * (1 - win(t - ph, 4.7, 4.9))); mark(g, '!', x + 190, GY - 560, win(t - ph, 5, 5.2) * (1 - win(t - ph, 6.5, 6.8))); txt(g, lab, x, 990, FONT.mono(40), C.dim); }); }
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR };
+</script>

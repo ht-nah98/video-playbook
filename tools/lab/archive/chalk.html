@@ -1,0 +1,180 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — seminar chalkboard</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — hướng `chalk` cho fifty-percent ("Seminar Chalkboard"). KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/chalk.html --dur 2 --t 0.5,1.5 --outdir out/_lab/chalk
+// Ý: cuộc tranh luận tần suất / niềm tin là MỘT BUỔI SEMINAR trên bảng đen: người ta đếm (vạch kiểm theo nhóm 5,
+// chấm người) và người ta cân niềm tin, cùng một tấm bảng, ý cũ bị xoá dở vẫn còn bóng ma. Phấn = suy nghĩ đang viết.
+// Màu: bảng #1C2925 (đá đen xanh) · phấn trắng #ECE9DF (sự kiện) · phấn xanh #8CC6EC = TẦN SUẤT · phấn vàng #F2D46A =
+// NIỀM TIN (của bạn) · phấn đỏ #F0897A chỉ cho cái sai (báo động nhầm, mũi tên bị gạch). Phấn có hạt, mép vỡ, bụi.
+// Chữ: Cormorant Garamond Italic LN (nét tay, số thẳng hàng) phủ hạt phấn; nhãn nhỏ Archivo hẹp in hoa.
+// Tiếng: pen (viết phấn) · tick (gạch vạch kiểm) · tap=chip (chấm) · page (lau bảng) · coin · shimmer (vòng tròn chốt).
+// Phần khác: tần suất = vạch kiểm xanh dày lên, đường k/n vẽ phấn hội tụ ½ · cá cược = sổ nợ kẻ phấn hai cột,
+// −20¢ đỏ · cán cân Bayes = cân vẽ phấn vàng nghiêng theo bằng chứng · 3 tiên đề viết to chiếm cả bảng, đóng khung ·
+// máy tung xu Diaconis = sơ đồ phấn kỹ thuật (lò xo, quỹ đạo nét đứt). Mascot chỉ ở mép, có viền phấn "đồ lại".
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { board: '#1C2925', white: '#ECE9DF', blue: '#8CC6EC', yellow: '#F2D46A', red: '#F0897A', dim: '#B9BCB0' };
+const IT = '"Cormorant Garamond"', ARC = '"Archivo"';
+const IM = {}; let BOARD, GRAIN, ready = false; const FR = [];
+let x = null;                                        // ctx của lớp phấn đang vẽ
+
+const ns = n => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ' ');
+const must = (v, want) => { if (Math.abs(v - want) > 1e-9) throw new Error(`sai: ${v} ≠ ${want}`); return want; };
+const smooth = (a, b, t) => { const u = Math.max(0, Math.min(1, (t - a) / (b - a))); return u * u * (3 - 2 * u); };
+
+function noiseCanvas(w, h, seed) { const c = mk(w, h), y = c.getContext('2d'), d = y.createImageData(w, h);
+  for (let i = 0; i < w * h; i++) { const v = hash(i * 0.731 + seed) * 255; d.data[i * 4] = d.data[i * 4 + 1] = d.data[i * 4 + 2] = v; d.data[i * 4 + 3] = 255; }
+  y.putImageData(d, 0, 0); return c; }
+function grain() {                                   // mặt nạ hạt phấn: hạt mịn + đốm + vệt kéo xiên
+  const blob = mk(), b = blob.getContext('2d'); b.imageSmoothingEnabled = true; b.drawImage(noiseCanvas(240, 135, 7), 0, 0, W, H);
+  const str = mk(), s = str.getContext('2d'); s.translate(W / 2, H / 2); s.rotate(-0.21); s.drawImage(noiseCanvas(110, 700, 13), -W, -H, W * 2, H * 2);
+  const B = b.getImageData(0, 0, W, H).data, S = s.getImageData(0, 0, W, H).data, out = new Float32Array(W * H);
+  for (let i = 0; i < W * H; i++) { const t = 0.42 * hash(i * 0.613 + 3) + 0.3 * B[i * 4] / 255 + 0.28 * S[i * 4] / 255; out[i] = smooth(0.2, 0.5, t); }
+  return out;
+}
+function chalkify(c) {                               // áp hạt lên lớp phấn: mép mỏng vỡ nhiều hơn lõi
+  const y = c.getContext('2d'), d = y.getImageData(0, 0, W, H), p = d.data;
+  for (let i = 0; i < W * H; i++) { const a = p[i * 4 + 3]; if (!a) continue; const m = GRAIN[i], e = a / 255;
+    p[i * 4 + 3] = 255 * e * Math.min(1, m * (0.55 + 0.6 * e)); }
+  y.putImageData(d, 0, 0); return c;
+}
+function compose(dst, layer, alpha = 1) {            // bụi phấn (bản nhoè) rồi nét phấn
+  const z = dst.getContext('2d'); z.save(); z.globalAlpha = 0.22 * alpha; z.filter = 'blur(5px)'; z.drawImage(layer, 0, 0);
+  z.filter = 'none'; z.globalAlpha = alpha; z.drawImage(layer, 0, 0); z.restore(); }
+
+// ——— nét phấn ———
+function text(s, px, py, size, color, { align = 'left', weight = 600, font = IT, tilt = 0, caps = false } = {}) {
+  x.save(); x.translate(px, py); x.rotate(tilt); x.font = `${caps ? '' : 'italic '}${weight} ${size}px ${font}`;
+  if (caps && 'letterSpacing' in x) x.letterSpacing = '3px';
+  x.fillStyle = color; x.textAlign = align; x.textBaseline = 'alphabetic'; x.fillText(s, 0, 0); const w = x.measureText(s).width; x.restore(); return w; }
+function line(pts, color, w, seed = 1, amp = 2.2) { x.strokeStyle = color; x.lineWidth = w; x.lineCap = x.lineJoin = 'round'; x.beginPath();
+  pts.forEach(([px, py], i) => { const j = (hash(i * 3.1 + seed) - 0.5) * amp, k = (hash(i * 5.7 + seed) - 0.5) * amp; i ? x.lineTo(px + j, py + k) : x.moveTo(px, py); }); x.stroke(); }
+const seg = (x0, y0, x1, y1, n = 14) => Array.from({ length: n + 1 }, (_, i) => [x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n]);
+const arc = (cx, cy, rx, ry, a0 = 0, a1 = Math.PI * 2, n = 48) => Array.from({ length: n + 1 }, (_, i) => { const a = a0 + (a1 - a0) * i / n; return [cx + rx * Math.cos(a), cy + ry * Math.sin(a)]; });
+function ring(cx, cy, rx, ry, color, w, seed) {      // vòng khoanh tay: không khép kín, vượt quá điểm đầu
+  line(arc(cx, cy, rx, ry, -2.2, -2.2 + Math.PI * 2.15, 60).map(([px, py], i) => [px + (i / 60) * 6, py - (i / 60) * 5]), color, w, seed, 3); }
+function arrow(pts, color, w, seed) { line(pts, color, w, seed); const [a, b] = [pts[pts.length - 2], pts[pts.length - 1]], ang = Math.atan2(b[1] - a[1], b[0] - a[0]), L = w * 4.2;
+  line([[b[0] - L * Math.cos(ang - 0.45), b[1] - L * Math.sin(ang - 0.45)], b, [b[0] - L * Math.cos(ang + 0.45), b[1] - L * Math.sin(ang + 0.45)]], color, w, seed + 9, 1); }
+const cross = (cx, cy, s, seed = 3) => { line(seg(cx - s, cy - s, cx + s, cy + s), C.red, 9, seed); line(seg(cx + s, cy - s, cx - s, cy + s), C.red, 9, seed + 2); };
+function tally(px, py, n, color, h = 64, step = 14, last = null) {   // một nhóm vạch kiểm (≤ 5), vạch thứ 5 gạch chéo
+  for (let i = 0; i < Math.min(4, n); i++) line(seg(px + i * step, py, px + i * step + 2, py + h, 6), color, 5.5, px * 0.1 + i + py);
+  if (n === 5) line(seg(px - 10, py + h * 0.78, px + 3 * step + 12, py + h * 0.2, 8), last ?? color, 5.5, px + py * 0.3); }
+function dot(px, py, r, color) { x.fillStyle = color; x.beginPath(); x.arc(px, py, r, 0, 7); x.fill(); }
+
+// ——— bảng: đá đen xanh, hạt, vệt lau, bóng ma của bài trước ———
+function board(ghost) {
+  const c = mk(), y = c.getContext('2d'), d = y.createImageData(W, H), base = [0x1C, 0x29, 0x25];
+  for (let i = 0; i < W * H; i++) { const px = i % W, py = (i / W) | 0, n = (hash(i * 0.517) - 0.5) * 9;
+    const r = Math.hypot((px - W * 0.45) / 1.3, py - H * 0.4) / 1100, lit = 1.12 - 0.35 * Math.min(1, r * r);
+    for (let k = 0; k < 3; k++) d.data[i * 4 + k] = base[k] * lit + n; d.data[i * 4 + 3] = 255; }
+  y.putImageData(d, 0, 0);
+  const L = mk(); x = L.getContext('2d'); ghost();     // bóng ma của ý trước, đã lau dở
+  chalkify(L); compose(c, L, 0.09);
+  y.save(); y.filter = 'blur(14px)'; y.lineCap = 'round';      // vệt khăn lau: hơi sáng hơn nền, quét vòng cung
+  for (let i = 0; i < 9; i++) { const cx = 200 + hash(i + 0.3) * 1500, cy = 150 + hash(i + 7.1) * 800, r = 160 + hash(i + 3.3) * 220;
+    y.strokeStyle = 'rgba(205,215,205,0.035)'; y.lineWidth = 70 + hash(i + 9.9) * 60; y.beginPath(); y.arc(cx, cy, r, 3.6 + hash(i) * 0.5, 5.4 + hash(i + 1) * 0.6); y.stroke(); }
+  y.restore(); return c;
+}
+
+function figureLayer(pose, cx, foot, h) {             // viền phấn "đồ lại" quanh mascot để tóc / áo đen không chìm vào bảng
+  const im = IM[pose], w = im.width * h / im.height, S = mk(), s = S.getContext('2d');
+  s.drawImage(im, cx - w / 2, foot - h, w, h); s.globalCompositeOperation = 'source-in'; s.fillStyle = C.white; s.fillRect(0, 0, W, H);
+  x.save(); for (let k = 0; k < 24; k++) { const a = k / 24 * Math.PI * 2; x.drawImage(S, Math.cos(a) * 11, Math.sin(a) * 11); }
+  x.globalCompositeOperation = 'destination-out'; for (let k = 0; k < 16; k++) { const a = k / 16 * Math.PI * 2; x.drawImage(S, Math.cos(a) * 5, Math.sin(a) * 5); }
+  x.drawImage(S, 0, 0); x.restore(); return () => g.drawImage(im, cx - w / 2, foot - h, w, h);
+}
+
+function hand(cx, cy) {                               // bàn tay úp nhìn từ trên: lòng + 4 ngón + ngón cái + cổ tay, đè lên đồng xu
+  const shapes = y => { y.beginPath(); y.ellipse(cx + 40, cy, 118, 104, 0, 0, 7);
+    [[-62, 150], [-20, 172], [22, 164], [62, 136]].forEach(([dy, L]) => y.roundRect(cx + 40 - 70 - L, cy + dy - 19, L + 40, 38, 19));
+    y.save(); y.translate(cx + 10, cy - 92); y.rotate(-0.5); y.roundRect(-112, -20, 140, 40, 20); y.restore();
+    y.rect(cx + 120, cy - 66, 100, 132); };
+  x.save(); x.globalCompositeOperation = 'destination-out'; shapes(x); x.fill(); x.restore();          // xu bị tay che
+  const T = mk(), t = T.getContext('2d'); t.strokeStyle = C.white; t.lineWidth = 12; t.lineJoin = 'round'; shapes(t); t.stroke();
+  t.globalCompositeOperation = 'destination-out'; shapes(t); t.fill();
+  t.globalCompositeOperation = 'destination-out'; t.fillRect(cx + 214, 0, 400, H);                    // cổ tay mở ra phía phải
+  x.drawImage(T, 0, 0);
+  x.save(); shapes(x); x.clip(); for (let i = 0; i < 36; i++) { const hx = cx - 260 + i * 17; line(seg(hx, cy - 140, hx + 60, cy + 120, 5), C.white, 2.2, i + 40, 3); } x.restore();
+  for (let i = 0; i < 3; i++) line(seg(cx + 90, cy - 40 + i * 42, cx + 130, cy - 46 + i * 46, 4), C.white, 3, 60 + i);   // khớp ngón
+}
+
+const GHOSTS = [
+  () => { for (let gI = 0; gI < 5; gI++) tally(1000 + gI * 80, 150, 5, C.white, 56, 12);
+          text('k / n  →  1/2', 960, 330, 80, C.white, { tilt: -0.03 }); text('n = 24 000', 130, 1000, 70, C.white); },
+  () => { text('P( A | B )', 1300, 120, 80, C.white); line(arc(1060, 900, 70, 70), C.white, 6, 4); text('Σ', 900, 1020, 110, C.white); },
+];
+
+const frames = [
+  () => {                                            // 0 · mở bài: xu đã cố định dưới tay; 50% KHÔNG chỉ vào xu mà chỉ vào BẠN
+    text('P( heads ) = ?', 112, 170, 104, C.white, { tilt: -0.012 });
+    line(seg(112, 196, 700, 190, 20), C.white, 4, 5);
+    const cx = 400, cy = 560;
+    line(arc(cx - 40, cy + 10, 175, 175), C.white, 7, 21); line(arc(cx - 40, cy + 10, 152, 152), C.white, 3.5, 22);   // xu: vành đôi
+    for (let i = 0; i < 40; i++) { const a = i / 40 * Math.PI * 2; line(seg(cx - 40 + 155 * Math.cos(a), cy + 10 + 155 * Math.sin(a), cx - 40 + 172 * Math.cos(a), cy + 10 + 172 * Math.sin(a), 2), C.white, 2.5, 200 + i, 0.5); }  // khía cạnh xu
+    hand(cx, cy);
+    text('the coin', cx - 40, 818, 66, C.white, { align: 'center' });
+    text('already landed — heads or tails, fixed', cx - 40, 872, 40, C.dim, { align: 'center' });
+    const half = must(1 / 2 * 100, 50);
+    const w = text(`${half}%`, 1070, 610, 230, C.yellow, { align: 'center', weight: 700, tilt: -0.02 });
+    ring(1070, 540, w / 2 + 60, 150, C.yellow, 6, 31);
+    arrow(seg(850, 560, 660, 560, 10), C.white, 6, 41); cross(756, 558, 30);
+    text('not about the coin', 744, 652, 44, C.red, { align: 'center' });
+    arrow([[1150, 700], [1180, 790], [1210, 840]], C.yellow, 6, 51);
+    text('you', 1240, 930, 130, C.yellow, { align: 'center', weight: 700 });
+    text('the only thing still undecided', 1215, 990, 42, C.white, { align: 'center' });
+    return figureLayer('cover', 1690, 1080, 700);
+  },
+  () => {                                            // 1 · Act Four: 100 000 người thành ruộng chấm, nhóm bệnh đếm vạch theo năm
+    const N = 100000, sick = must(N / 1000, 100), caught = must(sick * 99 / 100, 99), well = must(N - sick, 99900),
+          fa = must(well * 5 / 100, 4995), pos = must(caught + fa, 5094), pct = must(Math.round(caught / pos * 100), 2), per = 100;
+    const cols = 50, rows = must(N / per / cols, 20), faDots = must(Math.round(fa / per), 50);
+    text(`${ns(N)} people take the test`, 112, 140, 76, C.white, { tilt: -0.01 });
+    text(`1 dot = ${per} people`.toUpperCase(), 1120, 626, 26, C.dim, { align: 'right', font: ARC, caps: true, weight: 600 });
+    const ox = 140, oy = 200, sp = 20, sickI = 7 * cols + 31, red = new Set();
+    for (let k = 0; red.size < faDots; k++) { const i = Math.floor(hash(k * 1.37 + 0.5) * cols * rows); if (i !== sickI) red.add(i); }
+    for (let i = 0; i < cols * rows; i++) { const px = ox + (i % cols) * sp, py = oy + Math.floor(i / cols) * sp;
+      if (i === sickI) dot(px, py, 8, C.yellow); else if (red.has(i)) dot(px, py, 6.5, C.red); else dot(px, py, 4.6, C.dim); }
+    const sx = ox + (sickI % cols) * sp, sy = oy + Math.floor(sickI / cols) * sp; ring(sx, sy, 26, 24, C.yellow, 5, 81);
+    arrow([[sx + 30, sy - 22], [sx + 120, sy - 70], [1220, 250]], C.yellow, 5, 82);
+    // chú giải dưới ruộng chấm
+    const leg = [[C.yellow, 8, `${sick} sick — the test catches ${caught}`], [C.red, 6.5, `${ns(well)} healthy × 5% = ${ns(fa)} false alarms`], [C.dim, 4.6, 'everyone else: negative']];
+    leg.forEach(([c, r, s], k) => { dot(150, 668 + k * 66, r + 2, c); text(s, 182, 682 + k * 66, 46, c === C.dim ? C.white : c); });
+    text(`only ${caught} of the ${ns(pos)} positives are sick`, 140, 935, 50, C.yellow, { tilt: -0.008 });
+    // nhóm bệnh: 100 vạch kiểm theo năm, 99 vàng, vạch cuối trắng = sót
+    text(`the ${sick} sick, counted in fives`, 1250, 230, 44, C.yellow);
+    for (let gI = 0; gI < sick / 5; gI++) tally(1270 + (gI % 5) * 108, 270 + Math.floor(gI / 5) * 88, 5, C.yellow, 62, 14, gI === sick / 5 - 1 ? C.white : null);
+    text('1 missed', 1722, 650, 36, C.white, { align: 'center' });
+    // phân số
+    const fx = 1370;
+    text(String(caught), fx, 800, 120, C.yellow, { align: 'center', weight: 700 }); line(seg(1240, 834, 1500, 830, 12), C.white, 6, 91);
+    text(ns(pos), fx, 950, 110, C.white, { align: 'center', weight: 700 });
+    text(`${caught} + ${ns(fa)}`, fx, 1004, 38, C.dim, { align: 'center' });
+    for (const dy of [-14, 14]) line(Array.from({ length: 13 }, (_, i) => [1508 + i * 5, 850 + dy - 9 * Math.sin(i / 12 * Math.PI * 2)]), C.yellow, 7, 94 + dy, 0.6);   // ≈ vẽ tay
+    const w = text(`${pct}%`, 1620, 900, 150, C.yellow, { weight: 700 }); ring(1620 + w / 2, 852, w / 2 + 40, 96, C.yellow, 5, 93);
+  },
+];
+
+(async () => {
+  await Promise.all(['italic 600 104px', 'italic 700 230px', 'italic 600 44px', 'italic 700 120px', 'italic 600 34px'].map(f => document.fonts.load(`${f} ${IT}`))
+    .concat([document.fonts.load(`600 26px ${ARC}`)]));
+  await new Promise((res, rej) => { const im = new Image(); im.onload = () => { IM.cover = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img'));
+    im.src = '../../../assets/character-v2/cut/pose-coin-cover.png'; });
+  GRAIN = grain(); BOARD = GHOSTS.map(board); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { const i = Math.min(1, Math.floor(t)); g.setTransform(1, 0, 0, 1, 0, 0);
+  if (!FR[i]) { g.drawImage(BOARD[i], 0, 0); const L = mk(); x = L.getContext('2d'); const fig = frames[i](); chalkify(L); g.save(); compose(g.canvas, L); g.restore(); if (fig) fig();
+    const c = mk(); c.getContext('2d').drawImage(g.canvas, 0, 0); FR[i] = c; }
+  else g.drawImage(FR[i], 0, 0); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

@@ -1,0 +1,25 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — shade</title>
+<style>html,body{margin:0;background:#EEF2EE;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử engine/shade.js (bóng sprite tất định, LESSONS §127). Kiểm: chụp xuôi rồi ngược, cmp từng byte:
+// node engine/render/shoot.js stills --page tools/lab/shade.html --dur 4 --t 0.5,1.5,2.5,3.5 --outdir out/_lab/shade-a
+// node engine/render/shoot.js stills --page tools/lab/shade.html --dur 4 --t 3.5,2.5,1.5,0.5 --outdir out/_lab/shade-b
+import { shadowRR, shade, glow } from '../../engine/shade.js';
+// mẫu bài mới import kit này — nạp được tức là re-export đúng
+import '../../templates/lesson/kit.js';
+const g = document.getElementById('cv').getContext('2d');
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = '#EEF2EE'; g.fillRect(0, 0, 1920, 1080);
+  for (let i = 0; i < 4; i++) {
+    const x = 160 + i * 420, y = 260 + 60 * Math.sin(t + i), r = [0, 10, 24, 60][i];
+    shade(g, () => { g.fillStyle = '#FFFFFF'; g.beginPath(); g.roundRect(x, y, 320, 200, r); g.fill(); },
+      { box: [x, y, 320, 200, r], blur: 8 + 6 * i, oy: 4 + 3 * i });
+  }
+  shadowRR(g, 300, 700, 1300, 120, 30, { col: 'rgba(40,60,80,0.3)', blur: 20 });
+  g.fillStyle = '#F6A623'; g.beginPath(); g.roundRect(300, 700, 1300, 120, 30); g.fill();
+  glow(g, 960 + 300 * Math.cos(t), 560, 120, '246,166,35', 0.7);
+}
+window.__intro = { ready: true, still: frame, frame, DUR: 4 };
+</script>

@@ -1,0 +1,91 @@
+<!doctype html><meta charset="utf-8">
+<title>ガチャの罠 — p2</title>
+<style>
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Phần p2 (lời audio/p2.wav, mốc data/p2.timeline.json — align.py; trước khi có giọng: estimate.py).
+// Cảnh: plates/*.js, mỗi file `export default class` có static ERA ('studio' | 'casino'), IMAGES {key: đường dẫn}
+// (ảnh thật: kit.photoImages(...)), POSES [..]; sau init({ tl }) có START (câu đầu của mục) và FROM.
+// Chuyển (DNA §7, 0.9 s từ FROM): cùng ERA = KHAY XOAY — tấm cũ trượt sang trái trên mặt bàn trắng, tấm mới vào từ phải,
+//   một viên nang lăn dọc mép tấm mới trên vạch sàn (tiếng mặc định whoosh + pop khi viên lăn). Khác ERA (studio ↔ casino)
+//   = vòng loang từ WIPE: viên nang vỡ đôi ở tâm, vành sáng đỏ son (vào casino) / trắng ấm (ra casino). CONTINUES = cắt thẳng.
+// Chụp riêng vài cảnh: p2.html?plates=a1-x,a2-y
+import { makeTimeline } from '../../../engine/timeline.js';
+import { loadKit, setTalk, setGround, ground, capsule, outCubic, prog, clamp, W, H, mk, FONTS, FONT_SAMPLE, TONES } from './kit.js';
+import { ALL } from './plates/p2-order.js';
+import { collectCues } from '../../../engine/sfx.js';
+const PAGE = 'p2';
+// LEAD/TAIL đọc từ build.json (MỘT nguồn): trang và build lệch LEAD là hình lệch tiếng cả phần (zero-div suýt mắc).
+let LEAD = 0, TAIL = 0; const g = document.getElementById('cv').getContext('2d');
+let ready = false, plates = [], DUR = 0, CUES = [];
+const BUF = [mk(), mk()].map(c => c.getContext('2d'));
+(async () => {
+  // MỌI mặt chữ của kit (kit.FONTS) — Promise.all trước init (đua font, LESSONS §16).
+  await Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE)));
+  const part = (await (await fetch('./build.json')).json()).parts.find(p => p.page === PAGE);
+  LEAD = part.lead; TAIL = part.tail;
+  const tl = makeTimeline(await (await fetch(`./data/${PAGE}.timeline.json`)).json());
+  // miệng nói (engine/talk.js): đường bao giọng từ tools/voice/mouth_env.py. Chưa có tệp → mascot im;
+  // build.py chặn render khi thiếu hoặc cũ hơn audio/<page>.dry.wav.
+  const mo = await fetch(`./data/${PAGE}.mouth.json`); if (mo.ok) setTalk(await mo.json());
+  const want = new URLSearchParams(location.search).get('plates');
+  const names = want ? want.split(',') : ALL;
+  const mods = await Promise.all(names.map(n => import(`./plates/${n}.js`)));
+  const C = '../../../assets/character-v2/cut/', imgs = {};
+  for (const m of mods) { Object.assign(imgs, m.default.IMAGES || {}); for (const p of m.default.POSES || []) imgs['pose-' + p] = C + `pose-${p}.png`; }
+  await loadKit(imgs);
+  plates = mods.map(m => { const p = new m.default(); p.init({ tl }); return p; }).sort((a, b) => a.FROM - b.FROM);
+  DUR = LEAD + tl.lines.at(-1).end + TAIL;
+  CUES = collectCues(plates, LEAD); // tiếng hiệu ứng: chuyển cảnh tự có + sfx() của từng cảnh (docs/lesson/SFX.md)
+  // khay xoay: viên nang lăn qua mép → thêm 'pop' giữa cú trượt (cảnh tắt bằng TRANSITION = null)
+  plates.forEach((p, j) => { if (j && !p.CONTINUES && p.TRANSITION !== null && p.constructor.ERA === plates[j - 1].constructor.ERA) CUES.push({ t: +(p.FROM + 0.45 + LEAD).toFixed(3), kind: 'pop' }); });
+  CUES.sort((a, b) => a.t - b.t);
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const reset = c => { c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1; c.globalCompositeOperation = 'source-over'; c.textAlign = 'left'; c.filter = 'none'; };
+const frame = t => {
+  reset(g);
+  const T = t - LEAD;
+  if (!plates.length) { ground(g, T); return; }                        // chưa có cảnh (order rỗng): nền studio
+  let i = 0; for (let j = 0; j < plates.length; j++) if (T >= plates[j].FROM) i = j;
+  const cur = plates[i], prev = plates[i - 1];
+  // CONTINUES = true: cảnh nối tiếp bố cục cảnh trước → cắt thẳng, không trượt (LESSONS §50).
+  const k = prev && !cur.CONTINUES ? prog(T, cur.FROM, cur.FROM + 0.9) : 1;
+  if (k >= 1) { cur.render(g, T); return; }
+  const eA = prev.constructor.ERA, eB = cur.constructor.ERA;
+  if (eA !== eB) {                                                     // ── vòng loang từ WIPE ──
+    prev.render(g, T); reset(g);
+    const [cx, cy] = cur.WIPE || [W / 2, H / 2], R = 2300 * Math.pow(outCubic(k), 1.3);
+    g.save(); g.beginPath(); g.arc(cx, cy, R, 0, 7); g.clip(); cur.render(g, T); g.restore(); reset(g);
+    const toCasino = eB === 'casino', a = Math.sin(Math.PI * k);
+    g.save(); g.shadowColor = toCasino ? 'rgba(255,60,60,0.9)' : 'rgba(255,236,200,0.9)'; g.shadowBlur = 40;
+    g.strokeStyle = toCasino ? `rgba(255,96,96,${0.85 * a})` : `rgba(255,248,232,${0.85 * a})`; g.lineWidth = 10 + 30 * (1 - k);
+    g.beginPath(); g.arc(cx, cy, R, 0, 7); g.stroke(); g.restore();
+    const kb = clamp(k / 0.45);                                        // viên nang vỡ đôi ở tâm, hai nửa bay ra
+    if (kb < 1) { const d = 260 * outCubic(kb);
+      for (const s of [-1, 1]) { g.save(); g.globalAlpha = 1 - kb; g.translate(cx + s * d, cy); g.rotate(s * kb * 0.9);
+        g.beginPath(); g.rect(s < 0 ? -120 : 0, -120, 120, 240); g.clip();
+        capsule(g, 0, 0, 80, 1, { tone: toCasino ? 'coral' : 'sky', rot: Math.PI / 2, ground: false }); g.restore(); } }
+    return;
+  }
+  // ── khay xoay: hai cảnh vẽ vào bộ đệm trong suốt (setGround(false)), ghép trên MỘT nền chung ──
+  const e = outCubic(k);
+  setGround(false);
+  try { for (const [b, p] of [[BUF[0], prev], [BUF[1], cur]]) { reset(b); b.clearRect(0, 0, W, H); p.render(b, T); } }
+  finally { setGround(true); }
+  ground(g, T, { era: eB });
+  const dxo = Math.round(-e * (W + 160)), dxi = Math.round((1 - e) * (W + 160));   // dịch làm tròn (LESSONS §47)
+  g.drawImage(BUF[0].canvas, dxo, 0); g.drawImage(BUF[1].canvas, dxi, 0);
+  // viên nang lăn dọc mép tấm mới trên vạch sàn (y 905): góc = quãng / bán kính
+  const r = 34, x = dxi - 60;
+  if (x > -r && x < W + r) capsule(g, x, 905 - r, r, 1, { tone: TONES[i % TONES.length], rot: -x / r });
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, get DUR() { return DUR; }, get LEAD() { return LEAD; }, get cues() { return CUES; } };
+</script>

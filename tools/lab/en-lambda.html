@@ -1,0 +1,23 @@
+<!doctype html><meta charset="utf-8"><title>Lab — λ</title>
+<!-- ?v=sheet: bảng biểu cảm. Mặc định: đoạn chen mẫu 8 s. -->
+<style>html,body{margin:0;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+import { lambda, MODES, moodAt } from '../../projects/en/_kit/lambda.js';
+import { C, FONT, bg, txt, seg, dot, card, unit, onCircle, popped } from '../../projects/en/_kit/system.js';
+const g = document.getElementById('cv').getContext('2d'); let ready = false; const sheet = new URLSearchParams(location.search).get('v') === 'sheet';
+Promise.all([['Archivo', 'Archivo[wdth,wght].ttf', '100 900'], ['IBM Plex Mono', 'IBMPlexMono-Medium.ttf', '500']].map(([n, f, w]) => new FontFace(n, `url("../../assets/fonts/${f}")`, { weight: w }).load().then(x => document.fonts.add(x)))).then(() => { ready = true; });
+const e = k => { k = Math.max(0, Math.min(1, k)); return k * k * (3 - 2 * k); };
+function bubble(x, y, w, h, text, k, tx) { popped(g, tx, y + h + 26, k, () => { g.fillStyle = '#FFF'; g.strokeStyle = C.ink; g.lineWidth = 4; g.beginPath(); g.roundRect(x, y, w, h, 28); g.fill(); g.stroke(); g.beginPath(); g.moveTo(tx - 22, y + h - 2); g.lineTo(tx - 38, y + h + 34); g.lineTo(tx + 22, y + h - 2); g.fillStyle = '#FFF'; g.fill(); g.beginPath(); g.moveTo(tx - 22, y + h); g.lineTo(tx - 38, y + h + 34); g.lineTo(tx + 22, y + h); g.stroke(); txt(g, text, x + w / 2, y + h / 2 + 2, FONT.head(42), C.ink); }); }
+function frame(t) { g.setTransform(1, 0, 0, 1, 0, 0); bg(g);
+  if (sheet) { Object.keys(MODES).forEach((m, i) => { const x = 195 + (i % 5) * 382, y = i < 5 ? 470 : 980; lambda(g, x, y, 370, { ...MODES[m] }); txt(g, m, x, y + 44, FONT.mono(32), C.dim); }); return; }
+  // ô hình + 3 λ: hình toán nằm trong ô, không ai chạm vào
+  card(g, 980, 90, 800, 560, C.faint); const c = [1380, 370], r = 200, th = 30 * D(t), [mx, my] = onCircle(c[0], c[1], r, th); unit(g, c[0], c[1], r); seg(g, mx, c[1], mx, my, Math.sin(th) < 0 ? C.neg : C.sin, 9); dot(g, mx, my, 15, C.ink);
+  txt(g, '−0.988', 1640, 580, FONT.black(60), C.neg, 'center', e((t - 2.8) / .3));
+  seg(g, 80, 960, 1840, 960, C.faint, 3);
+  const A = [[0, 'pondering'], [3, 'confused'], [6, 'surprised']], B = [[0, 'plain'], [2.2, 'curious'], [5.1, 'pondering'], [6.1, 'tease']], D1 = [[0, 'pondering'], [3.2, 'hesitant'], [6.3, 'hooray']];
+  lambda(g, 240, 960, 330, moodAt(t, A, 0)); lambda(g, 520, 960, 330, moodAt(t, B, 1.3)); lambda(g, 800, 960, 330, moodAt(t, D1, 2.1));
+  bubble(240, 210, 620, 110, 'But why is it negative?', e((t - 2.3) / .25) * (1 - e((t - 5) / .25)), 560); }
+function D(t) { return e((t - .3) / 2.4) * 1; }
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 8 };
+</script>

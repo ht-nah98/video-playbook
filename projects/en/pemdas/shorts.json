@@ -1,0 +1,210 @@
+{
+ "cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {
+   "name": "viral-sum",
+   "hook": [
+    "6 ÷ 2(1+2)",
+    "IS IT {9} OR {1}?"
+   ],
+   "pieces": [
+    {
+     "from": "p1:1",
+     "to": "p1:2",
+     "crop": [
+      1700,
+      60,
+      60,
+      0
+     ]
+    },
+    {
+     "from": "p2:63",
+     "to": "p2:65",
+     "crop": [
+      1700,
+      60,
+      60,
+      0
+     ]
+    },
+    {
+     "from": "p2:66",
+     "to": "p2:69",
+     "crop": [
+      1500,
+      60,
+      60,
+      0
+     ],
+     "tail": -0.1,
+     "video": 443.6
+    }
+   ]
+  },
+  {
+   "name": "minus-two-squared",
+   "hook": [
+    "MINUS 2 SQUARED:",
+    "EXCEL SAYS {+4}",
+    "PYTHON SAYS {−4}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:83",
+     "to": "p2:83",
+     "crop": [
+      1080,
+      0,
+      0,
+      60
+     ]
+    },
+    {
+     "from": "p2:84",
+     "to": "p2:85",
+     "crop": [
+      1440,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from": "p2:86",
+     "to": "p2:89",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ],
+     "tail": -0.2
+    }
+   ]
+  },
+  {
+   "name": "calculators-disagree",
+   "hook": [
+    "SAME CALCULATOR",
+    "COMPANY.",
+    "{DIFFERENT} ANSWERS"
+   ],
+   "pieces": [
+    {
+     "from": "p2:70",
+     "to": "p2:70",
+     "video": 471.0,
+     "crop": [
+      1080,
+      840,
+      840,
+      60
+     ]
+    },
+    {
+     "from": "p2:71",
+     "to": "p2:72",
+     "crop": [
+      1080,
+      840,
+      840,
+      60
+     ]
+    },
+    {
+     "from": "p2:73",
+     "to": "p2:73",
+     "crop": [
+      1440,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from": "p2:74",
+     "to": "p2:77",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "m-before-d",
+   "hook": [
+    "THE PEMDAS RULE",
+    "MANY PEOPLE",
+    "{GET WRONG}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:3",
+     "to": "p2:8",
+     "crop": [
+      1800,
+      60,
+      60,
+      0
+     ]
+    },
+    {
+     "from": "p2:13",
+     "to": "p2:15",
+     "crop": [
+      1800,
+      60,
+      60,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "left-to-right",
+   "hook": [
+    "LEFT TO RIGHT",
+    "IS JUST {A CHOICE}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:21",
+     "to": "p2:24",
+     "crop": [
+      1800,
+      60,
+      60,
+      0
+     ],
+     "tail": 0.0
+    }
+   ]
+  },
+  {
+   "name": "why-multiply-first",
+   "hook": [
+    "WHY DOES {×}",
+    "COME BEFORE {+}?"
+   ],
+   "pieces": [
+    {
+     "from": "p2:44",
+     "to": "p2:51",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,247 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — ledger</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#ECE3CB;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Sổ cái" (neg-times-neg). Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/ledger.html --dur 2 --t 0.5,1.5 --outdir out/_lab/ledger
+// Ý trung tâm: số âm sinh ra từ sổ sách (nợ ↔ tài sản), và sổ kép có đúng MỘT luật không ai được "chọn": hai cột phải cân.
+//   Chứng minh = các dòng bút toán; kết quả không ai quyết, nó là con số duy nhất làm sổ cân. Đổi kết quả → sổ lệch.
+// Vật xuyên suốt: CẶP BÚT TOÁN — một dòng Nợ (đỏ) và một dòng Có (xanh) cùng số, gạch đơn rồi "0.00" gạch đôi; con tem
+//   "ZERO PAIR" bị dấu bưu điện huỷ (cancelled = triệt tiêu) đóng ở góc mỗi trang. H4: cột Có trống, dòng cân ra 2.00 → dấu VOID tím.
+// Màu: giấy ngà #ECE3CB + dòng kẻ xanh nhạt, cột kẻ xanh-xám #4F6B5C · mực sắt #2A2118 (chữ trung tính, 0, luật) ·
+//   ĐỎ NỢ #A3261C = âm (mọi video) · XANH CÓ #1D4888 = dương · TÍM TEM #6B2C93 CHỈ cho sai/sụp (gạch, VOID) · chì #5A5650 = giả định.
+// Chữ: Cormorant Garamond LN nghiêng (bút toán viết tay) / đứng (số tiền) · Archivo nén (tiêu đề in sẵn của sổ) · Plex Mono (Ref., ghi chú).
+// Tiếng: pen (ghi dòng, kẻ gạch đôi) · coin (số vào cột Có) · tick (đối chiếu) · snap/impact (đóng tem) · page (sang folio = sang hồi) ·
+//   correct (sổ cân) · error (lệch) · tear (xé trang ở cảnh sụp).
+// Phần khác: Stendhal = trang nhật ký kẹp trong sổ, câu hỏi viết tay · Diophantus 4x + 20 = 4 = bút toán bị gạch tím "absurd" ·
+//   que Trung Quốc = folio phụ lục, que đỏ/đen dán như tem · Brahmagupta = sổ "fortunes & debts" bản dịch, cột Nợ/Có đặt tên cũ ·
+//   Cardano/Maseres/Frend = thư phản đối kẹp lề, dấu "REJECTED" tím · chuyện nợ = sổ cá nhân, gạch nợ khỏi cột · dãy số = cột
+//   chạy số dư giảm dần qua 0 · quay 180° = trục số in ở chân trang, kim quay · Euler = trang sách in · các luật = bìa trong ghi
+//   "Rules of the Ledger" · tóm tắt = sổ cái tổng (trial balance) · quay 90° = mép trang chừa sẵn "carried forward → i".
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { paper: '#ECE3CB', ink: '#2A2118', red: '#A3261C', blue: '#1D4888', violet: '#6B2C93', pencil: '#5A5650',
+  rule: '#4F6B5C', line: '120,150,190' };
+const CG = '"Cormorant Garamond"', MONO = '"IBM Plex Mono"', ARC = '"Archivo"';
+const IM = {}; let PAPER, ready = false;
+const PI = Math.PI;
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+const num = n => (n < 0 ? '−' : '') + Math.abs(n);              // dấu trừ thật U+2212
+const PITCH = 70, TOP = 196;                                     // dòng kẻ sổ: cách đều, trên cùng là vạch dưới tiêu đề cột
+const rowY = k => TOP + PITCH * (k + 1) - 20;                    // đường chân chữ của dòng k
+
+function paper() {                                    // giấy ngà: xơ + loang ẩm nhẹ + dòng kẻ xanh nhạt
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H), b = [0xEC, 0xE3, 0xCB];
+  for (let i = 0; i < W * H; i++) {
+    const px = i % W, py = (i / W) | 0, n = (hash(i * 0.517) - 0.5) * 6 + (hash(((px >> 2) * 17 + (py >> 4)) * 0.31) - 0.5) * 4;
+    const r = Math.hypot((px - W / 2) / W, (py - H / 2) / H), v = 1 - 0.07 * r * r * 4;
+    d.data[i * 4] = b[0] * v + n; d.data[i * 4 + 1] = b[1] * v + n - 1; d.data[i * 4 + 2] = b[2] * v + n - 3; d.data[i * 4 + 3] = 255;
+  }
+  x.putImageData(d, 0, 0);
+  for (let k = 0; k < 5; k++) {                        // vết ố cũ, tất định
+    const ex = 150 + hash(k * 5.3) * 1600, ey = 100 + hash(k * 9.1) * 880, rr = 120 + hash(k * 2.7) * 140, gr = x.createRadialGradient(ex, ey, 0, ex, ey, rr);
+    gr.addColorStop(0, 'rgba(196,160,104,0.10)'); gr.addColorStop(0.85, 'rgba(196,160,104,0.05)'); gr.addColorStop(1, 'rgba(196,160,104,0)');
+    x.fillStyle = gr; x.fillRect(ex - rr, ey - rr, 2 * rr, 2 * rr);
+  }
+  for (let y = TOP + PITCH; y < H; y += PITCH) { x.fillStyle = `rgba(${C.line},0.45)`; x.fillRect(0, y, W, 1.2); }
+  const gut = x.createLinearGradient(0, 0, 46, 0);     // gáy sổ bên trái
+  gut.addColorStop(0, 'rgba(60,40,20,0.30)'); gut.addColorStop(1, 'rgba(60,40,20,0)'); x.fillStyle = gut; x.fillRect(0, 0, 46, H);
+  return c;
+}
+function text(s, x, y, font, color, align = 'left', ls = 0) { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.letterSpacing = ls + 'px'; g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; return w; }
+const note = (s, x, y, color = C.pencil, align = 'left', size = 18) => text(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 1.5);
+function rich(segs, x, y, font, align = 'left') {      // một dòng nhiều màu: [[chuỗi, màu], …]; trả về [x đầu, x cuối của từng đoạn]
+  g.font = font; const ws = segs.map(([s]) => g.measureText(s).width), tot = ws.reduce((a, b) => a + b, 0);
+  let cx = align === 'center' ? x - tot / 2 : align === 'right' ? x - tot : x; const spans = [];
+  segs.forEach(([s, col], i) => { text(s, cx, y, font, col); spans.push([cx, cx + ws[i]]); cx += ws[i]; }); return spans;
+}
+function line(pts, color, w, dash = []) { g.save(); g.strokeStyle = color; g.lineWidth = w; g.lineCap = g.lineJoin = 'round'; g.setLineDash(dash);
+  g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.stroke(); g.restore(); }
+function inkLine(x0, x1, y, color, w = 2.2, seed = 0) {   // nét bút thước kẻ: hơi lệch đầu–cuối, không thẳng tuyệt đối
+  line([[x0, y + (hash(seed) - 0.5) * 1.6], [x1, y + (hash(seed + 1.7) - 0.5) * 1.6]], color, w);
+}
+
+// ——— khung sổ: tiêu đề in sẵn, cột kẻ, ô tiền chia "đồng | xu"
+function book(L, folio, sub) {
+  const { no, part, ref, dr, cr, end } = L;
+  text('JOURNAL', no, 104, `800 34px ${ARC}`, C.ink, 'left', 8);
+  note(`folio ${folio} · ${sub}`, end, 102, C.ink, 'right', 20);
+  g.fillStyle = C.rule; g.fillRect(no, 124, end - no, 3); g.fillRect(no, 131, end - no, 1.2);
+  g.fillStyle = 'rgba(79,107,92,0.08)'; g.fillRect(no, 140, end - no, TOP - 140);
+  const head = [[no + 4, 'NO.'], [part + 14, 'PARTICULARS'], [ref + 12, 'REF.'], [dr + 14, 'DEBT · DR.'], [cr + 14, 'FORTUNE · CR.']];
+  head.forEach(([x, s]) => text(s, x, 178, `700 19px ${ARC}`, s.startsWith('DEBT') ? C.red : s.startsWith('FORT') ? C.blue : C.ink, 'left', 2.5));
+  g.fillStyle = C.rule; g.fillRect(no, TOP - 3, end - no, 1.2); g.fillRect(no, TOP, end - no, 1.2);
+  const vr = (x, w = 1.2) => { g.fillStyle = C.rule; g.fillRect(x, 140, w, 1016 - 140); };
+  [no, part, ref, dr, cr].forEach(x => vr(x)); vr(dr - 5); vr(cr - 5); vr(end); vr(end + 5);
+  g.globalAlpha = 0.55; vr(dr + L.cent); vr(cr + L.cent); g.globalAlpha = 1;
+}
+function amount(L, col, n, color, k, opt = {}) {      // số tiền vào cột: phần đồng căn phải tới vạch xu, xu "00" trong ô xu
+  const x0 = L[col], cx = x0 + L.cent, y = rowY(k), cw = L[col === 'dr' ? 'cr' : 'end'] - (col === 'dr' ? 5 : 0) - cx;
+  text(String(n), cx - 12, y, `600 50px ${CG}`, color, 'right');
+  text('00', cx + cw / 2, y, `600 34px ${CG}`, color, 'center');
+  return [cx - 12, y];
+}
+function balance(L, k, val, color, label = 'balance') {   // dòng cân: gạch đơn trên, số ở giữa hai cột, gạch đôi dưới
+  const x0 = L.dr + 18, x1 = L.end - 14, y = rowY(k), mid = (L.dr + L.end) / 2;
+  inkLine(x0, x1, y - 50, C.ink, 1.8, k * 3.3);
+  text(`${val}.00`, mid, y, `700 50px ${CG}`, color, 'center');
+  inkLine(x0, x1, y + 12, C.ink, 2.2, k * 5.1); inkLine(x0, x1, y + 19, C.ink, 2.2, k * 7.9);
+  note(label, L.ref + 12, y - 4, C.ink);
+}
+function therefore(x, y, color, r = 5.5) {             // ∴ vẽ tay: Cormorant/Archivo/Plex đều thiếu U+2234
+  g.fillStyle = color; [[0, -19], [-11, 0], [11, 0]].forEach(([dx, dy]) => { g.beginPath(); g.arc(x + dx, y + dy, r, 0, 2 * PI); g.fill(); });
+}
+
+// ——— con tem "ZERO PAIR": mép răng cưa, +x xanh | −x đỏ, dấu huỷ chồng lên (cancelled = triệt tiêu)
+function stamp(x, y, w, h, rot, voided, waves = 30) {
+  g.save(); g.translate(x + w / 2, y + h / 2); g.rotate(rot); g.translate(-w / 2, -h / 2);
+  g.fillStyle = 'rgba(40,30,20,0.18)'; g.fillRect(5, 7, w, h);
+  g.beginPath(); g.rect(0, 0, w, h); const r = 6;
+  for (let px = r; px < w; px += 2.6 * r) { g.moveTo(px + r, 0); g.arc(px, 0, r, 0, PI); g.moveTo(px + r, h); g.arc(px, h, r, 0, PI); }
+  for (let py = r; py < h; py += 2.6 * r) { g.moveTo(r, py); g.arc(0, py, r, 0, 2 * PI); g.moveTo(w + r, py); g.arc(w, py, r, 0, 2 * PI); }
+  g.fillStyle = '#F6F0DE'; g.fill('evenodd');
+  g.strokeStyle = C.ink; g.lineWidth = 1.4; g.strokeRect(14, 14, w - 28, h - 28); g.strokeRect(19, 19, w - 38, h - 38);
+  g.fillStyle = 'rgba(29,72,136,0.12)'; g.fillRect(20, 20, (w - 40) / 2, h - 82);
+  g.fillStyle = 'rgba(163,38,28,0.12)'; g.fillRect(w / 2, 20, (w - 40) / 2, h - 82);
+  text('+x', w / 4 + 10, 92, `italic 700 58px ${CG}`, C.blue, 'center');
+  text('−x', 3 * w / 4 - 10, 92, `italic 700 58px ${CG}`, C.red, 'center');
+  g.fillStyle = C.ink; g.fillRect(20, h - 62, w - 40, 1.2);
+  text('ZERO PAIR', 34, h - 32, `800 20px ${ARC}`, C.ink, 'left', 3);
+  g.restore();
+  // dấu bưu điện huỷ tem: vòng tròn ghi "0.00" + sóng
+  const ox = x + w - 2, oy = y + h - 26;
+  g.save(); g.globalAlpha = 0.78; g.strokeStyle = C.ink; g.lineWidth = 2.4;
+  g.beginPath(); g.arc(ox, oy, 46, 0, 2 * PI); g.stroke(); g.lineWidth = 1.2; g.beginPath(); g.arc(ox, oy, 40, 0, 2 * PI); g.stroke();
+  text('0.00', ox, oy + 10, `700 30px ${CG}`, C.ink, 'center');
+  g.lineWidth = 2; for (let k = 0; k < 3; k++) { g.beginPath(); for (let s = 0; s <= waves; s++) { const px = ox + 50 + s * 3.4, py = oy - 18 + k * 18 + Math.sin(s * 0.5) * 5; s ? g.lineTo(px, py) : g.moveTo(px, py); } g.stroke(); }
+  g.restore();
+  if (voided) {                                       // H4: tem VOID — tím, chéo ngang
+    g.save(); g.translate(x + w / 2, y + h / 2 + 6); g.rotate(-0.22); g.strokeStyle = C.violet; g.lineWidth = 4;
+    g.strokeRect(-110, -34, 220, 66); g.lineWidth = 1.6; g.strokeRect(-103, -27, 206, 52);
+    text('VOID', 0, 17, `900 50px ${ARC}`, C.violet, 'center', 10); g.restore();
+  }
+}
+
+function sprite(pose) {                               // nhân vật + viền mực 3px (áo trắng không chìm vào giấy ngà)
+  const im = IM[pose], p = 6, c = mk(im.width + 2 * p, im.height + 2 * p), x = c.getContext('2d');
+  const sil = mk(im.width, im.height), sx = sil.getContext('2d'); sx.drawImage(im, 0, 0); sx.globalCompositeOperation = 'source-in'; sx.fillStyle = C.ink; sx.fillRect(0, 0, im.width, im.height);
+  for (let k = 0; k < 16; k++) { const a = k / 16 * 2 * PI; x.drawImage(sil, p + 3.2 * Math.cos(a), p + 3.2 * Math.sin(a)); }
+  x.drawImage(im, p, p); return { c, p, h: im.height };
+}
+function figure(S, cx, foot, h) {
+  const s = h / S.h, w = S.c.width * s, x0 = cx - w / 2, y0 = foot - h - S.p * s;
+  g.drawImage(S.c, x0, y0, w, S.c.height * s); return (ix, iy) => [x0 + (ix + S.p) * s, y0 + (iy + S.p) * s];
+}
+
+const EX = `italic 600 46px ${CG}`, BIG = `italic 700 72px ${CG}`;
+const frames = [
+  () => {                                             // 0 · HỒI 3: bước cuối của chứng minh — các dòng bút toán phải cân
+    const L = { no: 96, part: 150, ref: 760, dr: 880, cr: 1100, end: 1316, cent: 150 };
+    book(L, 'III', 'the proof');
+    const a = 2, b = must('(-3) * 2', -6), z = must('(-3) * (2 + (-2))', 0), z0 = must('(-3) * 0', 0);
+    const ans = must('0 - (-6)', 6); must('-6 + 6', 0);
+    const NO = (n, k) => text(String(n), L.no + 26, rowY(k), `600 40px ${CG}`, C.ink, 'center');
+    // 1 · cặp số đối trong ngoặc: 2 vào cột Có, −2 vào cột Nợ
+    NO(1, 0);
+    rich([['(−3) × (', C.ink], [num(a), C.blue], [' + ', C.ink], [`(${num(-a)})`, C.red], [')', C.ink]], L.part + 16, rowY(0), EX);
+    note('pair', L.ref + 12, rowY(0) - 4, C.ink);
+    amount(L, 'dr', Math.abs(-a), C.red, 0); amount(L, 'cr', a, C.blue, 0);
+    balance(L, 1, z, C.ink, 'nets to');
+    note('inside the brackets', L.part + 16, rowY(1) - 4);
+    NO(2, 2); rich([['= (−3) × ', C.ink], [String(z), C.ink], [' = ', C.ink], [String(z0), C.ink]], L.part + 16, rowY(2), EX);
+    // 3 · luật phân phối
+    NO(3, 3); rich([['= (−3) × 2 + ', C.ink], ['(−3) × (−2)', C.ink]], L.part + 16, rowY(3), EX);
+    note('distrib.', L.ref + 12, rowY(3) - 4, C.ink);
+    // 4 · −6 vào cột Nợ; cột Có buộc phải là 6 để dòng cân về 0
+    NO(4, 4); rich([['= ', C.ink], [num(b), C.red], [' + ', C.ink], ['(−3) × (−2)', C.blue]], L.part + 16, rowY(4), EX);
+    amount(L, 'dr', Math.abs(b), C.red, 4);
+    const [, qy] = amount(L, 'cr', ans, C.blue, 4);
+    g.save(); g.strokeStyle = C.blue; g.lineWidth = 2; g.setLineDash([6, 5]); g.strokeRect(L.cr + 22, qy - 48, L.end - L.cr - 28, 62); g.restore();
+    balance(L, 5, must('-6 + 6', 0), C.ink, 'must net');
+    note('the only number that balances', L.part + 16, rowY(5) - 4);
+    // ∴ kết luận
+    const ky = rowY(7) + 6;
+    therefore(L.no + 26, ky - 16, C.ink);
+    const sp = rich([['(−3) × (−2) = ', C.ink], [String(ans), C.blue]], L.part + 16, ky, BIG);
+    inkLine(sp[1][0] - 8, sp[1][1] + 10, ky + 16, C.blue, 2.6, 11); inkLine(sp[1][0] - 8, sp[1][1] + 10, ky + 24, C.blue, 2.6, 13);
+    note('q.e.d.', L.ref + 12, ky - 6, C.ink);
+    text('The opposite of minus six is six.', L.part + 16, rowY(9) - 2, `italic 500 40px ${CG}`, C.ink);
+    stamp(1558, 70, 250, 196, 0.035, false);
+    // nhân vật: nửa thân, bên phải, phấn hướng về sổ
+    figure(IM.chalkS, 1632, 1080, 760);
+  },
+  () => {                                             // 1 · HỒI 4: thử phá — giả định (−1)(−1) = −1, sổ không cân
+    const L = { no: 480, part: 534, ref: 1196, dr: 1316, cr: 1570, end: 1820, cent: 170 };
+    book(L, 'IV', 'suppose');
+    const z = must('(-1) * (1 + (-1))', 0), z0 = must('(-1) * 0', 0), SUP = -1;
+    const net = must('(-1) * 1 + (-1)', -2);
+    const NO = (n, k) => text(String(n), L.no + 27, rowY(k), `600 40px ${CG}`, C.ink, 'center');
+    // giả định: bút chì, khung nét đứt, "provisional"
+    rich([['Suppose  (−1) × (−1) = ', C.pencil], [num(SUP), C.pencil]], L.part + 16, rowY(0), `italic 500 46px ${CG}`);
+    g.save(); g.strokeStyle = C.pencil; g.lineWidth = 1.4; g.setLineDash([3, 6]); g.strokeRect(L.part + 4, rowY(0) - 48, L.ref - L.part - 18, 64); g.restore();
+    note('pencil', L.ref + 12, rowY(0) - 22, C.pencil); note('only', L.ref + 12, rowY(0) + 2, C.pencil);
+    NO(1, 1);
+    rich([['(−1) × (', C.ink], ['1', C.blue], [' + ', C.ink], ['(−1)', C.red], [')', C.ink]], L.part + 16, rowY(1), EX);
+    note('pair', L.ref + 12, rowY(1) - 4, C.ink);
+    amount(L, 'dr', 1, C.red, 1); amount(L, 'cr', 1, C.blue, 1);
+    balance(L, 2, z, C.ink, 'nets to');
+    NO(2, 3); text(`= (−1) × ${z} = ${z0}`, L.part + 16, rowY(3), EX, C.ink);
+    NO(3, 4); text('= (−1) × 1 + (−1) × (−1)', L.part + 16, rowY(4), EX, C.ink); note('distrib.', L.ref + 12, rowY(4) - 4, C.ink);
+    NO(4, 5); rich([['= ', C.ink], ['−1', C.red], [' + ', C.ink], [`(${num(SUP)})`, C.red]], L.part + 16, rowY(5), EX);
+    note('new rule', L.ref + 12, rowY(5) - 4, C.pencil);
+    amount(L, 'dr', 1, C.red, 5); amount(L, 'dr', 1, C.red, 6);
+    note('the new rule, posted as a debt', L.part + 16, rowY(6) - 4);
+    // cột Có trống: chỗ của bạn đối đã mất
+    [5, 6].forEach(k => { g.save(); g.strokeStyle = C.violet; g.lineWidth = 2; g.setLineDash([7, 6]); g.strokeRect(L.cr + 22, rowY(k) - 48, L.end - L.cr - 28, 60); g.restore(); });
+    note('no partner', L.cr + 40, rowY(6) - 12 + 0, C.violet, 'left', 18);
+    // dòng cân: 0.00 dự kiến bị gạch tím, sổ lệch 2.00 về phía Nợ
+    const y = rowY(7), mid = (L.dr + L.end) / 2;
+    inkLine(L.dr + 18, L.end - 14, y - 50, C.ink, 1.8, 3);
+    text('0.00', mid - 90, y, `700 50px ${CG}`, C.ink, 'center');
+    line([[mid - 150, y - 10], [mid - 30, y - 24]], C.violet, 5);
+    text(`${Math.abs(net)}.00 DR.`, mid + 100, y, `700 50px ${CG}`, C.red, 'center');
+    inkLine(L.dr + 18, L.end - 14, y + 12, C.ink, 2.2, 5); inkLine(L.dr + 18, L.end - 14, y + 19, C.ink, 2.2, 8);
+    note('nets to', L.ref + 12, y - 4, C.ink);
+    // ∴ 0 = −2 — gạch tím + dấu DOES NOT BALANCE
+    const ky = rowY(9) + 4;
+    therefore(L.no + 27, ky - 20, C.ink);
+    const sp = rich([[String(z), C.ink], ['  =  ', C.ink], [num(net), C.red]], L.part + 16, ky, `italic 700 92px ${CG}`);
+    line([[sp[0][0] - 16, ky - 24], [sp[2][1] + 20, ky - 34]], C.violet, 4);
+    g.save(); g.translate(1130, ky - 34); g.rotate(-0.07); g.strokeStyle = C.violet; g.lineWidth = 4.5;
+    g.strokeRect(-236, -46, 472, 86); g.lineWidth = 1.6; g.strokeRect(-228, -38, 456, 70);
+    text('DOES NOT BALANCE', 0, 12, `900 34px ${ARC}`, C.violet, 'center', 2); g.restore();
+    text('One small change, and arithmetic collapses.', L.part + 16, rowY(10) + 8, `italic 500 40px ${CG}`, C.ink);
+    stamp(100, 70, 250, 196, -0.04, true, 14);
+    // nhân vật: toàn thân, bên trái, lùi lại khỏi sổ
+    g.save(); g.fillStyle = 'rgba(40,30,20,0.16)'; g.beginPath(); g.ellipse(250, 1052, 150, 14, 0, 0, 2 * PI); g.fill(); g.restore();
+    figure(IM.startledS, 250, 1056, 760);
+  },
+];
+
+(async () => {
+  await Promise.all(['italic 600 46px', 'italic 700 72px', 'italic 700 92px', 'italic 500 46px', 'italic 500 40px', 'italic 700 58px',
+    '600 50px', '600 34px', '700 50px', '600 40px', '700 56px', '700 32px']
+    .map(f => document.fonts.load(`${f} ${CG}`))
+    .concat(['500 18px', '500 20px'].map(f => document.fonts.load(`${f} ${MONO}`)))
+    .concat(['800 34px', '700 19px', '800 20px', '900 50px', '900 36px'].map(f => document.fonts.load(`${f} ${ARC}`))));
+  await Promise.all(['chalk', 'startled'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../../assets/character-v2/cut/pose-${p}.png`; })));
+  IM.chalkS = sprite('chalk'); IM.startledS = sprite('startled');
+  PAPER = paper(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(PAPER, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

@@ -1,0 +1,89 @@
+<!doctype html><meta charset="utf-8"><title>Lab — hệ hình kênh Anh + người que</title>
+<!-- Bàn thử 2026-11-02 (en/trig-explained): hệ hình cố định kênh toán Anh (§245) + vai pi creature (§244). ?sys=a nền xanh đêm, ?sys=b giấy.
+     node engine/render/shoot.js video --page "tools/lab/en-system.html?sys=a" --dur 30 --fps 30 --out out/_lab/en-system/a.mp4 -->
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+import { pose, stage } from '../../engine/stick-dict.js';
+import { hero, RED } from '../../engine/hero.js';
+import { ease, fast } from '../../engine/stickmove.js';
+const g = document.getElementById('cv').getContext('2d');
+const SYS = { a: { bg: '#0D1B2A', grid: 'rgba(120,160,200,.09)', ink: '#F4F1E8', dim: 'rgba(244,241,232,.55)', sin: '#FFD23F', cos: '#4CC9F0', neg: '#FF5A5F', panel: '#16293D', v: 'D' },
+              b: { bg: '#F4F1E8', grid: 'rgba(34,48,60,.08)', ink: '#22303C', dim: 'rgba(34,48,60,.55)', sin: '#D9861E', cos: '#0F8B8D', neg: '#D9281E', panel: '#FFFFFF', v: 'C' } };
+const S = SYS[new URLSearchParams(location.search).get('sys') || 'a'];
+let ready = false;
+Promise.all([['Archivo', 'Archivo[wdth,wght].ttf', '100 900'], ['Plex', 'IBMPlexMono-Medium.ttf', '500'], ['Caveat', 'Caveat[wght].ttf', '400 700']]
+  .map(([n, f, w]) => new FontFace(n, `url("../../assets/fonts/${f}")`, { weight: w }).load().then(x => document.fonts.add(x)))).then(() => { ready = true; });
+const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v)), win = (t, a, b) => clamp((t - a) / (b - a)), lerp = (a, b, k) => a + (b - a) * k;
+const H = 300, GY = 860, D2R = Math.PI / 180, DUR = 30;
+const txt = (s, x, y, font, col, al = 'center', a = 1) => { g.save(); g.globalAlpha *= a; g.font = font; g.fillStyle = col; g.textAlign = al; g.textBaseline = 'middle'; g.fillText(s, x, y); g.restore(); };
+const line = (a, b, c, d, col, w, dash) => { g.save(); g.strokeStyle = col; g.lineWidth = w; g.lineCap = 'round'; if (dash) g.setLineDash(dash); g.beginPath(); g.moveTo(a, b); g.lineTo(c, d); g.stroke(); g.restore(); };
+const pop = k => { k = clamp(k); return k < .6 ? 1.25 * ease(k / .6) : 1.25 - .25 * ease((k - .6) / .4); };
+const draw = (A, h, o = {}) => hero(g, S.v, A.hip[0], 0, A.pose, { soft: true, h, dir: A.dir, hip: A.hip, feet: A.feet, rot: A.rot, front: A.front, arm: A.arm, hands: A.hands, eye: o.eye, wind: o.wind ?? 0, t: o.t });
+function bg() { g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = S.bg; g.fillRect(0, 0, 1920, 1080);
+  g.strokeStyle = S.grid; g.lineWidth = 2; g.beginPath(); for (let x = 0; x <= 1920; x += 60) { g.moveTo(x, 0); g.lineTo(x, 1080); } for (let y = 0; y <= 1080; y += 60) { g.moveTo(0, y); g.lineTo(1920, y); } g.stroke(); }
+function ground(y = GY) { line(60, y, 1860, y, S.dim, 4); }
+function bubbleMark(ch, x, y, k, col) { if (k <= 0) return; g.save(); g.translate(x, y); g.scale(pop(k), pop(k)); txt(ch, 0, 0, '900 110px Archivo', col); g.restore(); }
+
+// ── 1. Thắc mắc: hai màn hình, một phép tính ──
+const K1 = { h: H, ground: () => GY, walks: [{ x0: 170, x1: 420, t0: .2, t1: 1.45, step: .3 }],
+  keys: [[0, pose('idle', { x: 170 })], [1.45, pose('idle', { x: 420 })], [1.75, pose('point', { x: 420 }), fast], [2.6, pose('point', { x: 420 })], [3.05, pose('dodge', { x: 420 }), fast], [3.8, pose('dodge', { x: 420 })], [4.2, pose('think', { x: 420, head: 8 }), fast], [7.5, pose('think', { x: 420, head: 2 })]] };
+function calc(x, y, label, val, col, a, sc) { g.save(); g.globalAlpha = a; g.translate(x, y); g.scale(sc, sc);
+  g.fillStyle = S.panel; g.strokeStyle = S.ink; g.lineWidth = 6; g.beginPath(); g.roundRect(-230, -150, 460, 300, 26); g.fill(); g.stroke();
+  txt(label, -196, -104, '500 30px Plex', S.dim, 'left'); txt('sin 30', 196, -40, '500 56px Plex', S.ink, 'right'); txt(val, 196, 62, '800 92px Archivo', col, 'right'); g.restore(); }
+function s1(t) { ground();
+  calc(960, 400, 'DEG', '0.5', S.sin, win(t, .9, 1.2), .85 + .15 * ease(win(t, .9, 1.2)));
+  calc(1490, 400, 'RAD', '−0.988', S.neg, win(t, 2.75, 2.85), 1 + .12 * (1 - ease(win(t, 2.85, 3.2))));
+  const look = t > 3 ? [1, -.2] : [.8, -.2], wide = t > 3 && t < 4.2 ? 1 : 0;
+  draw(stage(t, K1), H, { eye: { look, wide }, t });
+  bubbleMark('?', 420 + 150, 400, win(t, 4.25, 4.6), S.sin); }
+
+// ── 2. Ngạc nhiên: kéo to tam giác, tỉ số không đổi ──
+const AX = 150, L0 = 330, L1 = 1120, T30 = Math.tan(30 * D2R), PULL0 = 8.6, PULL1 = 11.6, GRIP = 70;
+const K2 = { h: H, ground: () => GY, dirAt: t => (t > 11.95 ? -1 : 1), walks: [{ x0: AX + L0 + GRIP, x1: AX + L1 + GRIP, t0: PULL0, t1: PULL1, step: .32 }],
+  keys: [[7.5, pose('idle', { x: AX + L0 + GRIP })], [PULL0, pose('idle', { x: AX + L0 + GRIP })], [PULL1, pose('idle', { x: AX + L1 + GRIP })], [11.95, pose('idle', { x: AX + L1 + GRIP })], [12.1, pose('dodge', { x: AX + L1 + GRIP }), fast], [14, pose('dodge', { x: AX + L1 + GRIP, head: 6 })]] };
+function s2(t) { ground(); const A = stage(t, K2), hold = t < 11.8;
+  const L = hold ? clamp(A.hip[0] - GRIP - AX, L0, L1) : L1, H3 = L * T30, ex = AX + L, ey = GY - H3;
+  g.fillStyle = S.grid; g.beginPath(); g.moveTo(AX, GY); g.lineTo(ex, GY); g.lineTo(ex, ey); g.closePath(); g.fill();
+  line(AX, GY, ex, GY, S.cos, 8); line(AX, GY, ex, ey, S.ink, 8); line(ex, GY, ex, ey, S.sin, 10);
+  g.strokeStyle = S.dim; g.lineWidth = 4; g.strokeRect(ex - 26, GY - 26, 26, 26);
+  g.strokeStyle = S.ink; g.lineWidth = 5; g.beginPath(); g.arc(AX, GY, 110, -30 * D2R, 0); g.stroke(); txt('30°', AX + 150, GY - 34, '800 40px Archivo', S.ink);
+  const u = L / L0 * 2, up = u, lg = 2 * u;
+  // tỉ số: hai độ dài chạy, thương đứng yên — đặt góc trên trái, không đè tam giác
+  txt(`height  ${up.toFixed(1)}`, 110, 130, '500 44px Plex', S.sin, 'left'); txt(`long side  ${lg.toFixed(1)}`, 110, 190, '500 44px Plex', S.ink, 'left');
+  line(110, 232, 620, 232, S.dim, 3);
+  const pulse = 1 + .1 * Math.sin(Math.PI * win(t, 12.05, 12.6));
+  g.save(); g.translate(110, 300); g.scale(pulse, pulse); txt('sine = 0.50', 0, 0, '900 72px Archivo', S.sin, 'left'); g.restore();
+  if (hold) { const hg = [ex, GY - .56 * H]; g.save(); A.hands = [hg, null]; }
+  draw(A, H, { eye: { look: t > 11.95 ? [-1, -.5] : [.8, 0], wide: t > 12.05 ? 1 : 0 }, t }); if (hold) g.restore();
+  bubbleMark('!', A.hip[0] + 40, GY - 1.2 * H - 50, win(t, 12.08, 12.4), S.sin); }
+
+// ── 3. Hiểu ra: M qua trái, toạ độ âm ──
+const K3 = { h: H, ground: () => GY, keys: [[14, pose('think', { x: 300 })], [16.9, pose('think', { x: 300, head: 20 })], [17.05, pose('cheer', { x: 300 }), fast], [18.1, pose('cheer', { x: 300 })], [18.35, pose('point', { x: 300 }), fast], [19.5, pose('point', { x: 300 })]] };
+const C3 = [1040, 470], R3 = 340;
+function axes(c, r) { line(c[0] - r - 70, c[1], c[0] + r + 70, c[1], S.dim, 3); line(c[0], c[1] - r - 50, c[0], c[1] + r + 50, S.dim, 3); g.strokeStyle = S.ink; g.lineWidth = 7; g.beginPath(); g.arc(c[0], c[1], r, 0, 7); g.stroke(); }
+function s3(t) { ground(); axes(C3, R3); const th = lerp(30, 120, ease(win(t, 14.4, 16.8))) * D2R, mx = C3[0] + R3 * Math.cos(th), my = C3[1] - R3 * Math.sin(th), neg = Math.cos(th) < 0;
+  line(mx, my, mx, C3[1], S.sin, 9); line(C3[0], C3[1], mx, C3[1], neg ? S.neg : S.cos, 9); line(C3[0], C3[1], mx, my, S.dim, 3);
+  g.fillStyle = S.ink; g.beginPath(); g.arc(mx, my, 18, 0, 7); g.fill(); txt('M', mx + (neg ? -46 : 46), my - 30, '800 44px Archivo', S.ink);
+  txt(`up  ${Math.sin(th).toFixed(3)}`, 1490, 200, '500 44px Plex', S.sin, 'left'); txt(`across  ${Math.cos(th).toFixed(3).replace('-', '−')}`, 1490, 262, '500 44px Plex', neg ? S.neg : S.cos, 'left');
+  const hap = t > 17.05 && t < 18.2; draw(stage(t, K3), H, { eye: { look: [.9, -.4], shape: hap ? 'happy' : 'open' }, t });
+  bubbleMark('!', 480, 380, win(t, 17.05, 17.35), S.sin); }
+
+// ── 4. Đi 30 đơn vị trên vành: 4 vòng + dư, dừng dưới đáy ──
+const C4 = [960, 540], R4 = 300, H4 = 170, W0 = 19.8, W1 = 27.4, STEP = .62, TSTEP = .16, VG = STEP * H4 / TSTEP / R4; // tốc độ chân (rad/s), trùng lúc chậm
+const N = 2000, bump = u => ease(win(u, .14, .42)) * (1 - ease(win(u, .72, .9)));
+const TAB = (() => { const dt = 1 / N; let a = 0, b = 0; const Ia = [0], Ib = [0]; for (let i = 0; i < N; i++) { const u = (i + .5) / N; a += dt; b += bump(u) * dt; Ia.push(a); Ib.push(b); }
+  const span = W1 - W0, X = (30 - VG * span) / (b * span); return Ia.map((_, i) => (VG * Ia[i] + X * Ib[i]) * span); })();
+const thetaAt = t => { const u = win(t, W0, W1) * N, i = Math.min(N - 1, Math.floor(u)); return lerp(TAB[i], TAB[i + 1], u - i); };
+const K4 = { h: H4, ground: () => 0, walks: [{ x0: 0, x1: -STEP * H4 * Math.round((W1 - W0) / TSTEP - 1), t0: W0, t1: W1, step: STEP, run: .55, dir: -1 }],
+  dirAt: () => -1, keys: [[W0, pose('idle', { x: 0 })], [W1, pose('idle', { x: -STEP * H4 * Math.round((W1 - W0) / TSTEP - 1) })], [W1 + .25, pose('sad', { x: -STEP * H4 * Math.round((W1 - W0) / TSTEP - 1) }), fast], [30, pose('sad', { x: -STEP * H4 * Math.round((W1 - W0) / TSTEP - 1), head: 10 })]] };
+function s4(t) { axes(C4, R4); const th = thetaAt(t), mx = C4[0] + R4 * Math.cos(th), my = C4[1] - R4 * Math.sin(th), turns = Math.floor(th / (2 * Math.PI));
+  g.strokeStyle = S.sin; g.lineWidth = 12; g.lineCap = 'round'; const tail = Math.min(th, 1.5); if (tail > 0 && t < W1 + .2) { g.beginPath(); g.arc(C4[0], C4[1], R4, -th, -th + tail); g.stroke(); }
+  txt(`walked  ${th.toFixed(1)}`, 110, 130, '500 48px Plex', S.ink, 'left'); txt(`full turns  ${turns}`, 110, 195, '500 48px Plex', S.cos, 'left');
+  const kEnd = win(t, W1 + .3, W1 + .8);
+  if (kEnd > 0) { line(mx, my, mx, C4[1], S.neg, 9); g.fillStyle = S.neg; g.beginPath(); g.arc(mx, my, 14, 0, 7); g.fill(); g.save(); g.translate(1490, 800); const p = pop(kEnd); g.scale(p, p); txt('−0.988', 0, 0, '900 92px Archivo', S.neg); g.restore(); txt('height here', 1490, 730, '500 34px Plex', S.dim); }
+  const A = stage(t, K4), phi = Math.PI / 2 - th; g.save(); g.translate(C4[0], C4[1]); g.rotate(phi); g.translate(-A.hip[0], -R4);
+  const dizzy = t > W1 && t < W1 + 1.1; draw(A, H4, { eye: { look: [-.6, 0], shape: dizzy ? 'x' : 'open' }, wind: clamp((thetaAt(t + .02) - th) / .2), t }); g.restore(); }
+function frame(t) { bg(); if (t < 7.5) s1(t); else if (t < 14) s2(t); else if (t < 19.5) s3(t); else s4(t); }
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR };
+</script>

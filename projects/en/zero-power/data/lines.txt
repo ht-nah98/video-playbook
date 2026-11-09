@@ -1,0 +1,149 @@
+## Cold open   []
+p1 0 0.02 6.36 two to the power of three means three twos multiplied together two times two times two which is eight that makes sense
+p1 1 6.77 9.93 two to the power of one is just two on its own that makes sense too
+p1 2 10.34 15.40 but then comes two to the power of zero your textbook says it equals one and every calculator agrees
+p1 3 16.46 16.86 why one
+p1 4 17.25 21.88 if a power counts how many times you multiply then a power of zero means multiplying zero times
+p1 5 22.29 25.59 and multiplying zero times sounds like it should mean nothing at all
+p1 6 26.60 28.76 it gets stranger try zero to the power of zero
+p1 7 29.17 31.81 python says one so does javascript and so does google
+p1 8 32.20 36.06 a ti eighty-four calculator says domain error excel gives you an error too
+p1 9 36.55 39.34 same question same symbols and the machines can't agree
+p1 10 40.34 43.10 so in this video i want to answer three questions with you
+p1 11 43.52 45.93 one why is anything to the power of zero equal to one
+p1 12 46.34 49.03 two is that a rule somebody chose or is it forced on us
+p1 13 49.46 52.86 and three what is zero to the zero and why do the machines disagree
+p1 14 53.87 57.06 here is where we are going that one isn't a trick and it isn't nothing
+p1 15 57.45 62.95 multiplying zero times means you haven't multiplied yet and a multiplication that hasn't started stands at one
+p1 16 63.37 67.89 but zero to the zero is where two good ideas collide to see why we start with a staircase
+## Down the powers of two   [ACT ONE — Follow the pattern]
+p2 0 0.02 1.86 let's begin with the most visual way to see it
+p2 1 2.29 8.94 write the powers of two in a column two to the fourth is sixteen two cubed is eight two squared is four and two to the first is two
+p2 2 9.35 13.75 now notice what happens each time the exponent goes down by one the answer is divided by two
+p2 3 14.14 18.73 sixteen to eight divide by two eight to four divide by two four to two divide by two again
+p2 4 19.16 21.98 so what should the next step be two divided by two is one
+p2 5 22.37 24.57 if the pattern keeps going two to the zero is one
+## Try another number   [ACT ONE — Follow the pattern]
+p2 6 26.23 28.89 let's check with another number just to be sure take ten
+p2 7 29.34 32.97 ten cubed is a thousand ten squared is a hundred ten to the first is ten
+p2 8 33.44 36.37 each step down divides by ten and ten divided by ten is one
+p2 9 36.77 38.35 so ten to the zero is one as well
+p2 10 38.78 46.38 start from any number you like as long as it isn't zero and the staircase always lands on one on the last step you are dividing the number by itself
+## A pattern is not a proof   [ACT ONE — Follow the pattern]
+p2 11 48.12 51.50 this is the easiest way to see it but a pattern is a hint not a reason
+p2 12 51.91 55.78 who says the pattern has to keep going past the last step we actually understand
+p2 13 56.21 59.92 mathematics needs something stronger a reason why a to the zero has to be one
+## The rule you already know   [ACT TWO — Forced by a rule]
+p2 14 62.36 64.91 there is one rule about powers that everybody learns
+p2 15 65.40 67.74 a to the m times a to the n equals a to the m plus n
+p2 16 68.15 73.59 for example two cubed times two squared is two to the three plus two that's two to the fifth thirty-two
+p2 17 74.02 76.57 you can check it eight times four really is thirty-two
+p2 18 76.98 81.78 the rule works because you are only counting twos three of them then two more five altogether
+## Put in a zero   [ACT TWO — Forced by a rule]
+p2 19 83.42 85.23 now let's ask the rule about a to the zero
+p2 20 85.68 88.32 take any number a that isn't zero and any exponent m
+p2 21 88.75 93.50 the rule says a to the m times a to the zero equals a to the m plus zero and m plus zero is just m
+p2 22 93.91 96.42 so a to the m times a to the zero gives back a to the m
+p2 23 96.85 99.74 whatever a to the zero is multiplying by it changes nothing
+p2 24 100.13 105.29 and because a to the m isn't zero we can divide both sides by it what's left is a to the zero equals one
+p2 25 105.68 109.48 hold on to that small step because it isn't zero it is going to matter later
+## Or divide   [ACT TWO — Forced by a rule]
+p2 26 111.14 112.79 there is another way to say the same thing
+p2 27 113.18 116.96 any number divided by itself is one so a to the m divided by a to the m is one
+p2 28 117.35 122.62 but the division rule for powers says a to the m divided by a to the m is a to the m minus m that's a to the zero
+p2 29 123.09 125.05 two roads same place a to the zero is one
+## Multiplying zero times   [ACT TWO — Forced by a rule]
+p2 30 126.69 130.57 so what about the question we started with what does it mean to multiply zero times
+p2 31 131.00 132.90 think about where a calculation starts
+p2 32 133.33 139.95 when you add up a list of numbers you start from zero because adding zero changes nothing add up no numbers at all and you get zero
+p2 33 140.40 145.32 when you multiply a list of numbers you start from one because multiplying by one changes nothing
+p2 34 145.71 148.21 two cubed is really one times two times two times two
+p2 35 148.62 152.63 take the twos away one at a time and you are left with the starting point one
+p2 36 153.04 158.78 multiplying zero times isn't nothing it's not having done anything yet and for multiplication that place is one
+## A choice, then no choice   [ACT TWO — Forced by a rule]
+p2 37 160.48 161.36 so is this a convention
+p2 38 161.75 168.23 here is the honest answer the rule for multiplying powers was first proved for counting exponents one two three and so on
+p2 39 168.68 176.30 asking it to work for zero as well is a choice it's the same choice we met in the last video about negative numbers keep the rules that already work
+p2 40 176.73 180.96 but once you make that choice nothing else is a choice a to the zero is forced to be one
+p2 41 181.35 185.44 and for every number except zero nobody has found a good reason to choose anything else
+## The staircase stops   [ACT THREE — When the base is zero]
+p2 42 187.90 192.01 everything has been tidy so far now put zero in place of a and watch what happens
+p2 43 192.44 196.84 the staircase first zero cubed is zero zero squared is zero zero to the first is zero
+p2 44 197.27 201.72 to take the next step down you would divide by zero and dividing by zero isn't allowed
+p2 45 202.11 203.74 the staircase stops one step early
+## The rule goes quiet   [ACT THREE — When the base is zero]
+p2 46 205.40 210.13 what about the multiplication rule it doesn't break it does something stranger it goes quiet
+p2 47 210.58 214.07 remember the small step because a to the m isn't zero we could divide
+p2 48 214.46 218.73 with zero a to the m is zero now the rule says zero times zero to the zero equals zero
+p2 49 219.16 223.87 but zero times anything is zero put in one put in seven put in a million every value passes
+p2 50 224.32 225.75 the rule has stopped deciding
+p2 51 226.16 233.33 it still narrows things down a little use it with both exponents zero and it says zero to the zero times itself equals zero to the zero
+p2 52 233.78 236.46 only two numbers equal their own square zero and one
+p2 53 236.87 241.22 so the rule throws out every number except those two it just won't pick between them
+## Two patterns, one square   [ACT THREE — When the base is zero]
+p2 54 242.88 246.38 and those two candidates come from two patterns that both feel natural
+p2 55 246.77 255.32 picture a table of x to the power of y along the row where the exponent is zero every answer is one five to the zero two to the zero a half to the zero one one one
+p2 56 255.73 262.16 down the column where the base is zero every answer is zero zero to the third zero squared zero to the first zero zero zero
+p2 57 262.60 265.12 both lines run into the same square zero to the zero
+p2 58 265.61 267.45 one pattern says one the other says zero
+p2 59 267.88 271.30 so which one wins it depends on what kind of mathematics you are doing
+## Counting the ways   [ACT FOUR — When counting decides]
+p2 60 273.74 278.19 here is another way to read a power and in one part of mathematics it settles the question
+p2 61 278.60 282.49 two cubed counts the ways to fill three boxes when each box gets one of two symbols
+p2 62 282.92 285.25 there are eight ways two choices then two then two
+p2 63 285.72 289.55 in general a to the n counts the ways to fill n boxes with a choices for each box
+p2 64 290.02 295.80 now take zero boxes how many ways are there to fill no boxes at all exactly one you do nothing and you're done
+p2 65 296.21 299.23 that stays true even when you have zero symbols to choose from
+p2 66 299.62 304.32 so in counting zero to the zero is one it isn't a convention there you count and you get one
+## Formulas that need it   [ACT FOUR — When counting decides]
+p2 67 306.00 309.60 algebra leans on the same answer because so many formulas quietly assume it
+p2 68 310.01 312.60 take a polynomial three plus two x plus x squared
+p2 69 312.99 319.46 mathematicians often write it as a sum of terms each one a number times x to some power the first term is three times x to the zero
+p2 70 319.95 325.13 put x equals zero and the answer should obviously be three that only works if zero to the zero is one
+p2 71 325.52 330.66 the binomial theorem the expansion of x plus y to the n that goes back to newton has the same problem
+p2 72 331.07 338.92 its first term is x to the zero times y to the n put x equals zero and the whole thing should be y to the n again it only works if zero to the zero is one
+p2 73 339.33 346.93 and the series that defines e to the x begins with x to the zero divided by zero factorial zero factorial is also one by the way hold that thought
+p2 74 347.32 352.12 at x equals zero you want e to the zero which is one once more you need zero to the zero to be one
+## Ten thousand times no   [ACT FOUR — When counting decides]
+p2 75 353.79 359.70 in nineteen ninety-two the computer scientist donald knuth wrote about this in a paper called two notes on notation
+p2 76 360.13 365.28 to the people who wanted zero to the zero left undefined his answer was no no ten thousand times no
+p2 77 365.73 370.39 the binomial theorem he argued is far too important to be broken over one square of the table
+p2 78 370.78 375.64 most programming languages make the same choice that's why python and javascript answer one
+## A shape, not a number   [ACT FIVE — When limits decide]
+p2 79 378.08 379.78 so why do some calculators refuse
+p2 80 380.19 384.89 because in calculus zero to the zero has a second life it is called an indeterminate form
+p2 81 385.31 390.94 this is the part that convinces many people that zero to the zero has no value at all so it's worth getting right
+## Two paths to the corner   [ACT FIVE — When limits decide]
+p2 82 392.62 395.28 take x to the y and let both x and y slide towards zero
+p2 83 395.79 401.81 first path keep y at zero and let x shrink every value along the way is x to the zero which is one the limit is one
+p2 84 402.22 409.71 second path keep x at zero and let y shrink towards zero from above every value is zero to a positive power which is zero the limit is zero
+p2 85 410.14 412.78 two paths into the same corner and two different answers
+p2 86 413.21 419.95 and it's worse than that choose the path cleverly and you can make the limit come out as two or a half or any positive number you like
+p2 87 420.35 424.51 there is a curved path along which x to the y is exactly two at every single point
+p2 88 424.92 428.70 so there is no number you could place in that corner that every path agrees on
+## What indeterminate means   [ACT FIVE — When limits decide]
+p2 89 430.36 433.65 that is why calculus calls zero to the zero an indeterminate form
+p2 90 434.08 436.25 indeterminate doesn't mean the expression has no value
+p2 91 436.64 443.45 it means that when a limit takes the shape of zero to the zero you can't read the answer off the shape you have to work it out case by case
+p2 92 443.86 449.29 sometimes it comes out as one as x shrinks towards zero x to the x dips down and then climbs back up to one
+p2 93 449.70 452.33 sometimes it's two or a half or something else entirely
+## An old argument   [ACT FIVE — When limits decide]
+p2 94 453.99 455.93 this argument is almost two hundred years old
+p2 95 456.32 462.91 in eighteen twenty-one augustin-louis cauchy put zero to the zero in his table of undefined forms in his famous course on analysis
+p2 96 463.34 470.36 in eighteen thirty-three a paper by guglielmo libri argued that it should be one and august möbius stepped in with a proof to back him up
+p2 97 470.81 475.05 the proof was wrong but the argument it started is still going on in classrooms today
+## Putting it together   [ACT SIX — Putting it together]
+p2 98 477.51 485.67 anything except zero to the power of zero is one multiplying zero times leaves you where multiplication starts and the staircase of powers lands there too
+p2 99 486.10 492.10 it's a choice in only one sense we chose to keep the rules of powers working and once we did a to the zero had to be one
+p2 100 492.49 499.03 and zero to the zero lives two lives as a value in counting in algebra and in almost every programming language it is one
+p2 101 499.42 503.40 as the shape of a limit in calculus it is indeterminate and you have to calculate
+p2 102 503.83 509.76 those two facts don't contradict each other one is about a number the other is about where a moving quantity is heading
+p2 103 510.15 517.06 that's also why the machines disagree the ones that say one are doing algebra the ones that show an error are holding up a warning sign
+p2 104 517.47 525.39 so if a test asks you for zero to the zero answer the way your course defines it many school textbooks call it undefined and that is the answer they expect
+## Next time   [ACT SIX — Putting it together]
+p2 105 527.05 528.47 here is something to notice on your own
+p2 106 528.92 532.91 zero factorial is one too and zero factorial is the product of no numbers at all
+p2 107 533.34 534.49 where have we seen that before
+p2 108 535.84 537.66 thank you for watching all the way to the end
+p2 109 538.12 542.62 what do you think zero to the zero should be one zero or undefined tell me in the comments
+p2 110 543.07 547.63 and subscribe to ninety-nine percent from scratch so you don't miss the next one see you soon

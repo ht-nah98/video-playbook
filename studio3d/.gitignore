@@ -1,0 +1,22 @@
+# studio3d — chép nguyên khối từ github.com/mexicat/pdoom-video (MIT, xem LICENSE)
+app/node_modules/
+app/.vite/
+app/dist/
+out/
+
+# bài hát + lời p(doom) KHÔNG thuộc MIT — giữ local để chạy mẫu, không commit (README.md § Chạy mẫu)
+audio/
+lyrics/
+data/lyrics.json
+data/lyrics.approx.json
+
+# venv phân tích (uv sync), trọng số mô hình, stem, trung gian — sinh lại được
+analysis/.venv
+analysis/.cache/
+analysis/__pycache__/
+analysis/stems/
+analysis/work/
+analysis/qa/
+
+# lockfile chuẩn là bun.lock (npm install chỉ để kiểm tsc/vite trên máy không có bun)
+app/package-lock.json

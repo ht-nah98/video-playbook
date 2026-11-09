@@ -1,0 +1,24 @@
+<!doctype html><meta charset="utf-8">
+<title>hist lab — bản đồ Thái Bình Dương 1938 + Oahu</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử bản đồ tập pearl: t 0.5 = Thái Bình Dương (Nhật → Hawaii), t 1.5 = Oahu (Opana, Pearl Harbor, Fort Shafter).
+import { loadMap, view, drawMap, ll, INK } from '../_kit/mapkit.js';
+import * as S from '../_kit/stage.js';
+const g = document.getElementById('cv').getContext('2d'); let P = null, O = null, ready = false;
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  loadMap('../_kit/maps/pacific1938.json').then(m => { P = m; }), loadMap('../_kit/maps/oahu.json').then(m => { O = m; })])
+  .then(() => { S.bindStage(g, { M: P }); ready = true; }).catch(e => { window.__intro.error = String(e); });
+const pin = (V, M, lon, lat, txt) => { const [x, y] = V.pt(ll(M, lon, lat)); g.fillStyle = S.RED; g.beginPath(); g.arc(x, y, 12, 0, 7); g.fill(); S.label(txt, x, y - 30, 34, 1, INK); };
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); if (!ready) return;
+  if (t < 1) { const V = view(P, { cx: 170, cy: 28, zoom: 1.25 });
+    drawMap(g, P, V, { fill: { 'Empire of Japan': '#E8A0A0', 'United States': '#9FC3E8' } });
+    pin(V, P, 139.7, 35.7, 'TOKYO'); pin(V, P, 360 - 157.95, 21.35, 'PEARL HARBOR'); pin(V, P, 147.5, 44.8, 'KURILS'); pin(V, P, 360 - 122.4, 37.8, 'SAN FRANCISCO'); return; }
+  const V = view(O, { cx: 202.03, cy: 21.47, zoom: 1.0 });
+  drawMap(g, O, V, { fill: { Oahu: '#EDE6D3' } });
+  pin(V, O, 360 - 158.05, 21.68, 'OPANA'); pin(V, O, 360 - 157.95, 21.36, 'PEARL HARBOR'); pin(V, O, 360 - 157.88, 21.35, 'FORT SHAFTER');
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2, LEAD: 0, error: null };
+</script>

@@ -1,0 +1,1040 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 46.041
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Here's something that's true of every sudoku you have ever finished.",
+   "idea": false,
+   "start": 0.02,
+   "end": 3.501,
+   "words": [
+    {
+     "w": "here's",
+     "start": 0.02,
+     "end": 0.201,
+     "conf": 0.674
+    },
+    {
+     "w": "something",
+     "start": 0.282,
+     "end": 0.604,
+     "conf": 0.897
+    },
+    {
+     "w": "that's",
+     "start": 0.624,
+     "end": 0.805,
+     "conf": 0.825
+    },
+    {
+     "w": "true",
+     "start": 0.905,
+     "end": 1.147,
+     "conf": 0.674
+    },
+    {
+     "w": "of",
+     "start": 1.268,
+     "end": 1.308,
+     "conf": 0.493
+    },
+    {
+     "w": "every",
+     "start": 1.449,
+     "end": 1.73,
+     "conf": 0.772
+    },
+    {
+     "w": "sudoku",
+     "start": 1.992,
+     "end": 2.435,
+     "conf": 0.669
+    },
+    {
+     "w": "you",
+     "start": 2.596,
+     "end": 2.676,
+     "conf": 0.985
+    },
+    {
+     "w": "have",
+     "start": 2.777,
+     "end": 2.918,
+     "conf": 0.842
+    },
+    {
+     "w": "ever",
+     "start": 2.978,
+     "end": 3.139,
+     "conf": 0.728
+    },
+    {
+     "w": "finished",
+     "start": 3.219,
+     "end": 3.501,
+     "conf": 0.375
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Take the sixteen cells that form a ring around the middle box.",
+   "idea": false,
+   "start": 3.891,
+   "end": 6.329,
+   "words": [
+    {
+     "w": "take",
+     "start": 3.891,
+     "end": 3.992,
+     "conf": 0.746
+    },
+    {
+     "w": "the",
+     "start": 4.012,
+     "end": 4.073,
+     "conf": 0.988
+    },
+    {
+     "w": "sixteen",
+     "start": 4.093,
+     "end": 4.435,
+     "conf": 0.823
+    },
+    {
+     "w": "cells",
+     "start": 4.516,
+     "end": 4.798,
+     "conf": 0.821
+    },
+    {
+     "w": "that",
+     "start": 4.818,
+     "end": 4.919,
+     "conf": 0.995
+    },
+    {
+     "w": "form",
+     "start": 4.999,
+     "end": 5.161,
+     "conf": 0.747
+    },
+    {
+     "w": "a",
+     "start": 5.201,
+     "end": 5.221,
+     "conf": 0.99
+    },
+    {
+     "w": "ring",
+     "start": 5.302,
+     "end": 5.483,
+     "conf": 0.793
+    },
+    {
+     "w": "around",
+     "start": 5.564,
+     "end": 5.765,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 5.785,
+     "end": 5.846,
+     "conf": 0.992
+    },
+    {
+     "w": "middle",
+     "start": 5.866,
+     "end": 6.047,
+     "conf": 0.907
+    },
+    {
+     "w": "box",
+     "start": 6.067,
+     "end": 6.329,
+     "conf": 0.812
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Now take the four little two by two squares in the corners. That's sixteen cells too.",
+   "idea": false,
+   "start": 6.861,
+   "end": 10.779,
+   "words": [
+    {
+     "w": "now",
+     "start": 6.861,
+     "end": 6.982,
+     "conf": 0.999
+    },
+    {
+     "w": "take",
+     "start": 7.042,
+     "end": 7.203,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 7.223,
+     "end": 7.283,
+     "conf": 0.993
+    },
+    {
+     "w": "four",
+     "start": 7.323,
+     "end": 7.504,
+     "conf": 0.805
+    },
+    {
+     "w": "little",
+     "start": 7.544,
+     "end": 7.765,
+     "conf": 0.992
+    },
+    {
+     "w": "two",
+     "start": 7.825,
+     "end": 7.966,
+     "conf": 0.54
+    },
+    {
+     "w": "by",
+     "start": 8.026,
+     "end": 8.127,
+     "conf": 0.499
+    },
+    {
+     "w": "two",
+     "start": 8.207,
+     "end": 8.348,
+     "conf": 0.723
+    },
+    {
+     "w": "squares",
+     "start": 8.448,
+     "end": 8.77,
+     "conf": 0.771
+    },
+    {
+     "w": "in",
+     "start": 8.79,
+     "end": 8.83,
+     "conf": 0.968
+    },
+    {
+     "w": "the",
+     "start": 8.85,
+     "end": 8.93,
+     "conf": 0.949
+    },
+    {
+     "w": "corners",
+     "start": 8.951,
+     "end": 9.272,
+     "conf": 0.963
+    },
+    {
+     "w": "that's",
+     "start": 9.694,
+     "end": 9.835,
+     "conf": 0.373
+    },
+    {
+     "w": "sixteen",
+     "start": 9.855,
+     "end": 10.236,
+     "conf": 0.304
+    },
+    {
+     "w": "cells",
+     "start": 10.337,
+     "end": 10.558,
+     "conf": 0.77
+    },
+    {
+     "w": "too",
+     "start": 10.638,
+     "end": 10.779,
+     "conf": 0.388
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Whatever puzzle you solved, those two groups hold exactly the same digits.",
+   "idea": false,
+   "start": 11.189,
+   "end": 14.906,
+   "words": [
+    {
+     "w": "whatever",
+     "start": 11.189,
+     "end": 11.41,
+     "conf": 0.596
+    },
+    {
+     "w": "puzzle",
+     "start": 11.43,
+     "end": 11.792,
+     "conf": 0.545
+    },
+    {
+     "w": "you",
+     "start": 11.812,
+     "end": 11.912,
+     "conf": 0.776
+    },
+    {
+     "w": "solved",
+     "start": 11.993,
+     "end": 12.415,
+     "conf": 0.881
+    },
+    {
+     "w": "those",
+     "start": 12.696,
+     "end": 12.897,
+     "conf": 0.998
+    },
+    {
+     "w": "two",
+     "start": 12.937,
+     "end": 13.078,
+     "conf": 0.998
+    },
+    {
+     "w": "groups",
+     "start": 13.098,
+     "end": 13.339,
+     "conf": 0.981
+    },
+    {
+     "w": "hold",
+     "start": 13.42,
+     "end": 13.58,
+     "conf": 0.769
+    },
+    {
+     "w": "exactly",
+     "start": 13.681,
+     "end": 14.103,
+     "conf": 0.866
+    },
+    {
+     "w": "the",
+     "start": 14.123,
+     "end": 14.223,
+     "conf": 0.749
+    },
+    {
+     "w": "same",
+     "start": 14.243,
+     "end": 14.444,
+     "conf": 1.0
+    },
+    {
+     "w": "digits",
+     "start": 14.464,
+     "end": 14.906,
+     "conf": 0.911
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Not the same pattern. The same collection of numbers, every time, in every sudoku ever made.",
+   "idea": true,
+   "start": 15.357,
+   "end": 20.047,
+   "words": [
+    {
+     "w": "not",
+     "start": 15.357,
+     "end": 15.457,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 15.477,
+     "end": 15.537,
+     "conf": 0.998
+    },
+    {
+     "w": "same",
+     "start": 15.618,
+     "end": 15.798,
+     "conf": 0.708
+    },
+    {
+     "w": "pattern",
+     "start": 15.838,
+     "end": 16.139,
+     "conf": 0.728
+    },
+    {
+     "w": "the",
+     "start": 16.399,
+     "end": 16.459,
+     "conf": 0.999
+    },
+    {
+     "w": "same",
+     "start": 16.48,
+     "end": 16.68,
+     "conf": 0.8
+    },
+    {
+     "w": "collection",
+     "start": 16.7,
+     "end": 17.101,
+     "conf": 0.907
+    },
+    {
+     "w": "of",
+     "start": 17.121,
+     "end": 17.181,
+     "conf": 0.999
+    },
+    {
+     "w": "numbers",
+     "start": 17.241,
+     "end": 17.582,
+     "conf": 0.868
+    },
+    {
+     "w": "every",
+     "start": 17.782,
+     "end": 17.923,
+     "conf": 0.8
+    },
+    {
+     "w": "time",
+     "start": 18.003,
+     "end": 18.344,
+     "conf": 0.764
+    },
+    {
+     "w": "in",
+     "start": 18.644,
+     "end": 18.684,
+     "conf": 0.499
+    },
+    {
+     "w": "every",
+     "start": 18.825,
+     "end": 18.985,
+     "conf": 0.799
+    },
+    {
+     "w": "sudoku",
+     "start": 19.085,
+     "end": 19.486,
+     "conf": 0.69
+    },
+    {
+     "w": "ever",
+     "start": 19.586,
+     "end": 19.727,
+     "conf": 0.998
+    },
+    {
+     "w": "made",
+     "start": 19.747,
+     "end": 20.047,
+     "conf": 0.805
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It sounds like a coincidence. It isn't. And the reason fits into about one minute of careful thinking.",
+   "idea": true,
+   "start": 21.037,
+   "end": 26.087,
+   "words": [
+    {
+     "w": "it",
+     "start": 21.037,
+     "end": 21.077,
+     "conf": 0.989
+    },
+    {
+     "w": "sounds",
+     "start": 21.117,
+     "end": 21.278,
+     "conf": 0.661
+    },
+    {
+     "w": "like",
+     "start": 21.298,
+     "end": 21.418,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 21.438,
+     "end": 21.458,
+     "conf": 0.994
+    },
+    {
+     "w": "coincidence",
+     "start": 21.538,
+     "end": 22.219,
+     "conf": 0.907
+    },
+    {
+     "w": "it",
+     "start": 22.48,
+     "end": 22.54,
+     "conf": 0.5
+    },
+    {
+     "w": "isn't",
+     "start": 22.62,
+     "end": 22.861,
+     "conf": 0.617
+    },
+    {
+     "w": "and",
+     "start": 23.362,
+     "end": 23.442,
+     "conf": 0.996
+    },
+    {
+     "w": "the",
+     "start": 23.462,
+     "end": 23.522,
+     "conf": 0.997
+    },
+    {
+     "w": "reason",
+     "start": 23.542,
+     "end": 23.823,
+     "conf": 0.857
+    },
+    {
+     "w": "fits",
+     "start": 23.923,
+     "end": 24.103,
+     "conf": 0.75
+    },
+    {
+     "w": "into",
+     "start": 24.183,
+     "end": 24.344,
+     "conf": 0.749
+    },
+    {
+     "w": "about",
+     "start": 24.424,
+     "end": 24.684,
+     "conf": 0.801
+    },
+    {
+     "w": "one",
+     "start": 24.845,
+     "end": 24.945,
+     "conf": 0.666
+    },
+    {
+     "w": "minute",
+     "start": 24.965,
+     "end": 25.185,
+     "conf": 0.839
+    },
+    {
+     "w": "of",
+     "start": 25.205,
+     "end": 25.286,
+     "conf": 0.998
+    },
+    {
+     "w": "careful",
+     "start": 25.366,
+     "end": 25.707,
+     "conf": 0.816
+    },
+    {
+     "w": "thinking",
+     "start": 25.787,
+     "end": 26.087,
+     "conf": 0.761
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So in this video, I want to answer three questions with you.",
+   "idea": false,
+   "start": 27.52,
+   "end": 29.999,
+   "words": [
+    {
+     "w": "so",
+     "start": 27.52,
+     "end": 27.601,
+     "conf": 1.0
+    },
+    {
+     "w": "in",
+     "start": 27.742,
+     "end": 27.802,
+     "conf": 0.999
+    },
+    {
+     "w": "this",
+     "start": 27.823,
+     "end": 27.964,
+     "conf": 1.0
+    },
+    {
+     "w": "video",
+     "start": 28.024,
+     "end": 28.205,
+     "conf": 0.8
+    },
+    {
+     "w": "i",
+     "start": 28.226,
+     "end": 28.246,
+     "conf": 0.0
+    },
+    {
+     "w": "want",
+     "start": 28.427,
+     "end": 28.548,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 28.568,
+     "end": 28.629,
+     "conf": 0.676
+    },
+    {
+     "w": "answer",
+     "start": 28.729,
+     "end": 28.971,
+     "conf": 0.769
+    },
+    {
+     "w": "three",
+     "start": 29.092,
+     "end": 29.273,
+     "conf": 0.799
+    },
+    {
+     "w": "questions",
+     "start": 29.293,
+     "end": 29.737,
+     "conf": 0.991
+    },
+    {
+     "w": "with",
+     "start": 29.757,
+     "end": 29.878,
+     "conf": 0.99
+    },
+    {
+     "w": "you",
+     "start": 29.898,
+     "end": 29.999,
+     "conf": 0.761
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "One. Why does that hidden ring exist?",
+   "idea": false,
+   "start": 30.389,
+   "end": 31.986,
+   "words": [
+    {
+     "w": "one",
+     "start": 30.389,
+     "end": 30.632,
+     "conf": 0.584
+    },
+    {
+     "w": "why",
+     "start": 30.652,
+     "end": 30.814,
+     "conf": 0.679
+    },
+    {
+     "w": "does",
+     "start": 30.834,
+     "end": 30.935,
+     "conf": 0.785
+    },
+    {
+     "w": "that",
+     "start": 30.955,
+     "end": 31.076,
+     "conf": 0.986
+    },
+    {
+     "w": "hidden",
+     "start": 31.117,
+     "end": 31.339,
+     "conf": 0.981
+    },
+    {
+     "w": "ring",
+     "start": 31.4,
+     "end": 31.521,
+     "conf": 0.785
+    },
+    {
+     "w": "exist",
+     "start": 31.541,
+     "end": 31.986,
+     "conf": 0.829
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Two. How far does the same trick go, and what does it have to do with algebra?",
+   "idea": false,
+   "start": 32.396,
+   "end": 36.065,
+   "words": [
+    {
+     "w": "two",
+     "start": 32.396,
+     "end": 32.597,
+     "conf": 0.247
+    },
+    {
+     "w": "how",
+     "start": 33.278,
+     "end": 33.378,
+     "conf": 0.999
+    },
+    {
+     "w": "far",
+     "start": 33.439,
+     "end": 33.619,
+     "conf": 0.999
+    },
+    {
+     "w": "does",
+     "start": 33.639,
+     "end": 33.739,
+     "conf": 0.832
+    },
+    {
+     "w": "the",
+     "start": 33.759,
+     "end": 33.82,
+     "conf": 0.983
+    },
+    {
+     "w": "same",
+     "start": 33.84,
+     "end": 34.02,
+     "conf": 0.801
+    },
+    {
+     "w": "trick",
+     "start": 34.06,
+     "end": 34.22,
+     "conf": 0.95
+    },
+    {
+     "w": "go",
+     "start": 34.241,
+     "end": 34.341,
+     "conf": 0.663
+    },
+    {
+     "w": "and",
+     "start": 34.842,
+     "end": 34.902,
+     "conf": 0.659
+    },
+    {
+     "w": "what",
+     "start": 34.922,
+     "end": 35.022,
+     "conf": 0.997
+    },
+    {
+     "w": "does",
+     "start": 35.042,
+     "end": 35.163,
+     "conf": 0.931
+    },
+    {
+     "w": "it",
+     "start": 35.183,
+     "end": 35.243,
+     "conf": 0.991
+    },
+    {
+     "w": "have",
+     "start": 35.263,
+     "end": 35.383,
+     "conf": 0.921
+    },
+    {
+     "w": "to",
+     "start": 35.403,
+     "end": 35.464,
+     "conf": 0.996
+    },
+    {
+     "w": "do",
+     "start": 35.484,
+     "end": 35.544,
+     "conf": 0.995
+    },
+    {
+     "w": "with",
+     "start": 35.564,
+     "end": 35.704,
+     "conf": 0.754
+    },
+    {
+     "w": "algebra",
+     "start": 35.764,
+     "end": 36.065,
+     "conf": 0.792
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And three. How few clues can a sudoku have, and how do you prove that one fewer is impossible?",
+   "idea": true,
+   "start": 36.596,
+   "end": 41.269,
+   "words": [
+    {
+     "w": "and",
+     "start": 36.596,
+     "end": 36.676,
+     "conf": 0.296
+    },
+    {
+     "w": "three",
+     "start": 36.696,
+     "end": 36.937,
+     "conf": 0.062
+    },
+    {
+     "w": "how",
+     "start": 37.499,
+     "end": 37.599,
+     "conf": 0.982
+    },
+    {
+     "w": "few",
+     "start": 37.639,
+     "end": 37.779,
+     "conf": 0.933
+    },
+    {
+     "w": "clues",
+     "start": 37.84,
+     "end": 38.08,
+     "conf": 0.559
+    },
+    {
+     "w": "can",
+     "start": 38.1,
+     "end": 38.181,
+     "conf": 0.972
+    },
+    {
+     "w": "a",
+     "start": 38.201,
+     "end": 38.241,
+     "conf": 0.405
+    },
+    {
+     "w": "sudoku",
+     "start": 38.321,
+     "end": 38.682,
+     "conf": 0.551
+    },
+    {
+     "w": "have",
+     "start": 38.762,
+     "end": 39.003,
+     "conf": 0.929
+    },
+    {
+     "w": "and",
+     "start": 39.284,
+     "end": 39.344,
+     "conf": 0.409
+    },
+    {
+     "w": "how",
+     "start": 39.384,
+     "end": 39.464,
+     "conf": 0.988
+    },
+    {
+     "w": "do",
+     "start": 39.484,
+     "end": 39.544,
+     "conf": 0.664
+    },
+    {
+     "w": "you",
+     "start": 39.564,
+     "end": 39.665,
+     "conf": 0.71
+    },
+    {
+     "w": "prove",
+     "start": 39.705,
+     "end": 39.966,
+     "conf": 0.893
+    },
+    {
+     "w": "that",
+     "start": 39.986,
+     "end": 40.086,
+     "conf": 0.998
+    },
+    {
+     "w": "one",
+     "start": 40.166,
+     "end": 40.266,
+     "conf": 0.669
+    },
+    {
+     "w": "fewer",
+     "start": 40.367,
+     "end": 40.607,
+     "conf": 0.523
+    },
+    {
+     "w": "is",
+     "start": 40.648,
+     "end": 40.708,
+     "conf": 0.506
+    },
+    {
+     "w": "impossible",
+     "start": 40.768,
+     "end": 41.269,
+     "conf": 0.88
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And to get there, we only need the one rule you already know.",
+   "idea": true,
+   "start": 42.259,
+   "end": 45.031,
+   "words": [
+    {
+     "w": "and",
+     "start": 42.259,
+     "end": 42.339,
+     "conf": 0.879
+    },
+    {
+     "w": "to",
+     "start": 42.36,
+     "end": 42.4,
+     "conf": 0.999
+    },
+    {
+     "w": "get",
+     "start": 42.46,
+     "end": 42.601,
+     "conf": 0.667
+    },
+    {
+     "w": "there",
+     "start": 42.681,
+     "end": 42.862,
+     "conf": 0.77
+    },
+    {
+     "w": "we",
+     "start": 43.223,
+     "end": 43.263,
+     "conf": 0.5
+    },
+    {
+     "w": "only",
+     "start": 43.344,
+     "end": 43.444,
+     "conf": 0.723
+    },
+    {
+     "w": "need",
+     "start": 43.504,
+     "end": 43.625,
+     "conf": 0.798
+    },
+    {
+     "w": "the",
+     "start": 43.645,
+     "end": 43.705,
+     "conf": 0.985
+    },
+    {
+     "w": "one",
+     "start": 43.826,
+     "end": 43.926,
+     "conf": 0.666
+    },
+    {
+     "w": "rule",
+     "start": 44.007,
+     "end": 44.207,
+     "conf": 0.85
+    },
+    {
+     "w": "you",
+     "start": 44.288,
+     "end": 44.368,
+     "conf": 0.748
+    },
+    {
+     "w": "already",
+     "start": 44.509,
+     "end": 44.79,
+     "conf": 0.885
+    },
+    {
+     "w": "know",
+     "start": 44.85,
+     "end": 45.031,
+     "conf": 0.9
+    }
+   ]
+  }
+ ]
+}

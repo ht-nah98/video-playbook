@@ -1,0 +1,4400 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.465,
+   "end": 42.602
+  },
+  {
+   "name": "Then and now",
+   "act": "",
+   "start": 42.602,
+   "end": 83.436
+  },
+  {
+   "name": "Two gangs",
+   "act": "",
+   "start": 83.436,
+   "end": 135.026
+  },
+  {
+   "name": "The spark",
+   "act": "",
+   "start": 135.026,
+   "end": 175.494
+  },
+  {
+   "name": "But no",
+   "act": "",
+   "start": 175.494,
+   "end": 207.639
+  },
+  {
+   "name": "Two shots",
+   "act": "",
+   "start": 207.639,
+   "end": 213.868
+  },
+  {
+   "name": "Aftermath",
+   "act": "",
+   "start": 213.868,
+   "end": 232.42
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Hey everyone.",
+   "idea": false,
+   "start": 0.465,
+   "end": 1.091,
+   "words": [
+    {
+     "w": "hey",
+     "start": 0.465,
+     "end": 0.586,
+     "conf": 0.617
+    },
+    {
+     "w": "everyone",
+     "start": 0.667,
+     "end": 1.091,
+     "conf": 0.77
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Today: how a wrong turn, a stalled car and a nineteen-year-old outside a deli lit the fuse of the biggest war the world had ever seen.",
+   "idea": false,
+   "start": 1.682,
+   "end": 8.828,
+   "words": [
+    {
+     "w": "today",
+     "start": 1.682,
+     "end": 2.022,
+     "conf": 0.799
+    },
+    {
+     "w": "how",
+     "start": 2.163,
+     "end": 2.263,
+     "conf": 0.924
+    },
+    {
+     "w": "a",
+     "start": 2.343,
+     "end": 2.363,
+     "conf": 0.045
+    },
+    {
+     "w": "wrong",
+     "start": 2.423,
+     "end": 2.723,
+     "conf": 0.893
+    },
+    {
+     "w": "turn",
+     "start": 2.823,
+     "end": 3.163,
+     "conf": 0.672
+    },
+    {
+     "w": "a",
+     "start": 3.324,
+     "end": 3.344,
+     "conf": 0.002
+    },
+    {
+     "w": "stalled",
+     "start": 3.444,
+     "end": 3.784,
+     "conf": 0.785
+    },
+    {
+     "w": "car",
+     "start": 3.884,
+     "end": 4.184,
+     "conf": 0.666
+    },
+    {
+     "w": "and",
+     "start": 4.264,
+     "end": 4.324,
+     "conf": 0.656
+    },
+    {
+     "w": "a",
+     "start": 4.364,
+     "end": 4.384,
+     "conf": 0.977
+    },
+    {
+     "w": "nineteen-year-old",
+     "start": 4.405,
+     "end": 5.165,
+     "conf": 0.62
+    },
+    {
+     "w": "outside",
+     "start": 5.285,
+     "end": 5.706,
+     "conf": 0.852
+    },
+    {
+     "w": "a",
+     "start": 5.766,
+     "end": 5.786,
+     "conf": 0.031
+    },
+    {
+     "w": "deli",
+     "start": 5.906,
+     "end": 6.166,
+     "conf": 0.502
+    },
+    {
+     "w": "lit",
+     "start": 6.286,
+     "end": 6.366,
+     "conf": 0.597
+    },
+    {
+     "w": "the",
+     "start": 6.446,
+     "end": 6.526,
+     "conf": 0.831
+    },
+    {
+     "w": "fuse",
+     "start": 6.606,
+     "end": 6.867,
+     "conf": 0.453
+    },
+    {
+     "w": "of",
+     "start": 6.887,
+     "end": 6.947,
+     "conf": 0.996
+    },
+    {
+     "w": "the",
+     "start": 6.967,
+     "end": 7.067,
+     "conf": 0.704
+    },
+    {
+     "w": "biggest",
+     "start": 7.227,
+     "end": 7.527,
+     "conf": 0.856
+    },
+    {
+     "w": "war",
+     "start": 7.607,
+     "end": 7.727,
+     "conf": 0.642
+    },
+    {
+     "w": "the",
+     "start": 7.807,
+     "end": 7.867,
+     "conf": 0.637
+    },
+    {
+     "w": "world",
+     "start": 7.888,
+     "end": 8.128,
+     "conf": 0.832
+    },
+    {
+     "w": "had",
+     "start": 8.148,
+     "end": 8.248,
+     "conf": 0.976
+    },
+    {
+     "w": "ever",
+     "start": 8.268,
+     "end": 8.468,
+     "conf": 0.799
+    },
+    {
+     "w": "seen",
+     "start": 8.588,
+     "end": 8.828,
+     "conf": 0.749
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "But first, you need to know why Europe was sitting on that fuse in the first place.",
+   "idea": true,
+   "start": 9.258,
+   "end": 13.671,
+   "words": [
+    {
+     "w": "but",
+     "start": 9.258,
+     "end": 9.338,
+     "conf": 0.665
+    },
+    {
+     "w": "first",
+     "start": 9.439,
+     "end": 9.739,
+     "conf": 0.795
+    },
+    {
+     "w": "you",
+     "start": 9.82,
+     "end": 9.88,
+     "conf": 0.664
+    },
+    {
+     "w": "need",
+     "start": 9.92,
+     "end": 10.1,
+     "conf": 0.998
+    },
+    {
+     "w": "to",
+     "start": 10.181,
+     "end": 10.241,
+     "conf": 0.728
+    },
+    {
+     "w": "know",
+     "start": 10.281,
+     "end": 10.462,
+     "conf": 0.885
+    },
+    {
+     "w": "why",
+     "start": 10.562,
+     "end": 10.803,
+     "conf": 0.98
+    },
+    {
+     "w": "europe",
+     "start": 10.983,
+     "end": 11.304,
+     "conf": 0.848
+    },
+    {
+     "w": "was",
+     "start": 11.324,
+     "end": 11.444,
+     "conf": 0.997
+    },
+    {
+     "w": "sitting",
+     "start": 11.565,
+     "end": 11.825,
+     "conf": 0.835
+    },
+    {
+     "w": "on",
+     "start": 11.926,
+     "end": 11.966,
+     "conf": 0.499
+    },
+    {
+     "w": "that",
+     "start": 11.986,
+     "end": 12.166,
+     "conf": 0.807
+    },
+    {
+     "w": "fuse",
+     "start": 12.327,
+     "end": 12.748,
+     "conf": 0.513
+    },
+    {
+     "w": "in",
+     "start": 12.848,
+     "end": 12.889,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 12.909,
+     "end": 12.989,
+     "conf": 0.936
+    },
+    {
+     "w": "first",
+     "start": 13.069,
+     "end": 13.31,
+     "conf": 0.751
+    },
+    {
+     "w": "place",
+     "start": 13.37,
+     "end": 13.671,
+     "conf": 0.797
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "By nineteen fourteen, the world had electric lights, telephones, cars and even airplanes, and the great powers of Europe were richer than ever.",
+   "idea": false,
+   "start": 14.801,
+   "end": 22.833,
+   "words": [
+    {
+     "w": "by",
+     "start": 14.801,
+     "end": 14.881,
+     "conf": 0.992
+    },
+    {
+     "w": "nineteen",
+     "start": 14.901,
+     "end": 15.282,
+     "conf": 0.004
+    },
+    {
+     "w": "fourteen",
+     "start": 15.302,
+     "end": 15.863,
+     "conf": 0.004
+    },
+    {
+     "w": "the",
+     "start": 15.923,
+     "end": 15.983,
+     "conf": 0.665
+    },
+    {
+     "w": "world",
+     "start": 16.023,
+     "end": 16.303,
+     "conf": 0.97
+    },
+    {
+     "w": "had",
+     "start": 16.383,
+     "end": 16.524,
+     "conf": 0.667
+    },
+    {
+     "w": "electric",
+     "start": 16.604,
+     "end": 17.024,
+     "conf": 0.924
+    },
+    {
+     "w": "lights",
+     "start": 17.125,
+     "end": 17.425,
+     "conf": 0.836
+    },
+    {
+     "w": "telephones",
+     "start": 17.585,
+     "end": 18.246,
+     "conf": 0.899
+    },
+    {
+     "w": "cars",
+     "start": 18.386,
+     "end": 18.887,
+     "conf": 0.75
+    },
+    {
+     "w": "and",
+     "start": 19.067,
+     "end": 19.168,
+     "conf": 0.743
+    },
+    {
+     "w": "even",
+     "start": 19.248,
+     "end": 19.448,
+     "conf": 0.789
+    },
+    {
+     "w": "airplanes",
+     "start": 19.568,
+     "end": 20.169,
+     "conf": 0.887
+    },
+    {
+     "w": "and",
+     "start": 20.389,
+     "end": 20.449,
+     "conf": 0.71
+    },
+    {
+     "w": "the",
+     "start": 20.469,
+     "end": 20.55,
+     "conf": 0.977
+    },
+    {
+     "w": "great",
+     "start": 20.61,
+     "end": 20.83,
+     "conf": 0.769
+    },
+    {
+     "w": "powers",
+     "start": 20.91,
+     "end": 21.331,
+     "conf": 0.83
+    },
+    {
+     "w": "of",
+     "start": 21.411,
+     "end": 21.471,
+     "conf": 0.5
+    },
+    {
+     "w": "europe",
+     "start": 21.591,
+     "end": 21.912,
+     "conf": 0.96
+    },
+    {
+     "w": "were",
+     "start": 21.932,
+     "end": 22.092,
+     "conf": 0.799
+    },
+    {
+     "w": "richer",
+     "start": 22.112,
+     "end": 22.412,
+     "conf": 0.864
+    },
+    {
+     "w": "than",
+     "start": 22.472,
+     "end": 22.592,
+     "conf": 0.746
+    },
+    {
+     "w": "ever",
+     "start": 22.673,
+     "end": 22.833,
+     "conf": 0.75
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Naturally, they decided the best use of all that progress was a contest to see who could build the biggest army, and the biggest navy.",
+   "idea": false,
+   "start": 23.223,
+   "end": 30.536,
+   "words": [
+    {
+     "w": "naturally",
+     "start": 23.223,
+     "end": 23.764,
+     "conf": 0.879
+    },
+    {
+     "w": "they",
+     "start": 23.924,
+     "end": 24.024,
+     "conf": 0.998
+    },
+    {
+     "w": "decided",
+     "start": 24.044,
+     "end": 24.525,
+     "conf": 0.875
+    },
+    {
+     "w": "the",
+     "start": 24.605,
+     "end": 24.666,
+     "conf": 0.485
+    },
+    {
+     "w": "best",
+     "start": 24.786,
+     "end": 25.066,
+     "conf": 0.75
+    },
+    {
+     "w": "use",
+     "start": 25.227,
+     "end": 25.367,
+     "conf": 0.656
+    },
+    {
+     "w": "of",
+     "start": 25.387,
+     "end": 25.487,
+     "conf": 0.666
+    },
+    {
+     "w": "all",
+     "start": 25.567,
+     "end": 25.667,
+     "conf": 0.666
+    },
+    {
+     "w": "that",
+     "start": 25.687,
+     "end": 25.848,
+     "conf": 0.992
+    },
+    {
+     "w": "progress",
+     "start": 25.928,
+     "end": 26.469,
+     "conf": 0.882
+    },
+    {
+     "w": "was",
+     "start": 26.569,
+     "end": 26.649,
+     "conf": 0.666
+    },
+    {
+     "w": "a",
+     "start": 26.729,
+     "end": 26.749,
+     "conf": 0.001
+    },
+    {
+     "w": "contest",
+     "start": 26.829,
+     "end": 27.41,
+     "conf": 0.857
+    },
+    {
+     "w": "to",
+     "start": 27.45,
+     "end": 27.511,
+     "conf": 0.995
+    },
+    {
+     "w": "see",
+     "start": 27.631,
+     "end": 27.771,
+     "conf": 0.666
+    },
+    {
+     "w": "who",
+     "start": 27.851,
+     "end": 27.931,
+     "conf": 0.99
+    },
+    {
+     "w": "could",
+     "start": 28.031,
+     "end": 28.152,
+     "conf": 0.808
+    },
+    {
+     "w": "build",
+     "start": 28.232,
+     "end": 28.452,
+     "conf": 0.785
+    },
+    {
+     "w": "the",
+     "start": 28.512,
+     "end": 28.572,
+     "conf": 0.414
+    },
+    {
+     "w": "biggest",
+     "start": 28.673,
+     "end": 28.973,
+     "conf": 0.828
+    },
+    {
+     "w": "army",
+     "start": 29.093,
+     "end": 29.294,
+     "conf": 0.747
+    },
+    {
+     "w": "and",
+     "start": 29.614,
+     "end": 29.694,
+     "conf": 0.663
+    },
+    {
+     "w": "the",
+     "start": 29.714,
+     "end": 29.795,
+     "conf": 0.99
+    },
+    {
+     "w": "biggest",
+     "start": 29.875,
+     "end": 30.195,
+     "conf": 0.855
+    },
+    {
+     "w": "navy",
+     "start": 30.275,
+     "end": 30.536,
+     "conf": 0.738
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "In nineteen fourteen they finally got their war, and H. G. Wells, the War of the Worlds guy, hopefully called it \"the war that will end war\".",
+   "idea": false,
+   "start": 31.147,
+   "end": 38.61,
+   "words": [
+    {
+     "w": "in",
+     "start": 31.147,
+     "end": 31.187,
+     "conf": 0.498
+    },
+    {
+     "w": "nineteen",
+     "start": 31.207,
+     "end": 31.588,
+     "conf": 0.003
+    },
+    {
+     "w": "fourteen",
+     "start": 31.608,
+     "end": 32.21,
+     "conf": 0.003
+    },
+    {
+     "w": "they",
+     "start": 32.23,
+     "end": 32.35,
+     "conf": 0.798
+    },
+    {
+     "w": "finally",
+     "start": 32.431,
+     "end": 32.712,
+     "conf": 0.87
+    },
+    {
+     "w": "got",
+     "start": 32.752,
+     "end": 32.892,
+     "conf": 0.664
+    },
+    {
+     "w": "their",
+     "start": 32.912,
+     "end": 33.053,
+     "conf": 0.852
+    },
+    {
+     "w": "war",
+     "start": 33.173,
+     "end": 33.434,
+     "conf": 0.661
+    },
+    {
+     "w": "and",
+     "start": 33.695,
+     "end": 33.755,
+     "conf": 0.514
+    },
+    {
+     "w": "h",
+     "start": 34.076,
+     "end": 34.096,
+     "conf": 0.889
+    },
+    {
+     "w": "g",
+     "start": 34.196,
+     "end": 34.216,
+     "conf": 0.0
+    },
+    {
+     "w": "wells",
+     "start": 34.417,
+     "end": 34.818,
+     "conf": 0.398
+    },
+    {
+     "w": "the",
+     "start": 34.838,
+     "end": 35.039,
+     "conf": 0.66
+    },
+    {
+     "w": "war",
+     "start": 35.099,
+     "end": 35.24,
+     "conf": 0.66
+    },
+    {
+     "w": "of",
+     "start": 35.3,
+     "end": 35.34,
+     "conf": 0.501
+    },
+    {
+     "w": "the",
+     "start": 35.36,
+     "end": 35.46,
+     "conf": 0.737
+    },
+    {
+     "w": "worlds",
+     "start": 35.521,
+     "end": 35.822,
+     "conf": 0.788
+    },
+    {
+     "w": "guy",
+     "start": 35.902,
+     "end": 36.143,
+     "conf": 0.662
+    },
+    {
+     "w": "hopefully",
+     "start": 36.363,
+     "end": 36.724,
+     "conf": 0.948
+    },
+    {
+     "w": "called",
+     "start": 36.805,
+     "end": 37.045,
+     "conf": 0.85
+    },
+    {
+     "w": "it",
+     "start": 37.126,
+     "end": 37.166,
+     "conf": 0.496
+    },
+    {
+     "w": "the",
+     "start": 37.186,
+     "end": 37.306,
+     "conf": 0.66
+    },
+    {
+     "w": "war",
+     "start": 37.407,
+     "end": 37.567,
+     "conf": 0.662
+    },
+    {
+     "w": "that",
+     "start": 37.647,
+     "end": 37.768,
+     "conf": 0.748
+    },
+    {
+     "w": "will",
+     "start": 37.788,
+     "end": 37.928,
+     "conf": 0.956
+    },
+    {
+     "w": "end",
+     "start": 38.069,
+     "end": 38.229,
+     "conf": 0.667
+    },
+    {
+     "w": "war",
+     "start": 38.37,
+     "end": 38.61,
+     "conf": 0.662
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Today we just call it World War One.",
+   "idea": true,
+   "start": 39.06,
+   "end": 40.881,
+   "words": [
+    {
+     "w": "today",
+     "start": 39.06,
+     "end": 39.263,
+     "conf": 0.697
+    },
+    {
+     "w": "we",
+     "start": 39.303,
+     "end": 39.364,
+     "conf": 0.93
+    },
+    {
+     "w": "just",
+     "start": 39.445,
+     "end": 39.586,
+     "conf": 0.525
+    },
+    {
+     "w": "call",
+     "start": 39.607,
+     "end": 39.789,
+     "conf": 0.774
+    },
+    {
+     "w": "it",
+     "start": 39.849,
+     "end": 39.91,
+     "conf": 0.412
+    },
+    {
+     "w": "world",
+     "start": 39.971,
+     "end": 40.254,
+     "conf": 0.826
+    },
+    {
+     "w": "war",
+     "start": 40.274,
+     "end": 40.497,
+     "conf": 0.407
+    },
+    {
+     "w": "one",
+     "start": 40.517,
+     "end": 40.881,
+     "conf": 0.163
+    }
+   ]
+  },
+  {
+   "section": "Then and now",
+   "act": "",
+   "text": "This is the world map today, and here is the United States, minding its own business.",
+   "idea": false,
+   "start": 42.602,
+   "end": 47.151,
+   "words": [
+    {
+     "w": "this",
+     "start": 42.602,
+     "end": 42.722,
+     "conf": 0.999
+    },
+    {
+     "w": "is",
+     "start": 42.803,
+     "end": 42.843,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 42.923,
+     "end": 42.983,
+     "conf": 0.53
+    },
+    {
+     "w": "world",
+     "start": 43.063,
+     "end": 43.304,
+     "conf": 0.797
+    },
+    {
+     "w": "map",
+     "start": 43.384,
+     "end": 43.544,
+     "conf": 0.577
+    },
+    {
+     "w": "today",
+     "start": 43.664,
+     "end": 43.985,
+     "conf": 0.999
+    },
+    {
+     "w": "and",
+     "start": 44.225,
+     "end": 44.326,
+     "conf": 0.666
+    },
+    {
+     "w": "here",
+     "start": 44.426,
+     "end": 44.686,
+     "conf": 0.926
+    },
+    {
+     "w": "is",
+     "start": 44.786,
+     "end": 44.867,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 44.887,
+     "end": 44.987,
+     "conf": 0.745
+    },
+    {
+     "w": "united",
+     "start": 45.087,
+     "end": 45.428,
+     "conf": 0.851
+    },
+    {
+     "w": "states",
+     "start": 45.508,
+     "end": 45.808,
+     "conf": 0.821
+    },
+    {
+     "w": "minding",
+     "start": 45.889,
+     "end": 46.249,
+     "conf": 0.999
+    },
+    {
+     "w": "its",
+     "start": 46.309,
+     "end": 46.41,
+     "conf": 0.666
+    },
+    {
+     "w": "own",
+     "start": 46.51,
+     "end": 46.63,
+     "conf": 0.704
+    },
+    {
+     "w": "business",
+     "start": 46.75,
+     "end": 47.151,
+     "conf": 0.822
+    }
+   ]
+  },
+  {
+   "section": "Then and now",
+   "act": "",
+   "text": "And this is the world in nineteen fourteen, when a handful of European empires ruled huge chunks of Africa and Asia.",
+   "idea": false,
+   "start": 47.741,
+   "end": 54.061,
+   "words": [
+    {
+     "w": "and",
+     "start": 47.741,
+     "end": 47.802,
+     "conf": 0.647
+    },
+    {
+     "w": "this",
+     "start": 47.822,
+     "end": 47.922,
+     "conf": 0.744
+    },
+    {
+     "w": "is",
+     "start": 48.002,
+     "end": 48.042,
+     "conf": 0.496
+    },
+    {
+     "w": "the",
+     "start": 48.062,
+     "end": 48.163,
+     "conf": 0.768
+    },
+    {
+     "w": "world",
+     "start": 48.243,
+     "end": 48.484,
+     "conf": 0.799
+    },
+    {
+     "w": "in",
+     "start": 48.544,
+     "end": 48.604,
+     "conf": 0.499
+    },
+    {
+     "w": "nineteen",
+     "start": 48.624,
+     "end": 49.066,
+     "conf": 0.0
+    },
+    {
+     "w": "fourteen",
+     "start": 49.086,
+     "end": 49.828,
+     "conf": 0.0
+    },
+    {
+     "w": "when",
+     "start": 49.848,
+     "end": 49.948,
+     "conf": 0.878
+    },
+    {
+     "w": "a",
+     "start": 49.968,
+     "end": 49.988,
+     "conf": 0.996
+    },
+    {
+     "w": "handful",
+     "start": 50.049,
+     "end": 50.37,
+     "conf": 0.999
+    },
+    {
+     "w": "of",
+     "start": 50.39,
+     "end": 50.49,
+     "conf": 0.666
+    },
+    {
+     "w": "european",
+     "start": 50.731,
+     "end": 51.072,
+     "conf": 0.998
+    },
+    {
+     "w": "empires",
+     "start": 51.152,
+     "end": 51.593,
+     "conf": 0.856
+    },
+    {
+     "w": "ruled",
+     "start": 51.714,
+     "end": 51.954,
+     "conf": 0.822
+    },
+    {
+     "w": "huge",
+     "start": 52.295,
+     "end": 52.616,
+     "conf": 0.933
+    },
+    {
+     "w": "chunks",
+     "start": 52.677,
+     "end": 52.957,
+     "conf": 0.742
+    },
+    {
+     "w": "of",
+     "start": 52.977,
+     "end": 53.078,
+     "conf": 0.666
+    },
+    {
+     "w": "africa",
+     "start": 53.198,
+     "end": 53.479,
+     "conf": 0.832
+    },
+    {
+     "w": "and",
+     "start": 53.579,
+     "end": 53.639,
+     "conf": 0.662
+    },
+    {
+     "w": "asia",
+     "start": 53.78,
+     "end": 54.061,
+     "conf": 0.75
+    }
+   ]
+  },
+  {
+   "section": "Then and now",
+   "act": "",
+   "text": "That's imperialism: show up, plant a flag, and ship the good stuff home.",
+   "idea": false,
+   "start": 54.571,
+   "end": 58.42,
+   "words": [
+    {
+     "w": "that's",
+     "start": 54.571,
+     "end": 54.732,
+     "conf": 0.653
+    },
+    {
+     "w": "imperialism",
+     "start": 54.772,
+     "end": 55.513,
+     "conf": 0.986
+    },
+    {
+     "w": "show",
+     "start": 55.834,
+     "end": 56.014,
+     "conf": 0.997
+    },
+    {
+     "w": "up",
+     "start": 56.095,
+     "end": 56.235,
+     "conf": 0.998
+    },
+    {
+     "w": "plant",
+     "start": 56.375,
+     "end": 56.616,
+     "conf": 0.744
+    },
+    {
+     "w": "a",
+     "start": 56.636,
+     "end": 56.676,
+     "conf": 0.636
+    },
+    {
+     "w": "flag",
+     "start": 56.736,
+     "end": 57.117,
+     "conf": 0.749
+    },
+    {
+     "w": "and",
+     "start": 57.197,
+     "end": 57.257,
+     "conf": 0.643
+    },
+    {
+     "w": "ship",
+     "start": 57.337,
+     "end": 57.438,
+     "conf": 0.625
+    },
+    {
+     "w": "the",
+     "start": 57.538,
+     "end": 57.618,
+     "conf": 0.988
+    },
+    {
+     "w": "good",
+     "start": 57.638,
+     "end": 57.799,
+     "conf": 0.832
+    },
+    {
+     "w": "stuff",
+     "start": 57.859,
+     "end": 58.059,
+     "conf": 0.826
+    },
+    {
+     "w": "home",
+     "start": 58.179,
+     "end": 58.42,
+     "conf": 0.897
+    }
+   ]
+  },
+  {
+   "section": "Then and now",
+   "act": "",
+   "text": "Britain ran about a fifth of all the land on Earth this way, and France and Russia were busy collecting too.",
+   "idea": true,
+   "start": 58.81,
+   "end": 64.641,
+   "words": [
+    {
+     "w": "britain",
+     "start": 58.81,
+     "end": 59.051,
+     "conf": 0.803
+    },
+    {
+     "w": "ran",
+     "start": 59.091,
+     "end": 59.271,
+     "conf": 0.746
+    },
+    {
+     "w": "about",
+     "start": 59.311,
+     "end": 59.572,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 59.632,
+     "end": 59.652,
+     "conf": 0.003
+    },
+    {
+     "w": "fifth",
+     "start": 59.812,
+     "end": 60.072,
+     "conf": 0.988
+    },
+    {
+     "w": "of",
+     "start": 60.133,
+     "end": 60.213,
+     "conf": 0.999
+    },
+    {
+     "w": "all",
+     "start": 60.353,
+     "end": 60.473,
+     "conf": 0.641
+    },
+    {
+     "w": "the",
+     "start": 60.553,
+     "end": 60.614,
+     "conf": 0.362
+    },
+    {
+     "w": "land",
+     "start": 60.714,
+     "end": 60.914,
+     "conf": 0.763
+    },
+    {
+     "w": "on",
+     "start": 61.014,
+     "end": 61.054,
+     "conf": 0.5
+    },
+    {
+     "w": "earth",
+     "start": 61.155,
+     "end": 61.315,
+     "conf": 0.879
+    },
+    {
+     "w": "this",
+     "start": 61.335,
+     "end": 61.535,
+     "conf": 0.773
+    },
+    {
+     "w": "way",
+     "start": 61.635,
+     "end": 61.836,
+     "conf": 0.666
+    },
+    {
+     "w": "and",
+     "start": 62.197,
+     "end": 62.297,
+     "conf": 0.659
+    },
+    {
+     "w": "france",
+     "start": 62.377,
+     "end": 62.758,
+     "conf": 0.81
+    },
+    {
+     "w": "and",
+     "start": 62.818,
+     "end": 62.898,
+     "conf": 0.655
+    },
+    {
+     "w": "russia",
+     "start": 62.978,
+     "end": 63.259,
+     "conf": 0.831
+    },
+    {
+     "w": "were",
+     "start": 63.359,
+     "end": 63.499,
+     "conf": 0.749
+    },
+    {
+     "w": "busy",
+     "start": 63.579,
+     "end": 63.8,
+     "conf": 0.617
+    },
+    {
+     "w": "collecting",
+     "start": 63.9,
+     "end": 64.381,
+     "conf": 0.884
+    },
+    {
+     "w": "too",
+     "start": 64.461,
+     "end": 64.641,
+     "conf": 0.561
+    }
+   ]
+  },
+  {
+   "section": "Then and now",
+   "act": "",
+   "text": "Germany, on the other hand, only became one country in eighteen seventy-one, and by nineteen fourteen it was making more steel than Britain.",
+   "idea": false,
+   "start": 65.831,
+   "end": 73.611,
+   "words": [
+    {
+     "w": "germany",
+     "start": 65.831,
+     "end": 66.172,
+     "conf": 0.997
+    },
+    {
+     "w": "on",
+     "start": 66.333,
+     "end": 66.373,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 66.393,
+     "end": 66.453,
+     "conf": 0.998
+    },
+    {
+     "w": "other",
+     "start": 66.533,
+     "end": 66.673,
+     "conf": 0.797
+    },
+    {
+     "w": "hand",
+     "start": 66.754,
+     "end": 66.994,
+     "conf": 0.79
+    },
+    {
+     "w": "only",
+     "start": 67.155,
+     "end": 67.335,
+     "conf": 0.955
+    },
+    {
+     "w": "became",
+     "start": 67.435,
+     "end": 67.756,
+     "conf": 0.833
+    },
+    {
+     "w": "one",
+     "start": 67.876,
+     "end": 67.997,
+     "conf": 0.666
+    },
+    {
+     "w": "country",
+     "start": 68.017,
+     "end": 68.378,
+     "conf": 0.888
+    },
+    {
+     "w": "in",
+     "start": 68.478,
+     "end": 68.518,
+     "conf": 0.499
+    },
+    {
+     "w": "eighteen",
+     "start": 68.538,
+     "end": 69.019,
+     "conf": 0.017
+    },
+    {
+     "w": "seventy-one",
+     "start": 69.039,
+     "end": 69.881,
+     "conf": 0.003
+    },
+    {
+     "w": "and",
+     "start": 70.082,
+     "end": 70.162,
+     "conf": 0.661
+    },
+    {
+     "w": "by",
+     "start": 70.242,
+     "end": 70.363,
+     "conf": 0.5
+    },
+    {
+     "w": "nineteen",
+     "start": 70.383,
+     "end": 70.924,
+     "conf": 0.026
+    },
+    {
+     "w": "fourteen",
+     "start": 71.044,
+     "end": 71.606,
+     "conf": 0.028
+    },
+    {
+     "w": "it",
+     "start": 71.706,
+     "end": 71.746,
+     "conf": 0.496
+    },
+    {
+     "w": "was",
+     "start": 71.766,
+     "end": 71.886,
+     "conf": 0.997
+    },
+    {
+     "w": "making",
+     "start": 71.967,
+     "end": 72.247,
+     "conf": 0.838
+    },
+    {
+     "w": "more",
+     "start": 72.327,
+     "end": 72.548,
+     "conf": 0.988
+    },
+    {
+     "w": "steel",
+     "start": 72.688,
+     "end": 73.029,
+     "conf": 0.606
+    },
+    {
+     "w": "than",
+     "start": 73.129,
+     "end": 73.25,
+     "conf": 0.629
+    },
+    {
+     "w": "britain",
+     "start": 73.35,
+     "end": 73.611,
+     "conf": 0.811
+    }
+   ]
+  },
+  {
+   "section": "Then and now",
+   "act": "",
+   "text": "But by the time Germany showed up to the colony party, the best snacks were gone, so it started demanding what it called \"a place in the sun\".",
+   "idea": true,
+   "start": 74.021,
+   "end": 81.756,
+   "words": [
+    {
+     "w": "but",
+     "start": 74.021,
+     "end": 74.101,
+     "conf": 0.348
+    },
+    {
+     "w": "by",
+     "start": 74.121,
+     "end": 74.221,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 74.262,
+     "end": 74.322,
+     "conf": 0.996
+    },
+    {
+     "w": "time",
+     "start": 74.422,
+     "end": 74.742,
+     "conf": 0.706
+    },
+    {
+     "w": "germany",
+     "start": 74.823,
+     "end": 75.183,
+     "conf": 0.857
+    },
+    {
+     "w": "showed",
+     "start": 75.283,
+     "end": 75.484,
+     "conf": 0.822
+    },
+    {
+     "w": "up",
+     "start": 75.504,
+     "end": 75.584,
+     "conf": 0.997
+    },
+    {
+     "w": "to",
+     "start": 75.604,
+     "end": 75.664,
+     "conf": 0.982
+    },
+    {
+     "w": "the",
+     "start": 75.684,
+     "end": 75.764,
+     "conf": 0.973
+    },
+    {
+     "w": "colony",
+     "start": 75.825,
+     "end": 76.205,
+     "conf": 0.805
+    },
+    {
+     "w": "party",
+     "start": 76.326,
+     "end": 76.706,
+     "conf": 0.787
+    },
+    {
+     "w": "the",
+     "start": 76.987,
+     "end": 77.047,
+     "conf": 0.441
+    },
+    {
+     "w": "best",
+     "start": 77.127,
+     "end": 77.327,
+     "conf": 0.735
+    },
+    {
+     "w": "snacks",
+     "start": 77.388,
+     "end": 77.748,
+     "conf": 0.755
+    },
+    {
+     "w": "were",
+     "start": 77.828,
+     "end": 77.949,
+     "conf": 0.745
+    },
+    {
+     "w": "gone",
+     "start": 77.969,
+     "end": 78.289,
+     "conf": 0.8
+    },
+    {
+     "w": "so",
+     "start": 78.45,
+     "end": 78.53,
+     "conf": 0.499
+    },
+    {
+     "w": "it",
+     "start": 79.051,
+     "end": 79.111,
+     "conf": 0.997
+    },
+    {
+     "w": "started",
+     "start": 79.131,
+     "end": 79.452,
+     "conf": 0.843
+    },
+    {
+     "w": "demanding",
+     "start": 79.512,
+     "end": 80.153,
+     "conf": 0.868
+    },
+    {
+     "w": "what",
+     "start": 80.273,
+     "end": 80.373,
+     "conf": 0.76
+    },
+    {
+     "w": "it",
+     "start": 80.393,
+     "end": 80.454,
+     "conf": 0.99
+    },
+    {
+     "w": "called",
+     "start": 80.474,
+     "end": 80.754,
+     "conf": 0.856
+    },
+    {
+     "w": "a",
+     "start": 80.874,
+     "end": 80.894,
+     "conf": 0.001
+    },
+    {
+     "w": "place",
+     "start": 80.955,
+     "end": 81.255,
+     "conf": 0.8
+    },
+    {
+     "w": "in",
+     "start": 81.315,
+     "end": 81.355,
+     "conf": 0.488
+    },
+    {
+     "w": "the",
+     "start": 81.375,
+     "end": 81.435,
+     "conf": 0.987
+    },
+    {
+     "w": "sun",
+     "start": 81.556,
+     "end": 81.756,
+     "conf": 0.658
+    }
+   ]
+  },
+  {
+   "section": "Two gangs",
+   "act": "",
+   "text": "So Europe split into two gangs.",
+   "idea": false,
+   "start": 83.436,
+   "end": 85.107,
+   "words": [
+    {
+     "w": "so",
+     "start": 83.436,
+     "end": 83.517,
+     "conf": 0.661
+    },
+    {
+     "w": "europe",
+     "start": 83.617,
+     "end": 83.819,
+     "conf": 0.852
+    },
+    {
+     "w": "split",
+     "start": 83.879,
+     "end": 84.161,
+     "conf": 0.997
+    },
+    {
+     "w": "into",
+     "start": 84.261,
+     "end": 84.422,
+     "conf": 0.747
+    },
+    {
+     "w": "two",
+     "start": 84.523,
+     "end": 84.664,
+     "conf": 0.732
+    },
+    {
+     "w": "gangs",
+     "start": 84.724,
+     "end": 85.107,
+     "conf": 0.925
+    }
+   ]
+  },
+  {
+   "section": "Two gangs",
+   "act": "",
+   "text": "Germany, Austria-Hungary, which was one empire, two countries and one very old emperor, and Italy formed the Triple Alliance, while Britain, France and Russia, getting nervous, teamed up as the Triple Entente.",
+   "idea": false,
+   "start": 85.677,
+   "end": 97.453,
+   "words": [
+    {
+     "w": "germany",
+     "start": 85.677,
+     "end": 86.038,
+     "conf": 0.856
+    },
+    {
+     "w": "austria-hungary",
+     "start": 86.358,
+     "end": 87.119,
+     "conf": 0.976
+    },
+    {
+     "w": "which",
+     "start": 87.279,
+     "end": 87.419,
+     "conf": 0.786
+    },
+    {
+     "w": "was",
+     "start": 87.44,
+     "end": 87.56,
+     "conf": 0.997
+    },
+    {
+     "w": "one",
+     "start": 87.68,
+     "end": 87.8,
+     "conf": 0.907
+    },
+    {
+     "w": "empire",
+     "start": 87.86,
+     "end": 88.241,
+     "conf": 0.821
+    },
+    {
+     "w": "two",
+     "start": 88.321,
+     "end": 88.481,
+     "conf": 0.666
+    },
+    {
+     "w": "countries",
+     "start": 88.541,
+     "end": 88.982,
+     "conf": 0.899
+    },
+    {
+     "w": "and",
+     "start": 89.062,
+     "end": 89.122,
+     "conf": 0.453
+    },
+    {
+     "w": "one",
+     "start": 89.222,
+     "end": 89.342,
+     "conf": 0.665
+    },
+    {
+     "w": "very",
+     "start": 89.442,
+     "end": 89.662,
+     "conf": 0.733
+    },
+    {
+     "w": "old",
+     "start": 89.783,
+     "end": 89.883,
+     "conf": 0.662
+    },
+    {
+     "w": "emperor",
+     "start": 89.983,
+     "end": 90.303,
+     "conf": 0.714
+    },
+    {
+     "w": "and",
+     "start": 90.423,
+     "end": 90.503,
+     "conf": 0.734
+    },
+    {
+     "w": "italy",
+     "start": 90.604,
+     "end": 90.864,
+     "conf": 0.8
+    },
+    {
+     "w": "formed",
+     "start": 90.984,
+     "end": 91.244,
+     "conf": 0.828
+    },
+    {
+     "w": "the",
+     "start": 91.264,
+     "end": 91.325,
+     "conf": 0.963
+    },
+    {
+     "w": "triple",
+     "start": 91.405,
+     "end": 91.765,
+     "conf": 0.859
+    },
+    {
+     "w": "alliance",
+     "start": 91.785,
+     "end": 92.366,
+     "conf": 0.866
+    },
+    {
+     "w": "while",
+     "start": 92.466,
+     "end": 92.646,
+     "conf": 0.997
+    },
+    {
+     "w": "britain",
+     "start": 92.726,
+     "end": 93.047,
+     "conf": 0.821
+    },
+    {
+     "w": "france",
+     "start": 93.267,
+     "end": 93.608,
+     "conf": 0.833
+    },
+    {
+     "w": "and",
+     "start": 93.628,
+     "end": 93.728,
+     "conf": 0.997
+    },
+    {
+     "w": "russia",
+     "start": 93.808,
+     "end": 94.108,
+     "conf": 0.843
+    },
+    {
+     "w": "getting",
+     "start": 94.389,
+     "end": 94.629,
+     "conf": 0.852
+    },
+    {
+     "w": "nervous",
+     "start": 94.709,
+     "end": 95.17,
+     "conf": 0.748
+    },
+    {
+     "w": "teamed",
+     "start": 95.51,
+     "end": 95.83,
+     "conf": 0.831
+    },
+    {
+     "w": "up",
+     "start": 95.931,
+     "end": 96.091,
+     "conf": 0.515
+    },
+    {
+     "w": "as",
+     "start": 96.291,
+     "end": 96.371,
+     "conf": 0.497
+    },
+    {
+     "w": "the",
+     "start": 96.431,
+     "end": 96.491,
+     "conf": 0.651
+    },
+    {
+     "w": "triple",
+     "start": 96.591,
+     "end": 96.912,
+     "conf": 0.839
+    },
+    {
+     "w": "entente",
+     "start": 97.012,
+     "end": 97.453,
+     "conf": 0.569
+    }
+   ]
+  },
+  {
+   "section": "Two gangs",
+   "act": "",
+   "text": "Italy, still sulking because France had grabbed Tunisia, actually asked to join, and Germany said, \"Sure, just don't flake on us,\" which, spoiler, Italy totally would.",
+   "idea": false,
+   "start": 98.023,
+   "end": 107.192,
+   "words": [
+    {
+     "w": "italy",
+     "start": 98.023,
+     "end": 98.303,
+     "conf": 1.0
+    },
+    {
+     "w": "still",
+     "start": 98.484,
+     "end": 98.684,
+     "conf": 0.803
+    },
+    {
+     "w": "sulking",
+     "start": 98.784,
+     "end": 99.184,
+     "conf": 0.843
+    },
+    {
+     "w": "because",
+     "start": 99.324,
+     "end": 99.645,
+     "conf": 0.87
+    },
+    {
+     "w": "france",
+     "start": 99.725,
+     "end": 100.045,
+     "conf": 0.833
+    },
+    {
+     "w": "had",
+     "start": 100.065,
+     "end": 100.185,
+     "conf": 0.997
+    },
+    {
+     "w": "grabbed",
+     "start": 100.265,
+     "end": 100.606,
+     "conf": 0.829
+    },
+    {
+     "w": "tunisia",
+     "start": 100.626,
+     "end": 101.126,
+     "conf": 0.683
+    },
+    {
+     "w": "actually",
+     "start": 101.366,
+     "end": 101.667,
+     "conf": 0.939
+    },
+    {
+     "w": "asked",
+     "start": 101.767,
+     "end": 101.967,
+     "conf": 0.69
+    },
+    {
+     "w": "to",
+     "start": 101.987,
+     "end": 102.047,
+     "conf": 0.705
+    },
+    {
+     "w": "join",
+     "start": 102.147,
+     "end": 102.447,
+     "conf": 0.75
+    },
+    {
+     "w": "and",
+     "start": 102.668,
+     "end": 102.748,
+     "conf": 0.664
+    },
+    {
+     "w": "germany",
+     "start": 102.768,
+     "end": 103.108,
+     "conf": 0.883
+    },
+    {
+     "w": "said",
+     "start": 103.248,
+     "end": 103.428,
+     "conf": 0.75
+    },
+    {
+     "w": "sure",
+     "start": 103.629,
+     "end": 103.849,
+     "conf": 0.89
+    },
+    {
+     "w": "just",
+     "start": 103.969,
+     "end": 104.129,
+     "conf": 0.544
+    },
+    {
+     "w": "don't",
+     "start": 104.149,
+     "end": 104.329,
+     "conf": 0.77
+    },
+    {
+     "w": "flake",
+     "start": 104.409,
+     "end": 104.67,
+     "conf": 0.742
+    },
+    {
+     "w": "on",
+     "start": 104.69,
+     "end": 104.79,
+     "conf": 0.665
+    },
+    {
+     "w": "us",
+     "start": 104.89,
+     "end": 105.03,
+     "conf": 0.499
+    },
+    {
+     "w": "which",
+     "start": 105.19,
+     "end": 105.39,
+     "conf": 0.981
+    },
+    {
+     "w": "spoiler",
+     "start": 105.59,
+     "end": 106.031,
+     "conf": 0.834
+    },
+    {
+     "w": "italy",
+     "start": 106.211,
+     "end": 106.411,
+     "conf": 0.774
+    },
+    {
+     "w": "totally",
+     "start": 106.531,
+     "end": 106.892,
+     "conf": 0.797
+    },
+    {
+     "w": "would",
+     "start": 106.992,
+     "end": 107.192,
+     "conf": 0.578
+    }
+   ]
+  },
+  {
+   "section": "Two gangs",
+   "act": "",
+   "text": "Everyone promised, more or less, to back up their friends in a fight, which sounds sweet until you realize it turns one small fight into a giant one.",
+   "idea": false,
+   "start": 107.682,
+   "end": 115.865,
+   "words": [
+    {
+     "w": "everyone",
+     "start": 107.682,
+     "end": 107.983,
+     "conf": 0.87
+    },
+    {
+     "w": "promised",
+     "start": 108.023,
+     "end": 108.565,
+     "conf": 0.999
+    },
+    {
+     "w": "more",
+     "start": 108.785,
+     "end": 108.946,
+     "conf": 0.687
+    },
+    {
+     "w": "or",
+     "start": 108.966,
+     "end": 109.026,
+     "conf": 0.875
+    },
+    {
+     "w": "less",
+     "start": 109.106,
+     "end": 109.367,
+     "conf": 0.983
+    },
+    {
+     "w": "to",
+     "start": 109.527,
+     "end": 109.588,
+     "conf": 0.513
+    },
+    {
+     "w": "back",
+     "start": 109.688,
+     "end": 109.888,
+     "conf": 0.795
+    },
+    {
+     "w": "up",
+     "start": 110.029,
+     "end": 110.129,
+     "conf": 0.5
+    },
+    {
+     "w": "their",
+     "start": 110.269,
+     "end": 110.41,
+     "conf": 0.61
+    },
+    {
+     "w": "friends",
+     "start": 110.51,
+     "end": 110.911,
+     "conf": 0.939
+    },
+    {
+     "w": "in",
+     "start": 111.072,
+     "end": 111.112,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 111.172,
+     "end": 111.192,
+     "conf": 0.0
+    },
+    {
+     "w": "fight",
+     "start": 111.292,
+     "end": 111.473,
+     "conf": 0.792
+    },
+    {
+     "w": "which",
+     "start": 111.493,
+     "end": 111.653,
+     "conf": 0.948
+    },
+    {
+     "w": "sounds",
+     "start": 111.794,
+     "end": 112.154,
+     "conf": 0.807
+    },
+    {
+     "w": "sweet",
+     "start": 112.275,
+     "end": 112.515,
+     "conf": 0.827
+    },
+    {
+     "w": "until",
+     "start": 112.536,
+     "end": 112.776,
+     "conf": 0.831
+    },
+    {
+     "w": "you",
+     "start": 112.796,
+     "end": 112.917,
+     "conf": 0.785
+    },
+    {
+     "w": "realize",
+     "start": 112.957,
+     "end": 113.298,
+     "conf": 0.841
+    },
+    {
+     "w": "it",
+     "start": 113.318,
+     "end": 113.378,
+     "conf": 0.991
+    },
+    {
+     "w": "turns",
+     "start": 113.438,
+     "end": 113.699,
+     "conf": 0.817
+    },
+    {
+     "w": "one",
+     "start": 113.899,
+     "end": 114.04,
+     "conf": 0.666
+    },
+    {
+     "w": "small",
+     "start": 114.16,
+     "end": 114.401,
+     "conf": 0.813
+    },
+    {
+     "w": "fight",
+     "start": 114.501,
+     "end": 114.742,
+     "conf": 0.74
+    },
+    {
+     "w": "into",
+     "start": 114.862,
+     "end": 115.002,
+     "conf": 0.639
+    },
+    {
+     "w": "a",
+     "start": 115.102,
+     "end": 115.123,
+     "conf": 0.29
+    },
+    {
+     "w": "giant",
+     "start": 115.383,
+     "end": 115.644,
+     "conf": 0.782
+    },
+    {
+     "w": "one",
+     "start": 115.764,
+     "end": 115.865,
+     "conf": 0.663
+    }
+   ]
+  },
+  {
+   "section": "Two gangs",
+   "act": "",
+   "text": "And the most dangerous spot was the Balkans, the crowded corner of southeast Europe, where Austria-Hungary had grabbed Bosnia in nineteen oh eight, and its neighbor Serbia, who wanted it too, was absolutely furious.",
+   "idea": false,
+   "start": 116.254,
+   "end": 128.447,
+   "words": [
+    {
+     "w": "and",
+     "start": 116.254,
+     "end": 116.314,
+     "conf": 0.748
+    },
+    {
+     "w": "the",
+     "start": 116.334,
+     "end": 116.414,
+     "conf": 0.906
+    },
+    {
+     "w": "most",
+     "start": 116.454,
+     "end": 116.735,
+     "conf": 0.85
+    },
+    {
+     "w": "dangerous",
+     "start": 116.915,
+     "end": 117.335,
+     "conf": 0.9
+    },
+    {
+     "w": "spot",
+     "start": 117.395,
+     "end": 117.656,
+     "conf": 0.908
+    },
+    {
+     "w": "was",
+     "start": 117.716,
+     "end": 117.796,
+     "conf": 0.664
+    },
+    {
+     "w": "the",
+     "start": 117.876,
+     "end": 117.936,
+     "conf": 0.426
+    },
+    {
+     "w": "balkans",
+     "start": 118.116,
+     "end": 118.717,
+     "conf": 0.751
+    },
+    {
+     "w": "the",
+     "start": 118.817,
+     "end": 118.877,
+     "conf": 0.34
+    },
+    {
+     "w": "crowded",
+     "start": 118.977,
+     "end": 119.518,
+     "conf": 0.78
+    },
+    {
+     "w": "corner",
+     "start": 119.618,
+     "end": 119.898,
+     "conf": 0.831
+    },
+    {
+     "w": "of",
+     "start": 119.918,
+     "end": 119.998,
+     "conf": 0.664
+    },
+    {
+     "w": "southeast",
+     "start": 120.118,
+     "end": 120.659,
+     "conf": 0.864
+    },
+    {
+     "w": "europe",
+     "start": 120.759,
+     "end": 121.059,
+     "conf": 0.969
+    },
+    {
+     "w": "where",
+     "start": 121.079,
+     "end": 121.239,
+     "conf": 0.822
+    },
+    {
+     "w": "austria-hungary",
+     "start": 121.34,
+     "end": 122.241,
+     "conf": 0.921
+    },
+    {
+     "w": "had",
+     "start": 122.341,
+     "end": 122.441,
+     "conf": 0.667
+    },
+    {
+     "w": "grabbed",
+     "start": 122.521,
+     "end": 122.881,
+     "conf": 0.851
+    },
+    {
+     "w": "bosnia",
+     "start": 122.981,
+     "end": 123.382,
+     "conf": 0.654
+    },
+    {
+     "w": "in",
+     "start": 123.402,
+     "end": 123.462,
+     "conf": 0.0
+    },
+    {
+     "w": "nineteen",
+     "start": 123.482,
+     "end": 124.063,
+     "conf": 0.249
+    },
+    {
+     "w": "oh",
+     "start": 124.083,
+     "end": 124.123,
+     "conf": 0.0
+    },
+    {
+     "w": "eight",
+     "start": 124.143,
+     "end": 124.563,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 124.723,
+     "end": 124.803,
+     "conf": 0.66
+    },
+    {
+     "w": "its",
+     "start": 124.823,
+     "end": 124.944,
+     "conf": 0.739
+    },
+    {
+     "w": "neighbor",
+     "start": 125.044,
+     "end": 125.304,
+     "conf": 0.67
+    },
+    {
+     "w": "serbia",
+     "start": 125.424,
+     "end": 125.804,
+     "conf": 0.663
+    },
+    {
+     "w": "who",
+     "start": 125.945,
+     "end": 126.005,
+     "conf": 0.686
+    },
+    {
+     "w": "wanted",
+     "start": 126.145,
+     "end": 126.445,
+     "conf": 0.823
+    },
+    {
+     "w": "it",
+     "start": 126.525,
+     "end": 126.565,
+     "conf": 0.494
+    },
+    {
+     "w": "too",
+     "start": 126.665,
+     "end": 126.846,
+     "conf": 0.361
+    },
+    {
+     "w": "was",
+     "start": 127.046,
+     "end": 127.146,
+     "conf": 0.664
+    },
+    {
+     "w": "absolutely",
+     "start": 127.306,
+     "end": 127.867,
+     "conf": 0.897
+    },
+    {
+     "w": "furious",
+     "start": 127.987,
+     "end": 128.447,
+     "conf": 0.828
+    }
+   ]
+  },
+  {
+   "section": "Two gangs",
+   "act": "",
+   "text": "People called the Balkans the powder keg of Europe, and all it needed was a spark.",
+   "idea": true,
+   "start": 128.898,
+   "end": 133.326,
+   "words": [
+    {
+     "w": "people",
+     "start": 128.898,
+     "end": 129.098,
+     "conf": 0.998
+    },
+    {
+     "w": "called",
+     "start": 129.179,
+     "end": 129.399,
+     "conf": 0.832
+    },
+    {
+     "w": "the",
+     "start": 129.419,
+     "end": 129.499,
+     "conf": 0.743
+    },
+    {
+     "w": "balkans",
+     "start": 129.579,
+     "end": 130.1,
+     "conf": 0.697
+    },
+    {
+     "w": "the",
+     "start": 130.18,
+     "end": 130.24,
+     "conf": 0.356
+    },
+    {
+     "w": "powder",
+     "start": 130.321,
+     "end": 130.661,
+     "conf": 0.684
+    },
+    {
+     "w": "keg",
+     "start": 130.721,
+     "end": 130.982,
+     "conf": 0.517
+    },
+    {
+     "w": "of",
+     "start": 131.062,
+     "end": 131.122,
+     "conf": 0.498
+    },
+    {
+     "w": "europe",
+     "start": 131.222,
+     "end": 131.583,
+     "conf": 0.94
+    },
+    {
+     "w": "and",
+     "start": 131.703,
+     "end": 131.783,
+     "conf": 0.664
+    },
+    {
+     "w": "all",
+     "start": 131.863,
+     "end": 131.983,
+     "conf": 0.695
+    },
+    {
+     "w": "it",
+     "start": 132.064,
+     "end": 132.104,
+     "conf": 0.499
+    },
+    {
+     "w": "needed",
+     "start": 132.184,
+     "end": 132.464,
+     "conf": 0.836
+    },
+    {
+     "w": "was",
+     "start": 132.544,
+     "end": 132.665,
+     "conf": 0.742
+    },
+    {
+     "w": "a",
+     "start": 132.725,
+     "end": 132.745,
+     "conf": 0.002
+    },
+    {
+     "w": "spark",
+     "start": 132.905,
+     "end": 133.326,
+     "conf": 0.799
+    }
+   ]
+  },
+  {
+   "section": "The spark",
+   "act": "",
+   "text": "That spark came from one wrong turn, and a driver nobody had bothered to brief.",
+   "idea": true,
+   "start": 135.026,
+   "end": 139.36,
+   "words": [
+    {
+     "w": "that",
+     "start": 135.026,
+     "end": 135.167,
+     "conf": 0.997
+    },
+    {
+     "w": "spark",
+     "start": 135.267,
+     "end": 135.588,
+     "conf": 0.798
+    },
+    {
+     "w": "came",
+     "start": 135.648,
+     "end": 135.889,
+     "conf": 0.999
+    },
+    {
+     "w": "from",
+     "start": 135.929,
+     "end": 136.09,
+     "conf": 0.997
+    },
+    {
+     "w": "one",
+     "start": 136.27,
+     "end": 136.411,
+     "conf": 0.994
+    },
+    {
+     "w": "wrong",
+     "start": 136.431,
+     "end": 136.732,
+     "conf": 0.827
+    },
+    {
+     "w": "turn",
+     "start": 136.852,
+     "end": 137.153,
+     "conf": 0.679
+    },
+    {
+     "w": "and",
+     "start": 137.334,
+     "end": 137.394,
+     "conf": 0.648
+    },
+    {
+     "w": "a",
+     "start": 137.414,
+     "end": 137.434,
+     "conf": 0.996
+    },
+    {
+     "w": "driver",
+     "start": 137.514,
+     "end": 137.876,
+     "conf": 0.882
+    },
+    {
+     "w": "nobody",
+     "start": 137.996,
+     "end": 138.237,
+     "conf": 0.832
+    },
+    {
+     "w": "had",
+     "start": 138.317,
+     "end": 138.417,
+     "conf": 0.672
+    },
+    {
+     "w": "bothered",
+     "start": 138.498,
+     "end": 138.859,
+     "conf": 0.913
+    },
+    {
+     "w": "to",
+     "start": 138.939,
+     "end": 138.999,
+     "conf": 0.492
+    },
+    {
+     "w": "brief",
+     "start": 139.12,
+     "end": 139.36,
+     "conf": 0.702
+    }
+   ]
+  },
+  {
+   "section": "The spark",
+   "act": "",
+   "text": "June twenty-eighth, nineteen fourteen: Archduke Franz Ferdinand, heir to Austria-Hungary, rides through Sarajevo in an open car with his wife, Sophie.",
+   "idea": false,
+   "start": 140.43,
+   "end": 148.818,
+   "words": [
+    {
+     "w": "june",
+     "start": 140.43,
+     "end": 140.63,
+     "conf": 0.332
+    },
+    {
+     "w": "twenty-eighth",
+     "start": 140.65,
+     "end": 141.231,
+     "conf": 0.0
+    },
+    {
+     "w": "nineteen",
+     "start": 141.251,
+     "end": 141.711,
+     "conf": 0.0
+    },
+    {
+     "w": "fourteen",
+     "start": 141.731,
+     "end": 142.292,
+     "conf": 0.0
+    },
+    {
+     "w": "archduke",
+     "start": 142.312,
+     "end": 142.692,
+     "conf": 0.683
+    },
+    {
+     "w": "franz",
+     "start": 142.712,
+     "end": 142.992,
+     "conf": 0.657
+    },
+    {
+     "w": "ferdinand",
+     "start": 143.053,
+     "end": 143.553,
+     "conf": 0.845
+    },
+    {
+     "w": "heir",
+     "start": 143.573,
+     "end": 143.873,
+     "conf": 0.554
+    },
+    {
+     "w": "to",
+     "start": 143.933,
+     "end": 143.973,
+     "conf": 0.447
+    },
+    {
+     "w": "austria-hungary",
+     "start": 144.114,
+     "end": 144.914,
+     "conf": 0.908
+    },
+    {
+     "w": "rides",
+     "start": 145.335,
+     "end": 145.655,
+     "conf": 0.939
+    },
+    {
+     "w": "through",
+     "start": 145.675,
+     "end": 145.895,
+     "conf": 0.821
+    },
+    {
+     "w": "sarajevo",
+     "start": 145.975,
+     "end": 146.536,
+     "conf": 0.49
+    },
+    {
+     "w": "in",
+     "start": 146.696,
+     "end": 146.736,
+     "conf": 0.497
+    },
+    {
+     "w": "an",
+     "start": 146.756,
+     "end": 146.816,
+     "conf": 0.994
+    },
+    {
+     "w": "open",
+     "start": 146.956,
+     "end": 147.176,
+     "conf": 0.748
+    },
+    {
+     "w": "car",
+     "start": 147.256,
+     "end": 147.477,
+     "conf": 0.666
+    },
+    {
+     "w": "with",
+     "start": 147.557,
+     "end": 147.657,
+     "conf": 0.747
+    },
+    {
+     "w": "his",
+     "start": 147.677,
+     "end": 147.797,
+     "conf": 0.977
+    },
+    {
+     "w": "wife",
+     "start": 147.877,
+     "end": 148.177,
+     "conf": 0.722
+    },
+    {
+     "w": "sophie",
+     "start": 148.438,
+     "end": 148.818,
+     "conf": 0.348
+    }
+   ]
+  },
+  {
+   "section": "The spark",
+   "act": "",
+   "text": "Along the route wait six young Bosnians, armed with pistols, bombs and cyanide by a Serbian secret society called the Black Hand.",
+   "idea": false,
+   "start": 149.268,
+   "end": 156.49,
+   "words": [
+    {
+     "w": "along",
+     "start": 149.268,
+     "end": 149.549,
+     "conf": 0.94
+    },
+    {
+     "w": "the",
+     "start": 149.609,
+     "end": 149.669,
+     "conf": 0.333
+    },
+    {
+     "w": "route",
+     "start": 149.75,
+     "end": 149.95,
+     "conf": 0.456
+    },
+    {
+     "w": "wait",
+     "start": 149.97,
+     "end": 150.251,
+     "conf": 0.583
+    },
+    {
+     "w": "six",
+     "start": 150.452,
+     "end": 150.612,
+     "conf": 0.666
+    },
+    {
+     "w": "young",
+     "start": 150.753,
+     "end": 150.933,
+     "conf": 0.719
+    },
+    {
+     "w": "bosnians",
+     "start": 151.013,
+     "end": 151.595,
+     "conf": 0.806
+    },
+    {
+     "w": "armed",
+     "start": 151.736,
+     "end": 151.936,
+     "conf": 0.998
+    },
+    {
+     "w": "with",
+     "start": 151.956,
+     "end": 152.097,
+     "conf": 0.974
+    },
+    {
+     "w": "pistols",
+     "start": 152.157,
+     "end": 152.558,
+     "conf": 0.706
+    },
+    {
+     "w": "bombs",
+     "start": 152.659,
+     "end": 152.98,
+     "conf": 0.754
+    },
+    {
+     "w": "and",
+     "start": 153.0,
+     "end": 153.12,
+     "conf": 0.738
+    },
+    {
+     "w": "cyanide",
+     "start": 153.2,
+     "end": 153.782,
+     "conf": 0.627
+    },
+    {
+     "w": "by",
+     "start": 153.862,
+     "end": 153.963,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 154.043,
+     "end": 154.063,
+     "conf": 0.015
+    },
+    {
+     "w": "serbian",
+     "start": 154.183,
+     "end": 154.524,
+     "conf": 0.679
+    },
+    {
+     "w": "secret",
+     "start": 154.605,
+     "end": 154.865,
+     "conf": 0.828
+    },
+    {
+     "w": "society",
+     "start": 154.905,
+     "end": 155.407,
+     "conf": 0.998
+    },
+    {
+     "w": "called",
+     "start": 155.507,
+     "end": 155.728,
+     "conf": 0.827
+    },
+    {
+     "w": "the",
+     "start": 155.748,
+     "end": 155.828,
+     "conf": 0.98
+    },
+    {
+     "w": "black",
+     "start": 155.889,
+     "end": 156.149,
+     "conf": 0.821
+    },
+    {
+     "w": "hand",
+     "start": 156.23,
+     "end": 156.49,
+     "conf": 0.785
+    }
+   ]
+  },
+  {
+   "section": "The spark",
+   "act": "",
+   "text": "The first one throws a bomb, but it bounces off the folded roof and explodes under the car behind.",
+   "idea": false,
+   "start": 157.56,
+   "end": 162.906,
+   "words": [
+    {
+     "w": "the",
+     "start": 157.56,
+     "end": 157.62,
+     "conf": 0.995
+    },
+    {
+     "w": "first",
+     "start": 157.66,
+     "end": 157.9,
+     "conf": 0.98
+    },
+    {
+     "w": "one",
+     "start": 157.961,
+     "end": 158.081,
+     "conf": 0.972
+    },
+    {
+     "w": "throws",
+     "start": 158.101,
+     "end": 158.361,
+     "conf": 0.855
+    },
+    {
+     "w": "a",
+     "start": 158.421,
+     "end": 158.441,
+     "conf": 0.001
+    },
+    {
+     "w": "bomb",
+     "start": 158.501,
+     "end": 158.821,
+     "conf": 0.561
+    },
+    {
+     "w": "but",
+     "start": 158.842,
+     "end": 159.082,
+     "conf": 0.669
+    },
+    {
+     "w": "it",
+     "start": 159.142,
+     "end": 159.182,
+     "conf": 0.498
+    },
+    {
+     "w": "bounces",
+     "start": 159.322,
+     "end": 159.763,
+     "conf": 0.768
+    },
+    {
+     "w": "off",
+     "start": 159.863,
+     "end": 159.963,
+     "conf": 0.68
+    },
+    {
+     "w": "the",
+     "start": 159.983,
+     "end": 160.123,
+     "conf": 0.723
+    },
+    {
+     "w": "folded",
+     "start": 160.203,
+     "end": 160.523,
+     "conf": 0.832
+    },
+    {
+     "w": "roof",
+     "start": 160.623,
+     "end": 160.864,
+     "conf": 0.81
+    },
+    {
+     "w": "and",
+     "start": 161.164,
+     "end": 161.284,
+     "conf": 0.955
+    },
+    {
+     "w": "explodes",
+     "start": 161.324,
+     "end": 161.745,
+     "conf": 0.996
+    },
+    {
+     "w": "under",
+     "start": 161.885,
+     "end": 162.065,
+     "conf": 0.799
+    },
+    {
+     "w": "the",
+     "start": 162.125,
+     "end": 162.185,
+     "conf": 0.567
+    },
+    {
+     "w": "car",
+     "start": 162.265,
+     "end": 162.486,
+     "conf": 0.666
+    },
+    {
+     "w": "behind",
+     "start": 162.546,
+     "end": 162.906,
+     "conf": 0.747
+    }
+   ]
+  },
+  {
+   "section": "The spark",
+   "act": "",
+   "text": "So he swallows his cyanide and jumps into the river,",
+   "idea": false,
+   "start": 163.476,
+   "end": 166.13,
+   "words": [
+    {
+     "w": "so",
+     "start": 163.476,
+     "end": 163.536,
+     "conf": 0.999
+    },
+    {
+     "w": "he",
+     "start": 163.596,
+     "end": 163.657,
+     "conf": 0.978
+    },
+    {
+     "w": "swallows",
+     "start": 163.798,
+     "end": 164.18,
+     "conf": 0.862
+    },
+    {
+     "w": "his",
+     "start": 164.22,
+     "end": 164.32,
+     "conf": 0.994
+    },
+    {
+     "w": "cyanide",
+     "start": 164.421,
+     "end": 164.903,
+     "conf": 0.626
+    },
+    {
+     "w": "and",
+     "start": 164.923,
+     "end": 165.024,
+     "conf": 0.852
+    },
+    {
+     "w": "jumps",
+     "start": 165.125,
+     "end": 165.426,
+     "conf": 0.999
+    },
+    {
+     "w": "into",
+     "start": 165.527,
+     "end": 165.667,
+     "conf": 0.612
+    },
+    {
+     "w": "the",
+     "start": 165.728,
+     "end": 165.788,
+     "conf": 0.621
+    },
+    {
+     "w": "river",
+     "start": 165.889,
+     "end": 166.13,
+     "conf": 0.799
+    }
+   ]
+  },
+  {
+   "section": "The spark",
+   "act": "",
+   "text": "but the poison is too old to work, and the river is five inches deep.",
+   "idea": false,
+   "start": 166.561,
+   "end": 170.211,
+   "words": [
+    {
+     "w": "but",
+     "start": 166.561,
+     "end": 166.621,
+     "conf": 0.336
+    },
+    {
+     "w": "the",
+     "start": 166.641,
+     "end": 166.721,
+     "conf": 0.96
+    },
+    {
+     "w": "poison",
+     "start": 166.802,
+     "end": 167.183,
+     "conf": 0.829
+    },
+    {
+     "w": "is",
+     "start": 167.263,
+     "end": 167.323,
+     "conf": 0.499
+    },
+    {
+     "w": "too",
+     "start": 167.403,
+     "end": 167.604,
+     "conf": 0.402
+    },
+    {
+     "w": "old",
+     "start": 167.784,
+     "end": 167.885,
+     "conf": 0.718
+    },
+    {
+     "w": "to",
+     "start": 167.925,
+     "end": 168.025,
+     "conf": 0.665
+    },
+    {
+     "w": "work",
+     "start": 168.145,
+     "end": 168.446,
+     "conf": 0.764
+    },
+    {
+     "w": "and",
+     "start": 168.626,
+     "end": 168.687,
+     "conf": 0.561
+    },
+    {
+     "w": "the",
+     "start": 168.707,
+     "end": 168.787,
+     "conf": 0.852
+    },
+    {
+     "w": "river",
+     "start": 168.867,
+     "end": 169.108,
+     "conf": 0.803
+    },
+    {
+     "w": "is",
+     "start": 169.168,
+     "end": 169.248,
+     "conf": 0.499
+    },
+    {
+     "w": "five",
+     "start": 169.348,
+     "end": 169.589,
+     "conf": 0.748
+    },
+    {
+     "w": "inches",
+     "start": 169.649,
+     "end": 169.93,
+     "conf": 0.846
+    },
+    {
+     "w": "deep",
+     "start": 170.03,
+     "end": 170.211,
+     "conf": 0.747
+    }
+   ]
+  },
+  {
+   "section": "The spark",
+   "act": "",
+   "text": "Plan failed, Archduke safe, World War One cancelled.",
+   "idea": true,
+   "start": 170.6,
+   "end": 173.512,
+   "words": [
+    {
+     "w": "plan",
+     "start": 170.6,
+     "end": 170.801,
+     "conf": 0.462
+    },
+    {
+     "w": "failed",
+     "start": 170.901,
+     "end": 171.203,
+     "conf": 0.818
+    },
+    {
+     "w": "archduke",
+     "start": 171.323,
+     "end": 171.725,
+     "conf": 0.691
+    },
+    {
+     "w": "safe",
+     "start": 171.745,
+     "end": 172.146,
+     "conf": 0.709
+    },
+    {
+     "w": "world",
+     "start": 172.247,
+     "end": 172.448,
+     "conf": 0.785
+    },
+    {
+     "w": "war",
+     "start": 172.528,
+     "end": 172.649,
+     "conf": 0.484
+    },
+    {
+     "w": "one",
+     "start": 172.849,
+     "end": 172.93,
+     "conf": 0.616
+    },
+    {
+     "w": "cancelled",
+     "start": 173.03,
+     "end": 173.512,
+     "conf": 0.651
+    }
+   ]
+  },
+  {
+   "section": "But no",
+   "act": "",
+   "text": "But no.",
+   "idea": false,
+   "start": 175.494,
+   "end": 175.937,
+   "words": [
+    {
+     "w": "but",
+     "start": 175.494,
+     "end": 175.655,
+     "conf": 0.521
+    },
+    {
+     "w": "no",
+     "start": 175.816,
+     "end": 175.937,
+     "conf": 0.929
+    }
+   ]
+  },
+  {
+   "section": "But no",
+   "act": "",
+   "text": "After complaining that he came here as a guest and got greeted with bombs, the Archduke decides to visit the wounded in hospital.",
+   "idea": false,
+   "start": 176.709,
+   "end": 183.791,
+   "words": [
+    {
+     "w": "after",
+     "start": 176.709,
+     "end": 176.909,
+     "conf": 0.999
+    },
+    {
+     "w": "complaining",
+     "start": 176.97,
+     "end": 177.471,
+     "conf": 0.903
+    },
+    {
+     "w": "that",
+     "start": 177.491,
+     "end": 177.612,
+     "conf": 0.984
+    },
+    {
+     "w": "he",
+     "start": 177.632,
+     "end": 177.692,
+     "conf": 0.997
+    },
+    {
+     "w": "came",
+     "start": 177.792,
+     "end": 178.033,
+     "conf": 0.749
+    },
+    {
+     "w": "here",
+     "start": 178.093,
+     "end": 178.254,
+     "conf": 0.989
+    },
+    {
+     "w": "as",
+     "start": 178.314,
+     "end": 178.374,
+     "conf": 0.5
+    },
+    {
+     "w": "a",
+     "start": 178.454,
+     "end": 178.474,
+     "conf": 0.0
+    },
+    {
+     "w": "guest",
+     "start": 178.575,
+     "end": 178.916,
+     "conf": 0.658
+    },
+    {
+     "w": "and",
+     "start": 178.976,
+     "end": 179.056,
+     "conf": 0.664
+    },
+    {
+     "w": "got",
+     "start": 179.076,
+     "end": 179.217,
+     "conf": 0.999
+    },
+    {
+     "w": "greeted",
+     "start": 179.317,
+     "end": 179.618,
+     "conf": 0.851
+    },
+    {
+     "w": "with",
+     "start": 179.638,
+     "end": 179.798,
+     "conf": 0.798
+    },
+    {
+     "w": "bombs",
+     "start": 179.899,
+     "end": 180.42,
+     "conf": 0.58
+    },
+    {
+     "w": "the",
+     "start": 180.641,
+     "end": 180.721,
+     "conf": 0.722
+    },
+    {
+     "w": "archduke",
+     "start": 180.942,
+     "end": 181.423,
+     "conf": 0.759
+    },
+    {
+     "w": "decides",
+     "start": 181.443,
+     "end": 181.985,
+     "conf": 0.873
+    },
+    {
+     "w": "to",
+     "start": 182.005,
+     "end": 182.106,
+     "conf": 0.665
+    },
+    {
+     "w": "visit",
+     "start": 182.246,
+     "end": 182.547,
+     "conf": 0.8
+    },
+    {
+     "w": "the",
+     "start": 182.567,
+     "end": 182.687,
+     "conf": 0.665
+    },
+    {
+     "w": "wounded",
+     "start": 182.788,
+     "end": 183.149,
+     "conf": 0.734
+    },
+    {
+     "w": "in",
+     "start": 183.229,
+     "end": 183.269,
+     "conf": 0.499
+    },
+    {
+     "w": "hospital",
+     "start": 183.369,
+     "end": 183.791,
+     "conf": 0.91
+    }
+   ]
+  },
+  {
+   "section": "But no",
+   "act": "",
+   "text": "Nice of him, except nobody tells the driver that the route has changed.",
+   "idea": false,
+   "start": 184.341,
+   "end": 188.108,
+   "words": [
+    {
+     "w": "nice",
+     "start": 184.341,
+     "end": 184.622,
+     "conf": 0.715
+    },
+    {
+     "w": "of",
+     "start": 184.642,
+     "end": 184.722,
+     "conf": 0.664
+    },
+    {
+     "w": "him",
+     "start": 184.742,
+     "end": 184.922,
+     "conf": 0.688
+    },
+    {
+     "w": "except",
+     "start": 185.143,
+     "end": 185.423,
+     "conf": 0.955
+    },
+    {
+     "w": "nobody",
+     "start": 185.563,
+     "end": 185.864,
+     "conf": 0.833
+    },
+    {
+     "w": "tells",
+     "start": 185.964,
+     "end": 186.204,
+     "conf": 0.8
+    },
+    {
+     "w": "the",
+     "start": 186.224,
+     "end": 186.325,
+     "conf": 0.746
+    },
+    {
+     "w": "driver",
+     "start": 186.385,
+     "end": 186.725,
+     "conf": 0.831
+    },
+    {
+     "w": "that",
+     "start": 186.745,
+     "end": 186.926,
+     "conf": 0.747
+    },
+    {
+     "w": "the",
+     "start": 186.946,
+     "end": 187.026,
+     "conf": 0.74
+    },
+    {
+     "w": "route",
+     "start": 187.126,
+     "end": 187.366,
+     "conf": 0.609
+    },
+    {
+     "w": "has",
+     "start": 187.427,
+     "end": 187.547,
+     "conf": 0.665
+    },
+    {
+     "w": "changed",
+     "start": 187.647,
+     "end": 188.108,
+     "conf": 0.852
+    }
+   ]
+  },
+  {
+   "section": "But no",
+   "act": "",
+   "text": "So the cars turn onto the old street, the governor yells \"Wrong way!\", and while reversing, the engine stalls right outside a deli.",
+   "idea": false,
+   "start": 189.157,
+   "end": 196.393,
+   "words": [
+    {
+     "w": "so",
+     "start": 189.157,
+     "end": 189.237,
+     "conf": 0.672
+    },
+    {
+     "w": "the",
+     "start": 189.317,
+     "end": 189.378,
+     "conf": 0.654
+    },
+    {
+     "w": "cars",
+     "start": 189.478,
+     "end": 189.818,
+     "conf": 0.795
+    },
+    {
+     "w": "turn",
+     "start": 189.879,
+     "end": 190.059,
+     "conf": 0.773
+    },
+    {
+     "w": "onto",
+     "start": 190.139,
+     "end": 190.3,
+     "conf": 0.961
+    },
+    {
+     "w": "the",
+     "start": 190.32,
+     "end": 190.4,
+     "conf": 0.743
+    },
+    {
+     "w": "old",
+     "start": 190.54,
+     "end": 190.6,
+     "conf": 0.524
+    },
+    {
+     "w": "street",
+     "start": 190.68,
+     "end": 190.961,
+     "conf": 0.85
+    },
+    {
+     "w": "the",
+     "start": 191.041,
+     "end": 191.101,
+     "conf": 0.512
+    },
+    {
+     "w": "governor",
+     "start": 191.222,
+     "end": 191.602,
+     "conf": 0.86
+    },
+    {
+     "w": "yells",
+     "start": 191.683,
+     "end": 192.043,
+     "conf": 0.722
+    },
+    {
+     "w": "wrong",
+     "start": 192.063,
+     "end": 192.585,
+     "conf": 0.778
+    },
+    {
+     "w": "way",
+     "start": 192.685,
+     "end": 192.885,
+     "conf": 0.663
+    },
+    {
+     "w": "and",
+     "start": 193.086,
+     "end": 193.146,
+     "conf": 0.635
+    },
+    {
+     "w": "while",
+     "start": 193.206,
+     "end": 193.426,
+     "conf": 0.95
+    },
+    {
+     "w": "reversing",
+     "start": 193.466,
+     "end": 193.988,
+     "conf": 0.884
+    },
+    {
+     "w": "the",
+     "start": 194.088,
+     "end": 194.168,
+     "conf": 0.658
+    },
+    {
+     "w": "engine",
+     "start": 194.348,
+     "end": 194.649,
+     "conf": 0.644
+    },
+    {
+     "w": "stalls",
+     "start": 194.729,
+     "end": 195.09,
+     "conf": 0.755
+    },
+    {
+     "w": "right",
+     "start": 195.25,
+     "end": 195.451,
+     "conf": 0.72
+    },
+    {
+     "w": "outside",
+     "start": 195.511,
+     "end": 195.992,
+     "conf": 0.867
+    },
+    {
+     "w": "a",
+     "start": 196.052,
+     "end": 196.072,
+     "conf": 0.004
+    },
+    {
+     "w": "deli",
+     "start": 196.152,
+     "end": 196.393,
+     "conf": 0.481
+    }
+   ]
+  },
+  {
+   "section": "But no",
+   "act": "",
+   "text": "Standing right there is Gavrilo Princip, nineteen, one of the six, with his target parked five feet away.",
+   "idea": false,
+   "start": 196.863,
+   "end": 202.624,
+   "words": [
+    {
+     "w": "standing",
+     "start": 196.863,
+     "end": 197.204,
+     "conf": 0.859
+    },
+    {
+     "w": "right",
+     "start": 197.245,
+     "end": 197.425,
+     "conf": 0.918
+    },
+    {
+     "w": "there",
+     "start": 197.445,
+     "end": 197.706,
+     "conf": 0.827
+    },
+    {
+     "w": "is",
+     "start": 197.927,
+     "end": 197.967,
+     "conf": 0.497
+    },
+    {
+     "w": "gavrilo",
+     "start": 198.047,
+     "end": 198.469,
+     "conf": 0.818
+    },
+    {
+     "w": "princip",
+     "start": 198.569,
+     "end": 198.971,
+     "conf": 0.802
+    },
+    {
+     "w": "nineteen",
+     "start": 198.991,
+     "end": 199.593,
+     "conf": 0.067
+    },
+    {
+     "w": "one",
+     "start": 199.774,
+     "end": 199.854,
+     "conf": 0.611
+    },
+    {
+     "w": "of",
+     "start": 199.874,
+     "end": 199.934,
+     "conf": 0.977
+    },
+    {
+     "w": "the",
+     "start": 199.954,
+     "end": 200.035,
+     "conf": 0.945
+    },
+    {
+     "w": "six",
+     "start": 200.135,
+     "end": 200.336,
+     "conf": 0.533
+    },
+    {
+     "w": "with",
+     "start": 200.637,
+     "end": 200.757,
+     "conf": 0.754
+    },
+    {
+     "w": "his",
+     "start": 200.797,
+     "end": 200.918,
+     "conf": 0.968
+    },
+    {
+     "w": "target",
+     "start": 200.978,
+     "end": 201.359,
+     "conf": 0.994
+    },
+    {
+     "w": "parked",
+     "start": 201.439,
+     "end": 201.72,
+     "conf": 0.76
+    },
+    {
+     "w": "five",
+     "start": 201.901,
+     "end": 202.182,
+     "conf": 0.569
+    },
+    {
+     "w": "feet",
+     "start": 202.202,
+     "end": 202.383,
+     "conf": 0.779
+    },
+    {
+     "w": "away",
+     "start": 202.443,
+     "end": 202.624,
+     "conf": 0.663
+    }
+   ]
+  },
+  {
+   "section": "But no",
+   "act": "",
+   "text": "And no, he wasn't buying a sandwich, that part is a myth.",
+   "idea": true,
+   "start": 203.134,
+   "end": 205.979,
+   "words": [
+    {
+     "w": "and",
+     "start": 203.134,
+     "end": 203.254,
+     "conf": 0.876
+    },
+    {
+     "w": "no",
+     "start": 203.315,
+     "end": 203.395,
+     "conf": 0.673
+    },
+    {
+     "w": "he",
+     "start": 203.575,
+     "end": 203.635,
+     "conf": 0.836
+    },
+    {
+     "w": "wasn't",
+     "start": 203.715,
+     "end": 203.976,
+     "conf": 0.799
+    },
+    {
+     "w": "buying",
+     "start": 204.036,
+     "end": 204.276,
+     "conf": 0.691
+    },
+    {
+     "w": "a",
+     "start": 204.296,
+     "end": 204.316,
+     "conf": 0.994
+    },
+    {
+     "w": "sandwich",
+     "start": 204.437,
+     "end": 204.897,
+     "conf": 0.761
+    },
+    {
+     "w": "that",
+     "start": 204.997,
+     "end": 205.158,
+     "conf": 0.509
+    },
+    {
+     "w": "part",
+     "start": 205.238,
+     "end": 205.438,
+     "conf": 0.748
+    },
+    {
+     "w": "is",
+     "start": 205.498,
+     "end": 205.558,
+     "conf": 0.495
+    },
+    {
+     "w": "a",
+     "start": 205.599,
+     "end": 205.619,
+     "conf": 0.981
+    },
+    {
+     "w": "myth",
+     "start": 205.739,
+     "end": 205.979,
+     "conf": 0.654
+    }
+   ]
+  },
+  {
+   "section": "Two shots",
+   "act": "",
+   "text": "He fires twice.",
+   "idea": false,
+   "start": 207.639,
+   "end": 208.781,
+   "words": [
+    {
+     "w": "he",
+     "start": 207.639,
+     "end": 207.721,
+     "conf": 0.961
+    },
+    {
+     "w": "fires",
+     "start": 207.823,
+     "end": 208.21,
+     "conf": 0.973
+    },
+    {
+     "w": "twice",
+     "start": 208.292,
+     "end": 208.781,
+     "conf": 0.959
+    }
+   ]
+  },
+  {
+   "section": "Two shots",
+   "act": "",
+   "text": "Franz Ferdinand and Sophie are dead within the hour.",
+   "idea": true,
+   "start": 209.212,
+   "end": 211.987,
+   "words": [
+    {
+     "w": "franz",
+     "start": 209.212,
+     "end": 209.514,
+     "conf": 0.615
+    },
+    {
+     "w": "ferdinand",
+     "start": 209.574,
+     "end": 209.976,
+     "conf": 0.685
+    },
+    {
+     "w": "and",
+     "start": 209.996,
+     "end": 210.097,
+     "conf": 0.989
+    },
+    {
+     "w": "sophie",
+     "start": 210.117,
+     "end": 210.499,
+     "conf": 0.375
+    },
+    {
+     "w": "are",
+     "start": 210.599,
+     "end": 210.7,
+     "conf": 0.664
+    },
+    {
+     "w": "dead",
+     "start": 210.881,
+     "end": 211.182,
+     "conf": 0.991
+    },
+    {
+     "w": "within",
+     "start": 211.263,
+     "end": 211.524,
+     "conf": 0.827
+    },
+    {
+     "w": "the",
+     "start": 211.544,
+     "end": 211.645,
+     "conf": 0.869
+    },
+    {
+     "w": "hour",
+     "start": 211.725,
+     "end": 211.987,
+     "conf": 0.974
+    }
+   ]
+  },
+  {
+   "section": "Aftermath",
+   "act": "",
+   "text": "One month later, Austria-Hungary declares war on Serbia, and within a week, half of Europe has joined in.",
+   "idea": false,
+   "start": 213.868,
+   "end": 219.51,
+   "words": [
+    {
+     "w": "one",
+     "start": 213.868,
+     "end": 213.968,
+     "conf": 0.991
+    },
+    {
+     "w": "month",
+     "start": 213.988,
+     "end": 214.169,
+     "conf": 0.941
+    },
+    {
+     "w": "later",
+     "start": 214.229,
+     "end": 214.49,
+     "conf": 0.999
+    },
+    {
+     "w": "austria-hungary",
+     "start": 214.651,
+     "end": 215.394,
+     "conf": 0.966
+    },
+    {
+     "w": "declares",
+     "start": 215.474,
+     "end": 215.896,
+     "conf": 0.938
+    },
+    {
+     "w": "war",
+     "start": 216.037,
+     "end": 216.237,
+     "conf": 0.665
+    },
+    {
+     "w": "on",
+     "start": 216.378,
+     "end": 216.418,
+     "conf": 0.499
+    },
+    {
+     "w": "serbia",
+     "start": 216.539,
+     "end": 216.94,
+     "conf": 0.892
+    },
+    {
+     "w": "and",
+     "start": 217.181,
+     "end": 217.241,
+     "conf": 0.663
+    },
+    {
+     "w": "within",
+     "start": 217.281,
+     "end": 217.522,
+     "conf": 0.98
+    },
+    {
+     "w": "a",
+     "start": 217.583,
+     "end": 217.603,
+     "conf": 0.001
+    },
+    {
+     "w": "week",
+     "start": 217.683,
+     "end": 217.904,
+     "conf": 0.652
+    },
+    {
+     "w": "half",
+     "start": 218.085,
+     "end": 218.285,
+     "conf": 0.966
+    },
+    {
+     "w": "of",
+     "start": 218.386,
+     "end": 218.426,
+     "conf": 0.499
+    },
+    {
+     "w": "europe",
+     "start": 218.526,
+     "end": 218.828,
+     "conf": 0.972
+    },
+    {
+     "w": "has",
+     "start": 218.848,
+     "end": 218.988,
+     "conf": 0.998
+    },
+    {
+     "w": "joined",
+     "start": 219.069,
+     "end": 219.35,
+     "conf": 0.832
+    },
+    {
+     "w": "in",
+     "start": 219.43,
+     "end": 219.51,
+     "conf": 0.499
+    }
+   ]
+  },
+  {
+   "section": "Aftermath",
+   "act": "",
+   "text": "All because nobody told the driver? Not quite, but it sure didn't help.",
+   "idea": false,
+   "start": 219.961,
+   "end": 223.656,
+   "words": [
+    {
+     "w": "all",
+     "start": 219.961,
+     "end": 220.102,
+     "conf": 0.89
+    },
+    {
+     "w": "because",
+     "start": 220.162,
+     "end": 220.524,
+     "conf": 0.857
+    },
+    {
+     "w": "nobody",
+     "start": 220.604,
+     "end": 220.885,
+     "conf": 0.833
+    },
+    {
+     "w": "told",
+     "start": 220.985,
+     "end": 221.186,
+     "conf": 0.77
+    },
+    {
+     "w": "the",
+     "start": 221.206,
+     "end": 221.267,
+     "conf": 0.995
+    },
+    {
+     "w": "driver",
+     "start": 221.327,
+     "end": 221.668,
+     "conf": 0.833
+    },
+    {
+     "w": "not",
+     "start": 221.789,
+     "end": 221.929,
+     "conf": 0.993
+    },
+    {
+     "w": "quite",
+     "start": 222.01,
+     "end": 222.351,
+     "conf": 0.657
+    },
+    {
+     "w": "but",
+     "start": 222.471,
+     "end": 222.572,
+     "conf": 0.665
+    },
+    {
+     "w": "it",
+     "start": 222.592,
+     "end": 222.672,
+     "conf": 0.993
+    },
+    {
+     "w": "sure",
+     "start": 222.773,
+     "end": 222.974,
+     "conf": 0.732
+    },
+    {
+     "w": "didn't",
+     "start": 223.054,
+     "end": 223.335,
+     "conf": 0.908
+    },
+    {
+     "w": "help",
+     "start": 223.435,
+     "end": 223.656,
+     "conf": 0.782
+    }
+   ]
+  },
+  {
+   "section": "Aftermath",
+   "act": "",
+   "text": "Next time: one angry letter, one blank cheque, and seven days that dragged in half of Europe.",
+   "idea": false,
+   "start": 224.166,
+   "end": 229.187,
+   "words": [
+    {
+     "w": "next",
+     "start": 224.166,
+     "end": 224.347,
+     "conf": 0.925
+    },
+    {
+     "w": "time",
+     "start": 224.367,
+     "end": 224.628,
+     "conf": 0.778
+    },
+    {
+     "w": "one",
+     "start": 224.769,
+     "end": 224.849,
+     "conf": 0.662
+    },
+    {
+     "w": "angry",
+     "start": 224.869,
+     "end": 225.09,
+     "conf": 0.989
+    },
+    {
+     "w": "letter",
+     "start": 225.211,
+     "end": 225.472,
+     "conf": 0.809
+    },
+    {
+     "w": "one",
+     "start": 225.873,
+     "end": 225.994,
+     "conf": 0.665
+    },
+    {
+     "w": "blank",
+     "start": 226.074,
+     "end": 226.315,
+     "conf": 0.799
+    },
+    {
+     "w": "cheque",
+     "start": 226.436,
+     "end": 226.757,
+     "conf": 0.333
+    },
+    {
+     "w": "and",
+     "start": 226.918,
+     "end": 227.018,
+     "conf": 0.654
+    },
+    {
+     "w": "seven",
+     "start": 227.219,
+     "end": 227.5,
+     "conf": 0.798
+    },
+    {
+     "w": "days",
+     "start": 227.56,
+     "end": 227.821,
+     "conf": 0.779
+    },
+    {
+     "w": "that",
+     "start": 227.881,
+     "end": 227.982,
+     "conf": 0.578
+    },
+    {
+     "w": "dragged",
+     "start": 228.082,
+     "end": 228.424,
+     "conf": 0.842
+    },
+    {
+     "w": "in",
+     "start": 228.464,
+     "end": 228.504,
+     "conf": 0.499
+    },
+    {
+     "w": "half",
+     "start": 228.584,
+     "end": 228.745,
+     "conf": 0.929
+    },
+    {
+     "w": "of",
+     "start": 228.825,
+     "end": 228.886,
+     "conf": 0.497
+    },
+    {
+     "w": "europe",
+     "start": 228.986,
+     "end": 229.187,
+     "conf": 0.552
+    }
+   ]
+  },
+  {
+   "section": "Aftermath",
+   "act": "",
+   "text": "And Italy? Well, Italy has a decision to make.",
+   "idea": false,
+   "start": 229.617,
+   "end": 232.05,
+   "words": [
+    {
+     "w": "and",
+     "start": 229.617,
+     "end": 229.698,
+     "conf": 0.636
+    },
+    {
+     "w": "italy",
+     "start": 229.778,
+     "end": 230.039,
+     "conf": 0.999
+    },
+    {
+     "w": "well",
+     "start": 230.281,
+     "end": 230.441,
+     "conf": 0.506
+    },
+    {
+     "w": "italy",
+     "start": 230.562,
+     "end": 230.803,
+     "conf": 0.999
+    },
+    {
+     "w": "has",
+     "start": 230.944,
+     "end": 231.085,
+     "conf": 0.667
+    },
+    {
+     "w": "a",
+     "start": 231.165,
+     "end": 231.185,
+     "conf": 0.0
+    },
+    {
+     "w": "decision",
+     "start": 231.205,
+     "end": 231.708,
+     "conf": 0.983
+    },
+    {
+     "w": "to",
+     "start": 231.788,
+     "end": 231.849,
+     "conf": 0.509
+    },
+    {
+     "w": "make",
+     "start": 231.929,
+     "end": 232.05,
+     "conf": 0.258
+    }
+   ]
+  }
+ ]
+}

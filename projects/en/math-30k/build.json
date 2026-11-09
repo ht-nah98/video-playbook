@@ -1,0 +1,11 @@
+{
+ "intro": "${HKT}/work/brand/intro.mp4",
+ "intro_gain_db": -1.5,
+ "lufs": -16,
+ "parts": [
+  {"page": "part1a", "timeline": "p1a", "lead": 0.6, "tail": 1.0, "split": 1},
+  {"intro": true},
+  {"page": "part1b", "timeline": "p1b", "lead": 3.0, "tail": 1.6, "split": 2},
+  {"page": "part2", "timeline": "p2", "lead": 0.8, "tail": 2.0, "split": 10}
+ ]
+}

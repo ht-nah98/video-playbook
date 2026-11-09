@@ -1,0 +1,118 @@
+<!doctype html><meta charset="utf-8">
+<title>pearl — thumbnail A/B/C</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Thumbnail tập 3 (2026-10-30) — 3 thế giới khác hẳn nhau và khác bộ wrong-turn (tách đôi / tia / domino), berlin (họp báo /
+// tờ thông cáo rách / TV phòng khách): t 0.5 = A trạm radar 1941 (bối cảnh video): màn radar xanh đốm khổng lồ, người dẫn sĩ quan
+// trực giơ ngón cái · t 1.5 = B ảnh thật PD USS Arizona cháy kín khung + mẩu giấy ghi điện thoại 7:02 · t 2.5 = C đồng hồ báo
+// thức khổng lồ, người dẫn ngủ đập nút "snooze" — ba hồi chuông = ba lời cảnh báo.
+import { INK } from '../_kit/mapkit.js';
+import * as S from '../_kit/stage.js';
+import { bindNarrator, narrator, hatOn } from '../_kit/narrator.js';
+const g = document.getElementById('cv').getContext('2d');
+const { W, H, hash } = S;
+const IM = {}; let ready = false;
+const img = (k, src) => { const im = new Image(); im.src = src; return im.decode().then(() => { IM[k] = im; }); };
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  img('arizona', 'assets/photos/arizona.jpg')])
+  .then(() => { S.bindStage(g, { IM }); bindNarrator(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+/** chữ thumbnail: đậm 900, viền dày, bóng cứng */
+function big(txt, x, y, size, col = '#FFF', o = {}) { g.save(); g.font = `900 ${size}px Archivo, sans-serif`; g.textAlign = o.align ?? 'center'; g.lineJoin = 'round';
+  if (o.rot) { g.translate(x, y); g.rotate(o.rot); x = 0; y = 0; }
+  g.fillStyle = 'rgba(0,0,0,0.5)'; g.fillText(txt, x + size * 0.04, y + size * 0.05);
+  g.strokeStyle = o.stroke ?? INK; g.lineWidth = size * 0.14; g.strokeText(txt, x, y); g.fillStyle = col; g.fillText(txt, x, y); g.restore(); }
+function cover(im, x, y, w, h, fx = 0.5, fy = 0.5, z = 1) { const s = Math.max(w / im.width, h / im.height) * z, iw = im.width * s, ih = im.height * s;
+  g.drawImage(im, x + (w - iw) * fx, y + (h - ih) * fy, iw, ih); }
+
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1;
+  if (!ready) { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); return; }
+  if (t < 1) return A();
+  if (t < 2) return B();
+  return C();
+}
+
+// A — trong lều radar Opana: tường ván, màn dao động ký tròn xanh lục với một chùm đốm sáng KHỔNG LỒ ở phía bắc;
+//     người dẫn mặc quân phục sĩ quan, cười đắc ý giơ ngón cái — "đừng lo". Chữ = câu nói định mệnh.
+function A() {
+  g.fillStyle = '#4B4A32'; g.fillRect(0, 0, W, H);
+  for (let i = 0; i < 12; i++) { g.fillStyle = i % 2 ? '#55543A' : '#4B4A32'; g.fillRect(i * 170, 0, 166, H); }      // ván tường
+  g.fillStyle = '#2B2A20'; g.fillRect(0, 900, W, 180);                                                                  // bàn
+  // màn radar tròn: vỏ kim loại + kính xanh + vòng cự ly + tia quét + chùm đốm
+  const cx = 600, cy = 520, R = 390;
+  g.save(); g.fillStyle = '#3C4044'; g.strokeStyle = INK; g.lineWidth = 10; g.beginPath(); g.roundRect(cx - R - 70, cy - R - 70, 2 * R + 140, 2 * R + 140, 60); g.fill(); g.stroke();
+  const glow = g.createRadialGradient(cx, cy, 20, cx, cy, R); glow.addColorStop(0, '#1F5A2C'); glow.addColorStop(1, '#0B2412');
+  g.fillStyle = glow; g.beginPath(); g.arc(cx, cy, R, 0, 7); g.fill(); g.stroke();
+  g.beginPath(); g.arc(cx, cy, R, 0, 7); g.clip();
+  g.strokeStyle = 'rgba(120,255,150,0.35)'; g.lineWidth = 3; for (let k = 1; k <= 3; k++) { g.beginPath(); g.arc(cx, cy, R * k / 3.2, 0, 7); g.stroke(); }
+  g.beginPath(); g.moveTo(cx - R, cy); g.lineTo(cx + R, cy); g.moveTo(cx, cy - R); g.lineTo(cx, cy + R); g.stroke();
+  const sw = g.createConicGradient(-Math.PI / 2 - 0.9, cx, cy); sw.addColorStop(0, 'rgba(120,255,150,0)'); sw.addColorStop(0.14, 'rgba(120,255,150,0.38)'); sw.addColorStop(0.141, 'rgba(120,255,150,0)');
+  g.fillStyle = sw; g.fillRect(cx - R, cy - R, 2 * R, 2 * R);
+  for (let i = 0; i < 70; i++) { const a = -Math.PI / 2 + (hash(i) - 0.5) * 0.55, d = R * (0.55 + 0.32 * hash(i + 100)), x = cx + Math.cos(a) * d, y = cy + Math.sin(a) * d;   // chùm đốm ở hướng bắc
+    g.fillStyle = i % 3 ? '#B6FFC4' : '#FFFFFF'; g.beginPath(); g.arc(x, y, 7 + 9 * hash(i + 200), 0, 7); g.fill(); }
+  g.fillStyle = '#8CFF9F'; g.beginPath(); g.arc(cx, cy, 16, 0, 7); g.fill();                                          // trạm (tâm)
+  g.restore();
+  g.save(); g.strokeStyle = '#FF2B2B'; g.lineWidth = 14; g.beginPath(); g.ellipse(cx + 10, cy - R * 0.7, 230, 150, -0.05, 0, 7); g.stroke(); g.restore();   // khoanh đỏ chùm đốm
+  narrator(1560, H + 120, 800, { outfit: 'officer', arms: 'thumb', mood: 'wink', mouth: 'grin', look: -1, fx: ['shine'] });
+  { const r = 0.29 * 800, x = 1560, hy = H + 120 - 0.6462 * 800;                                       // mũ kê-pi sĩ quan 1941 phủ kín đỉnh đầu (mũ kit thấp, lộ trán hói ở cỡ thumbnail)
+    g.save(); g.strokeStyle = INK; g.lineWidth = 6; g.fillStyle = '#55613F';
+    g.beginPath(); g.moveTo(x - r * 1.02, hy - r * 0.42); g.quadraticCurveTo(x - r * 1.25, hy - r * 1.18, x, hy - r * 1.22); g.quadraticCurveTo(x + r * 1.25, hy - r * 1.18, x + r * 1.02, hy - r * 0.42); g.closePath(); g.fill(); g.stroke();
+    g.fillStyle = '#3B4530'; g.beginPath(); g.roundRect(x - r * 1.0, hy - r * 0.62, r * 2.0, r * 0.24, r * 0.06); g.fill(); g.stroke();
+    g.fillStyle = '#151517'; g.beginPath(); g.ellipse(x - r * 0.1, hy - r * 0.38, r * 0.9, r * 0.14, -0.06, 0, Math.PI); g.closePath(); g.fill(); g.stroke();
+    g.fillStyle = '#D8B84A'; g.beginPath(); g.arc(x, hy - r * 0.86, r * 0.13, 0, 7); g.fill(); g.stroke(); g.restore(); }
+  big('DON\'T', 1520, 175, 150, '#FFE04A'); big('WORRY', 1520, 330, 150, '#FFE04A');
+}
+
+// B — ảnh thật PD: USS Arizona cháy (ảnh màu 1941) phủ kín khung. Mẩu giấy ghi điện thoại dán chéo góc trái:
+//     "7:02 AM — radar: LOTS of planes, north. → don't worry about it." Chữ lớn = giờ của lời cảnh báo.
+function B() {
+  cover(IM.arizona, 0, 0, W, H, 0.62, 0.45, 1.02);
+  g.fillStyle = 'rgba(0,0,0,0.18)'; g.fillRect(0, 0, W, H);
+  g.save(); g.translate(470, 640); g.rotate(-0.07);
+  g.fillStyle = 'rgba(0,0,0,0.45)'; g.fillRect(-330 + 16, -300 + 20, 660, 600);
+  g.fillStyle = '#FFF3A8'; g.strokeStyle = INK; g.lineWidth = 6; g.fillRect(-330, -300, 660, 600); g.strokeRect(-330, -300, 660, 600);
+  g.fillStyle = 'rgba(200,170,60,0.5)'; g.fillRect(-120, -330, 240, 60);                                              // băng dính
+  g.fillStyle = '#9EC1D9'; for (let i = 0; i < 7; i++) g.fillRect(-300, -170 + i * 72, 600, 3);                         // dòng kẻ
+  g.fillStyle = '#1D2A55'; g.textAlign = 'left'; g.font = 'italic 800 52px Archivo, sans-serif';
+  g.fillText('PHONE MSG · 7:02 AM', -290, -200);
+  g.font = 'italic 700 50px Archivo, sans-serif'; g.fillText('Radar: biggest blip', -290, -110); g.fillText('we\'ve ever seen.', -290, -38); g.fillText('Coming from north.', -290, 34);
+  g.fillStyle = '#C21717'; g.font = 'italic 900 54px Archivo, sans-serif'; g.fillText('→ "Don\'t worry', -290, 140); g.fillText('    about it."', -290, 212);
+  g.restore();
+  narrator(1610, H + 170, 760, { outfit: 'plain', arms: 'cover', mood: 'teary', mouth: 'pout', look: -1 });     // người dẫn khóc mếu, hai tay ôm đầu
+  big('WARNED.', 1390, 230, 190, '#FFFFFF');
+}
+
+// C — đồng hồ báo thức hai chuông khổng lồ (7:55) rung, ba vạch "1 2 3" quanh chuông; người dẫn mắc ngủ trong chăn, mắt nhắm,
+//     một tay đập nút SNOOZE trên nóc đồng hồ. Cửa sổ sau: trời hửng hồng, bóng máy bay. Chữ = "SNOOZE ×3".
+function C() {
+  g.fillStyle = '#E8E1CF'; g.fillRect(0, 0, W, H);                                                                     // tường phòng
+  const sky = g.createLinearGradient(0, 330, 0, 760); sky.addColorStop(0, '#2C3E6B'); sky.addColorStop(1, '#F0B08E');
+  g.save(); g.fillStyle = sky; g.strokeStyle = INK; g.lineWidth = 12; g.fillRect(90, 330, 560, 430); g.strokeRect(90, 330, 560, 430);     // cửa sổ: trời hửng + bóng máy bay
+  g.beginPath(); g.moveTo(370, 330); g.lineTo(370, 760); g.moveTo(90, 545); g.lineTo(650, 545); g.stroke();
+  g.fillStyle = '#1B1B22'; for (let i = 0; i < 8; i++) { const x = 140 + 460 * hash(i + 5), y = 370 + 170 * hash(i + 50), sc = 0.7 + 0.5 * hash(i + 9);
+    g.save(); g.translate(x, y); g.scale(sc, sc); g.rotate(0.25); g.fillRect(-34, -4, 68, 8); g.fillRect(-6, -26, 12, 52); g.fillRect(-30, -12, 8, 24); g.restore(); }
+  g.restore();
+  const cx = 1440, cy = 600, R = 300;                                                                                   // đồng hồ báo thức đỏ, 7:55, đang reo
+  g.save(); g.strokeStyle = INK; g.lineWidth = 12;
+  for (const sd of [-1, 1]) { g.fillStyle = '#D4A62A'; g.beginPath(); g.arc(cx + sd * 210, cy - 275, 110, Math.PI, 0); g.closePath(); g.fill(); g.stroke(); }
+  g.fillStyle = '#5A5A60'; g.fillRect(cx - 65, cy - R - 100, 130, 64); g.strokeRect(cx - 65, cy - R - 100, 130, 64);
+  g.fillStyle = '#C62828'; g.beginPath(); g.arc(cx, cy, R + 36, 0, 7); g.fill(); g.stroke();
+  g.fillStyle = '#FFFDF4'; g.beginPath(); g.arc(cx, cy, R, 0, 7); g.fill(); g.stroke();
+  g.fillStyle = INK; g.font = '900 58px Archivo, sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle';
+  for (let k = 1; k <= 12; k++) { const a = k / 12 * Math.PI * 2 - Math.PI / 2; g.fillText(String(k), cx + Math.cos(a) * R * 0.8, cy + Math.sin(a) * R * 0.8); }
+  const hand = (a, len, w) => { g.lineWidth = w; g.lineCap = 'round'; g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + Math.cos(a) * len, cy + Math.sin(a) * len); g.stroke(); };
+  hand((7 + 55 / 60) / 12 * Math.PI * 2 - Math.PI / 2, R * 0.5, 22); hand(55 / 60 * Math.PI * 2 - Math.PI / 2, R * 0.72, 14);
+  g.fillStyle = INK; g.beginPath(); g.arc(cx, cy, 22, 0, 7); g.fill();
+  g.lineWidth = 10; for (const a of [Math.PI, 0, -2.3, -0.84]) for (let j = 0; j < 3; j++) { g.beginPath(); g.arc(cx, cy, R + 80 + j * 42, a - 0.17, a + 0.17); g.stroke(); }
+  g.restore();
+  g.fillStyle = '#FFFFFF'; g.strokeStyle = INK; g.lineWidth = 8; g.beginPath(); g.ellipse(560, 900, 340, 110, -0.06, 0, 7); g.fill(); g.stroke();   // gối
+  narrator(600, H + 230, 760, { outfit: 'plain', arms: 'rest', mood: 'closed', mouth: 'o', look: 1, lean: -0.5 });
+  g.save(); g.translate(600, H + 230); g.rotate(-0.5); g.translate(-600, -(H + 230)); hatOn(600, H + 230, 760, 'night', { v: 'B' }); g.restore();   // mũ ngủ
+  g.fillStyle = '#5C7FB5'; g.strokeStyle = INK; g.lineWidth = 10; g.beginPath(); g.moveTo(-20, H + 20); g.lineTo(-20, 1000); g.quadraticCurveTo(500, 930, 1100, 990); g.lineTo(1100, H + 20); g.closePath(); g.fill(); g.stroke();   // chăn
+  big('z Z Z', 900, 640, 84, '#FFFFFF', { rot: -0.15 });
+  big('SNOOZE ×3', 700, 200, 156, '#FFE04A');
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 3, LEAD: 0, error: null };
+</script>

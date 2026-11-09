@@ -1,0 +1,10376 @@
+{
+ "sections": [
+  {
+   "name": "Multiplying is a move",
+   "act": "ACT ONE — The square that can't be negative",
+   "start": 0.02,
+   "end": 30.956
+  },
+  {
+   "name": "The question with no answer",
+   "act": "ACT ONE — The square that can't be negative",
+   "start": 30.956,
+   "end": 71.909
+  },
+  {
+   "name": "An answer of four",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "start": 71.909,
+   "end": 117.593
+  },
+  {
+   "name": "Walking straight through",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "start": 117.593,
+   "end": 171.626
+  },
+  {
+   "name": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "start": 171.626,
+   "end": 231.18
+  },
+  {
+   "name": "Four turns and home",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "start": 231.18,
+   "end": 261.494
+  },
+  {
+   "name": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "start": 261.494,
+   "end": 318.795
+  },
+  {
+   "name": "What Bombelli actually found",
+   "act": "ACT FOUR — The multiplication that turns",
+   "start": 318.795,
+   "end": 358.269
+  },
+  {
+   "name": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "start": 358.269,
+   "end": 438.136
+  },
+  {
+   "name": "Putting it together",
+   "act": "ACT SIX — Putting it together",
+   "start": 438.136,
+   "end": 478.881
+  }
+ ],
+ "lines": [
+  {
+   "section": "Multiplying is a move",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "Draw the number line, and treat every number as an arrow starting from zero.",
+   "idea": false,
+   "start": 0.02,
+   "end": 3.627,
+   "words": [
+    {
+     "w": "draw",
+     "start": 0.02,
+     "end": 0.22,
+     "conf": 0.975
+    },
+    {
+     "w": "the",
+     "start": 0.301,
+     "end": 0.381,
+     "conf": 0.969
+    },
+    {
+     "w": "number",
+     "start": 0.461,
+     "end": 0.681,
+     "conf": 0.791
+    },
+    {
+     "w": "line",
+     "start": 0.741,
+     "end": 0.982,
+     "conf": 0.754
+    },
+    {
+     "w": "and",
+     "start": 1.262,
+     "end": 1.362,
+     "conf": 0.937
+    },
+    {
+     "w": "treat",
+     "start": 1.403,
+     "end": 1.583,
+     "conf": 0.996
+    },
+    {
+     "w": "every",
+     "start": 1.643,
+     "end": 1.783,
+     "conf": 0.797
+    },
+    {
+     "w": "number",
+     "start": 1.843,
+     "end": 2.064,
+     "conf": 0.998
+    },
+    {
+     "w": "as",
+     "start": 2.144,
+     "end": 2.184,
+     "conf": 0.5
+    },
+    {
+     "w": "an",
+     "start": 2.244,
+     "end": 2.284,
+     "conf": 0.499
+    },
+    {
+     "w": "arrow",
+     "start": 2.424,
+     "end": 2.645,
+     "conf": 0.556
+    },
+    {
+     "w": "starting",
+     "start": 2.765,
+     "end": 3.146,
+     "conf": 0.844
+    },
+    {
+     "w": "from",
+     "start": 3.186,
+     "end": 3.286,
+     "conf": 0.749
+    },
+    {
+     "w": "zero",
+     "start": 3.386,
+     "end": 3.627,
+     "conf": 0.57
+    }
+   ]
+  },
+  {
+   "section": "Multiplying is a move",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "Now multiply by two. Every arrow gets twice as long. Three lands on six, and minus one lands on minus two.",
+   "idea": false,
+   "start": 4.057,
+   "end": 9.373,
+   "words": [
+    {
+     "w": "now",
+     "start": 4.057,
+     "end": 4.137,
+     "conf": 0.998
+    },
+    {
+     "w": "multiply",
+     "start": 4.157,
+     "end": 4.518,
+     "conf": 0.794
+    },
+    {
+     "w": "by",
+     "start": 4.579,
+     "end": 4.679,
+     "conf": 0.998
+    },
+    {
+     "w": "two",
+     "start": 4.719,
+     "end": 4.94,
+     "conf": 0.348
+    },
+    {
+     "w": "every",
+     "start": 5.301,
+     "end": 5.481,
+     "conf": 0.999
+    },
+    {
+     "w": "arrow",
+     "start": 5.582,
+     "end": 5.722,
+     "conf": 0.501
+    },
+    {
+     "w": "gets",
+     "start": 5.802,
+     "end": 5.963,
+     "conf": 0.75
+    },
+    {
+     "w": "twice",
+     "start": 5.983,
+     "end": 6.264,
+     "conf": 0.818
+    },
+    {
+     "w": "as",
+     "start": 6.284,
+     "end": 6.364,
+     "conf": 0.999
+    },
+    {
+     "w": "long",
+     "start": 6.444,
+     "end": 6.625,
+     "conf": 0.725
+    },
+    {
+     "w": "three",
+     "start": 6.906,
+     "end": 7.066,
+     "conf": 0.805
+    },
+    {
+     "w": "lands",
+     "start": 7.086,
+     "end": 7.327,
+     "conf": 0.801
+    },
+    {
+     "w": "on",
+     "start": 7.347,
+     "end": 7.427,
+     "conf": 0.997
+    },
+    {
+     "w": "six",
+     "start": 7.548,
+     "end": 7.708,
+     "conf": 0.521
+    },
+    {
+     "w": "and",
+     "start": 7.949,
+     "end": 8.029,
+     "conf": 0.678
+    },
+    {
+     "w": "minus",
+     "start": 8.069,
+     "end": 8.31,
+     "conf": 0.76
+    },
+    {
+     "w": "one",
+     "start": 8.43,
+     "end": 8.531,
+     "conf": 0.657
+    },
+    {
+     "w": "lands",
+     "start": 8.551,
+     "end": 8.791,
+     "conf": 0.97
+    },
+    {
+     "w": "on",
+     "start": 8.831,
+     "end": 8.872,
+     "conf": 0.497
+    },
+    {
+     "w": "minus",
+     "start": 8.892,
+     "end": 9.172,
+     "conf": 0.801
+    },
+    {
+     "w": "two",
+     "start": 9.233,
+     "end": 9.373,
+     "conf": 0.215
+    }
+   ]
+  },
+  {
+   "section": "Multiplying is a move",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "So multiplying by two isn't only a sum. It's a move you apply to the whole line: a stretch.",
+   "idea": true,
+   "start": 9.783,
+   "end": 13.818,
+   "words": [
+    {
+     "w": "so",
+     "start": 9.783,
+     "end": 9.823,
+     "conf": 0.998
+    },
+    {
+     "w": "multiplying",
+     "start": 9.924,
+     "end": 10.345,
+     "conf": 0.981
+    },
+    {
+     "w": "by",
+     "start": 10.365,
+     "end": 10.466,
+     "conf": 0.997
+    },
+    {
+     "w": "two",
+     "start": 10.546,
+     "end": 10.707,
+     "conf": 0.524
+    },
+    {
+     "w": "isn't",
+     "start": 10.807,
+     "end": 10.947,
+     "conf": 0.771
+    },
+    {
+     "w": "only",
+     "start": 11.028,
+     "end": 11.148,
+     "conf": 0.702
+    },
+    {
+     "w": "a",
+     "start": 11.208,
+     "end": 11.228,
+     "conf": 0.005
+    },
+    {
+     "w": "sum",
+     "start": 11.329,
+     "end": 11.53,
+     "conf": 0.907
+    },
+    {
+     "w": "it's",
+     "start": 11.911,
+     "end": 12.011,
+     "conf": 0.713
+    },
+    {
+     "w": "a",
+     "start": 12.031,
+     "end": 12.052,
+     "conf": 0.983
+    },
+    {
+     "w": "move",
+     "start": 12.112,
+     "end": 12.312,
+     "conf": 0.914
+    },
+    {
+     "w": "you",
+     "start": 12.333,
+     "end": 12.393,
+     "conf": 0.978
+    },
+    {
+     "w": "apply",
+     "start": 12.413,
+     "end": 12.674,
+     "conf": 0.832
+    },
+    {
+     "w": "to",
+     "start": 12.754,
+     "end": 12.794,
+     "conf": 0.664
+    },
+    {
+     "w": "the",
+     "start": 12.814,
+     "end": 12.895,
+     "conf": 0.942
+    },
+    {
+     "w": "whole",
+     "start": 12.915,
+     "end": 13.075,
+     "conf": 0.996
+    },
+    {
+     "w": "line",
+     "start": 13.095,
+     "end": 13.356,
+     "conf": 0.822
+    },
+    {
+     "w": "a",
+     "start": 13.417,
+     "end": 13.437,
+     "conf": 0.002
+    },
+    {
+     "w": "stretch",
+     "start": 13.517,
+     "end": 13.818,
+     "conf": 0.832
+    }
+   ]
+  },
+  {
+   "section": "Multiplying is a move",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "What move is multiplying by minus one?",
+   "idea": false,
+   "start": 14.888,
+   "end": 16.749,
+   "words": [
+    {
+     "w": "what",
+     "start": 14.888,
+     "end": 14.989,
+     "conf": 0.251
+    },
+    {
+     "w": "move",
+     "start": 15.05,
+     "end": 15.252,
+     "conf": 0.729
+    },
+    {
+     "w": "is",
+     "start": 15.333,
+     "end": 15.374,
+     "conf": 0.49
+    },
+    {
+     "w": "multiplying",
+     "start": 15.434,
+     "end": 15.94,
+     "conf": 0.891
+    },
+    {
+     "w": "by",
+     "start": 15.96,
+     "end": 16.082,
+     "conf": 0.97
+    },
+    {
+     "w": "minus",
+     "start": 16.142,
+     "end": 16.446,
+     "conf": 0.604
+    },
+    {
+     "w": "one",
+     "start": 16.587,
+     "end": 16.749,
+     "conf": 0.646
+    }
+   ]
+  },
+  {
+   "section": "Multiplying is a move",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "Three goes to minus three. Five goes to minus five. Minus two goes to two.",
+   "idea": false,
+   "start": 17.14,
+   "end": 20.476,
+   "words": [
+    {
+     "w": "three",
+     "start": 17.14,
+     "end": 17.281,
+     "conf": 0.145
+    },
+    {
+     "w": "goes",
+     "start": 17.301,
+     "end": 17.442,
+     "conf": 0.767
+    },
+    {
+     "w": "to",
+     "start": 17.462,
+     "end": 17.502,
+     "conf": 0.883
+    },
+    {
+     "w": "minus",
+     "start": 17.562,
+     "end": 17.783,
+     "conf": 0.774
+    },
+    {
+     "w": "three",
+     "start": 17.803,
+     "end": 18.044,
+     "conf": 0.087
+    },
+    {
+     "w": "five",
+     "start": 18.065,
+     "end": 18.547,
+     "conf": 0.252
+    },
+    {
+     "w": "goes",
+     "start": 18.567,
+     "end": 18.688,
+     "conf": 0.546
+    },
+    {
+     "w": "to",
+     "start": 18.708,
+     "end": 18.768,
+     "conf": 0.692
+    },
+    {
+     "w": "minus",
+     "start": 18.828,
+     "end": 19.049,
+     "conf": 0.759
+    },
+    {
+     "w": "five",
+     "start": 19.069,
+     "end": 19.371,
+     "conf": 0.14
+    },
+    {
+     "w": "minus",
+     "start": 19.492,
+     "end": 19.713,
+     "conf": 0.746
+    },
+    {
+     "w": "two",
+     "start": 19.793,
+     "end": 19.893,
+     "conf": 0.131
+    },
+    {
+     "w": "goes",
+     "start": 19.954,
+     "end": 20.094,
+     "conf": 0.493
+    },
+    {
+     "w": "to",
+     "start": 20.155,
+     "end": 20.215,
+     "conf": 0.621
+    },
+    {
+     "w": "two",
+     "start": 20.316,
+     "end": 20.476,
+     "conf": 0.134
+    }
+   ]
+  },
+  {
+   "section": "Multiplying is a move",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "Everything swaps sides. It's a flip through zero.",
+   "idea": false,
+   "start": 20.906,
+   "end": 23.253,
+   "words": [
+    {
+     "w": "everything",
+     "start": 20.906,
+     "end": 21.227,
+     "conf": 0.99
+    },
+    {
+     "w": "swaps",
+     "start": 21.287,
+     "end": 21.528,
+     "conf": 0.603
+    },
+    {
+     "w": "sides",
+     "start": 21.648,
+     "end": 22.089,
+     "conf": 0.696
+    },
+    {
+     "w": "it's",
+     "start": 22.27,
+     "end": 22.35,
+     "conf": 0.322
+    },
+    {
+     "w": "a",
+     "start": 22.37,
+     "end": 22.39,
+     "conf": 0.988
+    },
+    {
+     "w": "flip",
+     "start": 22.41,
+     "end": 22.571,
+     "conf": 0.764
+    },
+    {
+     "w": "through",
+     "start": 22.751,
+     "end": 22.992,
+     "conf": 0.862
+    },
+    {
+     "w": "zero",
+     "start": 23.012,
+     "end": 23.253,
+     "conf": 0.917
+    }
+   ]
+  },
+  {
+   "section": "Multiplying is a move",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "And flip twice, you're back where you started. That's one way to see why a negative times a negative is positive.",
+   "idea": true,
+   "start": 23.703,
+   "end": 29.295,
+   "words": [
+    {
+     "w": "and",
+     "start": 23.703,
+     "end": 23.783,
+     "conf": 0.993
+    },
+    {
+     "w": "flip",
+     "start": 23.863,
+     "end": 24.004,
+     "conf": 0.737
+    },
+    {
+     "w": "twice",
+     "start": 24.164,
+     "end": 24.605,
+     "conf": 0.883
+    },
+    {
+     "w": "you're",
+     "start": 24.886,
+     "end": 25.006,
+     "conf": 0.308
+    },
+    {
+     "w": "back",
+     "start": 25.026,
+     "end": 25.226,
+     "conf": 0.993
+    },
+    {
+     "w": "where",
+     "start": 25.246,
+     "end": 25.407,
+     "conf": 0.471
+    },
+    {
+     "w": "you",
+     "start": 25.427,
+     "end": 25.507,
+     "conf": 0.991
+    },
+    {
+     "w": "started",
+     "start": 25.567,
+     "end": 25.968,
+     "conf": 0.87
+    },
+    {
+     "w": "that's",
+     "start": 26.088,
+     "end": 26.269,
+     "conf": 0.634
+    },
+    {
+     "w": "one",
+     "start": 26.429,
+     "end": 26.529,
+     "conf": 0.666
+    },
+    {
+     "w": "way",
+     "start": 26.549,
+     "end": 26.69,
+     "conf": 1.0
+    },
+    {
+     "w": "to",
+     "start": 26.77,
+     "end": 26.83,
+     "conf": 0.5
+    },
+    {
+     "w": "see",
+     "start": 26.93,
+     "end": 27.05,
+     "conf": 0.665
+    },
+    {
+     "w": "why",
+     "start": 27.11,
+     "end": 27.251,
+     "conf": 0.889
+    },
+    {
+     "w": "a",
+     "start": 27.311,
+     "end": 27.331,
+     "conf": 0.02
+    },
+    {
+     "w": "negative",
+     "start": 27.411,
+     "end": 27.772,
+     "conf": 0.879
+    },
+    {
+     "w": "times",
+     "start": 27.792,
+     "end": 28.052,
+     "conf": 0.824
+    },
+    {
+     "w": "a",
+     "start": 28.073,
+     "end": 28.093,
+     "conf": 0.324
+    },
+    {
+     "w": "negative",
+     "start": 28.173,
+     "end": 28.594,
+     "conf": 0.893
+    },
+    {
+     "w": "is",
+     "start": 28.694,
+     "end": 28.734,
+     "conf": 0.499
+    },
+    {
+     "w": "positive",
+     "start": 28.814,
+     "end": 29.295,
+     "conf": 0.875
+    }
+   ]
+  },
+  {
+   "section": "The question with no answer",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "Now here's the question that causes all the trouble.",
+   "idea": false,
+   "start": 30.956,
+   "end": 32.847,
+   "words": [
+    {
+     "w": "now",
+     "start": 30.956,
+     "end": 31.057,
+     "conf": 0.994
+    },
+    {
+     "w": "here's",
+     "start": 31.097,
+     "end": 31.318,
+     "conf": 0.541
+    },
+    {
+     "w": "the",
+     "start": 31.338,
+     "end": 31.419,
+     "conf": 0.754
+    },
+    {
+     "w": "question",
+     "start": 31.479,
+     "end": 31.821,
+     "conf": 0.852
+    },
+    {
+     "w": "that",
+     "start": 31.861,
+     "end": 31.962,
+     "conf": 0.74
+    },
+    {
+     "w": "causes",
+     "start": 32.042,
+     "end": 32.344,
+     "conf": 0.748
+    },
+    {
+     "w": "all",
+     "start": 32.404,
+     "end": 32.485,
+     "conf": 0.64
+    },
+    {
+     "w": "the",
+     "start": 32.505,
+     "end": 32.565,
+     "conf": 0.995
+    },
+    {
+     "w": "trouble",
+     "start": 32.625,
+     "end": 32.847,
+     "conf": 0.439
+    }
+   ]
+  },
+  {
+   "section": "The question with no answer",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "Is there a number you can multiply by itself to get minus one?",
+   "idea": false,
+   "start": 33.236,
+   "end": 36.267,
+   "words": [
+    {
+     "w": "is",
+     "start": 33.236,
+     "end": 33.316,
+     "conf": 0.988
+    },
+    {
+     "w": "there",
+     "start": 33.336,
+     "end": 33.457,
+     "conf": 0.992
+    },
+    {
+     "w": "a",
+     "start": 33.477,
+     "end": 33.497,
+     "conf": 0.995
+    },
+    {
+     "w": "number",
+     "start": 33.557,
+     "end": 33.838,
+     "conf": 0.968
+    },
+    {
+     "w": "you",
+     "start": 33.959,
+     "end": 34.059,
+     "conf": 0.93
+    },
+    {
+     "w": "can",
+     "start": 34.099,
+     "end": 34.2,
+     "conf": 0.666
+    },
+    {
+     "w": "multiply",
+     "start": 34.26,
+     "end": 34.682,
+     "conf": 0.877
+    },
+    {
+     "w": "by",
+     "start": 34.762,
+     "end": 34.862,
+     "conf": 0.497
+    },
+    {
+     "w": "itself",
+     "start": 34.922,
+     "end": 35.304,
+     "conf": 0.822
+    },
+    {
+     "w": "to",
+     "start": 35.404,
+     "end": 35.444,
+     "conf": 0.499
+    },
+    {
+     "w": "get",
+     "start": 35.505,
+     "end": 35.625,
+     "conf": 0.665
+    },
+    {
+     "w": "minus",
+     "start": 35.725,
+     "end": 36.007,
+     "conf": 0.593
+    },
+    {
+     "w": "one",
+     "start": 36.207,
+     "end": 36.267,
+     "conf": 0.51
+    }
+   ]
+  },
+  {
+   "section": "The question with no answer",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "In other words, is there a move which, done twice, gives you a flip?",
+   "idea": true,
+   "start": 36.658,
+   "end": 39.784,
+   "words": [
+    {
+     "w": "in",
+     "start": 36.658,
+     "end": 36.698,
+     "conf": 0.503
+    },
+    {
+     "w": "other",
+     "start": 36.718,
+     "end": 36.838,
+     "conf": 0.827
+    },
+    {
+     "w": "words",
+     "start": 36.858,
+     "end": 37.079,
+     "conf": 0.989
+    },
+    {
+     "w": "is",
+     "start": 37.339,
+     "end": 37.4,
+     "conf": 0.496
+    },
+    {
+     "w": "there",
+     "start": 37.42,
+     "end": 37.56,
+     "conf": 0.916
+    },
+    {
+     "w": "a",
+     "start": 37.6,
+     "end": 37.62,
+     "conf": 0.001
+    },
+    {
+     "w": "move",
+     "start": 37.68,
+     "end": 37.901,
+     "conf": 0.656
+    },
+    {
+     "w": "which",
+     "start": 37.921,
+     "end": 38.181,
+     "conf": 0.816
+    },
+    {
+     "w": "done",
+     "start": 38.502,
+     "end": 38.682,
+     "conf": 0.957
+    },
+    {
+     "w": "twice",
+     "start": 38.702,
+     "end": 39.123,
+     "conf": 0.829
+    },
+    {
+     "w": "gives",
+     "start": 39.303,
+     "end": 39.444,
+     "conf": 0.797
+    },
+    {
+     "w": "you",
+     "start": 39.464,
+     "end": 39.544,
+     "conf": 0.907
+    },
+    {
+     "w": "a",
+     "start": 39.564,
+     "end": 39.584,
+     "conf": 0.826
+    },
+    {
+     "w": "flip",
+     "start": 39.604,
+     "end": 39.784,
+     "conf": 0.712
+    }
+   ]
+  },
+  {
+   "section": "The question with no answer",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "Try it on the line. A positive number keeps every arrow on its own side, and doing that twice still keeps it there.",
+   "idea": false,
+   "start": 40.834,
+   "end": 46.542,
+   "words": [
+    {
+     "w": "try",
+     "start": 40.834,
+     "end": 40.994,
+     "conf": 0.998
+    },
+    {
+     "w": "it",
+     "start": 41.014,
+     "end": 41.074,
+     "conf": 0.009
+    },
+    {
+     "w": "on",
+     "start": 41.114,
+     "end": 41.175,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 41.195,
+     "end": 41.255,
+     "conf": 0.99
+    },
+    {
+     "w": "line",
+     "start": 41.295,
+     "end": 41.595,
+     "conf": 0.922
+    },
+    {
+     "w": "a",
+     "start": 41.916,
+     "end": 41.936,
+     "conf": 0.998
+    },
+    {
+     "w": "positive",
+     "start": 41.996,
+     "end": 42.356,
+     "conf": 0.875
+    },
+    {
+     "w": "number",
+     "start": 42.376,
+     "end": 42.637,
+     "conf": 0.994
+    },
+    {
+     "w": "keeps",
+     "start": 42.717,
+     "end": 42.937,
+     "conf": 0.797
+    },
+    {
+     "w": "every",
+     "start": 43.057,
+     "end": 43.318,
+     "conf": 0.942
+    },
+    {
+     "w": "arrow",
+     "start": 43.458,
+     "end": 43.658,
+     "conf": 0.686
+    },
+    {
+     "w": "on",
+     "start": 43.758,
+     "end": 43.798,
+     "conf": 0.5
+    },
+    {
+     "w": "its",
+     "start": 43.858,
+     "end": 43.938,
+     "conf": 0.665
+    },
+    {
+     "w": "own",
+     "start": 43.998,
+     "end": 44.099,
+     "conf": 0.666
+    },
+    {
+     "w": "side",
+     "start": 44.179,
+     "end": 44.459,
+     "conf": 0.745
+    },
+    {
+     "w": "and",
+     "start": 44.92,
+     "end": 44.98,
+     "conf": 0.422
+    },
+    {
+     "w": "doing",
+     "start": 45.0,
+     "end": 45.14,
+     "conf": 0.427
+    },
+    {
+     "w": "that",
+     "start": 45.16,
+     "end": 45.26,
+     "conf": 0.996
+    },
+    {
+     "w": "twice",
+     "start": 45.32,
+     "end": 45.581,
+     "conf": 0.789
+    },
+    {
+     "w": "still",
+     "start": 45.881,
+     "end": 46.041,
+     "conf": 0.839
+    },
+    {
+     "w": "keeps",
+     "start": 46.101,
+     "end": 46.262,
+     "conf": 0.799
+    },
+    {
+     "w": "it",
+     "start": 46.322,
+     "end": 46.362,
+     "conf": 0.498
+    },
+    {
+     "w": "there",
+     "start": 46.382,
+     "end": 46.542,
+     "conf": 0.963
+    }
+   ]
+  },
+  {
+   "section": "The question with no answer",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "A negative number swaps sides, and swapping twice brings you back.",
+   "idea": false,
+   "start": 46.972,
+   "end": 50.169,
+   "words": [
+    {
+     "w": "a",
+     "start": 46.972,
+     "end": 46.992,
+     "conf": 0.995
+    },
+    {
+     "w": "negative",
+     "start": 47.032,
+     "end": 47.334,
+     "conf": 1.0
+    },
+    {
+     "w": "number",
+     "start": 47.354,
+     "end": 47.595,
+     "conf": 0.916
+    },
+    {
+     "w": "swaps",
+     "start": 47.616,
+     "end": 47.897,
+     "conf": 0.515
+    },
+    {
+     "w": "sides",
+     "start": 47.957,
+     "end": 48.299,
+     "conf": 0.805
+    },
+    {
+     "w": "and",
+     "start": 48.621,
+     "end": 48.721,
+     "conf": 0.993
+    },
+    {
+     "w": "swapping",
+     "start": 48.741,
+     "end": 49.063,
+     "conf": 0.692
+    },
+    {
+     "w": "twice",
+     "start": 49.144,
+     "end": 49.485,
+     "conf": 0.799
+    },
+    {
+     "w": "brings",
+     "start": 49.546,
+     "end": 49.787,
+     "conf": 0.792
+    },
+    {
+     "w": "you",
+     "start": 49.807,
+     "end": 49.888,
+     "conf": 0.978
+    },
+    {
+     "w": "back",
+     "start": 49.948,
+     "end": 50.169,
+     "conf": 0.75
+    }
+   ]
+  },
+  {
+   "section": "The question with no answer",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "Either way, the same move done twice can never end on the opposite side. So on this line, no number squares to minus one.",
+   "idea": false,
+   "start": 50.6,
+   "end": 56.625,
+   "words": [
+    {
+     "w": "either",
+     "start": 50.6,
+     "end": 50.8,
+     "conf": 0.824
+    },
+    {
+     "w": "way",
+     "start": 50.82,
+     "end": 50.98,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 51.0,
+     "end": 51.241,
+     "conf": 0.666
+    },
+    {
+     "w": "same",
+     "start": 51.321,
+     "end": 51.461,
+     "conf": 0.75
+    },
+    {
+     "w": "move",
+     "start": 51.481,
+     "end": 51.661,
+     "conf": 0.801
+    },
+    {
+     "w": "done",
+     "start": 51.681,
+     "end": 51.821,
+     "conf": 0.659
+    },
+    {
+     "w": "twice",
+     "start": 51.881,
+     "end": 52.201,
+     "conf": 0.795
+    },
+    {
+     "w": "can",
+     "start": 52.262,
+     "end": 52.382,
+     "conf": 0.666
+    },
+    {
+     "w": "never",
+     "start": 52.462,
+     "end": 52.662,
+     "conf": 0.486
+    },
+    {
+     "w": "end",
+     "start": 52.762,
+     "end": 52.902,
+     "conf": 0.667
+    },
+    {
+     "w": "on",
+     "start": 52.982,
+     "end": 53.022,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 53.042,
+     "end": 53.102,
+     "conf": 0.998
+    },
+    {
+     "w": "opposite",
+     "start": 53.122,
+     "end": 53.463,
+     "conf": 0.766
+    },
+    {
+     "w": "side",
+     "start": 53.483,
+     "end": 53.803,
+     "conf": 0.798
+    },
+    {
+     "w": "so",
+     "start": 54.103,
+     "end": 54.163,
+     "conf": 0.975
+    },
+    {
+     "w": "on",
+     "start": 54.243,
+     "end": 54.283,
+     "conf": 0.5
+    },
+    {
+     "w": "this",
+     "start": 54.303,
+     "end": 54.464,
+     "conf": 0.913
+    },
+    {
+     "w": "line",
+     "start": 54.544,
+     "end": 54.764,
+     "conf": 0.774
+    },
+    {
+     "w": "no",
+     "start": 55.104,
+     "end": 55.164,
+     "conf": 0.502
+    },
+    {
+     "w": "number",
+     "start": 55.304,
+     "end": 55.504,
+     "conf": 0.788
+    },
+    {
+     "w": "squares",
+     "start": 55.565,
+     "end": 55.905,
+     "conf": 0.779
+    },
+    {
+     "w": "to",
+     "start": 55.965,
+     "end": 56.005,
+     "conf": 0.495
+    },
+    {
+     "w": "minus",
+     "start": 56.105,
+     "end": 56.385,
+     "conf": 0.726
+    },
+    {
+     "w": "one",
+     "start": 56.525,
+     "end": 56.625,
+     "conf": 0.685
+    }
+   ]
+  },
+  {
+   "section": "The question with no answer",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "For a long time, that was the end of it. Ask for the square root of a negative, and the honest answer was: that's a badly posed question.",
+   "idea": false,
+   "start": 57.035,
+   "end": 63.673,
+   "words": [
+    {
+     "w": "for",
+     "start": 57.035,
+     "end": 57.095,
+     "conf": 0.672
+    },
+    {
+     "w": "a",
+     "start": 57.115,
+     "end": 57.135,
+     "conf": 0.111
+    },
+    {
+     "w": "long",
+     "start": 57.155,
+     "end": 57.276,
+     "conf": 0.602
+    },
+    {
+     "w": "time",
+     "start": 57.296,
+     "end": 57.556,
+     "conf": 1.0
+    },
+    {
+     "w": "that",
+     "start": 57.897,
+     "end": 58.038,
+     "conf": 0.749
+    },
+    {
+     "w": "was",
+     "start": 58.058,
+     "end": 58.158,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 58.198,
+     "end": 58.258,
+     "conf": 0.999
+    },
+    {
+     "w": "end",
+     "start": 58.339,
+     "end": 58.439,
+     "conf": 0.722
+    },
+    {
+     "w": "of",
+     "start": 58.459,
+     "end": 58.519,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 58.539,
+     "end": 58.66,
+     "conf": 0.666
+    },
+    {
+     "w": "ask",
+     "start": 59.141,
+     "end": 59.321,
+     "conf": 0.664
+    },
+    {
+     "w": "for",
+     "start": 59.341,
+     "end": 59.422,
+     "conf": 0.724
+    },
+    {
+     "w": "the",
+     "start": 59.442,
+     "end": 59.502,
+     "conf": 0.991
+    },
+    {
+     "w": "square",
+     "start": 59.562,
+     "end": 59.783,
+     "conf": 0.58
+    },
+    {
+     "w": "root",
+     "start": 59.803,
+     "end": 59.923,
+     "conf": 0.928
+    },
+    {
+     "w": "of",
+     "start": 59.983,
+     "end": 60.023,
+     "conf": 0.497
+    },
+    {
+     "w": "a",
+     "start": 60.043,
+     "end": 60.063,
+     "conf": 0.986
+    },
+    {
+     "w": "negative",
+     "start": 60.144,
+     "end": 60.585,
+     "conf": 0.881
+    },
+    {
+     "w": "and",
+     "start": 60.846,
+     "end": 60.906,
+     "conf": 0.661
+    },
+    {
+     "w": "the",
+     "start": 60.926,
+     "end": 60.986,
+     "conf": 0.017
+    },
+    {
+     "w": "honest",
+     "start": 61.046,
+     "end": 61.307,
+     "conf": 0.892
+    },
+    {
+     "w": "answer",
+     "start": 61.387,
+     "end": 61.608,
+     "conf": 0.658
+    },
+    {
+     "w": "was",
+     "start": 61.668,
+     "end": 61.848,
+     "conf": 0.664
+    },
+    {
+     "w": "that's",
+     "start": 62.269,
+     "end": 62.43,
+     "conf": 0.621
+    },
+    {
+     "w": "a",
+     "start": 62.49,
+     "end": 62.51,
+     "conf": 0.002
+    },
+    {
+     "w": "badly",
+     "start": 62.63,
+     "end": 62.931,
+     "conf": 0.799
+    },
+    {
+     "w": "posed",
+     "start": 63.011,
+     "end": 63.292,
+     "conf": 0.838
+    },
+    {
+     "w": "question",
+     "start": 63.312,
+     "end": 63.673,
+     "conf": 0.974
+    }
+   ]
+  },
+  {
+   "section": "The question with no answer",
+   "act": "ACT ONE — The square that can't be negative",
+   "text": "And it would have stayed that way, if it hadn't been for an equation that already had a perfectly good answer.",
+   "idea": true,
+   "start": 64.083,
+   "end": 69.428,
+   "words": [
+    {
+     "w": "and",
+     "start": 64.083,
+     "end": 64.143,
+     "conf": 0.995
+    },
+    {
+     "w": "it",
+     "start": 64.163,
+     "end": 64.223,
+     "conf": 0.998
+    },
+    {
+     "w": "would",
+     "start": 64.243,
+     "end": 64.343,
+     "conf": 0.981
+    },
+    {
+     "w": "have",
+     "start": 64.363,
+     "end": 64.443,
+     "conf": 0.983
+    },
+    {
+     "w": "stayed",
+     "start": 64.523,
+     "end": 64.784,
+     "conf": 0.829
+    },
+    {
+     "w": "that",
+     "start": 64.804,
+     "end": 64.984,
+     "conf": 0.763
+    },
+    {
+     "w": "way",
+     "start": 65.044,
+     "end": 65.184,
+     "conf": 0.667
+    },
+    {
+     "w": "if",
+     "start": 65.624,
+     "end": 65.685,
+     "conf": 0.5
+    },
+    {
+     "w": "it",
+     "start": 65.745,
+     "end": 65.805,
+     "conf": 0.499
+    },
+    {
+     "w": "hadn't",
+     "start": 65.865,
+     "end": 66.105,
+     "conf": 0.909
+    },
+    {
+     "w": "been",
+     "start": 66.125,
+     "end": 66.325,
+     "conf": 0.999
+    },
+    {
+     "w": "for",
+     "start": 66.445,
+     "end": 66.545,
+     "conf": 0.725
+    },
+    {
+     "w": "an",
+     "start": 66.585,
+     "end": 66.625,
+     "conf": 0.499
+    },
+    {
+     "w": "equation",
+     "start": 66.645,
+     "end": 67.106,
+     "conf": 0.863
+    },
+    {
+     "w": "that",
+     "start": 67.126,
+     "end": 67.226,
+     "conf": 0.95
+    },
+    {
+     "w": "already",
+     "start": 67.326,
+     "end": 67.606,
+     "conf": 0.853
+    },
+    {
+     "w": "had",
+     "start": 67.747,
+     "end": 67.967,
+     "conf": 0.668
+    },
+    {
+     "w": "a",
+     "start": 68.127,
+     "end": 68.147,
+     "conf": 0.0
+    },
+    {
+     "w": "perfectly",
+     "start": 68.327,
+     "end": 68.788,
+     "conf": 0.864
+    },
+    {
+     "w": "good",
+     "start": 68.868,
+     "end": 69.008,
+     "conf": 0.743
+    },
+    {
+     "w": "answer",
+     "start": 69.108,
+     "end": 69.428,
+     "conf": 0.645
+    }
+   ]
+  },
+  {
+   "section": "An answer of four",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "In fifteen forty-five, the Italian scholar Gerolamo Cardano published a formula for solving cubic equations, the ones with x cubed in them.",
+   "idea": false,
+   "start": 71.909,
+   "end": 79.068,
+   "words": [
+    {
+     "w": "in",
+     "start": 71.909,
+     "end": 71.989,
+     "conf": 0.997
+    },
+    {
+     "w": "fifteen",
+     "start": 72.029,
+     "end": 72.33,
+     "conf": 0.0
+    },
+    {
+     "w": "forty-five",
+     "start": 72.35,
+     "end": 72.872,
+     "conf": 0.0
+    },
+    {
+     "w": "the",
+     "start": 72.892,
+     "end": 72.952,
+     "conf": 0.99
+    },
+    {
+     "w": "italian",
+     "start": 73.052,
+     "end": 73.393,
+     "conf": 0.861
+    },
+    {
+     "w": "scholar",
+     "start": 73.493,
+     "end": 73.774,
+     "conf": 0.683
+    },
+    {
+     "w": "gerolamo",
+     "start": 73.874,
+     "end": 74.355,
+     "conf": 0.853
+    },
+    {
+     "w": "cardano",
+     "start": 74.476,
+     "end": 74.877,
+     "conf": 0.713
+    },
+    {
+     "w": "published",
+     "start": 75.017,
+     "end": 75.318,
+     "conf": 0.83
+    },
+    {
+     "w": "a",
+     "start": 75.338,
+     "end": 75.358,
+     "conf": 0.995
+    },
+    {
+     "w": "formula",
+     "start": 75.478,
+     "end": 75.839,
+     "conf": 0.857
+    },
+    {
+     "w": "for",
+     "start": 75.939,
+     "end": 76.04,
+     "conf": 0.631
+    },
+    {
+     "w": "solving",
+     "start": 76.12,
+     "end": 76.461,
+     "conf": 0.822
+    },
+    {
+     "w": "cubic",
+     "start": 76.521,
+     "end": 76.922,
+     "conf": 0.824
+    },
+    {
+     "w": "equations",
+     "start": 77.002,
+     "end": 77.584,
+     "conf": 0.762
+    },
+    {
+     "w": "the",
+     "start": 77.604,
+     "end": 77.885,
+     "conf": 0.653
+    },
+    {
+     "w": "ones",
+     "start": 78.005,
+     "end": 78.165,
+     "conf": 0.747
+    },
+    {
+     "w": "with",
+     "start": 78.185,
+     "end": 78.286,
+     "conf": 0.261
+    },
+    {
+     "w": "x",
+     "start": 78.406,
+     "end": 78.426,
+     "conf": 0.987
+    },
+    {
+     "w": "cubed",
+     "start": 78.566,
+     "end": 78.847,
+     "conf": 0.784
+    },
+    {
+     "w": "in",
+     "start": 78.907,
+     "end": 78.947,
+     "conf": 0.497
+    },
+    {
+     "w": "them",
+     "start": 78.967,
+     "end": 79.068,
+     "conf": 0.988
+    }
+   ]
+  },
+  {
+   "section": "An answer of four",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "But the formula had a strange problem.",
+   "idea": true,
+   "start": 79.457,
+   "end": 81.002,
+   "words": [
+    {
+     "w": "but",
+     "start": 79.457,
+     "end": 79.517,
+     "conf": 0.689
+    },
+    {
+     "w": "the",
+     "start": 79.557,
+     "end": 79.618,
+     "conf": 0.989
+    },
+    {
+     "w": "formula",
+     "start": 79.678,
+     "end": 80.039,
+     "conf": 0.999
+    },
+    {
+     "w": "had",
+     "start": 80.099,
+     "end": 80.22,
+     "conf": 0.9
+    },
+    {
+     "w": "a",
+     "start": 80.24,
+     "end": 80.26,
+     "conf": 0.995
+    },
+    {
+     "w": "strange",
+     "start": 80.34,
+     "end": 80.681,
+     "conf": 0.976
+    },
+    {
+     "w": "problem",
+     "start": 80.701,
+     "end": 81.002,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "An answer of four",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "Take x cubed equals fifteen x plus four.",
+   "idea": false,
+   "start": 82.013,
+   "end": 83.817,
+   "words": [
+    {
+     "w": "take",
+     "start": 82.013,
+     "end": 82.175,
+     "conf": 0.812
+    },
+    {
+     "w": "x",
+     "start": 82.277,
+     "end": 82.297,
+     "conf": 0.812
+    },
+    {
+     "w": "cubed",
+     "start": 82.398,
+     "end": 82.601,
+     "conf": 0.593
+    },
+    {
+     "w": "equals",
+     "start": 82.621,
+     "end": 82.864,
+     "conf": 0.834
+    },
+    {
+     "w": "fifteen",
+     "start": 82.885,
+     "end": 83.209,
+     "conf": 0.063
+    },
+    {
+     "w": "x",
+     "start": 83.229,
+     "end": 83.249,
+     "conf": 0.0
+    },
+    {
+     "w": "plus",
+     "start": 83.27,
+     "end": 83.594,
+     "conf": 0.088
+    },
+    {
+     "w": "four",
+     "start": 83.614,
+     "end": 83.817,
+     "conf": 0.001
+    }
+   ]
+  },
+  {
+   "section": "An answer of four",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "You can check by hand that x equals four works. Four cubed is sixty-four, and fifteen fours plus four is also sixty-four.",
+   "idea": false,
+   "start": 84.207,
+   "end": 90.304,
+   "words": [
+    {
+     "w": "you",
+     "start": 84.207,
+     "end": 84.267,
+     "conf": 0.001
+    },
+    {
+     "w": "can",
+     "start": 84.287,
+     "end": 84.347,
+     "conf": 0.333
+    },
+    {
+     "w": "check",
+     "start": 84.367,
+     "end": 84.528,
+     "conf": 0.978
+    },
+    {
+     "w": "by",
+     "start": 84.588,
+     "end": 84.688,
+     "conf": 0.507
+    },
+    {
+     "w": "hand",
+     "start": 84.769,
+     "end": 85.049,
+     "conf": 0.949
+    },
+    {
+     "w": "that",
+     "start": 85.13,
+     "end": 85.25,
+     "conf": 0.54
+    },
+    {
+     "w": "x",
+     "start": 85.39,
+     "end": 85.41,
+     "conf": 0.997
+    },
+    {
+     "w": "equals",
+     "start": 85.571,
+     "end": 85.791,
+     "conf": 0.822
+    },
+    {
+     "w": "four",
+     "start": 85.912,
+     "end": 86.092,
+     "conf": 0.791
+    },
+    {
+     "w": "works",
+     "start": 86.152,
+     "end": 86.453,
+     "conf": 0.799
+    },
+    {
+     "w": "four",
+     "start": 86.593,
+     "end": 86.714,
+     "conf": 0.641
+    },
+    {
+     "w": "cubed",
+     "start": 86.734,
+     "end": 86.975,
+     "conf": 0.83
+    },
+    {
+     "w": "is",
+     "start": 86.995,
+     "end": 87.035,
+     "conf": 0.488
+    },
+    {
+     "w": "sixty-four",
+     "start": 87.055,
+     "end": 87.596,
+     "conf": 0.112
+    },
+    {
+     "w": "and",
+     "start": 88.037,
+     "end": 88.138,
+     "conf": 0.656
+    },
+    {
+     "w": "fifteen",
+     "start": 88.158,
+     "end": 88.539,
+     "conf": 0.0
+    },
+    {
+     "w": "fours",
+     "start": 88.559,
+     "end": 88.779,
+     "conf": 0.0
+    },
+    {
+     "w": "plus",
+     "start": 88.82,
+     "end": 89.0,
+     "conf": 0.014
+    },
+    {
+     "w": "four",
+     "start": 89.02,
+     "end": 89.261,
+     "conf": 0.0
+    },
+    {
+     "w": "is",
+     "start": 89.381,
+     "end": 89.441,
+     "conf": 0.494
+    },
+    {
+     "w": "also",
+     "start": 89.582,
+     "end": 89.742,
+     "conf": 0.748
+    },
+    {
+     "w": "sixty-four",
+     "start": 89.762,
+     "end": 90.304,
+     "conf": 0.002
+    }
+   ]
+  },
+  {
+   "section": "An answer of four",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "So there's a real answer, and it's a small whole number.",
+   "idea": false,
+   "start": 90.713,
+   "end": 93.138,
+   "words": [
+    {
+     "w": "so",
+     "start": 90.713,
+     "end": 90.774,
+     "conf": 0.998
+    },
+    {
+     "w": "there's",
+     "start": 90.794,
+     "end": 90.976,
+     "conf": 0.527
+    },
+    {
+     "w": "a",
+     "start": 90.996,
+     "end": 91.016,
+     "conf": 0.996
+    },
+    {
+     "w": "real",
+     "start": 91.137,
+     "end": 91.319,
+     "conf": 0.746
+    },
+    {
+     "w": "answer",
+     "start": 91.4,
+     "end": 91.703,
+     "conf": 0.588
+    },
+    {
+     "w": "and",
+     "start": 92.026,
+     "end": 92.087,
+     "conf": 0.643
+    },
+    {
+     "w": "it's",
+     "start": 92.107,
+     "end": 92.208,
+     "conf": 0.744
+    },
+    {
+     "w": "a",
+     "start": 92.269,
+     "end": 92.289,
+     "conf": 0.001
+    },
+    {
+     "w": "small",
+     "start": 92.35,
+     "end": 92.572,
+     "conf": 0.983
+    },
+    {
+     "w": "whole",
+     "start": 92.592,
+     "end": 92.814,
+     "conf": 0.714
+    },
+    {
+     "w": "number",
+     "start": 92.835,
+     "end": 93.138,
+     "conf": 0.97
+    }
+   ]
+  },
+  {
+   "section": "An answer of four",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "But feed the equation into the formula, and halfway through it asks for the square root of minus one hundred twenty-one.",
+   "idea": true,
+   "start": 93.528,
+   "end": 99.463,
+   "words": [
+    {
+     "w": "but",
+     "start": 93.528,
+     "end": 93.608,
+     "conf": 0.984
+    },
+    {
+     "w": "feed",
+     "start": 93.688,
+     "end": 93.869,
+     "conf": 0.952
+    },
+    {
+     "w": "the",
+     "start": 93.889,
+     "end": 93.949,
+     "conf": 0.993
+    },
+    {
+     "w": "equation",
+     "start": 93.989,
+     "end": 94.39,
+     "conf": 0.852
+    },
+    {
+     "w": "into",
+     "start": 94.45,
+     "end": 94.591,
+     "conf": 0.748
+    },
+    {
+     "w": "the",
+     "start": 94.611,
+     "end": 94.691,
+     "conf": 0.995
+    },
+    {
+     "w": "formula",
+     "start": 94.751,
+     "end": 95.092,
+     "conf": 0.872
+    },
+    {
+     "w": "and",
+     "start": 95.393,
+     "end": 95.653,
+     "conf": 0.742
+    },
+    {
+     "w": "halfway",
+     "start": 95.774,
+     "end": 96.115,
+     "conf": 0.818
+    },
+    {
+     "w": "through",
+     "start": 96.195,
+     "end": 96.395,
+     "conf": 0.816
+    },
+    {
+     "w": "it",
+     "start": 96.435,
+     "end": 96.556,
+     "conf": 0.997
+    },
+    {
+     "w": "asks",
+     "start": 96.836,
+     "end": 97.137,
+     "conf": 0.721
+    },
+    {
+     "w": "for",
+     "start": 97.217,
+     "end": 97.278,
+     "conf": 0.332
+    },
+    {
+     "w": "the",
+     "start": 97.298,
+     "end": 97.358,
+     "conf": 0.99
+    },
+    {
+     "w": "square",
+     "start": 97.438,
+     "end": 97.699,
+     "conf": 0.783
+    },
+    {
+     "w": "root",
+     "start": 97.759,
+     "end": 97.899,
+     "conf": 0.667
+    },
+    {
+     "w": "of",
+     "start": 97.979,
+     "end": 98.019,
+     "conf": 0.499
+    },
+    {
+     "w": "minus",
+     "start": 98.08,
+     "end": 98.36,
+     "conf": 0.695
+    },
+    {
+     "w": "one",
+     "start": 98.38,
+     "end": 98.561,
+     "conf": 0.026
+    },
+    {
+     "w": "hundred",
+     "start": 98.581,
+     "end": 98.882,
+     "conf": 0.022
+    },
+    {
+     "w": "twenty-one",
+     "start": 98.902,
+     "end": 99.463,
+     "conf": 0.045
+    }
+   ]
+  },
+  {
+   "section": "An answer of four",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "You might think that means the formula simply doesn't apply here. That's what you'd normally conclude when a calculation asks for something impossible.",
+   "idea": false,
+   "start": 100.473,
+   "end": 108.239,
+   "words": [
+    {
+     "w": "you",
+     "start": 100.473,
+     "end": 100.533,
+     "conf": 0.995
+    },
+    {
+     "w": "might",
+     "start": 100.553,
+     "end": 100.713,
+     "conf": 0.899
+    },
+    {
+     "w": "think",
+     "start": 100.733,
+     "end": 100.873,
+     "conf": 0.954
+    },
+    {
+     "w": "that",
+     "start": 100.893,
+     "end": 101.033,
+     "conf": 0.799
+    },
+    {
+     "w": "means",
+     "start": 101.053,
+     "end": 101.254,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 101.274,
+     "end": 101.354,
+     "conf": 0.945
+    },
+    {
+     "w": "formula",
+     "start": 101.434,
+     "end": 101.794,
+     "conf": 1.0
+    },
+    {
+     "w": "simply",
+     "start": 101.974,
+     "end": 102.295,
+     "conf": 0.788
+    },
+    {
+     "w": "doesn't",
+     "start": 102.495,
+     "end": 102.775,
+     "conf": 0.855
+    },
+    {
+     "w": "apply",
+     "start": 102.855,
+     "end": 103.175,
+     "conf": 0.8
+    },
+    {
+     "w": "here",
+     "start": 103.275,
+     "end": 103.495,
+     "conf": 0.983
+    },
+    {
+     "w": "that's",
+     "start": 104.376,
+     "end": 104.576,
+     "conf": 0.856
+    },
+    {
+     "w": "what",
+     "start": 104.636,
+     "end": 104.736,
+     "conf": 0.98
+    },
+    {
+     "w": "you'd",
+     "start": 104.757,
+     "end": 104.917,
+     "conf": 0.853
+    },
+    {
+     "w": "normally",
+     "start": 104.937,
+     "end": 105.217,
+     "conf": 0.895
+    },
+    {
+     "w": "conclude",
+     "start": 105.277,
+     "end": 105.797,
+     "conf": 0.871
+    },
+    {
+     "w": "when",
+     "start": 105.857,
+     "end": 105.957,
+     "conf": 0.933
+    },
+    {
+     "w": "a",
+     "start": 105.998,
+     "end": 106.018,
+     "conf": 0.002
+    },
+    {
+     "w": "calculation",
+     "start": 106.038,
+     "end": 106.578,
+     "conf": 0.963
+    },
+    {
+     "w": "asks",
+     "start": 106.698,
+     "end": 107.038,
+     "conf": 0.748
+    },
+    {
+     "w": "for",
+     "start": 107.178,
+     "end": 107.259,
+     "conf": 0.379
+    },
+    {
+     "w": "something",
+     "start": 107.319,
+     "end": 107.619,
+     "conf": 0.884
+    },
+    {
+     "w": "impossible",
+     "start": 107.699,
+     "end": 108.239,
+     "conf": 0.919
+    }
+   ]
+  },
+  {
+   "section": "An answer of four",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "But the answer exists. We just checked it. The formula was pointing at a true result, and its only road went through a number that wasn't allowed.",
+   "idea": true,
+   "start": 108.63,
+   "end": 115.953,
+   "words": [
+    {
+     "w": "but",
+     "start": 108.63,
+     "end": 108.69,
+     "conf": 0.663
+    },
+    {
+     "w": "the",
+     "start": 108.71,
+     "end": 108.771,
+     "conf": 0.999
+    },
+    {
+     "w": "answer",
+     "start": 108.831,
+     "end": 109.112,
+     "conf": 0.941
+    },
+    {
+     "w": "exists",
+     "start": 109.132,
+     "end": 109.653,
+     "conf": 0.856
+    },
+    {
+     "w": "we",
+     "start": 110.155,
+     "end": 110.195,
+     "conf": 0.5
+    },
+    {
+     "w": "just",
+     "start": 110.275,
+     "end": 110.396,
+     "conf": 0.745
+    },
+    {
+     "w": "checked",
+     "start": 110.416,
+     "end": 110.697,
+     "conf": 0.852
+    },
+    {
+     "w": "it",
+     "start": 110.757,
+     "end": 110.817,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 111.66,
+     "end": 111.72,
+     "conf": 0.999
+    },
+    {
+     "w": "formula",
+     "start": 111.74,
+     "end": 112.061,
+     "conf": 1.0
+    },
+    {
+     "w": "was",
+     "start": 112.121,
+     "end": 112.221,
+     "conf": 0.999
+    },
+    {
+     "w": "pointing",
+     "start": 112.282,
+     "end": 112.603,
+     "conf": 0.888
+    },
+    {
+     "w": "at",
+     "start": 112.623,
+     "end": 112.683,
+     "conf": 0.338
+    },
+    {
+     "w": "a",
+     "start": 112.703,
+     "end": 112.723,
+     "conf": 0.982
+    },
+    {
+     "w": "true",
+     "start": 112.823,
+     "end": 113.004,
+     "conf": 0.73
+    },
+    {
+     "w": "result",
+     "start": 113.024,
+     "end": 113.385,
+     "conf": 0.857
+    },
+    {
+     "w": "and",
+     "start": 113.786,
+     "end": 113.847,
+     "conf": 0.665
+    },
+    {
+     "w": "its",
+     "start": 113.867,
+     "end": 113.967,
+     "conf": 0.999
+    },
+    {
+     "w": "only",
+     "start": 113.987,
+     "end": 114.148,
+     "conf": 0.637
+    },
+    {
+     "w": "road",
+     "start": 114.228,
+     "end": 114.408,
+     "conf": 0.728
+    },
+    {
+     "w": "went",
+     "start": 114.469,
+     "end": 114.589,
+     "conf": 0.753
+    },
+    {
+     "w": "through",
+     "start": 114.609,
+     "end": 114.79,
+     "conf": 0.969
+    },
+    {
+     "w": "a",
+     "start": 114.81,
+     "end": 114.83,
+     "conf": 0.996
+    },
+    {
+     "w": "number",
+     "start": 114.85,
+     "end": 115.131,
+     "conf": 0.996
+    },
+    {
+     "w": "that",
+     "start": 115.151,
+     "end": 115.251,
+     "conf": 0.974
+    },
+    {
+     "w": "wasn't",
+     "start": 115.271,
+     "end": 115.552,
+     "conf": 0.828
+    },
+    {
+     "w": "allowed",
+     "start": 115.572,
+     "end": 115.953,
+     "conf": 0.843
+    }
+   ]
+  },
+  {
+   "section": "Walking straight through",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "In fifteen seventy-two, an engineer named Rafael Bombelli tried something bold. He ignored the objection and kept calculating.",
+   "idea": false,
+   "start": 117.593,
+   "end": 124.055,
+   "words": [
+    {
+     "w": "in",
+     "start": 117.593,
+     "end": 117.633,
+     "conf": 0.867
+    },
+    {
+     "w": "fifteen",
+     "start": 117.653,
+     "end": 118.014,
+     "conf": 0.001
+    },
+    {
+     "w": "seventy-two",
+     "start": 118.035,
+     "end": 118.596,
+     "conf": 0.0
+    },
+    {
+     "w": "an",
+     "start": 118.958,
+     "end": 119.018,
+     "conf": 0.634
+    },
+    {
+     "w": "engineer",
+     "start": 119.058,
+     "end": 119.439,
+     "conf": 0.866
+    },
+    {
+     "w": "named",
+     "start": 119.52,
+     "end": 119.72,
+     "conf": 0.991
+    },
+    {
+     "w": "rafael",
+     "start": 119.8,
+     "end": 120.162,
+     "conf": 0.78
+    },
+    {
+     "w": "bombelli",
+     "start": 120.242,
+     "end": 120.623,
+     "conf": 0.751
+    },
+    {
+     "w": "tried",
+     "start": 120.764,
+     "end": 120.964,
+     "conf": 0.693
+    },
+    {
+     "w": "something",
+     "start": 120.984,
+     "end": 121.326,
+     "conf": 0.82
+    },
+    {
+     "w": "bold",
+     "start": 121.386,
+     "end": 121.687,
+     "conf": 0.752
+    },
+    {
+     "w": "he",
+     "start": 122.068,
+     "end": 122.108,
+     "conf": 0.521
+    },
+    {
+     "w": "ignored",
+     "start": 122.128,
+     "end": 122.389,
+     "conf": 0.881
+    },
+    {
+     "w": "the",
+     "start": 122.409,
+     "end": 122.469,
+     "conf": 0.996
+    },
+    {
+     "w": "objection",
+     "start": 122.489,
+     "end": 122.911,
+     "conf": 0.9
+    },
+    {
+     "w": "and",
+     "start": 123.112,
+     "end": 123.192,
+     "conf": 0.696
+    },
+    {
+     "w": "kept",
+     "start": 123.232,
+     "end": 123.392,
+     "conf": 0.75
+    },
+    {
+     "w": "calculating",
+     "start": 123.453,
+     "end": 124.055,
+     "conf": 0.906
+    }
+   ]
+  },
+  {
+   "section": "Walking straight through",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "He treated the square root of minus one as an unknown symbol, with one rule: its square is minus one. Otherwise, normal algebra.",
+   "idea": false,
+   "start": 124.445,
+   "end": 130.896,
+   "words": [
+    {
+     "w": "he",
+     "start": 124.445,
+     "end": 124.485,
+     "conf": 0.0
+    },
+    {
+     "w": "treated",
+     "start": 124.545,
+     "end": 124.806,
+     "conf": 0.858
+    },
+    {
+     "w": "the",
+     "start": 124.826,
+     "end": 124.906,
+     "conf": 0.745
+    },
+    {
+     "w": "square",
+     "start": 124.926,
+     "end": 125.186,
+     "conf": 0.814
+    },
+    {
+     "w": "root",
+     "start": 125.206,
+     "end": 125.347,
+     "conf": 0.899
+    },
+    {
+     "w": "of",
+     "start": 125.407,
+     "end": 125.447,
+     "conf": 0.499
+    },
+    {
+     "w": "minus",
+     "start": 125.507,
+     "end": 125.787,
+     "conf": 0.754
+    },
+    {
+     "w": "one",
+     "start": 125.928,
+     "end": 126.068,
+     "conf": 0.689
+    },
+    {
+     "w": "as",
+     "start": 126.148,
+     "end": 126.208,
+     "conf": 0.5
+    },
+    {
+     "w": "an",
+     "start": 126.228,
+     "end": 126.288,
+     "conf": 0.998
+    },
+    {
+     "w": "unknown",
+     "start": 126.368,
+     "end": 126.649,
+     "conf": 0.862
+    },
+    {
+     "w": "symbol",
+     "start": 126.749,
+     "end": 127.01,
+     "conf": 0.639
+    },
+    {
+     "w": "with",
+     "start": 127.27,
+     "end": 127.39,
+     "conf": 0.977
+    },
+    {
+     "w": "one",
+     "start": 127.51,
+     "end": 127.591,
+     "conf": 0.666
+    },
+    {
+     "w": "rule",
+     "start": 127.611,
+     "end": 127.811,
+     "conf": 0.995
+    },
+    {
+     "w": "its",
+     "start": 128.192,
+     "end": 128.272,
+     "conf": 0.688
+    },
+    {
+     "w": "square",
+     "start": 128.332,
+     "end": 128.612,
+     "conf": 0.739
+    },
+    {
+     "w": "is",
+     "start": 128.693,
+     "end": 128.733,
+     "conf": 0.499
+    },
+    {
+     "w": "minus",
+     "start": 128.793,
+     "end": 129.033,
+     "conf": 0.783
+    },
+    {
+     "w": "one",
+     "start": 129.173,
+     "end": 129.314,
+     "conf": 0.655
+    },
+    {
+     "w": "otherwise",
+     "start": 129.734,
+     "end": 130.115,
+     "conf": 0.863
+    },
+    {
+     "w": "normal",
+     "start": 130.275,
+     "end": 130.516,
+     "conf": 0.982
+    },
+    {
+     "w": "algebra",
+     "start": 130.596,
+     "end": 130.896,
+     "conf": 0.803
+    }
+   ]
+  },
+  {
+   "section": "Walking straight through",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "The formula then wanted two cube roots, and Bombelli found them: two plus that symbol, and two minus that symbol.",
+   "idea": false,
+   "start": 131.346,
+   "end": 136.949,
+   "words": [
+    {
+     "w": "the",
+     "start": 131.346,
+     "end": 131.406,
+     "conf": 0.933
+    },
+    {
+     "w": "formula",
+     "start": 131.426,
+     "end": 131.728,
+     "conf": 0.857
+    },
+    {
+     "w": "then",
+     "start": 131.748,
+     "end": 131.908,
+     "conf": 0.818
+    },
+    {
+     "w": "wanted",
+     "start": 131.989,
+     "end": 132.23,
+     "conf": 0.831
+    },
+    {
+     "w": "two",
+     "start": 132.31,
+     "end": 132.491,
+     "conf": 0.664
+    },
+    {
+     "w": "cube",
+     "start": 132.591,
+     "end": 132.852,
+     "conf": 0.522
+    },
+    {
+     "w": "roots",
+     "start": 132.912,
+     "end": 133.173,
+     "conf": 0.647
+    },
+    {
+     "w": "and",
+     "start": 133.394,
+     "end": 133.455,
+     "conf": 0.665
+    },
+    {
+     "w": "bombelli",
+     "start": 133.475,
+     "end": 133.836,
+     "conf": 0.87
+    },
+    {
+     "w": "found",
+     "start": 133.916,
+     "end": 134.117,
+     "conf": 0.819
+    },
+    {
+     "w": "them",
+     "start": 134.137,
+     "end": 134.258,
+     "conf": 0.989
+    },
+    {
+     "w": "two",
+     "start": 134.72,
+     "end": 134.82,
+     "conf": 0.482
+    },
+    {
+     "w": "plus",
+     "start": 134.84,
+     "end": 135.061,
+     "conf": 0.735
+    },
+    {
+     "w": "that",
+     "start": 135.081,
+     "end": 135.242,
+     "conf": 0.957
+    },
+    {
+     "w": "symbol",
+     "start": 135.322,
+     "end": 135.583,
+     "conf": 0.497
+    },
+    {
+     "w": "and",
+     "start": 135.884,
+     "end": 135.965,
+     "conf": 0.983
+    },
+    {
+     "w": "two",
+     "start": 135.985,
+     "end": 136.145,
+     "conf": 0.684
+    },
+    {
+     "w": "minus",
+     "start": 136.206,
+     "end": 136.507,
+     "conf": 0.679
+    },
+    {
+     "w": "that",
+     "start": 136.527,
+     "end": 136.668,
+     "conf": 0.847
+    },
+    {
+     "w": "symbol",
+     "start": 136.748,
+     "end": 136.949,
+     "conf": 0.501
+    }
+   ]
+  },
+  {
+   "section": "Walking straight through",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "Now add those. The two and the two make four. The symbols, one plus and one minus, cancel out.",
+   "idea": false,
+   "start": 137.359,
+   "end": 141.965,
+   "words": [
+    {
+     "w": "now",
+     "start": 137.359,
+     "end": 137.479,
+     "conf": 0.988
+    },
+    {
+     "w": "add",
+     "start": 137.579,
+     "end": 137.679,
+     "conf": 0.616
+    },
+    {
+     "w": "those",
+     "start": 137.699,
+     "end": 138.02,
+     "conf": 0.714
+    },
+    {
+     "w": "the",
+     "start": 138.04,
+     "end": 138.581,
+     "conf": 0.664
+    },
+    {
+     "w": "two",
+     "start": 138.641,
+     "end": 138.761,
+     "conf": 0.563
+    },
+    {
+     "w": "and",
+     "start": 138.781,
+     "end": 138.861,
+     "conf": 0.714
+    },
+    {
+     "w": "the",
+     "start": 138.881,
+     "end": 138.941,
+     "conf": 0.301
+    },
+    {
+     "w": "two",
+     "start": 138.961,
+     "end": 139.101,
+     "conf": 0.733
+    },
+    {
+     "w": "make",
+     "start": 139.182,
+     "end": 139.322,
+     "conf": 0.749
+    },
+    {
+     "w": "four",
+     "start": 139.402,
+     "end": 139.582,
+     "conf": 0.669
+    },
+    {
+     "w": "the",
+     "start": 139.682,
+     "end": 139.742,
+     "conf": 0.348
+    },
+    {
+     "w": "symbols",
+     "start": 139.762,
+     "end": 140.123,
+     "conf": 0.678
+    },
+    {
+     "w": "one",
+     "start": 140.243,
+     "end": 140.343,
+     "conf": 0.618
+    },
+    {
+     "w": "plus",
+     "start": 140.423,
+     "end": 140.624,
+     "conf": 0.723
+    },
+    {
+     "w": "and",
+     "start": 140.644,
+     "end": 140.744,
+     "conf": 0.726
+    },
+    {
+     "w": "one",
+     "start": 140.824,
+     "end": 140.904,
+     "conf": 0.676
+    },
+    {
+     "w": "minus",
+     "start": 140.924,
+     "end": 141.304,
+     "conf": 0.845
+    },
+    {
+     "w": "cancel",
+     "start": 141.485,
+     "end": 141.785,
+     "conf": 0.712
+    },
+    {
+     "w": "out",
+     "start": 141.845,
+     "end": 141.965,
+     "conf": 0.665
+    }
+   ]
+  },
+  {
+   "section": "Walking straight through",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "Four. The exact right answer, and the impossible part had vanished on the way out.",
+   "idea": true,
+   "start": 142.517,
+   "end": 146.758,
+   "words": [
+    {
+     "w": "four",
+     "start": 142.517,
+     "end": 142.718,
+     "conf": 0.223
+    },
+    {
+     "w": "the",
+     "start": 143.361,
+     "end": 143.421,
+     "conf": 0.994
+    },
+    {
+     "w": "exact",
+     "start": 143.461,
+     "end": 143.783,
+     "conf": 0.999
+    },
+    {
+     "w": "right",
+     "start": 143.823,
+     "end": 144.004,
+     "conf": 0.892
+    },
+    {
+     "w": "answer",
+     "start": 144.064,
+     "end": 144.366,
+     "conf": 0.942
+    },
+    {
+     "w": "and",
+     "start": 144.647,
+     "end": 144.708,
+     "conf": 0.661
+    },
+    {
+     "w": "the",
+     "start": 144.728,
+     "end": 144.788,
+     "conf": 0.336
+    },
+    {
+     "w": "impossible",
+     "start": 144.848,
+     "end": 145.411,
+     "conf": 0.906
+    },
+    {
+     "w": "part",
+     "start": 145.431,
+     "end": 145.632,
+     "conf": 0.999
+    },
+    {
+     "w": "had",
+     "start": 145.652,
+     "end": 145.733,
+     "conf": 0.643
+    },
+    {
+     "w": "vanished",
+     "start": 145.793,
+     "end": 146.155,
+     "conf": 0.885
+    },
+    {
+     "w": "on",
+     "start": 146.175,
+     "end": 146.235,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 146.255,
+     "end": 146.316,
+     "conf": 0.991
+    },
+    {
+     "w": "way",
+     "start": 146.336,
+     "end": 146.476,
+     "conf": 0.75
+    },
+    {
+     "w": "out",
+     "start": 146.597,
+     "end": 146.758,
+     "conf": 0.654
+    }
+   ]
+  },
+  {
+   "section": "Walking straight through",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "So nobody accepted this number because it sounded nice. It was accepted because it kept producing correct results, while no one could say what it was.",
+   "idea": false,
+   "start": 147.747,
+   "end": 155.408,
+   "words": [
+    {
+     "w": "so",
+     "start": 147.747,
+     "end": 147.787,
+     "conf": 0.999
+    },
+    {
+     "w": "nobody",
+     "start": 147.867,
+     "end": 148.088,
+     "conf": 0.989
+    },
+    {
+     "w": "accepted",
+     "start": 148.148,
+     "end": 148.549,
+     "conf": 0.874
+    },
+    {
+     "w": "this",
+     "start": 148.569,
+     "end": 148.71,
+     "conf": 0.8
+    },
+    {
+     "w": "number",
+     "start": 148.77,
+     "end": 149.031,
+     "conf": 0.981
+    },
+    {
+     "w": "because",
+     "start": 149.091,
+     "end": 149.331,
+     "conf": 0.855
+    },
+    {
+     "w": "it",
+     "start": 149.351,
+     "end": 149.432,
+     "conf": 0.992
+    },
+    {
+     "w": "sounded",
+     "start": 149.632,
+     "end": 149.973,
+     "conf": 0.857
+    },
+    {
+     "w": "nice",
+     "start": 150.033,
+     "end": 150.394,
+     "conf": 0.936
+    },
+    {
+     "w": "it",
+     "start": 150.735,
+     "end": 150.815,
+     "conf": 0.999
+    },
+    {
+     "w": "was",
+     "start": 150.835,
+     "end": 150.956,
+     "conf": 0.999
+    },
+    {
+     "w": "accepted",
+     "start": 151.016,
+     "end": 151.457,
+     "conf": 0.875
+    },
+    {
+     "w": "because",
+     "start": 151.477,
+     "end": 151.758,
+     "conf": 0.874
+    },
+    {
+     "w": "it",
+     "start": 151.778,
+     "end": 151.838,
+     "conf": 0.835
+    },
+    {
+     "w": "kept",
+     "start": 151.878,
+     "end": 152.059,
+     "conf": 0.779
+    },
+    {
+     "w": "producing",
+     "start": 152.099,
+     "end": 152.62,
+     "conf": 0.87
+    },
+    {
+     "w": "correct",
+     "start": 152.741,
+     "end": 153.061,
+     "conf": 0.841
+    },
+    {
+     "w": "results",
+     "start": 153.142,
+     "end": 153.603,
+     "conf": 0.857
+    },
+    {
+     "w": "while",
+     "start": 153.924,
+     "end": 154.104,
+     "conf": 0.926
+    },
+    {
+     "w": "no",
+     "start": 154.124,
+     "end": 154.205,
+     "conf": 0.922
+    },
+    {
+     "w": "one",
+     "start": 154.345,
+     "end": 154.425,
+     "conf": 0.666
+    },
+    {
+     "w": "could",
+     "start": 154.445,
+     "end": 154.606,
+     "conf": 0.82
+    },
+    {
+     "w": "say",
+     "start": 154.666,
+     "end": 154.786,
+     "conf": 0.666
+    },
+    {
+     "w": "what",
+     "start": 154.866,
+     "end": 154.967,
+     "conf": 0.654
+    },
+    {
+     "w": "it",
+     "start": 154.987,
+     "end": 155.067,
+     "conf": 0.997
+    },
+    {
+     "w": "was",
+     "start": 155.127,
+     "end": 155.408,
+     "conf": 0.667
+    }
+   ]
+  },
+  {
+   "section": "Walking straight through",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "In sixteen thirty-seven, Rene Descartes used the word imaginary for quantities like this, and it wasn't meant as a compliment.",
+   "idea": false,
+   "start": 155.878,
+   "end": 162.221,
+   "words": [
+    {
+     "w": "in",
+     "start": 155.878,
+     "end": 155.938,
+     "conf": 0.999
+    },
+    {
+     "w": "sixteen",
+     "start": 155.958,
+     "end": 156.38,
+     "conf": 0.002
+    },
+    {
+     "w": "thirty-seven",
+     "start": 156.4,
+     "end": 157.022,
+     "conf": 0.0
+    },
+    {
+     "w": "rene",
+     "start": 157.223,
+     "end": 157.383,
+     "conf": 0.553
+    },
+    {
+     "w": "descartes",
+     "start": 157.504,
+     "end": 158.046,
+     "conf": 0.468
+    },
+    {
+     "w": "used",
+     "start": 158.186,
+     "end": 158.347,
+     "conf": 0.731
+    },
+    {
+     "w": "the",
+     "start": 158.367,
+     "end": 158.447,
+     "conf": 0.978
+    },
+    {
+     "w": "word",
+     "start": 158.467,
+     "end": 158.648,
+     "conf": 0.919
+    },
+    {
+     "w": "imaginary",
+     "start": 158.708,
+     "end": 159.27,
+     "conf": 0.887
+    },
+    {
+     "w": "for",
+     "start": 159.351,
+     "end": 159.451,
+     "conf": 0.675
+    },
+    {
+     "w": "quantities",
+     "start": 159.511,
+     "end": 160.093,
+     "conf": 0.835
+    },
+    {
+     "w": "like",
+     "start": 160.133,
+     "end": 160.314,
+     "conf": 0.826
+    },
+    {
+     "w": "this",
+     "start": 160.334,
+     "end": 160.555,
+     "conf": 0.999
+    },
+    {
+     "w": "and",
+     "start": 160.896,
+     "end": 160.996,
+     "conf": 0.663
+    },
+    {
+     "w": "it",
+     "start": 161.016,
+     "end": 161.097,
+     "conf": 0.663
+    },
+    {
+     "w": "wasn't",
+     "start": 161.117,
+     "end": 161.378,
+     "conf": 0.814
+    },
+    {
+     "w": "meant",
+     "start": 161.418,
+     "end": 161.599,
+     "conf": 0.604
+    },
+    {
+     "w": "as",
+     "start": 161.679,
+     "end": 161.739,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 161.799,
+     "end": 161.819,
+     "conf": 0.007
+    },
+    {
+     "w": "compliment",
+     "start": 161.839,
+     "end": 162.221,
+     "conf": 0.783
+    }
+   ]
+  },
+  {
+   "section": "Walking straight through",
+   "act": "ACT TWO — The impossible step to a correct answer",
+   "text": "The symbol we use now, the letter i, came later. But the real question stayed open. A rule isn't an explanation. What is this thing?",
+   "idea": true,
+   "start": 162.611,
+   "end": 169.146,
+   "words": [
+    {
+     "w": "the",
+     "start": 162.611,
+     "end": 162.671,
+     "conf": 0.002
+    },
+    {
+     "w": "symbol",
+     "start": 162.691,
+     "end": 162.872,
+     "conf": 0.546
+    },
+    {
+     "w": "we",
+     "start": 162.892,
+     "end": 162.952,
+     "conf": 0.479
+    },
+    {
+     "w": "use",
+     "start": 163.072,
+     "end": 163.192,
+     "conf": 0.67
+    },
+    {
+     "w": "now",
+     "start": 163.232,
+     "end": 163.433,
+     "conf": 0.905
+    },
+    {
+     "w": "the",
+     "start": 163.513,
+     "end": 163.613,
+     "conf": 0.665
+    },
+    {
+     "w": "letter",
+     "start": 163.633,
+     "end": 163.854,
+     "conf": 0.838
+    },
+    {
+     "w": "i",
+     "start": 164.114,
+     "end": 164.135,
+     "conf": 0.756
+    },
+    {
+     "w": "came",
+     "start": 164.275,
+     "end": 164.435,
+     "conf": 0.798
+    },
+    {
+     "w": "later",
+     "start": 164.455,
+     "end": 164.736,
+     "conf": 0.998
+    },
+    {
+     "w": "but",
+     "start": 165.257,
+     "end": 165.317,
+     "conf": 0.403
+    },
+    {
+     "w": "the",
+     "start": 165.337,
+     "end": 165.397,
+     "conf": 0.998
+    },
+    {
+     "w": "real",
+     "start": 165.417,
+     "end": 165.578,
+     "conf": 1.0
+    },
+    {
+     "w": "question",
+     "start": 165.598,
+     "end": 165.939,
+     "conf": 0.982
+    },
+    {
+     "w": "stayed",
+     "start": 165.999,
+     "end": 166.219,
+     "conf": 0.986
+    },
+    {
+     "w": "open",
+     "start": 166.279,
+     "end": 166.5,
+     "conf": 0.75
+    },
+    {
+     "w": "a",
+     "start": 166.981,
+     "end": 167.001,
+     "conf": 0.001
+    },
+    {
+     "w": "rule",
+     "start": 167.061,
+     "end": 167.262,
+     "conf": 0.768
+    },
+    {
+     "w": "isn't",
+     "start": 167.322,
+     "end": 167.482,
+     "conf": 0.654
+    },
+    {
+     "w": "an",
+     "start": 167.502,
+     "end": 167.542,
+     "conf": 0.994
+    },
+    {
+     "w": "explanation",
+     "start": 167.602,
+     "end": 168.164,
+     "conf": 0.9
+    },
+    {
+     "w": "what",
+     "start": 168.444,
+     "end": 168.565,
+     "conf": 0.943
+    },
+    {
+     "w": "is",
+     "start": 168.625,
+     "end": 168.705,
+     "conf": 0.499
+    },
+    {
+     "w": "this",
+     "start": 168.725,
+     "end": 168.905,
+     "conf": 0.799
+    },
+    {
+     "w": "thing",
+     "start": 168.925,
+     "end": 169.146,
+     "conf": 0.719
+    }
+   ]
+  },
+  {
+   "section": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "The answer turned up around eighteen hundred, published by Caspar Wessel and then Jean-Robert Argand, working separately.",
+   "idea": false,
+   "start": 171.626,
+   "end": 177.775,
+   "words": [
+    {
+     "w": "the",
+     "start": 171.626,
+     "end": 171.726,
+     "conf": 0.002
+    },
+    {
+     "w": "answer",
+     "start": 171.766,
+     "end": 171.967,
+     "conf": 0.553
+    },
+    {
+     "w": "turned",
+     "start": 172.027,
+     "end": 172.227,
+     "conf": 0.828
+    },
+    {
+     "w": "up",
+     "start": 172.247,
+     "end": 172.347,
+     "conf": 0.999
+    },
+    {
+     "w": "around",
+     "start": 172.427,
+     "end": 172.688,
+     "conf": 0.81
+    },
+    {
+     "w": "eighteen",
+     "start": 172.768,
+     "end": 173.028,
+     "conf": 0.06
+    },
+    {
+     "w": "hundred",
+     "start": 173.048,
+     "end": 173.369,
+     "conf": 0.035
+    },
+    {
+     "w": "published",
+     "start": 173.629,
+     "end": 173.97,
+     "conf": 0.856
+    },
+    {
+     "w": "by",
+     "start": 173.99,
+     "end": 174.09,
+     "conf": 0.997
+    },
+    {
+     "w": "caspar",
+     "start": 174.17,
+     "end": 174.49,
+     "conf": 0.633
+    },
+    {
+     "w": "wessel",
+     "start": 174.51,
+     "end": 174.811,
+     "conf": 0.902
+    },
+    {
+     "w": "and",
+     "start": 175.131,
+     "end": 175.191,
+     "conf": 0.659
+    },
+    {
+     "w": "then",
+     "start": 175.211,
+     "end": 175.372,
+     "conf": 0.954
+    },
+    {
+     "w": "jean-robert",
+     "start": 175.492,
+     "end": 176.173,
+     "conf": 0.61
+    },
+    {
+     "w": "argand",
+     "start": 176.353,
+     "end": 176.734,
+     "conf": 0.565
+    },
+    {
+     "w": "working",
+     "start": 177.034,
+     "end": 177.315,
+     "conf": 0.856
+    },
+    {
+     "w": "separately",
+     "start": 177.415,
+     "end": 177.775,
+     "conf": 0.808
+    }
+   ]
+  },
+  {
+   "section": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "And it's almost embarrassingly simple. We already showed no move on the line works. So stop staying on the line.",
+   "idea": true,
+   "start": 178.206,
+   "end": 183.898,
+   "words": [
+    {
+     "w": "and",
+     "start": 178.206,
+     "end": 178.266,
+     "conf": 0.99
+    },
+    {
+     "w": "it's",
+     "start": 178.286,
+     "end": 178.386,
+     "conf": 0.561
+    },
+    {
+     "w": "almost",
+     "start": 178.406,
+     "end": 178.667,
+     "conf": 0.862
+    },
+    {
+     "w": "embarrassingly",
+     "start": 178.747,
+     "end": 179.429,
+     "conf": 0.88
+    },
+    {
+     "w": "simple",
+     "start": 179.589,
+     "end": 179.93,
+     "conf": 0.814
+    },
+    {
+     "w": "we",
+     "start": 180.311,
+     "end": 180.371,
+     "conf": 0.997
+    },
+    {
+     "w": "already",
+     "start": 180.431,
+     "end": 180.571,
+     "conf": 0.721
+    },
+    {
+     "w": "showed",
+     "start": 180.631,
+     "end": 180.792,
+     "conf": 0.807
+    },
+    {
+     "w": "no",
+     "start": 180.812,
+     "end": 180.872,
+     "conf": 0.835
+    },
+    {
+     "w": "move",
+     "start": 180.972,
+     "end": 181.152,
+     "conf": 0.766
+    },
+    {
+     "w": "on",
+     "start": 181.212,
+     "end": 181.253,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 181.273,
+     "end": 181.353,
+     "conf": 0.997
+    },
+    {
+     "w": "line",
+     "start": 181.413,
+     "end": 181.633,
+     "conf": 0.69
+    },
+    {
+     "w": "works",
+     "start": 181.714,
+     "end": 182.034,
+     "conf": 0.798
+    },
+    {
+     "w": "so",
+     "start": 182.375,
+     "end": 182.435,
+     "conf": 0.499
+    },
+    {
+     "w": "stop",
+     "start": 182.856,
+     "end": 183.036,
+     "conf": 0.748
+    },
+    {
+     "w": "staying",
+     "start": 183.117,
+     "end": 183.417,
+     "conf": 0.871
+    },
+    {
+     "w": "on",
+     "start": 183.477,
+     "end": 183.517,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 183.537,
+     "end": 183.598,
+     "conf": 0.995
+    },
+    {
+     "w": "line",
+     "start": 183.658,
+     "end": 183.898,
+     "conf": 0.831
+    }
+   ]
+  },
+  {
+   "section": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "Look at that flip again. There's another way to send one to minus one, three to minus three, and everything to its opposite.",
+   "idea": false,
+   "start": 184.888,
+   "end": 190.654,
+   "words": [
+    {
+     "w": "look",
+     "start": 184.888,
+     "end": 184.988,
+     "conf": 0.45
+    },
+    {
+     "w": "at",
+     "start": 185.008,
+     "end": 185.048,
+     "conf": 0.198
+    },
+    {
+     "w": "that",
+     "start": 185.088,
+     "end": 185.168,
+     "conf": 0.249
+    },
+    {
+     "w": "flip",
+     "start": 185.188,
+     "end": 185.349,
+     "conf": 0.941
+    },
+    {
+     "w": "again",
+     "start": 185.429,
+     "end": 185.669,
+     "conf": 0.999
+    },
+    {
+     "w": "there's",
+     "start": 185.689,
+     "end": 186.71,
+     "conf": 0.641
+    },
+    {
+     "w": "another",
+     "start": 186.73,
+     "end": 186.93,
+     "conf": 0.975
+    },
+    {
+     "w": "way",
+     "start": 186.95,
+     "end": 187.05,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 187.07,
+     "end": 187.13,
+     "conf": 0.667
+    },
+    {
+     "w": "send",
+     "start": 187.21,
+     "end": 187.331,
+     "conf": 0.748
+    },
+    {
+     "w": "one",
+     "start": 187.431,
+     "end": 187.511,
+     "conf": 0.665
+    },
+    {
+     "w": "to",
+     "start": 187.531,
+     "end": 187.591,
+     "conf": 0.991
+    },
+    {
+     "w": "minus",
+     "start": 187.671,
+     "end": 187.951,
+     "conf": 0.769
+    },
+    {
+     "w": "one",
+     "start": 188.071,
+     "end": 188.191,
+     "conf": 0.627
+    },
+    {
+     "w": "three",
+     "start": 188.312,
+     "end": 188.472,
+     "conf": 0.488
+    },
+    {
+     "w": "to",
+     "start": 188.492,
+     "end": 188.552,
+     "conf": 0.902
+    },
+    {
+     "w": "minus",
+     "start": 188.612,
+     "end": 188.872,
+     "conf": 0.868
+    },
+    {
+     "w": "three",
+     "start": 188.952,
+     "end": 189.153,
+     "conf": 0.602
+    },
+    {
+     "w": "and",
+     "start": 189.673,
+     "end": 189.753,
+     "conf": 0.611
+    },
+    {
+     "w": "everything",
+     "start": 189.793,
+     "end": 190.053,
+     "conf": 0.859
+    },
+    {
+     "w": "to",
+     "start": 190.073,
+     "end": 190.134,
+     "conf": 0.996
+    },
+    {
+     "w": "its",
+     "start": 190.194,
+     "end": 190.274,
+     "conf": 0.664
+    },
+    {
+     "w": "opposite",
+     "start": 190.354,
+     "end": 190.654,
+     "conf": 0.497
+    }
+   ]
+  },
+  {
+   "section": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "Rotate the whole line half a turn around zero.",
+   "idea": false,
+   "start": 191.064,
+   "end": 193.192,
+   "words": [
+    {
+     "w": "rotate",
+     "start": 191.064,
+     "end": 191.345,
+     "conf": 0.941
+    },
+    {
+     "w": "the",
+     "start": 191.365,
+     "end": 191.446,
+     "conf": 0.957
+    },
+    {
+     "w": "whole",
+     "start": 191.466,
+     "end": 191.707,
+     "conf": 0.771
+    },
+    {
+     "w": "line",
+     "start": 191.727,
+     "end": 191.927,
+     "conf": 0.926
+    },
+    {
+     "w": "half",
+     "start": 191.988,
+     "end": 192.188,
+     "conf": 0.816
+    },
+    {
+     "w": "a",
+     "start": 192.269,
+     "end": 192.289,
+     "conf": 0.006
+    },
+    {
+     "w": "turn",
+     "start": 192.309,
+     "end": 192.51,
+     "conf": 0.884
+    },
+    {
+     "w": "around",
+     "start": 192.57,
+     "end": 192.851,
+     "conf": 0.817
+    },
+    {
+     "w": "zero",
+     "start": 192.951,
+     "end": 193.192,
+     "conf": 0.468
+    }
+   ]
+  },
+  {
+   "section": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "The result looks exactly the same as the flip, but now the move has a middle.",
+   "idea": false,
+   "start": 193.642,
+   "end": 197.35,
+   "words": [
+    {
+     "w": "the",
+     "start": 193.642,
+     "end": 193.702,
+     "conf": 0.001
+    },
+    {
+     "w": "result",
+     "start": 193.722,
+     "end": 194.083,
+     "conf": 0.834
+    },
+    {
+     "w": "looks",
+     "start": 194.364,
+     "end": 194.504,
+     "conf": 0.808
+    },
+    {
+     "w": "exactly",
+     "start": 194.584,
+     "end": 195.025,
+     "conf": 0.862
+    },
+    {
+     "w": "the",
+     "start": 195.085,
+     "end": 195.145,
+     "conf": 0.687
+    },
+    {
+     "w": "same",
+     "start": 195.225,
+     "end": 195.406,
+     "conf": 0.749
+    },
+    {
+     "w": "as",
+     "start": 195.426,
+     "end": 195.486,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 195.506,
+     "end": 195.606,
+     "conf": 0.699
+    },
+    {
+     "w": "flip",
+     "start": 195.666,
+     "end": 195.826,
+     "conf": 0.623
+    },
+    {
+     "w": "but",
+     "start": 196.107,
+     "end": 196.207,
+     "conf": 0.999
+    },
+    {
+     "w": "now",
+     "start": 196.267,
+     "end": 196.388,
+     "conf": 0.941
+    },
+    {
+     "w": "the",
+     "start": 196.408,
+     "end": 196.488,
+     "conf": 0.969
+    },
+    {
+     "w": "move",
+     "start": 196.568,
+     "end": 196.829,
+     "conf": 0.75
+    },
+    {
+     "w": "has",
+     "start": 196.889,
+     "end": 196.989,
+     "conf": 0.579
+    },
+    {
+     "w": "a",
+     "start": 197.049,
+     "end": 197.069,
+     "conf": 0.001
+    },
+    {
+     "w": "middle",
+     "start": 197.129,
+     "end": 197.35,
+     "conf": 0.949
+    }
+   ]
+  },
+  {
+   "section": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "Stop halfway through the rotation. You've made a quarter turn, and the arrow from zero to one is now pointing straight up, off the line.",
+   "idea": true,
+   "start": 197.74,
+   "end": 204.257,
+   "words": [
+    {
+     "w": "stop",
+     "start": 197.74,
+     "end": 197.921,
+     "conf": 0.8
+    },
+    {
+     "w": "halfway",
+     "start": 197.961,
+     "end": 198.201,
+     "conf": 0.633
+    },
+    {
+     "w": "through",
+     "start": 198.221,
+     "end": 198.362,
+     "conf": 0.642
+    },
+    {
+     "w": "the",
+     "start": 198.382,
+     "end": 198.442,
+     "conf": 0.0
+    },
+    {
+     "w": "rotation",
+     "start": 198.482,
+     "end": 198.883,
+     "conf": 0.772
+    },
+    {
+     "w": "you've",
+     "start": 199.104,
+     "end": 199.224,
+     "conf": 0.621
+    },
+    {
+     "w": "made",
+     "start": 199.244,
+     "end": 199.384,
+     "conf": 0.995
+    },
+    {
+     "w": "a",
+     "start": 199.404,
+     "end": 199.444,
+     "conf": 0.835
+    },
+    {
+     "w": "quarter",
+     "start": 199.545,
+     "end": 199.846,
+     "conf": 0.749
+    },
+    {
+     "w": "turn",
+     "start": 199.906,
+     "end": 200.227,
+     "conf": 0.774
+    },
+    {
+     "w": "and",
+     "start": 200.748,
+     "end": 200.808,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 200.828,
+     "end": 200.888,
+     "conf": 0.996
+    },
+    {
+     "w": "arrow",
+     "start": 200.989,
+     "end": 201.169,
+     "conf": 0.597
+    },
+    {
+     "w": "from",
+     "start": 201.249,
+     "end": 201.349,
+     "conf": 0.739
+    },
+    {
+     "w": "zero",
+     "start": 201.41,
+     "end": 201.65,
+     "conf": 0.231
+    },
+    {
+     "w": "to",
+     "start": 201.75,
+     "end": 201.791,
+     "conf": 0.393
+    },
+    {
+     "w": "one",
+     "start": 201.811,
+     "end": 202.131,
+     "conf": 0.028
+    },
+    {
+     "w": "is",
+     "start": 202.332,
+     "end": 202.372,
+     "conf": 0.499
+    },
+    {
+     "w": "now",
+     "start": 202.432,
+     "end": 202.593,
+     "conf": 0.999
+    },
+    {
+     "w": "pointing",
+     "start": 202.693,
+     "end": 203.054,
+     "conf": 0.873
+    },
+    {
+     "w": "straight",
+     "start": 203.154,
+     "end": 203.395,
+     "conf": 0.842
+    },
+    {
+     "w": "up",
+     "start": 203.455,
+     "end": 203.555,
+     "conf": 0.525
+    },
+    {
+     "w": "off",
+     "start": 203.756,
+     "end": 203.836,
+     "conf": 0.957
+    },
+    {
+     "w": "the",
+     "start": 203.856,
+     "end": 203.956,
+     "conf": 0.602
+    },
+    {
+     "w": "line",
+     "start": 204.016,
+     "end": 204.257,
+     "conf": 0.883
+    }
+   ]
+  },
+  {
+   "section": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "There's your move. A quarter turn, done twice, is a half turn, and a half turn is multiplying by minus one.",
+   "idea": false,
+   "start": 205.247,
+   "end": 210.235,
+   "words": [
+    {
+     "w": "there's",
+     "start": 205.247,
+     "end": 205.387,
+     "conf": 0.012
+    },
+    {
+     "w": "your",
+     "start": 205.407,
+     "end": 205.527,
+     "conf": 0.859
+    },
+    {
+     "w": "move",
+     "start": 205.568,
+     "end": 205.808,
+     "conf": 0.773
+    },
+    {
+     "w": "a",
+     "start": 206.249,
+     "end": 206.269,
+     "conf": 0.001
+    },
+    {
+     "w": "quarter",
+     "start": 206.289,
+     "end": 206.569,
+     "conf": 0.872
+    },
+    {
+     "w": "turn",
+     "start": 206.589,
+     "end": 206.87,
+     "conf": 0.967
+    },
+    {
+     "w": "done",
+     "start": 207.03,
+     "end": 207.17,
+     "conf": 0.689
+    },
+    {
+     "w": "twice",
+     "start": 207.25,
+     "end": 207.551,
+     "conf": 0.797
+    },
+    {
+     "w": "is",
+     "start": 207.611,
+     "end": 207.651,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 207.671,
+     "end": 207.691,
+     "conf": 0.988
+    },
+    {
+     "w": "half",
+     "start": 207.771,
+     "end": 207.931,
+     "conf": 0.594
+    },
+    {
+     "w": "turn",
+     "start": 208.011,
+     "end": 208.252,
+     "conf": 0.77
+    },
+    {
+     "w": "and",
+     "start": 208.532,
+     "end": 208.592,
+     "conf": 0.338
+    },
+    {
+     "w": "a",
+     "start": 208.612,
+     "end": 208.632,
+     "conf": 0.019
+    },
+    {
+     "w": "half",
+     "start": 208.652,
+     "end": 208.813,
+     "conf": 0.876
+    },
+    {
+     "w": "turn",
+     "start": 208.893,
+     "end": 209.013,
+     "conf": 0.718
+    },
+    {
+     "w": "is",
+     "start": 209.053,
+     "end": 209.093,
+     "conf": 0.499
+    },
+    {
+     "w": "multiplying",
+     "start": 209.153,
+     "end": 209.574,
+     "conf": 0.612
+    },
+    {
+     "w": "by",
+     "start": 209.614,
+     "end": 209.694,
+     "conf": 0.997
+    },
+    {
+     "w": "minus",
+     "start": 209.754,
+     "end": 209.974,
+     "conf": 0.709
+    },
+    {
+     "w": "one",
+     "start": 210.115,
+     "end": 210.235,
+     "conf": 0.641
+    }
+   ]
+  },
+  {
+   "section": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "So the square root of minus one isn't a mysterious quantity. It's a quarter turn. And the point one step straight up from zero is what we call i.",
+   "idea": true,
+   "start": 210.645,
+   "end": 217.975,
+   "words": [
+    {
+     "w": "so",
+     "start": 210.645,
+     "end": 210.685,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 210.745,
+     "end": 210.805,
+     "conf": 0.997
+    },
+    {
+     "w": "square",
+     "start": 210.825,
+     "end": 211.066,
+     "conf": 0.632
+    },
+    {
+     "w": "root",
+     "start": 211.086,
+     "end": 211.206,
+     "conf": 0.819
+    },
+    {
+     "w": "of",
+     "start": 211.226,
+     "end": 211.286,
+     "conf": 0.996
+    },
+    {
+     "w": "minus",
+     "start": 211.346,
+     "end": 211.626,
+     "conf": 0.726
+    },
+    {
+     "w": "one",
+     "start": 211.807,
+     "end": 211.987,
+     "conf": 0.495
+    },
+    {
+     "w": "isn't",
+     "start": 212.267,
+     "end": 212.468,
+     "conf": 0.904
+    },
+    {
+     "w": "a",
+     "start": 212.548,
+     "end": 212.568,
+     "conf": 0.003
+    },
+    {
+     "w": "mysterious",
+     "start": 212.588,
+     "end": 213.109,
+     "conf": 0.858
+    },
+    {
+     "w": "quantity",
+     "start": 213.169,
+     "end": 213.549,
+     "conf": 0.835
+    },
+    {
+     "w": "it's",
+     "start": 213.93,
+     "end": 214.03,
+     "conf": 0.548
+    },
+    {
+     "w": "a",
+     "start": 214.05,
+     "end": 214.07,
+     "conf": 0.995
+    },
+    {
+     "w": "quarter",
+     "start": 214.09,
+     "end": 214.41,
+     "conf": 0.764
+    },
+    {
+     "w": "turn",
+     "start": 214.43,
+     "end": 214.671,
+     "conf": 0.994
+    },
+    {
+     "w": "and",
+     "start": 214.691,
+     "end": 214.991,
+     "conf": 0.664
+    },
+    {
+     "w": "the",
+     "start": 215.011,
+     "end": 215.071,
+     "conf": 0.994
+    },
+    {
+     "w": "point",
+     "start": 215.091,
+     "end": 215.292,
+     "conf": 0.999
+    },
+    {
+     "w": "one",
+     "start": 215.452,
+     "end": 215.532,
+     "conf": 0.665
+    },
+    {
+     "w": "step",
+     "start": 215.612,
+     "end": 215.792,
+     "conf": 0.75
+    },
+    {
+     "w": "straight",
+     "start": 215.812,
+     "end": 216.093,
+     "conf": 0.558
+    },
+    {
+     "w": "up",
+     "start": 216.153,
+     "end": 216.213,
+     "conf": 0.725
+    },
+    {
+     "w": "from",
+     "start": 216.273,
+     "end": 216.373,
+     "conf": 0.75
+    },
+    {
+     "w": "zero",
+     "start": 216.453,
+     "end": 216.714,
+     "conf": 0.638
+    },
+    {
+     "w": "is",
+     "start": 217.134,
+     "end": 217.194,
+     "conf": 0.499
+    },
+    {
+     "w": "what",
+     "start": 217.214,
+     "end": 217.315,
+     "conf": 0.997
+    },
+    {
+     "w": "we",
+     "start": 217.335,
+     "end": 217.395,
+     "conf": 0.996
+    },
+    {
+     "w": "call",
+     "start": 217.475,
+     "end": 217.635,
+     "conf": 0.694
+    },
+    {
+     "w": "i",
+     "start": 217.955,
+     "end": 217.975,
+     "conf": 0.001
+    }
+   ]
+  },
+  {
+   "section": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "Now we can answer the opening question properly. Walk along the line from one to minus one, and halfway is zero.",
+   "idea": false,
+   "start": 218.965,
+   "end": 224.43,
+   "words": [
+    {
+     "w": "now",
+     "start": 218.965,
+     "end": 219.105,
+     "conf": 0.904
+    },
+    {
+     "w": "we",
+     "start": 219.125,
+     "end": 219.185,
+     "conf": 0.653
+    },
+    {
+     "w": "can",
+     "start": 219.245,
+     "end": 219.325,
+     "conf": 0.69
+    },
+    {
+     "w": "answer",
+     "start": 219.365,
+     "end": 219.566,
+     "conf": 0.7
+    },
+    {
+     "w": "the",
+     "start": 219.586,
+     "end": 219.646,
+     "conf": 0.996
+    },
+    {
+     "w": "opening",
+     "start": 219.706,
+     "end": 219.926,
+     "conf": 0.858
+    },
+    {
+     "w": "question",
+     "start": 219.946,
+     "end": 220.266,
+     "conf": 0.998
+    },
+    {
+     "w": "properly",
+     "start": 220.326,
+     "end": 220.627,
+     "conf": 0.858
+    },
+    {
+     "w": "walk",
+     "start": 221.127,
+     "end": 221.287,
+     "conf": 0.722
+    },
+    {
+     "w": "along",
+     "start": 221.347,
+     "end": 221.527,
+     "conf": 0.804
+    },
+    {
+     "w": "the",
+     "start": 221.548,
+     "end": 221.628,
+     "conf": 0.771
+    },
+    {
+     "w": "line",
+     "start": 221.648,
+     "end": 221.908,
+     "conf": 0.829
+    },
+    {
+     "w": "from",
+     "start": 221.968,
+     "end": 222.088,
+     "conf": 0.748
+    },
+    {
+     "w": "one",
+     "start": 222.268,
+     "end": 222.348,
+     "conf": 0.64
+    },
+    {
+     "w": "to",
+     "start": 222.448,
+     "end": 222.508,
+     "conf": 0.45
+    },
+    {
+     "w": "minus",
+     "start": 222.589,
+     "end": 222.849,
+     "conf": 0.707
+    },
+    {
+     "w": "one",
+     "start": 222.989,
+     "end": 223.049,
+     "conf": 0.27
+    },
+    {
+     "w": "and",
+     "start": 223.389,
+     "end": 223.469,
+     "conf": 0.66
+    },
+    {
+     "w": "halfway",
+     "start": 223.549,
+     "end": 223.93,
+     "conf": 0.848
+    },
+    {
+     "w": "is",
+     "start": 224.05,
+     "end": 224.13,
+     "conf": 0.451
+    },
+    {
+     "w": "zero",
+     "start": 224.19,
+     "end": 224.43,
+     "conf": 0.544
+    }
+   ]
+  },
+  {
+   "section": "Leaving the line",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "Turn from one to minus one, and halfway is i. Turn the other way around, and halfway is minus i.",
+   "idea": true,
+   "start": 224.881,
+   "end": 229.54,
+   "words": [
+    {
+     "w": "turn",
+     "start": 224.881,
+     "end": 225.042,
+     "conf": 0.908
+    },
+    {
+     "w": "from",
+     "start": 225.082,
+     "end": 225.182,
+     "conf": 0.759
+    },
+    {
+     "w": "one",
+     "start": 225.283,
+     "end": 225.363,
+     "conf": 0.664
+    },
+    {
+     "w": "to",
+     "start": 225.383,
+     "end": 225.443,
+     "conf": 0.994
+    },
+    {
+     "w": "minus",
+     "start": 225.504,
+     "end": 225.805,
+     "conf": 0.693
+    },
+    {
+     "w": "one",
+     "start": 225.905,
+     "end": 226.046,
+     "conf": 0.679
+    },
+    {
+     "w": "and",
+     "start": 226.186,
+     "end": 226.247,
+     "conf": 0.619
+    },
+    {
+     "w": "halfway",
+     "start": 226.307,
+     "end": 226.628,
+     "conf": 0.893
+    },
+    {
+     "w": "is",
+     "start": 226.648,
+     "end": 226.729,
+     "conf": 0.776
+    },
+    {
+     "w": "i",
+     "start": 226.949,
+     "end": 226.969,
+     "conf": 0.0
+    },
+    {
+     "w": "turn",
+     "start": 227.411,
+     "end": 227.552,
+     "conf": 0.69
+    },
+    {
+     "w": "the",
+     "start": 227.572,
+     "end": 227.632,
+     "conf": 0.994
+    },
+    {
+     "w": "other",
+     "start": 227.692,
+     "end": 227.813,
+     "conf": 0.432
+    },
+    {
+     "w": "way",
+     "start": 227.833,
+     "end": 227.913,
+     "conf": 0.666
+    },
+    {
+     "w": "around",
+     "start": 227.933,
+     "end": 228.255,
+     "conf": 0.983
+    },
+    {
+     "w": "and",
+     "start": 228.355,
+     "end": 228.415,
+     "conf": 0.612
+    },
+    {
+     "w": "halfway",
+     "start": 228.435,
+     "end": 228.797,
+     "conf": 0.908
+    },
+    {
+     "w": "is",
+     "start": 228.897,
+     "end": 228.937,
+     "conf": 0.496
+    },
+    {
+     "w": "minus",
+     "start": 229.038,
+     "end": 229.339,
+     "conf": 0.7
+    },
+    {
+     "w": "i",
+     "start": 229.52,
+     "end": 229.54,
+     "conf": 0.001
+    }
+   ]
+  },
+  {
+   "section": "Four turns and home",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "Keep multiplying by i, and you simply keep turning.",
+   "idea": false,
+   "start": 231.18,
+   "end": 233.539,
+   "words": [
+    {
+     "w": "keep",
+     "start": 231.18,
+     "end": 231.301,
+     "conf": 0.771
+    },
+    {
+     "w": "multiplying",
+     "start": 231.341,
+     "end": 231.906,
+     "conf": 0.998
+    },
+    {
+     "w": "by",
+     "start": 231.966,
+     "end": 232.087,
+     "conf": 0.494
+    },
+    {
+     "w": "i",
+     "start": 232.39,
+     "end": 232.41,
+     "conf": 0.572
+    },
+    {
+     "w": "and",
+     "start": 232.591,
+     "end": 232.672,
+     "conf": 0.985
+    },
+    {
+     "w": "you",
+     "start": 232.692,
+     "end": 232.773,
+     "conf": 0.988
+    },
+    {
+     "w": "simply",
+     "start": 232.813,
+     "end": 233.035,
+     "conf": 0.827
+    },
+    {
+     "w": "keep",
+     "start": 233.075,
+     "end": 233.216,
+     "conf": 0.772
+    },
+    {
+     "w": "turning",
+     "start": 233.277,
+     "end": 233.539,
+     "conf": 0.721
+    }
+   ]
+  },
+  {
+   "section": "Four turns and home",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "One, then i, then minus one, then minus i, then back to one. Four quarter turns, a full circle.",
+   "idea": false,
+   "start": 233.989,
+   "end": 238.624,
+   "words": [
+    {
+     "w": "one",
+     "start": 233.989,
+     "end": 234.049,
+     "conf": 0.112
+    },
+    {
+     "w": "then",
+     "start": 234.07,
+     "end": 234.19,
+     "conf": 0.625
+    },
+    {
+     "w": "i",
+     "start": 234.451,
+     "end": 234.471,
+     "conf": 0.0
+    },
+    {
+     "w": "then",
+     "start": 234.491,
+     "end": 234.852,
+     "conf": 0.575
+    },
+    {
+     "w": "minus",
+     "start": 234.932,
+     "end": 235.193,
+     "conf": 0.77
+    },
+    {
+     "w": "one",
+     "start": 235.334,
+     "end": 235.474,
+     "conf": 0.653
+    },
+    {
+     "w": "then",
+     "start": 235.494,
+     "end": 235.615,
+     "conf": 0.733
+    },
+    {
+     "w": "minus",
+     "start": 235.675,
+     "end": 235.936,
+     "conf": 0.745
+    },
+    {
+     "w": "i",
+     "start": 236.136,
+     "end": 236.156,
+     "conf": 0.001
+    },
+    {
+     "w": "then",
+     "start": 236.176,
+     "end": 236.297,
+     "conf": 0.798
+    },
+    {
+     "w": "back",
+     "start": 236.377,
+     "end": 236.497,
+     "conf": 0.749
+    },
+    {
+     "w": "to",
+     "start": 236.518,
+     "end": 236.598,
+     "conf": 0.663
+    },
+    {
+     "w": "one",
+     "start": 236.718,
+     "end": 236.839,
+     "conf": 0.663
+    },
+    {
+     "w": "four",
+     "start": 237.019,
+     "end": 237.16,
+     "conf": 0.678
+    },
+    {
+     "w": "quarter",
+     "start": 237.2,
+     "end": 237.501,
+     "conf": 0.797
+    },
+    {
+     "w": "turns",
+     "start": 237.561,
+     "end": 237.922,
+     "conf": 0.76
+    },
+    {
+     "w": "a",
+     "start": 237.942,
+     "end": 237.962,
+     "conf": 0.986
+    },
+    {
+     "w": "full",
+     "start": 238.042,
+     "end": 238.203,
+     "conf": 0.988
+    },
+    {
+     "w": "circle",
+     "start": 238.303,
+     "end": 238.624,
+     "conf": 0.791
+    }
+   ]
+  },
+  {
+   "section": "Four turns and home",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "So a question that looks terrifying, like i to the power of one hundred, is easy. One hundred is twenty-five full circles, and you end exactly where you began: one.",
+   "idea": true,
+   "start": 239.014,
+   "end": 247.175,
+   "words": [
+    {
+     "w": "so",
+     "start": 239.014,
+     "end": 239.054,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 239.134,
+     "end": 239.154,
+     "conf": 0.997
+    },
+    {
+     "w": "question",
+     "start": 239.174,
+     "end": 239.455,
+     "conf": 0.89
+    },
+    {
+     "w": "that",
+     "start": 239.475,
+     "end": 239.555,
+     "conf": 0.184
+    },
+    {
+     "w": "looks",
+     "start": 239.575,
+     "end": 239.716,
+     "conf": 0.997
+    },
+    {
+     "w": "terrifying",
+     "start": 239.736,
+     "end": 240.257,
+     "conf": 0.99
+    },
+    {
+     "w": "like",
+     "start": 240.478,
+     "end": 240.638,
+     "conf": 0.774
+    },
+    {
+     "w": "i",
+     "start": 240.779,
+     "end": 240.799,
+     "conf": 0.0
+    },
+    {
+     "w": "to",
+     "start": 240.819,
+     "end": 240.879,
+     "conf": 0.989
+    },
+    {
+     "w": "the",
+     "start": 240.899,
+     "end": 240.999,
+     "conf": 0.779
+    },
+    {
+     "w": "power",
+     "start": 241.039,
+     "end": 241.28,
+     "conf": 0.799
+    },
+    {
+     "w": "of",
+     "start": 241.3,
+     "end": 241.38,
+     "conf": 0.656
+    },
+    {
+     "w": "one",
+     "start": 241.5,
+     "end": 241.581,
+     "conf": 0.424
+    },
+    {
+     "w": "hundred",
+     "start": 241.681,
+     "end": 242.062,
+     "conf": 0.509
+    },
+    {
+     "w": "is",
+     "start": 242.202,
+     "end": 242.262,
+     "conf": 0.498
+    },
+    {
+     "w": "easy",
+     "start": 242.363,
+     "end": 242.563,
+     "conf": 0.75
+    },
+    {
+     "w": "one",
+     "start": 242.583,
+     "end": 243.245,
+     "conf": 0.065
+    },
+    {
+     "w": "hundred",
+     "start": 243.265,
+     "end": 243.546,
+     "conf": 0.038
+    },
+    {
+     "w": "is",
+     "start": 243.606,
+     "end": 243.666,
+     "conf": 0.485
+    },
+    {
+     "w": "twenty-five",
+     "start": 243.686,
+     "end": 244.307,
+     "conf": 0.05
+    },
+    {
+     "w": "full",
+     "start": 244.328,
+     "end": 244.508,
+     "conf": 0.818
+    },
+    {
+     "w": "circles",
+     "start": 244.588,
+     "end": 245.009,
+     "conf": 0.824
+    },
+    {
+     "w": "and",
+     "start": 245.029,
+     "end": 245.33,
+     "conf": 0.0
+    },
+    {
+     "w": "you",
+     "start": 245.35,
+     "end": 245.43,
+     "conf": 0.807
+    },
+    {
+     "w": "end",
+     "start": 245.45,
+     "end": 245.531,
+     "conf": 0.674
+    },
+    {
+     "w": "exactly",
+     "start": 245.551,
+     "end": 245.912,
+     "conf": 0.874
+    },
+    {
+     "w": "where",
+     "start": 245.932,
+     "end": 246.052,
+     "conf": 0.69
+    },
+    {
+     "w": "you",
+     "start": 246.072,
+     "end": 246.152,
+     "conf": 0.946
+    },
+    {
+     "w": "began",
+     "start": 246.172,
+     "end": 246.473,
+     "conf": 0.808
+    },
+    {
+     "w": "one",
+     "start": 246.493,
+     "end": 247.175,
+     "conf": 0.069
+    }
+   ]
+  },
+  {
+   "section": "Four turns and home",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "The name imaginary makes this sound more mysterious than it is.",
+   "idea": false,
+   "start": 248.205,
+   "end": 250.946,
+   "words": [
+    {
+     "w": "the",
+     "start": 248.205,
+     "end": 248.266,
+     "conf": 0.007
+    },
+    {
+     "w": "name",
+     "start": 248.286,
+     "end": 248.427,
+     "conf": 0.744
+    },
+    {
+     "w": "imaginary",
+     "start": 248.467,
+     "end": 248.971,
+     "conf": 0.887
+    },
+    {
+     "w": "makes",
+     "start": 249.031,
+     "end": 249.233,
+     "conf": 0.794
+    },
+    {
+     "w": "this",
+     "start": 249.253,
+     "end": 249.374,
+     "conf": 0.977
+    },
+    {
+     "w": "sound",
+     "start": 249.455,
+     "end": 249.676,
+     "conf": 0.823
+    },
+    {
+     "w": "more",
+     "start": 249.737,
+     "end": 249.837,
+     "conf": 0.423
+    },
+    {
+     "w": "mysterious",
+     "start": 249.858,
+     "end": 250.462,
+     "conf": 0.898
+    },
+    {
+     "w": "than",
+     "start": 250.482,
+     "end": 250.603,
+     "conf": 0.826
+    },
+    {
+     "w": "it",
+     "start": 250.623,
+     "end": 250.684,
+     "conf": 0.931
+    },
+    {
+     "w": "is",
+     "start": 250.905,
+     "end": 250.946,
+     "conf": 0.487
+    }
+   ]
+  },
+  {
+   "section": "Four turns and home",
+   "act": "ACT THREE — A direction nobody had looked in",
+   "text": "Minus one isn't something you can hold in your hand either. It's a direction on a line. And i is just one more direction, the one we weren't looking in.",
+   "idea": true,
+   "start": 251.416,
+   "end": 258.974,
+   "words": [
+    {
+     "w": "minus",
+     "start": 251.416,
+     "end": 251.697,
+     "conf": 0.649
+    },
+    {
+     "w": "one",
+     "start": 251.777,
+     "end": 251.937,
+     "conf": 0.999
+    },
+    {
+     "w": "isn't",
+     "start": 252.078,
+     "end": 252.238,
+     "conf": 0.709
+    },
+    {
+     "w": "something",
+     "start": 252.258,
+     "end": 252.539,
+     "conf": 0.915
+    },
+    {
+     "w": "you",
+     "start": 252.559,
+     "end": 252.619,
+     "conf": 0.999
+    },
+    {
+     "w": "can",
+     "start": 252.639,
+     "end": 252.739,
+     "conf": 0.999
+    },
+    {
+     "w": "hold",
+     "start": 252.779,
+     "end": 252.94,
+     "conf": 0.96
+    },
+    {
+     "w": "in",
+     "start": 252.96,
+     "end": 253.02,
+     "conf": 0.998
+    },
+    {
+     "w": "your",
+     "start": 253.04,
+     "end": 253.14,
+     "conf": 0.927
+    },
+    {
+     "w": "hand",
+     "start": 253.2,
+     "end": 253.401,
+     "conf": 0.938
+    },
+    {
+     "w": "either",
+     "start": 253.421,
+     "end": 253.721,
+     "conf": 0.833
+    },
+    {
+     "w": "it's",
+     "start": 254.223,
+     "end": 254.343,
+     "conf": 0.791
+    },
+    {
+     "w": "a",
+     "start": 254.363,
+     "end": 254.383,
+     "conf": 0.997
+    },
+    {
+     "w": "direction",
+     "start": 254.463,
+     "end": 254.844,
+     "conf": 0.903
+    },
+    {
+     "w": "on",
+     "start": 254.884,
+     "end": 254.924,
+     "conf": 0.506
+    },
+    {
+     "w": "a",
+     "start": 254.984,
+     "end": 255.004,
+     "conf": 0.001
+    },
+    {
+     "w": "line",
+     "start": 255.024,
+     "end": 255.325,
+     "conf": 0.807
+    },
+    {
+     "w": "and",
+     "start": 255.686,
+     "end": 255.806,
+     "conf": 0.876
+    },
+    {
+     "w": "i",
+     "start": 256.207,
+     "end": 256.227,
+     "conf": 0.999
+    },
+    {
+     "w": "is",
+     "start": 256.247,
+     "end": 256.287,
+     "conf": 0.499
+    },
+    {
+     "w": "just",
+     "start": 256.307,
+     "end": 256.468,
+     "conf": 0.995
+    },
+    {
+     "w": "one",
+     "start": 256.608,
+     "end": 256.708,
+     "conf": 0.666
+    },
+    {
+     "w": "more",
+     "start": 256.789,
+     "end": 256.929,
+     "conf": 0.37
+    },
+    {
+     "w": "direction",
+     "start": 256.949,
+     "end": 257.39,
+     "conf": 0.854
+    },
+    {
+     "w": "the",
+     "start": 257.41,
+     "end": 257.931,
+     "conf": 0.664
+    },
+    {
+     "w": "one",
+     "start": 258.072,
+     "end": 258.152,
+     "conf": 0.666
+    },
+    {
+     "w": "we",
+     "start": 258.172,
+     "end": 258.252,
+     "conf": 0.995
+    },
+    {
+     "w": "weren't",
+     "start": 258.332,
+     "end": 258.513,
+     "conf": 0.545
+    },
+    {
+     "w": "looking",
+     "start": 258.573,
+     "end": 258.833,
+     "conf": 0.816
+    },
+    {
+     "w": "in",
+     "start": 258.893,
+     "end": 258.974,
+     "conf": 0.499
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "Once there's a direction up, every point on the page becomes a number.",
+   "idea": false,
+   "start": 261.494,
+   "end": 264.649,
+   "words": [
+    {
+     "w": "once",
+     "start": 261.494,
+     "end": 261.635,
+     "conf": 0.964
+    },
+    {
+     "w": "there's",
+     "start": 261.655,
+     "end": 261.816,
+     "conf": 0.818
+    },
+    {
+     "w": "a",
+     "start": 261.836,
+     "end": 261.856,
+     "conf": 0.997
+    },
+    {
+     "w": "direction",
+     "start": 261.916,
+     "end": 262.338,
+     "conf": 0.888
+    },
+    {
+     "w": "up",
+     "start": 262.399,
+     "end": 262.499,
+     "conf": 0.506
+    },
+    {
+     "w": "every",
+     "start": 263.001,
+     "end": 263.162,
+     "conf": 0.831
+    },
+    {
+     "w": "point",
+     "start": 263.243,
+     "end": 263.464,
+     "conf": 0.8
+    },
+    {
+     "w": "on",
+     "start": 263.524,
+     "end": 263.564,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 263.584,
+     "end": 263.665,
+     "conf": 0.973
+    },
+    {
+     "w": "page",
+     "start": 263.705,
+     "end": 263.946,
+     "conf": 0.75
+    },
+    {
+     "w": "becomes",
+     "start": 263.966,
+     "end": 264.267,
+     "conf": 0.998
+    },
+    {
+     "w": "a",
+     "start": 264.287,
+     "end": 264.308,
+     "conf": 0.997
+    },
+    {
+     "w": "number",
+     "start": 264.368,
+     "end": 264.649,
+     "conf": 0.997
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "Three to the right and two up is three plus two i. We call these complex numbers, and complex here means built from parts, not difficult.",
+   "idea": true,
+   "start": 265.059,
+   "end": 271.943,
+   "words": [
+    {
+     "w": "three",
+     "start": 265.059,
+     "end": 265.26,
+     "conf": 0.557
+    },
+    {
+     "w": "to",
+     "start": 265.28,
+     "end": 265.36,
+     "conf": 0.979
+    },
+    {
+     "w": "the",
+     "start": 265.38,
+     "end": 265.46,
+     "conf": 0.909
+    },
+    {
+     "w": "right",
+     "start": 265.521,
+     "end": 265.741,
+     "conf": 0.933
+    },
+    {
+     "w": "and",
+     "start": 265.782,
+     "end": 265.862,
+     "conf": 0.914
+    },
+    {
+     "w": "two",
+     "start": 265.922,
+     "end": 266.063,
+     "conf": 0.563
+    },
+    {
+     "w": "up",
+     "start": 266.123,
+     "end": 266.203,
+     "conf": 0.5
+    },
+    {
+     "w": "is",
+     "start": 266.283,
+     "end": 266.343,
+     "conf": 0.491
+    },
+    {
+     "w": "three",
+     "start": 266.364,
+     "end": 266.604,
+     "conf": 0.044
+    },
+    {
+     "w": "plus",
+     "start": 266.624,
+     "end": 266.865,
+     "conf": 0.086
+    },
+    {
+     "w": "two",
+     "start": 266.885,
+     "end": 267.086,
+     "conf": 0.048
+    },
+    {
+     "w": "i",
+     "start": 267.307,
+     "end": 267.327,
+     "conf": 0.001
+    },
+    {
+     "w": "we",
+     "start": 267.768,
+     "end": 267.808,
+     "conf": 0.5
+    },
+    {
+     "w": "call",
+     "start": 267.889,
+     "end": 268.049,
+     "conf": 0.75
+    },
+    {
+     "w": "these",
+     "start": 268.069,
+     "end": 268.25,
+     "conf": 0.999
+    },
+    {
+     "w": "complex",
+     "start": 268.31,
+     "end": 268.631,
+     "conf": 0.853
+    },
+    {
+     "w": "numbers",
+     "start": 268.772,
+     "end": 269.093,
+     "conf": 0.86
+    },
+    {
+     "w": "and",
+     "start": 269.334,
+     "end": 269.394,
+     "conf": 0.66
+    },
+    {
+     "w": "complex",
+     "start": 269.414,
+     "end": 269.795,
+     "conf": 0.876
+    },
+    {
+     "w": "here",
+     "start": 269.896,
+     "end": 270.036,
+     "conf": 0.937
+    },
+    {
+     "w": "means",
+     "start": 270.056,
+     "end": 270.297,
+     "conf": 0.834
+    },
+    {
+     "w": "built",
+     "start": 270.397,
+     "end": 270.578,
+     "conf": 0.772
+    },
+    {
+     "w": "from",
+     "start": 270.658,
+     "end": 270.779,
+     "conf": 0.747
+    },
+    {
+     "w": "parts",
+     "start": 270.859,
+     "end": 271.22,
+     "conf": 0.455
+    },
+    {
+     "w": "not",
+     "start": 271.401,
+     "end": 271.501,
+     "conf": 0.997
+    },
+    {
+     "w": "difficult",
+     "start": 271.561,
+     "end": 271.943,
+     "conf": 0.857
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "Now test the idea. Multiply three plus two i by i, using plain algebra.",
+   "idea": false,
+   "start": 272.953,
+   "end": 276.305,
+   "words": [
+    {
+     "w": "now",
+     "start": 272.953,
+     "end": 273.033,
+     "conf": 0.994
+    },
+    {
+     "w": "test",
+     "start": 273.094,
+     "end": 273.294,
+     "conf": 0.974
+    },
+    {
+     "w": "the",
+     "start": 273.314,
+     "end": 273.395,
+     "conf": 0.96
+    },
+    {
+     "w": "idea",
+     "start": 273.495,
+     "end": 273.635,
+     "conf": 0.747
+    },
+    {
+     "w": "multiply",
+     "start": 273.716,
+     "end": 274.077,
+     "conf": 0.946
+    },
+    {
+     "w": "three",
+     "start": 274.117,
+     "end": 274.298,
+     "conf": 0.009
+    },
+    {
+     "w": "plus",
+     "start": 274.338,
+     "end": 274.518,
+     "conf": 0.086
+    },
+    {
+     "w": "two",
+     "start": 274.539,
+     "end": 274.699,
+     "conf": 0.006
+    },
+    {
+     "w": "i",
+     "start": 274.719,
+     "end": 274.739,
+     "conf": 0.0
+    },
+    {
+     "w": "by",
+     "start": 274.759,
+     "end": 275.0,
+     "conf": 0.128
+    },
+    {
+     "w": "i",
+     "start": 275.181,
+     "end": 275.201,
+     "conf": 0.545
+    },
+    {
+     "w": "using",
+     "start": 275.442,
+     "end": 275.662,
+     "conf": 0.801
+    },
+    {
+     "w": "plain",
+     "start": 275.723,
+     "end": 275.923,
+     "conf": 0.706
+    },
+    {
+     "w": "algebra",
+     "start": 276.004,
+     "end": 276.305,
+     "conf": 0.7
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "Three times i is three i. Two i times i is two i squared, which is minus two.",
+   "idea": false,
+   "start": 276.715,
+   "end": 280.352,
+   "words": [
+    {
+     "w": "three",
+     "start": 276.715,
+     "end": 276.856,
+     "conf": 0.883
+    },
+    {
+     "w": "times",
+     "start": 276.916,
+     "end": 277.177,
+     "conf": 0.787
+    },
+    {
+     "w": "i",
+     "start": 277.318,
+     "end": 277.338,
+     "conf": 0.002
+    },
+    {
+     "w": "is",
+     "start": 277.358,
+     "end": 277.459,
+     "conf": 0.495
+    },
+    {
+     "w": "three",
+     "start": 277.479,
+     "end": 277.7,
+     "conf": 0.568
+    },
+    {
+     "w": "i",
+     "start": 277.881,
+     "end": 277.901,
+     "conf": 0.023
+    },
+    {
+     "w": "two",
+     "start": 278.001,
+     "end": 278.122,
+     "conf": 0.369
+    },
+    {
+     "w": "i",
+     "start": 278.323,
+     "end": 278.343,
+     "conf": 0.003
+    },
+    {
+     "w": "times",
+     "start": 278.363,
+     "end": 278.564,
+     "conf": 0.833
+    },
+    {
+     "w": "i",
+     "start": 278.644,
+     "end": 278.664,
+     "conf": 0.268
+    },
+    {
+     "w": "is",
+     "start": 278.684,
+     "end": 278.725,
+     "conf": 0.47
+    },
+    {
+     "w": "two",
+     "start": 278.825,
+     "end": 278.966,
+     "conf": 0.409
+    },
+    {
+     "w": "i",
+     "start": 279.147,
+     "end": 279.167,
+     "conf": 0.002
+    },
+    {
+     "w": "squared",
+     "start": 279.187,
+     "end": 279.528,
+     "conf": 0.669
+    },
+    {
+     "w": "which",
+     "start": 279.548,
+     "end": 279.689,
+     "conf": 0.862
+    },
+    {
+     "w": "is",
+     "start": 279.749,
+     "end": 279.79,
+     "conf": 0.478
+    },
+    {
+     "w": "minus",
+     "start": 279.87,
+     "end": 280.151,
+     "conf": 0.613
+    },
+    {
+     "w": "two",
+     "start": 280.252,
+     "end": 280.352,
+     "conf": 0.126
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "You get minus two plus three i. Now look where that point landed.",
+   "idea": false,
+   "start": 280.762,
+   "end": 283.805,
+   "words": [
+    {
+     "w": "you",
+     "start": 280.762,
+     "end": 280.823,
+     "conf": 0.998
+    },
+    {
+     "w": "get",
+     "start": 280.843,
+     "end": 280.964,
+     "conf": 1.0
+    },
+    {
+     "w": "minus",
+     "start": 281.044,
+     "end": 281.326,
+     "conf": 0.772
+    },
+    {
+     "w": "two",
+     "start": 281.347,
+     "end": 281.548,
+     "conf": 0.0
+    },
+    {
+     "w": "plus",
+     "start": 281.568,
+     "end": 281.79,
+     "conf": 0.017
+    },
+    {
+     "w": "three",
+     "start": 281.83,
+     "end": 282.294,
+     "conf": 0.064
+    },
+    {
+     "w": "i",
+     "start": 282.314,
+     "end": 282.334,
+     "conf": 0.001
+    },
+    {
+     "w": "now",
+     "start": 282.576,
+     "end": 282.697,
+     "conf": 0.983
+    },
+    {
+     "w": "look",
+     "start": 282.777,
+     "end": 282.919,
+     "conf": 0.793
+    },
+    {
+     "w": "where",
+     "start": 282.939,
+     "end": 283.08,
+     "conf": 0.342
+    },
+    {
+     "w": "that",
+     "start": 283.1,
+     "end": 283.241,
+     "conf": 0.974
+    },
+    {
+     "w": "point",
+     "start": 283.301,
+     "end": 283.503,
+     "conf": 0.799
+    },
+    {
+     "w": "landed",
+     "start": 283.523,
+     "end": 283.805,
+     "conf": 0.956
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "It's the same arrow, the same length, rotated exactly a quarter turn. Algebra did geometry without being told to.",
+   "idea": true,
+   "start": 284.195,
+   "end": 289.948,
+   "words": [
+    {
+     "w": "it's",
+     "start": 284.195,
+     "end": 284.275,
+     "conf": 0.483
+    },
+    {
+     "w": "the",
+     "start": 284.295,
+     "end": 284.395,
+     "conf": 0.786
+    },
+    {
+     "w": "same",
+     "start": 284.456,
+     "end": 284.616,
+     "conf": 0.793
+    },
+    {
+     "w": "arrow",
+     "start": 284.676,
+     "end": 284.836,
+     "conf": 0.565
+    },
+    {
+     "w": "the",
+     "start": 285.137,
+     "end": 285.217,
+     "conf": 0.995
+    },
+    {
+     "w": "same",
+     "start": 285.277,
+     "end": 285.478,
+     "conf": 0.997
+    },
+    {
+     "w": "length",
+     "start": 285.518,
+     "end": 285.758,
+     "conf": 0.804
+    },
+    {
+     "w": "rotated",
+     "start": 286.039,
+     "end": 286.5,
+     "conf": 0.999
+    },
+    {
+     "w": "exactly",
+     "start": 286.52,
+     "end": 286.881,
+     "conf": 0.874
+    },
+    {
+     "w": "a",
+     "start": 286.941,
+     "end": 286.961,
+     "conf": 0.014
+    },
+    {
+     "w": "quarter",
+     "start": 286.981,
+     "end": 287.302,
+     "conf": 0.75
+    },
+    {
+     "w": "turn",
+     "start": 287.342,
+     "end": 287.562,
+     "conf": 0.759
+    },
+    {
+     "w": "algebra",
+     "start": 287.963,
+     "end": 288.304,
+     "conf": 0.86
+    },
+    {
+     "w": "did",
+     "start": 288.464,
+     "end": 288.625,
+     "conf": 0.999
+    },
+    {
+     "w": "geometry",
+     "start": 288.705,
+     "end": 289.106,
+     "conf": 0.876
+    },
+    {
+     "w": "without",
+     "start": 289.126,
+     "end": 289.387,
+     "conf": 0.85
+    },
+    {
+     "w": "being",
+     "start": 289.407,
+     "end": 289.587,
+     "conf": 0.999
+    },
+    {
+     "w": "told",
+     "start": 289.607,
+     "end": 289.827,
+     "conf": 0.989
+    },
+    {
+     "w": "to",
+     "start": 289.848,
+     "end": 289.948,
+     "conf": 0.611
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "And it works for every complex number, not only i. Each one is an arrow with a length and an angle.",
+   "idea": false,
+   "start": 290.978,
+   "end": 295.766,
+   "words": [
+    {
+     "w": "and",
+     "start": 290.978,
+     "end": 291.038,
+     "conf": 0.998
+    },
+    {
+     "w": "it",
+     "start": 291.058,
+     "end": 291.118,
+     "conf": 0.999
+    },
+    {
+     "w": "works",
+     "start": 291.138,
+     "end": 291.359,
+     "conf": 1.0
+    },
+    {
+     "w": "for",
+     "start": 291.379,
+     "end": 291.479,
+     "conf": 0.995
+    },
+    {
+     "w": "every",
+     "start": 291.579,
+     "end": 291.759,
+     "conf": 0.832
+    },
+    {
+     "w": "complex",
+     "start": 291.86,
+     "end": 292.22,
+     "conf": 0.851
+    },
+    {
+     "w": "number",
+     "start": 292.32,
+     "end": 292.561,
+     "conf": 0.853
+    },
+    {
+     "w": "not",
+     "start": 292.621,
+     "end": 292.721,
+     "conf": 0.716
+    },
+    {
+     "w": "only",
+     "start": 292.801,
+     "end": 292.961,
+     "conf": 0.749
+    },
+    {
+     "w": "i",
+     "start": 293.282,
+     "end": 293.302,
+     "conf": 0.756
+    },
+    {
+     "w": "each",
+     "start": 293.322,
+     "end": 293.823,
+     "conf": 0.804
+    },
+    {
+     "w": "one",
+     "start": 293.903,
+     "end": 293.963,
+     "conf": 0.633
+    },
+    {
+     "w": "is",
+     "start": 293.983,
+     "end": 294.063,
+     "conf": 0.676
+    },
+    {
+     "w": "an",
+     "start": 294.083,
+     "end": 294.143,
+     "conf": 0.849
+    },
+    {
+     "w": "arrow",
+     "start": 294.264,
+     "end": 294.444,
+     "conf": 0.582
+    },
+    {
+     "w": "with",
+     "start": 294.524,
+     "end": 294.604,
+     "conf": 0.676
+    },
+    {
+     "w": "a",
+     "start": 294.624,
+     "end": 294.664,
+     "conf": 0.778
+    },
+    {
+     "w": "length",
+     "start": 294.744,
+     "end": 295.025,
+     "conf": 0.79
+    },
+    {
+     "w": "and",
+     "start": 295.265,
+     "end": 295.325,
+     "conf": 0.656
+    },
+    {
+     "w": "an",
+     "start": 295.345,
+     "end": 295.446,
+     "conf": 0.649
+    },
+    {
+     "w": "angle",
+     "start": 295.526,
+     "end": 295.766,
+     "conf": 0.799
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "When you multiply two of them, the lengths multiply, and the angles add. That's the entire rule.",
+   "idea": false,
+   "start": 296.156,
+   "end": 300.656,
+   "words": [
+    {
+     "w": "when",
+     "start": 296.156,
+     "end": 296.236,
+     "conf": 0.249
+    },
+    {
+     "w": "you",
+     "start": 296.257,
+     "end": 296.337,
+     "conf": 0.996
+    },
+    {
+     "w": "multiply",
+     "start": 296.377,
+     "end": 296.779,
+     "conf": 0.881
+    },
+    {
+     "w": "two",
+     "start": 296.859,
+     "end": 296.96,
+     "conf": 0.655
+    },
+    {
+     "w": "of",
+     "start": 296.98,
+     "end": 297.06,
+     "conf": 0.666
+    },
+    {
+     "w": "them",
+     "start": 297.08,
+     "end": 297.181,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 297.361,
+     "end": 297.422,
+     "conf": 0.994
+    },
+    {
+     "w": "lengths",
+     "start": 297.442,
+     "end": 297.723,
+     "conf": 0.651
+    },
+    {
+     "w": "multiply",
+     "start": 297.843,
+     "end": 298.325,
+     "conf": 0.95
+    },
+    {
+     "w": "and",
+     "start": 298.727,
+     "end": 298.787,
+     "conf": 0.4
+    },
+    {
+     "w": "the",
+     "start": 298.808,
+     "end": 298.868,
+     "conf": 0.996
+    },
+    {
+     "w": "angles",
+     "start": 298.988,
+     "end": 299.27,
+     "conf": 0.815
+    },
+    {
+     "w": "add",
+     "start": 299.41,
+     "end": 299.551,
+     "conf": 0.37
+    },
+    {
+     "w": "that's",
+     "start": 299.792,
+     "end": 299.953,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 299.973,
+     "end": 300.053,
+     "conf": 0.871
+    },
+    {
+     "w": "entire",
+     "start": 300.073,
+     "end": 300.435,
+     "conf": 0.846
+    },
+    {
+     "w": "rule",
+     "start": 300.495,
+     "end": 300.656,
+     "conf": 0.259
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "Take one plus i. It points at forty-five degrees, and its length is the square root of two.",
+   "idea": false,
+   "start": 301.046,
+   "end": 305.544,
+   "words": [
+    {
+     "w": "take",
+     "start": 301.046,
+     "end": 301.187,
+     "conf": 0.985
+    },
+    {
+     "w": "one",
+     "start": 301.207,
+     "end": 301.327,
+     "conf": 0.207
+    },
+    {
+     "w": "plus",
+     "start": 301.367,
+     "end": 301.568,
+     "conf": 0.387
+    },
+    {
+     "w": "i",
+     "start": 302.17,
+     "end": 302.191,
+     "conf": 0.018
+    },
+    {
+     "w": "it",
+     "start": 302.211,
+     "end": 302.251,
+     "conf": 0.499
+    },
+    {
+     "w": "points",
+     "start": 302.311,
+     "end": 302.612,
+     "conf": 0.865
+    },
+    {
+     "w": "at",
+     "start": 302.692,
+     "end": 302.733,
+     "conf": 0.499
+    },
+    {
+     "w": "forty-five",
+     "start": 302.753,
+     "end": 303.335,
+     "conf": 0.003
+    },
+    {
+     "w": "degrees",
+     "start": 303.355,
+     "end": 303.777,
+     "conf": 0.606
+    },
+    {
+     "w": "and",
+     "start": 303.977,
+     "end": 304.038,
+     "conf": 0.652
+    },
+    {
+     "w": "its",
+     "start": 304.098,
+     "end": 304.178,
+     "conf": 0.664
+    },
+    {
+     "w": "length",
+     "start": 304.259,
+     "end": 304.479,
+     "conf": 0.831
+    },
+    {
+     "w": "is",
+     "start": 304.54,
+     "end": 304.6,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 304.62,
+     "end": 304.72,
+     "conf": 0.747
+    },
+    {
+     "w": "square",
+     "start": 304.74,
+     "end": 305.022,
+     "conf": 0.798
+    },
+    {
+     "w": "root",
+     "start": 305.042,
+     "end": 305.182,
+     "conf": 0.939
+    },
+    {
+     "w": "of",
+     "start": 305.242,
+     "end": 305.303,
+     "conf": 0.637
+    },
+    {
+     "w": "two",
+     "start": 305.383,
+     "end": 305.544,
+     "conf": 0.288
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "Square it. The angle doubles to ninety degrees, and the length becomes exactly two. That predicts two i.",
+   "idea": false,
+   "start": 306.034,
+   "end": 311.32,
+   "words": [
+    {
+     "w": "square",
+     "start": 306.034,
+     "end": 306.354,
+     "conf": 0.582
+    },
+    {
+     "w": "it",
+     "start": 306.394,
+     "end": 306.495,
+     "conf": 0.97
+    },
+    {
+     "w": "the",
+     "start": 306.835,
+     "end": 306.895,
+     "conf": 0.66
+    },
+    {
+     "w": "angle",
+     "start": 306.975,
+     "end": 307.175,
+     "conf": 0.798
+    },
+    {
+     "w": "doubles",
+     "start": 307.235,
+     "end": 307.496,
+     "conf": 0.769
+    },
+    {
+     "w": "to",
+     "start": 307.556,
+     "end": 307.596,
+     "conf": 0.496
+    },
+    {
+     "w": "ninety",
+     "start": 307.616,
+     "end": 307.916,
+     "conf": 0.036
+    },
+    {
+     "w": "degrees",
+     "start": 307.976,
+     "end": 308.357,
+     "conf": 0.589
+    },
+    {
+     "w": "and",
+     "start": 308.377,
+     "end": 308.677,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 308.697,
+     "end": 308.757,
+     "conf": 0.993
+    },
+    {
+     "w": "length",
+     "start": 308.777,
+     "end": 308.977,
+     "conf": 0.992
+    },
+    {
+     "w": "becomes",
+     "start": 308.997,
+     "end": 309.298,
+     "conf": 0.873
+    },
+    {
+     "w": "exactly",
+     "start": 309.318,
+     "end": 309.698,
+     "conf": 0.998
+    },
+    {
+     "w": "two",
+     "start": 309.818,
+     "end": 310.038,
+     "conf": 0.557
+    },
+    {
+     "w": "that",
+     "start": 310.379,
+     "end": 310.479,
+     "conf": 0.585
+    },
+    {
+     "w": "predicts",
+     "start": 310.499,
+     "end": 310.859,
+     "conf": 0.632
+    },
+    {
+     "w": "two",
+     "start": 310.939,
+     "end": 311.079,
+     "conf": 0.638
+    },
+    {
+     "w": "i",
+     "start": 311.3,
+     "end": 311.32,
+     "conf": 0.531
+    }
+   ]
+  },
+  {
+   "section": "Numbers on a flat page",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "Check with algebra: one, plus two i, plus i squared. The one and the minus one cancel, and two i is what's left.",
+   "idea": true,
+   "start": 311.75,
+   "end": 317.155,
+   "words": [
+    {
+     "w": "check",
+     "start": 311.75,
+     "end": 311.93,
+     "conf": 0.996
+    },
+    {
+     "w": "with",
+     "start": 311.95,
+     "end": 312.07,
+     "conf": 0.799
+    },
+    {
+     "w": "algebra",
+     "start": 312.13,
+     "end": 312.471,
+     "conf": 0.75
+    },
+    {
+     "w": "one",
+     "start": 312.851,
+     "end": 313.011,
+     "conf": 0.16
+    },
+    {
+     "w": "plus",
+     "start": 313.111,
+     "end": 313.331,
+     "conf": 0.208
+    },
+    {
+     "w": "two",
+     "start": 313.432,
+     "end": 313.572,
+     "conf": 0.074
+    },
+    {
+     "w": "i",
+     "start": 313.712,
+     "end": 313.732,
+     "conf": 0.0
+    },
+    {
+     "w": "plus",
+     "start": 313.752,
+     "end": 313.952,
+     "conf": 0.785
+    },
+    {
+     "w": "i",
+     "start": 314.112,
+     "end": 314.132,
+     "conf": 0.0
+    },
+    {
+     "w": "squared",
+     "start": 314.152,
+     "end": 314.513,
+     "conf": 0.711
+    },
+    {
+     "w": "the",
+     "start": 314.533,
+     "end": 314.713,
+     "conf": 0.665
+    },
+    {
+     "w": "one",
+     "start": 314.833,
+     "end": 314.913,
+     "conf": 0.64
+    },
+    {
+     "w": "and",
+     "start": 314.933,
+     "end": 314.993,
+     "conf": 0.001
+    },
+    {
+     "w": "the",
+     "start": 315.013,
+     "end": 315.073,
+     "conf": 0.979
+    },
+    {
+     "w": "minus",
+     "start": 315.133,
+     "end": 315.373,
+     "conf": 0.64
+    },
+    {
+     "w": "one",
+     "start": 315.473,
+     "end": 315.574,
+     "conf": 0.663
+    },
+    {
+     "w": "cancel",
+     "start": 315.594,
+     "end": 315.994,
+     "conf": 0.673
+    },
+    {
+     "w": "and",
+     "start": 316.114,
+     "end": 316.214,
+     "conf": 0.867
+    },
+    {
+     "w": "two",
+     "start": 316.294,
+     "end": 316.434,
+     "conf": 0.652
+    },
+    {
+     "w": "i",
+     "start": 316.554,
+     "end": 316.575,
+     "conf": 0.79
+    },
+    {
+     "w": "is",
+     "start": 316.635,
+     "end": 316.695,
+     "conf": 0.505
+    },
+    {
+     "w": "what's",
+     "start": 316.715,
+     "end": 316.895,
+     "conf": 0.832
+    },
+    {
+     "w": "left",
+     "start": 316.955,
+     "end": 317.155,
+     "conf": 0.803
+    }
+   ]
+  },
+  {
+   "section": "What Bombelli actually found",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "That rule finally explains the trick from fifteen seventy-two.",
+   "idea": false,
+   "start": 318.795,
+   "end": 321.583,
+   "words": [
+    {
+     "w": "that",
+     "start": 318.795,
+     "end": 318.915,
+     "conf": 0.681
+    },
+    {
+     "w": "rule",
+     "start": 318.976,
+     "end": 319.196,
+     "conf": 0.986
+    },
+    {
+     "w": "finally",
+     "start": 319.297,
+     "end": 319.577,
+     "conf": 0.723
+    },
+    {
+     "w": "explains",
+     "start": 319.597,
+     "end": 319.959,
+     "conf": 0.861
+    },
+    {
+     "w": "the",
+     "start": 319.979,
+     "end": 320.059,
+     "conf": 0.957
+    },
+    {
+     "w": "trick",
+     "start": 320.119,
+     "end": 320.32,
+     "conf": 0.757
+    },
+    {
+     "w": "from",
+     "start": 320.44,
+     "end": 320.56,
+     "conf": 0.746
+    },
+    {
+     "w": "fifteen",
+     "start": 320.58,
+     "end": 320.982,
+     "conf": 0.0
+    },
+    {
+     "w": "seventy-two",
+     "start": 321.002,
+     "end": 321.583,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "What Bombelli actually found",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "Bombelli's two plus i is an arrow with an angle of about twenty-six and a half degrees. Cube it, and the angle triples to almost eighty degrees, nearly straight up, landing precisely on two plus eleven i.",
+   "idea": false,
+   "start": 321.993,
+   "end": 332.063,
+   "words": [
+    {
+     "w": "bombelli's",
+     "start": 321.993,
+     "end": 322.453,
+     "conf": 0.767
+    },
+    {
+     "w": "two",
+     "start": 322.554,
+     "end": 322.694,
+     "conf": 0.007
+    },
+    {
+     "w": "plus",
+     "start": 322.714,
+     "end": 322.914,
+     "conf": 0.226
+    },
+    {
+     "w": "i",
+     "start": 323.234,
+     "end": 323.254,
+     "conf": 0.99
+    },
+    {
+     "w": "is",
+     "start": 323.274,
+     "end": 323.314,
+     "conf": 0.498
+    },
+    {
+     "w": "an",
+     "start": 323.334,
+     "end": 323.414,
+     "conf": 0.995
+    },
+    {
+     "w": "arrow",
+     "start": 323.514,
+     "end": 323.715,
+     "conf": 0.526
+    },
+    {
+     "w": "with",
+     "start": 323.735,
+     "end": 323.895,
+     "conf": 0.749
+    },
+    {
+     "w": "an",
+     "start": 323.915,
+     "end": 323.975,
+     "conf": 0.996
+    },
+    {
+     "w": "angle",
+     "start": 324.035,
+     "end": 324.235,
+     "conf": 0.798
+    },
+    {
+     "w": "of",
+     "start": 324.255,
+     "end": 324.315,
+     "conf": 0.595
+    },
+    {
+     "w": "about",
+     "start": 324.335,
+     "end": 324.575,
+     "conf": 0.809
+    },
+    {
+     "w": "twenty-six",
+     "start": 324.596,
+     "end": 325.096,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 325.116,
+     "end": 325.256,
+     "conf": 0.007
+    },
+    {
+     "w": "a",
+     "start": 325.276,
+     "end": 325.296,
+     "conf": 0.0
+    },
+    {
+     "w": "half",
+     "start": 325.316,
+     "end": 325.536,
+     "conf": 0.0
+    },
+    {
+     "w": "degrees",
+     "start": 325.556,
+     "end": 325.917,
+     "conf": 0.108
+    },
+    {
+     "w": "cube",
+     "start": 326.557,
+     "end": 326.918,
+     "conf": 0.722
+    },
+    {
+     "w": "it",
+     "start": 326.938,
+     "end": 326.998,
+     "conf": 0.374
+    },
+    {
+     "w": "and",
+     "start": 327.098,
+     "end": 327.158,
+     "conf": 0.638
+    },
+    {
+     "w": "the",
+     "start": 327.178,
+     "end": 327.238,
+     "conf": 0.021
+    },
+    {
+     "w": "angle",
+     "start": 327.298,
+     "end": 327.498,
+     "conf": 0.794
+    },
+    {
+     "w": "triples",
+     "start": 327.558,
+     "end": 327.859,
+     "conf": 0.821
+    },
+    {
+     "w": "to",
+     "start": 327.879,
+     "end": 327.959,
+     "conf": 0.664
+    },
+    {
+     "w": "almost",
+     "start": 328.059,
+     "end": 328.299,
+     "conf": 0.83
+    },
+    {
+     "w": "eighty",
+     "start": 328.319,
+     "end": 328.579,
+     "conf": 0.015
+    },
+    {
+     "w": "degrees",
+     "start": 328.599,
+     "end": 328.94,
+     "conf": 0.614
+    },
+    {
+     "w": "nearly",
+     "start": 329.04,
+     "end": 329.28,
+     "conf": 0.98
+    },
+    {
+     "w": "straight",
+     "start": 329.38,
+     "end": 329.62,
+     "conf": 0.838
+    },
+    {
+     "w": "up",
+     "start": 329.7,
+     "end": 329.821,
+     "conf": 0.5
+    },
+    {
+     "w": "landing",
+     "start": 330.141,
+     "end": 330.441,
+     "conf": 0.848
+    },
+    {
+     "w": "precisely",
+     "start": 330.501,
+     "end": 331.062,
+     "conf": 0.838
+    },
+    {
+     "w": "on",
+     "start": 331.182,
+     "end": 331.222,
+     "conf": 0.498
+    },
+    {
+     "w": "two",
+     "start": 331.242,
+     "end": 331.462,
+     "conf": 0.0
+    },
+    {
+     "w": "plus",
+     "start": 331.482,
+     "end": 331.722,
+     "conf": 0.008
+    },
+    {
+     "w": "eleven",
+     "start": 331.742,
+     "end": 332.023,
+     "conf": 0.001
+    },
+    {
+     "w": "i",
+     "start": 332.043,
+     "end": 332.063,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "What Bombelli actually found",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "Its mirror image, two minus i, cubes to two minus eleven i, and that eleven i is the square root of minus one hundred twenty-one.",
+   "idea": false,
+   "start": 332.673,
+   "end": 339.115,
+   "words": [
+    {
+     "w": "its",
+     "start": 332.673,
+     "end": 332.773,
+     "conf": 0.733
+    },
+    {
+     "w": "mirror",
+     "start": 332.834,
+     "end": 333.034,
+     "conf": 0.851
+    },
+    {
+     "w": "image",
+     "start": 333.115,
+     "end": 333.396,
+     "conf": 0.795
+    },
+    {
+     "w": "two",
+     "start": 333.656,
+     "end": 333.817,
+     "conf": 0.895
+    },
+    {
+     "w": "minus",
+     "start": 333.837,
+     "end": 334.138,
+     "conf": 0.747
+    },
+    {
+     "w": "i",
+     "start": 334.359,
+     "end": 334.379,
+     "conf": 0.876
+    },
+    {
+     "w": "cubes",
+     "start": 334.539,
+     "end": 334.8,
+     "conf": 0.74
+    },
+    {
+     "w": "to",
+     "start": 334.82,
+     "end": 334.901,
+     "conf": 0.648
+    },
+    {
+     "w": "two",
+     "start": 334.981,
+     "end": 335.101,
+     "conf": 0.517
+    },
+    {
+     "w": "minus",
+     "start": 335.121,
+     "end": 335.362,
+     "conf": 0.842
+    },
+    {
+     "w": "eleven",
+     "start": 335.382,
+     "end": 335.643,
+     "conf": 0.667
+    },
+    {
+     "w": "i",
+     "start": 335.924,
+     "end": 335.944,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 335.964,
+     "end": 336.044,
+     "conf": 0.67
+    },
+    {
+     "w": "that",
+     "start": 336.065,
+     "end": 336.185,
+     "conf": 0.993
+    },
+    {
+     "w": "eleven",
+     "start": 336.245,
+     "end": 336.486,
+     "conf": 0.787
+    },
+    {
+     "w": "i",
+     "start": 336.787,
+     "end": 336.807,
+     "conf": 0.991
+    },
+    {
+     "w": "is",
+     "start": 336.827,
+     "end": 336.867,
+     "conf": 0.497
+    },
+    {
+     "w": "the",
+     "start": 336.927,
+     "end": 336.988,
+     "conf": 0.656
+    },
+    {
+     "w": "square",
+     "start": 337.068,
+     "end": 337.309,
+     "conf": 0.742
+    },
+    {
+     "w": "root",
+     "start": 337.389,
+     "end": 337.509,
+     "conf": 0.654
+    },
+    {
+     "w": "of",
+     "start": 337.59,
+     "end": 337.65,
+     "conf": 0.498
+    },
+    {
+     "w": "minus",
+     "start": 337.77,
+     "end": 338.031,
+     "conf": 0.73
+    },
+    {
+     "w": "one",
+     "start": 338.051,
+     "end": 338.252,
+     "conf": 0.001
+    },
+    {
+     "w": "hundred",
+     "start": 338.272,
+     "end": 338.553,
+     "conf": 0.001
+    },
+    {
+     "w": "twenty-one",
+     "start": 338.573,
+     "end": 339.115,
+     "conf": 0.004
+    }
+   ]
+  },
+  {
+   "section": "What Bombelli actually found",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "Now add the two arrows. One goes up, its mirror goes down by the same amount, and what's left lies flat on the ordinary line. Two plus two: four.",
+   "idea": false,
+   "start": 339.505,
+   "end": 346.889,
+   "words": [
+    {
+     "w": "now",
+     "start": 339.505,
+     "end": 339.666,
+     "conf": 0.947
+    },
+    {
+     "w": "add",
+     "start": 339.726,
+     "end": 339.826,
+     "conf": 0.305
+    },
+    {
+     "w": "the",
+     "start": 339.846,
+     "end": 339.926,
+     "conf": 0.97
+    },
+    {
+     "w": "two",
+     "start": 339.947,
+     "end": 340.107,
+     "conf": 0.733
+    },
+    {
+     "w": "arrows",
+     "start": 340.187,
+     "end": 340.448,
+     "conf": 0.485
+    },
+    {
+     "w": "one",
+     "start": 340.809,
+     "end": 340.93,
+     "conf": 0.732
+    },
+    {
+     "w": "goes",
+     "start": 340.97,
+     "end": 341.15,
+     "conf": 0.704
+    },
+    {
+     "w": "up",
+     "start": 341.211,
+     "end": 341.311,
+     "conf": 0.501
+    },
+    {
+     "w": "its",
+     "start": 341.572,
+     "end": 341.652,
+     "conf": 0.666
+    },
+    {
+     "w": "mirror",
+     "start": 341.732,
+     "end": 341.933,
+     "conf": 0.617
+    },
+    {
+     "w": "goes",
+     "start": 341.993,
+     "end": 342.174,
+     "conf": 0.679
+    },
+    {
+     "w": "down",
+     "start": 342.194,
+     "end": 342.374,
+     "conf": 0.8
+    },
+    {
+     "w": "by",
+     "start": 342.395,
+     "end": 342.475,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 342.495,
+     "end": 342.575,
+     "conf": 0.981
+    },
+    {
+     "w": "same",
+     "start": 342.595,
+     "end": 342.796,
+     "conf": 0.632
+    },
+    {
+     "w": "amount",
+     "start": 342.816,
+     "end": 343.097,
+     "conf": 0.856
+    },
+    {
+     "w": "and",
+     "start": 343.177,
+     "end": 343.237,
+     "conf": 0.278
+    },
+    {
+     "w": "what's",
+     "start": 343.257,
+     "end": 343.398,
+     "conf": 0.921
+    },
+    {
+     "w": "left",
+     "start": 343.478,
+     "end": 343.659,
+     "conf": 0.765
+    },
+    {
+     "w": "lies",
+     "start": 343.779,
+     "end": 343.96,
+     "conf": 0.569
+    },
+    {
+     "w": "flat",
+     "start": 344.08,
+     "end": 344.341,
+     "conf": 0.75
+    },
+    {
+     "w": "on",
+     "start": 344.421,
+     "end": 344.461,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 344.481,
+     "end": 344.562,
+     "conf": 0.999
+    },
+    {
+     "w": "ordinary",
+     "start": 344.642,
+     "end": 344.923,
+     "conf": 0.836
+    },
+    {
+     "w": "line",
+     "start": 345.003,
+     "end": 345.244,
+     "conf": 0.75
+    },
+    {
+     "w": "two",
+     "start": 345.264,
+     "end": 345.806,
+     "conf": 0.0
+    },
+    {
+     "w": "plus",
+     "start": 345.826,
+     "end": 346.067,
+     "conf": 0.001
+    },
+    {
+     "w": "two",
+     "start": 346.087,
+     "end": 346.327,
+     "conf": 0.0
+    },
+    {
+     "w": "four",
+     "start": 346.348,
+     "end": 346.889,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "What Bombelli actually found",
+   "act": "ACT FOUR — The multiplication that turns",
+   "text": "That's why a real answer had to pass through the imaginary. The formula's path left the line and came back. The real number was the shadow of something happening on the plane.",
+   "idea": true,
+   "start": 347.299,
+   "end": 355.808,
+   "words": [
+    {
+     "w": "that's",
+     "start": 347.299,
+     "end": 347.419,
+     "conf": 0.397
+    },
+    {
+     "w": "why",
+     "start": 347.439,
+     "end": 347.599,
+     "conf": 0.975
+    },
+    {
+     "w": "a",
+     "start": 347.659,
+     "end": 347.679,
+     "conf": 0.02
+    },
+    {
+     "w": "real",
+     "start": 347.719,
+     "end": 347.9,
+     "conf": 1.0
+    },
+    {
+     "w": "answer",
+     "start": 347.98,
+     "end": 348.26,
+     "conf": 0.691
+    },
+    {
+     "w": "had",
+     "start": 348.34,
+     "end": 348.44,
+     "conf": 0.825
+    },
+    {
+     "w": "to",
+     "start": 348.46,
+     "end": 348.52,
+     "conf": 0.999
+    },
+    {
+     "w": "pass",
+     "start": 348.58,
+     "end": 348.821,
+     "conf": 0.8
+    },
+    {
+     "w": "through",
+     "start": 348.881,
+     "end": 349.061,
+     "conf": 0.862
+    },
+    {
+     "w": "the",
+     "start": 349.081,
+     "end": 349.141,
+     "conf": 0.796
+    },
+    {
+     "w": "imaginary",
+     "start": 349.201,
+     "end": 349.702,
+     "conf": 0.867
+    },
+    {
+     "w": "the",
+     "start": 350.342,
+     "end": 350.402,
+     "conf": 0.345
+    },
+    {
+     "w": "formula's",
+     "start": 350.422,
+     "end": 350.823,
+     "conf": 0.873
+    },
+    {
+     "w": "path",
+     "start": 350.883,
+     "end": 351.223,
+     "conf": 0.751
+    },
+    {
+     "w": "left",
+     "start": 351.323,
+     "end": 351.484,
+     "conf": 0.749
+    },
+    {
+     "w": "the",
+     "start": 351.504,
+     "end": 351.564,
+     "conf": 0.996
+    },
+    {
+     "w": "line",
+     "start": 351.584,
+     "end": 351.804,
+     "conf": 0.786
+    },
+    {
+     "w": "and",
+     "start": 351.824,
+     "end": 351.904,
+     "conf": 0.986
+    },
+    {
+     "w": "came",
+     "start": 351.924,
+     "end": 352.124,
+     "conf": 0.999
+    },
+    {
+     "w": "back",
+     "start": 352.144,
+     "end": 352.385,
+     "conf": 0.949
+    },
+    {
+     "w": "the",
+     "start": 352.405,
+     "end": 352.945,
+     "conf": 0.666
+    },
+    {
+     "w": "real",
+     "start": 353.005,
+     "end": 353.165,
+     "conf": 0.752
+    },
+    {
+     "w": "number",
+     "start": 353.226,
+     "end": 353.466,
+     "conf": 0.849
+    },
+    {
+     "w": "was",
+     "start": 353.566,
+     "end": 353.666,
+     "conf": 0.582
+    },
+    {
+     "w": "the",
+     "start": 353.686,
+     "end": 353.826,
+     "conf": 0.689
+    },
+    {
+     "w": "shadow",
+     "start": 353.986,
+     "end": 354.267,
+     "conf": 0.758
+    },
+    {
+     "w": "of",
+     "start": 354.367,
+     "end": 354.407,
+     "conf": 0.499
+    },
+    {
+     "w": "something",
+     "start": 354.487,
+     "end": 354.747,
+     "conf": 0.851
+    },
+    {
+     "w": "happening",
+     "start": 354.807,
+     "end": 355.148,
+     "conf": 0.988
+    },
+    {
+     "w": "on",
+     "start": 355.268,
+     "end": 355.308,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 355.328,
+     "end": 355.408,
+     "conf": 0.872
+    },
+    {
+     "w": "plane",
+     "start": 355.468,
+     "end": 355.808,
+     "conf": 0.731
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "So why does the power grid care?",
+   "idea": false,
+   "start": 358.269,
+   "end": 359.636,
+   "words": [
+    {
+     "w": "so",
+     "start": 358.269,
+     "end": 358.329,
+     "conf": 0.997
+    },
+    {
+     "w": "why",
+     "start": 358.41,
+     "end": 358.55,
+     "conf": 0.902
+    },
+    {
+     "w": "does",
+     "start": 358.591,
+     "end": 358.691,
+     "conf": 0.751
+    },
+    {
+     "w": "the",
+     "start": 358.711,
+     "end": 358.792,
+     "conf": 0.891
+    },
+    {
+     "w": "power",
+     "start": 358.812,
+     "end": 359.113,
+     "conf": 0.973
+    },
+    {
+     "w": "grid",
+     "start": 359.193,
+     "end": 359.334,
+     "conf": 0.523
+    },
+    {
+     "w": "care",
+     "start": 359.414,
+     "end": 359.636,
+     "conf": 0.476
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "The electricity from a wall socket swings forward and back in a smooth wave, around fifty or sixty times every second.",
+   "idea": false,
+   "start": 360.025,
+   "end": 365.859,
+   "words": [
+    {
+     "w": "the",
+     "start": 360.025,
+     "end": 360.085,
+     "conf": 0.266
+    },
+    {
+     "w": "electricity",
+     "start": 360.105,
+     "end": 360.486,
+     "conf": 0.766
+    },
+    {
+     "w": "from",
+     "start": 360.586,
+     "end": 360.747,
+     "conf": 0.793
+    },
+    {
+     "w": "a",
+     "start": 360.807,
+     "end": 360.827,
+     "conf": 0.002
+    },
+    {
+     "w": "wall",
+     "start": 360.887,
+     "end": 361.048,
+     "conf": 0.917
+    },
+    {
+     "w": "socket",
+     "start": 361.108,
+     "end": 361.408,
+     "conf": 0.986
+    },
+    {
+     "w": "swings",
+     "start": 361.709,
+     "end": 361.99,
+     "conf": 0.998
+    },
+    {
+     "w": "forward",
+     "start": 362.01,
+     "end": 362.351,
+     "conf": 0.874
+    },
+    {
+     "w": "and",
+     "start": 362.511,
+     "end": 362.591,
+     "conf": 0.994
+    },
+    {
+     "w": "back",
+     "start": 362.611,
+     "end": 362.772,
+     "conf": 0.999
+    },
+    {
+     "w": "in",
+     "start": 362.792,
+     "end": 362.852,
+     "conf": 0.66
+    },
+    {
+     "w": "a",
+     "start": 362.872,
+     "end": 362.892,
+     "conf": 0.996
+    },
+    {
+     "w": "smooth",
+     "start": 362.952,
+     "end": 363.173,
+     "conf": 0.823
+    },
+    {
+     "w": "wave",
+     "start": 363.233,
+     "end": 363.554,
+     "conf": 0.999
+    },
+    {
+     "w": "around",
+     "start": 363.894,
+     "end": 364.155,
+     "conf": 0.997
+    },
+    {
+     "w": "fifty",
+     "start": 364.175,
+     "end": 364.536,
+     "conf": 0.207
+    },
+    {
+     "w": "or",
+     "start": 364.636,
+     "end": 364.676,
+     "conf": 0.247
+    },
+    {
+     "w": "sixty",
+     "start": 364.777,
+     "end": 365.017,
+     "conf": 0.537
+    },
+    {
+     "w": "times",
+     "start": 365.097,
+     "end": 365.298,
+     "conf": 0.784
+    },
+    {
+     "w": "every",
+     "start": 365.318,
+     "end": 365.478,
+     "conf": 0.848
+    },
+    {
+     "w": "second",
+     "start": 365.579,
+     "end": 365.859,
+     "conf": 0.81
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "Picture an arrow turning steadily in a circle, and watch only its height. Up, down, up, down. That height traces out exactly that wave.",
+   "idea": false,
+   "start": 366.27,
+   "end": 372.992,
+   "words": [
+    {
+     "w": "picture",
+     "start": 366.27,
+     "end": 366.491,
+     "conf": 0.97
+    },
+    {
+     "w": "an",
+     "start": 366.511,
+     "end": 366.571,
+     "conf": 0.837
+    },
+    {
+     "w": "arrow",
+     "start": 366.651,
+     "end": 366.832,
+     "conf": 0.516
+    },
+    {
+     "w": "turning",
+     "start": 366.912,
+     "end": 367.193,
+     "conf": 0.993
+    },
+    {
+     "w": "steadily",
+     "start": 367.273,
+     "end": 367.574,
+     "conf": 0.872
+    },
+    {
+     "w": "in",
+     "start": 367.635,
+     "end": 367.675,
+     "conf": 0.5
+    },
+    {
+     "w": "a",
+     "start": 367.695,
+     "end": 367.715,
+     "conf": 0.99
+    },
+    {
+     "w": "circle",
+     "start": 367.835,
+     "end": 368.196,
+     "conf": 0.806
+    },
+    {
+     "w": "and",
+     "start": 368.477,
+     "end": 368.558,
+     "conf": 0.659
+    },
+    {
+     "w": "watch",
+     "start": 368.578,
+     "end": 368.758,
+     "conf": 0.946
+    },
+    {
+     "w": "only",
+     "start": 368.839,
+     "end": 368.979,
+     "conf": 0.75
+    },
+    {
+     "w": "its",
+     "start": 369.059,
+     "end": 369.14,
+     "conf": 0.666
+    },
+    {
+     "w": "height",
+     "start": 369.22,
+     "end": 369.441,
+     "conf": 0.728
+    },
+    {
+     "w": "up",
+     "start": 369.822,
+     "end": 369.902,
+     "conf": 0.501
+    },
+    {
+     "w": "down",
+     "start": 369.982,
+     "end": 370.223,
+     "conf": 0.763
+    },
+    {
+     "w": "up",
+     "start": 370.303,
+     "end": 370.384,
+     "conf": 0.503
+    },
+    {
+     "w": "down",
+     "start": 370.464,
+     "end": 370.725,
+     "conf": 0.749
+    },
+    {
+     "w": "that",
+     "start": 371.026,
+     "end": 371.146,
+     "conf": 0.51
+    },
+    {
+     "w": "height",
+     "start": 371.206,
+     "end": 371.387,
+     "conf": 0.781
+    },
+    {
+     "w": "traces",
+     "start": 371.407,
+     "end": 371.768,
+     "conf": 0.998
+    },
+    {
+     "w": "out",
+     "start": 371.829,
+     "end": 371.929,
+     "conf": 0.666
+    },
+    {
+     "w": "exactly",
+     "start": 371.989,
+     "end": 372.451,
+     "conf": 0.855
+    },
+    {
+     "w": "that",
+     "start": 372.471,
+     "end": 372.631,
+     "conf": 0.829
+    },
+    {
+     "w": "wave",
+     "start": 372.711,
+     "end": 372.992,
+     "conf": 0.751
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "So every smooth wave can be treated as the shadow of a rotating arrow. And we now have numbers that rotate.",
+   "idea": true,
+   "start": 373.382,
+   "end": 378.809,
+   "words": [
+    {
+     "w": "so",
+     "start": 373.382,
+     "end": 373.442,
+     "conf": 0.994
+    },
+    {
+     "w": "every",
+     "start": 373.522,
+     "end": 373.702,
+     "conf": 0.999
+    },
+    {
+     "w": "smooth",
+     "start": 373.883,
+     "end": 374.243,
+     "conf": 0.83
+    },
+    {
+     "w": "wave",
+     "start": 374.323,
+     "end": 374.624,
+     "conf": 0.75
+    },
+    {
+     "w": "can",
+     "start": 374.644,
+     "end": 374.764,
+     "conf": 1.0
+    },
+    {
+     "w": "be",
+     "start": 374.784,
+     "end": 374.844,
+     "conf": 1.0
+    },
+    {
+     "w": "treated",
+     "start": 374.944,
+     "end": 375.224,
+     "conf": 0.834
+    },
+    {
+     "w": "as",
+     "start": 375.305,
+     "end": 375.365,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 375.385,
+     "end": 375.485,
+     "conf": 0.741
+    },
+    {
+     "w": "shadow",
+     "start": 375.605,
+     "end": 375.885,
+     "conf": 0.799
+    },
+    {
+     "w": "of",
+     "start": 376.005,
+     "end": 376.045,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 376.106,
+     "end": 376.126,
+     "conf": 0.002
+    },
+    {
+     "w": "rotating",
+     "start": 376.206,
+     "end": 376.686,
+     "conf": 0.836
+    },
+    {
+     "w": "arrow",
+     "start": 376.766,
+     "end": 376.987,
+     "conf": 0.53
+    },
+    {
+     "w": "and",
+     "start": 377.347,
+     "end": 377.407,
+     "conf": 0.662
+    },
+    {
+     "w": "we",
+     "start": 377.427,
+     "end": 377.487,
+     "conf": 0.995
+    },
+    {
+     "w": "now",
+     "start": 377.567,
+     "end": 377.748,
+     "conf": 0.996
+    },
+    {
+     "w": "have",
+     "start": 377.828,
+     "end": 377.968,
+     "conf": 0.999
+    },
+    {
+     "w": "numbers",
+     "start": 378.028,
+     "end": 378.308,
+     "conf": 0.996
+    },
+    {
+     "w": "that",
+     "start": 378.328,
+     "end": 378.449,
+     "conf": 0.98
+    },
+    {
+     "w": "rotate",
+     "start": 378.469,
+     "end": 378.809,
+     "conf": 0.563
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "Here's why that helps. Suppose two waves are pushed through the same circuit, one peaking at three volts, the other at four volts, and the second runs a quarter cycle behind the first.",
+   "idea": false,
+   "start": 379.799,
+   "end": 389.062,
+   "words": [
+    {
+     "w": "here's",
+     "start": 379.799,
+     "end": 379.979,
+     "conf": 0.671
+    },
+    {
+     "w": "why",
+     "start": 380.0,
+     "end": 380.18,
+     "conf": 0.836
+    },
+    {
+     "w": "that",
+     "start": 380.28,
+     "end": 380.461,
+     "conf": 0.72
+    },
+    {
+     "w": "helps",
+     "start": 380.541,
+     "end": 380.822,
+     "conf": 0.802
+    },
+    {
+     "w": "suppose",
+     "start": 381.142,
+     "end": 381.423,
+     "conf": 0.975
+    },
+    {
+     "w": "two",
+     "start": 381.483,
+     "end": 381.644,
+     "conf": 0.91
+    },
+    {
+     "w": "waves",
+     "start": 381.724,
+     "end": 381.964,
+     "conf": 0.799
+    },
+    {
+     "w": "are",
+     "start": 381.984,
+     "end": 382.065,
+     "conf": 0.844
+    },
+    {
+     "w": "pushed",
+     "start": 382.085,
+     "end": 382.385,
+     "conf": 0.935
+    },
+    {
+     "w": "through",
+     "start": 382.526,
+     "end": 382.766,
+     "conf": 0.808
+    },
+    {
+     "w": "the",
+     "start": 382.806,
+     "end": 382.867,
+     "conf": 0.665
+    },
+    {
+     "w": "same",
+     "start": 382.967,
+     "end": 383.187,
+     "conf": 0.75
+    },
+    {
+     "w": "circuit",
+     "start": 383.267,
+     "end": 383.628,
+     "conf": 0.502
+    },
+    {
+     "w": "one",
+     "start": 383.789,
+     "end": 383.889,
+     "conf": 0.666
+    },
+    {
+     "w": "peaking",
+     "start": 383.949,
+     "end": 384.21,
+     "conf": 0.823
+    },
+    {
+     "w": "at",
+     "start": 384.23,
+     "end": 384.29,
+     "conf": 0.55
+    },
+    {
+     "w": "three",
+     "start": 384.31,
+     "end": 384.551,
+     "conf": 0.822
+    },
+    {
+     "w": "volts",
+     "start": 384.631,
+     "end": 384.911,
+     "conf": 0.797
+    },
+    {
+     "w": "the",
+     "start": 384.932,
+     "end": 385.152,
+     "conf": 0.666
+    },
+    {
+     "w": "other",
+     "start": 385.212,
+     "end": 385.353,
+     "conf": 0.827
+    },
+    {
+     "w": "at",
+     "start": 385.393,
+     "end": 385.453,
+     "conf": 0.498
+    },
+    {
+     "w": "four",
+     "start": 385.573,
+     "end": 385.774,
+     "conf": 0.708
+    },
+    {
+     "w": "volts",
+     "start": 385.854,
+     "end": 386.195,
+     "conf": 0.804
+    },
+    {
+     "w": "and",
+     "start": 386.215,
+     "end": 386.656,
+     "conf": 0.589
+    },
+    {
+     "w": "the",
+     "start": 386.676,
+     "end": 386.756,
+     "conf": 0.992
+    },
+    {
+     "w": "second",
+     "start": 386.836,
+     "end": 387.117,
+     "conf": 0.831
+    },
+    {
+     "w": "runs",
+     "start": 387.137,
+     "end": 387.317,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 387.337,
+     "end": 387.357,
+     "conf": 0.997
+    },
+    {
+     "w": "quarter",
+     "start": 387.438,
+     "end": 387.839,
+     "conf": 0.807
+    },
+    {
+     "w": "cycle",
+     "start": 387.899,
+     "end": 388.22,
+     "conf": 0.648
+    },
+    {
+     "w": "behind",
+     "start": 388.24,
+     "end": 388.52,
+     "conf": 0.866
+    },
+    {
+     "w": "the",
+     "start": 388.54,
+     "end": 388.621,
+     "conf": 0.935
+    },
+    {
+     "w": "first",
+     "start": 388.701,
+     "end": 389.062,
+     "conf": 0.723
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "What's the peak when they combine? You might say seven. It isn't, because they never peak at the same moment.",
+   "idea": false,
+   "start": 389.492,
+   "end": 394.638,
+   "words": [
+    {
+     "w": "what's",
+     "start": 389.492,
+     "end": 389.632,
+     "conf": 0.407
+    },
+    {
+     "w": "the",
+     "start": 389.652,
+     "end": 389.732,
+     "conf": 0.939
+    },
+    {
+     "w": "peak",
+     "start": 389.812,
+     "end": 390.053,
+     "conf": 0.715
+    },
+    {
+     "w": "when",
+     "start": 390.193,
+     "end": 390.293,
+     "conf": 0.999
+    },
+    {
+     "w": "they",
+     "start": 390.313,
+     "end": 390.433,
+     "conf": 0.892
+    },
+    {
+     "w": "combine",
+     "start": 390.493,
+     "end": 390.974,
+     "conf": 0.827
+    },
+    {
+     "w": "you",
+     "start": 390.994,
+     "end": 391.154,
+     "conf": 0.605
+    },
+    {
+     "w": "might",
+     "start": 391.174,
+     "end": 391.314,
+     "conf": 0.972
+    },
+    {
+     "w": "say",
+     "start": 391.334,
+     "end": 391.454,
+     "conf": 0.733
+    },
+    {
+     "w": "seven",
+     "start": 391.594,
+     "end": 391.835,
+     "conf": 0.793
+    },
+    {
+     "w": "it",
+     "start": 392.275,
+     "end": 392.335,
+     "conf": 0.995
+    },
+    {
+     "w": "isn't",
+     "start": 392.475,
+     "end": 392.656,
+     "conf": 0.633
+    },
+    {
+     "w": "because",
+     "start": 392.936,
+     "end": 393.156,
+     "conf": 0.855
+    },
+    {
+     "w": "they",
+     "start": 393.176,
+     "end": 393.276,
+     "conf": 0.999
+    },
+    {
+     "w": "never",
+     "start": 393.357,
+     "end": 393.537,
+     "conf": 0.526
+    },
+    {
+     "w": "peak",
+     "start": 393.657,
+     "end": 393.877,
+     "conf": 0.723
+    },
+    {
+     "w": "at",
+     "start": 393.937,
+     "end": 393.977,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 393.997,
+     "end": 394.057,
+     "conf": 0.999
+    },
+    {
+     "w": "same",
+     "start": 394.117,
+     "end": 394.298,
+     "conf": 0.751
+    },
+    {
+     "w": "moment",
+     "start": 394.358,
+     "end": 394.638,
+     "conf": 0.833
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "With arrows, a quarter cycle is a quarter turn. So the two waves are three and four i, at right angles.",
+   "idea": false,
+   "start": 395.048,
+   "end": 399.925,
+   "words": [
+    {
+     "w": "with",
+     "start": 395.048,
+     "end": 395.148,
+     "conf": 0.759
+    },
+    {
+     "w": "arrows",
+     "start": 395.209,
+     "end": 395.47,
+     "conf": 0.632
+    },
+    {
+     "w": "a",
+     "start": 395.49,
+     "end": 395.51,
+     "conf": 0.0
+    },
+    {
+     "w": "quarter",
+     "start": 395.59,
+     "end": 395.871,
+     "conf": 0.879
+    },
+    {
+     "w": "cycle",
+     "start": 395.931,
+     "end": 396.232,
+     "conf": 0.691
+    },
+    {
+     "w": "is",
+     "start": 396.312,
+     "end": 396.353,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 396.373,
+     "end": 396.393,
+     "conf": 0.995
+    },
+    {
+     "w": "quarter",
+     "start": 396.413,
+     "end": 396.734,
+     "conf": 0.818
+    },
+    {
+     "w": "turn",
+     "start": 396.754,
+     "end": 397.075,
+     "conf": 0.883
+    },
+    {
+     "w": "so",
+     "start": 397.476,
+     "end": 397.537,
+     "conf": 0.501
+    },
+    {
+     "w": "the",
+     "start": 397.557,
+     "end": 397.657,
+     "conf": 0.781
+    },
+    {
+     "w": "two",
+     "start": 397.677,
+     "end": 397.817,
+     "conf": 0.998
+    },
+    {
+     "w": "waves",
+     "start": 397.838,
+     "end": 398.139,
+     "conf": 0.959
+    },
+    {
+     "w": "are",
+     "start": 398.159,
+     "end": 398.259,
+     "conf": 0.742
+    },
+    {
+     "w": "three",
+     "start": 398.279,
+     "end": 398.48,
+     "conf": 0.939
+    },
+    {
+     "w": "and",
+     "start": 398.52,
+     "end": 398.58,
+     "conf": 0.292
+    },
+    {
+     "w": "four",
+     "start": 398.64,
+     "end": 398.801,
+     "conf": 0.69
+    },
+    {
+     "w": "i",
+     "start": 399.042,
+     "end": 399.062,
+     "conf": 0.631
+    },
+    {
+     "w": "at",
+     "start": 399.142,
+     "end": 399.202,
+     "conf": 0.996
+    },
+    {
+     "w": "right",
+     "start": 399.303,
+     "end": 399.503,
+     "conf": 0.787
+    },
+    {
+     "w": "angles",
+     "start": 399.584,
+     "end": 399.925,
+     "conf": 0.807
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "Add them, and the length is five. The combined wave peaks at exactly five volts.",
+   "idea": true,
+   "start": 400.355,
+   "end": 404.125,
+   "words": [
+    {
+     "w": "add",
+     "start": 400.355,
+     "end": 400.455,
+     "conf": 0.336
+    },
+    {
+     "w": "them",
+     "start": 400.475,
+     "end": 400.616,
+     "conf": 0.972
+    },
+    {
+     "w": "and",
+     "start": 400.636,
+     "end": 400.776,
+     "conf": 0.608
+    },
+    {
+     "w": "the",
+     "start": 400.796,
+     "end": 400.856,
+     "conf": 0.611
+    },
+    {
+     "w": "length",
+     "start": 400.876,
+     "end": 401.077,
+     "conf": 0.861
+    },
+    {
+     "w": "is",
+     "start": 401.117,
+     "end": 401.177,
+     "conf": 0.499
+    },
+    {
+     "w": "five",
+     "start": 401.277,
+     "end": 401.598,
+     "conf": 0.727
+    },
+    {
+     "w": "the",
+     "start": 401.618,
+     "end": 401.959,
+     "conf": 0.659
+    },
+    {
+     "w": "combined",
+     "start": 401.979,
+     "end": 402.36,
+     "conf": 0.991
+    },
+    {
+     "w": "wave",
+     "start": 402.38,
+     "end": 402.581,
+     "conf": 0.759
+    },
+    {
+     "w": "peaks",
+     "start": 402.621,
+     "end": 402.902,
+     "conf": 0.963
+    },
+    {
+     "w": "at",
+     "start": 403.022,
+     "end": 403.082,
+     "conf": 0.498
+    },
+    {
+     "w": "exactly",
+     "start": 403.102,
+     "end": 403.463,
+     "conf": 0.97
+    },
+    {
+     "w": "five",
+     "start": 403.563,
+     "end": 403.784,
+     "conf": 0.745
+    },
+    {
+     "w": "volts",
+     "start": 403.804,
+     "end": 404.125,
+     "conf": 0.921
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "Without complex numbers, you could still get that answer, but through pages of trigonometry. With them, it's one short addition.",
+   "idea": false,
+   "start": 405.175,
+   "end": 411.546,
+   "words": [
+    {
+     "w": "without",
+     "start": 405.175,
+     "end": 405.415,
+     "conf": 0.996
+    },
+    {
+     "w": "complex",
+     "start": 405.435,
+     "end": 405.796,
+     "conf": 1.0
+    },
+    {
+     "w": "numbers",
+     "start": 405.896,
+     "end": 406.237,
+     "conf": 0.985
+    },
+    {
+     "w": "you",
+     "start": 406.457,
+     "end": 406.537,
+     "conf": 0.999
+    },
+    {
+     "w": "could",
+     "start": 406.557,
+     "end": 406.678,
+     "conf": 0.975
+    },
+    {
+     "w": "still",
+     "start": 406.718,
+     "end": 406.898,
+     "conf": 1.0
+    },
+    {
+     "w": "get",
+     "start": 406.918,
+     "end": 406.998,
+     "conf": 0.999
+    },
+    {
+     "w": "that",
+     "start": 407.018,
+     "end": 407.139,
+     "conf": 0.797
+    },
+    {
+     "w": "answer",
+     "start": 407.219,
+     "end": 407.479,
+     "conf": 0.718
+    },
+    {
+     "w": "but",
+     "start": 407.72,
+     "end": 407.8,
+     "conf": 0.666
+    },
+    {
+     "w": "through",
+     "start": 407.82,
+     "end": 408.02,
+     "conf": 0.865
+    },
+    {
+     "w": "pages",
+     "start": 408.04,
+     "end": 408.401,
+     "conf": 0.833
+    },
+    {
+     "w": "of",
+     "start": 408.441,
+     "end": 408.501,
+     "conf": 0.999
+    },
+    {
+     "w": "trigonometry",
+     "start": 408.541,
+     "end": 409.102,
+     "conf": 0.907
+    },
+    {
+     "w": "with",
+     "start": 409.863,
+     "end": 410.004,
+     "conf": 0.999
+    },
+    {
+     "w": "them",
+     "start": 410.024,
+     "end": 410.164,
+     "conf": 0.971
+    },
+    {
+     "w": "it's",
+     "start": 410.625,
+     "end": 410.705,
+     "conf": 0.632
+    },
+    {
+     "w": "one",
+     "start": 410.865,
+     "end": 410.945,
+     "conf": 0.665
+    },
+    {
+     "w": "short",
+     "start": 411.005,
+     "end": 411.206,
+     "conf": 0.882
+    },
+    {
+     "w": "addition",
+     "start": 411.226,
+     "end": 411.546,
+     "conf": 0.886
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "Scale that up to a whole circuit, full of coils and capacitors that shift waves in time, and it's the difference between a page of algebra and something truly painful.",
+   "idea": false,
+   "start": 412.016,
+   "end": 420.594,
+   "words": [
+    {
+     "w": "scale",
+     "start": 412.016,
+     "end": 412.317,
+     "conf": 0.62
+    },
+    {
+     "w": "that",
+     "start": 412.377,
+     "end": 412.597,
+     "conf": 0.727
+    },
+    {
+     "w": "up",
+     "start": 412.678,
+     "end": 412.738,
+     "conf": 0.5
+    },
+    {
+     "w": "to",
+     "start": 412.798,
+     "end": 412.858,
+     "conf": 0.63
+    },
+    {
+     "w": "a",
+     "start": 412.918,
+     "end": 412.938,
+     "conf": 0.05
+    },
+    {
+     "w": "whole",
+     "start": 412.958,
+     "end": 413.179,
+     "conf": 0.829
+    },
+    {
+     "w": "circuit",
+     "start": 413.279,
+     "end": 413.68,
+     "conf": 0.519
+    },
+    {
+     "w": "full",
+     "start": 413.76,
+     "end": 413.92,
+     "conf": 0.813
+    },
+    {
+     "w": "of",
+     "start": 413.94,
+     "end": 414.0,
+     "conf": 0.999
+    },
+    {
+     "w": "coils",
+     "start": 414.081,
+     "end": 414.521,
+     "conf": 0.768
+    },
+    {
+     "w": "and",
+     "start": 414.541,
+     "end": 414.642,
+     "conf": 0.742
+    },
+    {
+     "w": "capacitors",
+     "start": 414.662,
+     "end": 415.323,
+     "conf": 0.81
+    },
+    {
+     "w": "that",
+     "start": 415.343,
+     "end": 415.504,
+     "conf": 0.666
+    },
+    {
+     "w": "shift",
+     "start": 415.604,
+     "end": 415.804,
+     "conf": 0.798
+    },
+    {
+     "w": "waves",
+     "start": 415.884,
+     "end": 416.185,
+     "conf": 0.8
+    },
+    {
+     "w": "in",
+     "start": 416.305,
+     "end": 416.365,
+     "conf": 0.5
+    },
+    {
+     "w": "time",
+     "start": 416.486,
+     "end": 416.846,
+     "conf": 0.766
+    },
+    {
+     "w": "and",
+     "start": 417.347,
+     "end": 417.408,
+     "conf": 0.344
+    },
+    {
+     "w": "it's",
+     "start": 417.428,
+     "end": 417.528,
+     "conf": 0.527
+    },
+    {
+     "w": "the",
+     "start": 417.548,
+     "end": 417.608,
+     "conf": 0.999
+    },
+    {
+     "w": "difference",
+     "start": 417.628,
+     "end": 417.989,
+     "conf": 0.908
+    },
+    {
+     "w": "between",
+     "start": 418.009,
+     "end": 418.289,
+     "conf": 1.0
+    },
+    {
+     "w": "a",
+     "start": 418.349,
+     "end": 418.37,
+     "conf": 0.001
+    },
+    {
+     "w": "page",
+     "start": 418.39,
+     "end": 418.65,
+     "conf": 1.0
+    },
+    {
+     "w": "of",
+     "start": 418.67,
+     "end": 418.73,
+     "conf": 0.999
+    },
+    {
+     "w": "algebra",
+     "start": 418.81,
+     "end": 419.151,
+     "conf": 0.627
+    },
+    {
+     "w": "and",
+     "start": 419.231,
+     "end": 419.291,
+     "conf": 0.665
+    },
+    {
+     "w": "something",
+     "start": 419.352,
+     "end": 419.692,
+     "conf": 0.865
+    },
+    {
+     "w": "truly",
+     "start": 419.772,
+     "end": 420.073,
+     "conf": 0.813
+    },
+    {
+     "w": "painful",
+     "start": 420.193,
+     "end": 420.594,
+     "conf": 0.857
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "Electrical engineers use this so much that they write the number as j, because i was already taken for current.",
+   "idea": false,
+   "start": 420.984,
+   "end": 426.623,
+   "words": [
+    {
+     "w": "electrical",
+     "start": 420.984,
+     "end": 421.405,
+     "conf": 0.911
+    },
+    {
+     "w": "engineers",
+     "start": 421.466,
+     "end": 421.867,
+     "conf": 0.894
+    },
+    {
+     "w": "use",
+     "start": 421.967,
+     "end": 422.068,
+     "conf": 0.699
+    },
+    {
+     "w": "this",
+     "start": 422.108,
+     "end": 422.248,
+     "conf": 0.998
+    },
+    {
+     "w": "so",
+     "start": 422.409,
+     "end": 422.489,
+     "conf": 0.5
+    },
+    {
+     "w": "much",
+     "start": 422.63,
+     "end": 422.931,
+     "conf": 0.731
+    },
+    {
+     "w": "that",
+     "start": 423.252,
+     "end": 423.352,
+     "conf": 0.961
+    },
+    {
+     "w": "they",
+     "start": 423.412,
+     "end": 423.512,
+     "conf": 0.75
+    },
+    {
+     "w": "write",
+     "start": 423.593,
+     "end": 423.793,
+     "conf": 0.812
+    },
+    {
+     "w": "the",
+     "start": 423.814,
+     "end": 423.894,
+     "conf": 0.88
+    },
+    {
+     "w": "number",
+     "start": 423.914,
+     "end": 424.135,
+     "conf": 0.935
+    },
+    {
+     "w": "as",
+     "start": 424.155,
+     "end": 424.255,
+     "conf": 0.542
+    },
+    {
+     "w": "j",
+     "start": 424.375,
+     "end": 424.395,
+     "conf": 0.0
+    },
+    {
+     "w": "because",
+     "start": 424.817,
+     "end": 425.118,
+     "conf": 1.0
+    },
+    {
+     "w": "i",
+     "start": 425.218,
+     "end": 425.238,
+     "conf": 0.99
+    },
+    {
+     "w": "was",
+     "start": 425.258,
+     "end": 425.339,
+     "conf": 0.995
+    },
+    {
+     "w": "already",
+     "start": 425.419,
+     "end": 425.64,
+     "conf": 0.876
+    },
+    {
+     "w": "taken",
+     "start": 425.74,
+     "end": 426.061,
+     "conf": 0.799
+    },
+    {
+     "w": "for",
+     "start": 426.141,
+     "end": 426.201,
+     "conf": 0.506
+    },
+    {
+     "w": "current",
+     "start": 426.282,
+     "end": 426.623,
+     "conf": 0.821
+    }
+   ]
+  },
+  {
+   "section": "Waves are turning arrows",
+   "act": "ACT FIVE — Why engineers need it",
+   "text": "Radio signals, audio processing, and the equations of quantum mechanics all rely on it as well, for the same basic reason. Things that oscillate are things that turn.",
+   "idea": true,
+   "start": 427.033,
+   "end": 435.655,
+   "words": [
+    {
+     "w": "radio",
+     "start": 427.033,
+     "end": 427.274,
+     "conf": 0.996
+    },
+    {
+     "w": "signals",
+     "start": 427.374,
+     "end": 427.775,
+     "conf": 0.875
+    },
+    {
+     "w": "audio",
+     "start": 427.915,
+     "end": 428.096,
+     "conf": 0.525
+    },
+    {
+     "w": "processing",
+     "start": 428.196,
+     "end": 428.737,
+     "conf": 0.889
+    },
+    {
+     "w": "and",
+     "start": 428.757,
+     "end": 428.998,
+     "conf": 0.098
+    },
+    {
+     "w": "the",
+     "start": 429.018,
+     "end": 429.078,
+     "conf": 0.997
+    },
+    {
+     "w": "equations",
+     "start": 429.098,
+     "end": 429.519,
+     "conf": 0.886
+    },
+    {
+     "w": "of",
+     "start": 429.539,
+     "end": 429.6,
+     "conf": 0.998
+    },
+    {
+     "w": "quantum",
+     "start": 429.66,
+     "end": 429.92,
+     "conf": 0.528
+    },
+    {
+     "w": "mechanics",
+     "start": 429.94,
+     "end": 430.402,
+     "conf": 0.97
+    },
+    {
+     "w": "all",
+     "start": 430.582,
+     "end": 430.682,
+     "conf": 0.659
+    },
+    {
+     "w": "rely",
+     "start": 430.743,
+     "end": 431.023,
+     "conf": 0.683
+    },
+    {
+     "w": "on",
+     "start": 431.103,
+     "end": 431.164,
+     "conf": 0.5
+    },
+    {
+     "w": "it",
+     "start": 431.224,
+     "end": 431.284,
+     "conf": 0.499
+    },
+    {
+     "w": "as",
+     "start": 431.344,
+     "end": 431.404,
+     "conf": 0.5
+    },
+    {
+     "w": "well",
+     "start": 431.484,
+     "end": 431.685,
+     "conf": 0.8
+    },
+    {
+     "w": "for",
+     "start": 431.986,
+     "end": 432.046,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 432.066,
+     "end": 432.126,
+     "conf": 0.999
+    },
+    {
+     "w": "same",
+     "start": 432.146,
+     "end": 432.367,
+     "conf": 0.673
+    },
+    {
+     "w": "basic",
+     "start": 432.387,
+     "end": 432.688,
+     "conf": 1.0
+    },
+    {
+     "w": "reason",
+     "start": 432.788,
+     "end": 433.089,
+     "conf": 0.833
+    },
+    {
+     "w": "things",
+     "start": 433.991,
+     "end": 434.171,
+     "conf": 0.805
+    },
+    {
+     "w": "that",
+     "start": 434.191,
+     "end": 434.292,
+     "conf": 0.967
+    },
+    {
+     "w": "oscillate",
+     "start": 434.392,
+     "end": 434.813,
+     "conf": 0.551
+    },
+    {
+     "w": "are",
+     "start": 434.893,
+     "end": 434.953,
+     "conf": 0.597
+    },
+    {
+     "w": "things",
+     "start": 434.973,
+     "end": 435.174,
+     "conf": 0.998
+    },
+    {
+     "w": "that",
+     "start": 435.194,
+     "end": 435.314,
+     "conf": 0.814
+    },
+    {
+     "w": "turn",
+     "start": 435.394,
+     "end": 435.655,
+     "conf": 0.753
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT SIX — Putting it together",
+   "text": "Why was anyone forced to accept it? Because a correct answer of four could only be reached by passing through the square root of a negative.",
+   "idea": false,
+   "start": 438.136,
+   "end": 445.067,
+   "words": [
+    {
+     "w": "why",
+     "start": 438.136,
+     "end": 438.256,
+     "conf": 0.673
+    },
+    {
+     "w": "was",
+     "start": 438.276,
+     "end": 438.376,
+     "conf": 0.998
+    },
+    {
+     "w": "anyone",
+     "start": 438.396,
+     "end": 438.657,
+     "conf": 0.97
+    },
+    {
+     "w": "forced",
+     "start": 438.757,
+     "end": 439.078,
+     "conf": 0.78
+    },
+    {
+     "w": "to",
+     "start": 439.098,
+     "end": 439.178,
+     "conf": 0.666
+    },
+    {
+     "w": "accept",
+     "start": 439.238,
+     "end": 439.638,
+     "conf": 0.832
+    },
+    {
+     "w": "it",
+     "start": 439.739,
+     "end": 439.819,
+     "conf": 0.5
+    },
+    {
+     "w": "because",
+     "start": 440.239,
+     "end": 440.44,
+     "conf": 0.851
+    },
+    {
+     "w": "a",
+     "start": 440.46,
+     "end": 440.48,
+     "conf": 0.997
+    },
+    {
+     "w": "correct",
+     "start": 440.5,
+     "end": 440.82,
+     "conf": 0.869
+    },
+    {
+     "w": "answer",
+     "start": 440.941,
+     "end": 441.121,
+     "conf": 0.693
+    },
+    {
+     "w": "of",
+     "start": 441.141,
+     "end": 441.201,
+     "conf": 0.903
+    },
+    {
+     "w": "four",
+     "start": 441.281,
+     "end": 441.461,
+     "conf": 0.374
+    },
+    {
+     "w": "could",
+     "start": 441.522,
+     "end": 441.662,
+     "conf": 0.994
+    },
+    {
+     "w": "only",
+     "start": 441.802,
+     "end": 441.922,
+     "conf": 0.749
+    },
+    {
+     "w": "be",
+     "start": 442.002,
+     "end": 442.042,
+     "conf": 0.5
+    },
+    {
+     "w": "reached",
+     "start": 442.143,
+     "end": 442.543,
+     "conf": 0.98
+    },
+    {
+     "w": "by",
+     "start": 443.224,
+     "end": 443.325,
+     "conf": 0.5
+    },
+    {
+     "w": "passing",
+     "start": 443.405,
+     "end": 443.725,
+     "conf": 0.857
+    },
+    {
+     "w": "through",
+     "start": 443.745,
+     "end": 443.926,
+     "conf": 0.942
+    },
+    {
+     "w": "the",
+     "start": 443.946,
+     "end": 444.026,
+     "conf": 0.929
+    },
+    {
+     "w": "square",
+     "start": 444.066,
+     "end": 444.286,
+     "conf": 0.599
+    },
+    {
+     "w": "root",
+     "start": 444.306,
+     "end": 444.446,
+     "conf": 0.903
+    },
+    {
+     "w": "of",
+     "start": 444.486,
+     "end": 444.547,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 444.567,
+     "end": 444.607,
+     "conf": 0.513
+    },
+    {
+     "w": "negative",
+     "start": 444.687,
+     "end": 445.067,
+     "conf": 0.875
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT SIX — Putting it together",
+   "text": "What is it? A quarter turn. And the point one step above zero, in a direction the number line never showed us.",
+   "idea": false,
+   "start": 445.477,
+   "end": 450.811,
+   "words": [
+    {
+     "w": "what",
+     "start": 445.477,
+     "end": 445.557,
+     "conf": 0.49
+    },
+    {
+     "w": "is",
+     "start": 445.577,
+     "end": 445.678,
+     "conf": 0.665
+    },
+    {
+     "w": "it",
+     "start": 445.718,
+     "end": 445.798,
+     "conf": 0.996
+    },
+    {
+     "w": "a",
+     "start": 446.199,
+     "end": 446.219,
+     "conf": 0.006
+    },
+    {
+     "w": "quarter",
+     "start": 446.279,
+     "end": 446.58,
+     "conf": 0.855
+    },
+    {
+     "w": "turn",
+     "start": 446.64,
+     "end": 446.841,
+     "conf": 0.731
+    },
+    {
+     "w": "and",
+     "start": 447.302,
+     "end": 447.362,
+     "conf": 0.653
+    },
+    {
+     "w": "the",
+     "start": 447.382,
+     "end": 447.442,
+     "conf": 0.63
+    },
+    {
+     "w": "point",
+     "start": 447.462,
+     "end": 447.703,
+     "conf": 0.936
+    },
+    {
+     "w": "one",
+     "start": 447.803,
+     "end": 447.903,
+     "conf": 0.679
+    },
+    {
+     "w": "step",
+     "start": 447.963,
+     "end": 448.164,
+     "conf": 1.0
+    },
+    {
+     "w": "above",
+     "start": 448.224,
+     "end": 448.425,
+     "conf": 0.798
+    },
+    {
+     "w": "zero",
+     "start": 448.505,
+     "end": 448.745,
+     "conf": 0.619
+    },
+    {
+     "w": "in",
+     "start": 449.206,
+     "end": 449.247,
+     "conf": 0.14
+    },
+    {
+     "w": "a",
+     "start": 449.267,
+     "end": 449.287,
+     "conf": 0.992
+    },
+    {
+     "w": "direction",
+     "start": 449.347,
+     "end": 449.708,
+     "conf": 0.866
+    },
+    {
+     "w": "the",
+     "start": 449.728,
+     "end": 449.808,
+     "conf": 0.742
+    },
+    {
+     "w": "number",
+     "start": 449.828,
+     "end": 450.049,
+     "conf": 0.957
+    },
+    {
+     "w": "line",
+     "start": 450.069,
+     "end": 450.249,
+     "conf": 0.867
+    },
+    {
+     "w": "never",
+     "start": 450.269,
+     "end": 450.43,
+     "conf": 0.998
+    },
+    {
+     "w": "showed",
+     "start": 450.45,
+     "end": 450.67,
+     "conf": 0.889
+    },
+    {
+     "w": "us",
+     "start": 450.73,
+     "end": 450.811,
+     "conf": 0.5
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT SIX — Putting it together",
+   "text": "Why is it useful? Because multiplying complex numbers rotates, and anything that oscillates can be treated as something rotating.",
+   "idea": true,
+   "start": 451.261,
+   "end": 457.946,
+   "words": [
+    {
+     "w": "why",
+     "start": 451.261,
+     "end": 451.382,
+     "conf": 0.968
+    },
+    {
+     "w": "is",
+     "start": 451.402,
+     "end": 451.462,
+     "conf": 0.96
+    },
+    {
+     "w": "it",
+     "start": 451.482,
+     "end": 451.542,
+     "conf": 0.974
+    },
+    {
+     "w": "useful",
+     "start": 451.622,
+     "end": 451.903,
+     "conf": 0.999
+    },
+    {
+     "w": "because",
+     "start": 452.385,
+     "end": 452.726,
+     "conf": 0.999
+    },
+    {
+     "w": "multiplying",
+     "start": 452.807,
+     "end": 453.389,
+     "conf": 0.967
+    },
+    {
+     "w": "complex",
+     "start": 453.449,
+     "end": 453.871,
+     "conf": 0.857
+    },
+    {
+     "w": "numbers",
+     "start": 454.011,
+     "end": 454.272,
+     "conf": 0.886
+    },
+    {
+     "w": "rotates",
+     "start": 454.372,
+     "end": 454.874,
+     "conf": 0.81
+    },
+    {
+     "w": "and",
+     "start": 455.236,
+     "end": 455.316,
+     "conf": 0.666
+    },
+    {
+     "w": "anything",
+     "start": 455.416,
+     "end": 455.758,
+     "conf": 0.977
+    },
+    {
+     "w": "that",
+     "start": 455.778,
+     "end": 455.898,
+     "conf": 0.798
+    },
+    {
+     "w": "oscillates",
+     "start": 455.978,
+     "end": 456.44,
+     "conf": 0.621
+    },
+    {
+     "w": "can",
+     "start": 456.46,
+     "end": 456.581,
+     "conf": 0.746
+    },
+    {
+     "w": "be",
+     "start": 456.601,
+     "end": 456.661,
+     "conf": 0.666
+    },
+    {
+     "w": "treated",
+     "start": 456.721,
+     "end": 457.002,
+     "conf": 0.964
+    },
+    {
+     "w": "as",
+     "start": 457.022,
+     "end": 457.102,
+     "conf": 0.998
+    },
+    {
+     "w": "something",
+     "start": 457.123,
+     "end": 457.404,
+     "conf": 0.867
+    },
+    {
+     "w": "rotating",
+     "start": 457.464,
+     "end": 457.946,
+     "conf": 0.756
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT SIX — Putting it together",
+   "text": "So try this with a pencil. Mark any point on a sheet of paper as a number, like two plus i, and multiply it by i four times.",
+   "idea": false,
+   "start": 458.935,
+   "end": 464.915,
+   "words": [
+    {
+     "w": "so",
+     "start": 458.935,
+     "end": 458.975,
+     "conf": 0.658
+    },
+    {
+     "w": "try",
+     "start": 459.015,
+     "end": 459.176,
+     "conf": 0.941
+    },
+    {
+     "w": "this",
+     "start": 459.216,
+     "end": 459.336,
+     "conf": 0.999
+    },
+    {
+     "w": "with",
+     "start": 459.377,
+     "end": 459.477,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 459.497,
+     "end": 459.517,
+     "conf": 0.995
+    },
+    {
+     "w": "pencil",
+     "start": 459.537,
+     "end": 459.898,
+     "conf": 0.788
+    },
+    {
+     "w": "mark",
+     "start": 460.219,
+     "end": 460.44,
+     "conf": 1.0
+    },
+    {
+     "w": "any",
+     "start": 460.56,
+     "end": 460.661,
+     "conf": 0.667
+    },
+    {
+     "w": "point",
+     "start": 460.741,
+     "end": 460.902,
+     "conf": 0.797
+    },
+    {
+     "w": "on",
+     "start": 460.922,
+     "end": 460.982,
+     "conf": 0.666
+    },
+    {
+     "w": "a",
+     "start": 461.002,
+     "end": 461.042,
+     "conf": 0.885
+    },
+    {
+     "w": "sheet",
+     "start": 461.082,
+     "end": 461.203,
+     "conf": 0.996
+    },
+    {
+     "w": "of",
+     "start": 461.223,
+     "end": 461.263,
+     "conf": 0.996
+    },
+    {
+     "w": "paper",
+     "start": 461.283,
+     "end": 461.564,
+     "conf": 0.996
+    },
+    {
+     "w": "as",
+     "start": 461.584,
+     "end": 461.644,
+     "conf": 0.625
+    },
+    {
+     "w": "a",
+     "start": 461.664,
+     "end": 461.684,
+     "conf": 0.98
+    },
+    {
+     "w": "number",
+     "start": 461.764,
+     "end": 462.005,
+     "conf": 0.942
+    },
+    {
+     "w": "like",
+     "start": 462.246,
+     "end": 462.386,
+     "conf": 0.782
+    },
+    {
+     "w": "two",
+     "start": 462.407,
+     "end": 462.567,
+     "conf": 0.147
+    },
+    {
+     "w": "plus",
+     "start": 462.587,
+     "end": 462.828,
+     "conf": 0.174
+    },
+    {
+     "w": "i",
+     "start": 463.069,
+     "end": 463.089,
+     "conf": 0.723
+    },
+    {
+     "w": "and",
+     "start": 463.37,
+     "end": 463.43,
+     "conf": 0.658
+    },
+    {
+     "w": "multiply",
+     "start": 463.49,
+     "end": 463.891,
+     "conf": 0.875
+    },
+    {
+     "w": "it",
+     "start": 463.932,
+     "end": 463.972,
+     "conf": 0.919
+    },
+    {
+     "w": "by",
+     "start": 463.992,
+     "end": 464.112,
+     "conf": 0.955
+    },
+    {
+     "w": "i",
+     "start": 464.293,
+     "end": 464.313,
+     "conf": 0.629
+    },
+    {
+     "w": "four",
+     "start": 464.413,
+     "end": 464.534,
+     "conf": 0.723
+    },
+    {
+     "w": "times",
+     "start": 464.594,
+     "end": 464.915,
+     "conf": 0.867
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT SIX — Putting it together",
+   "text": "Then plot each answer. You won't need anyone to tell you what i means. You'll watch your point walk around a circle and come home.",
+   "idea": true,
+   "start": 465.325,
+   "end": 471.607,
+   "words": [
+    {
+     "w": "then",
+     "start": 465.325,
+     "end": 465.405,
+     "conf": 0.257
+    },
+    {
+     "w": "plot",
+     "start": 465.486,
+     "end": 465.747,
+     "conf": 0.735
+    },
+    {
+     "w": "each",
+     "start": 465.887,
+     "end": 466.068,
+     "conf": 0.898
+    },
+    {
+     "w": "answer",
+     "start": 466.148,
+     "end": 466.449,
+     "conf": 0.753
+    },
+    {
+     "w": "you",
+     "start": 467.151,
+     "end": 467.212,
+     "conf": 0.998
+    },
+    {
+     "w": "won't",
+     "start": 467.232,
+     "end": 467.392,
+     "conf": 0.97
+    },
+    {
+     "w": "need",
+     "start": 467.453,
+     "end": 467.613,
+     "conf": 1.0
+    },
+    {
+     "w": "anyone",
+     "start": 467.673,
+     "end": 467.974,
+     "conf": 0.833
+    },
+    {
+     "w": "to",
+     "start": 467.994,
+     "end": 468.055,
+     "conf": 0.999
+    },
+    {
+     "w": "tell",
+     "start": 468.115,
+     "end": 468.255,
+     "conf": 0.758
+    },
+    {
+     "w": "you",
+     "start": 468.275,
+     "end": 468.356,
+     "conf": 0.994
+    },
+    {
+     "w": "what",
+     "start": 468.376,
+     "end": 468.496,
+     "conf": 0.999
+    },
+    {
+     "w": "i",
+     "start": 468.617,
+     "end": 468.637,
+     "conf": 0.0
+    },
+    {
+     "w": "means",
+     "start": 468.657,
+     "end": 469.018,
+     "conf": 0.999
+    },
+    {
+     "w": "you'll",
+     "start": 469.038,
+     "end": 469.58,
+     "conf": 0.18
+    },
+    {
+     "w": "watch",
+     "start": 469.6,
+     "end": 469.7,
+     "conf": 0.197
+    },
+    {
+     "w": "your",
+     "start": 469.721,
+     "end": 469.801,
+     "conf": 0.321
+    },
+    {
+     "w": "point",
+     "start": 469.821,
+     "end": 470.042,
+     "conf": 0.972
+    },
+    {
+     "w": "walk",
+     "start": 470.122,
+     "end": 470.242,
+     "conf": 0.749
+    },
+    {
+     "w": "around",
+     "start": 470.262,
+     "end": 470.443,
+     "conf": 0.984
+    },
+    {
+     "w": "a",
+     "start": 470.463,
+     "end": 470.483,
+     "conf": 0.993
+    },
+    {
+     "w": "circle",
+     "start": 470.563,
+     "end": 470.925,
+     "conf": 0.804
+    },
+    {
+     "w": "and",
+     "start": 471.065,
+     "end": 471.146,
+     "conf": 0.644
+    },
+    {
+     "w": "come",
+     "start": 471.206,
+     "end": 471.366,
+     "conf": 0.788
+    },
+    {
+     "w": "home",
+     "start": 471.427,
+     "end": 471.607,
+     "conf": 0.809
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT SIX — Putting it together",
+   "text": "Thanks for watching, and if this made a strange idea feel obvious, subscribe to ninety-nine percent from scratch.",
+   "idea": false,
+   "start": 472.617,
+   "end": 478.451,
+   "words": [
+    {
+     "w": "thanks",
+     "start": 472.617,
+     "end": 472.757,
+     "conf": 0.405
+    },
+    {
+     "w": "for",
+     "start": 472.777,
+     "end": 472.858,
+     "conf": 0.997
+    },
+    {
+     "w": "watching",
+     "start": 472.918,
+     "end": 473.259,
+     "conf": 0.871
+    },
+    {
+     "w": "and",
+     "start": 473.619,
+     "end": 473.68,
+     "conf": 0.586
+    },
+    {
+     "w": "if",
+     "start": 473.7,
+     "end": 473.78,
+     "conf": 0.666
+    },
+    {
+     "w": "this",
+     "start": 473.8,
+     "end": 473.98,
+     "conf": 0.8
+    },
+    {
+     "w": "made",
+     "start": 474.08,
+     "end": 474.281,
+     "conf": 0.746
+    },
+    {
+     "w": "a",
+     "start": 474.301,
+     "end": 474.341,
+     "conf": 0.497
+    },
+    {
+     "w": "strange",
+     "start": 474.461,
+     "end": 474.802,
+     "conf": 0.878
+    },
+    {
+     "w": "idea",
+     "start": 474.922,
+     "end": 475.143,
+     "conf": 0.705
+    },
+    {
+     "w": "feel",
+     "start": 475.243,
+     "end": 475.404,
+     "conf": 0.75
+    },
+    {
+     "w": "obvious",
+     "start": 475.504,
+     "end": 475.865,
+     "conf": 0.734
+    },
+    {
+     "w": "subscribe",
+     "start": 476.165,
+     "end": 476.687,
+     "conf": 0.885
+    },
+    {
+     "w": "to",
+     "start": 476.707,
+     "end": 476.767,
+     "conf": 0.997
+    },
+    {
+     "w": "ninety-nine",
+     "start": 476.947,
+     "end": 477.509,
+     "conf": 0.005
+    },
+    {
+     "w": "percent",
+     "start": 477.529,
+     "end": 477.829,
+     "conf": 0.767
+    },
+    {
+     "w": "from",
+     "start": 477.889,
+     "end": 478.01,
+     "conf": 0.749
+    },
+    {
+     "w": "scratch",
+     "start": 478.09,
+     "end": 478.451,
+     "conf": 0.828
+    }
+   ]
+  }
+ ]
+}

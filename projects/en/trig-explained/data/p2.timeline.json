@@ -1,0 +1,10518 @@
+{
+ "sections": [
+  {
+   "name": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "start": 0.02,
+   "end": 58.973
+  },
+  {
+   "name": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "start": 58.973,
+   "end": 118.844
+  },
+  {
+   "name": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "start": 118.844,
+   "end": 183.235
+  },
+  {
+   "name": "Past ninety degrees",
+   "act": "ACT TWO — One point on a circle",
+   "start": 183.235,
+   "end": 225.592
+  },
+  {
+   "name": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "start": 225.592,
+   "end": 296.136
+  },
+  {
+   "name": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "start": 296.136,
+   "end": 356.055
+  },
+  {
+   "name": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "start": 356.055,
+   "end": 412.42
+  },
+  {
+   "name": "Putting it together",
+   "act": "ACT FOUR — Putting it together",
+   "start": 412.42,
+   "end": 432.948
+  },
+  {
+   "name": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "start": 432.948,
+   "end": 462.919
+  }
+ ],
+ "lines": [
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "Suppose you want the height of a tall tree, and you only have a tape measure.",
+   "idea": false,
+   "start": 0.02,
+   "end": 3.489,
+   "words": [
+    {
+     "w": "suppose",
+     "start": 0.02,
+     "end": 0.341,
+     "conf": 0.875
+    },
+    {
+     "w": "you",
+     "start": 0.361,
+     "end": 0.421,
+     "conf": 0.998
+    },
+    {
+     "w": "want",
+     "start": 0.461,
+     "end": 0.582,
+     "conf": 0.978
+    },
+    {
+     "w": "the",
+     "start": 0.602,
+     "end": 0.682,
+     "conf": 0.998
+    },
+    {
+     "w": "height",
+     "start": 0.762,
+     "end": 1.043,
+     "conf": 0.793
+    },
+    {
+     "w": "of",
+     "start": 1.103,
+     "end": 1.143,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 1.163,
+     "end": 1.183,
+     "conf": 0.996
+    },
+    {
+     "w": "tall",
+     "start": 1.263,
+     "end": 1.464,
+     "conf": 0.487
+    },
+    {
+     "w": "tree",
+     "start": 1.564,
+     "end": 1.805,
+     "conf": 0.712
+    },
+    {
+     "w": "and",
+     "start": 2.226,
+     "end": 2.306,
+     "conf": 0.661
+    },
+    {
+     "w": "you",
+     "start": 2.326,
+     "end": 2.426,
+     "conf": 0.905
+    },
+    {
+     "w": "only",
+     "start": 2.487,
+     "end": 2.627,
+     "conf": 0.995
+    },
+    {
+     "w": "have",
+     "start": 2.687,
+     "end": 2.787,
+     "conf": 0.642
+    },
+    {
+     "w": "a",
+     "start": 2.807,
+     "end": 2.827,
+     "conf": 0.99
+    },
+    {
+     "w": "tape",
+     "start": 2.928,
+     "end": 3.168,
+     "conf": 0.706
+    },
+    {
+     "w": "measure",
+     "start": 3.188,
+     "end": 3.489,
+     "conf": 0.963
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "You can't reach the top, but you can walk away from it along the ground. Say, twenty meters.",
+   "idea": false,
+   "start": 3.879,
+   "end": 8.054,
+   "words": [
+    {
+     "w": "you",
+     "start": 3.879,
+     "end": 3.959,
+     "conf": 0.986
+    },
+    {
+     "w": "can't",
+     "start": 3.979,
+     "end": 4.2,
+     "conf": 0.878
+    },
+    {
+     "w": "reach",
+     "start": 4.24,
+     "end": 4.401,
+     "conf": 0.995
+    },
+    {
+     "w": "the",
+     "start": 4.421,
+     "end": 4.501,
+     "conf": 0.744
+    },
+    {
+     "w": "top",
+     "start": 4.561,
+     "end": 4.722,
+     "conf": 1.0
+    },
+    {
+     "w": "but",
+     "start": 4.742,
+     "end": 4.842,
+     "conf": 0.747
+    },
+    {
+     "w": "you",
+     "start": 4.863,
+     "end": 4.923,
+     "conf": 0.998
+    },
+    {
+     "w": "can",
+     "start": 4.943,
+     "end": 5.043,
+     "conf": 0.955
+    },
+    {
+     "w": "walk",
+     "start": 5.063,
+     "end": 5.224,
+     "conf": 0.998
+    },
+    {
+     "w": "away",
+     "start": 5.284,
+     "end": 5.445,
+     "conf": 0.75
+    },
+    {
+     "w": "from",
+     "start": 5.505,
+     "end": 5.605,
+     "conf": 0.75
+    },
+    {
+     "w": "it",
+     "start": 5.665,
+     "end": 5.706,
+     "conf": 0.499
+    },
+    {
+     "w": "along",
+     "start": 5.786,
+     "end": 5.946,
+     "conf": 0.8
+    },
+    {
+     "w": "the",
+     "start": 5.966,
+     "end": 6.027,
+     "conf": 0.998
+    },
+    {
+     "w": "ground",
+     "start": 6.047,
+     "end": 6.368,
+     "conf": 0.999
+    },
+    {
+     "w": "say",
+     "start": 6.97,
+     "end": 7.131,
+     "conf": 0.847
+    },
+    {
+     "w": "twenty",
+     "start": 7.472,
+     "end": 7.713,
+     "conf": 0.604
+    },
+    {
+     "w": "meters",
+     "start": 7.773,
+     "end": 8.054,
+     "conf": 0.421
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "From there you look up at the very top, and you measure the angle: thirty-five degrees.",
+   "idea": false,
+   "start": 8.484,
+   "end": 12.622,
+   "words": [
+    {
+     "w": "from",
+     "start": 8.484,
+     "end": 8.625,
+     "conf": 0.999
+    },
+    {
+     "w": "there",
+     "start": 8.645,
+     "end": 8.826,
+     "conf": 0.99
+    },
+    {
+     "w": "you",
+     "start": 8.846,
+     "end": 8.966,
+     "conf": 0.674
+    },
+    {
+     "w": "look",
+     "start": 8.986,
+     "end": 9.107,
+     "conf": 1.0
+    },
+    {
+     "w": "up",
+     "start": 9.147,
+     "end": 9.227,
+     "conf": 1.0
+    },
+    {
+     "w": "at",
+     "start": 9.247,
+     "end": 9.308,
+     "conf": 0.663
+    },
+    {
+     "w": "the",
+     "start": 9.328,
+     "end": 9.388,
+     "conf": 0.995
+    },
+    {
+     "w": "very",
+     "start": 9.408,
+     "end": 9.609,
+     "conf": 0.999
+    },
+    {
+     "w": "top",
+     "start": 9.669,
+     "end": 9.89,
+     "conf": 1.0
+    },
+    {
+     "w": "and",
+     "start": 10.232,
+     "end": 10.452,
+     "conf": 0.972
+    },
+    {
+     "w": "you",
+     "start": 10.513,
+     "end": 10.593,
+     "conf": 0.713
+    },
+    {
+     "w": "measure",
+     "start": 10.633,
+     "end": 10.834,
+     "conf": 0.756
+    },
+    {
+     "w": "the",
+     "start": 10.854,
+     "end": 10.934,
+     "conf": 0.938
+    },
+    {
+     "w": "angle",
+     "start": 11.035,
+     "end": 11.296,
+     "conf": 0.798
+    },
+    {
+     "w": "thirty-five",
+     "start": 11.316,
+     "end": 12.16,
+     "conf": 0.0
+    },
+    {
+     "w": "degrees",
+     "start": 12.18,
+     "end": 12.622,
+     "conf": 0.124
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "That's a right triangle, and you only know one of its sides. It doesn't look like enough.",
+   "idea": true,
+   "start": 13.072,
+   "end": 17.164,
+   "words": [
+    {
+     "w": "that's",
+     "start": 13.072,
+     "end": 13.293,
+     "conf": 0.514
+    },
+    {
+     "w": "a",
+     "start": 13.433,
+     "end": 13.453,
+     "conf": 0.004
+    },
+    {
+     "w": "right",
+     "start": 13.513,
+     "end": 13.694,
+     "conf": 0.861
+    },
+    {
+     "w": "triangle",
+     "start": 13.714,
+     "end": 14.175,
+     "conf": 0.878
+    },
+    {
+     "w": "and",
+     "start": 14.456,
+     "end": 14.516,
+     "conf": 0.664
+    },
+    {
+     "w": "you",
+     "start": 14.536,
+     "end": 14.616,
+     "conf": 0.997
+    },
+    {
+     "w": "only",
+     "start": 14.697,
+     "end": 14.797,
+     "conf": 0.724
+    },
+    {
+     "w": "know",
+     "start": 14.817,
+     "end": 14.978,
+     "conf": 0.834
+    },
+    {
+     "w": "one",
+     "start": 15.118,
+     "end": 15.198,
+     "conf": 0.743
+    },
+    {
+     "w": "of",
+     "start": 15.218,
+     "end": 15.278,
+     "conf": 0.999
+    },
+    {
+     "w": "its",
+     "start": 15.298,
+     "end": 15.419,
+     "conf": 0.999
+    },
+    {
+     "w": "sides",
+     "start": 15.499,
+     "end": 15.9,
+     "conf": 0.798
+    },
+    {
+     "w": "it",
+     "start": 16.221,
+     "end": 16.261,
+     "conf": 0.499
+    },
+    {
+     "w": "doesn't",
+     "start": 16.281,
+     "end": 16.482,
+     "conf": 0.902
+    },
+    {
+     "w": "look",
+     "start": 16.502,
+     "end": 16.622,
+     "conf": 1.0
+    },
+    {
+     "w": "like",
+     "start": 16.702,
+     "end": 16.843,
+     "conf": 0.743
+    },
+    {
+     "w": "enough",
+     "start": 16.863,
+     "end": 17.164,
+     "conf": 0.737
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "But now draw the same triangle on paper, small enough to measure. Same angles, so the same shape.",
+   "idea": false,
+   "start": 18.214,
+   "end": 23.034,
+   "words": [
+    {
+     "w": "but",
+     "start": 18.214,
+     "end": 18.274,
+     "conf": 0.57
+    },
+    {
+     "w": "now",
+     "start": 18.335,
+     "end": 18.475,
+     "conf": 0.887
+    },
+    {
+     "w": "draw",
+     "start": 18.535,
+     "end": 18.676,
+     "conf": 0.853
+    },
+    {
+     "w": "the",
+     "start": 18.716,
+     "end": 18.776,
+     "conf": 0.633
+    },
+    {
+     "w": "same",
+     "start": 18.837,
+     "end": 19.017,
+     "conf": 0.75
+    },
+    {
+     "w": "triangle",
+     "start": 19.078,
+     "end": 19.439,
+     "conf": 0.845
+    },
+    {
+     "w": "on",
+     "start": 19.459,
+     "end": 19.54,
+     "conf": 0.668
+    },
+    {
+     "w": "paper",
+     "start": 19.56,
+     "end": 19.861,
+     "conf": 0.996
+    },
+    {
+     "w": "small",
+     "start": 20.202,
+     "end": 20.423,
+     "conf": 0.999
+    },
+    {
+     "w": "enough",
+     "start": 20.443,
+     "end": 20.624,
+     "conf": 0.945
+    },
+    {
+     "w": "to",
+     "start": 20.644,
+     "end": 20.704,
+     "conf": 0.999
+    },
+    {
+     "w": "measure",
+     "start": 20.765,
+     "end": 21.046,
+     "conf": 0.858
+    },
+    {
+     "w": "same",
+     "start": 21.508,
+     "end": 21.688,
+     "conf": 0.714
+    },
+    {
+     "w": "angles",
+     "start": 21.749,
+     "end": 22.09,
+     "conf": 0.819
+    },
+    {
+     "w": "so",
+     "start": 22.331,
+     "end": 22.371,
+     "conf": 0.493
+    },
+    {
+     "w": "the",
+     "start": 22.452,
+     "end": 22.512,
+     "conf": 0.603
+    },
+    {
+     "w": "same",
+     "start": 22.592,
+     "end": 22.793,
+     "conf": 0.798
+    },
+    {
+     "w": "shape",
+     "start": 22.893,
+     "end": 23.034,
+     "conf": 0.388
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "Your little triangle is a scale model of the real one, which means its proportions are exactly the same.",
+   "idea": false,
+   "start": 23.424,
+   "end": 28.595,
+   "words": [
+    {
+     "w": "your",
+     "start": 23.424,
+     "end": 23.504,
+     "conf": 0.559
+    },
+    {
+     "w": "little",
+     "start": 23.524,
+     "end": 23.705,
+     "conf": 0.999
+    },
+    {
+     "w": "triangle",
+     "start": 23.765,
+     "end": 24.206,
+     "conf": 0.864
+    },
+    {
+     "w": "is",
+     "start": 24.286,
+     "end": 24.326,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 24.386,
+     "end": 24.406,
+     "conf": 0.001
+    },
+    {
+     "w": "scale",
+     "start": 24.526,
+     "end": 24.827,
+     "conf": 0.669
+    },
+    {
+     "w": "model",
+     "start": 24.847,
+     "end": 25.128,
+     "conf": 0.812
+    },
+    {
+     "w": "of",
+     "start": 25.208,
+     "end": 25.248,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 25.268,
+     "end": 25.348,
+     "conf": 0.749
+    },
+    {
+     "w": "real",
+     "start": 25.448,
+     "end": 25.649,
+     "conf": 0.75
+    },
+    {
+     "w": "one",
+     "start": 25.769,
+     "end": 25.889,
+     "conf": 0.666
+    },
+    {
+     "w": "which",
+     "start": 26.23,
+     "end": 26.37,
+     "conf": 0.596
+    },
+    {
+     "w": "means",
+     "start": 26.41,
+     "end": 26.671,
+     "conf": 0.999
+    },
+    {
+     "w": "its",
+     "start": 26.851,
+     "end": 26.931,
+     "conf": 0.666
+    },
+    {
+     "w": "proportions",
+     "start": 26.951,
+     "end": 27.613,
+     "conf": 0.918
+    },
+    {
+     "w": "are",
+     "start": 27.693,
+     "end": 27.753,
+     "conf": 0.664
+    },
+    {
+     "w": "exactly",
+     "start": 27.773,
+     "end": 28.154,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 28.174,
+     "end": 28.274,
+     "conf": 0.666
+    },
+    {
+     "w": "same",
+     "start": 28.374,
+     "end": 28.595,
+     "conf": 0.749
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "On paper, the height comes out at about zero point seven of the base.",
+   "idea": false,
+   "start": 29.066,
+   "end": 32.206,
+   "words": [
+    {
+     "w": "on",
+     "start": 29.066,
+     "end": 29.106,
+     "conf": 0.499
+    },
+    {
+     "w": "paper",
+     "start": 29.186,
+     "end": 29.468,
+     "conf": 0.797
+    },
+    {
+     "w": "the",
+     "start": 29.529,
+     "end": 29.589,
+     "conf": 0.634
+    },
+    {
+     "w": "height",
+     "start": 29.67,
+     "end": 29.851,
+     "conf": 0.62
+    },
+    {
+     "w": "comes",
+     "start": 29.931,
+     "end": 30.132,
+     "conf": 0.759
+    },
+    {
+     "w": "out",
+     "start": 30.213,
+     "end": 30.334,
+     "conf": 0.664
+    },
+    {
+     "w": "at",
+     "start": 30.434,
+     "end": 30.475,
+     "conf": 0.476
+    },
+    {
+     "w": "about",
+     "start": 30.495,
+     "end": 30.716,
+     "conf": 0.941
+    },
+    {
+     "w": "zero",
+     "start": 30.736,
+     "end": 31.079,
+     "conf": 0.052
+    },
+    {
+     "w": "point",
+     "start": 31.099,
+     "end": 31.38,
+     "conf": 0.064
+    },
+    {
+     "w": "seven",
+     "start": 31.401,
+     "end": 31.703,
+     "conf": 0.019
+    },
+    {
+     "w": "of",
+     "start": 31.763,
+     "end": 31.803,
+     "conf": 0.491
+    },
+    {
+     "w": "the",
+     "start": 31.823,
+     "end": 31.884,
+     "conf": 0.981
+    },
+    {
+     "w": "base",
+     "start": 31.944,
+     "end": 32.206,
+     "conf": 0.736
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "So the real tree is zero point seven of twenty meters. About fourteen meters, and you never left the ground.",
+   "idea": true,
+   "start": 32.616,
+   "end": 38.186,
+   "words": [
+    {
+     "w": "so",
+     "start": 32.616,
+     "end": 32.676,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 32.736,
+     "end": 32.796,
+     "conf": 0.998
+    },
+    {
+     "w": "real",
+     "start": 32.836,
+     "end": 33.037,
+     "conf": 1.0
+    },
+    {
+     "w": "tree",
+     "start": 33.077,
+     "end": 33.297,
+     "conf": 0.92
+    },
+    {
+     "w": "is",
+     "start": 33.498,
+     "end": 33.538,
+     "conf": 0.496
+    },
+    {
+     "w": "zero",
+     "start": 33.738,
+     "end": 33.898,
+     "conf": 0.065
+    },
+    {
+     "w": "point",
+     "start": 33.918,
+     "end": 34.219,
+     "conf": 0.106
+    },
+    {
+     "w": "seven",
+     "start": 34.239,
+     "end": 34.56,
+     "conf": 0.087
+    },
+    {
+     "w": "of",
+     "start": 34.58,
+     "end": 34.66,
+     "conf": 0.9
+    },
+    {
+     "w": "twenty",
+     "start": 34.72,
+     "end": 35.021,
+     "conf": 0.775
+    },
+    {
+     "w": "meters",
+     "start": 35.101,
+     "end": 35.441,
+     "conf": 0.72
+    },
+    {
+     "w": "about",
+     "start": 35.862,
+     "end": 36.042,
+     "conf": 0.798
+    },
+    {
+     "w": "fourteen",
+     "start": 36.063,
+     "end": 36.503,
+     "conf": 0.126
+    },
+    {
+     "w": "meters",
+     "start": 36.563,
+     "end": 36.904,
+     "conf": 0.651
+    },
+    {
+     "w": "and",
+     "start": 37.064,
+     "end": 37.124,
+     "conf": 0.664
+    },
+    {
+     "w": "you",
+     "start": 37.145,
+     "end": 37.245,
+     "conf": 0.794
+    },
+    {
+     "w": "never",
+     "start": 37.325,
+     "end": 37.525,
+     "conf": 0.552
+    },
+    {
+     "w": "left",
+     "start": 37.545,
+     "end": 37.746,
+     "conf": 0.852
+    },
+    {
+     "w": "the",
+     "start": 37.766,
+     "end": 37.846,
+     "conf": 0.999
+    },
+    {
+     "w": "ground",
+     "start": 37.866,
+     "end": 38.186,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "Here's what just happened, and it's the seed of the whole subject.",
+   "idea": false,
+   "start": 39.197,
+   "end": 42.126,
+   "words": [
+    {
+     "w": "here's",
+     "start": 39.197,
+     "end": 39.378,
+     "conf": 0.636
+    },
+    {
+     "w": "what",
+     "start": 39.398,
+     "end": 39.518,
+     "conf": 0.81
+    },
+    {
+     "w": "just",
+     "start": 39.578,
+     "end": 39.739,
+     "conf": 0.749
+    },
+    {
+     "w": "happened",
+     "start": 39.759,
+     "end": 40.14,
+     "conf": 0.982
+    },
+    {
+     "w": "and",
+     "start": 40.602,
+     "end": 40.662,
+     "conf": 0.661
+    },
+    {
+     "w": "it's",
+     "start": 40.682,
+     "end": 40.802,
+     "conf": 0.792
+    },
+    {
+     "w": "the",
+     "start": 40.822,
+     "end": 40.923,
+     "conf": 0.919
+    },
+    {
+     "w": "seed",
+     "start": 41.023,
+     "end": 41.224,
+     "conf": 0.681
+    },
+    {
+     "w": "of",
+     "start": 41.244,
+     "end": 41.304,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 41.324,
+     "end": 41.404,
+     "conf": 0.932
+    },
+    {
+     "w": "whole",
+     "start": 41.424,
+     "end": 41.585,
+     "conf": 0.919
+    },
+    {
+     "w": "subject",
+     "start": 41.665,
+     "end": 42.126,
+     "conf": 0.857
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "Fix the angle, and the proportions of a right triangle are fixed too, whatever its size.",
+   "idea": false,
+   "start": 42.716,
+   "end": 46.982,
+   "words": [
+    {
+     "w": "fix",
+     "start": 42.716,
+     "end": 42.876,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 42.957,
+     "end": 43.037,
+     "conf": 0.982
+    },
+    {
+     "w": "angle",
+     "start": 43.157,
+     "end": 43.417,
+     "conf": 0.8
+    },
+    {
+     "w": "and",
+     "start": 43.698,
+     "end": 43.778,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 43.798,
+     "end": 43.878,
+     "conf": 0.995
+    },
+    {
+     "w": "proportions",
+     "start": 43.898,
+     "end": 44.419,
+     "conf": 0.961
+    },
+    {
+     "w": "of",
+     "start": 44.439,
+     "end": 44.499,
+     "conf": 0.996
+    },
+    {
+     "w": "a",
+     "start": 44.559,
+     "end": 44.579,
+     "conf": 0.002
+    },
+    {
+     "w": "right",
+     "start": 44.639,
+     "end": 44.819,
+     "conf": 0.765
+    },
+    {
+     "w": "triangle",
+     "start": 44.839,
+     "end": 45.24,
+     "conf": 0.802
+    },
+    {
+     "w": "are",
+     "start": 45.26,
+     "end": 45.32,
+     "conf": 0.07
+    },
+    {
+     "w": "fixed",
+     "start": 45.34,
+     "end": 45.54,
+     "conf": 0.571
+    },
+    {
+     "w": "too",
+     "start": 45.56,
+     "end": 45.781,
+     "conf": 0.696
+    },
+    {
+     "w": "whatever",
+     "start": 46.101,
+     "end": 46.362,
+     "conf": 0.848
+    },
+    {
+     "w": "its",
+     "start": 46.422,
+     "end": 46.502,
+     "conf": 0.653
+    },
+    {
+     "w": "size",
+     "start": 46.582,
+     "end": 46.982,
+     "conf": 0.753
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "Double the triangle, and both sides double, so their ratio doesn't move.",
+   "idea": false,
+   "start": 47.413,
+   "end": 50.725,
+   "words": [
+    {
+     "w": "double",
+     "start": 47.413,
+     "end": 47.594,
+     "conf": 0.785
+    },
+    {
+     "w": "the",
+     "start": 47.614,
+     "end": 47.674,
+     "conf": 0.981
+    },
+    {
+     "w": "triangle",
+     "start": 47.694,
+     "end": 48.176,
+     "conf": 0.867
+    },
+    {
+     "w": "and",
+     "start": 48.236,
+     "end": 48.296,
+     "conf": 0.663
+    },
+    {
+     "w": "both",
+     "start": 48.336,
+     "end": 48.517,
+     "conf": 0.999
+    },
+    {
+     "w": "sides",
+     "start": 48.537,
+     "end": 48.798,
+     "conf": 0.837
+    },
+    {
+     "w": "double",
+     "start": 48.838,
+     "end": 49.139,
+     "conf": 0.856
+    },
+    {
+     "w": "so",
+     "start": 49.481,
+     "end": 49.541,
+     "conf": 0.499
+    },
+    {
+     "w": "their",
+     "start": 49.561,
+     "end": 49.701,
+     "conf": 0.485
+    },
+    {
+     "w": "ratio",
+     "start": 49.742,
+     "end": 50.063,
+     "conf": 0.55
+    },
+    {
+     "w": "doesn't",
+     "start": 50.163,
+     "end": 50.404,
+     "conf": 0.806
+    },
+    {
+     "w": "move",
+     "start": 50.464,
+     "end": 50.725,
+     "conf": 0.767
+    }
+   ]
+  },
+  {
+   "section": "A tree you can't climb",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "Every angle comes with its own unchanging numbers, and that is all trigonometry was at the start: a list of those numbers.",
+   "idea": true,
+   "start": 51.155,
+   "end": 57.253,
+   "words": [
+    {
+     "w": "every",
+     "start": 51.155,
+     "end": 51.316,
+     "conf": 0.944
+    },
+    {
+     "w": "angle",
+     "start": 51.396,
+     "end": 51.616,
+     "conf": 0.997
+    },
+    {
+     "w": "comes",
+     "start": 51.657,
+     "end": 51.937,
+     "conf": 0.999
+    },
+    {
+     "w": "with",
+     "start": 51.998,
+     "end": 52.098,
+     "conf": 0.999
+    },
+    {
+     "w": "its",
+     "start": 52.118,
+     "end": 52.218,
+     "conf": 0.999
+    },
+    {
+     "w": "own",
+     "start": 52.258,
+     "end": 52.399,
+     "conf": 0.78
+    },
+    {
+     "w": "unchanging",
+     "start": 52.499,
+     "end": 52.98,
+     "conf": 0.899
+    },
+    {
+     "w": "numbers",
+     "start": 53.0,
+     "end": 53.321,
+     "conf": 0.972
+    },
+    {
+     "w": "and",
+     "start": 53.482,
+     "end": 53.542,
+     "conf": 0.665
+    },
+    {
+     "w": "that",
+     "start": 53.562,
+     "end": 53.843,
+     "conf": 0.831
+    },
+    {
+     "w": "is",
+     "start": 54.164,
+     "end": 54.204,
+     "conf": 0.496
+    },
+    {
+     "w": "all",
+     "start": 54.284,
+     "end": 54.364,
+     "conf": 0.411
+    },
+    {
+     "w": "trigonometry",
+     "start": 54.425,
+     "end": 55.006,
+     "conf": 0.76
+    },
+    {
+     "w": "was",
+     "start": 55.227,
+     "end": 55.307,
+     "conf": 0.666
+    },
+    {
+     "w": "at",
+     "start": 55.327,
+     "end": 55.387,
+     "conf": 0.582
+    },
+    {
+     "w": "the",
+     "start": 55.408,
+     "end": 55.488,
+     "conf": 0.927
+    },
+    {
+     "w": "start",
+     "start": 55.508,
+     "end": 55.849,
+     "conf": 0.833
+    },
+    {
+     "w": "a",
+     "start": 56.31,
+     "end": 56.33,
+     "conf": 0.003
+    },
+    {
+     "w": "list",
+     "start": 56.39,
+     "end": 56.591,
+     "conf": 0.761
+    },
+    {
+     "w": "of",
+     "start": 56.631,
+     "end": 56.671,
+     "conf": 0.999
+    },
+    {
+     "w": "those",
+     "start": 56.691,
+     "end": 56.892,
+     "conf": 0.988
+    },
+    {
+     "w": "numbers",
+     "start": 56.952,
+     "end": 57.253,
+     "conf": 0.86
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "There are three sides, so there are three ratios worth naming.",
+   "idea": false,
+   "start": 58.973,
+   "end": 61.784,
+   "words": [
+    {
+     "w": "there",
+     "start": 58.973,
+     "end": 59.073,
+     "conf": 0.007
+    },
+    {
+     "w": "are",
+     "start": 59.094,
+     "end": 59.154,
+     "conf": 0.01
+    },
+    {
+     "w": "three",
+     "start": 59.174,
+     "end": 59.395,
+     "conf": 0.967
+    },
+    {
+     "w": "sides",
+     "start": 59.475,
+     "end": 59.897,
+     "conf": 0.778
+    },
+    {
+     "w": "so",
+     "start": 60.117,
+     "end": 60.198,
+     "conf": 0.999
+    },
+    {
+     "w": "there",
+     "start": 60.258,
+     "end": 60.358,
+     "conf": 0.793
+    },
+    {
+     "w": "are",
+     "start": 60.378,
+     "end": 60.459,
+     "conf": 0.925
+    },
+    {
+     "w": "three",
+     "start": 60.479,
+     "end": 60.7,
+     "conf": 0.938
+    },
+    {
+     "w": "ratios",
+     "start": 60.76,
+     "end": 61.201,
+     "conf": 0.668
+    },
+    {
+     "w": "worth",
+     "start": 61.262,
+     "end": 61.462,
+     "conf": 0.771
+    },
+    {
+     "w": "naming",
+     "start": 61.503,
+     "end": 61.784,
+     "conf": 0.948
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "The side across from our angle, divided by the longest side, is called the sine.",
+   "idea": false,
+   "start": 62.174,
+   "end": 65.938,
+   "words": [
+    {
+     "w": "the",
+     "start": 62.174,
+     "end": 62.235,
+     "conf": 0.0
+    },
+    {
+     "w": "side",
+     "start": 62.255,
+     "end": 62.436,
+     "conf": 0.725
+    },
+    {
+     "w": "across",
+     "start": 62.456,
+     "end": 62.697,
+     "conf": 0.913
+    },
+    {
+     "w": "from",
+     "start": 62.758,
+     "end": 62.858,
+     "conf": 0.751
+    },
+    {
+     "w": "our",
+     "start": 62.919,
+     "end": 63.02,
+     "conf": 0.709
+    },
+    {
+     "w": "angle",
+     "start": 63.1,
+     "end": 63.342,
+     "conf": 0.782
+    },
+    {
+     "w": "divided",
+     "start": 63.442,
+     "end": 63.764,
+     "conf": 0.855
+    },
+    {
+     "w": "by",
+     "start": 63.784,
+     "end": 63.885,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 63.905,
+     "end": 63.966,
+     "conf": 0.998
+    },
+    {
+     "w": "longest",
+     "start": 64.026,
+     "end": 64.328,
+     "conf": 0.871
+    },
+    {
+     "w": "side",
+     "start": 64.348,
+     "end": 64.67,
+     "conf": 0.807
+    },
+    {
+     "w": "is",
+     "start": 64.972,
+     "end": 65.032,
+     "conf": 0.5
+    },
+    {
+     "w": "called",
+     "start": 65.093,
+     "end": 65.354,
+     "conf": 0.792
+    },
+    {
+     "w": "the",
+     "start": 65.415,
+     "end": 65.475,
+     "conf": 0.611
+    },
+    {
+     "w": "sine",
+     "start": 65.596,
+     "end": 65.938,
+     "conf": 0.7
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "The side next to our angle, divided by the longest side, is the cosine.",
+   "idea": false,
+   "start": 66.348,
+   "end": 69.76,
+   "words": [
+    {
+     "w": "the",
+     "start": 66.348,
+     "end": 66.408,
+     "conf": 0.002
+    },
+    {
+     "w": "side",
+     "start": 66.448,
+     "end": 66.709,
+     "conf": 0.745
+    },
+    {
+     "w": "next",
+     "start": 66.729,
+     "end": 66.91,
+     "conf": 0.92
+    },
+    {
+     "w": "to",
+     "start": 66.93,
+     "end": 66.99,
+     "conf": 0.73
+    },
+    {
+     "w": "our",
+     "start": 67.091,
+     "end": 67.191,
+     "conf": 0.655
+    },
+    {
+     "w": "angle",
+     "start": 67.352,
+     "end": 67.632,
+     "conf": 0.797
+    },
+    {
+     "w": "divided",
+     "start": 67.713,
+     "end": 68.014,
+     "conf": 0.853
+    },
+    {
+     "w": "by",
+     "start": 68.034,
+     "end": 68.134,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 68.154,
+     "end": 68.214,
+     "conf": 0.997
+    },
+    {
+     "w": "longest",
+     "start": 68.295,
+     "end": 68.596,
+     "conf": 0.817
+    },
+    {
+     "w": "side",
+     "start": 68.616,
+     "end": 68.897,
+     "conf": 0.899
+    },
+    {
+     "w": "is",
+     "start": 69.077,
+     "end": 69.138,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 69.158,
+     "end": 69.238,
+     "conf": 0.992
+    },
+    {
+     "w": "cosine",
+     "start": 69.258,
+     "end": 69.76,
+     "conf": 0.545
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "And across divided by next to, the one we just used on the tree, is the tangent.",
+   "idea": false,
+   "start": 70.15,
+   "end": 73.964,
+   "words": [
+    {
+     "w": "and",
+     "start": 70.15,
+     "end": 70.21,
+     "conf": 0.989
+    },
+    {
+     "w": "across",
+     "start": 70.23,
+     "end": 70.491,
+     "conf": 0.999
+    },
+    {
+     "w": "divided",
+     "start": 70.572,
+     "end": 70.933,
+     "conf": 0.871
+    },
+    {
+     "w": "by",
+     "start": 70.953,
+     "end": 71.053,
+     "conf": 0.997
+    },
+    {
+     "w": "next",
+     "start": 71.114,
+     "end": 71.395,
+     "conf": 0.973
+    },
+    {
+     "w": "to",
+     "start": 71.455,
+     "end": 71.535,
+     "conf": 0.298
+    },
+    {
+     "w": "the",
+     "start": 71.896,
+     "end": 71.957,
+     "conf": 0.997
+    },
+    {
+     "w": "one",
+     "start": 72.057,
+     "end": 72.137,
+     "conf": 0.666
+    },
+    {
+     "w": "we",
+     "start": 72.157,
+     "end": 72.218,
+     "conf": 0.994
+    },
+    {
+     "w": "just",
+     "start": 72.298,
+     "end": 72.438,
+     "conf": 0.745
+    },
+    {
+     "w": "used",
+     "start": 72.519,
+     "end": 72.639,
+     "conf": 0.748
+    },
+    {
+     "w": "on",
+     "start": 72.659,
+     "end": 72.719,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 72.739,
+     "end": 72.8,
+     "conf": 0.995
+    },
+    {
+     "w": "tree",
+     "start": 72.86,
+     "end": 73.04,
+     "conf": 0.708
+    },
+    {
+     "w": "is",
+     "start": 73.181,
+     "end": 73.261,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 73.281,
+     "end": 73.382,
+     "conf": 0.743
+    },
+    {
+     "w": "tangent",
+     "start": 73.502,
+     "end": 73.964,
+     "conf": 0.823
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "Textbooks call those same sides the opposite, the adjacent and the hypotenuse, and you may have met them as soh cah toa. Same ratios, longer names.",
+   "idea": true,
+   "start": 74.394,
+   "end": 81.869,
+   "words": [
+    {
+     "w": "textbooks",
+     "start": 74.394,
+     "end": 74.775,
+     "conf": 0.951
+    },
+    {
+     "w": "call",
+     "start": 74.795,
+     "end": 74.955,
+     "conf": 1.0
+    },
+    {
+     "w": "those",
+     "start": 74.975,
+     "end": 75.156,
+     "conf": 0.994
+    },
+    {
+     "w": "same",
+     "start": 75.196,
+     "end": 75.396,
+     "conf": 1.0
+    },
+    {
+     "w": "sides",
+     "start": 75.456,
+     "end": 75.737,
+     "conf": 0.992
+    },
+    {
+     "w": "the",
+     "start": 75.757,
+     "end": 75.837,
+     "conf": 0.984
+    },
+    {
+     "w": "opposite",
+     "start": 75.897,
+     "end": 76.258,
+     "conf": 0.886
+    },
+    {
+     "w": "the",
+     "start": 76.278,
+     "end": 76.378,
+     "conf": 0.748
+    },
+    {
+     "w": "adjacent",
+     "start": 76.398,
+     "end": 76.879,
+     "conf": 0.98
+    },
+    {
+     "w": "and",
+     "start": 76.899,
+     "end": 76.979,
+     "conf": 0.219
+    },
+    {
+     "w": "the",
+     "start": 76.999,
+     "end": 77.059,
+     "conf": 0.605
+    },
+    {
+     "w": "hypotenuse",
+     "start": 77.079,
+     "end": 77.761,
+     "conf": 0.807
+    },
+    {
+     "w": "and",
+     "start": 78.081,
+     "end": 78.141,
+     "conf": 0.705
+    },
+    {
+     "w": "you",
+     "start": 78.162,
+     "end": 78.222,
+     "conf": 0.999
+    },
+    {
+     "w": "may",
+     "start": 78.242,
+     "end": 78.342,
+     "conf": 0.995
+    },
+    {
+     "w": "have",
+     "start": 78.362,
+     "end": 78.462,
+     "conf": 0.997
+    },
+    {
+     "w": "met",
+     "start": 78.482,
+     "end": 78.602,
+     "conf": 0.947
+    },
+    {
+     "w": "them",
+     "start": 78.622,
+     "end": 78.743,
+     "conf": 0.813
+    },
+    {
+     "w": "as",
+     "start": 78.803,
+     "end": 78.883,
+     "conf": 0.499
+    },
+    {
+     "w": "soh",
+     "start": 78.983,
+     "end": 79.164,
+     "conf": 0.31
+    },
+    {
+     "w": "cah",
+     "start": 79.184,
+     "end": 79.384,
+     "conf": 0.391
+    },
+    {
+     "w": "toa",
+     "start": 79.464,
+     "end": 79.725,
+     "conf": 0.618
+    },
+    {
+     "w": "same",
+     "start": 80.526,
+     "end": 80.687,
+     "conf": 0.749
+    },
+    {
+     "w": "ratios",
+     "start": 80.707,
+     "end": 81.188,
+     "conf": 0.744
+    },
+    {
+     "w": "longer",
+     "start": 81.308,
+     "end": 81.548,
+     "conf": 0.837
+    },
+    {
+     "w": "names",
+     "start": 81.588,
+     "end": 81.869,
+     "conf": 0.824
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "Notice what those are not. Sine isn't a length, and it isn't a kind of angle.",
+   "idea": false,
+   "start": 82.899,
+   "end": 86.388,
+   "words": [
+    {
+     "w": "notice",
+     "start": 82.899,
+     "end": 83.1,
+     "conf": 0.6
+    },
+    {
+     "w": "what",
+     "start": 83.12,
+     "end": 83.22,
+     "conf": 0.994
+    },
+    {
+     "w": "those",
+     "start": 83.24,
+     "end": 83.38,
+     "conf": 0.991
+    },
+    {
+     "w": "are",
+     "start": 83.4,
+     "end": 83.481,
+     "conf": 0.889
+    },
+    {
+     "w": "not",
+     "start": 83.501,
+     "end": 83.741,
+     "conf": 0.94
+    },
+    {
+     "w": "sine",
+     "start": 84.363,
+     "end": 84.584,
+     "conf": 0.675
+    },
+    {
+     "w": "isn't",
+     "start": 84.604,
+     "end": 84.764,
+     "conf": 0.788
+    },
+    {
+     "w": "a",
+     "start": 84.784,
+     "end": 84.804,
+     "conf": 0.955
+    },
+    {
+     "w": "length",
+     "start": 84.884,
+     "end": 85.185,
+     "conf": 0.927
+    },
+    {
+     "w": "and",
+     "start": 85.426,
+     "end": 85.526,
+     "conf": 0.989
+    },
+    {
+     "w": "it",
+     "start": 85.546,
+     "end": 85.606,
+     "conf": 0.989
+    },
+    {
+     "w": "isn't",
+     "start": 85.666,
+     "end": 85.827,
+     "conf": 0.636
+    },
+    {
+     "w": "a",
+     "start": 85.847,
+     "end": 85.867,
+     "conf": 0.997
+    },
+    {
+     "w": "kind",
+     "start": 85.927,
+     "end": 86.047,
+     "conf": 0.672
+    },
+    {
+     "w": "of",
+     "start": 86.067,
+     "end": 86.108,
+     "conf": 0.975
+    },
+    {
+     "w": "angle",
+     "start": 86.188,
+     "end": 86.388,
+     "conf": 0.798
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "It's a plain number, a ratio, and it has no units at all.",
+   "idea": false,
+   "start": 86.778,
+   "end": 89.337,
+   "words": [
+    {
+     "w": "it's",
+     "start": 86.778,
+     "end": 86.859,
+     "conf": 0.018
+    },
+    {
+     "w": "a",
+     "start": 86.879,
+     "end": 86.899,
+     "conf": 0.006
+    },
+    {
+     "w": "plain",
+     "start": 86.919,
+     "end": 87.1,
+     "conf": 0.649
+    },
+    {
+     "w": "number",
+     "start": 87.161,
+     "end": 87.443,
+     "conf": 0.851
+    },
+    {
+     "w": "a",
+     "start": 87.564,
+     "end": 87.584,
+     "conf": 0.005
+    },
+    {
+     "w": "ratio",
+     "start": 87.644,
+     "end": 88.007,
+     "conf": 0.624
+    },
+    {
+     "w": "and",
+     "start": 88.188,
+     "end": 88.249,
+     "conf": 0.879
+    },
+    {
+     "w": "it",
+     "start": 88.269,
+     "end": 88.329,
+     "conf": 0.971
+    },
+    {
+     "w": "has",
+     "start": 88.349,
+     "end": 88.49,
+     "conf": 0.983
+    },
+    {
+     "w": "no",
+     "start": 88.551,
+     "end": 88.632,
+     "conf": 0.992
+    },
+    {
+     "w": "units",
+     "start": 88.813,
+     "end": 89.034,
+     "conf": 0.796
+    },
+    {
+     "w": "at",
+     "start": 89.055,
+     "end": 89.155,
+     "conf": 0.663
+    },
+    {
+     "w": "all",
+     "start": 89.236,
+     "end": 89.337,
+     "conf": 0.346
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "For thirty degrees that number is exactly one half, and we can even see why.",
+   "idea": false,
+   "start": 89.727,
+   "end": 93.375,
+   "words": [
+    {
+     "w": "for",
+     "start": 89.727,
+     "end": 89.807,
+     "conf": 0.993
+    },
+    {
+     "w": "thirty",
+     "start": 89.827,
+     "end": 90.108,
+     "conf": 0.498
+    },
+    {
+     "w": "degrees",
+     "start": 90.188,
+     "end": 90.469,
+     "conf": 0.798
+    },
+    {
+     "w": "that",
+     "start": 90.489,
+     "end": 90.609,
+     "conf": 0.997
+    },
+    {
+     "w": "number",
+     "start": 90.629,
+     "end": 90.849,
+     "conf": 0.964
+    },
+    {
+     "w": "is",
+     "start": 90.869,
+     "end": 90.95,
+     "conf": 0.666
+    },
+    {
+     "w": "exactly",
+     "start": 90.97,
+     "end": 91.39,
+     "conf": 0.874
+    },
+    {
+     "w": "one",
+     "start": 91.511,
+     "end": 91.611,
+     "conf": 0.658
+    },
+    {
+     "w": "half",
+     "start": 91.631,
+     "end": 91.851,
+     "conf": 0.754
+    },
+    {
+     "w": "and",
+     "start": 92.312,
+     "end": 92.373,
+     "conf": 0.665
+    },
+    {
+     "w": "we",
+     "start": 92.393,
+     "end": 92.453,
+     "conf": 0.999
+    },
+    {
+     "w": "can",
+     "start": 92.513,
+     "end": 92.613,
+     "conf": 0.748
+    },
+    {
+     "w": "even",
+     "start": 92.673,
+     "end": 92.813,
+     "conf": 0.761
+    },
+    {
+     "w": "see",
+     "start": 92.934,
+     "end": 93.054,
+     "conf": 0.666
+    },
+    {
+     "w": "why",
+     "start": 93.134,
+     "end": 93.375,
+     "conf": 0.634
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "Take a triangle with three equal sides, and cut it straight down the middle.",
+   "idea": false,
+   "start": 93.825,
+   "end": 97.263,
+   "words": [
+    {
+     "w": "take",
+     "start": 93.825,
+     "end": 93.946,
+     "conf": 0.944
+    },
+    {
+     "w": "a",
+     "start": 93.966,
+     "end": 93.986,
+     "conf": 0.997
+    },
+    {
+     "w": "triangle",
+     "start": 94.026,
+     "end": 94.428,
+     "conf": 0.92
+    },
+    {
+     "w": "with",
+     "start": 94.448,
+     "end": 94.589,
+     "conf": 0.989
+    },
+    {
+     "w": "three",
+     "start": 94.669,
+     "end": 94.911,
+     "conf": 0.796
+    },
+    {
+     "w": "equal",
+     "start": 95.051,
+     "end": 95.273,
+     "conf": 0.843
+    },
+    {
+     "w": "sides",
+     "start": 95.373,
+     "end": 95.735,
+     "conf": 0.829
+    },
+    {
+     "w": "and",
+     "start": 96.016,
+     "end": 96.117,
+     "conf": 0.973
+    },
+    {
+     "w": "cut",
+     "start": 96.157,
+     "end": 96.298,
+     "conf": 0.903
+    },
+    {
+     "w": "it",
+     "start": 96.358,
+     "end": 96.398,
+     "conf": 0.5
+    },
+    {
+     "w": "straight",
+     "start": 96.499,
+     "end": 96.76,
+     "conf": 0.792
+    },
+    {
+     "w": "down",
+     "start": 96.82,
+     "end": 96.961,
+     "conf": 0.75
+    },
+    {
+     "w": "the",
+     "start": 96.981,
+     "end": 97.042,
+     "conf": 0.998
+    },
+    {
+     "w": "middle",
+     "start": 97.062,
+     "end": 97.263,
+     "conf": 0.831
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "The short side is now half of the long side, and the angle across from it is thirty degrees. So the sine of thirty is one half. No memorizing needed.",
+   "idea": true,
+   "start": 97.653,
+   "end": 105.11,
+   "words": [
+    {
+     "w": "the",
+     "start": 97.653,
+     "end": 97.713,
+     "conf": 0.0
+    },
+    {
+     "w": "short",
+     "start": 97.733,
+     "end": 97.934,
+     "conf": 0.984
+    },
+    {
+     "w": "side",
+     "start": 98.014,
+     "end": 98.234,
+     "conf": 0.735
+    },
+    {
+     "w": "is",
+     "start": 98.254,
+     "end": 98.335,
+     "conf": 0.665
+    },
+    {
+     "w": "now",
+     "start": 98.355,
+     "end": 98.515,
+     "conf": 0.792
+    },
+    {
+     "w": "half",
+     "start": 98.595,
+     "end": 98.796,
+     "conf": 0.876
+    },
+    {
+     "w": "of",
+     "start": 98.856,
+     "end": 98.896,
+     "conf": 0.501
+    },
+    {
+     "w": "the",
+     "start": 98.916,
+     "end": 98.996,
+     "conf": 0.939
+    },
+    {
+     "w": "long",
+     "start": 99.036,
+     "end": 99.217,
+     "conf": 0.999
+    },
+    {
+     "w": "side",
+     "start": 99.297,
+     "end": 99.577,
+     "conf": 0.727
+    },
+    {
+     "w": "and",
+     "start": 99.718,
+     "end": 99.778,
+     "conf": 0.664
+    },
+    {
+     "w": "the",
+     "start": 99.798,
+     "end": 99.858,
+     "conf": 0.622
+    },
+    {
+     "w": "angle",
+     "start": 99.978,
+     "end": 100.179,
+     "conf": 0.793
+    },
+    {
+     "w": "across",
+     "start": 100.239,
+     "end": 100.519,
+     "conf": 0.833
+    },
+    {
+     "w": "from",
+     "start": 100.58,
+     "end": 100.68,
+     "conf": 0.762
+    },
+    {
+     "w": "it",
+     "start": 100.7,
+     "end": 100.78,
+     "conf": 0.666
+    },
+    {
+     "w": "is",
+     "start": 100.86,
+     "end": 100.92,
+     "conf": 0.499
+    },
+    {
+     "w": "thirty",
+     "start": 100.94,
+     "end": 101.381,
+     "conf": 0.215
+    },
+    {
+     "w": "degrees",
+     "start": 101.461,
+     "end": 101.842,
+     "conf": 0.516
+    },
+    {
+     "w": "so",
+     "start": 102.183,
+     "end": 102.223,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 102.283,
+     "end": 102.343,
+     "conf": 0.663
+    },
+    {
+     "w": "sine",
+     "start": 102.424,
+     "end": 102.604,
+     "conf": 0.558
+    },
+    {
+     "w": "of",
+     "start": 102.624,
+     "end": 102.664,
+     "conf": 0.988
+    },
+    {
+     "w": "thirty",
+     "start": 102.684,
+     "end": 102.925,
+     "conf": 0.243
+    },
+    {
+     "w": "is",
+     "start": 103.005,
+     "end": 103.045,
+     "conf": 0.462
+    },
+    {
+     "w": "one",
+     "start": 103.185,
+     "end": 103.286,
+     "conf": 0.643
+    },
+    {
+     "w": "half",
+     "start": 103.366,
+     "end": 103.626,
+     "conf": 0.763
+    },
+    {
+     "w": "no",
+     "start": 103.987,
+     "end": 104.047,
+     "conf": 0.518
+    },
+    {
+     "w": "memorizing",
+     "start": 104.248,
+     "end": 104.789,
+     "conf": 0.84
+    },
+    {
+     "w": "needed",
+     "start": 104.829,
+     "end": 105.11,
+     "conf": 0.812
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "So zero point five was the honest answer. Then where on earth does minus zero point nine eight eight come from?",
+   "idea": false,
+   "start": 106.099,
+   "end": 111.607,
+   "words": [
+    {
+     "w": "so",
+     "start": 106.099,
+     "end": 106.139,
+     "conf": 0.139
+    },
+    {
+     "w": "zero",
+     "start": 106.159,
+     "end": 106.359,
+     "conf": 0.077
+    },
+    {
+     "w": "point",
+     "start": 106.379,
+     "end": 106.58,
+     "conf": 0.036
+    },
+    {
+     "w": "five",
+     "start": 106.6,
+     "end": 107.0,
+     "conf": 0.011
+    },
+    {
+     "w": "was",
+     "start": 107.281,
+     "end": 107.361,
+     "conf": 0.664
+    },
+    {
+     "w": "the",
+     "start": 107.381,
+     "end": 107.461,
+     "conf": 0.746
+    },
+    {
+     "w": "honest",
+     "start": 107.521,
+     "end": 107.761,
+     "conf": 0.922
+    },
+    {
+     "w": "answer",
+     "start": 107.841,
+     "end": 108.102,
+     "conf": 0.646
+    },
+    {
+     "w": "then",
+     "start": 108.362,
+     "end": 108.522,
+     "conf": 0.67
+    },
+    {
+     "w": "where",
+     "start": 108.703,
+     "end": 108.923,
+     "conf": 0.848
+    },
+    {
+     "w": "on",
+     "start": 108.943,
+     "end": 109.043,
+     "conf": 0.665
+    },
+    {
+     "w": "earth",
+     "start": 109.103,
+     "end": 109.263,
+     "conf": 0.802
+    },
+    {
+     "w": "does",
+     "start": 109.283,
+     "end": 109.484,
+     "conf": 0.553
+    },
+    {
+     "w": "minus",
+     "start": 109.744,
+     "end": 110.045,
+     "conf": 0.564
+    },
+    {
+     "w": "zero",
+     "start": 110.065,
+     "end": 110.265,
+     "conf": 0.628
+    },
+    {
+     "w": "point",
+     "start": 110.345,
+     "end": 110.505,
+     "conf": 0.203
+    },
+    {
+     "w": "nine",
+     "start": 110.525,
+     "end": 110.766,
+     "conf": 0.006
+    },
+    {
+     "w": "eight",
+     "start": 110.786,
+     "end": 110.906,
+     "conf": 0.003
+    },
+    {
+     "w": "eight",
+     "start": 110.926,
+     "end": 111.106,
+     "conf": 0.012
+    },
+    {
+     "w": "come",
+     "start": 111.206,
+     "end": 111.406,
+     "conf": 0.743
+    },
+    {
+     "w": "from",
+     "start": 111.467,
+     "end": 111.607,
+     "conf": 0.732
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "A ratio of two lengths can't even be negative.",
+   "idea": false,
+   "start": 112.017,
+   "end": 114.005,
+   "words": [
+    {
+     "w": "a",
+     "start": 112.017,
+     "end": 112.037,
+     "conf": 0.976
+    },
+    {
+     "w": "ratio",
+     "start": 112.097,
+     "end": 112.338,
+     "conf": 0.573
+    },
+    {
+     "w": "of",
+     "start": 112.379,
+     "end": 112.439,
+     "conf": 0.979
+    },
+    {
+     "w": "two",
+     "start": 112.519,
+     "end": 112.66,
+     "conf": 0.463
+    },
+    {
+     "w": "lengths",
+     "start": 112.72,
+     "end": 112.981,
+     "conf": 0.556
+    },
+    {
+     "w": "can't",
+     "start": 113.001,
+     "end": 113.202,
+     "conf": 0.784
+    },
+    {
+     "w": "even",
+     "start": 113.282,
+     "end": 113.423,
+     "conf": 0.76
+    },
+    {
+     "w": "be",
+     "start": 113.463,
+     "end": 113.523,
+     "conf": 0.5
+    },
+    {
+     "w": "negative",
+     "start": 113.604,
+     "end": 114.005,
+     "conf": 0.85
+    }
+   ]
+  },
+  {
+   "section": "Three names",
+   "act": "ACT ONE — The number that refuses to change",
+   "text": "Something about this definition is too small.",
+   "idea": true,
+   "start": 114.475,
+   "end": 116.363,
+   "words": [
+    {
+     "w": "something",
+     "start": 114.475,
+     "end": 114.696,
+     "conf": 0.881
+    },
+    {
+     "w": "about",
+     "start": 114.716,
+     "end": 114.897,
+     "conf": 0.997
+    },
+    {
+     "w": "this",
+     "start": 114.917,
+     "end": 115.038,
+     "conf": 0.995
+    },
+    {
+     "w": "definition",
+     "start": 115.058,
+     "end": 115.58,
+     "conf": 0.915
+    },
+    {
+     "w": "is",
+     "start": 115.701,
+     "end": 115.741,
+     "conf": 0.497
+    },
+    {
+     "w": "too",
+     "start": 115.841,
+     "end": 116.002,
+     "conf": 0.385
+    },
+    {
+     "w": "small",
+     "start": 116.082,
+     "end": 116.363,
+     "conf": 0.99
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Try the sine of one hundred and twenty degrees.",
+   "idea": false,
+   "start": 118.844,
+   "end": 121.015,
+   "words": [
+    {
+     "w": "try",
+     "start": 118.844,
+     "end": 118.985,
+     "conf": 0.968
+    },
+    {
+     "w": "the",
+     "start": 119.005,
+     "end": 119.065,
+     "conf": 0.977
+    },
+    {
+     "w": "sine",
+     "start": 119.186,
+     "end": 119.568,
+     "conf": 0.711
+    },
+    {
+     "w": "of",
+     "start": 119.588,
+     "end": 119.648,
+     "conf": 0.98
+    },
+    {
+     "w": "one",
+     "start": 119.668,
+     "end": 119.849,
+     "conf": 0.011
+    },
+    {
+     "w": "hundred",
+     "start": 119.869,
+     "end": 120.11,
+     "conf": 0.009
+    },
+    {
+     "w": "and",
+     "start": 120.131,
+     "end": 120.211,
+     "conf": 0.039
+    },
+    {
+     "w": "twenty",
+     "start": 120.231,
+     "end": 120.533,
+     "conf": 0.066
+    },
+    {
+     "w": "degrees",
+     "start": 120.553,
+     "end": 121.015,
+     "conf": 0.239
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "A right triangle already spends ninety degrees on its corner, so the other two angles have to share what's left. One hundred and twenty simply doesn't fit.",
+   "idea": false,
+   "start": 121.425,
+   "end": 129.316,
+   "words": [
+    {
+     "w": "a",
+     "start": 121.425,
+     "end": 121.445,
+     "conf": 0.998
+    },
+    {
+     "w": "right",
+     "start": 121.545,
+     "end": 121.725,
+     "conf": 0.784
+    },
+    {
+     "w": "triangle",
+     "start": 121.745,
+     "end": 122.226,
+     "conf": 0.99
+    },
+    {
+     "w": "already",
+     "start": 122.346,
+     "end": 122.547,
+     "conf": 0.807
+    },
+    {
+     "w": "spends",
+     "start": 122.627,
+     "end": 122.867,
+     "conf": 0.826
+    },
+    {
+     "w": "ninety",
+     "start": 122.907,
+     "end": 123.207,
+     "conf": 0.043
+    },
+    {
+     "w": "degrees",
+     "start": 123.247,
+     "end": 123.568,
+     "conf": 0.677
+    },
+    {
+     "w": "on",
+     "start": 123.648,
+     "end": 123.688,
+     "conf": 0.499
+    },
+    {
+     "w": "its",
+     "start": 123.708,
+     "end": 123.808,
+     "conf": 0.989
+    },
+    {
+     "w": "corner",
+     "start": 123.888,
+     "end": 124.169,
+     "conf": 0.798
+    },
+    {
+     "w": "so",
+     "start": 124.309,
+     "end": 124.349,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 124.729,
+     "end": 124.79,
+     "conf": 0.334
+    },
+    {
+     "w": "other",
+     "start": 124.81,
+     "end": 124.97,
+     "conf": 0.832
+    },
+    {
+     "w": "two",
+     "start": 125.03,
+     "end": 125.15,
+     "conf": 0.666
+    },
+    {
+     "w": "angles",
+     "start": 125.25,
+     "end": 125.571,
+     "conf": 0.825
+    },
+    {
+     "w": "have",
+     "start": 125.711,
+     "end": 125.891,
+     "conf": 0.639
+    },
+    {
+     "w": "to",
+     "start": 125.951,
+     "end": 125.991,
+     "conf": 0.503
+    },
+    {
+     "w": "share",
+     "start": 126.131,
+     "end": 126.372,
+     "conf": 0.696
+    },
+    {
+     "w": "what's",
+     "start": 126.432,
+     "end": 126.612,
+     "conf": 0.535
+    },
+    {
+     "w": "left",
+     "start": 126.692,
+     "end": 126.952,
+     "conf": 0.791
+    },
+    {
+     "w": "one",
+     "start": 126.972,
+     "end": 127.613,
+     "conf": 0.002
+    },
+    {
+     "w": "hundred",
+     "start": 127.633,
+     "end": 127.854,
+     "conf": 0.001
+    },
+    {
+     "w": "and",
+     "start": 127.874,
+     "end": 127.934,
+     "conf": 0.001
+    },
+    {
+     "w": "twenty",
+     "start": 127.954,
+     "end": 128.294,
+     "conf": 0.032
+    },
+    {
+     "w": "simply",
+     "start": 128.494,
+     "end": 128.775,
+     "conf": 0.997
+    },
+    {
+     "w": "doesn't",
+     "start": 128.855,
+     "end": 129.095,
+     "conf": 0.763
+    },
+    {
+     "w": "fit",
+     "start": 129.115,
+     "end": 129.316,
+     "conf": 0.75
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "By our definition, the question has no answer. And yet the calculator says zero point eight six six, without hesitating.",
+   "idea": false,
+   "start": 129.766,
+   "end": 135.841,
+   "words": [
+    {
+     "w": "by",
+     "start": 129.766,
+     "end": 129.846,
+     "conf": 0.993
+    },
+    {
+     "w": "our",
+     "start": 129.866,
+     "end": 129.946,
+     "conf": 0.649
+    },
+    {
+     "w": "definition",
+     "start": 129.967,
+     "end": 130.428,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 130.468,
+     "end": 130.528,
+     "conf": 0.998
+    },
+    {
+     "w": "question",
+     "start": 130.548,
+     "end": 130.929,
+     "conf": 0.919
+    },
+    {
+     "w": "has",
+     "start": 130.969,
+     "end": 131.089,
+     "conf": 0.7
+    },
+    {
+     "w": "no",
+     "start": 131.109,
+     "end": 131.169,
+     "conf": 0.756
+    },
+    {
+     "w": "answer",
+     "start": 131.27,
+     "end": 131.55,
+     "conf": 0.846
+    },
+    {
+     "w": "and",
+     "start": 131.992,
+     "end": 132.092,
+     "conf": 0.998
+    },
+    {
+     "w": "yet",
+     "start": 132.112,
+     "end": 132.232,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 132.252,
+     "end": 132.312,
+     "conf": 0.999
+    },
+    {
+     "w": "calculator",
+     "start": 132.332,
+     "end": 132.914,
+     "conf": 0.902
+    },
+    {
+     "w": "says",
+     "start": 132.994,
+     "end": 133.215,
+     "conf": 0.746
+    },
+    {
+     "w": "zero",
+     "start": 133.235,
+     "end": 133.636,
+     "conf": 0.03
+    },
+    {
+     "w": "point",
+     "start": 133.656,
+     "end": 133.916,
+     "conf": 0.004
+    },
+    {
+     "w": "eight",
+     "start": 133.936,
+     "end": 134.117,
+     "conf": 0.001
+    },
+    {
+     "w": "six",
+     "start": 134.137,
+     "end": 134.357,
+     "conf": 0.027
+    },
+    {
+     "w": "six",
+     "start": 134.377,
+     "end": 134.698,
+     "conf": 0.061
+    },
+    {
+     "w": "without",
+     "start": 134.959,
+     "end": 135.26,
+     "conf": 0.866
+    },
+    {
+     "w": "hesitating",
+     "start": 135.36,
+     "end": 135.841,
+     "conf": 0.642
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "So the calculator must know a better definition than the one we just learned.",
+   "idea": true,
+   "start": 136.231,
+   "end": 139.898,
+   "words": [
+    {
+     "w": "so",
+     "start": 136.231,
+     "end": 136.311,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 136.351,
+     "end": 136.411,
+     "conf": 0.994
+    },
+    {
+     "w": "calculator",
+     "start": 136.472,
+     "end": 137.093,
+     "conf": 0.915
+    },
+    {
+     "w": "must",
+     "start": 137.193,
+     "end": 137.453,
+     "conf": 0.842
+    },
+    {
+     "w": "know",
+     "start": 137.534,
+     "end": 137.714,
+     "conf": 0.835
+    },
+    {
+     "w": "a",
+     "start": 137.834,
+     "end": 137.854,
+     "conf": 0.995
+    },
+    {
+     "w": "better",
+     "start": 137.894,
+     "end": 138.155,
+     "conf": 0.857
+    },
+    {
+     "w": "definition",
+     "start": 138.175,
+     "end": 138.656,
+     "conf": 0.999
+    },
+    {
+     "w": "than",
+     "start": 138.796,
+     "end": 138.896,
+     "conf": 0.897
+    },
+    {
+     "w": "the",
+     "start": 138.916,
+     "end": 138.977,
+     "conf": 0.994
+    },
+    {
+     "w": "one",
+     "start": 139.077,
+     "end": 139.177,
+     "conf": 0.665
+    },
+    {
+     "w": "we",
+     "start": 139.197,
+     "end": 139.277,
+     "conf": 0.987
+    },
+    {
+     "w": "just",
+     "start": 139.357,
+     "end": 139.538,
+     "conf": 0.751
+    },
+    {
+     "w": "learned",
+     "start": 139.618,
+     "end": 139.898,
+     "conf": 0.839
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Here it is, and it starts with a small trick.",
+   "idea": false,
+   "start": 140.928,
+   "end": 142.684,
+   "words": [
+    {
+     "w": "here",
+     "start": 140.928,
+     "end": 141.049,
+     "conf": 0.629
+    },
+    {
+     "w": "it",
+     "start": 141.09,
+     "end": 141.13,
+     "conf": 0.325
+    },
+    {
+     "w": "is",
+     "start": 141.17,
+     "end": 141.312,
+     "conf": 0.616
+    },
+    {
+     "w": "and",
+     "start": 141.513,
+     "end": 141.574,
+     "conf": 0.639
+    },
+    {
+     "w": "it",
+     "start": 141.594,
+     "end": 141.655,
+     "conf": 0.973
+    },
+    {
+     "w": "starts",
+     "start": 141.715,
+     "end": 141.937,
+     "conf": 0.794
+    },
+    {
+     "w": "with",
+     "start": 141.957,
+     "end": 142.058,
+     "conf": 0.907
+    },
+    {
+     "w": "a",
+     "start": 142.099,
+     "end": 142.119,
+     "conf": 0.002
+    },
+    {
+     "w": "small",
+     "start": 142.139,
+     "end": 142.381,
+     "conf": 0.851
+    },
+    {
+     "w": "trick",
+     "start": 142.442,
+     "end": 142.684,
+     "conf": 0.991
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Take our triangle and make the longest side exactly one.",
+   "idea": false,
+   "start": 143.094,
+   "end": 145.882,
+   "words": [
+    {
+     "w": "take",
+     "start": 143.094,
+     "end": 143.255,
+     "conf": 0.981
+    },
+    {
+     "w": "our",
+     "start": 143.295,
+     "end": 143.355,
+     "conf": 0.487
+    },
+    {
+     "w": "triangle",
+     "start": 143.375,
+     "end": 143.836,
+     "conf": 0.863
+    },
+    {
+     "w": "and",
+     "start": 143.917,
+     "end": 143.977,
+     "conf": 0.534
+    },
+    {
+     "w": "make",
+     "start": 143.997,
+     "end": 144.137,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 144.157,
+     "end": 144.237,
+     "conf": 0.988
+    },
+    {
+     "w": "longest",
+     "start": 144.278,
+     "end": 144.619,
+     "conf": 0.825
+    },
+    {
+     "w": "side",
+     "start": 144.679,
+     "end": 145.04,
+     "conf": 0.731
+    },
+    {
+     "w": "exactly",
+     "start": 145.2,
+     "end": 145.622,
+     "conf": 0.841
+    },
+    {
+     "w": "one",
+     "start": 145.762,
+     "end": 145.882,
+     "conf": 0.628
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Now dividing by the longest side does nothing, so the sine is simply the height of the triangle, and the cosine is simply its width.",
+   "idea": true,
+   "start": 146.273,
+   "end": 152.805,
+   "words": [
+    {
+     "w": "now",
+     "start": 146.273,
+     "end": 146.373,
+     "conf": 1.0
+    },
+    {
+     "w": "dividing",
+     "start": 146.393,
+     "end": 146.814,
+     "conf": 0.881
+    },
+    {
+     "w": "by",
+     "start": 146.874,
+     "end": 146.954,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 146.974,
+     "end": 147.075,
+     "conf": 0.749
+    },
+    {
+     "w": "longest",
+     "start": 147.155,
+     "end": 147.515,
+     "conf": 0.873
+    },
+    {
+     "w": "side",
+     "start": 147.616,
+     "end": 147.896,
+     "conf": 0.735
+    },
+    {
+     "w": "does",
+     "start": 147.916,
+     "end": 148.056,
+     "conf": 0.988
+    },
+    {
+     "w": "nothing",
+     "start": 148.157,
+     "end": 148.457,
+     "conf": 0.876
+    },
+    {
+     "w": "so",
+     "start": 148.557,
+     "end": 148.597,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 148.678,
+     "end": 148.738,
+     "conf": 0.662
+    },
+    {
+     "w": "sine",
+     "start": 148.818,
+     "end": 149.138,
+     "conf": 0.713
+    },
+    {
+     "w": "is",
+     "start": 149.199,
+     "end": 149.259,
+     "conf": 0.499
+    },
+    {
+     "w": "simply",
+     "start": 149.279,
+     "end": 149.539,
+     "conf": 0.857
+    },
+    {
+     "w": "the",
+     "start": 149.559,
+     "end": 149.659,
+     "conf": 0.792
+    },
+    {
+     "w": "height",
+     "start": 149.74,
+     "end": 149.94,
+     "conf": 0.775
+    },
+    {
+     "w": "of",
+     "start": 149.96,
+     "end": 150.02,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 150.04,
+     "end": 150.12,
+     "conf": 0.749
+    },
+    {
+     "w": "triangle",
+     "start": 150.2,
+     "end": 150.621,
+     "conf": 0.88
+    },
+    {
+     "w": "and",
+     "start": 151.142,
+     "end": 151.222,
+     "conf": 0.704
+    },
+    {
+     "w": "the",
+     "start": 151.242,
+     "end": 151.323,
+     "conf": 0.746
+    },
+    {
+     "w": "cosine",
+     "start": 151.343,
+     "end": 151.864,
+     "conf": 0.656
+    },
+    {
+     "w": "is",
+     "start": 151.924,
+     "end": 151.984,
+     "conf": 0.499
+    },
+    {
+     "w": "simply",
+     "start": 152.044,
+     "end": 152.284,
+     "conf": 0.833
+    },
+    {
+     "w": "its",
+     "start": 152.365,
+     "end": 152.445,
+     "conf": 0.662
+    },
+    {
+     "w": "width",
+     "start": 152.565,
+     "end": 152.805,
+     "conf": 0.614
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Next, stand that triangle at the center of a circle of radius one.",
+   "idea": false,
+   "start": 153.895,
+   "end": 157.228,
+   "words": [
+    {
+     "w": "next",
+     "start": 153.895,
+     "end": 154.257,
+     "conf": 0.927
+    },
+    {
+     "w": "stand",
+     "start": 154.437,
+     "end": 154.698,
+     "conf": 0.681
+    },
+    {
+     "w": "that",
+     "start": 154.718,
+     "end": 154.859,
+     "conf": 0.978
+    },
+    {
+     "w": "triangle",
+     "start": 154.919,
+     "end": 155.401,
+     "conf": 0.991
+    },
+    {
+     "w": "at",
+     "start": 155.461,
+     "end": 155.541,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 155.561,
+     "end": 155.642,
+     "conf": 0.989
+    },
+    {
+     "w": "center",
+     "start": 155.742,
+     "end": 156.003,
+     "conf": 0.808
+    },
+    {
+     "w": "of",
+     "start": 156.043,
+     "end": 156.083,
+     "conf": 0.99
+    },
+    {
+     "w": "a",
+     "start": 156.103,
+     "end": 156.123,
+     "conf": 0.991
+    },
+    {
+     "w": "circle",
+     "start": 156.244,
+     "end": 156.545,
+     "conf": 0.808
+    },
+    {
+     "w": "of",
+     "start": 156.565,
+     "end": 156.605,
+     "conf": 0.982
+    },
+    {
+     "w": "radius",
+     "start": 156.686,
+     "end": 157.027,
+     "conf": 0.831
+    },
+    {
+     "w": "one",
+     "start": 157.147,
+     "end": 157.228,
+     "conf": 0.361
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Its tip sits on the rim. Call that tip M.",
+   "idea": false,
+   "start": 157.618,
+   "end": 159.53,
+   "words": [
+    {
+     "w": "its",
+     "start": 157.618,
+     "end": 157.719,
+     "conf": 0.875
+    },
+    {
+     "w": "tip",
+     "start": 157.819,
+     "end": 157.96,
+     "conf": 0.664
+    },
+    {
+     "w": "sits",
+     "start": 158.061,
+     "end": 158.222,
+     "conf": 0.722
+    },
+    {
+     "w": "on",
+     "start": 158.262,
+     "end": 158.302,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 158.322,
+     "end": 158.383,
+     "conf": 0.992
+    },
+    {
+     "w": "rim",
+     "start": 158.443,
+     "end": 158.604,
+     "conf": 0.722
+    },
+    {
+     "w": "call",
+     "start": 158.805,
+     "end": 158.926,
+     "conf": 0.681
+    },
+    {
+     "w": "that",
+     "start": 158.946,
+     "end": 159.087,
+     "conf": 0.94
+    },
+    {
+     "w": "tip",
+     "start": 159.167,
+     "end": 159.308,
+     "conf": 0.635
+    },
+    {
+     "w": "m",
+     "start": 159.509,
+     "end": 159.53,
+     "conf": 0.961
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "As the angle opens, M slides along the rim, and the triangle's width and height just follow it.",
+   "idea": false,
+   "start": 160.301,
+   "end": 164.759,
+   "words": [
+    {
+     "w": "as",
+     "start": 160.301,
+     "end": 160.382,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 160.422,
+     "end": 160.502,
+     "conf": 0.998
+    },
+    {
+     "w": "angle",
+     "start": 160.583,
+     "end": 160.824,
+     "conf": 0.997
+    },
+    {
+     "w": "opens",
+     "start": 160.884,
+     "end": 161.265,
+     "conf": 1.0
+    },
+    {
+     "w": "m",
+     "start": 161.667,
+     "end": 161.687,
+     "conf": 0.996
+    },
+    {
+     "w": "slides",
+     "start": 161.827,
+     "end": 162.129,
+     "conf": 0.97
+    },
+    {
+     "w": "along",
+     "start": 162.149,
+     "end": 162.329,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 162.35,
+     "end": 162.41,
+     "conf": 0.997
+    },
+    {
+     "w": "rim",
+     "start": 162.47,
+     "end": 162.651,
+     "conf": 0.707
+    },
+    {
+     "w": "and",
+     "start": 162.872,
+     "end": 162.932,
+     "conf": 0.951
+    },
+    {
+     "w": "the",
+     "start": 162.952,
+     "end": 163.012,
+     "conf": 0.994
+    },
+    {
+     "w": "triangle's",
+     "start": 163.032,
+     "end": 163.514,
+     "conf": 0.752
+    },
+    {
+     "w": "width",
+     "start": 163.635,
+     "end": 163.795,
+     "conf": 0.596
+    },
+    {
+     "w": "and",
+     "start": 163.815,
+     "end": 163.916,
+     "conf": 0.725
+    },
+    {
+     "w": "height",
+     "start": 163.936,
+     "end": 164.137,
+     "conf": 0.751
+    },
+    {
+     "w": "just",
+     "start": 164.197,
+     "end": 164.357,
+     "conf": 0.748
+    },
+    {
+     "w": "follow",
+     "start": 164.458,
+     "end": 164.679,
+     "conf": 0.833
+    },
+    {
+     "w": "it",
+     "start": 164.699,
+     "end": 164.759,
+     "conf": 0.332
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "So the cosine is how far M is across, and the sine is how far M is up.",
+   "idea": true,
+   "start": 165.149,
+   "end": 168.339,
+   "words": [
+    {
+     "w": "so",
+     "start": 165.149,
+     "end": 165.189,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 165.229,
+     "end": 165.289,
+     "conf": 0.995
+    },
+    {
+     "w": "cosine",
+     "start": 165.33,
+     "end": 165.831,
+     "conf": 0.829
+    },
+    {
+     "w": "is",
+     "start": 165.851,
+     "end": 165.931,
+     "conf": 0.995
+    },
+    {
+     "w": "how",
+     "start": 165.952,
+     "end": 166.072,
+     "conf": 0.996
+    },
+    {
+     "w": "far",
+     "start": 166.112,
+     "end": 166.293,
+     "conf": 0.901
+    },
+    {
+     "w": "m",
+     "start": 166.393,
+     "end": 166.413,
+     "conf": 0.988
+    },
+    {
+     "w": "is",
+     "start": 166.433,
+     "end": 166.513,
+     "conf": 0.663
+    },
+    {
+     "w": "across",
+     "start": 166.533,
+     "end": 166.854,
+     "conf": 0.994
+    },
+    {
+     "w": "and",
+     "start": 166.874,
+     "end": 167.055,
+     "conf": 0.653
+    },
+    {
+     "w": "the",
+     "start": 167.075,
+     "end": 167.155,
+     "conf": 0.979
+    },
+    {
+     "w": "sine",
+     "start": 167.235,
+     "end": 167.496,
+     "conf": 0.622
+    },
+    {
+     "w": "is",
+     "start": 167.516,
+     "end": 167.597,
+     "conf": 0.992
+    },
+    {
+     "w": "how",
+     "start": 167.617,
+     "end": 167.717,
+     "conf": 0.987
+    },
+    {
+     "w": "far",
+     "start": 167.777,
+     "end": 167.918,
+     "conf": 0.671
+    },
+    {
+     "w": "m",
+     "start": 168.058,
+     "end": 168.078,
+     "conf": 0.979
+    },
+    {
+     "w": "is",
+     "start": 168.138,
+     "end": 168.198,
+     "conf": 0.5
+    },
+    {
+     "w": "up",
+     "start": 168.279,
+     "end": 168.339,
+     "conf": 0.499
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "That's the better definition. Cosine and sine are the two coordinates of one point on a circle.",
+   "idea": false,
+   "start": 169.369,
+   "end": 173.872,
+   "words": [
+    {
+     "w": "that's",
+     "start": 169.369,
+     "end": 169.49,
+     "conf": 0.383
+    },
+    {
+     "w": "the",
+     "start": 169.51,
+     "end": 169.59,
+     "conf": 0.748
+    },
+    {
+     "w": "better",
+     "start": 169.61,
+     "end": 169.831,
+     "conf": 0.857
+    },
+    {
+     "w": "definition",
+     "start": 169.852,
+     "end": 170.354,
+     "conf": 0.898
+    },
+    {
+     "w": "cosine",
+     "start": 171.058,
+     "end": 171.5,
+     "conf": 0.665
+    },
+    {
+     "w": "and",
+     "start": 171.52,
+     "end": 171.601,
+     "conf": 0.573
+    },
+    {
+     "w": "sine",
+     "start": 171.621,
+     "end": 171.802,
+     "conf": 0.385
+    },
+    {
+     "w": "are",
+     "start": 171.822,
+     "end": 171.882,
+     "conf": 0.24
+    },
+    {
+     "w": "the",
+     "start": 171.902,
+     "end": 171.962,
+     "conf": 0.002
+    },
+    {
+     "w": "two",
+     "start": 171.983,
+     "end": 172.103,
+     "conf": 0.996
+    },
+    {
+     "w": "coordinates",
+     "start": 172.164,
+     "end": 172.586,
+     "conf": 0.902
+    },
+    {
+     "w": "of",
+     "start": 172.606,
+     "end": 172.686,
+     "conf": 0.995
+    },
+    {
+     "w": "one",
+     "start": 172.887,
+     "end": 172.968,
+     "conf": 0.663
+    },
+    {
+     "w": "point",
+     "start": 173.048,
+     "end": 173.269,
+     "conf": 0.79
+    },
+    {
+     "w": "on",
+     "start": 173.35,
+     "end": 173.41,
+     "conf": 0.652
+    },
+    {
+     "w": "a",
+     "start": 173.45,
+     "end": 173.47,
+     "conf": 0.001
+    },
+    {
+     "w": "circle",
+     "start": 173.551,
+     "end": 173.872,
+     "conf": 0.794
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "For angles a triangle can hold, it gives exactly the same numbers as before, so nothing we learned was wrong.",
+   "idea": false,
+   "start": 174.262,
+   "end": 179.539,
+   "words": [
+    {
+     "w": "for",
+     "start": 174.262,
+     "end": 174.342,
+     "conf": 0.858
+    },
+    {
+     "w": "angles",
+     "start": 174.403,
+     "end": 174.683,
+     "conf": 0.882
+    },
+    {
+     "w": "a",
+     "start": 174.724,
+     "end": 174.744,
+     "conf": 0.012
+    },
+    {
+     "w": "triangle",
+     "start": 174.764,
+     "end": 175.145,
+     "conf": 0.968
+    },
+    {
+     "w": "can",
+     "start": 175.165,
+     "end": 175.285,
+     "conf": 0.887
+    },
+    {
+     "w": "hold",
+     "start": 175.406,
+     "end": 175.707,
+     "conf": 0.972
+    },
+    {
+     "w": "it",
+     "start": 175.767,
+     "end": 175.807,
+     "conf": 0.505
+    },
+    {
+     "w": "gives",
+     "start": 175.827,
+     "end": 176.008,
+     "conf": 0.831
+    },
+    {
+     "w": "exactly",
+     "start": 176.108,
+     "end": 176.55,
+     "conf": 0.857
+    },
+    {
+     "w": "the",
+     "start": 176.57,
+     "end": 176.65,
+     "conf": 0.993
+    },
+    {
+     "w": "same",
+     "start": 176.71,
+     "end": 176.891,
+     "conf": 0.75
+    },
+    {
+     "w": "numbers",
+     "start": 176.911,
+     "end": 177.212,
+     "conf": 0.872
+    },
+    {
+     "w": "as",
+     "start": 177.272,
+     "end": 177.332,
+     "conf": 0.499
+    },
+    {
+     "w": "before",
+     "start": 177.352,
+     "end": 177.713,
+     "conf": 0.99
+    },
+    {
+     "w": "so",
+     "start": 178.295,
+     "end": 178.376,
+     "conf": 0.989
+    },
+    {
+     "w": "nothing",
+     "start": 178.516,
+     "end": 178.757,
+     "conf": 0.88
+    },
+    {
+     "w": "we",
+     "start": 178.777,
+     "end": 178.857,
+     "conf": 0.665
+    },
+    {
+     "w": "learned",
+     "start": 178.917,
+     "end": 179.138,
+     "conf": 0.857
+    },
+    {
+     "w": "was",
+     "start": 179.158,
+     "end": 179.278,
+     "conf": 0.765
+    },
+    {
+     "w": "wrong",
+     "start": 179.299,
+     "end": 179.539,
+     "conf": 0.88
+    }
+   ]
+  },
+  {
+   "section": "The triangle runs out",
+   "act": "ACT TWO — One point on a circle",
+   "text": "It just doesn't stop at ninety degrees.",
+   "idea": true,
+   "start": 179.93,
+   "end": 181.555,
+   "words": [
+    {
+     "w": "it",
+     "start": 179.93,
+     "end": 179.97,
+     "conf": 0.971
+    },
+    {
+     "w": "just",
+     "start": 179.99,
+     "end": 180.111,
+     "conf": 0.764
+    },
+    {
+     "w": "doesn't",
+     "start": 180.131,
+     "end": 180.391,
+     "conf": 0.74
+    },
+    {
+     "w": "stop",
+     "start": 180.472,
+     "end": 180.712,
+     "conf": 0.75
+    },
+    {
+     "w": "at",
+     "start": 180.793,
+     "end": 180.833,
+     "conf": 0.474
+    },
+    {
+     "w": "ninety",
+     "start": 180.853,
+     "end": 181.134,
+     "conf": 0.147
+    },
+    {
+     "w": "degrees",
+     "start": 181.194,
+     "end": 181.555,
+     "conf": 0.491
+    }
+   ]
+  },
+  {
+   "section": "Past ninety degrees",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Keep opening the angle to one hundred and twenty degrees.",
+   "idea": false,
+   "start": 183.235,
+   "end": 185.981,
+   "words": [
+    {
+     "w": "keep",
+     "start": 183.235,
+     "end": 183.395,
+     "conf": 0.75
+    },
+    {
+     "w": "opening",
+     "start": 183.496,
+     "end": 183.856,
+     "conf": 0.982
+    },
+    {
+     "w": "the",
+     "start": 183.876,
+     "end": 183.936,
+     "conf": 0.997
+    },
+    {
+     "w": "angle",
+     "start": 184.037,
+     "end": 184.277,
+     "conf": 0.799
+    },
+    {
+     "w": "to",
+     "start": 184.317,
+     "end": 184.417,
+     "conf": 0.994
+    },
+    {
+     "w": "one",
+     "start": 184.678,
+     "end": 184.798,
+     "conf": 0.002
+    },
+    {
+     "w": "hundred",
+     "start": 184.818,
+     "end": 185.099,
+     "conf": 0.001
+    },
+    {
+     "w": "and",
+     "start": 185.119,
+     "end": 185.179,
+     "conf": 0.002
+    },
+    {
+     "w": "twenty",
+     "start": 185.199,
+     "end": 185.46,
+     "conf": 0.009
+    },
+    {
+     "w": "degrees",
+     "start": 185.48,
+     "end": 185.981,
+     "conf": 0.324
+    }
+   ]
+  },
+  {
+   "section": "Past ninety degrees",
+   "act": "ACT TWO — One point on a circle",
+   "text": "There's no triangle to worry about now, only a point that has kept walking.",
+   "idea": false,
+   "start": 186.451,
+   "end": 189.761,
+   "words": [
+    {
+     "w": "there's",
+     "start": 186.451,
+     "end": 186.592,
+     "conf": 0.024
+    },
+    {
+     "w": "no",
+     "start": 186.692,
+     "end": 186.732,
+     "conf": 0.0
+    },
+    {
+     "w": "triangle",
+     "start": 186.752,
+     "end": 187.234,
+     "conf": 0.974
+    },
+    {
+     "w": "to",
+     "start": 187.254,
+     "end": 187.334,
+     "conf": 0.665
+    },
+    {
+     "w": "worry",
+     "start": 187.354,
+     "end": 187.555,
+     "conf": 0.774
+    },
+    {
+     "w": "about",
+     "start": 187.635,
+     "end": 187.835,
+     "conf": 0.8
+    },
+    {
+     "w": "now",
+     "start": 187.896,
+     "end": 188.076,
+     "conf": 0.999
+    },
+    {
+     "w": "only",
+     "start": 188.377,
+     "end": 188.538,
+     "conf": 0.749
+    },
+    {
+     "w": "a",
+     "start": 188.618,
+     "end": 188.638,
+     "conf": 0.0
+    },
+    {
+     "w": "point",
+     "start": 188.718,
+     "end": 188.939,
+     "conf": 0.794
+    },
+    {
+     "w": "that",
+     "start": 188.959,
+     "end": 189.059,
+     "conf": 0.995
+    },
+    {
+     "w": "has",
+     "start": 189.079,
+     "end": 189.16,
+     "conf": 0.803
+    },
+    {
+     "w": "kept",
+     "start": 189.24,
+     "end": 189.4,
+     "conf": 0.75
+    },
+    {
+     "w": "walking",
+     "start": 189.46,
+     "end": 189.761,
+     "conf": 0.859
+    }
+   ]
+  },
+  {
+   "section": "Past ninety degrees",
+   "act": "ACT TWO — One point on a circle",
+   "text": "M is still high up, so its height is zero point eight six six, the number the calculator gave us.",
+   "idea": false,
+   "start": 190.231,
+   "end": 194.698,
+   "words": [
+    {
+     "w": "m",
+     "start": 190.231,
+     "end": 190.251,
+     "conf": 0.975
+    },
+    {
+     "w": "is",
+     "start": 190.271,
+     "end": 190.351,
+     "conf": 0.966
+    },
+    {
+     "w": "still",
+     "start": 190.411,
+     "end": 190.592,
+     "conf": 0.868
+    },
+    {
+     "w": "high",
+     "start": 190.652,
+     "end": 190.872,
+     "conf": 0.824
+    },
+    {
+     "w": "up",
+     "start": 190.912,
+     "end": 191.032,
+     "conf": 0.517
+    },
+    {
+     "w": "so",
+     "start": 191.313,
+     "end": 191.353,
+     "conf": 0.496
+    },
+    {
+     "w": "its",
+     "start": 191.453,
+     "end": 191.553,
+     "conf": 0.629
+    },
+    {
+     "w": "height",
+     "start": 191.653,
+     "end": 191.854,
+     "conf": 0.616
+    },
+    {
+     "w": "is",
+     "start": 191.914,
+     "end": 191.974,
+     "conf": 0.098
+    },
+    {
+     "w": "zero",
+     "start": 191.994,
+     "end": 192.194,
+     "conf": 0.054
+    },
+    {
+     "w": "point",
+     "start": 192.214,
+     "end": 192.415,
+     "conf": 0.002
+    },
+    {
+     "w": "eight",
+     "start": 192.435,
+     "end": 192.595,
+     "conf": 0.0
+    },
+    {
+     "w": "six",
+     "start": 192.695,
+     "end": 192.815,
+     "conf": 0.006
+    },
+    {
+     "w": "six",
+     "start": 192.835,
+     "end": 193.136,
+     "conf": 0.008
+    },
+    {
+     "w": "the",
+     "start": 193.436,
+     "end": 193.496,
+     "conf": 0.337
+    },
+    {
+     "w": "number",
+     "start": 193.557,
+     "end": 193.737,
+     "conf": 0.904
+    },
+    {
+     "w": "the",
+     "start": 193.757,
+     "end": 193.837,
+     "conf": 0.862
+    },
+    {
+     "w": "calculator",
+     "start": 193.877,
+     "end": 194.358,
+     "conf": 0.83
+    },
+    {
+     "w": "gave",
+     "start": 194.378,
+     "end": 194.558,
+     "conf": 0.999
+    },
+    {
+     "w": "us",
+     "start": 194.578,
+     "end": 194.698,
+     "conf": 0.998
+    }
+   ]
+  },
+  {
+   "section": "Past ninety degrees",
+   "act": "ACT TWO — One point on a circle",
+   "text": "That's the same height it had at sixty degrees, on the other side. Remember that, it comes back next time.",
+   "idea": true,
+   "start": 195.169,
+   "end": 200.347,
+   "words": [
+    {
+     "w": "that's",
+     "start": 195.169,
+     "end": 195.289,
+     "conf": 0.054
+    },
+    {
+     "w": "the",
+     "start": 195.31,
+     "end": 195.39,
+     "conf": 0.993
+    },
+    {
+     "w": "same",
+     "start": 195.47,
+     "end": 195.651,
+     "conf": 0.75
+    },
+    {
+     "w": "height",
+     "start": 195.731,
+     "end": 195.912,
+     "conf": 0.724
+    },
+    {
+     "w": "it",
+     "start": 195.972,
+     "end": 196.012,
+     "conf": 0.498
+    },
+    {
+     "w": "had",
+     "start": 196.072,
+     "end": 196.233,
+     "conf": 0.853
+    },
+    {
+     "w": "at",
+     "start": 196.253,
+     "end": 196.293,
+     "conf": 0.463
+    },
+    {
+     "w": "sixty",
+     "start": 196.313,
+     "end": 196.674,
+     "conf": 0.202
+    },
+    {
+     "w": "degrees",
+     "start": 196.735,
+     "end": 197.136,
+     "conf": 0.426
+    },
+    {
+     "w": "on",
+     "start": 197.537,
+     "end": 197.577,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 197.598,
+     "end": 197.658,
+     "conf": 0.674
+    },
+    {
+     "w": "other",
+     "start": 197.698,
+     "end": 197.818,
+     "conf": 0.991
+    },
+    {
+     "w": "side",
+     "start": 197.879,
+     "end": 198.119,
+     "conf": 0.998
+    },
+    {
+     "w": "remember",
+     "start": 198.4,
+     "end": 198.681,
+     "conf": 0.875
+    },
+    {
+     "w": "that",
+     "start": 198.701,
+     "end": 198.882,
+     "conf": 0.993
+    },
+    {
+     "w": "it",
+     "start": 199.304,
+     "end": 199.344,
+     "conf": 0.499
+    },
+    {
+     "w": "comes",
+     "start": 199.404,
+     "end": 199.605,
+     "conf": 0.916
+    },
+    {
+     "w": "back",
+     "start": 199.665,
+     "end": 199.805,
+     "conf": 0.75
+    },
+    {
+     "w": "next",
+     "start": 199.886,
+     "end": 200.086,
+     "conf": 0.744
+    },
+    {
+     "w": "time",
+     "start": 200.106,
+     "end": 200.347,
+     "conf": 0.965
+    }
+   ]
+  },
+  {
+   "section": "Past ninety degrees",
+   "act": "ACT TWO — One point on a circle",
+   "text": "But look at M's across coordinate. M has crossed to the left of center, so its cosine is minus one half.",
+   "idea": false,
+   "start": 201.337,
+   "end": 206.142,
+   "words": [
+    {
+     "w": "but",
+     "start": 201.337,
+     "end": 201.397,
+     "conf": 0.522
+    },
+    {
+     "w": "look",
+     "start": 201.417,
+     "end": 201.517,
+     "conf": 0.981
+    },
+    {
+     "w": "at",
+     "start": 201.537,
+     "end": 201.597,
+     "conf": 0.989
+    },
+    {
+     "w": "m's",
+     "start": 201.757,
+     "end": 201.878,
+     "conf": 0.704
+    },
+    {
+     "w": "across",
+     "start": 201.898,
+     "end": 202.158,
+     "conf": 0.999
+    },
+    {
+     "w": "coordinate",
+     "start": 202.218,
+     "end": 202.719,
+     "conf": 0.894
+    },
+    {
+     "w": "m",
+     "start": 203.139,
+     "end": 203.159,
+     "conf": 0.998
+    },
+    {
+     "w": "has",
+     "start": 203.219,
+     "end": 203.319,
+     "conf": 0.998
+    },
+    {
+     "w": "crossed",
+     "start": 203.399,
+     "end": 203.68,
+     "conf": 0.816
+    },
+    {
+     "w": "to",
+     "start": 203.7,
+     "end": 203.76,
+     "conf": 0.992
+    },
+    {
+     "w": "the",
+     "start": 203.78,
+     "end": 203.84,
+     "conf": 0.993
+    },
+    {
+     "w": "left",
+     "start": 203.86,
+     "end": 204.02,
+     "conf": 0.996
+    },
+    {
+     "w": "of",
+     "start": 204.08,
+     "end": 204.12,
+     "conf": 0.003
+    },
+    {
+     "w": "center",
+     "start": 204.14,
+     "end": 204.48,
+     "conf": 0.985
+    },
+    {
+     "w": "so",
+     "start": 204.741,
+     "end": 204.781,
+     "conf": 0.499
+    },
+    {
+     "w": "its",
+     "start": 204.861,
+     "end": 204.921,
+     "conf": 0.924
+    },
+    {
+     "w": "cosine",
+     "start": 204.981,
+     "end": 205.321,
+     "conf": 0.68
+    },
+    {
+     "w": "is",
+     "start": 205.341,
+     "end": 205.401,
+     "conf": 0.939
+    },
+    {
+     "w": "minus",
+     "start": 205.421,
+     "end": 205.662,
+     "conf": 0.679
+    },
+    {
+     "w": "one",
+     "start": 205.762,
+     "end": 205.842,
+     "conf": 0.7
+    },
+    {
+     "w": "half",
+     "start": 205.902,
+     "end": 206.142,
+     "conf": 0.928
+    }
+   ]
+  },
+  {
+   "section": "Past ninety degrees",
+   "act": "ACT TWO — One point on a circle",
+   "text": "And there's our first negative number. A side of a triangle can't be negative, but a coordinate can.",
+   "idea": true,
+   "start": 206.632,
+   "end": 211.536,
+   "words": [
+    {
+     "w": "and",
+     "start": 206.632,
+     "end": 206.692,
+     "conf": 0.392
+    },
+    {
+     "w": "there's",
+     "start": 206.712,
+     "end": 206.893,
+     "conf": 0.867
+    },
+    {
+     "w": "our",
+     "start": 206.954,
+     "end": 207.034,
+     "conf": 0.378
+    },
+    {
+     "w": "first",
+     "start": 207.094,
+     "end": 207.356,
+     "conf": 0.816
+    },
+    {
+     "w": "negative",
+     "start": 207.456,
+     "end": 207.838,
+     "conf": 0.933
+    },
+    {
+     "w": "number",
+     "start": 207.858,
+     "end": 208.14,
+     "conf": 0.954
+    },
+    {
+     "w": "a",
+     "start": 208.602,
+     "end": 208.622,
+     "conf": 0.0
+    },
+    {
+     "w": "side",
+     "start": 208.722,
+     "end": 208.944,
+     "conf": 0.677
+    },
+    {
+     "w": "of",
+     "start": 208.964,
+     "end": 209.004,
+     "conf": 0.985
+    },
+    {
+     "w": "a",
+     "start": 209.024,
+     "end": 209.044,
+     "conf": 0.995
+    },
+    {
+     "w": "triangle",
+     "start": 209.124,
+     "end": 209.607,
+     "conf": 0.828
+    },
+    {
+     "w": "can't",
+     "start": 209.748,
+     "end": 210.029,
+     "conf": 0.784
+    },
+    {
+     "w": "be",
+     "start": 210.049,
+     "end": 210.109,
+     "conf": 0.998
+    },
+    {
+     "w": "negative",
+     "start": 210.21,
+     "end": 210.612,
+     "conf": 0.875
+    },
+    {
+     "w": "but",
+     "start": 210.692,
+     "end": 210.773,
+     "conf": 0.661
+    },
+    {
+     "w": "a",
+     "start": 210.833,
+     "end": 210.853,
+     "conf": 0.009
+    },
+    {
+     "w": "coordinate",
+     "start": 210.873,
+     "end": 211.335,
+     "conf": 0.937
+    },
+    {
+     "w": "can",
+     "start": 211.356,
+     "end": 211.536,
+     "conf": 0.727
+    }
+   ]
+  },
+  {
+   "section": "Past ninety degrees",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Which means you never have to memorize the signs.",
+   "idea": false,
+   "start": 212.547,
+   "end": 214.992,
+   "words": [
+    {
+     "w": "which",
+     "start": 212.547,
+     "end": 212.647,
+     "conf": 0.398
+    },
+    {
+     "w": "means",
+     "start": 212.707,
+     "end": 212.948,
+     "conf": 0.965
+    },
+    {
+     "w": "you",
+     "start": 212.968,
+     "end": 213.068,
+     "conf": 0.747
+    },
+    {
+     "w": "never",
+     "start": 213.168,
+     "end": 213.349,
+     "conf": 0.795
+    },
+    {
+     "w": "have",
+     "start": 213.409,
+     "end": 213.549,
+     "conf": 0.671
+    },
+    {
+     "w": "to",
+     "start": 213.569,
+     "end": 213.649,
+     "conf": 0.563
+    },
+    {
+     "w": "memorize",
+     "start": 213.749,
+     "end": 214.331,
+     "conf": 0.82
+    },
+    {
+     "w": "the",
+     "start": 214.351,
+     "end": 214.531,
+     "conf": 0.673
+    },
+    {
+     "w": "signs",
+     "start": 214.611,
+     "end": 214.992,
+     "conf": 0.401
+    }
+   ]
+  },
+  {
+   "section": "Past ninety degrees",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Is M on the left? Then the cosine is negative. Is M below the center? Then the sine is negative.",
+   "idea": false,
+   "start": 215.422,
+   "end": 220.155,
+   "words": [
+    {
+     "w": "is",
+     "start": 215.422,
+     "end": 215.502,
+     "conf": 0.942
+    },
+    {
+     "w": "m",
+     "start": 215.703,
+     "end": 215.723,
+     "conf": 0.99
+    },
+    {
+     "w": "on",
+     "start": 215.843,
+     "end": 215.923,
+     "conf": 0.992
+    },
+    {
+     "w": "the",
+     "start": 215.944,
+     "end": 216.004,
+     "conf": 0.987
+    },
+    {
+     "w": "left",
+     "start": 216.084,
+     "end": 216.345,
+     "conf": 0.781
+    },
+    {
+     "w": "then",
+     "start": 216.365,
+     "end": 216.605,
+     "conf": 0.747
+    },
+    {
+     "w": "the",
+     "start": 216.625,
+     "end": 216.686,
+     "conf": 0.993
+    },
+    {
+     "w": "cosine",
+     "start": 216.726,
+     "end": 217.187,
+     "conf": 0.827
+    },
+    {
+     "w": "is",
+     "start": 217.207,
+     "end": 217.287,
+     "conf": 0.686
+    },
+    {
+     "w": "negative",
+     "start": 217.307,
+     "end": 217.769,
+     "conf": 0.896
+    },
+    {
+     "w": "is",
+     "start": 217.929,
+     "end": 217.989,
+     "conf": 0.497
+    },
+    {
+     "w": "m",
+     "start": 218.15,
+     "end": 218.17,
+     "conf": 0.001
+    },
+    {
+     "w": "below",
+     "start": 218.19,
+     "end": 218.37,
+     "conf": 0.753
+    },
+    {
+     "w": "the",
+     "start": 218.39,
+     "end": 218.511,
+     "conf": 0.663
+    },
+    {
+     "w": "center",
+     "start": 218.591,
+     "end": 218.872,
+     "conf": 0.823
+    },
+    {
+     "w": "then",
+     "start": 219.213,
+     "end": 219.313,
+     "conf": 0.733
+    },
+    {
+     "w": "the",
+     "start": 219.333,
+     "end": 219.413,
+     "conf": 0.886
+    },
+    {
+     "w": "sine",
+     "start": 219.494,
+     "end": 219.754,
+     "conf": 0.582
+    },
+    {
+     "w": "is",
+     "start": 219.774,
+     "end": 219.835,
+     "conf": 0.93
+    },
+    {
+     "w": "negative",
+     "start": 219.855,
+     "end": 220.155,
+     "conf": 0.554
+    }
+   ]
+  },
+  {
+   "section": "Past ninety degrees",
+   "act": "ACT TWO — One point on a circle",
+   "text": "That's the entire table of signs, and you can see it from across the room.",
+   "idea": true,
+   "start": 220.545,
+   "end": 223.811,
+   "words": [
+    {
+     "w": "that's",
+     "start": 220.545,
+     "end": 220.685,
+     "conf": 0.434
+    },
+    {
+     "w": "the",
+     "start": 220.705,
+     "end": 220.806,
+     "conf": 0.75
+    },
+    {
+     "w": "entire",
+     "start": 220.846,
+     "end": 221.266,
+     "conf": 0.853
+    },
+    {
+     "w": "table",
+     "start": 221.307,
+     "end": 221.587,
+     "conf": 0.807
+    },
+    {
+     "w": "of",
+     "start": 221.607,
+     "end": 221.667,
+     "conf": 0.997
+    },
+    {
+     "w": "signs",
+     "start": 221.747,
+     "end": 222.188,
+     "conf": 0.824
+    },
+    {
+     "w": "and",
+     "start": 222.208,
+     "end": 222.409,
+     "conf": 0.66
+    },
+    {
+     "w": "you",
+     "start": 222.429,
+     "end": 222.489,
+     "conf": 0.997
+    },
+    {
+     "w": "can",
+     "start": 222.509,
+     "end": 222.609,
+     "conf": 0.999
+    },
+    {
+     "w": "see",
+     "start": 222.749,
+     "end": 222.89,
+     "conf": 0.666
+    },
+    {
+     "w": "it",
+     "start": 222.95,
+     "end": 223.01,
+     "conf": 0.5
+    },
+    {
+     "w": "from",
+     "start": 223.03,
+     "end": 223.19,
+     "conf": 0.748
+    },
+    {
+     "w": "across",
+     "start": 223.25,
+     "end": 223.471,
+     "conf": 0.855
+    },
+    {
+     "w": "the",
+     "start": 223.531,
+     "end": 223.591,
+     "conf": 0.633
+    },
+    {
+     "w": "room",
+     "start": 223.651,
+     "end": 223.811,
+     "conf": 0.751
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "M lives on a circle of radius one, so its across and its up form a right triangle with a long side of one.",
+   "idea": false,
+   "start": 225.592,
+   "end": 230.397,
+   "words": [
+    {
+     "w": "m",
+     "start": 225.592,
+     "end": 225.612,
+     "conf": 0.994
+    },
+    {
+     "w": "lives",
+     "start": 225.632,
+     "end": 225.852,
+     "conf": 0.779
+    },
+    {
+     "w": "on",
+     "start": 225.872,
+     "end": 225.952,
+     "conf": 0.958
+    },
+    {
+     "w": "a",
+     "start": 225.993,
+     "end": 226.013,
+     "conf": 0.002
+    },
+    {
+     "w": "circle",
+     "start": 226.073,
+     "end": 226.313,
+     "conf": 0.752
+    },
+    {
+     "w": "of",
+     "start": 226.333,
+     "end": 226.393,
+     "conf": 0.993
+    },
+    {
+     "w": "radius",
+     "start": 226.473,
+     "end": 226.773,
+     "conf": 0.833
+    },
+    {
+     "w": "one",
+     "start": 226.893,
+     "end": 226.994,
+     "conf": 0.665
+    },
+    {
+     "w": "so",
+     "start": 227.274,
+     "end": 227.334,
+     "conf": 0.5
+    },
+    {
+     "w": "its",
+     "start": 227.414,
+     "end": 227.494,
+     "conf": 0.655
+    },
+    {
+     "w": "across",
+     "start": 227.514,
+     "end": 227.834,
+     "conf": 0.998
+    },
+    {
+     "w": "and",
+     "start": 227.954,
+     "end": 228.015,
+     "conf": 0.343
+    },
+    {
+     "w": "its",
+     "start": 228.035,
+     "end": 228.155,
+     "conf": 0.985
+    },
+    {
+     "w": "up",
+     "start": 228.215,
+     "end": 228.295,
+     "conf": 0.5
+    },
+    {
+     "w": "form",
+     "start": 228.415,
+     "end": 228.575,
+     "conf": 0.75
+    },
+    {
+     "w": "a",
+     "start": 228.675,
+     "end": 228.695,
+     "conf": 0.007
+    },
+    {
+     "w": "right",
+     "start": 228.795,
+     "end": 228.996,
+     "conf": 0.819
+    },
+    {
+     "w": "triangle",
+     "start": 229.036,
+     "end": 229.476,
+     "conf": 0.887
+    },
+    {
+     "w": "with",
+     "start": 229.496,
+     "end": 229.616,
+     "conf": 0.752
+    },
+    {
+     "w": "a",
+     "start": 229.636,
+     "end": 229.656,
+     "conf": 0.002
+    },
+    {
+     "w": "long",
+     "start": 229.676,
+     "end": 229.876,
+     "conf": 0.735
+    },
+    {
+     "w": "side",
+     "start": 229.957,
+     "end": 230.137,
+     "conf": 0.736
+    },
+    {
+     "w": "of",
+     "start": 230.157,
+     "end": 230.197,
+     "conf": 0.511
+    },
+    {
+     "w": "one",
+     "start": 230.297,
+     "end": 230.397,
+     "conf": 0.628
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Pythagoras says that across squared, plus up squared, equals one.",
+   "idea": false,
+   "start": 230.807,
+   "end": 233.965,
+   "words": [
+    {
+     "w": "pythagoras",
+     "start": 230.807,
+     "end": 231.29,
+     "conf": 0.729
+    },
+    {
+     "w": "says",
+     "start": 231.35,
+     "end": 231.491,
+     "conf": 0.8
+    },
+    {
+     "w": "that",
+     "start": 231.511,
+     "end": 231.612,
+     "conf": 0.99
+    },
+    {
+     "w": "across",
+     "start": 231.672,
+     "end": 231.893,
+     "conf": 0.831
+    },
+    {
+     "w": "squared",
+     "start": 231.974,
+     "end": 232.356,
+     "conf": 0.733
+    },
+    {
+     "w": "plus",
+     "start": 232.457,
+     "end": 232.638,
+     "conf": 0.386
+    },
+    {
+     "w": "up",
+     "start": 232.778,
+     "end": 232.859,
+     "conf": 0.494
+    },
+    {
+     "w": "squared",
+     "start": 232.98,
+     "end": 233.342,
+     "conf": 0.671
+    },
+    {
+     "w": "equals",
+     "start": 233.462,
+     "end": 233.684,
+     "conf": 0.685
+    },
+    {
+     "w": "one",
+     "start": 233.704,
+     "end": 233.965,
+     "conf": 0.233
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Written in our new words, that's sine squared plus cosine squared equals one, for every angle there is.",
+   "idea": false,
+   "start": 234.375,
+   "end": 239.639,
+   "words": [
+    {
+     "w": "written",
+     "start": 234.375,
+     "end": 234.556,
+     "conf": 0.857
+    },
+    {
+     "w": "in",
+     "start": 234.576,
+     "end": 234.636,
+     "conf": 0.948
+    },
+    {
+     "w": "our",
+     "start": 234.656,
+     "end": 234.777,
+     "conf": 0.376
+    },
+    {
+     "w": "new",
+     "start": 234.797,
+     "end": 234.938,
+     "conf": 0.983
+    },
+    {
+     "w": "words",
+     "start": 235.018,
+     "end": 235.34,
+     "conf": 0.825
+    },
+    {
+     "w": "that's",
+     "start": 235.36,
+     "end": 235.561,
+     "conf": 0.879
+    },
+    {
+     "w": "sine",
+     "start": 235.761,
+     "end": 236.023,
+     "conf": 0.64
+    },
+    {
+     "w": "squared",
+     "start": 236.043,
+     "end": 236.465,
+     "conf": 0.544
+    },
+    {
+     "w": "plus",
+     "start": 236.545,
+     "end": 236.726,
+     "conf": 0.263
+    },
+    {
+     "w": "cosine",
+     "start": 236.746,
+     "end": 237.188,
+     "conf": 0.572
+    },
+    {
+     "w": "squared",
+     "start": 237.248,
+     "end": 237.55,
+     "conf": 0.791
+    },
+    {
+     "w": "equals",
+     "start": 237.65,
+     "end": 237.891,
+     "conf": 0.786
+    },
+    {
+     "w": "one",
+     "start": 237.911,
+     "end": 238.233,
+     "conf": 0.343
+    },
+    {
+     "w": "for",
+     "start": 238.574,
+     "end": 238.655,
+     "conf": 0.662
+    },
+    {
+     "w": "every",
+     "start": 238.735,
+     "end": 238.936,
+     "conf": 0.831
+    },
+    {
+     "w": "angle",
+     "start": 239.057,
+     "end": 239.278,
+     "conf": 0.714
+    },
+    {
+     "w": "there",
+     "start": 239.298,
+     "end": 239.458,
+     "conf": 0.83
+    },
+    {
+     "w": "is",
+     "start": 239.599,
+     "end": 239.639,
+     "conf": 0.498
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "This is the most used identity in trigonometry, and it's nothing more than the statement that M is on the circle.",
+   "idea": true,
+   "start": 240.07,
+   "end": 245.563,
+   "words": [
+    {
+     "w": "this",
+     "start": 240.07,
+     "end": 240.15,
+     "conf": 0.231
+    },
+    {
+     "w": "is",
+     "start": 240.21,
+     "end": 240.271,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 240.291,
+     "end": 240.371,
+     "conf": 0.936
+    },
+    {
+     "w": "most",
+     "start": 240.391,
+     "end": 240.611,
+     "conf": 0.8
+    },
+    {
+     "w": "used",
+     "start": 240.772,
+     "end": 240.932,
+     "conf": 0.75
+    },
+    {
+     "w": "identity",
+     "start": 241.093,
+     "end": 241.473,
+     "conf": 0.875
+    },
+    {
+     "w": "in",
+     "start": 241.674,
+     "end": 241.754,
+     "conf": 0.997
+    },
+    {
+     "w": "trigonometry",
+     "start": 241.874,
+     "end": 242.516,
+     "conf": 0.815
+    },
+    {
+     "w": "and",
+     "start": 242.937,
+     "end": 243.017,
+     "conf": 0.663
+    },
+    {
+     "w": "it's",
+     "start": 243.037,
+     "end": 243.137,
+     "conf": 0.781
+    },
+    {
+     "w": "nothing",
+     "start": 243.238,
+     "end": 243.498,
+     "conf": 0.857
+    },
+    {
+     "w": "more",
+     "start": 243.578,
+     "end": 243.779,
+     "conf": 0.71
+    },
+    {
+     "w": "than",
+     "start": 243.839,
+     "end": 243.939,
+     "conf": 0.752
+    },
+    {
+     "w": "the",
+     "start": 243.959,
+     "end": 244.04,
+     "conf": 0.99
+    },
+    {
+     "w": "statement",
+     "start": 244.06,
+     "end": 244.4,
+     "conf": 0.959
+    },
+    {
+     "w": "that",
+     "start": 244.421,
+     "end": 244.521,
+     "conf": 0.984
+    },
+    {
+     "w": "m",
+     "start": 244.761,
+     "end": 244.781,
+     "conf": 0.992
+    },
+    {
+     "w": "is",
+     "start": 244.862,
+     "end": 244.942,
+     "conf": 0.499
+    },
+    {
+     "w": "on",
+     "start": 245.042,
+     "end": 245.082,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 245.102,
+     "end": 245.182,
+     "conf": 0.973
+    },
+    {
+     "w": "circle",
+     "start": 245.263,
+     "end": 245.563,
+     "conf": 0.784
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "And the famous angles can now be read right off the circle.",
+   "idea": false,
+   "start": 246.553,
+   "end": 248.983,
+   "words": [
+    {
+     "w": "and",
+     "start": 246.553,
+     "end": 246.613,
+     "conf": 0.872
+    },
+    {
+     "w": "the",
+     "start": 246.633,
+     "end": 246.694,
+     "conf": 0.99
+    },
+    {
+     "w": "famous",
+     "start": 246.754,
+     "end": 247.015,
+     "conf": 0.825
+    },
+    {
+     "w": "angles",
+     "start": 247.115,
+     "end": 247.437,
+     "conf": 0.91
+    },
+    {
+     "w": "can",
+     "start": 247.497,
+     "end": 247.597,
+     "conf": 0.665
+    },
+    {
+     "w": "now",
+     "start": 247.617,
+     "end": 247.758,
+     "conf": 0.776
+    },
+    {
+     "w": "be",
+     "start": 247.818,
+     "end": 247.858,
+     "conf": 0.499
+    },
+    {
+     "w": "read",
+     "start": 247.959,
+     "end": 248.079,
+     "conf": 0.686
+    },
+    {
+     "w": "right",
+     "start": 248.179,
+     "end": 248.36,
+     "conf": 0.763
+    },
+    {
+     "w": "off",
+     "start": 248.38,
+     "end": 248.501,
+     "conf": 0.619
+    },
+    {
+     "w": "the",
+     "start": 248.521,
+     "end": 248.621,
+     "conf": 0.748
+    },
+    {
+     "w": "circle",
+     "start": 248.681,
+     "end": 248.983,
+     "conf": 0.568
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "At thirty degrees, M is one half up. At sixty, across and up simply trade places, so M is zero point eight six six up and one half across.",
+   "idea": false,
+   "start": 249.372,
+   "end": 256.344,
+   "words": [
+    {
+     "w": "at",
+     "start": 249.372,
+     "end": 249.452,
+     "conf": 0.977
+    },
+    {
+     "w": "thirty",
+     "start": 249.512,
+     "end": 249.733,
+     "conf": 0.033
+    },
+    {
+     "w": "degrees",
+     "start": 249.773,
+     "end": 250.113,
+     "conf": 0.549
+    },
+    {
+     "w": "m",
+     "start": 250.454,
+     "end": 250.474,
+     "conf": 0.018
+    },
+    {
+     "w": "is",
+     "start": 250.554,
+     "end": 250.614,
+     "conf": 0.494
+    },
+    {
+     "w": "one",
+     "start": 250.734,
+     "end": 250.835,
+     "conf": 0.655
+    },
+    {
+     "w": "half",
+     "start": 250.855,
+     "end": 251.055,
+     "conf": 0.829
+    },
+    {
+     "w": "up",
+     "start": 251.155,
+     "end": 251.255,
+     "conf": 0.5
+    },
+    {
+     "w": "at",
+     "start": 251.576,
+     "end": 251.636,
+     "conf": 0.493
+    },
+    {
+     "w": "sixty",
+     "start": 251.736,
+     "end": 251.997,
+     "conf": 0.455
+    },
+    {
+     "w": "across",
+     "start": 252.077,
+     "end": 252.357,
+     "conf": 0.855
+    },
+    {
+     "w": "and",
+     "start": 252.417,
+     "end": 252.497,
+     "conf": 0.694
+    },
+    {
+     "w": "up",
+     "start": 252.538,
+     "end": 252.598,
+     "conf": 0.471
+    },
+    {
+     "w": "simply",
+     "start": 252.658,
+     "end": 252.858,
+     "conf": 0.381
+    },
+    {
+     "w": "trade",
+     "start": 252.918,
+     "end": 253.139,
+     "conf": 0.747
+    },
+    {
+     "w": "places",
+     "start": 253.159,
+     "end": 253.519,
+     "conf": 0.997
+    },
+    {
+     "w": "so",
+     "start": 253.78,
+     "end": 253.82,
+     "conf": 0.497
+    },
+    {
+     "w": "m",
+     "start": 254.08,
+     "end": 254.1,
+     "conf": 0.002
+    },
+    {
+     "w": "is",
+     "start": 254.16,
+     "end": 254.24,
+     "conf": 0.485
+    },
+    {
+     "w": "zero",
+     "start": 254.261,
+     "end": 254.581,
+     "conf": 0.026
+    },
+    {
+     "w": "point",
+     "start": 254.601,
+     "end": 254.842,
+     "conf": 0.002
+    },
+    {
+     "w": "eight",
+     "start": 254.862,
+     "end": 255.002,
+     "conf": 0.001
+    },
+    {
+     "w": "six",
+     "start": 255.022,
+     "end": 255.202,
+     "conf": 0.028
+    },
+    {
+     "w": "six",
+     "start": 255.222,
+     "end": 255.443,
+     "conf": 0.114
+    },
+    {
+     "w": "up",
+     "start": 255.543,
+     "end": 255.623,
+     "conf": 0.829
+    },
+    {
+     "w": "and",
+     "start": 255.643,
+     "end": 255.723,
+     "conf": 0.783
+    },
+    {
+     "w": "one",
+     "start": 255.803,
+     "end": 255.863,
+     "conf": 0.62
+    },
+    {
+     "w": "half",
+     "start": 255.883,
+     "end": 256.024,
+     "conf": 0.77
+    },
+    {
+     "w": "across",
+     "start": 256.084,
+     "end": 256.344,
+     "conf": 0.809
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "At forty-five, across and up are equal, and their squares add to one, so each is root two over two. About zero point seven zero seven.",
+   "idea": true,
+   "start": 256.775,
+   "end": 263.443,
+   "words": [
+    {
+     "w": "at",
+     "start": 256.775,
+     "end": 256.855,
+     "conf": 0.62
+    },
+    {
+     "w": "forty-five",
+     "start": 256.875,
+     "end": 257.496,
+     "conf": 0.012
+    },
+    {
+     "w": "across",
+     "start": 257.636,
+     "end": 257.876,
+     "conf": 0.819
+    },
+    {
+     "w": "and",
+     "start": 257.936,
+     "end": 257.996,
+     "conf": 0.334
+    },
+    {
+     "w": "up",
+     "start": 258.017,
+     "end": 258.077,
+     "conf": 0.873
+    },
+    {
+     "w": "are",
+     "start": 258.157,
+     "end": 258.297,
+     "conf": 0.737
+    },
+    {
+     "w": "equal",
+     "start": 258.317,
+     "end": 258.537,
+     "conf": 0.8
+    },
+    {
+     "w": "and",
+     "start": 258.677,
+     "end": 258.737,
+     "conf": 0.661
+    },
+    {
+     "w": "their",
+     "start": 258.757,
+     "end": 258.858,
+     "conf": 0.697
+    },
+    {
+     "w": "squares",
+     "start": 258.938,
+     "end": 259.238,
+     "conf": 0.742
+    },
+    {
+     "w": "add",
+     "start": 259.258,
+     "end": 259.378,
+     "conf": 0.422
+    },
+    {
+     "w": "to",
+     "start": 259.438,
+     "end": 259.478,
+     "conf": 0.501
+    },
+    {
+     "w": "one",
+     "start": 259.699,
+     "end": 259.779,
+     "conf": 0.664
+    },
+    {
+     "w": "so",
+     "start": 260.059,
+     "end": 260.099,
+     "conf": 0.499
+    },
+    {
+     "w": "each",
+     "start": 260.199,
+     "end": 260.339,
+     "conf": 1.0
+    },
+    {
+     "w": "is",
+     "start": 260.419,
+     "end": 260.459,
+     "conf": 0.499
+    },
+    {
+     "w": "root",
+     "start": 260.52,
+     "end": 260.64,
+     "conf": 0.645
+    },
+    {
+     "w": "two",
+     "start": 260.66,
+     "end": 260.84,
+     "conf": 0.587
+    },
+    {
+     "w": "over",
+     "start": 260.92,
+     "end": 261.04,
+     "conf": 0.705
+    },
+    {
+     "w": "two",
+     "start": 261.12,
+     "end": 261.28,
+     "conf": 0.628
+    },
+    {
+     "w": "about",
+     "start": 261.3,
+     "end": 262.121,
+     "conf": 0.555
+    },
+    {
+     "w": "zero",
+     "start": 262.141,
+     "end": 262.362,
+     "conf": 0.016
+    },
+    {
+     "w": "point",
+     "start": 262.382,
+     "end": 262.642,
+     "conf": 0.001
+    },
+    {
+     "w": "seven",
+     "start": 262.662,
+     "end": 262.902,
+     "conf": 0.002
+    },
+    {
+     "w": "zero",
+     "start": 262.922,
+     "end": 263.143,
+     "conf": 0.009
+    },
+    {
+     "w": "seven",
+     "start": 263.163,
+     "end": 263.443,
+     "conf": 0.003
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Tangent gets a picture as well. It's up divided by across, and that is exactly the slope of the line from the center to M.",
+   "idea": false,
+   "start": 264.493,
+   "end": 270.592,
+   "words": [
+    {
+     "w": "tangent",
+     "start": 264.493,
+     "end": 264.834,
+     "conf": 0.929
+    },
+    {
+     "w": "gets",
+     "start": 264.854,
+     "end": 265.015,
+     "conf": 0.799
+    },
+    {
+     "w": "a",
+     "start": 265.075,
+     "end": 265.095,
+     "conf": 0.007
+    },
+    {
+     "w": "picture",
+     "start": 265.115,
+     "end": 265.476,
+     "conf": 0.973
+    },
+    {
+     "w": "as",
+     "start": 265.496,
+     "end": 265.576,
+     "conf": 0.991
+    },
+    {
+     "w": "well",
+     "start": 265.637,
+     "end": 265.857,
+     "conf": 0.803
+    },
+    {
+     "w": "it's",
+     "start": 266.198,
+     "end": 266.319,
+     "conf": 0.528
+    },
+    {
+     "w": "up",
+     "start": 266.419,
+     "end": 266.519,
+     "conf": 0.502
+    },
+    {
+     "w": "divided",
+     "start": 266.64,
+     "end": 267.041,
+     "conf": 0.856
+    },
+    {
+     "w": "by",
+     "start": 267.101,
+     "end": 267.221,
+     "conf": 0.5
+    },
+    {
+     "w": "across",
+     "start": 267.282,
+     "end": 267.683,
+     "conf": 0.853
+    },
+    {
+     "w": "and",
+     "start": 268.024,
+     "end": 268.084,
+     "conf": 0.666
+    },
+    {
+     "w": "that",
+     "start": 268.104,
+     "end": 268.224,
+     "conf": 0.905
+    },
+    {
+     "w": "is",
+     "start": 268.265,
+     "end": 268.325,
+     "conf": 0.999
+    },
+    {
+     "w": "exactly",
+     "start": 268.385,
+     "end": 268.766,
+     "conf": 0.841
+    },
+    {
+     "w": "the",
+     "start": 268.786,
+     "end": 268.886,
+     "conf": 0.749
+    },
+    {
+     "w": "slope",
+     "start": 268.967,
+     "end": 269.187,
+     "conf": 0.796
+    },
+    {
+     "w": "of",
+     "start": 269.207,
+     "end": 269.288,
+     "conf": 0.99
+    },
+    {
+     "w": "the",
+     "start": 269.308,
+     "end": 269.408,
+     "conf": 0.749
+    },
+    {
+     "w": "line",
+     "start": 269.468,
+     "end": 269.709,
+     "conf": 0.749
+    },
+    {
+     "w": "from",
+     "start": 269.729,
+     "end": 269.849,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 269.869,
+     "end": 269.95,
+     "conf": 0.75
+    },
+    {
+     "w": "center",
+     "start": 270.03,
+     "end": 270.291,
+     "conf": 0.811
+    },
+    {
+     "w": "to",
+     "start": 270.331,
+     "end": 270.371,
+     "conf": 0.498
+    },
+    {
+     "w": "m",
+     "start": 270.572,
+     "end": 270.592,
+     "conf": 0.985
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "At ninety degrees, that line stands straight up. Its slope doesn't exist, and neither does the tangent of ninety degrees.",
+   "idea": false,
+   "start": 271.022,
+   "end": 277.074,
+   "words": [
+    {
+     "w": "at",
+     "start": 271.022,
+     "end": 271.102,
+     "conf": 0.661
+    },
+    {
+     "w": "ninety",
+     "start": 271.202,
+     "end": 271.423,
+     "conf": 0.043
+    },
+    {
+     "w": "degrees",
+     "start": 271.483,
+     "end": 271.844,
+     "conf": 0.623
+    },
+    {
+     "w": "that",
+     "start": 272.064,
+     "end": 272.224,
+     "conf": 0.999
+    },
+    {
+     "w": "line",
+     "start": 272.285,
+     "end": 272.505,
+     "conf": 0.999
+    },
+    {
+     "w": "stands",
+     "start": 272.565,
+     "end": 272.846,
+     "conf": 0.822
+    },
+    {
+     "w": "straight",
+     "start": 272.926,
+     "end": 273.226,
+     "conf": 0.947
+    },
+    {
+     "w": "up",
+     "start": 273.307,
+     "end": 273.407,
+     "conf": 0.5
+    },
+    {
+     "w": "its",
+     "start": 273.767,
+     "end": 273.848,
+     "conf": 0.662
+    },
+    {
+     "w": "slope",
+     "start": 273.948,
+     "end": 274.248,
+     "conf": 0.992
+    },
+    {
+     "w": "doesn't",
+     "start": 274.268,
+     "end": 274.529,
+     "conf": 0.784
+    },
+    {
+     "w": "exist",
+     "start": 274.549,
+     "end": 274.93,
+     "conf": 0.997
+    },
+    {
+     "w": "and",
+     "start": 275.23,
+     "end": 275.311,
+     "conf": 0.665
+    },
+    {
+     "w": "neither",
+     "start": 275.371,
+     "end": 275.631,
+     "conf": 0.934
+    },
+    {
+     "w": "does",
+     "start": 275.691,
+     "end": 275.812,
+     "conf": 0.691
+    },
+    {
+     "w": "the",
+     "start": 275.832,
+     "end": 275.932,
+     "conf": 0.748
+    },
+    {
+     "w": "tangent",
+     "start": 275.992,
+     "end": 276.313,
+     "conf": 0.786
+    },
+    {
+     "w": "of",
+     "start": 276.373,
+     "end": 276.413,
+     "conf": 0.496
+    },
+    {
+     "w": "ninety",
+     "start": 276.433,
+     "end": 276.673,
+     "conf": 0.021
+    },
+    {
+     "w": "degrees",
+     "start": 276.693,
+     "end": 277.074,
+     "conf": 0.332
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "Nothing has gone wrong there. Your calculator's error message is telling the truth.",
+   "idea": true,
+   "start": 277.504,
+   "end": 281.428,
+   "words": [
+    {
+     "w": "nothing",
+     "start": 277.504,
+     "end": 277.766,
+     "conf": 0.999
+    },
+    {
+     "w": "has",
+     "start": 277.786,
+     "end": 277.886,
+     "conf": 0.896
+    },
+    {
+     "w": "gone",
+     "start": 277.907,
+     "end": 278.088,
+     "conf": 0.751
+    },
+    {
+     "w": "wrong",
+     "start": 278.148,
+     "end": 278.39,
+     "conf": 0.877
+    },
+    {
+     "w": "there",
+     "start": 278.45,
+     "end": 278.671,
+     "conf": 0.992
+    },
+    {
+     "w": "your",
+     "start": 279.215,
+     "end": 279.315,
+     "conf": 0.801
+    },
+    {
+     "w": "calculator's",
+     "start": 279.335,
+     "end": 279.959,
+     "conf": 0.915
+    },
+    {
+     "w": "error",
+     "start": 280.06,
+     "end": 280.201,
+     "conf": 0.229
+    },
+    {
+     "w": "message",
+     "start": 280.221,
+     "end": 280.623,
+     "conf": 0.999
+    },
+    {
+     "w": "is",
+     "start": 280.704,
+     "end": 280.764,
+     "conf": 0.993
+    },
+    {
+     "w": "telling",
+     "start": 280.845,
+     "end": 281.046,
+     "conf": 0.762
+    },
+    {
+     "w": "the",
+     "start": 281.066,
+     "end": 281.147,
+     "conf": 0.981
+    },
+    {
+     "w": "truth",
+     "start": 281.167,
+     "end": 281.428,
+     "conf": 0.833
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "So we know what sine really measures now: height on a circle.",
+   "idea": false,
+   "start": 282.459,
+   "end": 285.27,
+   "words": [
+    {
+     "w": "so",
+     "start": 282.459,
+     "end": 282.539,
+     "conf": 0.999
+    },
+    {
+     "w": "we",
+     "start": 282.6,
+     "end": 282.66,
+     "conf": 0.998
+    },
+    {
+     "w": "know",
+     "start": 282.68,
+     "end": 282.82,
+     "conf": 0.921
+    },
+    {
+     "w": "what",
+     "start": 282.841,
+     "end": 282.981,
+     "conf": 0.993
+    },
+    {
+     "w": "sine",
+     "start": 283.081,
+     "end": 283.362,
+     "conf": 0.848
+    },
+    {
+     "w": "really",
+     "start": 283.403,
+     "end": 283.603,
+     "conf": 0.99
+    },
+    {
+     "w": "measures",
+     "start": 283.664,
+     "end": 283.965,
+     "conf": 0.857
+    },
+    {
+     "w": "now",
+     "start": 284.025,
+     "end": 284.206,
+     "conf": 0.999
+    },
+    {
+     "w": "height",
+     "start": 284.507,
+     "end": 284.708,
+     "conf": 0.764
+    },
+    {
+     "w": "on",
+     "start": 284.768,
+     "end": 284.828,
+     "conf": 0.993
+    },
+    {
+     "w": "a",
+     "start": 284.848,
+     "end": 284.868,
+     "conf": 0.988
+    },
+    {
+     "w": "circle",
+     "start": 284.969,
+     "end": 285.27,
+     "conf": 0.548
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "But the height at thirty is one half, and the calculator also said minus zero point nine eight eight.",
+   "idea": false,
+   "start": 285.659,
+   "end": 290.586,
+   "words": [
+    {
+     "w": "but",
+     "start": 285.659,
+     "end": 285.719,
+     "conf": 0.234
+    },
+    {
+     "w": "the",
+     "start": 285.739,
+     "end": 285.799,
+     "conf": 0.014
+    },
+    {
+     "w": "height",
+     "start": 285.819,
+     "end": 286.06,
+     "conf": 0.769
+    },
+    {
+     "w": "at",
+     "start": 286.1,
+     "end": 286.16,
+     "conf": 0.429
+    },
+    {
+     "w": "thirty",
+     "start": 286.18,
+     "end": 286.56,
+     "conf": 0.221
+    },
+    {
+     "w": "is",
+     "start": 286.721,
+     "end": 286.781,
+     "conf": 0.491
+    },
+    {
+     "w": "one",
+     "start": 286.901,
+     "end": 287.001,
+     "conf": 0.626
+    },
+    {
+     "w": "half",
+     "start": 287.061,
+     "end": 287.241,
+     "conf": 0.666
+    },
+    {
+     "w": "and",
+     "start": 287.261,
+     "end": 287.462,
+     "conf": 0.417
+    },
+    {
+     "w": "the",
+     "start": 287.482,
+     "end": 287.542,
+     "conf": 0.992
+    },
+    {
+     "w": "calculator",
+     "start": 287.562,
+     "end": 288.103,
+     "conf": 0.891
+    },
+    {
+     "w": "also",
+     "start": 288.183,
+     "end": 288.383,
+     "conf": 0.75
+    },
+    {
+     "w": "said",
+     "start": 288.523,
+     "end": 288.704,
+     "conf": 0.792
+    },
+    {
+     "w": "minus",
+     "start": 288.944,
+     "end": 289.224,
+     "conf": 0.677
+    },
+    {
+     "w": "zero",
+     "start": 289.244,
+     "end": 289.545,
+     "conf": 0.033
+    },
+    {
+     "w": "point",
+     "start": 289.565,
+     "end": 289.845,
+     "conf": 0.005
+    },
+    {
+     "w": "nine",
+     "start": 289.865,
+     "end": 290.126,
+     "conf": 0.0
+    },
+    {
+     "w": "eight",
+     "start": 290.146,
+     "end": 290.286,
+     "conf": 0.001
+    },
+    {
+     "w": "eight",
+     "start": 290.306,
+     "end": 290.586,
+     "conf": 0.002
+    }
+   ]
+  },
+  {
+   "section": "What the picture gives you for free",
+   "act": "ACT TWO — One point on a circle",
+   "text": "For that, we have to ask what the word thirty actually meant.",
+   "idea": true,
+   "start": 291.017,
+   "end": 293.656,
+   "words": [
+    {
+     "w": "for",
+     "start": 291.017,
+     "end": 291.078,
+     "conf": 0.985
+    },
+    {
+     "w": "that",
+     "start": 291.098,
+     "end": 291.279,
+     "conf": 0.799
+    },
+    {
+     "w": "we",
+     "start": 291.339,
+     "end": 291.4,
+     "conf": 0.997
+    },
+    {
+     "w": "have",
+     "start": 291.46,
+     "end": 291.581,
+     "conf": 0.741
+    },
+    {
+     "w": "to",
+     "start": 291.601,
+     "end": 291.662,
+     "conf": 0.752
+    },
+    {
+     "w": "ask",
+     "start": 291.823,
+     "end": 292.004,
+     "conf": 0.666
+    },
+    {
+     "w": "what",
+     "start": 292.024,
+     "end": 292.145,
+     "conf": 0.83
+    },
+    {
+     "w": "the",
+     "start": 292.165,
+     "end": 292.266,
+     "conf": 0.745
+    },
+    {
+     "w": "word",
+     "start": 292.286,
+     "end": 292.508,
+     "conf": 0.789
+    },
+    {
+     "w": "thirty",
+     "start": 292.588,
+     "end": 292.87,
+     "conf": 0.873
+    },
+    {
+     "w": "actually",
+     "start": 293.031,
+     "end": 293.354,
+     "conf": 0.848
+    },
+    {
+     "w": "meant",
+     "start": 293.414,
+     "end": 293.656,
+     "conf": 0.799
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "Degrees cut a full turn into three hundred and sixty parts.",
+   "idea": false,
+   "start": 296.136,
+   "end": 298.945,
+   "words": [
+    {
+     "w": "degrees",
+     "start": 296.136,
+     "end": 296.457,
+     "conf": 0.819
+    },
+    {
+     "w": "cut",
+     "start": 296.537,
+     "end": 296.638,
+     "conf": 0.627
+    },
+    {
+     "w": "a",
+     "start": 296.678,
+     "end": 296.698,
+     "conf": 0.998
+    },
+    {
+     "w": "full",
+     "start": 296.818,
+     "end": 296.979,
+     "conf": 0.747
+    },
+    {
+     "w": "turn",
+     "start": 297.059,
+     "end": 297.34,
+     "conf": 0.712
+    },
+    {
+     "w": "into",
+     "start": 297.4,
+     "end": 297.52,
+     "conf": 0.748
+    },
+    {
+     "w": "three",
+     "start": 297.541,
+     "end": 297.761,
+     "conf": 0.002
+    },
+    {
+     "w": "hundred",
+     "start": 297.781,
+     "end": 298.042,
+     "conf": 0.001
+    },
+    {
+     "w": "and",
+     "start": 298.062,
+     "end": 298.142,
+     "conf": 0.008
+    },
+    {
+     "w": "sixty",
+     "start": 298.163,
+     "end": 298.463,
+     "conf": 0.025
+    },
+    {
+     "w": "parts",
+     "start": 298.564,
+     "end": 298.945,
+     "conf": 0.789
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "It's a handy number, but nothing about a circle asks for it. Someone had to choose it.",
+   "idea": true,
+   "start": 299.395,
+   "end": 303.445,
+   "words": [
+    {
+     "w": "it's",
+     "start": 299.395,
+     "end": 299.495,
+     "conf": 0.621
+    },
+    {
+     "w": "a",
+     "start": 299.515,
+     "end": 299.555,
+     "conf": 0.5
+    },
+    {
+     "w": "handy",
+     "start": 299.616,
+     "end": 299.796,
+     "conf": 0.802
+    },
+    {
+     "w": "number",
+     "start": 299.876,
+     "end": 300.137,
+     "conf": 0.999
+    },
+    {
+     "w": "but",
+     "start": 300.478,
+     "end": 300.558,
+     "conf": 1.0
+    },
+    {
+     "w": "nothing",
+     "start": 300.578,
+     "end": 300.819,
+     "conf": 0.877
+    },
+    {
+     "w": "about",
+     "start": 300.839,
+     "end": 301.019,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 301.039,
+     "end": 301.059,
+     "conf": 0.99
+    },
+    {
+     "w": "circle",
+     "start": 301.159,
+     "end": 301.5,
+     "conf": 0.78
+    },
+    {
+     "w": "asks",
+     "start": 301.641,
+     "end": 301.901,
+     "conf": 0.747
+    },
+    {
+     "w": "for",
+     "start": 301.961,
+     "end": 302.082,
+     "conf": 0.666
+    },
+    {
+     "w": "it",
+     "start": 302.162,
+     "end": 302.222,
+     "conf": 0.5
+    },
+    {
+     "w": "someone",
+     "start": 302.583,
+     "end": 302.803,
+     "conf": 0.842
+    },
+    {
+     "w": "had",
+     "start": 302.823,
+     "end": 302.964,
+     "conf": 0.998
+    },
+    {
+     "w": "to",
+     "start": 302.984,
+     "end": 303.044,
+     "conf": 0.672
+    },
+    {
+     "w": "choose",
+     "start": 303.124,
+     "end": 303.345,
+     "conf": 0.592
+    },
+    {
+     "w": "it",
+     "start": 303.365,
+     "end": 303.445,
+     "conf": 0.665
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "Here's a way to measure an angle with no choices at all.",
+   "idea": false,
+   "start": 304.455,
+   "end": 306.661,
+   "words": [
+    {
+     "w": "here's",
+     "start": 304.455,
+     "end": 304.595,
+     "conf": 0.325
+    },
+    {
+     "w": "a",
+     "start": 304.615,
+     "end": 304.636,
+     "conf": 0.807
+    },
+    {
+     "w": "way",
+     "start": 304.696,
+     "end": 304.776,
+     "conf": 0.589
+    },
+    {
+     "w": "to",
+     "start": 304.816,
+     "end": 304.876,
+     "conf": 0.981
+    },
+    {
+     "w": "measure",
+     "start": 304.936,
+     "end": 305.137,
+     "conf": 0.601
+    },
+    {
+     "w": "an",
+     "start": 305.157,
+     "end": 305.197,
+     "conf": 0.832
+    },
+    {
+     "w": "angle",
+     "start": 305.277,
+     "end": 305.558,
+     "conf": 0.675
+    },
+    {
+     "w": "with",
+     "start": 305.618,
+     "end": 305.718,
+     "conf": 0.744
+    },
+    {
+     "w": "no",
+     "start": 305.798,
+     "end": 305.859,
+     "conf": 0.498
+    },
+    {
+     "w": "choices",
+     "start": 306.019,
+     "end": 306.34,
+     "conf": 0.826
+    },
+    {
+     "w": "at",
+     "start": 306.36,
+     "end": 306.46,
+     "conf": 0.664
+    },
+    {
+     "w": "all",
+     "start": 306.56,
+     "end": 306.661,
+     "conf": 0.332
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "Start at the right of the circle, and walk along the rim until you've walked exactly one radius.",
+   "idea": false,
+   "start": 307.131,
+   "end": 311.918,
+   "words": [
+    {
+     "w": "start",
+     "start": 307.131,
+     "end": 307.351,
+     "conf": 0.8
+    },
+    {
+     "w": "at",
+     "start": 307.371,
+     "end": 307.432,
+     "conf": 0.655
+    },
+    {
+     "w": "the",
+     "start": 307.452,
+     "end": 307.532,
+     "conf": 0.873
+    },
+    {
+     "w": "right",
+     "start": 307.572,
+     "end": 307.752,
+     "conf": 0.851
+    },
+    {
+     "w": "of",
+     "start": 307.772,
+     "end": 307.832,
+     "conf": 0.994
+    },
+    {
+     "w": "the",
+     "start": 307.852,
+     "end": 307.932,
+     "conf": 0.997
+    },
+    {
+     "w": "circle",
+     "start": 307.992,
+     "end": 308.353,
+     "conf": 0.82
+    },
+    {
+     "w": "and",
+     "start": 308.633,
+     "end": 308.773,
+     "conf": 0.989
+    },
+    {
+     "w": "walk",
+     "start": 308.874,
+     "end": 309.034,
+     "conf": 0.788
+    },
+    {
+     "w": "along",
+     "start": 309.094,
+     "end": 309.274,
+     "conf": 0.775
+    },
+    {
+     "w": "the",
+     "start": 309.294,
+     "end": 309.394,
+     "conf": 0.697
+    },
+    {
+     "w": "rim",
+     "start": 309.454,
+     "end": 309.635,
+     "conf": 0.672
+    },
+    {
+     "w": "until",
+     "start": 309.975,
+     "end": 310.175,
+     "conf": 0.799
+    },
+    {
+     "w": "you've",
+     "start": 310.195,
+     "end": 310.336,
+     "conf": 0.768
+    },
+    {
+     "w": "walked",
+     "start": 310.356,
+     "end": 310.616,
+     "conf": 0.858
+    },
+    {
+     "w": "exactly",
+     "start": 310.676,
+     "end": 311.157,
+     "conf": 0.855
+    },
+    {
+     "w": "one",
+     "start": 311.317,
+     "end": 311.437,
+     "conf": 0.663
+    },
+    {
+     "w": "radius",
+     "start": 311.517,
+     "end": 311.918,
+     "conf": 0.693
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "The angle you've swept out is called one radian. It's a little over fifty-seven degrees.",
+   "idea": false,
+   "start": 312.368,
+   "end": 316.612,
+   "words": [
+    {
+     "w": "the",
+     "start": 312.368,
+     "end": 312.449,
+     "conf": 0.0
+    },
+    {
+     "w": "angle",
+     "start": 312.469,
+     "end": 312.71,
+     "conf": 0.989
+    },
+    {
+     "w": "you've",
+     "start": 312.73,
+     "end": 312.891,
+     "conf": 0.659
+    },
+    {
+     "w": "swept",
+     "start": 312.911,
+     "end": 313.153,
+     "conf": 0.996
+    },
+    {
+     "w": "out",
+     "start": 313.193,
+     "end": 313.313,
+     "conf": 0.999
+    },
+    {
+     "w": "is",
+     "start": 313.374,
+     "end": 313.414,
+     "conf": 0.498
+    },
+    {
+     "w": "called",
+     "start": 313.454,
+     "end": 313.655,
+     "conf": 0.947
+    },
+    {
+     "w": "one",
+     "start": 313.816,
+     "end": 313.937,
+     "conf": 0.66
+    },
+    {
+     "w": "radian",
+     "start": 314.078,
+     "end": 314.5,
+     "conf": 0.757
+    },
+    {
+     "w": "it's",
+     "start": 314.902,
+     "end": 315.003,
+     "conf": 0.554
+    },
+    {
+     "w": "a",
+     "start": 315.023,
+     "end": 315.043,
+     "conf": 0.978
+    },
+    {
+     "w": "little",
+     "start": 315.063,
+     "end": 315.244,
+     "conf": 0.847
+    },
+    {
+     "w": "over",
+     "start": 315.305,
+     "end": 315.466,
+     "conf": 0.723
+    },
+    {
+     "w": "fifty-seven",
+     "start": 315.486,
+     "end": 316.169,
+     "conf": 0.006
+    },
+    {
+     "w": "degrees",
+     "start": 316.19,
+     "end": 316.612,
+     "conf": 0.179
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "It's the same on any circle, a coin or the whole Earth, since it only compares the rim with that circle's own radius.",
+   "idea": true,
+   "start": 317.042,
+   "end": 322.698,
+   "words": [
+    {
+     "w": "it's",
+     "start": 317.042,
+     "end": 317.142,
+     "conf": 0.685
+    },
+    {
+     "w": "the",
+     "start": 317.162,
+     "end": 317.243,
+     "conf": 0.995
+    },
+    {
+     "w": "same",
+     "start": 317.303,
+     "end": 317.564,
+     "conf": 0.801
+    },
+    {
+     "w": "on",
+     "start": 317.584,
+     "end": 317.664,
+     "conf": 0.69
+    },
+    {
+     "w": "any",
+     "start": 317.724,
+     "end": 317.824,
+     "conf": 0.667
+    },
+    {
+     "w": "circle",
+     "start": 317.945,
+     "end": 318.326,
+     "conf": 0.815
+    },
+    {
+     "w": "a",
+     "start": 318.546,
+     "end": 318.566,
+     "conf": 0.001
+    },
+    {
+     "w": "coin",
+     "start": 318.647,
+     "end": 318.967,
+     "conf": 0.749
+    },
+    {
+     "w": "or",
+     "start": 319.048,
+     "end": 319.088,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 319.108,
+     "end": 319.168,
+     "conf": 0.999
+    },
+    {
+     "w": "whole",
+     "start": 319.188,
+     "end": 319.389,
+     "conf": 0.779
+    },
+    {
+     "w": "earth",
+     "start": 319.409,
+     "end": 319.649,
+     "conf": 0.839
+    },
+    {
+     "w": "since",
+     "start": 319.99,
+     "end": 320.151,
+     "conf": 0.789
+    },
+    {
+     "w": "it",
+     "start": 320.171,
+     "end": 320.231,
+     "conf": 0.997
+    },
+    {
+     "w": "only",
+     "start": 320.291,
+     "end": 320.452,
+     "conf": 0.749
+    },
+    {
+     "w": "compares",
+     "start": 320.512,
+     "end": 320.873,
+     "conf": 0.834
+    },
+    {
+     "w": "the",
+     "start": 320.893,
+     "end": 320.973,
+     "conf": 0.944
+    },
+    {
+     "w": "rim",
+     "start": 321.033,
+     "end": 321.214,
+     "conf": 0.813
+    },
+    {
+     "w": "with",
+     "start": 321.314,
+     "end": 321.414,
+     "conf": 0.744
+    },
+    {
+     "w": "that",
+     "start": 321.434,
+     "end": 321.595,
+     "conf": 0.765
+    },
+    {
+     "w": "circle's",
+     "start": 321.735,
+     "end": 322.096,
+     "conf": 0.744
+    },
+    {
+     "w": "own",
+     "start": 322.176,
+     "end": 322.257,
+     "conf": 0.661
+    },
+    {
+     "w": "radius",
+     "start": 322.317,
+     "end": 322.698,
+     "conf": 0.74
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "So how many radians are in a full turn? The rim is two pi times the radius, so a full turn is two pi radians. About six point two eight.",
+   "idea": false,
+   "start": 323.748,
+   "end": 330.365,
+   "words": [
+    {
+     "w": "so",
+     "start": 323.748,
+     "end": 323.788,
+     "conf": 0.997
+    },
+    {
+     "w": "how",
+     "start": 323.848,
+     "end": 323.908,
+     "conf": 0.991
+    },
+    {
+     "w": "many",
+     "start": 323.929,
+     "end": 324.029,
+     "conf": 0.952
+    },
+    {
+     "w": "radians",
+     "start": 324.109,
+     "end": 324.41,
+     "conf": 0.708
+    },
+    {
+     "w": "are",
+     "start": 324.43,
+     "end": 324.49,
+     "conf": 0.987
+    },
+    {
+     "w": "in",
+     "start": 324.51,
+     "end": 324.55,
+     "conf": 0.82
+    },
+    {
+     "w": "a",
+     "start": 324.57,
+     "end": 324.61,
+     "conf": 0.956
+    },
+    {
+     "w": "full",
+     "start": 324.67,
+     "end": 324.851,
+     "conf": 0.784
+    },
+    {
+     "w": "turn",
+     "start": 324.931,
+     "end": 325.212,
+     "conf": 0.721
+    },
+    {
+     "w": "the",
+     "start": 325.573,
+     "end": 325.633,
+     "conf": 0.603
+    },
+    {
+     "w": "rim",
+     "start": 325.693,
+     "end": 325.813,
+     "conf": 0.671
+    },
+    {
+     "w": "is",
+     "start": 325.874,
+     "end": 325.934,
+     "conf": 0.499
+    },
+    {
+     "w": "two",
+     "start": 325.994,
+     "end": 326.134,
+     "conf": 0.674
+    },
+    {
+     "w": "pi",
+     "start": 326.194,
+     "end": 326.375,
+     "conf": 0.333
+    },
+    {
+     "w": "times",
+     "start": 326.455,
+     "end": 326.656,
+     "conf": 0.847
+    },
+    {
+     "w": "the",
+     "start": 326.676,
+     "end": 326.736,
+     "conf": 0.18
+    },
+    {
+     "w": "radius",
+     "start": 326.756,
+     "end": 327.097,
+     "conf": 0.84
+    },
+    {
+     "w": "so",
+     "start": 327.177,
+     "end": 327.217,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 327.297,
+     "end": 327.317,
+     "conf": 0.987
+    },
+    {
+     "w": "full",
+     "start": 327.417,
+     "end": 327.558,
+     "conf": 0.748
+    },
+    {
+     "w": "turn",
+     "start": 327.618,
+     "end": 327.879,
+     "conf": 0.73
+    },
+    {
+     "w": "is",
+     "start": 327.999,
+     "end": 328.039,
+     "conf": 0.497
+    },
+    {
+     "w": "two",
+     "start": 328.059,
+     "end": 328.22,
+     "conf": 0.773
+    },
+    {
+     "w": "pi",
+     "start": 328.26,
+     "end": 328.4,
+     "conf": 0.312
+    },
+    {
+     "w": "radians",
+     "start": 328.48,
+     "end": 328.801,
+     "conf": 0.737
+    },
+    {
+     "w": "about",
+     "start": 329.022,
+     "end": 329.222,
+     "conf": 0.796
+    },
+    {
+     "w": "six",
+     "start": 329.242,
+     "end": 329.523,
+     "conf": 0.002
+    },
+    {
+     "w": "point",
+     "start": 329.543,
+     "end": 329.844,
+     "conf": 0.0
+    },
+    {
+     "w": "two",
+     "start": 329.864,
+     "end": 330.084,
+     "conf": 0.0
+    },
+    {
+     "w": "eight",
+     "start": 330.104,
+     "end": 330.365,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "Half a turn is pi, and a quarter turn is pi over two.",
+   "idea": false,
+   "start": 330.795,
+   "end": 333.095,
+   "words": [
+    {
+     "w": "half",
+     "start": 330.795,
+     "end": 330.977,
+     "conf": 0.768
+    },
+    {
+     "w": "a",
+     "start": 331.017,
+     "end": 331.037,
+     "conf": 0.957
+    },
+    {
+     "w": "turn",
+     "start": 331.098,
+     "end": 331.259,
+     "conf": 0.719
+    },
+    {
+     "w": "is",
+     "start": 331.299,
+     "end": 331.36,
+     "conf": 0.991
+    },
+    {
+     "w": "pi",
+     "start": 331.441,
+     "end": 331.683,
+     "conf": 0.603
+    },
+    {
+     "w": "and",
+     "start": 331.763,
+     "end": 331.824,
+     "conf": 0.975
+    },
+    {
+     "w": "a",
+     "start": 331.844,
+     "end": 331.864,
+     "conf": 0.991
+    },
+    {
+     "w": "quarter",
+     "start": 331.925,
+     "end": 332.167,
+     "conf": 0.73
+    },
+    {
+     "w": "turn",
+     "start": 332.187,
+     "end": 332.369,
+     "conf": 0.83
+    },
+    {
+     "w": "is",
+     "start": 332.409,
+     "end": 332.469,
+     "conf": 0.987
+    },
+    {
+     "w": "pi",
+     "start": 332.53,
+     "end": 332.691,
+     "conf": 0.106
+    },
+    {
+     "w": "over",
+     "start": 332.772,
+     "end": 332.913,
+     "conf": 0.689
+    },
+    {
+     "w": "two",
+     "start": 332.974,
+     "end": 333.095,
+     "conf": 0.329
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "So one hundred and eighty degrees is pi, and that's the only conversion you need. Thirty degrees is a sixth of that, so pi over six.",
+   "idea": false,
+   "start": 333.485,
+   "end": 340.068,
+   "words": [
+    {
+     "w": "so",
+     "start": 333.485,
+     "end": 333.525,
+     "conf": 0.499
+    },
+    {
+     "w": "one",
+     "start": 333.545,
+     "end": 333.626,
+     "conf": 0.333
+    },
+    {
+     "w": "hundred",
+     "start": 333.646,
+     "end": 334.188,
+     "conf": 0.006
+    },
+    {
+     "w": "and",
+     "start": 334.208,
+     "end": 334.288,
+     "conf": 0.034
+    },
+    {
+     "w": "eighty",
+     "start": 334.348,
+     "end": 334.509,
+     "conf": 0.001
+    },
+    {
+     "w": "degrees",
+     "start": 334.529,
+     "end": 334.83,
+     "conf": 0.334
+    },
+    {
+     "w": "is",
+     "start": 334.91,
+     "end": 334.97,
+     "conf": 0.447
+    },
+    {
+     "w": "pi",
+     "start": 335.071,
+     "end": 335.352,
+     "conf": 0.38
+    },
+    {
+     "w": "and",
+     "start": 335.733,
+     "end": 335.793,
+     "conf": 0.334
+    },
+    {
+     "w": "that's",
+     "start": 335.813,
+     "end": 335.974,
+     "conf": 0.728
+    },
+    {
+     "w": "the",
+     "start": 335.994,
+     "end": 336.074,
+     "conf": 0.976
+    },
+    {
+     "w": "only",
+     "start": 336.134,
+     "end": 336.255,
+     "conf": 0.739
+    },
+    {
+     "w": "conversion",
+     "start": 336.335,
+     "end": 336.716,
+     "conf": 0.899
+    },
+    {
+     "w": "you",
+     "start": 336.736,
+     "end": 336.837,
+     "conf": 0.81
+    },
+    {
+     "w": "need",
+     "start": 336.877,
+     "end": 337.078,
+     "conf": 0.752
+    },
+    {
+     "w": "thirty",
+     "start": 337.459,
+     "end": 337.66,
+     "conf": 0.017
+    },
+    {
+     "w": "degrees",
+     "start": 337.68,
+     "end": 338.081,
+     "conf": 0.222
+    },
+    {
+     "w": "is",
+     "start": 338.161,
+     "end": 338.201,
+     "conf": 0.476
+    },
+    {
+     "w": "a",
+     "start": 338.262,
+     "end": 338.282,
+     "conf": 0.448
+    },
+    {
+     "w": "sixth",
+     "start": 338.422,
+     "end": 338.683,
+     "conf": 0.559
+    },
+    {
+     "w": "of",
+     "start": 338.703,
+     "end": 338.783,
+     "conf": 0.639
+    },
+    {
+     "w": "that",
+     "start": 338.803,
+     "end": 338.984,
+     "conf": 0.988
+    },
+    {
+     "w": "so",
+     "start": 339.205,
+     "end": 339.265,
+     "conf": 0.493
+    },
+    {
+     "w": "pi",
+     "start": 339.386,
+     "end": 339.586,
+     "conf": 0.373
+    },
+    {
+     "w": "over",
+     "start": 339.646,
+     "end": 339.807,
+     "conf": 0.981
+    },
+    {
+     "w": "six",
+     "start": 339.927,
+     "end": 340.068,
+     "conf": 0.575
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "This is why mathematicians love radians. On a circle of any size, the arc you walk is just the angle times the radius, with no extra factor.",
+   "idea": false,
+   "start": 340.619,
+   "end": 347.782,
+   "words": [
+    {
+     "w": "this",
+     "start": 340.619,
+     "end": 340.719,
+     "conf": 0.249
+    },
+    {
+     "w": "is",
+     "start": 340.739,
+     "end": 340.82,
+     "conf": 0.665
+    },
+    {
+     "w": "why",
+     "start": 340.84,
+     "end": 341.02,
+     "conf": 0.813
+    },
+    {
+     "w": "mathematicians",
+     "start": 341.121,
+     "end": 341.783,
+     "conf": 0.89
+    },
+    {
+     "w": "love",
+     "start": 341.883,
+     "end": 342.084,
+     "conf": 0.997
+    },
+    {
+     "w": "radians",
+     "start": 342.164,
+     "end": 342.606,
+     "conf": 0.838
+    },
+    {
+     "w": "on",
+     "start": 342.927,
+     "end": 342.987,
+     "conf": 0.504
+    },
+    {
+     "w": "a",
+     "start": 343.007,
+     "end": 343.027,
+     "conf": 0.998
+    },
+    {
+     "w": "circle",
+     "start": 343.127,
+     "end": 343.368,
+     "conf": 0.751
+    },
+    {
+     "w": "of",
+     "start": 343.388,
+     "end": 343.448,
+     "conf": 0.999
+    },
+    {
+     "w": "any",
+     "start": 343.529,
+     "end": 343.629,
+     "conf": 0.667
+    },
+    {
+     "w": "size",
+     "start": 343.729,
+     "end": 344.03,
+     "conf": 0.848
+    },
+    {
+     "w": "the",
+     "start": 344.05,
+     "end": 344.131,
+     "conf": 0.955
+    },
+    {
+     "w": "arc",
+     "start": 344.231,
+     "end": 344.351,
+     "conf": 0.55
+    },
+    {
+     "w": "you",
+     "start": 344.371,
+     "end": 344.432,
+     "conf": 0.262
+    },
+    {
+     "w": "walk",
+     "start": 344.532,
+     "end": 344.712,
+     "conf": 0.746
+    },
+    {
+     "w": "is",
+     "start": 344.833,
+     "end": 344.893,
+     "conf": 0.499
+    },
+    {
+     "w": "just",
+     "start": 344.953,
+     "end": 345.114,
+     "conf": 0.744
+    },
+    {
+     "w": "the",
+     "start": 345.134,
+     "end": 345.214,
+     "conf": 0.873
+    },
+    {
+     "w": "angle",
+     "start": 345.375,
+     "end": 345.635,
+     "conf": 0.798
+    },
+    {
+     "w": "times",
+     "start": 345.796,
+     "end": 346.077,
+     "conf": 0.865
+    },
+    {
+     "w": "the",
+     "start": 346.097,
+     "end": 346.157,
+     "conf": 0.982
+    },
+    {
+     "w": "radius",
+     "start": 346.217,
+     "end": 346.579,
+     "conf": 0.722
+    },
+    {
+     "w": "with",
+     "start": 346.839,
+     "end": 346.94,
+     "conf": 0.749
+    },
+    {
+     "w": "no",
+     "start": 346.96,
+     "end": 347.06,
+     "conf": 0.592
+    },
+    {
+     "w": "extra",
+     "start": 347.201,
+     "end": 347.441,
+     "conf": 0.749
+    },
+    {
+     "w": "factor",
+     "start": 347.522,
+     "end": 347.782,
+     "conf": 0.498
+    }
+   ]
+  },
+  {
+   "section": "Measuring with the circle itself",
+   "act": "ACT THREE — What thirty means",
+   "text": "And since this is just distance along the rim, on a circle of radius one, an angle in radians is simply how far M has walked.",
+   "idea": true,
+   "start": 348.172,
+   "end": 354.394,
+   "words": [
+    {
+     "w": "and",
+     "start": 348.172,
+     "end": 348.252,
+     "conf": 0.801
+    },
+    {
+     "w": "since",
+     "start": 348.313,
+     "end": 348.493,
+     "conf": 0.999
+    },
+    {
+     "w": "this",
+     "start": 348.513,
+     "end": 348.634,
+     "conf": 0.749
+    },
+    {
+     "w": "is",
+     "start": 348.734,
+     "end": 348.774,
+     "conf": 0.498
+    },
+    {
+     "w": "just",
+     "start": 348.834,
+     "end": 349.015,
+     "conf": 0.745
+    },
+    {
+     "w": "distance",
+     "start": 349.075,
+     "end": 349.396,
+     "conf": 0.859
+    },
+    {
+     "w": "along",
+     "start": 349.417,
+     "end": 349.597,
+     "conf": 0.917
+    },
+    {
+     "w": "the",
+     "start": 349.617,
+     "end": 349.698,
+     "conf": 0.912
+    },
+    {
+     "w": "rim",
+     "start": 349.758,
+     "end": 349.938,
+     "conf": 0.665
+    },
+    {
+     "w": "on",
+     "start": 350.32,
+     "end": 350.38,
+     "conf": 0.996
+    },
+    {
+     "w": "a",
+     "start": 350.4,
+     "end": 350.42,
+     "conf": 0.997
+    },
+    {
+     "w": "circle",
+     "start": 350.541,
+     "end": 350.801,
+     "conf": 0.752
+    },
+    {
+     "w": "of",
+     "start": 350.822,
+     "end": 350.882,
+     "conf": 0.992
+    },
+    {
+     "w": "radius",
+     "start": 350.962,
+     "end": 351.283,
+     "conf": 0.833
+    },
+    {
+     "w": "one",
+     "start": 351.404,
+     "end": 351.524,
+     "conf": 0.688
+    },
+    {
+     "w": "an",
+     "start": 351.725,
+     "end": 351.765,
+     "conf": 0.498
+    },
+    {
+     "w": "angle",
+     "start": 351.845,
+     "end": 352.066,
+     "conf": 0.937
+    },
+    {
+     "w": "in",
+     "start": 352.086,
+     "end": 352.146,
+     "conf": 0.659
+    },
+    {
+     "w": "radians",
+     "start": 352.227,
+     "end": 352.548,
+     "conf": 0.69
+    },
+    {
+     "w": "is",
+     "start": 352.608,
+     "end": 352.648,
+     "conf": 0.493
+    },
+    {
+     "w": "simply",
+     "start": 352.708,
+     "end": 352.949,
+     "conf": 0.875
+    },
+    {
+     "w": "how",
+     "start": 353.09,
+     "end": 353.23,
+     "conf": 0.997
+    },
+    {
+     "w": "far",
+     "start": 353.331,
+     "end": 353.551,
+     "conf": 0.666
+    },
+    {
+     "w": "m",
+     "start": 353.832,
+     "end": 353.852,
+     "conf": 0.032
+    },
+    {
+     "w": "has",
+     "start": 353.933,
+     "end": 354.033,
+     "conf": 0.364
+    },
+    {
+     "w": "walked",
+     "start": 354.093,
+     "end": 354.394,
+     "conf": 0.836
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "Now we can finally go back to our calculator.",
+   "idea": false,
+   "start": 356.055,
+   "end": 357.965,
+   "words": [
+    {
+     "w": "now",
+     "start": 356.055,
+     "end": 356.156,
+     "conf": 0.994
+    },
+    {
+     "w": "we",
+     "start": 356.176,
+     "end": 356.236,
+     "conf": 0.683
+    },
+    {
+     "w": "can",
+     "start": 356.276,
+     "end": 356.397,
+     "conf": 0.999
+    },
+    {
+     "w": "finally",
+     "start": 356.517,
+     "end": 356.799,
+     "conf": 0.678
+    },
+    {
+     "w": "go",
+     "start": 356.819,
+     "end": 356.879,
+     "conf": 0.999
+    },
+    {
+     "w": "back",
+     "start": 356.96,
+     "end": 357.1,
+     "conf": 0.986
+    },
+    {
+     "w": "to",
+     "start": 357.14,
+     "end": 357.201,
+     "conf": 0.995
+    },
+    {
+     "w": "our",
+     "start": 357.261,
+     "end": 357.341,
+     "conf": 0.538
+    },
+    {
+     "w": "calculator",
+     "start": 357.362,
+     "end": 357.965,
+     "conf": 0.897
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "In degree mode, thirty means a twelfth of a turn, and M's height is one half.",
+   "idea": false,
+   "start": 358.354,
+   "end": 362.058,
+   "words": [
+    {
+     "w": "in",
+     "start": 358.354,
+     "end": 358.394,
+     "conf": 0.995
+    },
+    {
+     "w": "degree",
+     "start": 358.415,
+     "end": 358.717,
+     "conf": 0.827
+    },
+    {
+     "w": "mode",
+     "start": 358.757,
+     "end": 359.018,
+     "conf": 0.815
+    },
+    {
+     "w": "thirty",
+     "start": 359.159,
+     "end": 359.421,
+     "conf": 0.854
+    },
+    {
+     "w": "means",
+     "start": 359.502,
+     "end": 359.663,
+     "conf": 0.801
+    },
+    {
+     "w": "a",
+     "start": 359.723,
+     "end": 359.743,
+     "conf": 0.006
+    },
+    {
+     "w": "twelfth",
+     "start": 359.763,
+     "end": 360.065,
+     "conf": 0.745
+    },
+    {
+     "w": "of",
+     "start": 360.085,
+     "end": 360.166,
+     "conf": 0.569
+    },
+    {
+     "w": "a",
+     "start": 360.186,
+     "end": 360.206,
+     "conf": 0.468
+    },
+    {
+     "w": "turn",
+     "start": 360.287,
+     "end": 360.569,
+     "conf": 0.76
+    },
+    {
+     "w": "and",
+     "start": 360.81,
+     "end": 360.871,
+     "conf": 0.529
+    },
+    {
+     "w": "m's",
+     "start": 361.032,
+     "end": 361.152,
+     "conf": 0.801
+    },
+    {
+     "w": "height",
+     "start": 361.233,
+     "end": 361.434,
+     "conf": 0.483
+    },
+    {
+     "w": "is",
+     "start": 361.495,
+     "end": 361.575,
+     "conf": 0.682
+    },
+    {
+     "w": "one",
+     "start": 361.676,
+     "end": 361.777,
+     "conf": 0.669
+    },
+    {
+     "w": "half",
+     "start": 361.817,
+     "end": 362.058,
+     "conf": 0.76
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "That one setting we changed switches it to radians, and now thirty means this: walk thirty units along the rim.",
+   "idea": true,
+   "start": 362.509,
+   "end": 368.222,
+   "words": [
+    {
+     "w": "that",
+     "start": 362.509,
+     "end": 362.589,
+     "conf": 0.246
+    },
+    {
+     "w": "one",
+     "start": 362.71,
+     "end": 362.81,
+     "conf": 0.666
+    },
+    {
+     "w": "setting",
+     "start": 362.83,
+     "end": 363.11,
+     "conf": 0.752
+    },
+    {
+     "w": "we",
+     "start": 363.13,
+     "end": 363.211,
+     "conf": 0.662
+    },
+    {
+     "w": "changed",
+     "start": 363.331,
+     "end": 363.712,
+     "conf": 0.856
+    },
+    {
+     "w": "switches",
+     "start": 363.812,
+     "end": 364.093,
+     "conf": 0.724
+    },
+    {
+     "w": "it",
+     "start": 364.113,
+     "end": 364.193,
+     "conf": 0.922
+    },
+    {
+     "w": "to",
+     "start": 364.253,
+     "end": 364.313,
+     "conf": 0.498
+    },
+    {
+     "w": "radians",
+     "start": 364.434,
+     "end": 364.895,
+     "conf": 0.775
+    },
+    {
+     "w": "and",
+     "start": 365.215,
+     "end": 365.275,
+     "conf": 0.721
+    },
+    {
+     "w": "now",
+     "start": 365.296,
+     "end": 365.416,
+     "conf": 0.777
+    },
+    {
+     "w": "thirty",
+     "start": 365.516,
+     "end": 365.757,
+     "conf": 0.721
+    },
+    {
+     "w": "means",
+     "start": 365.857,
+     "end": 366.037,
+     "conf": 0.8
+    },
+    {
+     "w": "this",
+     "start": 366.057,
+     "end": 366.278,
+     "conf": 0.799
+    },
+    {
+     "w": "walk",
+     "start": 366.639,
+     "end": 366.799,
+     "conf": 0.755
+    },
+    {
+     "w": "thirty",
+     "start": 366.819,
+     "end": 367.16,
+     "conf": 0.727
+    },
+    {
+     "w": "units",
+     "start": 367.34,
+     "end": 367.641,
+     "conf": 0.756
+    },
+    {
+     "w": "along",
+     "start": 367.721,
+     "end": 367.902,
+     "conf": 0.755
+    },
+    {
+     "w": "the",
+     "start": 367.922,
+     "end": 368.022,
+     "conf": 0.748
+    },
+    {
+     "w": "rim",
+     "start": 368.082,
+     "end": 368.222,
+     "conf": 0.666
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "So let's walk. Each full turn takes about six point two eight.",
+   "idea": false,
+   "start": 369.253,
+   "end": 371.981,
+   "words": [
+    {
+     "w": "so",
+     "start": 369.253,
+     "end": 369.313,
+     "conf": 0.998
+    },
+    {
+     "w": "let's",
+     "start": 369.353,
+     "end": 369.494,
+     "conf": 0.8
+    },
+    {
+     "w": "walk",
+     "start": 369.534,
+     "end": 369.714,
+     "conf": 1.0
+    },
+    {
+     "w": "each",
+     "start": 369.975,
+     "end": 370.116,
+     "conf": 1.0
+    },
+    {
+     "w": "full",
+     "start": 370.156,
+     "end": 370.316,
+     "conf": 0.943
+    },
+    {
+     "w": "turn",
+     "start": 370.376,
+     "end": 370.557,
+     "conf": 0.686
+    },
+    {
+     "w": "takes",
+     "start": 370.637,
+     "end": 370.838,
+     "conf": 0.796
+    },
+    {
+     "w": "about",
+     "start": 370.858,
+     "end": 371.038,
+     "conf": 0.994
+    },
+    {
+     "w": "six",
+     "start": 371.059,
+     "end": 371.259,
+     "conf": 0.003
+    },
+    {
+     "w": "point",
+     "start": 371.279,
+     "end": 371.5,
+     "conf": 0.0
+    },
+    {
+     "w": "two",
+     "start": 371.52,
+     "end": 371.721,
+     "conf": 0.0
+    },
+    {
+     "w": "eight",
+     "start": 371.741,
+     "end": 371.981,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "Four turns use up just over twenty-five. And after each whole turn, M stands exactly where it started, so all of those turns change nothing.",
+   "idea": false,
+   "start": 372.451,
+   "end": 379.74,
+   "words": [
+    {
+     "w": "four",
+     "start": 372.451,
+     "end": 372.631,
+     "conf": 0.817
+    },
+    {
+     "w": "turns",
+     "start": 372.731,
+     "end": 373.072,
+     "conf": 0.793
+    },
+    {
+     "w": "use",
+     "start": 373.192,
+     "end": 373.312,
+     "conf": 0.945
+    },
+    {
+     "w": "up",
+     "start": 373.372,
+     "end": 373.452,
+     "conf": 0.5
+    },
+    {
+     "w": "just",
+     "start": 373.552,
+     "end": 373.713,
+     "conf": 0.747
+    },
+    {
+     "w": "over",
+     "start": 373.733,
+     "end": 373.893,
+     "conf": 0.796
+    },
+    {
+     "w": "twenty-five",
+     "start": 373.913,
+     "end": 374.594,
+     "conf": 0.427
+    },
+    {
+     "w": "and",
+     "start": 374.914,
+     "end": 374.994,
+     "conf": 0.698
+    },
+    {
+     "w": "after",
+     "start": 375.034,
+     "end": 375.194,
+     "conf": 0.8
+    },
+    {
+     "w": "each",
+     "start": 375.254,
+     "end": 375.355,
+     "conf": 0.75
+    },
+    {
+     "w": "whole",
+     "start": 375.375,
+     "end": 375.555,
+     "conf": 0.682
+    },
+    {
+     "w": "turn",
+     "start": 375.575,
+     "end": 375.915,
+     "conf": 0.898
+    },
+    {
+     "w": "m",
+     "start": 376.296,
+     "end": 376.316,
+     "conf": 0.009
+    },
+    {
+     "w": "stands",
+     "start": 376.456,
+     "end": 376.756,
+     "conf": 0.812
+    },
+    {
+     "w": "exactly",
+     "start": 376.816,
+     "end": 377.277,
+     "conf": 0.964
+    },
+    {
+     "w": "where",
+     "start": 377.297,
+     "end": 377.457,
+     "conf": 0.835
+    },
+    {
+     "w": "it",
+     "start": 377.477,
+     "end": 377.537,
+     "conf": 0.971
+    },
+    {
+     "w": "started",
+     "start": 377.597,
+     "end": 377.978,
+     "conf": 0.95
+    },
+    {
+     "w": "so",
+     "start": 378.198,
+     "end": 378.238,
+     "conf": 0.996
+    },
+    {
+     "w": "all",
+     "start": 378.258,
+     "end": 378.418,
+     "conf": 0.663
+    },
+    {
+     "w": "of",
+     "start": 378.438,
+     "end": 378.498,
+     "conf": 0.997
+    },
+    {
+     "w": "those",
+     "start": 378.518,
+     "end": 378.699,
+     "conf": 0.999
+    },
+    {
+     "w": "turns",
+     "start": 378.719,
+     "end": 379.079,
+     "conf": 0.98
+    },
+    {
+     "w": "change",
+     "start": 379.179,
+     "end": 379.419,
+     "conf": 0.804
+    },
+    {
+     "w": "nothing",
+     "start": 379.499,
+     "end": 379.74,
+     "conf": 0.852
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "That's what we mean when we say sine repeats, and it's the last piece.",
+   "idea": true,
+   "start": 380.13,
+   "end": 383.077,
+   "words": [
+    {
+     "w": "that's",
+     "start": 380.13,
+     "end": 380.27,
+     "conf": 0.722
+    },
+    {
+     "w": "what",
+     "start": 380.31,
+     "end": 380.411,
+     "conf": 0.998
+    },
+    {
+     "w": "we",
+     "start": 380.431,
+     "end": 380.511,
+     "conf": 0.665
+    },
+    {
+     "w": "mean",
+     "start": 380.591,
+     "end": 380.792,
+     "conf": 0.992
+    },
+    {
+     "w": "when",
+     "start": 380.812,
+     "end": 380.932,
+     "conf": 0.883
+    },
+    {
+     "w": "we",
+     "start": 380.972,
+     "end": 381.012,
+     "conf": 0.499
+    },
+    {
+     "w": "say",
+     "start": 381.092,
+     "end": 381.233,
+     "conf": 0.996
+    },
+    {
+     "w": "sine",
+     "start": 381.333,
+     "end": 381.573,
+     "conf": 0.416
+    },
+    {
+     "w": "repeats",
+     "start": 381.593,
+     "end": 381.974,
+     "conf": 0.748
+    },
+    {
+     "w": "and",
+     "start": 382.195,
+     "end": 382.275,
+     "conf": 0.677
+    },
+    {
+     "w": "it's",
+     "start": 382.295,
+     "end": 382.395,
+     "conf": 0.746
+    },
+    {
+     "w": "the",
+     "start": 382.415,
+     "end": 382.496,
+     "conf": 0.748
+    },
+    {
+     "w": "last",
+     "start": 382.556,
+     "end": 382.756,
+     "conf": 0.75
+    },
+    {
+     "w": "piece",
+     "start": 382.776,
+     "end": 383.077,
+     "conf": 0.556
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "We have about four point eight seven left to walk.",
+   "idea": false,
+   "start": 384.087,
+   "end": 386.307,
+   "words": [
+    {
+     "w": "we",
+     "start": 384.087,
+     "end": 384.128,
+     "conf": 0.495
+    },
+    {
+     "w": "have",
+     "start": 384.148,
+     "end": 384.269,
+     "conf": 0.997
+    },
+    {
+     "w": "about",
+     "start": 384.289,
+     "end": 384.491,
+     "conf": 0.996
+    },
+    {
+     "w": "four",
+     "start": 384.511,
+     "end": 384.733,
+     "conf": 0.0
+    },
+    {
+     "w": "point",
+     "start": 384.753,
+     "end": 384.975,
+     "conf": 0.002
+    },
+    {
+     "w": "eight",
+     "start": 384.995,
+     "end": 385.177,
+     "conf": 0.0
+    },
+    {
+     "w": "seven",
+     "start": 385.197,
+     "end": 385.581,
+     "conf": 0.007
+    },
+    {
+     "w": "left",
+     "start": 385.682,
+     "end": 385.863,
+     "conf": 0.75
+    },
+    {
+     "w": "to",
+     "start": 385.884,
+     "end": 385.964,
+     "conf": 0.664
+    },
+    {
+     "w": "walk",
+     "start": 386.045,
+     "end": 386.307,
+     "conf": 0.74
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "That carries M past the left side, past the bottom, and stops it nearly two hundred and seventy-nine degrees around, low on the right.",
+   "idea": false,
+   "start": 386.718,
+   "end": 393.493,
+   "words": [
+    {
+     "w": "that",
+     "start": 386.718,
+     "end": 386.798,
+     "conf": 0.25
+    },
+    {
+     "w": "carries",
+     "start": 386.858,
+     "end": 387.139,
+     "conf": 0.765
+    },
+    {
+     "w": "m",
+     "start": 387.339,
+     "end": 387.359,
+     "conf": 0.996
+    },
+    {
+     "w": "past",
+     "start": 387.52,
+     "end": 387.78,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 387.8,
+     "end": 387.901,
+     "conf": 0.666
+    },
+    {
+     "w": "left",
+     "start": 387.961,
+     "end": 388.121,
+     "conf": 0.754
+    },
+    {
+     "w": "side",
+     "start": 388.201,
+     "end": 388.502,
+     "conf": 0.746
+    },
+    {
+     "w": "past",
+     "start": 388.743,
+     "end": 389.003,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 389.023,
+     "end": 389.123,
+     "conf": 0.795
+    },
+    {
+     "w": "bottom",
+     "start": 389.184,
+     "end": 389.484,
+     "conf": 0.828
+    },
+    {
+     "w": "and",
+     "start": 389.845,
+     "end": 389.925,
+     "conf": 0.668
+    },
+    {
+     "w": "stops",
+     "start": 390.005,
+     "end": 390.266,
+     "conf": 0.8
+    },
+    {
+     "w": "it",
+     "start": 390.326,
+     "end": 390.386,
+     "conf": 0.5
+    },
+    {
+     "w": "nearly",
+     "start": 390.466,
+     "end": 390.667,
+     "conf": 0.88
+    },
+    {
+     "w": "two",
+     "start": 390.687,
+     "end": 390.927,
+     "conf": 0.001
+    },
+    {
+     "w": "hundred",
+     "start": 390.947,
+     "end": 391.188,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 391.208,
+     "end": 391.268,
+     "conf": 0.0
+    },
+    {
+     "w": "seventy-nine",
+     "start": 391.288,
+     "end": 391.829,
+     "conf": 0.0
+    },
+    {
+     "w": "degrees",
+     "start": 391.849,
+     "end": 392.17,
+     "conf": 0.798
+    },
+    {
+     "w": "around",
+     "start": 392.19,
+     "end": 392.491,
+     "conf": 0.868
+    },
+    {
+     "w": "low",
+     "start": 392.792,
+     "end": 392.932,
+     "conf": 0.608
+    },
+    {
+     "w": "on",
+     "start": 393.012,
+     "end": 393.072,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 393.092,
+     "end": 393.172,
+     "conf": 0.977
+    },
+    {
+     "w": "right",
+     "start": 393.233,
+     "end": 393.493,
+     "conf": 0.853
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "Almost at the very bottom of the circle.",
+   "idea": false,
+   "start": 393.923,
+   "end": 395.64,
+   "words": [
+    {
+     "w": "almost",
+     "start": 393.923,
+     "end": 394.186,
+     "conf": 0.94
+    },
+    {
+     "w": "at",
+     "start": 394.206,
+     "end": 394.267,
+     "conf": 0.654
+    },
+    {
+     "w": "the",
+     "start": 394.287,
+     "end": 394.368,
+     "conf": 0.986
+    },
+    {
+     "w": "very",
+     "start": 394.388,
+     "end": 394.61,
+     "conf": 0.997
+    },
+    {
+     "w": "bottom",
+     "start": 394.792,
+     "end": 395.075,
+     "conf": 0.805
+    },
+    {
+     "w": "of",
+     "start": 395.095,
+     "end": 395.176,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 395.196,
+     "end": 395.256,
+     "conf": 0.995
+    },
+    {
+     "w": "circle",
+     "start": 395.337,
+     "end": 395.64,
+     "conf": 0.787
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "Its height there is minus zero point nine eight eight.",
+   "idea": true,
+   "start": 396.07,
+   "end": 398.49,
+   "words": [
+    {
+     "w": "its",
+     "start": 396.07,
+     "end": 396.131,
+     "conf": 0.659
+    },
+    {
+     "w": "height",
+     "start": 396.191,
+     "end": 396.393,
+     "conf": 0.622
+    },
+    {
+     "w": "there",
+     "start": 396.413,
+     "end": 396.635,
+     "conf": 0.826
+    },
+    {
+     "w": "is",
+     "start": 396.695,
+     "end": 396.756,
+     "conf": 0.499
+    },
+    {
+     "w": "minus",
+     "start": 396.837,
+     "end": 397.099,
+     "conf": 0.387
+    },
+    {
+     "w": "zero",
+     "start": 397.119,
+     "end": 397.401,
+     "conf": 0.615
+    },
+    {
+     "w": "point",
+     "start": 397.522,
+     "end": 397.724,
+     "conf": 0.727
+    },
+    {
+     "w": "nine",
+     "start": 397.744,
+     "end": 398.107,
+     "conf": 0.011
+    },
+    {
+     "w": "eight",
+     "start": 398.127,
+     "end": 398.248,
+     "conf": 0.014
+    },
+    {
+     "w": "eight",
+     "start": 398.268,
+     "end": 398.49,
+     "conf": 0.001
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "Same keys, and two different points on the same circle.",
+   "idea": false,
+   "start": 399.642,
+   "end": 402.244,
+   "words": [
+    {
+     "w": "same",
+     "start": 399.642,
+     "end": 399.864,
+     "conf": 0.996
+    },
+    {
+     "w": "keys",
+     "start": 399.944,
+     "end": 400.227,
+     "conf": 0.323
+    },
+    {
+     "w": "and",
+     "start": 400.388,
+     "end": 400.529,
+     "conf": 0.99
+    },
+    {
+     "w": "two",
+     "start": 400.691,
+     "end": 400.832,
+     "conf": 0.666
+    },
+    {
+     "w": "different",
+     "start": 400.852,
+     "end": 401.074,
+     "conf": 0.933
+    },
+    {
+     "w": "points",
+     "start": 401.094,
+     "end": 401.336,
+     "conf": 0.932
+    },
+    {
+     "w": "on",
+     "start": 401.457,
+     "end": 401.518,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 401.538,
+     "end": 401.619,
+     "conf": 0.901
+    },
+    {
+     "w": "same",
+     "start": 401.679,
+     "end": 401.861,
+     "conf": 0.749
+    },
+    {
+     "w": "circle",
+     "start": 401.942,
+     "end": 402.244,
+     "conf": 0.529
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "The calculator was never confused. We just never told it how far to walk.",
+   "idea": false,
+   "start": 402.635,
+   "end": 406.121,
+   "words": [
+    {
+     "w": "the",
+     "start": 402.635,
+     "end": 402.695,
+     "conf": 0.002
+    },
+    {
+     "w": "calculator",
+     "start": 402.715,
+     "end": 403.136,
+     "conf": 0.794
+    },
+    {
+     "w": "was",
+     "start": 403.156,
+     "end": 403.236,
+     "conf": 0.999
+    },
+    {
+     "w": "never",
+     "start": 403.296,
+     "end": 403.476,
+     "conf": 0.985
+    },
+    {
+     "w": "confused",
+     "start": 403.536,
+     "end": 404.178,
+     "conf": 0.875
+    },
+    {
+     "w": "we",
+     "start": 404.598,
+     "end": 404.658,
+     "conf": 0.997
+    },
+    {
+     "w": "just",
+     "start": 404.738,
+     "end": 404.859,
+     "conf": 0.782
+    },
+    {
+     "w": "never",
+     "start": 404.879,
+     "end": 405.059,
+     "conf": 0.987
+    },
+    {
+     "w": "told",
+     "start": 405.119,
+     "end": 405.299,
+     "conf": 0.681
+    },
+    {
+     "w": "it",
+     "start": 405.319,
+     "end": 405.379,
+     "conf": 0.892
+    },
+    {
+     "w": "how",
+     "start": 405.399,
+     "end": 405.52,
+     "conf": 0.99
+    },
+    {
+     "w": "far",
+     "start": 405.54,
+     "end": 405.7,
+     "conf": 0.521
+    },
+    {
+     "w": "to",
+     "start": 405.72,
+     "end": 405.8,
+     "conf": 0.471
+    },
+    {
+     "w": "walk",
+     "start": 405.86,
+     "end": 406.121,
+     "conf": 0.995
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT THREE — What thirty means",
+   "text": "So before you trust a sine on a calculator, check that little setting.",
+   "idea": true,
+   "start": 406.55,
+   "end": 409.959,
+   "words": [
+    {
+     "w": "so",
+     "start": 406.55,
+     "end": 406.61,
+     "conf": 0.998
+    },
+    {
+     "w": "before",
+     "start": 406.69,
+     "end": 406.911,
+     "conf": 0.828
+    },
+    {
+     "w": "you",
+     "start": 406.931,
+     "end": 406.991,
+     "conf": 0.998
+    },
+    {
+     "w": "trust",
+     "start": 407.031,
+     "end": 407.272,
+     "conf": 0.89
+    },
+    {
+     "w": "a",
+     "start": 407.292,
+     "end": 407.312,
+     "conf": 0.915
+    },
+    {
+     "w": "sine",
+     "start": 407.533,
+     "end": 407.813,
+     "conf": 0.57
+    },
+    {
+     "w": "on",
+     "start": 407.834,
+     "end": 407.894,
+     "conf": 0.988
+    },
+    {
+     "w": "a",
+     "start": 407.914,
+     "end": 407.934,
+     "conf": 0.989
+    },
+    {
+     "w": "calculator",
+     "start": 408.014,
+     "end": 408.576,
+     "conf": 0.836
+    },
+    {
+     "w": "check",
+     "start": 408.916,
+     "end": 409.117,
+     "conf": 0.986
+    },
+    {
+     "w": "that",
+     "start": 409.177,
+     "end": 409.297,
+     "conf": 0.748
+    },
+    {
+     "w": "little",
+     "start": 409.318,
+     "end": 409.538,
+     "conf": 0.878
+    },
+    {
+     "w": "setting",
+     "start": 409.658,
+     "end": 409.959,
+     "conf": 0.835
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT FOUR — Putting it together",
+   "text": "An angle fixes the proportions of a right triangle, and those proportions are sine, cosine and tangent.",
+   "idea": false,
+   "start": 412.42,
+   "end": 417.57,
+   "words": [
+    {
+     "w": "an",
+     "start": 412.42,
+     "end": 412.48,
+     "conf": 0.999
+    },
+    {
+     "w": "angle",
+     "start": 412.56,
+     "end": 412.781,
+     "conf": 0.796
+    },
+    {
+     "w": "fixes",
+     "start": 412.801,
+     "end": 413.181,
+     "conf": 0.833
+    },
+    {
+     "w": "the",
+     "start": 413.201,
+     "end": 413.302,
+     "conf": 0.749
+    },
+    {
+     "w": "proportions",
+     "start": 413.322,
+     "end": 413.783,
+     "conf": 0.972
+    },
+    {
+     "w": "of",
+     "start": 413.803,
+     "end": 413.863,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 413.923,
+     "end": 413.943,
+     "conf": 0.001
+    },
+    {
+     "w": "right",
+     "start": 413.963,
+     "end": 414.163,
+     "conf": 0.862
+    },
+    {
+     "w": "triangle",
+     "start": 414.183,
+     "end": 414.624,
+     "conf": 0.876
+    },
+    {
+     "w": "and",
+     "start": 414.965,
+     "end": 415.025,
+     "conf": 0.665
+    },
+    {
+     "w": "those",
+     "start": 415.045,
+     "end": 415.225,
+     "conf": 0.999
+    },
+    {
+     "w": "proportions",
+     "start": 415.245,
+     "end": 415.726,
+     "conf": 0.982
+    },
+    {
+     "w": "are",
+     "start": 415.746,
+     "end": 415.846,
+     "conf": 0.891
+    },
+    {
+     "w": "sine",
+     "start": 415.906,
+     "end": 416.267,
+     "conf": 0.78
+    },
+    {
+     "w": "cosine",
+     "start": 416.488,
+     "end": 416.968,
+     "conf": 0.677
+    },
+    {
+     "w": "and",
+     "start": 417.029,
+     "end": 417.089,
+     "conf": 0.65
+    },
+    {
+     "w": "tangent",
+     "start": 417.149,
+     "end": 417.57,
+     "conf": 0.818
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT FOUR — Putting it together",
+   "text": "Put the triangle in a circle of radius one, and cosine and sine become the coordinates of a point, which can go anywhere, and can go negative.",
+   "idea": false,
+   "start": 417.999,
+   "end": 425.051,
+   "words": [
+    {
+     "w": "put",
+     "start": 417.999,
+     "end": 418.099,
+     "conf": 0.765
+    },
+    {
+     "w": "the",
+     "start": 418.139,
+     "end": 418.199,
+     "conf": 0.996
+    },
+    {
+     "w": "triangle",
+     "start": 418.28,
+     "end": 418.68,
+     "conf": 0.879
+    },
+    {
+     "w": "in",
+     "start": 418.74,
+     "end": 418.78,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 418.8,
+     "end": 418.82,
+     "conf": 0.997
+    },
+    {
+     "w": "circle",
+     "start": 418.961,
+     "end": 419.241,
+     "conf": 0.801
+    },
+    {
+     "w": "of",
+     "start": 419.261,
+     "end": 419.321,
+     "conf": 0.995
+    },
+    {
+     "w": "radius",
+     "start": 419.381,
+     "end": 419.682,
+     "conf": 0.856
+    },
+    {
+     "w": "one",
+     "start": 419.802,
+     "end": 419.982,
+     "conf": 0.932
+    },
+    {
+     "w": "and",
+     "start": 420.363,
+     "end": 420.523,
+     "conf": 0.74
+    },
+    {
+     "w": "cosine",
+     "start": 420.583,
+     "end": 420.904,
+     "conf": 0.665
+    },
+    {
+     "w": "and",
+     "start": 420.924,
+     "end": 420.984,
+     "conf": 0.413
+    },
+    {
+     "w": "sine",
+     "start": 421.044,
+     "end": 421.325,
+     "conf": 0.681
+    },
+    {
+     "w": "become",
+     "start": 421.345,
+     "end": 421.625,
+     "conf": 0.935
+    },
+    {
+     "w": "the",
+     "start": 421.645,
+     "end": 421.705,
+     "conf": 0.997
+    },
+    {
+     "w": "coordinates",
+     "start": 421.765,
+     "end": 422.286,
+     "conf": 0.91
+    },
+    {
+     "w": "of",
+     "start": 422.306,
+     "end": 422.366,
+     "conf": 0.995
+    },
+    {
+     "w": "a",
+     "start": 422.387,
+     "end": 422.407,
+     "conf": 0.994
+    },
+    {
+     "w": "point",
+     "start": 422.487,
+     "end": 422.747,
+     "conf": 0.829
+    },
+    {
+     "w": "which",
+     "start": 423.008,
+     "end": 423.128,
+     "conf": 0.44
+    },
+    {
+     "w": "can",
+     "start": 423.188,
+     "end": 423.268,
+     "conf": 0.663
+    },
+    {
+     "w": "go",
+     "start": 423.288,
+     "end": 423.368,
+     "conf": 0.502
+    },
+    {
+     "w": "anywhere",
+     "start": 423.528,
+     "end": 423.889,
+     "conf": 0.88
+    },
+    {
+     "w": "and",
+     "start": 424.23,
+     "end": 424.29,
+     "conf": 0.663
+    },
+    {
+     "w": "can",
+     "start": 424.31,
+     "end": 424.43,
+     "conf": 0.945
+    },
+    {
+     "w": "go",
+     "start": 424.49,
+     "end": 424.53,
+     "conf": 0.144
+    },
+    {
+     "w": "negative",
+     "start": 424.63,
+     "end": 425.051,
+     "conf": 1.0
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT FOUR — Putting it together",
+   "text": "And radians measure the walk itself, so going around again changes nothing, and thirty units lands you near the bottom.",
+   "idea": true,
+   "start": 425.461,
+   "end": 431.307,
+   "words": [
+    {
+     "w": "and",
+     "start": 425.461,
+     "end": 425.541,
+     "conf": 0.684
+    },
+    {
+     "w": "radians",
+     "start": 425.601,
+     "end": 426.002,
+     "conf": 0.83
+    },
+    {
+     "w": "measure",
+     "start": 426.042,
+     "end": 426.262,
+     "conf": 0.98
+    },
+    {
+     "w": "the",
+     "start": 426.282,
+     "end": 426.342,
+     "conf": 0.993
+    },
+    {
+     "w": "walk",
+     "start": 426.362,
+     "end": 426.542,
+     "conf": 0.999
+    },
+    {
+     "w": "itself",
+     "start": 426.622,
+     "end": 427.043,
+     "conf": 0.832
+    },
+    {
+     "w": "so",
+     "start": 427.283,
+     "end": 427.363,
+     "conf": 0.999
+    },
+    {
+     "w": "going",
+     "start": 427.483,
+     "end": 427.643,
+     "conf": 0.801
+    },
+    {
+     "w": "around",
+     "start": 427.663,
+     "end": 427.924,
+     "conf": 0.987
+    },
+    {
+     "w": "again",
+     "start": 427.944,
+     "end": 428.224,
+     "conf": 0.999
+    },
+    {
+     "w": "changes",
+     "start": 428.324,
+     "end": 428.624,
+     "conf": 0.858
+    },
+    {
+     "w": "nothing",
+     "start": 428.705,
+     "end": 429.005,
+     "conf": 0.891
+    },
+    {
+     "w": "and",
+     "start": 429.445,
+     "end": 429.525,
+     "conf": 0.662
+    },
+    {
+     "w": "thirty",
+     "start": 429.606,
+     "end": 429.886,
+     "conf": 0.8
+    },
+    {
+     "w": "units",
+     "start": 430.026,
+     "end": 430.286,
+     "conf": 0.807
+    },
+    {
+     "w": "lands",
+     "start": 430.386,
+     "end": 430.607,
+     "conf": 0.797
+    },
+    {
+     "w": "you",
+     "start": 430.627,
+     "end": 430.707,
+     "conf": 0.999
+    },
+    {
+     "w": "near",
+     "start": 430.767,
+     "end": 430.887,
+     "conf": 0.974
+    },
+    {
+     "w": "the",
+     "start": 430.907,
+     "end": 430.987,
+     "conf": 0.996
+    },
+    {
+     "w": "bottom",
+     "start": 431.007,
+     "end": 431.307,
+     "conf": 0.981
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "Here's something to try before the next video. Find a second angle whose sine is exactly one half.",
+   "idea": false,
+   "start": 432.948,
+   "end": 437.827,
+   "words": [
+    {
+     "w": "here's",
+     "start": 432.948,
+     "end": 433.109,
+     "conf": 0.426
+    },
+    {
+     "w": "something",
+     "start": 433.129,
+     "end": 433.37,
+     "conf": 0.985
+    },
+    {
+     "w": "to",
+     "start": 433.39,
+     "end": 433.43,
+     "conf": 0.996
+    },
+    {
+     "w": "try",
+     "start": 433.51,
+     "end": 433.751,
+     "conf": 0.665
+    },
+    {
+     "w": "before",
+     "start": 433.811,
+     "end": 433.992,
+     "conf": 0.504
+    },
+    {
+     "w": "the",
+     "start": 434.012,
+     "end": 434.072,
+     "conf": 0.997
+    },
+    {
+     "w": "next",
+     "start": 434.092,
+     "end": 434.293,
+     "conf": 0.959
+    },
+    {
+     "w": "video",
+     "start": 434.313,
+     "end": 434.554,
+     "conf": 1.0
+    },
+    {
+     "w": "find",
+     "start": 435.096,
+     "end": 435.277,
+     "conf": 0.799
+    },
+    {
+     "w": "a",
+     "start": 435.297,
+     "end": 435.337,
+     "conf": 0.977
+    },
+    {
+     "w": "second",
+     "start": 435.438,
+     "end": 435.699,
+     "conf": 0.832
+    },
+    {
+     "w": "angle",
+     "start": 435.779,
+     "end": 436.0,
+     "conf": 0.788
+    },
+    {
+     "w": "whose",
+     "start": 436.02,
+     "end": 436.18,
+     "conf": 0.913
+    },
+    {
+     "w": "sine",
+     "start": 436.261,
+     "end": 436.502,
+     "conf": 0.513
+    },
+    {
+     "w": "is",
+     "start": 436.522,
+     "end": 436.602,
+     "conf": 0.991
+    },
+    {
+     "w": "exactly",
+     "start": 436.622,
+     "end": 437.124,
+     "conf": 0.871
+    },
+    {
+     "w": "one",
+     "start": 437.305,
+     "end": 437.445,
+     "conf": 0.627
+    },
+    {
+     "w": "half",
+     "start": 437.546,
+     "end": 437.827,
+     "conf": 0.594
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "You won't need a calculator. Just look for another point on the circle at the same height.",
+   "idea": false,
+   "start": 438.277,
+   "end": 442.571,
+   "words": [
+    {
+     "w": "you",
+     "start": 438.277,
+     "end": 438.337,
+     "conf": 0.022
+    },
+    {
+     "w": "won't",
+     "start": 438.357,
+     "end": 438.498,
+     "conf": 0.779
+    },
+    {
+     "w": "need",
+     "start": 438.538,
+     "end": 438.678,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 438.698,
+     "end": 438.739,
+     "conf": 0.698
+    },
+    {
+     "w": "calculator",
+     "start": 438.799,
+     "end": 439.461,
+     "conf": 0.862
+    },
+    {
+     "w": "just",
+     "start": 439.982,
+     "end": 440.123,
+     "conf": 0.755
+    },
+    {
+     "w": "look",
+     "start": 440.183,
+     "end": 440.303,
+     "conf": 0.765
+    },
+    {
+     "w": "for",
+     "start": 440.384,
+     "end": 440.464,
+     "conf": 0.665
+    },
+    {
+     "w": "another",
+     "start": 440.524,
+     "end": 440.725,
+     "conf": 0.851
+    },
+    {
+     "w": "point",
+     "start": 440.805,
+     "end": 441.086,
+     "conf": 0.769
+    },
+    {
+     "w": "on",
+     "start": 441.226,
+     "end": 441.266,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 441.287,
+     "end": 441.347,
+     "conf": 0.646
+    },
+    {
+     "w": "circle",
+     "start": 441.427,
+     "end": 441.788,
+     "conf": 0.809
+    },
+    {
+     "w": "at",
+     "start": 441.888,
+     "end": 441.929,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 441.949,
+     "end": 442.029,
+     "conf": 0.998
+    },
+    {
+     "w": "same",
+     "start": 442.089,
+     "end": 442.29,
+     "conf": 0.75
+    },
+    {
+     "w": "height",
+     "start": 442.31,
+     "end": 442.571,
+     "conf": 0.791
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "Next time we'll use that same trick to turn a whole page of formulas you were told to memorize into four simple pictures.",
+   "idea": false,
+   "start": 442.981,
+   "end": 448.886,
+   "words": [
+    {
+     "w": "next",
+     "start": 442.981,
+     "end": 443.181,
+     "conf": 0.939
+    },
+    {
+     "w": "time",
+     "start": 443.201,
+     "end": 443.401,
+     "conf": 0.796
+    },
+    {
+     "w": "we'll",
+     "start": 443.421,
+     "end": 443.562,
+     "conf": 0.331
+    },
+    {
+     "w": "use",
+     "start": 443.582,
+     "end": 443.722,
+     "conf": 0.756
+    },
+    {
+     "w": "that",
+     "start": 443.742,
+     "end": 443.862,
+     "conf": 0.989
+    },
+    {
+     "w": "same",
+     "start": 443.982,
+     "end": 444.202,
+     "conf": 0.75
+    },
+    {
+     "w": "trick",
+     "start": 444.262,
+     "end": 444.462,
+     "conf": 0.463
+    },
+    {
+     "w": "to",
+     "start": 444.562,
+     "end": 444.602,
+     "conf": 0.5
+    },
+    {
+     "w": "turn",
+     "start": 444.682,
+     "end": 444.843,
+     "conf": 0.784
+    },
+    {
+     "w": "a",
+     "start": 444.903,
+     "end": 444.923,
+     "conf": 0.004
+    },
+    {
+     "w": "whole",
+     "start": 445.003,
+     "end": 445.243,
+     "conf": 0.788
+    },
+    {
+     "w": "page",
+     "start": 445.323,
+     "end": 445.623,
+     "conf": 0.747
+    },
+    {
+     "w": "of",
+     "start": 445.643,
+     "end": 445.723,
+     "conf": 0.627
+    },
+    {
+     "w": "formulas",
+     "start": 445.783,
+     "end": 446.164,
+     "conf": 0.87
+    },
+    {
+     "w": "you",
+     "start": 446.184,
+     "end": 446.264,
+     "conf": 0.747
+    },
+    {
+     "w": "were",
+     "start": 446.284,
+     "end": 446.404,
+     "conf": 0.995
+    },
+    {
+     "w": "told",
+     "start": 446.424,
+     "end": 446.724,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 446.884,
+     "end": 446.944,
+     "conf": 0.501
+    },
+    {
+     "w": "memorize",
+     "start": 447.004,
+     "end": 447.465,
+     "conf": 0.97
+    },
+    {
+     "w": "into",
+     "start": 447.525,
+     "end": 447.625,
+     "conf": 0.573
+    },
+    {
+     "w": "four",
+     "start": 447.745,
+     "end": 447.925,
+     "conf": 0.745
+    },
+    {
+     "w": "simple",
+     "start": 448.065,
+     "end": 448.346,
+     "conf": 0.819
+    },
+    {
+     "w": "pictures",
+     "start": 448.446,
+     "end": 448.886,
+     "conf": 0.875
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "And later in the series, we'll keep M walking and write down its height as it goes, and the circle will unroll into a wave.",
+   "idea": false,
+   "start": 449.316,
+   "end": 455.165,
+   "words": [
+    {
+     "w": "and",
+     "start": 449.316,
+     "end": 449.396,
+     "conf": 0.999
+    },
+    {
+     "w": "later",
+     "start": 449.416,
+     "end": 449.616,
+     "conf": 0.999
+    },
+    {
+     "w": "in",
+     "start": 449.637,
+     "end": 449.697,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 449.717,
+     "end": 449.797,
+     "conf": 0.998
+    },
+    {
+     "w": "series",
+     "start": 449.877,
+     "end": 450.217,
+     "conf": 0.833
+    },
+    {
+     "w": "we'll",
+     "start": 450.318,
+     "end": 450.458,
+     "conf": 0.5
+    },
+    {
+     "w": "keep",
+     "start": 450.478,
+     "end": 450.618,
+     "conf": 0.999
+    },
+    {
+     "w": "m",
+     "start": 450.818,
+     "end": 450.838,
+     "conf": 0.965
+    },
+    {
+     "w": "walking",
+     "start": 450.938,
+     "end": 451.279,
+     "conf": 0.858
+    },
+    {
+     "w": "and",
+     "start": 451.499,
+     "end": 451.559,
+     "conf": 0.648
+    },
+    {
+     "w": "write",
+     "start": 451.579,
+     "end": 451.84,
+     "conf": 0.708
+    },
+    {
+     "w": "down",
+     "start": 451.86,
+     "end": 452.02,
+     "conf": 0.952
+    },
+    {
+     "w": "its",
+     "start": 452.06,
+     "end": 452.14,
+     "conf": 0.664
+    },
+    {
+     "w": "height",
+     "start": 452.2,
+     "end": 452.381,
+     "conf": 0.604
+    },
+    {
+     "w": "as",
+     "start": 452.441,
+     "end": 452.481,
+     "conf": 0.5
+    },
+    {
+     "w": "it",
+     "start": 452.541,
+     "end": 452.581,
+     "conf": 0.499
+    },
+    {
+     "w": "goes",
+     "start": 452.641,
+     "end": 452.962,
+     "conf": 0.536
+    },
+    {
+     "w": "and",
+     "start": 453.222,
+     "end": 453.282,
+     "conf": 0.844
+    },
+    {
+     "w": "the",
+     "start": 453.302,
+     "end": 453.362,
+     "conf": 0.127
+    },
+    {
+     "w": "circle",
+     "start": 453.382,
+     "end": 453.663,
+     "conf": 0.943
+    },
+    {
+     "w": "will",
+     "start": 453.683,
+     "end": 453.823,
+     "conf": 0.762
+    },
+    {
+     "w": "unroll",
+     "start": 453.903,
+     "end": 454.324,
+     "conf": 0.729
+    },
+    {
+     "w": "into",
+     "start": 454.504,
+     "end": 454.624,
+     "conf": 0.75
+    },
+    {
+     "w": "a",
+     "start": 454.724,
+     "end": 454.744,
+     "conf": 0.015
+    },
+    {
+     "w": "wave",
+     "start": 454.824,
+     "end": 455.165,
+     "conf": 0.75
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "This is the first part of our trigonometry series on 99% from scratch. Thanks for watching, and I'll see you in the next one.",
+   "idea": false,
+   "start": 455.575,
+   "end": 462.549,
+   "words": [
+    {
+     "w": "this",
+     "start": 455.575,
+     "end": 455.655,
+     "conf": 0.001
+    },
+    {
+     "w": "is",
+     "start": 455.675,
+     "end": 455.755,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 455.775,
+     "end": 455.856,
+     "conf": 0.996
+    },
+    {
+     "w": "first",
+     "start": 455.876,
+     "end": 456.096,
+     "conf": 0.999
+    },
+    {
+     "w": "part",
+     "start": 456.116,
+     "end": 456.317,
+     "conf": 0.786
+    },
+    {
+     "w": "of",
+     "start": 456.337,
+     "end": 456.397,
+     "conf": 0.999
+    },
+    {
+     "w": "our",
+     "start": 456.457,
+     "end": 456.537,
+     "conf": 0.661
+    },
+    {
+     "w": "trigonometry",
+     "start": 456.597,
+     "end": 457.138,
+     "conf": 0.787
+    },
+    {
+     "w": "series",
+     "start": 457.198,
+     "end": 457.579,
+     "conf": 0.865
+    },
+    {
+     "w": "on",
+     "start": 457.92,
+     "end": 457.96,
+     "conf": 0.497
+    },
+    {
+     "w": "99",
+     "start": 458.701,
+     "end": 458.721,
+     "conf": 0.003
+    },
+    {
+     "w": "from",
+     "start": 459.102,
+     "end": 459.242,
+     "conf": 0.994
+    },
+    {
+     "w": "scratch",
+     "start": 459.323,
+     "end": 459.663,
+     "conf": 0.812
+    },
+    {
+     "w": "thanks",
+     "start": 459.683,
+     "end": 460.705,
+     "conf": 0.69
+    },
+    {
+     "w": "for",
+     "start": 460.725,
+     "end": 460.786,
+     "conf": 0.936
+    },
+    {
+     "w": "watching",
+     "start": 460.806,
+     "end": 461.066,
+     "conf": 0.93
+    },
+    {
+     "w": "and",
+     "start": 461.287,
+     "end": 461.387,
+     "conf": 0.657
+    },
+    {
+     "w": "i'll",
+     "start": 461.407,
+     "end": 461.587,
+     "conf": 0.16
+    },
+    {
+     "w": "see",
+     "start": 461.607,
+     "end": 461.727,
+     "conf": 0.966
+    },
+    {
+     "w": "you",
+     "start": 461.748,
+     "end": 461.848,
+     "conf": 0.756
+    },
+    {
+     "w": "in",
+     "start": 462.008,
+     "end": 462.048,
+     "conf": 0.491
+    },
+    {
+     "w": "the",
+     "start": 462.068,
+     "end": 462.148,
+     "conf": 0.98
+    },
+    {
+     "w": "next",
+     "start": 462.168,
+     "end": 462.409,
+     "conf": 0.952
+    },
+    {
+     "w": "one",
+     "start": 462.489,
+     "end": 462.549,
+     "conf": 0.486
+    }
+   ]
+  }
+ ]
+}

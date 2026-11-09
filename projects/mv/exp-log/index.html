@@ -1,0 +1,104 @@
+<!doctype html><meta charset="utf-8">
+<title>Ninety-nine percent — exp-log</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#0B0F1E;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+import { Show } from '../../../engine/main.js';
+import { POSES_V2, POSES_V2_MID } from '../../../engine/mascot.js';
+import { Face } from '../../../engine/face.js';
+import { makeEnv } from '../../../engine/visemes.js';
+import { SONG, PAL, beat, loadSong } from './song.js';
+import { backdrop } from './backdrop.js';
+import P01 from './plates/p01-boot.js';
+import P02 from './plates/p02-easy.js';
+import P03 from './plates/p03-wait.js';
+import P04 from './plates/p04-factors.js';
+import P05 from './plates/p05-rootwall.js';
+import P06 from './plates/p06-deeper.js';
+import P07 from './plates/p07-law.js';
+import P08 from './plates/p08-extend.js';
+import P09 from './plates/p09-truth.js';
+import P10 from './plates/p10-turn.js';
+import P11a from './plates/p11a-mirror.js';
+import P11b from './plates/p11b-around.js';
+import P12 from './plates/p12-name.js';
+import P13 from './plates/p13-bank.js';
+import P14 from './plates/p14-hiding.js';
+import P15 from './plates/p15-sentence.js';
+import P16 from './plates/p16-otherside.js';
+import P17 from './plates/p17-mirror2.js';
+import P18 from './plates/p18-engine.js';
+import P19 from './plates/p19-axes.js';
+import P20 from './plates/p20-fold.js';
+import P21 from './plates/p21-facing.js';
+import P22 from './plates/p22-unique.js';
+import P23 from './plates/p23-finale.js';
+import P23b from './plates/p23b-alive.js';
+import P24 from './plates/p24-chant.js';
+import P25 from './plates/p25-hook.js';
+import P26 from './plates/p26-loading.js';
+import P27 from './plates/p27-outro.js';
+
+const g = document.getElementById('cv').getContext('2d');
+let ready = false, show;
+(async () => {
+  // Nạp ĐỦ mọi họ + cỡ font trước init() — cảnh đo chữ rồi cache (font-race).
+  await Promise.all([
+    document.fonts.load('900 300px "Archivo"'), document.fonts.load('800 64px "Archivo"'),
+    document.fonts.load('700 120px "Archivo"'), document.fonts.load('400 30px "IBM Plex Mono"'),
+    document.fonts.load('500 22px "IBM Plex Mono"'), document.fonts.load('500 34px "IBM Plex Mono"'),
+    document.fonts.load('italic 500 86px "Cormorant Garamond"'),
+  ]);
+  await document.fonts.ready;
+  const { tl } = await loadSong();
+  const face = await new Face().load('../../../assets/character-v2/cut', { set: 'b' });
+  const vox = makeEnv(await (await fetch('./data/vox.json')).json());   // đường bao giọng: tools/analyze/vox_env.py
+  show = new Show({
+    order: [[0, P01], [tl.at('Two to the three?'), P02],
+            [tl.at('Two to the root two?'), P03], [tl.at('Two times two times two,'), P04],
+            [tl.at('But root two on top—'), P05], [tl.at('So maybe the meaning'), P06],
+            [tl.at('Same base multiplying,'), P07], [tl.at('Zero has no choice.'), P08],
+            [tl.at("We didn't pick the meaning."), P09],
+            [tl.at('Keep the rule alive,'), P10],
+            [tl.at('Run it forward,'), P11a],
+            [tl.at('Give me the value—'), P11b],
+            [tl.at('Backward question.'), P12],
+            [tl.at('Money in the bank,'), P13],
+            [tl.at('Now the unknown'), P14],
+            [tl.at("That's the whole question."), P15],
+            [tl.at('We already knew the question,'), P16],
+            [tl.at('Run it forward,', 2), P17],
+            [tl.at('Same old laws'), P18],
+            [tl.at('Put them on the axes.'), P19],
+            [tl.at('X becomes Y.'), P20],
+            [tl.at('What does this exponent produce?'), P21],
+            [tl.at('And if the curve'), P22],
+            [tl.at('Run it forward,', 3), P23],
+            [tl.at('No tricks.'), P23b],
+            [tl.at('From scratch!'), P24],
+            [tl.at('Forward—'), P25],
+            [tl.at('Ninety-nine percent...', 2), P26],
+            [tl.line('Loading.', 2).end + 0.12, P27]], beat, end: SONG.duration,
+    assets: '../../../assets/character-v2/cut', poses: [...POSES_V2, ...POSES_V2_MID],
+    bg: PAL.bg, backdrop, extra: { tl, face, vox },
+  });
+  await show.init();
+  // Chân dung ký hiệu (P01) và mặt cận hát nhép (P02…) phải cùng MỘT ảnh, cùng khung:
+  // đăng ký viseme-1 làm pose giả 'face' để drawTransit/mosaic dùng được.
+  show.mascot.im.face = face.base;
+  window.__intro.gl = { plates: show.plates.length, song: SONG.title };
+  ready = true;
+})();
+const frame = t => show.render(g, t);
+window.__intro = { get ready(){ return ready; }, still: frame, frame, DUR: SONG.duration };
+const PREVIEW = !/headless/i.test(navigator.userAgent);
+const t0 = performance.now();
+(function loop(){ if (PREVIEW) { if (ready) frame(((performance.now() - t0) / 1000) % SONG.duration); requestAnimationFrame(loop); } })();
+</script>

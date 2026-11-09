@@ -1,0 +1,363 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — enso</title>
+<style>
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  html,body{margin:0;background:#F1EBDD;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "墨と円相" (ja/pi). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/enso.html --dur 2 --t 0.5,1.5 --outdir out/_lab/enso
+// Ý: vòng tròn của bài là một 円相 — vòng thiền vẽ MỘT nét cọ, không bao giờ khép hẳn, như chữ số của π không bao giờ hết. Người Nhật đọc ngay: thư pháp, giấy washi, dấu 判子 là thứ "chính thức, đã xác nhận". Toán = thước kẻ mực (烏口) nét mảnh đều, đối lập nét cọ sống: hình học chính xác kẹp lấy một vòng tròn của tay người.
+// Vật xuyên suốt: MỘT 円相 (cùng hạt giống nét, cùng chỗ hở trên-phải) — bị hai đa giác thước kẻ kẹp → điểm chạy trên vành, bóng lên vách, sóng là nét cọ thứ hai → chữ số viết cọ nhỏ chạy quanh vành, đuổi tới chỗ hở mà không lấp được → 円相 vẽ lên quả cầu (mực loang theo mặt cong) / yên ngựa.
+// Màu: giấy washi #F1EBDD (xơ 楮, mây nhạt) · 墨 #1C1916 (chữ, nét đậm, 15:1) · 薄墨 #6A6258 (nhãn phụ, ≥5:1) · loang rgba(28,25,22,.06) (khoảng kẹp, vệt quá khứ) · 朱 #B8321F CHỈ cho dấu 判子 = đáp án/kết luận đã chứng minh · 金砂子 #C9A54E rắc rất thưa ở góc giấy (họ hàng 漆と金), không bao giờ mang thông tin.
+// Chữ: 明朝 Shippori Mincho (tiêu đề hồi viết DỌC 縦書き, nhãn テロップ) · Cormorant Garamond LN (mọi con số, π, <) · Noto Sans JP chỉ cho ký hiệu Shippori/Cormorant thiếu (θ ≤ ＝). Không chữ Latin trừ số.
+// Tiếng: 筆 (nét cọ, mới — mỗi 円相/sóng) · pen (thước kẻ đa giác) · 判子 (đóng dấu, mới — đáp án) · 拍子木 (thẻ hồi, mới) · 鈴 (à ra thế, mới; tạm shimmer) · 算盤 (số chạy, mới; tạm chip/tick) · page (lật giấy = sang mục) · tick (mỗi テロップ) · correct/error · 和太鼓 (chốt lớn, mới; tạm impact) — mục tiêu 1 tiếng / 3 s.
+// Người xưa đo: bản rập 拓本 bảng đất sét/papyrus (mực trắng trên nền đen) · 東大 2003: tờ đề in 明朝 trên washi, lời giải viết cọ, 判子「証明」 · 劉徽/祖沖之: đa giác 3072 cạnh dày tới thành 円相, 355/113 viết dọc · 和算 村松/関/建部: trang 算額 gỗ treo đền, chữ số Hán cột dọc · 360° vs ラジアン: 360 vạch thước quanh 円相, rồi sợi mực dài bằng bán kính uốn theo vành = 1 · 1÷7: phép chia dọc trên giấy kẻ, dư 1-3-2-6-4-5 khoanh nét cọ thành vòng lặp.
+// ランベルト/リンデマン: chữ số cọ nhỏ quanh vành, không lặp · 円積問題: hình vuông thước kẻ không bao giờ khớp 円相 (nét gạch 薄墨, không đỏ) · 100兆桁: cuộn 巻物 kéo dài vô tận · cầu: 円相 trên quả cầu giấy shading 薄墨, C/d = 2 đóng dấu · 馬の鞍: yên ngựa lưới mực · ブラックホール: mực tràn đen cả trang, chữ trắng · まとめ: ba 円相 nhỏ thành ba câu trả lời, mỗi câu một dấu 朱.
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, G = document.getElementById('cv').getContext('2d');
+let g = G;                                             // ngữ cảnh đang vẽ; onto() đổi tạm sang lớp riêng
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { paper: '#F1EBDD', sumi: '#1C1916', usu: '#6A6258', shu: '#B8321F', gold: '#C9A54E', inkRGB: '28,25,22' };
+const MIN = '"Shippori Mincho"', CG = '"Cormorant Garamond"', NOTO = '"Noto Sans JP"';
+const IM = {}; let PAPER, GRAIN, SEAL0, SEAL1, ready = false;
+
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+const r4 = s => `Math.round((${s}) * 1e4) / 1e4`;
+const ss = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+const f4 = v => v.toFixed(4);
+
+function vnoise(x, y, seed) {                          // nhiễu giá trị mượt, tất định
+  const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi, s = t => t * t * (3 - 2 * t);
+  const h = (i, j) => hash(i * 12.9898 + j * 78.233 + seed * 3.17);
+  const a = h(xi, yi), b = h(xi + 1, yi), c = h(xi, yi + 1), d = h(xi + 1, yi + 1), u = s(xf), v = s(yf);
+  return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v;
+}
+
+// ---------- giấy washi: mây sợi + xơ 楮 + 金砂子 (nạp một lần) ----------
+function paper() {
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H), base = [0xF1, 0xEB, 0xDD];
+  for (let py = 0; py < H; py++) for (let px = 0; px < W; px++) {
+    const k = (py * W + px) * 4;
+    const cloud = (vnoise(px / 300, py / 300, 1) - 0.5) * 9 + (vnoise(px / 70, py / 110, 2) - 0.5) * 5;  // mây dày/mỏng của bột giấy
+    const grain = (hash(px * 1.31 + py * 7.77) - 0.5) * 5;
+    const edge = -10 * Math.pow(Math.hypot((px - W / 2) / (W * 0.62), (py - H / 2) / (H * 0.62)), 3);  // tối rất nhẹ ở góc
+    const v = cloud + grain + edge;
+    d.data[k] = base[0] + v; d.data[k + 1] = base[1] + v - 0.6; d.data[k + 2] = base[2] + v * 1.1 - 1.5; d.data[k + 3] = 255;
+  }
+  x.putImageData(d, 0, 0);
+  x.lineCap = 'round';
+  for (let i = 0; i < 2600; i++) {                      // xơ: sợi dài cong, phần lớn sáng (sợi 楮 trong), ít sợi nâu
+    const x0 = hash(i * 1.17) * W, y0 = hash(i * 2.31) * H, L = 18 + Math.pow(hash(i * 3.7), 2) * 150, a = hash(i * 4.9) * Math.PI * 2;
+    const bend = (hash(i * 5.3) - 0.5) * 1.6, dark = hash(i * 6.1) < 0.18;
+    x.strokeStyle = dark ? `rgba(150,128,96,${0.10 + 0.12 * hash(i * 7.3)})` : `rgba(255,253,246,${0.35 + 0.4 * hash(i * 7.3)})`;
+    x.lineWidth = 0.6 + hash(i * 8.1) * (dark ? 0.7 : 1.3);
+    x.beginPath(); x.moveTo(x0, y0);
+    const mx = x0 + Math.cos(a + bend) * L / 2, my = y0 + Math.sin(a + bend) * L / 2;
+    x.quadraticCurveTo(mx, my, x0 + Math.cos(a) * L, y0 + Math.sin(a) * L); x.stroke();
+  }
+  for (let i = 0; i < 70; i++) {                        // 金砂子: cụm thưa góc trên-phải, rơi chéo
+    const u = Math.pow(hash(i * 9.1), 1.6), x0 = W - 10 - u * 560 - hash(i * 3.3) * 60, y0 = 6 + u * 70 + hash(i * 5.5) * 20, r = 1.2 + Math.pow(hash(i * 2.2), 3) * 6;
+    x.save(); x.translate(x0, y0); x.rotate(hash(i * 4.4) * 6.28);
+    const gr = x.createLinearGradient(-r, -r, r, r); gr.addColorStop(0, '#E4C878'); gr.addColorStop(0.5, '#C9A54E'); gr.addColorStop(1, '#8E6F2C');
+    x.fillStyle = gr; x.globalAlpha = 0.75 + 0.25 * hash(i * 6.6); x.beginPath();
+    for (let q = 0; q < 5; q++) { const aa = q / 5 * 6.28 + hash(i * 10 + q) * 0.9, rr = r * (0.55 + 0.6 * hash(i * 11 + q)); x.lineTo(Math.cos(aa) * rr, Math.sin(aa) * rr * 0.7); }
+    x.fill(); x.restore();
+  }
+  return c;
+}
+function grain() {                                     // răng giấy phủ lên mực: đốm sáng nhỏ để mực "ăn" vào xơ
+  const c = mk(), x = c.getContext('2d');
+  for (let i = 0; i < 9000; i++) { x.fillStyle = `rgba(241,235,221,${0.10 + 0.25 * hash(i * 1.9)})`; x.fillRect(hash(i * 3.1) * W, hash(i * 5.7) * H, 0.8 + hash(i) * 1.6, 0.6 + hash(i * 2) * 1.2); }
+  x.lineCap = 'round';
+  for (let i = 0; i < 900; i++) { const x0 = hash(i * 7.7) * W, y0 = hash(i * 8.3) * H, a = hash(i * 9.9) * 6.28, L = 10 + hash(i * 2.9) * 40;
+    x.strokeStyle = `rgba(241,235,221,${0.12 + 0.18 * hash(i * 4.1)})`; x.lineWidth = 0.7; x.beginPath(); x.moveTo(x0, y0); x.lineTo(x0 + Math.cos(a) * L, y0 + Math.sin(a) * L); x.stroke(); }
+  return c;
+}
+
+// ---------- 判子: 白文 (chữ khắc lõm, giấy hiện qua) + mép mòn ----------
+function seal(chars, size, fontFor) {
+  const c = mk(size, size), x = c.getContext('2d'), j = (i, a) => (hash(i * 3.3 + size) - 0.5) * a;
+  x.fillStyle = C.shu; x.beginPath();
+  const pts = []; for (let i = 0; i < 4; i++) for (let q = 0; q < 6; q++) {
+    const t = q / 6, m = 4, s = size - 2 * m, P = [[m + s * t, m], [size - m, m + s * t], [size - m - s * t, size - m], [m, size - m - s * t]][i];
+    pts.push([P[0] + j(i * 6 + q, 3.5), P[1] + j(i * 6 + q + 50, 3.5)]); }
+  pts.forEach(([a, b], i) => i ? x.lineTo(a, b) : x.moveTo(a, b)); x.closePath(); x.fill();
+  x.globalCompositeOperation = 'destination-out'; x.fillStyle = '#000'; x.textAlign = 'center'; x.textBaseline = 'middle';
+  chars.forEach((ch, i) => { const [font, cx, cy] = fontFor(ch, i, size); x.font = font; x.fillText(ch, cx, cy); });
+  for (let i = 0; i < 380; i++) {                       // mòn: lỗ nhỏ, dày về mép
+    const e = hash(i * 1.7), side = Math.floor(hash(i * 2.9) * 4), along = hash(i * 3.7) * size, dep = Math.pow(e, 3) * size * 0.5;
+    const [px, py] = [[along, dep], [size - dep, along], [along, size - dep], [dep, along]][side];
+    x.globalAlpha = 0.5 + 0.5 * hash(i * 5.1); x.beginPath(); x.arc(px, py, 0.6 + hash(i * 6.3) * 2.2, 0, 7); x.fill(); }
+  x.globalAlpha = 1; x.globalCompositeOperation = 'source-over';
+  const d = x.getImageData(0, 0, size, size);             // mực son không đều: đậm nhạt theo nhiễu
+  for (let py = 0; py < size; py++) for (let px = 0; px < size; px++) { const k = (py * size + px) * 4;
+    d.data[k + 3] *= 0.78 + 0.22 * vnoise(px / 9, py / 9, 7) * (0.7 + 0.3 * hash(px * 3.1 + py * 1.3)); }
+  x.putImageData(d, 0, 0); return c;
+}
+function stamp(sp, x, y, rot) {
+  g.save(); g.translate(x, y); g.rotate(rot); g.globalCompositeOperation = 'multiply'; g.drawImage(sp, -sp.width / 2, -sp.height / 2); g.restore();
+}
+
+// ---------- nét cọ ----------
+function brush(pts, o) {
+  // Nét cọ thật: (1) quầng にじみ trên giấy · (2) dải mực đặc mép xơ (đầu tròn ấn cọ, đuôi thuôn) vẽ vào lớp riêng ·
+  // (3) KHẮC vệt khô かすれ bằng destination-out theo từng làn lông, khô dần về đuôi và ra mép · (4) mực đọng, lông bay, bắn mực.
+  const { w, seed = 1, N = 44, dry0 = 0.04, dry1 = 0.8, ink = 0.94, bleed = 1, taper = 0.55 } = o;
+  const n = pts.length, Ls = [0];
+  for (let i = 1; i < n; i++) Ls.push(Ls[i - 1] + Math.hypot(pts[i][0] - pts[i - 1][0], pts[i][1] - pts[i - 1][1]));
+  const L = Ls[n - 1], S = Ls.map(l => l / L);
+  const nor = pts.map((p, i) => { const a = pts[Math.max(0, i - 1)], b = pts[Math.min(n - 1, i + 1)], l = Math.hypot(b[0] - a[0], b[1] - a[1]) || 1; return [-(b[1] - a[1]) / l, (b[0] - a[0]) / l]; });
+  const width = s => w * (0.62 + 0.38 * ss(0, 0.05, s)) * (1 + 0.3 * Math.exp(-(((s - 0.022) / 0.03) ** 2)))
+    * (1 - taper * ss(0.6, 1, s)) * (0.86 + 0.28 * vnoise(s * 7, 0, seed));
+  const dry = s => dry0 + (dry1 - dry0) * Math.pow(ss(0.25, 1, s), 1.3) + 0.14 * ss(0.3, 0.5, s) * vnoise(s * 6, 9, seed);
+  let x0 = 1e9, y0 = 1e9, x1 = -1e9, y1 = -1e9; pts.forEach(([x, y]) => { x0 = Math.min(x0, x); y0 = Math.min(y0, y); x1 = Math.max(x1, x); y1 = Math.max(y1, y); });
+  const m = w * 1.5 + 12; x0 = Math.floor(x0 - m); y0 = Math.floor(y0 - m);
+  const lay = mk(Math.ceil(x1 + m - x0), Math.ceil(y1 + m - y0)), b = lay.getContext('2d'); b.translate(-x0, -y0);
+  g.save();
+  if (bleed) for (let i = 0; i < n; i += 2) { const s = S[i], wet = 1 - ss(0.12, 0.65, s); if (wet <= 0.02) continue;   // にじみ
+    const r = width(s) * (0.6 + 0.16 * vnoise(Ls[i] / 11, 3, seed)) + 3;
+    g.fillStyle = `rgba(${C.inkRGB},${0.03 * wet * bleed})`; g.beginPath(); g.arc(pts[i][0], pts[i][1], r, 0, 7); g.fill(); }
+  // (2) dải mực: hai mép nhiễu (xơ tần số cao + gợn chậm), mép khô bị gặm nhiều hơn
+  const side = sg => pts.map((p, i) => { const s = S[i], hw = width(s) / 2, d = dry(s);
+    const e = 0.07 * (vnoise(Ls[i] / 20, sg * 5, seed + 1) - 0.5) + (0.07 + 0.3 * d) * (hash(i * 1.37 + sg * 91 + seed) - 0.5) - 0.1 * d * vnoise(Ls[i] / 7, sg * 3, seed + 4);
+    return [p[0] + sg * nor[i][0] * hw * (1 + e), p[1] + sg * nor[i][1] * hw * (1 + e)]; });
+  const A = side(1), B = side(-1);
+  b.fillStyle = C.sumi; b.beginPath(); A.forEach(([x, y], i) => i ? b.lineTo(x, y) : b.moveTo(x, y));
+  for (let i = n - 1; i >= 0; i--) b.lineTo(...B[i]);
+  const p0 = pts[0], t0 = [nor[0][1], -nor[0][0]], h0 = width(0) / 2;            // đầu tròn: nửa elip lùi sau điểm ấn
+  for (let q = 1; q < 14; q++) { const a = Math.PI * q / 14, r = h0 * (1 + 0.1 * (hash(q * 1.7 + seed) - 0.5));
+    b.lineTo(p0[0] - nor[0][0] * Math.cos(a) * r - t0[0] * Math.sin(a) * r * 0.85, p0[1] - nor[0][1] * Math.cos(a) * r - t0[1] * Math.sin(a) * r * 0.85); }
+  b.closePath(); b.fill();
+  // tông mực không đều trong lòng nét: vệt sáng nhẹ dọc làn lông (source-atop)
+  b.globalCompositeOperation = 'source-atop'; b.lineCap = 'round';
+  for (let j = 0; j < 9; j++) { const o0 = (hash(j * 4.1 + seed) - 0.5) * 0.8; b.strokeStyle = `rgba(110,100,90,${0.10 + 0.12 * hash(j * 2.2 + seed)})`; b.lineWidth = w * (0.04 + 0.08 * hash(j * 6.6 + seed));
+    b.beginPath(); for (let i = Math.floor(n * hash(j * 3.9 + seed) * 0.5); i < n; i++) { const off = o0 * width(S[i]); const X = pts[i][0] + nor[i][0] * off, Y = pts[i][1] + nor[i][1] * off; i ? b.lineTo(X, Y) : b.moveTo(X, Y); } b.stroke(); }
+  // (3) かすれ: khắc vệt khô
+  b.globalCompositeOperation = 'destination-out';
+  for (let j = 0; j < N; j++) {
+    const o0 = (j + 0.5) / N - 0.5, edge = Math.abs(o0) * 2, freq = 18 + 46 * hash(j * 5.9 + seed);
+    b.lineWidth = Math.max(0.8, w / N * (0.9 + 1.3 * hash(j * 2.3 + seed)));
+    let on = false;
+    for (let i = 0; i < n; i++) {
+      const s = S[i], d = dry(s);
+      const cut = vnoise(Ls[i] / freq, j * 2.7, seed + 5) < d * (0.55 + 0.75 * edge * edge) - 0.05;
+      const off = (o0 + (vnoise(Ls[i] / 50, j * 1.3, seed + 2) - 0.5) * 0.05) * width(s), X = pts[i][0] + nor[i][0] * off, Y = pts[i][1] + nor[i][1] * off;
+      if (cut && !on) { b.strokeStyle = `rgba(0,0,0,${0.75 + 0.25 * hash(j * 7.7 + i * 0.01 + seed)})`; b.beginPath(); b.moveTo(X, Y); on = true; }
+      else if (cut) b.lineTo(X, Y);
+      else if (on) { b.stroke(); on = false; }
+    }
+    if (on) b.stroke();
+  }
+  b.globalCompositeOperation = 'source-over';
+  g.globalAlpha = ink; g.drawImage(lay, x0, y0); g.globalAlpha = 1;
+  // (4) mực đọng ở chỗ ấn, lông bay ở đuôi, bắn mực
+  g.fillStyle = `rgba(${C.inkRGB},0.35)`; g.beginPath(); g.ellipse(p0[0] + nor[0][0] * h0 * 0.2, p0[1] + nor[0][1] * h0 * 0.2, h0 * 0.55, h0 * 0.45, 0, 0, 7); g.fill();
+  g.lineCap = 'round';
+  for (let j = 0; j < 7; j++) { const o0 = (hash(j * 3.1 + seed) - 0.5) * 0.9, k0 = Math.floor(n * (0.93 + 0.04 * hash(j * 1.9 + seed))), ext = Math.floor(n * (0.012 + 0.03 * hash(j * 2.8 + seed)));
+    g.strokeStyle = `rgba(${C.inkRGB},${0.35 + 0.35 * hash(j * 4.4 + seed)})`; g.lineWidth = 0.7 + hash(j * 5.5 + seed) * 0.9; g.beginPath();
+    for (let i = k0; i < Math.min(n, k0 + ext + Math.floor(n * 0.07)); i++) { const off = o0 * width(S[i]) * (1 + 0.6 * (i - k0) / (n * 0.07)); const X = pts[i][0] + nor[i][0] * off, Y = pts[i][1] + nor[i][1] * off; i === k0 ? g.moveTo(X, Y) : g.lineTo(X, Y); }
+    g.stroke(); }
+  for (let i = 0; i < 12; i++) { const k = Math.min(n - 1, Math.floor(n * (0.82 + 0.17 * hash(i * 3.1 + seed)))), off = (hash(i * 4.7 + seed) - 0.5) * width(S[k]) * 2;
+    g.fillStyle = `rgba(${C.inkRGB},${0.3 + 0.4 * hash(i * 5.3)})`; g.beginPath(); g.arc(pts[k][0] + nor[k][0] * off, pts[k][1] + nor[k][1] * off, 0.6 + hash(i * 6.7 + seed) * 1.4, 0, 7); g.fill(); }
+  g.restore();
+}
+// 円相: điểm đầu ở 78° (toán), quay ngược chiều kim đồng hồ 342°, chỗ hở trên-phải; bán kính dao động nhẹ, đuôi hơi vào trong
+const ENSO = { start: 78 * Math.PI / 180, sweep: 342 * Math.PI / 180, seed: 11 };
+function ensoPath(cx, cy, R) {
+  const pts = [], M = Math.ceil(R * ENSO.sweep / 1.6);
+  for (let i = 0; i <= M; i++) { const s = i / M, a = ENSO.start + ENSO.sweep * s;
+    const r = R * (1 + 0.006 * Math.sin(s * 9.4 + 1) + 0.004 * (vnoise(s * 6, 1, ENSO.seed) - 0.5) - 0.012 * ss(0.75, 1, s) + 0.006 * (1 - ss(0, 0.06, s)));
+    pts.push([cx + r * Math.cos(a), cy - r * Math.sin(a)]); }
+  return pts;
+}
+const enso = (cx, cy, R) => brush(ensoPath(cx, cy, R), { w: R * 0.07, seed: ENSO.seed, N: 52, dry0: 0.05, dry1: 0.52, taper: 0.32 });
+
+// ---------- thước kẻ mực 烏口: nét mảnh đều, hạt mực ở góc, lót giấy khi cắt qua mực ----------
+function ruled(pts, { w = 1.8, a = 0.92, closed = false, under = true, dash = null } = {}) {
+  const P = closed ? pts.concat([pts[0]]) : pts;
+  g.save(); g.lineCap = 'butt'; g.lineJoin = 'miter';
+  if (under) { g.strokeStyle = 'rgba(241,235,221,0.9)'; g.lineWidth = w + 3.4; g.beginPath(); P.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.stroke(); }
+  if (dash) g.setLineDash(dash);
+  for (let i = 1; i < P.length; i++) {                    // mỗi cạnh một lần kéo thước: đậm nhạt khác nhau chút
+    g.strokeStyle = `rgba(${C.inkRGB},${a * (0.86 + 0.14 * hash(i * 3.7 + P.length))})`; g.lineWidth = w;
+    g.beginPath(); g.moveTo(...P[i - 1]); g.lineTo(...P[i]); g.stroke(); }
+  g.setLineDash([]);
+  if (closed) P.forEach(([x, y], i) => { g.fillStyle = `rgba(${C.inkRGB},${a * 0.9})`; g.beginPath(); g.arc(x, y, w * 1.05, 0, 7); g.fill(); });
+  g.restore();
+}
+const poly = (cx, cy, r, n, rot) => Array.from({ length: n }, (_, i) => { const a = rot + i * 2 * Math.PI / n; return [cx + r * Math.cos(a), cy - r * Math.sin(a)]; });
+const dot = (x, y, r, a = 0.92) => { g.fillStyle = `rgba(${C.inkRGB},${a})`; g.beginPath();
+  for (let q = 0; q <= 18; q++) { const t = q / 18 * 6.283, rr = r * (0.9 + 0.18 * vnoise(q * 0.7, x, 3)); g.lineTo(x + rr * Math.cos(t), y + rr * Math.sin(t)); } g.fill(); };
+
+// ---------- chữ ----------
+function text(s, x, y, font, color = C.sumi, align = 'left') { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic'; g.fillText(s, x, y); }
+function runs(parts, x, y, align = 'left') {           // nhiều mặt chữ trên một dòng: [[chữ, font, màu]]
+  const ws = parts.map(([s, f]) => { g.font = f; return g.measureText(s).width; }), tot = ws.reduce((a, b) => a + b, 0);
+  let cx = align === 'center' ? x - tot / 2 : align === 'right' ? x - tot : x;
+  parts.forEach(([s, f, c], i) => { text(s, cx, y, f, c || C.sumi); cx += ws[i]; }); return [x - (align === 'center' ? tot / 2 : align === 'right' ? tot : 0), tot];
+}
+function vertical(s, x, y, size, font, color = C.sumi) {   // 縦書き
+  g.font = font; g.fillStyle = color; g.textAlign = 'center'; g.textBaseline = 'middle';
+  [...s].forEach((ch, i) => g.fillText(ch, x, y + size * (0.5 + i * 1.06)));
+}
+function actHead(num, title) {                          // thẻ hồi: số hồi 薄墨 + tiêu đề 明朝 dọc + vạch kẻ mảnh
+  vertical(title, 150, 104, 62, `700 62px ${MIN}`);
+  vertical(num, 232, 110, 26, `400 26px ${MIN}`, C.usu);
+  ruled([[196, 110], [196, 110 + 62 * 1.06 * [...title].length - 8]], { w: 1, a: 0.5, under: false });
+}
+
+// ---------- mascot: viền mực mảnh + vệt 薄墨 sau lưng (áo trắng không chìm vào giấy ngà) ----------
+function figSprite(pose, h, crop) {
+  const im = IM[pose], sh = im.height * crop, s = h / sh, w = Math.ceil(im.width * s), pad = 6;
+  const base = mk(w, h), b = base.getContext('2d'); b.drawImage(im, 0, 0, im.width, sh, 0, 0, w, h);
+  const sil = mk(w, h), sx = sil.getContext('2d'); sx.drawImage(base, 0, 0); sx.globalCompositeOperation = 'source-in'; sx.fillStyle = C.sumi; sx.fillRect(0, 0, w, h);
+  const c = mk(w + pad * 2, h + pad), x = c.getContext('2d');
+  for (let i = 0; i < 16; i++) { const a = i / 16 * 6.283; x.globalAlpha = 0.55; x.drawImage(sil, pad + Math.cos(a) * 2.6, pad + Math.sin(a) * 2.6); }
+  x.globalAlpha = 1; x.drawImage(base, pad, pad); return { c, s, pad };
+}
+function figure(F, x0, foot, washAt) {
+  const { c, pad } = F;
+  if (washAt) { const [wx, wy, rx, ry] = washAt;       // 薄墨 loang sau nhân vật: nhiều elip chồng, mép mềm
+    for (let i = 0; i < 26; i++) { const a = hash(i * 2.1) * 6.28, d = hash(i * 3.3) * 0.5;
+      g.fillStyle = `rgba(${C.inkRGB},0.026)`; g.beginPath(); g.ellipse(wx + Math.cos(a) * rx * d, wy + Math.sin(a) * ry * d, rx * (0.5 + 0.4 * hash(i * 4.4)), ry * (0.5 + 0.4 * hash(i * 5.5)), hash(i) * 0.6 - 0.3, 0, 7); g.fill(); } }
+  g.drawImage(c, x0 - pad, foot - c.height + pad);
+  return { x: x0, y: foot - (c.height - pad), w: c.width - pad * 2, h: c.height - pad };
+}
+
+function onto(fn) { const c = mk(), prev = g; g = c.getContext('2d'); try { fn(g); } finally { g = prev; } return c; }
+
+const frames = [
+  () => {                                              // 0 · Hồi 1 はさみうち: 円相 kẹp giữa đa giác nội/ngoại tiếp 12 cạnh, bảng 6→96
+    actHead('第一幕', '円をはさみうちにする');
+    const cx = 680, cy = 500, R = 296, n = 12;
+    const inner = poly(cx, cy, R, n, Math.PI / 2), Ro = R / Math.cos(Math.PI / n), outer = poly(cx, cy, Ro, n, Math.PI / 2 + Math.PI / n);
+    // khoảng kẹp: loang 薄墨 giữa hai đa giác (evenodd)
+    g.save(); g.fillStyle = `rgba(${C.inkRGB},0.075)`; g.beginPath();
+    [outer, inner].forEach(P => { P.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath(); }); g.fill('evenodd'); g.restore();
+    // đa giác thước kẻ đi XUYÊN 円相: ngoài mực là nét 墨, trong mực là nét giấy (như vạch 烏口 cào qua mực)
+    const E = onto(() => enso(cx, cy, R)), P = onto(() => { ruled(outer, { closed: true, w: 1.7, a: 0.9, under: false }); ruled(inner, { closed: true, w: 2, a: 1, under: false }); });
+    g.drawImage(E, 0, 0);
+    const out = onto(c => { c.drawImage(P, 0, 0); c.globalCompositeOperation = 'destination-out'; c.drawImage(E, 0, 0); });
+    const ins = onto(c => { c.drawImage(P, 0, 0); c.globalCompositeOperation = 'source-in'; c.fillStyle = C.paper; c.fillRect(0, 0, W, H); c.globalCompositeOperation = 'destination-in'; c.drawImage(E, 0, 0); });
+    g.drawImage(out, 0, 0); g.drawImage(ins, 0, 0);
+    // đường kính = 1
+    ruled([[cx - R + 14, cy], [cx + R - 14, cy]], { w: 1.1, a: 0.6, dash: [10, 7] });
+    dot(cx, cy, 4);
+    runs([['直径 ', `400 30px ${MIN}`, C.usu], ['1', `600 40px ${CG}`, C.usu]], cx, cy - 16, 'center');
+    // nhãn nội/ngoại tiếp (dẫn bằng thước)
+    const mi = [(inner[6][0] + inner[7][0]) / 2, (inner[6][1] + inner[7][1]) / 2];  // giữa cạnh trong, dưới-trái
+    ruled([[mi[0] + 8, mi[1] - 10], [cx - 40, cy + 120]], { w: 1, a: 0.55 });
+    runs([['内接 ', `700 30px ${MIN}`], ['正', `400 30px ${MIN}`], ['12', `600 38px ${CG}`], ['角形', `400 30px ${MIN}`]], cx - 36, cy + 132, 'left');
+    const vo = outer[1];                                  // đỉnh ngoài 135°
+    ruled([[vo[0] - 5, vo[1] - 5], [vo[0] - 58, vo[1] - 92]], { w: 1, a: 0.55 });
+    runs([['外接 ', `700 30px ${MIN}`], ['正', `400 30px ${MIN}`], ['12', `600 38px ${CG}`], ['角形', `400 30px ${MIN}`]], vo[0] - 60, vo[1] - 104, 'center');
+    // bảng: chu vi (đường kính 1) — trong n·sin(π/n), ngoài n·tan(π/n)
+    const rows = [6, 12, 24, 48, 96].map(k => [k, must(r4(`${k} * Math.sin(Math.PI / ${k})`), { 6: 3, 12: 3.1058, 24: 3.1326, 48: 3.1394, 96: 3.141 }[k]),
+      must(r4(`${k} * Math.tan(Math.PI / ${k})`), { 6: 3.4641, 12: 3.2154, 24: 3.1597, 48: 3.1461, 96: 3.1427 }[k])]);
+    const TX = 1020, TY = 300, RH = 70, cN = 1090, cI = 1212, cO = 1332;
+    text('周の長さ', TX, TY - 58, `700 30px ${MIN}`);
+    runs([['正', `400 24px ${MIN}`, C.usu], ['n', `italic 500 30px ${CG}`, C.usu], ['角形', `400 24px ${MIN}`, C.usu]], cN, TY, 'right');
+    text('内', cI - 50, TY, `400 24px ${MIN}`, C.usu, 'center'); text('外', cO - 50, TY, `400 24px ${MIN}`, C.usu, 'center');
+    ruled([[TX, TY + 16], [cO + 6, TY + 16]], { w: 1.1, a: 0.7, under: false });
+    rows.forEach(([k, a, b], i) => { const y = TY + 70 + i * RH, last = k === 96, now = k === 12;
+      if (last) { g.fillStyle = `rgba(${C.inkRGB},0.07)`; g.fillRect(TX - 12, y - 46, cO - TX + 24, 64); }
+      text(String(k), cN, y, `${last ? 700 : 600} ${last ? 46 : 40}px ${CG}`, C.sumi, 'right');
+      text(k === 6 ? '3.0000' : f4(a), cI, y, `${last ? 700 : 500} 40px ${CG}`, now || last ? C.sumi : C.usu, 'right');
+      text(f4(b), cO, y, `${last ? 700 : 500} 40px ${CG}`, now || last ? C.sumi : C.usu, 'right'); });
+    // 96 cạnh: dưới bảng nhãn ngắn
+    runs([['アルキメデス ', `400 28px ${MIN}`, C.usu], ['正', `700 30px ${MIN}`], ['96', `700 38px ${CG}`], ['角形で', `700 30px ${MIN}`]], 400, 884, 'left');
+    // kết luận: 223/71 < π < 22/7 — viết sách, đóng 判子「証明」
+    const lo = must(r4('223 / 71'), 3.1408), hi = must(r4('22 / 7'), 3.1429);
+    must(`${rows[4][1]} > ${lo} && ${rows[4][2]} < ${hi}`, true);
+    const by = 960;
+    const [lx, lw] = runs([[f4(lo), `500 72px ${CG}`], ['  <  ', `300 56px ${NOTO}`], ['π', `600 84px ${CG}`], ['  <  ', `300 56px ${NOTO}`], [f4(hi), `500 72px ${CG}`]], cx, by, 'center');
+    g.font = `500 72px ${CG}`; const nw = g.measureText(f4(lo)).width;
+    text('223/71', lx + nw / 2, by + 44, `500 30px ${CG}`, C.usu, 'center');
+    text('22/7', lx + lw - nw / 2, by + 44, `500 30px ${CG}`, C.usu, 'center');
+    stamp(SEAL0, lx + lw + 92, by - 22, -0.06);
+    window.__boxes = { circle: [cx - Ro, cy - Ro, 2 * Ro, 2 * Ro], line: [lx, by - 70, lw, 120] };
+  },
+  () => {                                              // 1 · Hồi 2 回転の影: điểm quay trên 円相, bóng lên vách, sóng = nét cọ thứ hai
+    actHead('第二幕', '回転の影');
+    const F = figure(IM.spin, 0, 1080, [250, 860, 300, 260]);
+    // vệt quay quanh đầu ngón: một 円相 nhỏ cọ khô (vọng lại vòng chính)
+    const tip = [F.x + F.w * 0.205, F.y + F.h * 0.205], oc = [tip[0] + 4, tip[1] - 46], sw = [];
+    for (let q = 0; q <= 160; q++) { const a = 3.6 + q / 160 * 5.6, r = 1 - 0.08 * q / 160; sw.push([oc[0] + 62 * r * Math.cos(a), oc[1] - 6 + 24 * r * Math.sin(a)]); }
+    brush(sw, { w: 10, seed: 23, N: 22, dry0: 0.08, dry1: 0.8, bleed: 0, taper: 0.7 });
+    { const [ax, ay] = sw[sw.length - 1], [bx, by] = sw[sw.length - 8], an = Math.atan2(ay - by, ax - bx);
+      ruled([[ax - 14 * Math.cos(an - 0.55), ay - 14 * Math.sin(an - 0.55)], [ax, ay], [ax - 14 * Math.cos(an + 0.55), ay - 14 * Math.sin(an + 0.55)]], { w: 2.2, a: 0.85, under: false }); }
+    const cx = 790, cy = 600, R = 230, th = 7 * Math.PI / 6;
+    const s = must(r4('Math.sin(7 * Math.PI / 6)'), -0.5), deg = must('Math.round(7 * 180 / 6)', 210);
+    const px = cx + R * Math.cos(th), py = cy - R * Math.sin(th);
+    // trục ngang qua tâm
+    ruled([[cx - R - 50, cy], [cx + R + 50, cy]], { w: 1.1, a: 0.55, dash: [10, 7] });
+    enso(cx, cy, R);
+    // nửa vòng = π: cung thước kẻ ngoài vành, mũi tên ở π
+    const RA = R + 36, arc = []; for (let a = 0.02; a <= Math.PI - 0.02; a += 0.01) arc.push([cx + RA * Math.cos(a), cy - RA * Math.sin(a)]);
+    ruled(arc, { w: 2, a: 0.9 });
+    { const [ax, ay] = arc[arc.length - 1]; ruled([[ax - 10, ay - 14], [ax, ay], [ax + 12, ay - 12]], { w: 2, a: 0.9, under: false }); }
+    ruled([[cx + RA - 8, cy], [cx + RA + 8, cy]], { w: 2, a: 0.9 });
+    const [hx, hw] = runs([['半回転 ', `700 36px ${MIN}`], ['= ', `400 36px ${NOTO}`], ['π', `600 58px ${CG}`]], cx, cy - RA - 24, 'center');
+    stamp(SEAL1, hx + hw + 62, cy - RA - 40, 0.05);
+    // bán kính 1
+    ruled([[cx, cy], [px, py]], { w: 1.8, a: 0.9 });
+    text('1', (cx + px) / 2 + 6, (cy + py) / 2 + 34, `600 38px ${CG}`, C.sumi, 'center');
+    dot(cx, cy, 4);
+    // vách 壁 + bóng
+    const wx = cx + R + 110;
+    g.fillStyle = `rgba(${C.inkRGB},0.06)`; g.fillRect(wx, cy - R - 60, 12, 2 * R + 120);
+    ruled([[wx, cy - R - 60], [wx, cy + R + 60]], { w: 2.2, a: 0.95 });
+    text('壁', wx + 6, cy - R - 76, `700 30px ${MIN}`, C.sumi, 'center');
+    ruled([[px + 14, py], [wx - 10, py]], { w: 1.2, a: 0.6, dash: [3, 7], under: false });
+    // sóng: bóng theo thời gian, NÉT CỌ thứ hai; phần chưa tới là chấm 薄墨
+    const x0 = wx + 34, per = 600, X = a => x0 + a / (2 * Math.PI) * per;
+    ruled([[x0, cy], [X(2 * Math.PI) + 26, cy]], { w: 1.2, a: 0.7 });
+    ruled([[x0, cy - R - 20], [x0, cy + R + 20]], { w: 1.2, a: 0.7 });
+    const wave = []; for (let a = 0; a <= th + 1e-9; a += 0.008) wave.push([X(a), cy - R * Math.sin(a)]);
+    brush(wave, { w: 11, seed: 31, N: 26, dry0: 0.05, dry1: 0.55, taper: 0.15, bleed: 0.8 });
+    for (let a = th + 0.16; a <= 2 * Math.PI + 1e-9; a += 0.13) dot(X(a), cy - R * Math.sin(a), 2.4, 0.38);
+    const wy = cy - R * s;
+    ruled([[wx + 12, wy], [X(th) - 12, wy]], { w: 1.2, a: 0.6, dash: [3, 7], under: false });
+    dot(px, py, 11); dot(wx, wy, 9, 0.55); dot(X(th), wy, 9);
+    text('影', wx - 26, wy + 10, `700 30px ${MIN}`, C.sumi, 'center');
+    [[Math.PI, 'π'], [2 * Math.PI, '2π']].forEach(([a, t]) => { ruled([[X(a), cy - 12], [X(a), cy + 12]], { w: 1.6, a: 0.9, under: false });
+      text(t, X(a) + (t === 'π' ? -22 : 0), cy + 56, `600 46px ${CG}`, C.sumi, 'center'); });
+    text('時間 →', X(2 * Math.PI) + 26, cy - 22, `400 26px ${MIN}`, C.usu, 'right');
+    text('サイン波', X(Math.PI / 2) + 16, cy - R - 34, `700 34px ${MIN}`, C.sumi, 'left');
+    runs([['影 ', `400 32px ${MIN}`], ['= ', `300 34px ${NOTO}`], ['sin ', `500 40px ${CG}`], [`${deg}°`, `500 40px ${CG}`], [' = ', `300 34px ${NOTO}`], [String(s).replace('-', '−'), `600 44px ${CG}`]], 1820, 990, 'right');
+    // テロップ trên cùng
+    runs([['円の上を回る点 ── ', `400 34px ${MIN}`, C.usu], ['壁に映る影だけを見る', `700 34px ${MIN}`]], 1820, 132, 'right');
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], tip };
+  },
+];
+
+(async () => {
+  await Promise.all([
+    ...['400 24px', '400 26px', '400 30px', '400 34px', '700 30px', '700 34px', '700 62px', '700 60px'].map(f => document.fonts.load(`${f} ${MIN}`, '円周率')),
+    ...['500 30px', '500 40px', '600 40px', '600 46px', '600 54px', '600 84px', '500 72px', '400 64px', '700 46px', '700 40px', 'italic 500 30px', 'italic 500 24px', '700 120px'].map(f => document.fonts.load(`${f} ${CG}`, '0123π')),
+    document.fonts.load(`400 36px ${NOTO}`, '=<'), document.fonts.load(`300 56px ${NOTO}`, '=<'), document.fonts.load(`300 34px ${NOTO}`, '=<'),
+  ]);
+  await Promise.all([['compass', 'pose-compass'], ['spin', 'pose-spin']].map(([k, p]) => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[k] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../../assets/character-v2/cut/${p}.png`; })));
+  IM.compass = figSprite('compass', 720, 1); IM.spin = figSprite('spin', 600, 0.45);
+  SEAL0 = seal(['証', '明'], 112, (ch, i, S) => [`700 46px ${MIN}`, S / 2, S * (0.3 + i * 0.4)]);
+  SEAL1 = seal(['π'], 84, (ch, i, S) => [`700 120px ${CG}`, S / 2, S * 0.43]);
+  PAPER = paper(); GRAIN = grain(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalCompositeOperation = 'source-over'; g.globalAlpha = 1; g.drawImage(PAPER, 0, 0);
+  const i = Math.min(1, Math.floor(t));
+  if (i === 0) figure(IM.compass, 1378, 1080, [1640, 800, 320, 300]);
+  frames[i]();
+  g.drawImage(GRAIN, 0, 0);
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

@@ -1,0 +1,1580 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 68.876
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Two to the power of three means three twos multiplied together. Two times two times two, which is eight. That makes sense.",
+   "idea": false,
+   "start": 0.02,
+   "end": 6.358,
+   "words": [
+    {
+     "w": "two",
+     "start": 0.02,
+     "end": 0.12,
+     "conf": 0.633
+    },
+    {
+     "w": "to",
+     "start": 0.181,
+     "end": 0.221,
+     "conf": 0.497
+    },
+    {
+     "w": "the",
+     "start": 0.241,
+     "end": 0.321,
+     "conf": 0.811
+    },
+    {
+     "w": "power",
+     "start": 0.341,
+     "end": 0.582,
+     "conf": 0.997
+    },
+    {
+     "w": "of",
+     "start": 0.602,
+     "end": 0.682,
+     "conf": 0.663
+    },
+    {
+     "w": "three",
+     "start": 0.762,
+     "end": 0.983,
+     "conf": 0.794
+    },
+    {
+     "w": "means",
+     "start": 1.063,
+     "end": 1.324,
+     "conf": 0.799
+    },
+    {
+     "w": "three",
+     "start": 1.444,
+     "end": 1.645,
+     "conf": 0.768
+    },
+    {
+     "w": "twos",
+     "start": 1.745,
+     "end": 2.066,
+     "conf": 0.545
+    },
+    {
+     "w": "multiplied",
+     "start": 2.146,
+     "end": 2.607,
+     "conf": 0.837
+    },
+    {
+     "w": "together",
+     "start": 2.627,
+     "end": 2.948,
+     "conf": 0.963
+    },
+    {
+     "w": "two",
+     "start": 3.149,
+     "end": 3.309,
+     "conf": 0.664
+    },
+    {
+     "w": "times",
+     "start": 3.37,
+     "end": 3.65,
+     "conf": 0.821
+    },
+    {
+     "w": "two",
+     "start": 3.731,
+     "end": 3.871,
+     "conf": 0.619
+    },
+    {
+     "w": "times",
+     "start": 3.931,
+     "end": 4.192,
+     "conf": 0.802
+    },
+    {
+     "w": "two",
+     "start": 4.272,
+     "end": 4.473,
+     "conf": 0.308
+    },
+    {
+     "w": "which",
+     "start": 4.754,
+     "end": 4.894,
+     "conf": 0.994
+    },
+    {
+     "w": "is",
+     "start": 4.914,
+     "end": 4.994,
+     "conf": 0.99
+    },
+    {
+     "w": "eight",
+     "start": 5.014,
+     "end": 5.355,
+     "conf": 0.297
+    },
+    {
+     "w": "that",
+     "start": 5.716,
+     "end": 5.817,
+     "conf": 0.654
+    },
+    {
+     "w": "makes",
+     "start": 5.837,
+     "end": 6.057,
+     "conf": 0.827
+    },
+    {
+     "w": "sense",
+     "start": 6.077,
+     "end": 6.358,
+     "conf": 0.7
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Two to the power of one is just two, on its own. That makes sense too.",
+   "idea": false,
+   "start": 6.768,
+   "end": 9.933,
+   "words": [
+    {
+     "w": "two",
+     "start": 6.768,
+     "end": 6.868,
+     "conf": 0.762
+    },
+    {
+     "w": "to",
+     "start": 6.888,
+     "end": 6.948,
+     "conf": 0.987
+    },
+    {
+     "w": "the",
+     "start": 6.968,
+     "end": 7.028,
+     "conf": 0.993
+    },
+    {
+     "w": "power",
+     "start": 7.049,
+     "end": 7.249,
+     "conf": 0.995
+    },
+    {
+     "w": "of",
+     "start": 7.269,
+     "end": 7.309,
+     "conf": 0.993
+    },
+    {
+     "w": "one",
+     "start": 7.389,
+     "end": 7.509,
+     "conf": 0.922
+    },
+    {
+     "w": "is",
+     "start": 7.569,
+     "end": 7.65,
+     "conf": 0.997
+    },
+    {
+     "w": "just",
+     "start": 7.71,
+     "end": 7.89,
+     "conf": 0.751
+    },
+    {
+     "w": "two",
+     "start": 7.97,
+     "end": 8.15,
+     "conf": 0.503
+    },
+    {
+     "w": "on",
+     "start": 8.531,
+     "end": 8.571,
+     "conf": 0.499
+    },
+    {
+     "w": "its",
+     "start": 8.631,
+     "end": 8.711,
+     "conf": 0.664
+    },
+    {
+     "w": "own",
+     "start": 8.812,
+     "end": 8.912,
+     "conf": 0.664
+    },
+    {
+     "w": "that",
+     "start": 8.932,
+     "end": 9.292,
+     "conf": 0.749
+    },
+    {
+     "w": "makes",
+     "start": 9.312,
+     "end": 9.513,
+     "conf": 0.94
+    },
+    {
+     "w": "sense",
+     "start": 9.533,
+     "end": 9.773,
+     "conf": 0.954
+    },
+    {
+     "w": "too",
+     "start": 9.793,
+     "end": 9.933,
+     "conf": 0.705
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "But then comes two to the power of zero. Your textbook says it equals one, and every calculator agrees.",
+   "idea": true,
+   "start": 10.344,
+   "end": 15.405,
+   "words": [
+    {
+     "w": "but",
+     "start": 10.344,
+     "end": 10.404,
+     "conf": 0.43
+    },
+    {
+     "w": "then",
+     "start": 10.424,
+     "end": 10.525,
+     "conf": 0.35
+    },
+    {
+     "w": "comes",
+     "start": 10.605,
+     "end": 10.786,
+     "conf": 0.8
+    },
+    {
+     "w": "two",
+     "start": 10.846,
+     "end": 10.967,
+     "conf": 0.528
+    },
+    {
+     "w": "to",
+     "start": 11.027,
+     "end": 11.067,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 11.087,
+     "end": 11.167,
+     "conf": 0.996
+    },
+    {
+     "w": "power",
+     "start": 11.188,
+     "end": 11.408,
+     "conf": 0.999
+    },
+    {
+     "w": "of",
+     "start": 11.429,
+     "end": 11.489,
+     "conf": 0.994
+    },
+    {
+     "w": "zero",
+     "start": 11.569,
+     "end": 11.89,
+     "conf": 0.909
+    },
+    {
+     "w": "your",
+     "start": 12.332,
+     "end": 12.433,
+     "conf": 0.76
+    },
+    {
+     "w": "textbook",
+     "start": 12.473,
+     "end": 12.794,
+     "conf": 0.844
+    },
+    {
+     "w": "says",
+     "start": 12.875,
+     "end": 13.136,
+     "conf": 0.75
+    },
+    {
+     "w": "it",
+     "start": 13.196,
+     "end": 13.236,
+     "conf": 0.499
+    },
+    {
+     "w": "equals",
+     "start": 13.316,
+     "end": 13.537,
+     "conf": 0.851
+    },
+    {
+     "w": "one",
+     "start": 13.718,
+     "end": 13.879,
+     "conf": 0.656
+    },
+    {
+     "w": "and",
+     "start": 14.1,
+     "end": 14.18,
+     "conf": 0.997
+    },
+    {
+     "w": "every",
+     "start": 14.28,
+     "end": 14.461,
+     "conf": 0.8
+    },
+    {
+     "w": "calculator",
+     "start": 14.541,
+     "end": 15.044,
+     "conf": 0.894
+    },
+    {
+     "w": "agrees",
+     "start": 15.064,
+     "end": 15.405,
+     "conf": 0.864
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Why one?",
+   "idea": false,
+   "start": 16.457,
+   "end": 16.857,
+   "words": [
+    {
+     "w": "why",
+     "start": 16.457,
+     "end": 16.626,
+     "conf": 0.191
+    },
+    {
+     "w": "one",
+     "start": 16.731,
+     "end": 16.857,
+     "conf": 0.146
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "If a power counts how many times you multiply, then a power of zero means multiplying zero times.",
+   "idea": false,
+   "start": 17.248,
+   "end": 21.88,
+   "words": [
+    {
+     "w": "if",
+     "start": 17.248,
+     "end": 17.308,
+     "conf": 0.998
+    },
+    {
+     "w": "a",
+     "start": 17.328,
+     "end": 17.348,
+     "conf": 0.99
+    },
+    {
+     "w": "power",
+     "start": 17.429,
+     "end": 17.689,
+     "conf": 0.803
+    },
+    {
+     "w": "counts",
+     "start": 17.769,
+     "end": 18.07,
+     "conf": 0.832
+    },
+    {
+     "w": "how",
+     "start": 18.13,
+     "end": 18.211,
+     "conf": 0.664
+    },
+    {
+     "w": "many",
+     "start": 18.231,
+     "end": 18.351,
+     "conf": 0.999
+    },
+    {
+     "w": "times",
+     "start": 18.451,
+     "end": 18.732,
+     "conf": 0.795
+    },
+    {
+     "w": "you",
+     "start": 18.752,
+     "end": 18.832,
+     "conf": 0.994
+    },
+    {
+     "w": "multiply",
+     "start": 18.892,
+     "end": 19.394,
+     "conf": 0.881
+    },
+    {
+     "w": "then",
+     "start": 19.414,
+     "end": 19.554,
+     "conf": 0.741
+    },
+    {
+     "w": "a",
+     "start": 19.614,
+     "end": 19.634,
+     "conf": 0.0
+    },
+    {
+     "w": "power",
+     "start": 19.654,
+     "end": 19.895,
+     "conf": 0.943
+    },
+    {
+     "w": "of",
+     "start": 19.935,
+     "end": 19.975,
+     "conf": 0.461
+    },
+    {
+     "w": "zero",
+     "start": 20.055,
+     "end": 20.296,
+     "conf": 0.631
+    },
+    {
+     "w": "means",
+     "start": 20.416,
+     "end": 20.597,
+     "conf": 0.799
+    },
+    {
+     "w": "multiplying",
+     "start": 20.657,
+     "end": 21.158,
+     "conf": 0.994
+    },
+    {
+     "w": "zero",
+     "start": 21.219,
+     "end": 21.419,
+     "conf": 0.66
+    },
+    {
+     "w": "times",
+     "start": 21.519,
+     "end": 21.88,
+     "conf": 0.944
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And multiplying zero times sounds like it should mean nothing at all.",
+   "idea": true,
+   "start": 22.29,
+   "end": 25.589,
+   "words": [
+    {
+     "w": "and",
+     "start": 22.29,
+     "end": 22.371,
+     "conf": 0.918
+    },
+    {
+     "w": "multiplying",
+     "start": 22.391,
+     "end": 22.914,
+     "conf": 0.976
+    },
+    {
+     "w": "zero",
+     "start": 23.014,
+     "end": 23.236,
+     "conf": 0.695
+    },
+    {
+     "w": "times",
+     "start": 23.397,
+     "end": 23.799,
+     "conf": 0.808
+    },
+    {
+     "w": "sounds",
+     "start": 23.92,
+     "end": 24.141,
+     "conf": 0.839
+    },
+    {
+     "w": "like",
+     "start": 24.161,
+     "end": 24.402,
+     "conf": 0.818
+    },
+    {
+     "w": "it",
+     "start": 24.422,
+     "end": 24.503,
+     "conf": 0.671
+    },
+    {
+     "w": "should",
+     "start": 24.563,
+     "end": 24.724,
+     "conf": 0.917
+    },
+    {
+     "w": "mean",
+     "start": 24.744,
+     "end": 24.885,
+     "conf": 0.601
+    },
+    {
+     "w": "nothing",
+     "start": 24.986,
+     "end": 25.267,
+     "conf": 0.895
+    },
+    {
+     "w": "at",
+     "start": 25.287,
+     "end": 25.388,
+     "conf": 1.0
+    },
+    {
+     "w": "all",
+     "start": 25.469,
+     "end": 25.589,
+     "conf": 0.744
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It gets stranger. Try zero to the power of zero.",
+   "idea": false,
+   "start": 26.6,
+   "end": 28.756,
+   "words": [
+    {
+     "w": "it",
+     "start": 26.6,
+     "end": 26.661,
+     "conf": 0.32
+    },
+    {
+     "w": "gets",
+     "start": 26.681,
+     "end": 26.822,
+     "conf": 0.742
+    },
+    {
+     "w": "stranger",
+     "start": 26.882,
+     "end": 27.285,
+     "conf": 0.944
+    },
+    {
+     "w": "try",
+     "start": 27.345,
+     "end": 27.507,
+     "conf": 0.746
+    },
+    {
+     "w": "zero",
+     "start": 27.648,
+     "end": 27.889,
+     "conf": 0.703
+    },
+    {
+     "w": "to",
+     "start": 28.01,
+     "end": 28.05,
+     "conf": 0.481
+    },
+    {
+     "w": "the",
+     "start": 28.071,
+     "end": 28.131,
+     "conf": 0.961
+    },
+    {
+     "w": "power",
+     "start": 28.151,
+     "end": 28.413,
+     "conf": 0.827
+    },
+    {
+     "w": "of",
+     "start": 28.433,
+     "end": 28.474,
+     "conf": 0.961
+    },
+    {
+     "w": "zero",
+     "start": 28.514,
+     "end": 28.756,
+     "conf": 0.879
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Python says one. So does JavaScript, and so does Google.",
+   "idea": false,
+   "start": 29.166,
+   "end": 31.808,
+   "words": [
+    {
+     "w": "python",
+     "start": 29.166,
+     "end": 29.469,
+     "conf": 0.819
+    },
+    {
+     "w": "says",
+     "start": 29.489,
+     "end": 29.69,
+     "conf": 0.695
+    },
+    {
+     "w": "one",
+     "start": 29.832,
+     "end": 29.892,
+     "conf": 0.643
+    },
+    {
+     "w": "so",
+     "start": 30.114,
+     "end": 30.195,
+     "conf": 0.995
+    },
+    {
+     "w": "does",
+     "start": 30.255,
+     "end": 30.376,
+     "conf": 0.288
+    },
+    {
+     "w": "javascript",
+     "start": 30.437,
+     "end": 30.981,
+     "conf": 0.803
+    },
+    {
+     "w": "and",
+     "start": 31.102,
+     "end": 31.163,
+     "conf": 0.642
+    },
+    {
+     "w": "so",
+     "start": 31.243,
+     "end": 31.284,
+     "conf": 0.498
+    },
+    {
+     "w": "does",
+     "start": 31.384,
+     "end": 31.485,
+     "conf": 0.293
+    },
+    {
+     "w": "google",
+     "start": 31.546,
+     "end": 31.808,
+     "conf": 0.726
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "A TI eighty-four calculator says domain error. Excel gives you an error, too.",
+   "idea": false,
+   "start": 32.198,
+   "end": 36.063,
+   "words": [
+    {
+     "w": "a",
+     "start": 32.198,
+     "end": 32.218,
+     "conf": 0.987
+    },
+    {
+     "w": "ti",
+     "start": 32.278,
+     "end": 32.579,
+     "conf": 0.98
+    },
+    {
+     "w": "eighty-four",
+     "start": 32.599,
+     "end": 33.059,
+     "conf": 0.053
+    },
+    {
+     "w": "calculator",
+     "start": 33.119,
+     "end": 33.64,
+     "conf": 0.829
+    },
+    {
+     "w": "says",
+     "start": 33.66,
+     "end": 33.82,
+     "conf": 0.668
+    },
+    {
+     "w": "domain",
+     "start": 33.84,
+     "end": 34.141,
+     "conf": 0.828
+    },
+    {
+     "w": "error",
+     "start": 34.221,
+     "end": 34.441,
+     "conf": 0.766
+    },
+    {
+     "w": "excel",
+     "start": 34.882,
+     "end": 35.122,
+     "conf": 0.739
+    },
+    {
+     "w": "gives",
+     "start": 35.222,
+     "end": 35.402,
+     "conf": 0.998
+    },
+    {
+     "w": "you",
+     "start": 35.422,
+     "end": 35.482,
+     "conf": 0.981
+    },
+    {
+     "w": "an",
+     "start": 35.502,
+     "end": 35.563,
+     "conf": 0.664
+    },
+    {
+     "w": "error",
+     "start": 35.623,
+     "end": 35.803,
+     "conf": 0.619
+    },
+    {
+     "w": "too",
+     "start": 35.903,
+     "end": 36.063,
+     "conf": 0.498
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Same question, same symbols, and the machines can't agree.",
+   "idea": true,
+   "start": 36.554,
+   "end": 39.335,
+   "words": [
+    {
+     "w": "same",
+     "start": 36.554,
+     "end": 36.735,
+     "conf": 0.985
+    },
+    {
+     "w": "question",
+     "start": 36.755,
+     "end": 37.158,
+     "conf": 0.965
+    },
+    {
+     "w": "same",
+     "start": 37.42,
+     "end": 37.581,
+     "conf": 0.749
+    },
+    {
+     "w": "symbols",
+     "start": 37.682,
+     "end": 38.045,
+     "conf": 0.666
+    },
+    {
+     "w": "and",
+     "start": 38.206,
+     "end": 38.267,
+     "conf": 0.63
+    },
+    {
+     "w": "the",
+     "start": 38.287,
+     "end": 38.347,
+     "conf": 0.359
+    },
+    {
+     "w": "machines",
+     "start": 38.367,
+     "end": 38.73,
+     "conf": 0.803
+    },
+    {
+     "w": "can't",
+     "start": 38.811,
+     "end": 39.012,
+     "conf": 0.36
+    },
+    {
+     "w": "agree",
+     "start": 39.052,
+     "end": 39.335,
+     "conf": 0.803
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So in this video, I want to answer three questions with you.",
+   "idea": false,
+   "start": 40.345,
+   "end": 43.105,
+   "words": [
+    {
+     "w": "so",
+     "start": 40.345,
+     "end": 40.426,
+     "conf": 0.999
+    },
+    {
+     "w": "in",
+     "start": 40.506,
+     "end": 40.547,
+     "conf": 0.777
+    },
+    {
+     "w": "this",
+     "start": 40.567,
+     "end": 40.688,
+     "conf": 0.587
+    },
+    {
+     "w": "video",
+     "start": 40.708,
+     "end": 40.95,
+     "conf": 0.833
+    },
+    {
+     "w": "i",
+     "start": 41.393,
+     "end": 41.413,
+     "conf": 0.0
+    },
+    {
+     "w": "want",
+     "start": 41.433,
+     "end": 41.534,
+     "conf": 0.754
+    },
+    {
+     "w": "to",
+     "start": 41.554,
+     "end": 41.594,
+     "conf": 0.991
+    },
+    {
+     "w": "answer",
+     "start": 41.675,
+     "end": 41.876,
+     "conf": 0.542
+    },
+    {
+     "w": "three",
+     "start": 41.937,
+     "end": 42.178,
+     "conf": 0.997
+    },
+    {
+     "w": "questions",
+     "start": 42.279,
+     "end": 42.783,
+     "conf": 0.899
+    },
+    {
+     "w": "with",
+     "start": 42.863,
+     "end": 42.964,
+     "conf": 0.746
+    },
+    {
+     "w": "you",
+     "start": 42.984,
+     "end": 43.105,
+     "conf": 0.797
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "One. Why is anything to the power of zero equal to one?",
+   "idea": false,
+   "start": 43.515,
+   "end": 45.932,
+   "words": [
+    {
+     "w": "one",
+     "start": 43.515,
+     "end": 43.717,
+     "conf": 0.442
+    },
+    {
+     "w": "why",
+     "start": 43.978,
+     "end": 44.079,
+     "conf": 0.707
+    },
+    {
+     "w": "is",
+     "start": 44.119,
+     "end": 44.18,
+     "conf": 0.975
+    },
+    {
+     "w": "anything",
+     "start": 44.2,
+     "end": 44.502,
+     "conf": 0.997
+    },
+    {
+     "w": "to",
+     "start": 44.542,
+     "end": 44.583,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 44.603,
+     "end": 44.663,
+     "conf": 0.992
+    },
+    {
+     "w": "power",
+     "start": 44.683,
+     "end": 44.945,
+     "conf": 0.998
+    },
+    {
+     "w": "of",
+     "start": 44.965,
+     "end": 45.046,
+     "conf": 0.66
+    },
+    {
+     "w": "zero",
+     "start": 45.126,
+     "end": 45.288,
+     "conf": 0.678
+    },
+    {
+     "w": "equal",
+     "start": 45.429,
+     "end": 45.59,
+     "conf": 0.724
+    },
+    {
+     "w": "to",
+     "start": 45.61,
+     "end": 45.65,
+     "conf": 0.009
+    },
+    {
+     "w": "one",
+     "start": 45.67,
+     "end": 45.932,
+     "conf": 0.631
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Two. Is that a rule somebody chose, or is it forced on us?",
+   "idea": false,
+   "start": 46.343,
+   "end": 49.033,
+   "words": [
+    {
+     "w": "two",
+     "start": 46.343,
+     "end": 46.544,
+     "conf": 0.037
+    },
+    {
+     "w": "is",
+     "start": 46.825,
+     "end": 46.865,
+     "conf": 0.022
+    },
+    {
+     "w": "that",
+     "start": 46.885,
+     "end": 47.005,
+     "conf": 0.566
+    },
+    {
+     "w": "a",
+     "start": 47.026,
+     "end": 47.046,
+     "conf": 0.158
+    },
+    {
+     "w": "rule",
+     "start": 47.106,
+     "end": 47.266,
+     "conf": 0.754
+    },
+    {
+     "w": "somebody",
+     "start": 47.286,
+     "end": 47.567,
+     "conf": 0.746
+    },
+    {
+     "w": "chose",
+     "start": 47.668,
+     "end": 47.949,
+     "conf": 0.799
+    },
+    {
+     "w": "or",
+     "start": 48.049,
+     "end": 48.109,
+     "conf": 0.49
+    },
+    {
+     "w": "is",
+     "start": 48.19,
+     "end": 48.23,
+     "conf": 0.498
+    },
+    {
+     "w": "it",
+     "start": 48.25,
+     "end": 48.31,
+     "conf": 0.997
+    },
+    {
+     "w": "forced",
+     "start": 48.41,
+     "end": 48.752,
+     "conf": 0.849
+    },
+    {
+     "w": "on",
+     "start": 48.792,
+     "end": 48.852,
+     "conf": 0.5
+    },
+    {
+     "w": "us",
+     "start": 48.912,
+     "end": 49.033,
+     "conf": 0.5
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And three. What is zero to the zero, and why do the machines disagree?",
+   "idea": true,
+   "start": 49.462,
+   "end": 52.857,
+   "words": [
+    {
+     "w": "and",
+     "start": 49.462,
+     "end": 49.542,
+     "conf": 0.995
+    },
+    {
+     "w": "three",
+     "start": 49.643,
+     "end": 49.844,
+     "conf": 0.731
+    },
+    {
+     "w": "what",
+     "start": 50.105,
+     "end": 50.225,
+     "conf": 0.969
+    },
+    {
+     "w": "is",
+     "start": 50.266,
+     "end": 50.346,
+     "conf": 0.998
+    },
+    {
+     "w": "zero",
+     "start": 50.446,
+     "end": 50.707,
+     "conf": 0.853
+    },
+    {
+     "w": "to",
+     "start": 50.828,
+     "end": 50.888,
+     "conf": 0.979
+    },
+    {
+     "w": "the",
+     "start": 50.948,
+     "end": 51.009,
+     "conf": 0.634
+    },
+    {
+     "w": "zero",
+     "start": 51.069,
+     "end": 51.33,
+     "conf": 0.839
+    },
+    {
+     "w": "and",
+     "start": 51.551,
+     "end": 51.631,
+     "conf": 0.976
+    },
+    {
+     "w": "why",
+     "start": 51.692,
+     "end": 51.832,
+     "conf": 0.999
+    },
+    {
+     "w": "do",
+     "start": 51.852,
+     "end": 51.913,
+     "conf": 0.992
+    },
+    {
+     "w": "the",
+     "start": 51.933,
+     "end": 52.013,
+     "conf": 0.753
+    },
+    {
+     "w": "machines",
+     "start": 52.033,
+     "end": 52.375,
+     "conf": 0.846
+    },
+    {
+     "w": "disagree",
+     "start": 52.455,
+     "end": 52.857,
+     "conf": 0.877
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Here is where we are going. That one isn't a trick, and it isn't nothing.",
+   "idea": false,
+   "start": 53.867,
+   "end": 57.059,
+   "words": [
+    {
+     "w": "here",
+     "start": 53.867,
+     "end": 54.008,
+     "conf": 0.988
+    },
+    {
+     "w": "is",
+     "start": 54.028,
+     "end": 54.088,
+     "conf": 0.973
+    },
+    {
+     "w": "where",
+     "start": 54.108,
+     "end": 54.248,
+     "conf": 0.954
+    },
+    {
+     "w": "we",
+     "start": 54.269,
+     "end": 54.309,
+     "conf": 0.998
+    },
+    {
+     "w": "are",
+     "start": 54.369,
+     "end": 54.449,
+     "conf": 0.663
+    },
+    {
+     "w": "going",
+     "start": 54.469,
+     "end": 54.77,
+     "conf": 0.999
+    },
+    {
+     "w": "that",
+     "start": 55.031,
+     "end": 55.152,
+     "conf": 0.505
+    },
+    {
+     "w": "one",
+     "start": 55.272,
+     "end": 55.373,
+     "conf": 0.721
+    },
+    {
+     "w": "isn't",
+     "start": 55.493,
+     "end": 55.694,
+     "conf": 0.705
+    },
+    {
+     "w": "a",
+     "start": 55.774,
+     "end": 55.794,
+     "conf": 0.001
+    },
+    {
+     "w": "trick",
+     "start": 55.874,
+     "end": 56.156,
+     "conf": 0.827
+    },
+    {
+     "w": "and",
+     "start": 56.356,
+     "end": 56.416,
+     "conf": 0.66
+    },
+    {
+     "w": "it",
+     "start": 56.437,
+     "end": 56.477,
+     "conf": 0.834
+    },
+    {
+     "w": "isn't",
+     "start": 56.517,
+     "end": 56.698,
+     "conf": 0.829
+    },
+    {
+     "w": "nothing",
+     "start": 56.778,
+     "end": 57.059,
+     "conf": 0.77
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Multiplying zero times means you haven't multiplied yet, and a multiplication that hasn't started stands at one.",
+   "idea": false,
+   "start": 57.449,
+   "end": 62.955,
+   "words": [
+    {
+     "w": "multiplying",
+     "start": 57.449,
+     "end": 57.99,
+     "conf": 0.994
+    },
+    {
+     "w": "zero",
+     "start": 58.07,
+     "end": 58.31,
+     "conf": 0.878
+    },
+    {
+     "w": "times",
+     "start": 58.41,
+     "end": 58.791,
+     "conf": 0.998
+    },
+    {
+     "w": "means",
+     "start": 58.911,
+     "end": 59.071,
+     "conf": 0.799
+    },
+    {
+     "w": "you",
+     "start": 59.091,
+     "end": 59.171,
+     "conf": 0.75
+    },
+    {
+     "w": "haven't",
+     "start": 59.271,
+     "end": 59.531,
+     "conf": 0.883
+    },
+    {
+     "w": "multiplied",
+     "start": 59.551,
+     "end": 60.052,
+     "conf": 0.997
+    },
+    {
+     "w": "yet",
+     "start": 60.112,
+     "end": 60.252,
+     "conf": 0.667
+    },
+    {
+     "w": "and",
+     "start": 60.432,
+     "end": 60.492,
+     "conf": 0.631
+    },
+    {
+     "w": "a",
+     "start": 60.512,
+     "end": 60.552,
+     "conf": 0.512
+    },
+    {
+     "w": "multiplication",
+     "start": 60.593,
+     "end": 61.213,
+     "conf": 0.934
+    },
+    {
+     "w": "that",
+     "start": 61.233,
+     "end": 61.333,
+     "conf": 0.999
+    },
+    {
+     "w": "hasn't",
+     "start": 61.413,
+     "end": 61.634,
+     "conf": 0.795
+    },
+    {
+     "w": "started",
+     "start": 61.714,
+     "end": 62.094,
+     "conf": 0.857
+    },
+    {
+     "w": "stands",
+     "start": 62.354,
+     "end": 62.615,
+     "conf": 0.812
+    },
+    {
+     "w": "at",
+     "start": 62.635,
+     "end": 62.715,
+     "conf": 0.63
+    },
+    {
+     "w": "one",
+     "start": 62.835,
+     "end": 62.955,
+     "conf": 0.705
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "But zero to the zero is where two good ideas collide. To see why, we start with a staircase.",
+   "idea": true,
+   "start": 63.365,
+   "end": 67.886,
+   "words": [
+    {
+     "w": "but",
+     "start": 63.365,
+     "end": 63.445,
+     "conf": 0.87
+    },
+    {
+     "w": "zero",
+     "start": 63.466,
+     "end": 63.747,
+     "conf": 0.314
+    },
+    {
+     "w": "to",
+     "start": 63.827,
+     "end": 63.908,
+     "conf": 0.384
+    },
+    {
+     "w": "the",
+     "start": 63.948,
+     "end": 64.028,
+     "conf": 0.338
+    },
+    {
+     "w": "zero",
+     "start": 64.088,
+     "end": 64.35,
+     "conf": 0.382
+    },
+    {
+     "w": "is",
+     "start": 64.571,
+     "end": 64.611,
+     "conf": 0.461
+    },
+    {
+     "w": "where",
+     "start": 64.631,
+     "end": 64.812,
+     "conf": 0.831
+    },
+    {
+     "w": "two",
+     "start": 64.872,
+     "end": 65.013,
+     "conf": 0.733
+    },
+    {
+     "w": "good",
+     "start": 65.033,
+     "end": 65.173,
+     "conf": 0.999
+    },
+    {
+     "w": "ideas",
+     "start": 65.294,
+     "end": 65.515,
+     "conf": 0.739
+    },
+    {
+     "w": "collide",
+     "start": 65.595,
+     "end": 66.037,
+     "conf": 0.671
+    },
+    {
+     "w": "to",
+     "start": 66.258,
+     "end": 66.298,
+     "conf": 0.547
+    },
+    {
+     "w": "see",
+     "start": 66.399,
+     "end": 66.499,
+     "conf": 0.666
+    },
+    {
+     "w": "why",
+     "start": 66.519,
+     "end": 66.76,
+     "conf": 0.993
+    },
+    {
+     "w": "we",
+     "start": 66.841,
+     "end": 66.881,
+     "conf": 0.499
+    },
+    {
+     "w": "start",
+     "start": 66.961,
+     "end": 67.142,
+     "conf": 0.799
+    },
+    {
+     "w": "with",
+     "start": 67.162,
+     "end": 67.283,
+     "conf": 0.894
+    },
+    {
+     "w": "a",
+     "start": 67.323,
+     "end": 67.343,
+     "conf": 0.001
+    },
+    {
+     "w": "staircase",
+     "start": 67.363,
+     "end": 67.886,
+     "conf": 0.954
+    }
+   ]
+  }
+ ]
+}

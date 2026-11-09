@@ -1,0 +1,87 @@
+Quel nombre se trouve exactement à mi-chemin entre 1 et −1 ?
+Zéro, si vous marchez le long de la droite. Mais si vous tournez, à mi-tour vous tombez sur un nombre qui n'est pas du tout sur la droite.
+Au XVIe siècle, ce nombre était le seul chemin vers une réponse correcte.
+Descartes l'a appelé imaginaire, et c'était une insulte.
+Aujourd'hui, il aide les ingénieurs à faire fonctionner le réseau électrique.
+À la fin de cette vidéo, vous pourrez le montrer du doigt, et vous verrez exactement pourquoi de vraies machines l'utilisent.
+Tout commence par une question : que fait réellement une multiplication ?
+Tracez la droite numérique et voyez chaque nombre comme une flèche partant de zéro.
+Multipliez maintenant par 2. Chaque flèche devient deux fois plus longue. 3 arrive sur 6, et −1 arrive sur −2.
+Multiplier par 2 n'est donc pas seulement un calcul. C'est un mouvement appliqué à toute la droite : un étirement.
+Quel mouvement correspond à multiplier par −1 ?
+3 va à −3. 5 va à −5. −2 va à 2.
+Tout change de côté. C'est un retournement à travers zéro.
+Retournez deux fois, et vous revenez au départ. C'est une façon de voir pourquoi négatif fois négatif donne positif.
+Voici maintenant la question qui cause tous les ennuis.
+Existe-t-il un nombre qui, multiplié par lui-même, donne −1 ?
+Autrement dit, existe-t-il un mouvement qui, fait deux fois, donne un retournement ?
+Essayez sur la droite. Un nombre positif garde chaque flèche de son côté, et le faire deux fois l'y laisse encore.
+Un nombre négatif change de côté, et changer deux fois vous ramène au départ.
+Dans les deux cas, le même mouvement fait deux fois ne finit jamais du côté opposé. Donc sur cette droite, aucun nombre n'a −1 pour carré.
+Pendant longtemps, l'histoire s'est arrêtée là. Demander la racine carrée d'un négatif, c'était s'entendre répondre honnêtement : la question est mal posée.
+Et les choses en seraient restées là, sans une équation qui avait déjà une très bonne réponse.
+En 1545, le savant italien Gerolamo Cardano publia une formule pour résoudre les équations cubiques, celles qui contiennent x au cube.
+Mais la formule avait un étrange problème.
+Prenez x³ = 15x + 4.
+On peut vérifier à la main que x = 4 marche. 4 au cube fait 64, et 15 fois 4 plus 4 fait aussi 64.
+Il y a donc une vraie réponse, et c'est un petit nombre entier.
+Mais mettez l'équation dans la formule, et à mi-parcours elle réclame la racine carrée de −121.
+Vous pourriez penser que la formule ne s'applique tout simplement pas ici. C'est ce qu'on conclut d'habitude quand un calcul demande l'impossible.
+Mais la réponse existe. Nous venons de la vérifier. La formule visait un résultat vrai, et son seul chemin passait par un nombre interdit.
+En 1572, un ingénieur nommé Rafael Bombelli tenta un coup audacieux. Il ignora l'objection et continua à calculer.
+Il traita la racine carrée de −1 comme un symbole inconnu, avec une seule règle : son carré vaut −1. Pour le reste, de l'algèbre normale.
+La formule réclamait alors deux racines cubiques, et Bombelli les trouva : 2 plus ce symbole, et 2 moins ce symbole.
+Additionnez-les. Le 2 et le 2 font 4. Les symboles, l'un avec plus et l'autre avec moins, s'annulent.
+Quatre. La réponse exacte, et la partie impossible avait disparu en chemin.
+Personne n'a donc accepté ce nombre parce qu'il sonnait bien. Il a été accepté parce qu'il donnait toujours des résultats corrects, sans que personne sache dire ce que c'était.
+En 1637, René Descartes employa le mot imaginaire pour ce genre de quantités, et ce n'était pas un compliment.
+Le symbole actuel, la lettre i, est venu plus tard. Mais la vraie question restait ouverte. Une règle n'est pas une explication. Qu'est-ce que c'est ?
+La réponse est apparue vers 1800, publiée par Caspar Wessel puis par Jean-Robert Argand, chacun de son côté.
+Et elle est presque gênante de simplicité. Nous avons montré qu'aucun mouvement sur la droite ne marche. Alors ne restez pas sur la droite.
+Regardez encore ce retournement. Il existe une autre façon d'envoyer 1 sur −1, 3 sur −3, et tout sur son opposé.
+Faites tourner toute la droite d'un demi-tour autour de zéro.
+Le résultat ressemble exactement au retournement, mais maintenant le mouvement a un milieu.
+Arrêtez-vous à mi-rotation. Vous avez fait un quart de tour, et la flèche de 0 à 1 pointe maintenant droit vers le haut, hors de la droite.
+Voilà votre mouvement. Un quart de tour, fait deux fois, donne un demi-tour, et un demi-tour, c'est multiplier par −1.
+La racine carrée de −1 n'est donc pas une quantité mystérieuse. C'est un quart de tour. Et le point un cran au-dessus de zéro, c'est ce qu'on appelle i.
+Nous pouvons maintenant bien répondre à la question de départ. Marchez sur la droite de 1 à −1, et le milieu est 0.
+Tournez de 1 à −1, et le milieu est i. Tournez dans l'autre sens, et le milieu est −i.
+Continuez à multiplier par i, et vous continuez simplement à tourner.
+1, puis i, puis −1, puis −i, puis retour à 1. Quatre quarts de tour, un cercle complet.
+Une question qui paraît terrifiante, comme i puissance 100, est donc facile. 100, c'est 25 cercles complets, et vous finissez exactement au point de départ : 1.
+Le nom imaginaire rend tout cela plus mystérieux que ça ne l'est.
+−1 non plus n'est pas quelque chose qu'on tient dans la main. C'est une direction sur une droite. Et i n'est qu'une direction de plus, celle que nous ne regardions pas.
+Dès qu'il existe une direction vers le haut, chaque point de la page devient un nombre.
+3 vers la droite et 2 vers le haut, c'est 3 + 2i. On les appelle nombres complexes, et complexe veut dire ici fait de plusieurs parties, pas difficile.
+Testons l'idée. Multipliez 3 + 2i par i, avec de l'algèbre ordinaire.
+3 fois i donne 3i. 2i fois i donne 2i², soit −2.
+Vous obtenez −2 + 3i. Regardez maintenant où ce point est arrivé.
+C'est la même flèche, la même longueur, tournée exactement d'un quart de tour. L'algèbre a fait de la géométrie sans qu'on le lui demande.
+Et ça marche pour tout nombre complexe, pas seulement i. Chacun est une flèche avec une longueur et un angle.
+Quand on en multiplie deux, les longueurs se multiplient et les angles s'additionnent. C'est toute la règle.
+Prenez 1 + i. Il pointe à 45 degrés, et sa longueur est la racine carrée de 2.
+Élevez-le au carré. L'angle double à 90 degrés, et la longueur devient exactement 2. Cela prédit 2i.
+Vérifiez avec l'algèbre : 1, plus 2i, plus i². Le 1 et le −1 s'annulent, et il reste 2i.
+Cette règle explique enfin l'astuce de 1572.
+Le 2 + i de Bombelli est une flèche d'un angle d'environ 26,5 degrés. Au cube, l'angle triple et atteint presque 80 degrés, presque à la verticale, pour tomber précisément sur 2 + 11i.
+Son image miroir, 2 − i, donne au cube 2 − 11i, et ce 11i est la racine carrée de −121.
+Additionnez maintenant les deux flèches. L'une monte, son miroir descend d'autant, et ce qui reste est à plat sur la droite ordinaire. 2 + 2 : 4.
+Voilà pourquoi une réponse réelle devait passer par l'imaginaire. Le chemin de la formule a quitté la droite puis y est revenu. Le nombre réel était l'ombre de quelque chose qui se passait dans le plan.
+Alors pourquoi le réseau électrique s'y intéresse-t-il ?
+L'électricité d'une prise oscille dans les deux sens selon une onde régulière, environ 50 ou 60 fois par seconde.
+Imaginez une flèche qui tourne régulièrement en cercle, et regardez seulement sa hauteur. Haut, bas, haut, bas. Cette hauteur trace exactement cette onde.
+Toute onde régulière peut donc être traitée comme l'ombre d'une flèche qui tourne. Et nous avons maintenant des nombres qui tournent.
+Voici pourquoi c'est utile. Supposons que deux ondes passent dans le même circuit, l'une culminant à 3 volts, l'autre à 4 volts, et la seconde en retard d'un quart de cycle sur la première.
+Quel est le pic quand elles se combinent ? Vous diriez peut-être 7. Non, car elles n'atteignent jamais leur pic au même moment.
+Avec des flèches, un quart de cycle est un quart de tour. Les deux ondes sont donc 3 et 4i, à angle droit.
+Additionnez-les, et la longueur vaut 5. L'onde combinée culmine à exactement 5 volts.
+Sans nombres complexes, on obtiendrait aussi cette réponse, mais avec des pages de trigonométrie. Avec eux, c'est une courte addition.
+À l'échelle d'un circuit entier, plein de bobines et de condensateurs qui décalent les ondes dans le temps, c'est la différence entre une page d'algèbre et quelque chose de vraiment pénible.
+Les ingénieurs électriciens s'en servent tellement qu'ils écrivent ce nombre j, car i désignait déjà le courant.
+Les signaux radio, le traitement du son et les équations de la mécanique quantique en dépendent aussi, pour la même raison de base. Ce qui oscille, c'est ce qui tourne.
+Pourquoi a-t-on été forcé de l'accepter ? Parce que la bonne réponse, 4, ne pouvait être atteinte qu'en passant par la racine carrée d'un négatif.
+Qu'est-ce que c'est ? Un quart de tour. Et le point un cran au-dessus de zéro, dans une direction que la droite numérique ne nous avait jamais montrée.
+Pourquoi est-ce utile ? Parce que multiplier des nombres complexes fait tourner, et tout ce qui oscille peut être traité comme quelque chose qui tourne.
+Essayez donc avec un crayon. Marquez un point quelconque sur une feuille comme un nombre, par exemple 2 + i, et multipliez-le par i quatre fois.
+Puis placez chaque réponse. Personne n'aura besoin de vous dire ce que signifie i. Vous verrez votre point faire le tour d'un cercle et rentrer chez lui.
+Merci d'avoir regardé, et si cela a rendu une idée étrange évidente, abonnez-vous à 99% from scratch.

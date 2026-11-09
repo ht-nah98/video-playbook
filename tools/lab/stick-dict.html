@@ -1,0 +1,30 @@
+<!doctype html><meta charset="utf-8"><title>Stick dictionary</title>
+<!-- Bảng từ điển người que (engine/stick-dict.js) — mọi dáng, nét mềm. ?t=<giây> không dùng: bảng tĩnh. So với mẫu:
+     python3 tools/study/stick_dict_pairs.py (ghép ô của bảng này với khung Becker cùng mốc). -->
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+import { DICT, pose, stage } from '../../engine/stick-dict.js';
+import { hero, INK, PAPER } from '../../engine/hero.js';
+const g = document.getElementById('cv').getContext('2d');
+let ready = false;
+Promise.all([new FontFace('Archivo', 'url("../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f))])
+  .then(() => { ready = true; }, () => { ready = true; });
+const names = Object.keys(DICT), COLS = 9, CW = 1920 / COLS, ROWS = Math.ceil(names.length / COLS), CH = 1080 / ROWS, h = 0.5 * CH;
+// trang: ?page=1 → ô thứ k vẽ to một mình (cho ảnh ghép với mẫu)
+const one = new URLSearchParams(location.search).get('one');
+function cell(name, cx, gy, hh, label) {
+  const k = pose(name, { x: cx });
+  const A = stage(0, { h: hh, ground: () => gy, keys: [[0, k]], breathe: 0 });
+  g.strokeStyle = 'rgba(34,48,60,.25)'; g.lineWidth = 2; g.beginPath(); g.moveTo(cx - 0.9 * hh, gy); g.lineTo(cx + 0.9 * hh, gy); g.stroke();
+  hero(g, 'C', A.hip[0], 0, A.pose, { soft: true, h: hh, dir: 1, hip: A.hip, feet: A.feet, rot: A.rot, front: A.front, arm: A.arm, eye: { look: [0.5, 0.2] }, t: 0 });
+  if (label) { g.fillStyle = INK; g.font = `700 ${Math.round(hh * 0.13)}px Archivo, sans-serif`; g.textAlign = 'center'; g.fillText(name, cx, gy + hh * 0.2);
+    g.fillStyle = 'rgba(34,48,60,.55)'; g.font = `500 ${Math.round(hh * 0.1)}px Archivo, sans-serif`; g.fillText(DICT[name].ref, cx, gy + hh * 0.33); }
+}
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = PAPER; g.fillRect(0, 0, 1920, 1080);
+  if (one) { cell(one, 960, 860, 560, false); return; }
+  names.forEach((n, i) => cell(n, (i % COLS + 0.5) * CW, (Math.floor(i / COLS) + 0.74) * CH, h, true));
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 1 };
+</script>

@@ -1,0 +1,26 @@
+{
+ "cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {"name": "machines-disagree", "hook": ["PYTHON SAYS 0⁰ = {1}.", "EXCEL SAYS {ERROR}.", "WHO'S RIGHT?"],
+   "pieces": [
+    {"from": "p1:7", "to": "p1:9", "crop": [1500, 0, 0, 0]},
+    {"from": "p2:103", "to": "p2:103", "crop": [1760, 20, 20, 0], "tail": 0.3}]},
+  {"name": "multiply-zero-times", "hook": ["MULTIPLYING", "{ZERO} TIMES", "ISN'T NOTHING"],
+   "pieces": [
+    {"from": "p1:4", "to": "p1:5", "crop": [1500, 0, 0, 0]},
+    {"from": "p2:31", "to": "p2:36", "crop": [1500, 0, 0, 0], "tail": 0.3}]},
+  {"name": "zero-boxes", "hook": ["HOW MANY WAYS", "TO FILL {ZERO} BOXES?"],
+   "pieces": [
+    {"from": "p2:61", "to": "p2:66", "crop": [1920, 0, 0, 0], "tail": 0.3}]},
+  {"name": "staircase", "hook": ["WHY IS 2⁰", "EQUAL TO {1}?"],
+   "pieces": [
+    {"from": "p2:1", "to": "p2:5", "crop": [1500, 0, 0, 0]},
+    {"from": "p2:10", "to": "p2:10", "crop": [1760, 40, 40, 0], "tail": 0.0}]},
+  {"name": "knuth-no", "hook": ["0⁰ UNDEFINED?", "\"TEN THOUSAND", "TIMES {NO}\""],
+   "pieces": [
+    {"from": "p2:75", "to": "p2:78", "crop": [1760, 60, 60, 0], "tail": 0.3}]},
+  {"name": "two-paths", "hook": ["0⁰ CAN BE 1, 0,", "OR EVEN {2}"],
+   "pieces": [
+    {"from": "p2:82", "to": "p2:88", "crop": [1820, 50, 50, 0], "tail": 0.3}]}
+ ]
+}

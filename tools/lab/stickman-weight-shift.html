@@ -1,0 +1,63 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Stickman Weight Shift — Extended Acting</title>
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id="cv" width="1920" height="1080"></canvas>
+<script type="module">
+import { P } from '../../engine/stick.js';
+import { keys } from '../../engine/stickmove.js';
+import { hero, PAPER, INK } from '../../engine/hero.js';
+const g = document.getElementById('cv').getContext('2d'), H = 260, GY = 900, DUR = 10;
+let fontsReady = false;
+new FontFace('Archivo', 'url("../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => { document.fonts.add(f); fontsReady = true; }).catch(() => { fontsReady = true; });
+const d = n => n * Math.PI / 180;
+const pose = o => { const r = { ...P.stand }; for (const [key, value] of Object.entries(o)) r[key] = d(value); return r; };
+// Beat: notice → load → shift left → read the left side → shift right → react → settle.
+// Keys are named in the lab label; all limbs are deliberately asymmetric.
+const keysA = [
+  [0.00, pose({ lean: 0, head: 0, shL: -8, shR: 8, hipL: -4, hipR: 4 })],
+  [0.70, pose({ lean: 0, head: 0, shL: -8, shR: 8, hipL: -4, hipR: 4 })], // neutral hold
+  [1.15, pose({ lean: -7, head: 2, shL: -24, shR: 12, hipL: -12, hipR: 14, bob: 0.035 })], // anticipation/load
+  [1.85, pose({ lean: -15, head: 7, shL: -38, elL: 18, shR: 28, elR: 22, hipL: -20, hipR: 22, bob: 0.02 })], // left extreme
+  [2.55, pose({ lean: -11, head: 10, shL: -28, elL: 25, shR: 24, elR: 28, hipL: -15, hipR: 18, bob: 0.01 })], // left read
+  [3.20, pose({ lean: -11, head: 10, shL: -28, elL: 25, shR: 24, elR: 28, hipL: -15, hipR: 18, bob: 0.01 })], // hold for silhouette
+  [3.65, pose({ lean: 5, head: 2, shL: -8, elL: 16, shR: 20, elR: 18, hipL: -3, hipR: 7 })], // pass through
+  [4.25, pose({ lean: 14, head: -4, shL: 14, elL: 28, shR: 40, elR: 32, hipL: 6, hipR: -6, bob: 0.02 })], // right load
+  [4.95, pose({ lean: 17, head: -12, shL: 32, elL: 36, shR: 54, elR: 38, hipL: 14, hipR: -13, bob: 0.01 })], // right extreme
+  [5.65, pose({ lean: 13, head: -15, shL: 24, elL: 32, shR: 48, elR: 36, hipL: 10, hipR: -10 })], // right read
+  [6.35, pose({ lean: 13, head: -15, shL: 24, elL: 32, shR: 48, elR: 36, hipL: 10, hipR: -10 })], // hold
+  [6.85, pose({ lean: 3, head: -4, shL: -4, elL: 18, shR: 20, elR: 20, hipL: -3, hipR: 7 })], // recoil
+  [7.35, pose({ lean: -8, head: 18, shL: -22, elL: 22, shR: 18, elR: 30, hipL: -11, hipR: 13, bob: 0.015 })], // glance back
+  [8.10, pose({ lean: -3, head: 8, shL: -14, elL: 16, shR: 13, elR: 24, hipL: -7, hipR: 9 })],
+  [8.80, pose({ lean: 2, head: 2, shL: -10, elL: 13, shR: 11, elR: 17, hipL: -5, hipR: 6 })], // settle
+  [9.40, pose({ lean: 0, head: 0, shL: -8, elL: 10, shR: 8, elR: 10, hipL: -4, hipR: 4 })],
+  [10.00, pose({ lean: 0, head: 0, shL: -8, elL: 10, shR: 8, elR: 10, hipL: -4, hipR: 4 })],
+];
+const seg = (t,a,b) => t < a ? 0 : t > b ? 1 : (t-a)/(b-a);
+const smooth = k => k*k*(3-2*k);
+function hipX(t) {
+  const x0=960;
+  const left = 74*smooth(seg(t,0.8,2.0));
+  const right = 142*smooth(seg(t,3.35,4.8));
+  const back = 142*smooth(seg(t,5.9,7.0));
+  const settle = 74*smooth(seg(t,7.0,8.9));
+  return x0-left+right-back+settle;
+}
+function phase(t) {
+  if(t<0.8)return 'neutral hold'; if(t<2.2)return 'load → shift left'; if(t<3.35)return 'left hold / read';
+  if(t<5.0)return 'transfer → shift right'; if(t<6.4)return 'right hold / read'; if(t<7.4)return 'recoil / glance'; return 'settle';
+}
+function frame(t) {
+  t = Math.max(0, Math.min(DUR, t));
+  g.setTransform(1,0,0,1,0,0); g.fillStyle = PAPER; g.fillRect(0,0,1920,1080);
+  g.strokeStyle = 'rgba(34,48,60,.35)'; g.lineWidth = 5; g.beginPath(); g.moveTo(240,GY); g.lineTo(1680,GY); g.stroke();
+  // Contact markers make foot locking and weight transfer inspectable in the clip.
+  g.fillStyle='rgba(34,48,60,.22)'; for(const x of [960-74,960+68,960]) { g.beginPath(); g.arc(x,GY+2,7,0,7); g.fill(); }
+  const k = keys(keysA, t), x = hipX(t);
+  hero(g, 'C', x, 0, k, { h:H, dir:1, hip:[x, GY-0.4*H + (k.bob||0)*H], feet:[[x-42,GY],[x+42,GY]], arm:0.94, eye:{look:t<3.4?[-1,0]:t<6.5?[1,0]:[0,0]}, wind:0.2, t });
+  g.fillStyle=INK; g.font='700 42px Archivo,sans-serif'; g.fillText('EXTENDED ACTING LAB · WEIGHT SHIFT',70,85);
+  g.font='600 30px Archivo,sans-serif'; g.fillText(`${t.toFixed(2)} s · ${phase(t)} · arm scale 0.94`,70,130);
+  g.font='600 25px Archivo,sans-serif'; g.fillStyle='rgba(34,48,60,.62)'; g.fillText('contact dots · asymmetric keys · hold / recoil / settle',70,1035);
+}
+window.__intro={get ready(){return fontsReady},still:frame,frame,DUR};
+</script>

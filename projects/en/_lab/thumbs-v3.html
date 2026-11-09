@@ -1,0 +1,239 @@
+<!doctype html><meta charset="utf-8">
+<title>en lab — thumbnail vẽ nét v3 (3 phong cách × 3 bài)</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Thumbnail v3 cho 3 bài đã đăng — bỏ ảnh AI (người dùng 2026-10-29: "audience sợ nội dung AI"), mascot vẽ nét _kit/mascot.js
+// đo theo MẶT: đường kính mặt ~40% cao khung (đọc biểu cảm ở 168 px), bán thân / cận mặt tuỳ cảnh (người dùng 10-29), nền có chất liệu thay vì một màu + tia ("đơn điệu").
+// Ba phong cách dùng chung cho cả ba bài để A/B so được phong cách nào thắng:
+//   A bảng phấn (Caveat) · B truyện tranh chia chéo, chấm halftone (Bangers) · C một vật dưới đèn chiếu trên bàn gỗ (Archivo)
+// t = bài × 3 + kiểu + 0.5: 0–2 zero-power · 3–5 fifty-percent · 6–8 math-30k. Tất định: hash(i), không random.
+import { bindMascot, mascot, INK } from '../_kit/mascot.js';
+const g = document.getElementById('cv').getContext('2d'), W = 1920, H = 1080;
+const hash = i => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+let ready = false;
+const FONTS = [['Archivo', 'Archivo[wdth,wght].ttf', '100 900'], ['Caveat', 'Caveat[wght].ttf', '400 700'], ['Bangers', 'Bangers-Regular.ttf', '400']];
+Promise.all(FONTS.map(([n, f, w]) => new FontFace(n, `url("../../../assets/fonts/${f}")`, { weight: w }).load().then(ff => document.fonts.add(ff))))
+  .then(() => { bindMascot(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+// ---------- chữ ----------
+function txt(s, x, y, px, o = {}) { g.save(); g.font = `${o.w ?? 900} ${px}px ${o.font ?? 'Archivo'}, sans-serif`; g.textAlign = o.align ?? 'center'; g.textBaseline = 'middle';
+  if (o.rot) { g.translate(x, y); g.rotate(o.rot); g.translate(-x, -y); }
+  if (o.shadow) { g.fillStyle = o.shadow; g.fillText(s, x + px * 0.06, y + px * 0.07); }
+  if (o.stroke !== null) { g.lineJoin = 'round'; g.strokeStyle = o.stroke ?? INK; g.lineWidth = px * (o.sw ?? 0.16); g.strokeText(s, x, y); }
+  g.fillStyle = o.fill ?? '#FFF'; g.fillText(s, x, y); const w = g.measureText(s).width; g.restore(); return w; }
+const CH = 'rgba(246,244,236,0.93)', CY = '#F6D860';
+const chalk = (s, x, y, px, o = {}) => txt(s, x, y, px, { font: 'Caveat', w: 700, stroke: null, fill: CH, align: 'left', ...o });
+/** cơ số + số mũ (chữ phấn hoặc chữ khối); trả bề rộng */
+function pow(b, e, x, y, px, f = chalk, o = {}) { const w = f(b, x, y, px, { align: 'left', ...o }); f(e, x + w + px * 0.02, y - px * 0.36, px * 0.58, { align: 'left', ...o }); return w + px * 0.36; }
+function box(x, y, w, h, fill, lw = 10, rr = 22) { g.save(); g.fillStyle = fill; g.strokeStyle = INK; g.lineWidth = lw; g.beginPath(); g.roundRect(x, y, w, h, rr); g.fill(); if (lw) g.stroke(); g.restore(); }
+
+// ---------- nền ----------
+function board() { g.fillStyle = '#26413A'; g.fillRect(0, 0, W, H);
+  for (let i = 0; i < 46; i++) { g.fillStyle = `rgba(255,255,255,${0.02 + 0.03 * hash(i + 7)})`; g.beginPath(); g.ellipse(hash(i) * W, hash(i + 50) * H, 120 + 260 * hash(i + 90), 30 + 60 * hash(i + 130), hash(i + 170) * 3, 0, 7); g.fill(); }   // vệt lau
+  g.fillStyle = '#8A5A34'; for (const [x, y, w, h] of [[0, 0, W, 34], [0, H - 34, W, 34], [0, 0, 34, H], [W - 34, 0, 34, H]]) g.fillRect(x, y, w, h);
+  g.strokeStyle = '#5E3B20'; g.lineWidth = 6; g.strokeRect(34, 34, W - 68, H - 68); }
+function chalkGrain(n = 2600) { g.save(); g.fillStyle = 'rgba(38,65,58,0.55)'; for (let i = 0; i < n; i++) { g.beginPath(); g.arc(40 + hash(i * 3 + 1) * (W - 80), 40 + hash(i * 3 + 2) * (H - 80), 1.2 + 1.8 * hash(i * 3), 0, 7); g.fill(); } g.restore(); }
+function chalkArrow(x0, y0, x1, y1, c = CH, lw = 7) { g.save(); g.strokeStyle = c; g.lineWidth = lw; g.lineCap = 'round'; const mx = (x0 + x1) / 2 + (y1 - y0) * 0.25, my = (y0 + y1) / 2 - (x1 - x0) * 0.25;
+  g.beginPath(); g.moveTo(x0, y0); g.quadraticCurveTo(mx, my, x1, y1); g.stroke(); const a = Math.atan2(y1 - my, x1 - mx);
+  for (const s of [-1, 1]) { g.beginPath(); g.moveTo(x1, y1); g.lineTo(x1 - 30 * Math.cos(a + s * 0.5), y1 - 30 * Math.sin(a + s * 0.5)); g.stroke(); } g.restore(); }
+function chalkCircle(x, y, rx, ry, c = CY, lw = 8) { g.save(); g.strokeStyle = c; g.lineWidth = lw; g.beginPath(); g.ellipse(x, y, rx, ry, -0.08, 0.3, 6.6); g.stroke(); g.restore(); }
+
+/** truyện tranh: hai ô chia chéo (khe trắng), chấm halftone + tia tốc độ */
+function comic(cL, cR, dL, dR, tilt = 140) { const P = (k) => { const p = new Path2D(); if (!k) { p.moveTo(0, 0); p.lineTo(W / 2 + tilt - 14, 0); p.lineTo(W / 2 - tilt - 14, H); p.lineTo(0, H); } else { p.moveTo(W / 2 + tilt + 14, 0); p.lineTo(W, 0); p.lineTo(W, H); p.lineTo(W / 2 - tilt + 14, H); } p.closePath(); return p; };
+  g.fillStyle = '#FFF'; g.fillRect(0, 0, W, H);
+  [[cL, dL], [cR, dR]].forEach(([c, d], k) => { const p = P(k), cx = k ? 1500 : 420; g.save(); g.clip(p); g.fillStyle = c; g.fillRect(0, 0, W, H);
+    g.strokeStyle = 'rgba(255,255,255,0.12)'; g.lineWidth = 10; for (let i = 0; i < 28; i++) { const a = i / 28 * 6.283; g.beginPath(); g.moveTo(cx + Math.cos(a) * 260, 520 + Math.sin(a) * 260); g.lineTo(cx + Math.cos(a) * 1400, 520 + Math.sin(a) * 1400); g.stroke(); }
+    g.fillStyle = d; for (let y = 14; y < H; y += 30) for (let x = 14 + (y / 30 % 2) * 15; x < W; x += 30) { const rr = 2 + 8 * Math.min(1, Math.hypot(x - cx, y - 520) / 1100); g.beginPath(); g.arc(x, y, rr, 0, 7); g.fill(); }
+    g.restore(); g.save(); g.lineWidth = 12; g.strokeStyle = INK; g.stroke(p); g.restore(); }); }
+/** đèn chiếu: tường tối, quầng sáng, bàn gỗ, viền tối */
+function spot(cx = 800, cy = 480, wall = '#1D2333') { g.fillStyle = wall; g.fillRect(0, 0, W, H);
+  let gr = g.createRadialGradient(cx, cy - 80, 40, cx, cy, 900); gr.addColorStop(0, 'rgba(255,236,190,0.55)'); gr.addColorStop(0.55, 'rgba(255,236,190,0.12)'); gr.addColorStop(1, 'rgba(255,236,190,0)'); g.fillStyle = gr; g.fillRect(0, 0, W, H);
+  g.fillStyle = '#6E4428'; g.fillRect(0, 800, W, 280); g.strokeStyle = 'rgba(40,20,8,0.35)'; g.lineWidth = 4;
+  for (let i = 0; i < 9; i++) { const y = 830 + i * 30 + 8 * hash(i); g.beginPath(); g.moveTo(0, y); g.bezierCurveTo(500, y + 12 * hash(i + 3), 1200, y - 14 * hash(i + 5), W, y + 6); g.stroke(); }
+  gr = g.createRadialGradient(cx, 900, 30, cx, 900, 800); gr.addColorStop(0, 'rgba(255,220,160,0.35)'); gr.addColorStop(1, 'rgba(255,220,160,0)'); g.fillStyle = gr; g.fillRect(0, 800, W, 280);
+  g.fillStyle = '#3E2716'; g.fillRect(0, 795, W, 10); }
+function vignette() { const gr = g.createRadialGradient(W / 2, H / 2, 500, W / 2, H / 2, 1250); gr.addColorStop(0, 'rgba(0,0,0,0)'); gr.addColorStop(1, 'rgba(0,0,0,0.6)'); g.fillStyle = gr; g.fillRect(0, 0, W, H); }
+
+/** mascot bán thân / cận mặt theo ĐẦU: tâm đầu (x, hy), bán kính r — thân tràn mép dưới. Luật (người dùng 10-29, đo ở 168 px):
+ *  đường kính mặt ≈ 40% cao khung (r ≈ 210) để biểu cảm đọc được trên điện thoại; mặt ở nửa trên (phép thử TV), né góc phải dưới. */
+const bust = (x, hy, r, o) => mascot(x, hy + r / 0.19 - r * 1.38, r / 0.19, o);
+
+// ---------- đạo cụ ----------
+function calc(x, y, w, body, scr, s, col, tag, tf = 'Bangers') { const h = w * 1.3; box(x, y, w, h, body, 10, 28); box(x + w * 0.1, y + w * 0.1, w * 0.8, w * 0.42, scr, 8, 12);
+  txt(s, x + w / 2, y + w * 0.32, s.length > 2 ? w * 0.17 : w * 0.3, { fill: col, stroke: null, font: 'Archivo' });
+  for (let i = 0; i < 6; i++) box(x + w * (0.12 + (i % 3) * 0.27), y + w * (0.68 + Math.floor(i / 3) * 0.24), w * 0.22, w * 0.16, '#E8E4DA', 5, 8);
+  if (tag) txt(tag, x + w / 2, y - w * 0.14, w * 0.17, { font: tf, w: 400, fill: '#FFF', sw: 0.18 }); }
+function laptop(x, y, w) { const h = w * 0.62; box(x, y, w, h, '#2B2F38', 10, 18); box(x + w * 0.05, y + w * 0.05, w * 0.9, h - w * 0.1, '#0F1720', 0, 6);
+  g.save(); g.font = `500 ${w * 0.13}px "IBM Plex Mono", monospace`; g.textBaseline = 'middle'; g.fillStyle = '#7FD08A'; g.fillText('0 ** 0', x + w * 0.1, y + h * 0.27); g.fillStyle = '#FFF'; g.font = `800 ${w * 0.32}px Archivo`; g.fillText('1', x + w * 0.1, y + h * 0.64); g.restore();
+  g.save(); g.fillStyle = '#9AA1AE'; g.strokeStyle = INK; g.lineWidth = 10; g.beginPath(); g.moveTo(x - w * 0.08, y + h); g.lineTo(x + w * 1.08, y + h); g.lineTo(x + w * 1.02, y + h + w * 0.07); g.lineTo(x - w * 0.02, y + h + w * 0.07); g.closePath(); g.fill(); g.stroke(); g.restore(); }
+function cubeStack(x, yb, n, s, glow) { for (let i = 0; i < n; i++) { const cx = x + (i % 2) * s, cy = yb - (Math.floor(i / 2) + 1) * s;
+  g.save(); g.fillStyle = glow ? '#F6D860' : '#5DA9E9'; g.strokeStyle = INK; g.lineWidth = 8; g.fillRect(cx, cy, s, s); g.strokeRect(cx, cy, s, s);
+  g.fillStyle = glow ? '#E8B33A' : '#3E86C7'; g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + s * 0.25, cy - s * 0.25); g.lineTo(cx + s * 1.25, cy - s * 0.25); g.lineTo(cx + s, cy); g.closePath(); g.fill(); g.stroke();
+  g.beginPath(); g.moveTo(cx + s, cy); g.lineTo(cx + s * 1.25, cy - s * 0.25); g.lineTo(cx + s * 1.25, cy + s * 0.75); g.lineTo(cx + s, cy + s); g.closePath(); g.fill(); g.stroke(); g.restore(); } }
+function coin(x, y, r, tilt = 1, face = '') { g.save(); g.fillStyle = '#E8B33A'; g.strokeStyle = INK; g.lineWidth = 9; g.beginPath(); g.ellipse(x, y, r, r * tilt, 0, 0, 7); g.fill(); g.stroke();
+  g.strokeStyle = '#B07A1E'; g.lineWidth = 7; g.beginPath(); g.ellipse(x, y, r * 0.78, r * 0.78 * tilt, 0, 0, 7); g.stroke(); if (face) txt(face, x, y + 4, r * 0.9 * Math.max(tilt, 0.4), { fill: '#B07A1E', stroke: null }); g.restore(); }
+function bigHand(x, y, s, flip = 1) { g.save(); g.translate(x, y); g.scale(s * flip, s); g.fillStyle = '#FBE3CC'; g.strokeStyle = INK; g.lineWidth = 10 / s;   // bàn tay úp (nhìn ngang), cổ tay blouse
+  g.beginPath(); g.moveTo(-160, 40); g.quadraticCurveTo(-170, -50, -60, -70); g.lineTo(150, -60); g.quadraticCurveTo(205, -45, 200, -10); g.quadraticCurveTo(195, 30, 140, 30); g.lineTo(60, 40); g.closePath(); g.fill(); g.stroke();
+  g.lineWidth = 6 / s; for (const yy of [-35, -5]) { g.beginPath(); g.moveTo(60, yy); g.lineTo(170, yy + 4); g.stroke(); }
+  g.fillStyle = '#FAFAF7'; g.lineWidth = 10 / s; g.beginPath(); g.roundRect(-330, -80, 190, 130, 20); g.fill(); g.stroke(); g.restore(); }
+function testCard(x, y, w, rot) { g.save(); g.translate(x, y); g.rotate(rot); const h = w * 0.36; box(-w / 2, -h / 2, w, h, '#FBFBF8', 10, 30);
+  box(-w * 0.12, -h * 0.25, w * 0.42, h * 0.5, '#EDE8E0', 7, 10); g.fillStyle = '#D7263D'; for (const k of [0.0, 0.17]) g.fillRect(-w * 0.12 + w * (0.1 + k), -h * 0.2, w * 0.035, h * 0.4);
+  txt('C', -w * 0.12 + w * 0.118, h * 0.36, h * 0.15, { fill: INK, stroke: null }); txt('T', -w * 0.12 + w * 0.288, h * 0.36, h * 0.15, { fill: INK, stroke: null });
+  g.fillStyle = '#EDE8E0'; g.strokeStyle = INK; g.lineWidth = 7; g.beginPath(); g.arc(-w * 0.34, 0, h * 0.2, 0, 7); g.fill(); g.stroke(); g.restore(); }
+function wolfBone(x, y, L, rot) { g.save(); g.translate(x, y); g.rotate(rot); g.fillStyle = '#E9DCBC'; g.strokeStyle = INK; g.lineWidth = 10;
+  g.beginPath(); g.roundRect(-L / 2, -38, L, 76, 38); g.fill(); g.stroke(); for (const s of [-1, 1]) for (const d of [-1, 1]) { g.beginPath(); g.arc(s * L / 2, d * 40, 52, 0, 7); g.fill(); g.stroke(); }
+  g.fillRect(-L / 2 + 10, -36, L - 20, 72);
+  g.strokeStyle = '#5A4632'; g.lineWidth = 7; g.lineCap = 'round'; let x0 = -L / 2 + 90;
+  for (let gI = 0; gI < 6; gI++) { for (let i = 0; i < 5; i++) { g.beginPath(); g.moveTo(x0, -26); g.lineTo(x0 + 4, 26); g.stroke(); x0 += 20; } x0 += 26; }
+  g.restore(); }
+function phone(x, y, w, rot = 0) { g.save(); g.translate(x, y); g.rotate(rot); const h = w * 2; box(-w / 2, -h / 2, w, h, '#22252C', 10, w * 0.14); box(-w * 0.42, -h * 0.44, w * 0.84, h * 0.88, '#F4F6FA', 0, w * 0.08);
+  const K = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '', '0', '']; K.forEach((k, i) => { if (!k) return; const cx = (-1 + (i % 3)) * w * 0.27, cy = -h * 0.22 + Math.floor(i / 3) * h * 0.17;
+    g.fillStyle = '#DDE3EE'; g.beginPath(); g.arc(cx, cy, w * 0.11, 0, 7); g.fill(); txt(k, cx, cy + 3, w * 0.14, { fill: INK, stroke: null }); }); g.restore(); }
+function ledger(x, y, w, h, rot, sepia = true) { g.save(); g.translate(x, y); g.rotate(rot); box(-w / 2, -h / 2, w, h, sepia ? '#EBDDBB' : '#FFF', 10, 10);
+  g.strokeStyle = 'rgba(120,80,40,0.35)'; g.lineWidth = 3; for (let i = 1; i < 6; i++) { g.beginPath(); g.moveTo(-w / 2 + 20, -h / 2 + i * h / 6); g.lineTo(w / 2 - 20, -h / 2 + i * h / 6); g.stroke(); }
+  txt('0 1 2 3 4', 0, -h * 0.2, h * 0.2, { fill: '#3A2A1C', stroke: null, font: 'Archivo' }); txt('5 6 7 8 9', 0, h * 0.2, h * 0.2, { fill: '#3A2A1C', stroke: null }); g.restore(); }
+function stamp(s, x, y, px, rot, col = '#E23A3A') { g.save(); g.translate(x, y); g.rotate(rot); g.font = `400 ${px}px Bangers`; const w = g.measureText(s).width;
+  g.globalAlpha = 0.92; g.strokeStyle = col; g.lineWidth = px * 0.09; g.beginPath(); g.roundRect(-w / 2 - px * 0.25, -px * 0.62, w + px * 0.5, px * 1.18, px * 0.12); g.stroke();
+  g.fillStyle = col; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(s, 0, px * 0.04); g.restore(); }
+
+// ================= zero-power =================
+function zA() { board();
+  pow('0', '0', 90, 190, 300, chalk, { fill: CY }); chalk('= ?', 380, 190, 260);
+  const w = pow('2', '1', 110, 500, 190); chalk('= 2', 110 + w + 20, 500, 190);
+  chalkArrow(560, 560, 560, 690, CH, 9); chalk('÷2', 610, 625, 120);
+  const w2 = pow('2', '0', 110, 770, 190, chalk, { fill: CY }); chalk('=', 110 + w2 + 20, 770, 190, { fill: CY }); chalk('1', 110 + w2 + 150, 770, 190, { fill: CY }); chalkCircle(110 + w2 + 182, 775, 80, 95);
+  chalkGrain(); bust(1500, 500, 215, { mood: 'think', mouth: 'o', arms: 'chalk', flip: true }); }
+function zB() { comic('#2F6FC0', '#C7402F', 'rgba(255,255,255,0.13)', 'rgba(0,0,0,0.13)');
+  laptop(70, 300, 560); calc(1340, 300, 400, '#E8E2D2', '#CFE3C8', 'ERROR', '#B3262C', null);
+  txt('PYTHON', 290, 860, 130, { font: 'Bangers', w: 400, fill: '#FFF', sw: 0.18, shadow: INK, rot: -0.05 }); txt('TI-84', 1620, 880, 130, { font: 'Bangers', w: 400, fill: '#FFF', sw: 0.18, shadow: INK, rot: 0.05 });
+  g.save(); g.translate(960, 120); g.fillStyle = '#F6D860'; g.strokeStyle = INK; g.lineWidth = 10; g.beginPath(); g.roundRect(-250, -90, 500, 180, 30); g.fill(); g.stroke(); g.restore();
+  pow('0', '0', 815, 130, 165, (s, x, y, px, o) => txt(s, x, y, px, { font: 'Bangers', w: 400, fill: INK, stroke: null, ...o })); txt('= ?', 1070, 130, 140, { fill: INK, stroke: null });
+  bust(960, 560, 210, { mood: 'confused', mouth: 'wavy', arms: 'shrug', sweat: true }); }
+function zC() { spot(620, 470);
+  [[8, 90], [4, 390], [2, 640], [1, 960]].forEach(([n, x], i) => { cubeStack(x, 800, n, 105, i === 3); });
+  ['2³', '2²', '2¹', '2⁰'].forEach((s, i) => txt(s, [195, 495, 745, 1010][i], 870, 80, { fill: i === 3 ? '#F6D860' : '#FFF', sw: 0.14 }));
+  txt('WHY', 250, 150, 165, { fill: '#FFF' }); txt('NOT 0?', 870, 150, 180, { fill: '#F6D860' }); vignette();
+  bust(1560, 500, 215, { mood: 'shock', mouth: 'wide', arms: 'point', flip: true }); }
+
+// ================= fifty-percent =================
+function fA() { board();
+  chalk('50%', 110, 250, 330, { fill: CY }); chalkCircle(330, 255, 290, 170);
+  chalkArrow(640, 190, 820, 140, CH, 8); chalk('the coin?', 840, 140, 120);
+  chalkArrow(640, 300, 820, 350, CH, 8); chalk('you?', 840, 360, 130);
+  chalk('of WHAT?', 110, 660, 230);
+  chalkGrain(); bust(1560, 520, 215, { mood: 'confused', mouth: 'wavy', arms: 'think', sweat: true }); }
+function fB() { comic('#2E8B57', '#7A3FB0', 'rgba(255,255,255,0.13)', 'rgba(255,255,255,0.1)', 110);
+  txt('50%', 400, 170, 220, { font: 'Bangers', w: 400, fill: '#F6D860', sw: 0.14, shadow: INK });
+  coin(380, 520, 170, 0.35, ''); g.save(); g.strokeStyle = '#FFF'; g.lineWidth = 12; g.lineCap = 'round'; for (const [a, b] of [[-240, -80], [-280, 0], [-240, 80]]) { g.beginPath(); g.moveTo(380 + a, 520 + b); g.lineTo(380 + a - 100, 520 + b); g.stroke(); } g.restore();
+  txt('IN THE AIR', 380, 900, 110, { font: 'Bangers', w: 400, sw: 0.18, shadow: INK, rot: -0.04 });
+  txt('50%??', 1560, 170, 210, { font: 'Bangers', w: 400, fill: '#FF5A5A', sw: 0.14, shadow: INK });
+  coin(1560, 600, 150, 0.32); bigHand(1580, 520, 1.25, -1);
+  txt('LANDED', 1580, 900, 120, { font: 'Bangers', w: 400, sw: 0.18, shadow: INK, rot: 0.04 });
+  bust(960, 560, 210, { mood: 'smug', mouth: 'smirk', arms: 'pockets' }); }
+function fC() { spot(640, 460, '#232028');
+  testCard(600, 600, 900, -0.06);
+  g.save(); g.translate(450, 170); g.rotate(-0.06); box(-330, -70, 660, 140, '#FFF', 9, 18); txt('99% ACCURATE', 0, 3, 76, { fill: INK, stroke: null }); g.restore();
+  txt('2%', 1060, 330, 290, { fill: '#F6D860' }); vignette();
+  bust(1600, 500, 215, { mood: 'shock', mouth: 'wide', arms: 'point', flip: true, sweat: true }); }
+
+// ================= math-30k =================
+function mA() { board();
+  chalk('30,000 YEARS', 90, 160, 210, { fill: CY });
+  wolfBone(250, 520, 280, -0.12); chalkArrow(430, 520, 540, 520, CH, 9);
+  chalk('0123', 760, 480, 170, { align: 'center' }); stamp('BANNED', 760, 580, 95, -0.12); chalkArrow(960, 520, 1060, 520, CH, 9);
+  phone(1170, 520, 150, 0.06);
+  chalk('bone', 250, 700, 90, { align: 'center' }); chalk('1299', 760, 700, 90, { align: 'center' }); chalk('now', 1170, 760, 90, { align: 'center' });
+  chalkGrain(); bust(1640, 540, 210, { mood: 'happy', mouth: 'grin', arms: 'point', flip: true }); }
+function mB() { comic('#A7713A', '#2F7DD1', 'rgba(60,30,10,0.16)', 'rgba(255,255,255,0.12)');
+  ledger(400, 560, 620, 460, -0.05); stamp('BANNED', 410, 560, 150, -0.2);
+  txt('1299', 380, 170, 180, { font: 'Bangers', w: 400, fill: '#FFF', sw: 0.16, shadow: INK, rot: -0.04 });
+  phone(1560, 580, 260, 0.08);
+  txt('NOW', 1580, 160, 160, { font: 'Bangers', w: 400, fill: '#F6D860', sw: 0.16, shadow: INK, rot: 0.04 });
+  bust(975, 600, 210, { mood: 'shock', mouth: 'wide', arms: 'shrug' }); }
+function mC() { spot(620, 470, '#1F1C24');
+  wolfBone(640, 640, 940, -0.07);
+  txt('THE FIRST', 620, 160, 150, { fill: '#FFF' }); txt('MATH?', 620, 340, 210, { fill: '#F6D860' }); vignette();
+  bust(1580, 500, 215, { mood: 'shock', mouth: 'o', arms: 'point', flip: true }); }
+
+// ================= pi + solid-geometry (thêm 10-29: 2 bản mỗi bài để A/B với thumbnail đang chạy) =================
+function chalkLine(pts, c = CH, lw = 8, close = false) { g.save(); g.strokeStyle = c; g.lineWidth = lw; g.lineCap = g.lineJoin = 'round'; g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); if (close) g.closePath(); g.stroke(); g.restore(); }
+function poly(pts, fill) { g.fillStyle = fill; g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath(); g.fill(); }
+/** chóp đáy vuông (nhìn chếch) / hộp cùng đáy cùng cao — nét phấn, mặt tô mờ */
+function pyramid(x, yb, s, col, dark) { const A = [x - s / 2, yb], B = [x + s / 2, yb], C = [x + s * 0.78, yb - s * 0.32], D = [x - s * 0.22, yb - s * 0.32], P = [x + s * 0.14, yb - s * 1.05];
+  poly([A, B, P], col); poly([B, C, P], dark); chalkLine([D, P], 'rgba(246,244,236,0.35)', 5); chalkLine([A, D, C], 'rgba(246,244,236,0.35)', 5);
+  chalkLine([A, B, C], CH, 8); chalkLine([A, P, B], CH, 8); chalkLine([C, P], CH, 8); }
+function boxShape(x, yb, s, col, dark) { const h = s * 1.05, A = [x - s / 2, yb], B = [x + s / 2, yb], C = [x + s * 0.78, yb - s * 0.32];
+  poly([A, B, [B[0], yb - h], [A[0], yb - h]], col); poly([B, C, [C[0], C[1] - h], [B[0], yb - h]], dark);
+  chalkLine([A, B, C, [C[0], C[1] - h], [C[0] - s, C[1] - h], [A[0], yb - h]], CH, 8, true); chalkLine([[A[0], yb - h], [B[0], yb - h], [C[0], C[1] - h]], CH, 8); chalkLine([B, [B[0], yb - h]], CH, 8); }
+function globe(cx, cy, r) { g.save(); g.fillStyle = '#3B82C4'; g.beginPath(); g.arc(cx, cy, r, 0, 7); g.fill(); g.clip();
+  g.fillStyle = '#5DB36A'; for (const [dx, dy, rx, ry, a] of [[-0.45, -0.35, 0.32, 0.22, 0.4], [0.35, -0.5, 0.28, 0.16, -0.3], [-0.2, 0.45, 0.22, 0.3, 0.2], [0.5, 0.3, 0.2, 0.26, 0.6]]) { g.beginPath(); g.ellipse(cx + dx * r, cy + dy * r, rx * r, ry * r, a, 0, 7); g.fill(); }
+  g.strokeStyle = 'rgba(255,255,255,0.35)'; g.lineWidth = 4; for (const k of [-0.6, 0.6]) { g.beginPath(); g.ellipse(cx, cy + k * r, r * Math.sqrt(1 - k * k), r * 0.26 * Math.sqrt(1 - k * k), 0, 0, 7); g.stroke(); }
+  g.restore(); g.save(); g.strokeStyle = INK; g.lineWidth = 10; g.beginPath(); g.arc(cx, cy, r, 0, 7); g.stroke();
+  g.strokeStyle = '#F6D860'; g.lineWidth = 14; g.beginPath(); g.ellipse(cx, cy, r, r * 0.26, 0, 0, 7); g.stroke();                       // vòng tròn = xích đạo
+  g.strokeStyle = '#FF5A5A'; g.lineWidth = 16; g.setLineDash([34, 20]); g.beginPath(); g.arc(cx, cy, r + 2, Math.PI, 2 * Math.PI); g.stroke(); g.setLineDash([]);   // "đường kính" đi qua cực
+  g.fillStyle = '#FFF'; g.strokeStyle = INK; g.lineWidth = 6; g.beginPath(); g.arc(cx, cy - r, 16, 0, 7); g.fill(); g.stroke(); g.restore(); }
+/** phân số xếp chồng (không dựa vào glyph ⅔ của font) */
+function frac(n, d, x, y, px, o = {}) { txt(n, x, y - px * 0.55, px, o); txt(d, x, y + px * 0.55, px, o); g.save(); g.lineCap = 'round'; g.strokeStyle = INK; g.lineWidth = px * 0.16 + 10; g.beginPath(); g.moveTo(x - px * 0.42, y); g.lineTo(x + px * 0.42, y); g.stroke(); g.strokeStyle = o.fill ?? '#FFF'; g.lineWidth = px * 0.16; g.stroke(); g.restore(); }
+
+// pi A — bảng phấn: lăn vòng tròn ra thẳng = 3 đường kính + một mẩu thừa; "WHO CHOSE 3.14?" (SCRIPT: "Nobody chose this number")
+function pA() { board();
+  chalk('WHO CHOSE', 90, 160, 175); chalk('3.14?', 90, 345, 240, { fill: CY });
+  const d = 270, cy = 640, cx = 240; g.save(); g.strokeStyle = CH; g.lineWidth = 13; g.beginPath(); g.arc(cx, cy, d / 2, 0, 7); g.stroke(); g.restore();
+  chalkLine([[cx - d / 2, cy], [cx + d / 2, cy]], CY, 12); chalk('d', cx, cy - 55, 100, { align: 'center', fill: CY });
+  const yb = 900, x0 = 90; chalkLine([[x0, yb], [x0 + Math.PI * d, yb]], CH, 14);
+  for (let i = 0; i <= 3; i++) chalkLine([[x0 + i * d, yb - 26], [x0 + i * d, yb + 26]], CH, 8);
+  for (let i = 0; i < 3; i++) chalk('d', x0 + i * d + d / 2, yb - 60, 100, { align: 'center', fill: CY });
+  chalkCircle(x0 + 3 * d + 19, yb, 62, 48, '#FF7A6B', 10); chalk('+0.14…?', x0 + 3 * d + 60, yb - 175, 120, { align: 'center', fill: '#FF7A6B' });
+  chalkGrain(); bust(1580, 520, 215, { mood: 'confused', mouth: 'wavy', arms: 'think', flip: true, sweat: true }); }
+// pi B — truyện tranh: vòng tròn phẳng 3.14 vs vòng tròn trên quả cầu (xích đạo, đường kính qua cực) = 2 (SCRIPT ACT FOUR)
+function pB() { comic('#2E8B57', '#1F3E7A', 'rgba(255,255,255,0.12)', 'rgba(255,255,255,0.1)', 110);
+  txt('3.14', 380, 170, 210, { font: 'Bangers', w: 400, fill: '#F6D860', sw: 0.14, shadow: INK, rot: -0.04 });
+  g.save(); g.fillStyle = '#FFF'; g.strokeStyle = INK; g.lineWidth = 12; g.beginPath(); g.arc(390, 580, 200, 0, 7); g.fill(); g.stroke();
+  g.strokeStyle = '#F6D860'; g.lineWidth = 16; g.beginPath(); g.moveTo(190, 580); g.lineTo(590, 580); g.stroke(); g.restore();
+  txt('FLAT', 380, 900, 120, { font: 'Bangers', w: 400, sw: 0.18, shadow: INK, rot: -0.04 });
+  txt('= 2?!', 1560, 170, 210, { font: 'Bangers', w: 400, fill: '#FF5A5A', sw: 0.14, shadow: INK, rot: 0.04 });
+  globe(1540, 600, 240);
+  txt('GLOBE', 1500, 920, 120, { font: 'Bangers', w: 400, sw: 0.18, shadow: INK, rot: 0.04 });
+  bust(960, 570, 210, { mood: 'shock', mouth: 'wide', arms: 'shrug', sweat: true }); }
+// solid A — bảng phấn: ba chóp = một hộp, "WHY EXACTLY 3?"
+function sA() { board();
+  chalk('WHY', 90, 150, 170); chalk('EXACTLY 3?', 90, 330, 210, { fill: CY });
+  const yb = 900; [[150, '#E0874E', '#B5652F'], [420, '#5DA9E9', '#3E86C7'], [690, '#8BC46A', '#669F48']].forEach(([x, c, k]) => pyramid(x, yb, 230, c, k));
+  chalk('=', 1000, yb - 130, 240, { align: 'center', fill: CY }); boxShape(1190, yb, 230, 'rgba(246,216,96,0.55)', 'rgba(232,179,58,0.6)');
+  chalkGrain(); bust(1640, 520, 210, { mood: 'confused', mouth: 'o', arms: 'think', flip: true, sweat: true }); }
+// solid C — đèn chiếu: quả cầu vừa khít ống trụ thuỷ tinh, "⅔" (SCRIPT: Archimedes, khắc lên mộ)
+function sC() { spot(620, 470, '#1E2230');
+  const cx = 600, R = 220, top = 340, bot = top + 2 * R, ry = R * 0.24;
+  g.save(); g.fillStyle = 'rgba(200,225,255,0.10)'; g.fillRect(cx - R, top, 2 * R, 2 * R); g.strokeStyle = 'rgba(220,235,255,0.55)'; g.lineWidth = 6; g.beginPath(); g.ellipse(cx, top, R, ry, 0, Math.PI, 2 * Math.PI); g.stroke(); g.restore();
+  const gr = g.createRadialGradient(cx - R * 0.35, top + R * 0.6, 20, cx, top + R, R); gr.addColorStop(0, '#FFB27A'); gr.addColorStop(0.6, '#E8643A'); gr.addColorStop(1, '#A8361C');
+  g.save(); g.fillStyle = gr; g.strokeStyle = INK; g.lineWidth = 10; g.beginPath(); g.arc(cx, top + R, R - 4, 0, 7); g.fill(); g.stroke(); g.restore();
+  g.save(); g.fillStyle = 'rgba(200,225,255,0.14)'; g.beginPath(); g.ellipse(cx, bot, R, ry, 0, 0, 7); g.fill(); g.strokeStyle = INK; g.lineWidth = 10;
+  g.beginPath(); g.moveTo(cx - R, top); g.lineTo(cx - R, bot); g.moveTo(cx + R, top); g.lineTo(cx + R, bot); g.stroke();
+  g.beginPath(); g.ellipse(cx, bot, R, ry, 0, 0, Math.PI); g.stroke(); g.beginPath(); g.ellipse(cx, top, R, ry, 0, 0, Math.PI); g.stroke();
+  g.strokeStyle = 'rgba(255,255,255,0.5)'; g.lineWidth = 12; g.beginPath(); g.moveTo(cx + R * 0.72, top + 40); g.lineTo(cx + R * 0.72, bot - 30); g.stroke(); g.restore();
+  frac('2', '3', 1060, 520, 240, { fill: '#F6D860' }); txt('ALWAYS?', 620, 150, 140, { fill: '#FFF' }); vignette();
+  bust(1620, 500, 215, { mood: 'shock', mouth: 'wide', arms: 'shrug', sweat: true }); }
+
+// ================= logarithm (bài thí điểm mascot vẽ nét, 10-29) — khoảnh khắc cận mặt sốc "9 years and 2 days" =================
+function coins(x, yb, n, r) { for (let i = 0; i < n; i++) coin(x, yb - i * r * 0.22, r, 0.32); }
+function gold72(x, y, px) { g.save(); g.font = `900 ${px}px Archivo`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.lineJoin = 'round';
+  for (let i = 18; i > 0; i -= 2) { g.fillStyle = '#9A5A10'; g.fillText('72', x + i * px / 300, y + i * px / 300); }
+  g.strokeStyle = INK; g.lineWidth = px * 0.05; g.strokeText('72', x, y); const gr = g.createLinearGradient(0, y - px / 2, 0, y + px / 2); gr.addColorStop(0, '#FFE08A'); gr.addColorStop(1, '#F2A624'); g.fillStyle = gr; g.fillText('72', x, y); g.restore(); }
+function lA() { board();
+  chalk('72 ÷ 8 = 9', 90, 200, 230, { fill: CY }); chalk('YEARS', 300, 420, 150);
+  chalk('+ 2 DAYS?!', 120, 650, 210, { fill: '#FF7A6B' }); chalkCircle(470, 655, 380, 120, '#FF7A6B', 9);
+  chalkGrain(); bust(1560, 520, 215, { mood: 'shock', mouth: 'wide', arms: 'rest', sweat: true, flip: true }); }
+function lB() { comic('#C78A1E', '#2E8B57', 'rgba(255,255,255,0.13)', 'rgba(255,255,255,0.12)', 110);
+  txt('$1,000', 380, 170, 170, { font: 'Bangers', w: 400, fill: '#FFF', sw: 0.16, shadow: INK, rot: -0.04 }); coins(380, 820, 6, 150);
+  txt('$2,000', 1560, 170, 170, { font: 'Bangers', w: 400, fill: '#F6D860', sw: 0.16, shadow: INK, rot: 0.04 }); coins(1560, 860, 13, 150);
+  txt('WHEN?', 1580, 330, 140, { font: 'Bangers', w: 400, fill: '#FF5A5A', sw: 0.16, shadow: INK, rot: 0.04 });
+  bust(960, 500, 205, { mood: 'confused', mouth: 'wavy', arms: 'shrug', sweat: true }); }
+function lC() { spot(640, 470, '#1F2230');
+  gold72(640, 560, 560); txt('WHY', 640, 150, 150, { fill: '#FFF' }); vignette();
+  bust(1600, 500, 215, { mood: 'shock', mouth: 'o', arms: 'point', flip: true }); }
+
+const F = [zA, zB, zC, fA, fB, fC, mA, mB, mC, pA, pB, sA, sC, lA, lB, lC];
+function frame(t) { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.fillStyle = '#222'; g.fillRect(0, 0, W, H); if (!ready) return; F[Math.min(F.length - 1, Math.floor(t))](); }
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 16, LEAD: 0, error: null };
+</script>

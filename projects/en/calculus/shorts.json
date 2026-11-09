@@ -1,0 +1,166 @@
+{
+ "cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {
+   "name": "impossible-question",
+   "hook": [
+    "0 ÷ 0 MEANS NOTHING",
+    "YET THE ANSWER",
+    "IS {EXACTLY 2}"
+   ],
+   "pieces": [
+    {
+     "from": "p1:0",
+     "to": "p1:6",
+     "crop": [
+      1600,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "closing-in-on-two",
+   "hook": [
+    "3, 2.5, 2.1, 2.01…",
+    "WHERE IS IT",
+    "{HEADING}?"
+   ],
+   "pieces": [
+    {
+     "from": "p2:17",
+     "to": "p2:18",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from": "p2:19",
+     "to": "p2:24",
+     "crop": [
+      1440,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "hole-at-five",
+   "hook": [
+    "0 ÷ 0 RIGHT HERE",
+    "YET IT HEADS",
+    "STRAIGHT FOR {10}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:29",
+     "to": "p2:38",
+     "crop": [
+      1440,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "car-does-calculus",
+   "hook": [
+    "YOUR CAR SHOWS",
+    "{CALCULUS}",
+    "EVERY SECOND"
+   ],
+   "pieces": [
+    {
+     "from": "p2:52",
+     "to": "p2:52",
+     "crop": [
+      1440,
+      300,
+      300,
+      0
+     ],
+     "video": 320.8
+    },
+    {
+     "from": "p2:78",
+     "to": "p2:78",
+     "crop": [
+      1440,
+      300,
+      300,
+      0
+     ]
+    },
+    {
+     "from": "p2:84",
+     "to": "p2:84",
+     "crop": [
+      1440,
+      300,
+      300,
+      0
+     ],
+     "tail": -0.6
+    }
+   ]
+  },
+  {
+   "name": "area-is-one-third",
+   "hook": [
+    "AREA UNDER A CURVE",
+    "WITH NO FORMULA?",
+    "EXACTLY {1/3}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:56",
+     "to": "p2:61",
+     "crop": [
+      1440,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from": "p2:65",
+     "to": "p2:65",
+     "crop": [
+      1680,
+      240,
+      240,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "two-sides-one-coin",
+   "hook": [
+    "SLOPES AND AREAS",
+    "ARE {ONE IDEA}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:69",
+     "to": "p2:76",
+     "crop": [
+      1440,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  }
+ ]
+}

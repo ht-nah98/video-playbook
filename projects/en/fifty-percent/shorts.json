@@ -1,0 +1,166 @@
+{
+ "cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {
+   "name": "coin-under-hand",
+   "hook": [
+    "THE COIN HAS LANDED.",
+    "WHY IS IT STILL {50%}?"
+   ],
+   "pieces": [
+    {
+     "from": "p1:0",
+     "to": "p1:5",
+     "crop": [
+      1800,
+      40,
+      40,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "positive-test",
+   "hook": [
+    "A 99% ACCURATE TEST",
+    "SAYS {POSITIVE}.",
+    "ARE YOU ILL?"
+   ],
+   "pieces": [
+    {
+     "from": "p2:76",
+     "to": "p2:79",
+     "crop": [
+      1700,
+      60,
+      60,
+      0
+     ]
+    },
+    {
+     "from": "p2:81",
+     "to": "p2:84",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from": "p2:86",
+     "to": "p2:86",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "two-fair-bets",
+   "hook": [
+    "TWO FAIR BETS",
+    "THAT {ALWAYS} LOSE"
+   ],
+   "pieces": [
+    {
+     "from": "p2:47",
+     "to": "p2:51",
+     "crop": [
+      1700,
+      60,
+      60,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "scam-otp",
+   "hook": [
+    "THE ONE LINE THAT",
+    "GIVES A {SCAM} AWAY"
+   ],
+   "pieces": [
+    {
+     "from": "p2:56",
+     "to": "p2:57",
+     "crop": [
+      1700,
+      60,
+      60,
+      0
+     ]
+    },
+    {
+     "from": "p2:66",
+     "to": "p2:70",
+     "crop": [
+      1700,
+      60,
+      60,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "coin-not-fifty",
+   "hook": [
+    "A COIN FLIP",
+    "ISN'T {50/50}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:113",
+     "to": "p2:117",
+     "crop": [
+      1700,
+      60,
+      60,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "coin-flipped-24000",
+   "hook": [
+    "THEY FLIPPED A COIN",
+    "{24,000} TIMES"
+   ],
+   "pieces": [
+    {
+     "from": "p2:6",
+     "to": "p2:9",
+     "crop": [
+      1760,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from": "p2:10",
+     "to": "p2:10",
+     "crop": [
+      1760,
+      40,
+      40,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  }
+ ]
+}

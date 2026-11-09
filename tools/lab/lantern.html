@@ -1,0 +1,159 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — lantern</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#070B14;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Lantern" (fifty-percent). Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/lantern.html --dur 2 --t 0.5,1.5 --outdir out/_lab/lantern
+// Ý trung tâm: ÁNH SÁNG = THÔNG TIN. Thế giới chìm trong đêm; điều ta biết thì sáng, điều chưa biết là sương.
+//   "Xác suất là khoảng cách giữa bạn và đồng xu" → chùm đèn từ phía người xem với tới (hoặc không tới) sự vật.
+// Bảng màu: đêm #070B14→#101A2E · đèn hổ phách #F4B860 (người xem / bằng chứng) · sương #8EA2B8 (chưa biết)
+//   · vàng sự thật #FFD866 (điều thật sự đúng) · ngà #EDE6D6 (chữ chính) · đỏ #E5604D chỉ cho báo động sai/cảnh báo.
+// Chữ: Cormorant Garamond LN (số lớn, câu dẫn nghiêng) · IBM Plex Mono (nhãn, đếm) · Archivo (hiếm, nhãn mạnh).
+// Tiếng: shimmer (đèn bật/chấm sáng) · tick (đếm chấm) · whoosh-long (chùm đèn quét) · coin (đồng xu) · chip (cá cược) · correct.
+// Các phần khác: tần suất = hàng nghìn đốm lửa tung xu, tỉ lệ sáng dần hội tụ về đường 1/2 · cá cược = phiếu cược soi dưới
+//   đèn bàn, mất 20¢ lộ ra đỏ · cán cân Bayes = hai đĩa cân, bằng chứng là đèn chiếu thêm vào một đĩa, đĩa sáng hơn nghiêng
+//   xuống · 3 tiên đề Kolmogorov = ba dòng chữ thắp lần lượt như ba ngọn đèn đường · máy tung xu Diaconis = đèn spot phòng
+//   lab: biết hết điều kiện đầu → sáng trọn, không còn sương, "50%" tan.
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { night: '#070B14', dusk: '#101A2E', amber: '#F4B860', fog: '#8EA2B8', gold: '#FFD866', ivory: '#EDE6D6', red: '#E5604D', dim: '#5C6B80' };
+const IM = {}; let SKY, ready = false;
+const CG = '"Cormorant Garamond"', MONO = '"IBM Plex Mono"';
+
+function sky() {                                      // đêm: gradient + sương thấp (nhiễu giá trị, phóng to mượt) + hạt mịn
+  const c = mk(), x = c.getContext('2d');
+  const gr = x.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, '#0C1426'); gr.addColorStop(0.6, '#0A1120'); gr.addColorStop(1, '#070B14');
+  x.fillStyle = gr; x.fillRect(0, 0, W, H);
+  const fw = 96, fh = 54, f = mk(fw, fh), fx = f.getContext('2d'), d = fx.createImageData(fw, fh);
+  for (let j = 0; j < fh; j++) for (let i = 0; i < fw; i++) {
+    const n = 0.55 * hash(i * 0.37 + j * 7.13) + 0.45 * hash(((i >> 2) * 13 + (j >> 2)) * 0.91), k = (j * fw + i) * 4;
+    const band = Math.max(0, 1 - Math.abs(j / fh - 0.62) * 2.4);              // dải sương ngang dưới giữa
+    d.data[k] = 142; d.data[k + 1] = 162; d.data[k + 2] = 184; d.data[k + 3] = 255 * n * band * 0.16;
+  }
+  fx.putImageData(d, 0, 0); x.imageSmoothingQuality = 'high'; x.filter = 'blur(26px)'; x.drawImage(f, 0, 0, W, H); x.filter = 'none';
+  const id = x.getImageData(0, 0, W, H);
+  for (let i = 0; i < W * H; i++) { const n = (hash(i * 0.613) - 0.5) * 5; for (let k = 0; k < 3; k++) id.data[i * 4 + k] += n; }
+  x.putImageData(id, 0, 0); return c;
+}
+function glow(x, y, r, color, a = 1) {                // quầng sáng cộng dồn
+  const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, color); gr.addColorStop(1, 'rgba(0,0,0,0)');
+  g.save(); g.globalCompositeOperation = 'lighter'; g.globalAlpha = a; g.fillStyle = gr; g.fillRect(x - r, y - r, 2 * r, 2 * r); g.restore();
+}
+function text(s, x, y, font, color, align = 'left', ls = 0) { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.letterSpacing = ls + 'px'; g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; return w; }
+const label = (s, x, y, color = C.fog, align = 'left', size = 26) => text(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 3);
+const fmt = n => n.toLocaleString('en-US');
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+
+function lantern(x, y, s) {                           // đèn bão của người xem: khung mực, kính hổ phách, ngọn lửa
+  glow(x, y, 520 * s, 'rgba(244,184,96,0.40)'); glow(x, y, 180 * s, 'rgba(255,214,140,0.85)');
+  g.save(); g.translate(x, y); g.scale(s, s); g.lineCap = g.lineJoin = 'round';
+  g.strokeStyle = '#1A140C'; g.lineWidth = 7;
+  g.beginPath(); g.arc(0, -118, 26, Math.PI, 0); g.stroke();                                   // quai
+  g.fillStyle = '#231A10'; g.beginPath(); g.moveTo(-58, -78); g.lineTo(58, -78); g.lineTo(36, -100); g.lineTo(-36, -100); g.closePath(); g.fill();
+  const gl = g.createRadialGradient(0, 0, 4, 0, 0, 70); gl.addColorStop(0, '#FFF3D0'); gl.addColorStop(0.45, '#FFC970'); gl.addColorStop(1, '#C27A2A');
+  g.fillStyle = gl; g.beginPath(); g.roundRect(-46, -78, 92, 150, 14); g.fill();               // kính
+  g.fillStyle = '#FFFBEA'; g.beginPath(); g.moveTo(0, -38); g.quadraticCurveTo(16, 0, 0, 20); g.quadraticCurveTo(-16, 0, 0, -38); g.fill();
+  g.strokeStyle = '#2A1F12'; g.lineWidth = 6; [-46, 0, 46].forEach(bx => { g.beginPath(); g.moveTo(bx, -78); g.lineTo(bx, 72); g.stroke(); });
+  g.fillStyle = '#231A10'; g.fillRect(-60, 72, 120, 20); g.restore();
+}
+function beam(x0, y0, x1, y1, w0, w1, a) {            // chùm đèn: hình nêm, mờ dần trước khi chạm đích
+  const ang = Math.atan2(y1 - y0, x1 - x0), L = Math.hypot(x1 - x0, y1 - y0);
+  g.save(); g.translate(x0, y0); g.rotate(ang); g.globalCompositeOperation = 'lighter'; g.filter = 'blur(18px)';
+  const gr = g.createLinearGradient(0, 0, L, 0); gr.addColorStop(0, `rgba(244,184,96,${a})`); gr.addColorStop(0.55, `rgba(244,184,96,${a * 0.3})`); gr.addColorStop(1, 'rgba(244,184,96,0)');
+  g.fillStyle = gr; g.beginPath(); g.moveTo(0, -w0 / 2); g.lineTo(L, -w1 / 2); g.lineTo(L, w1 / 2); g.lineTo(0, w0 / 2); g.closePath(); g.fill(); g.restore();
+}
+function figure(pose, cx, foot, h, shadowAt) {        // mascot trong bóng chiều: ám xanh đêm, tay (đồng xu) chìm tối, viền hổ phách bên trái
+  const im = IM[pose], s = h / im.height, w = im.width * s, c = mk(Math.ceil(w), h), x = c.getContext('2d');
+  x.drawImage(im, 0, 0, w, h); x.globalCompositeOperation = 'source-atop';
+  x.fillStyle = 'rgba(16,26,46,0.42)'; x.fillRect(0, 0, w, h);
+  const [hx, hy] = [shadowAt[0] * w, shadowAt[1] * h], sh = x.createRadialGradient(hx, hy, 10, hx, hy, 210);
+  sh.addColorStop(0, 'rgba(6,10,20,0.78)'); sh.addColorStop(1, 'rgba(6,10,20,0)'); x.fillStyle = sh; x.fillRect(0, 0, w, h);
+  const rim = x.createLinearGradient(0, 0, w * 0.45, 0); rim.addColorStop(0, 'rgba(244,184,96,0.22)'); rim.addColorStop(1, 'rgba(244,184,96,0)');
+  x.fillStyle = rim; x.fillRect(0, 0, w, h);
+  g.drawImage(c, cx - w / 2, foot - h); return { x: cx - w / 2, y: foot - h, w, h };
+}
+function fogBank(cx, cy, rx, ry) {                    // bức sương: các đốm mờ xanh xám, tất định theo hash
+  g.save(); g.filter = 'blur(40px)';
+  for (let i = 0; i < 9; i++) { const x = cx + (hash(i * 3.3) - 0.5) * rx * 1.6, y = cy + (hash(i * 5.7) - 0.5) * ry, r = 90 + hash(i * 1.9) * 120;
+    g.fillStyle = `rgba(142,162,184,${0.07 + hash(i * 2.3) * 0.06})`; g.beginPath(); g.ellipse(x, y, r * 1.6, r, 0, 0, 7); g.fill(); }
+  g.restore(); }
+function dashes(x0, y0, x1, y1, color, w = 3, on = 10, off = 14) { g.save(); g.strokeStyle = color; g.lineWidth = w; g.lineCap = 'round';
+  g.setLineDash([on, off]); g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke(); g.restore(); }
+
+const frames = [
+  () => {                                             // 0 · mở bài: 50% treo trong đèn của NGƯỜI XEM; đồng xu dưới tay nằm trong bóng tối
+    const F = figure('coin-cover', 1690, 1080, 720, [0.51, 0.485]);
+    const hand = [F.x + F.w * 0.51, F.y + F.h * 0.485];
+    beam(250, 860, hand[0] - 30, hand[1] - 10, 130, 560, 0.42);
+    fogBank(1330, 760, 300, 240);                                                               // sương chắn giữa đèn và tay
+    lantern(250, 900, 1.05);
+    glow(430, 520, 420, 'rgba(244,184,96,0.18)');
+    text('50%', 430, 600, `600 300px ${CG}`, C.amber, 'center');
+    label('your lamp · what you know', 430, 680, C.amber, 'center');
+    dashes(400, 905, F.x - 30, hand[1] + 30, 'rgba(142,162,184,0.6)');
+    g.fillStyle = C.fog; g.beginPath(); g.arc(F.x - 30, hand[1] + 30, 6, 0, 7); g.fill();
+    text('the distance between you and the coin', 900, 975, `italic 500 44px ${CG}`, C.fog, 'center');
+    label('the coin', 1440, 560, C.fog, 'right'); text('already heads, or already tails', 1440, 612, `italic 500 40px ${CG}`, C.ivory, 'right');
+    text('The only thing still undecided', 96, 150, `italic 500 64px ${CG}`, C.ivory);
+    text('is you.', 96, 224, `italic 600 64px ${CG}`, C.amber);
+  },
+  () => {                                             // 1 · Act Four: 100 000 người là đốm mờ; dương tính thì sáng; chỉ người bệnh thật sáng vàng
+    const N = must('100000', 100000), PER = 20, sick = must('100000 / 1000', 100), caught = must('100 * 99 / 100', 99);
+    const healthy = must('100000 - 100', 99900), falsePos = must('99900 * 5 / 100', 4995), lit = must('99 + 4995', 5094);
+    const pct = must('Math.round(1000 * 99 / 5094) / 10', 1.9), round = must('Math.round(100 * 99 / 5094)', 2);
+    const dots = must('100000 / 20', 5000), goldDots = must('Math.round(99 / 20)', 5), amberDots = must('Math.round(4995 / 20)', 250);
+    if (N / PER !== dots || caught !== Math.round(sick * 0.99) || healthy * 5 / 100 !== falsePos || caught + falsePos !== lit) throw new Error('sai chuỗi số');
+    const cols = 100, rows = dots / cols, x0 = 110, y0 = 190, dx = 11, dy = 14.6;
+    const P = Array.from({ length: dots }, (_, i) => [x0 + (i % cols) * dx + (hash(i * 1.7) - 0.5) * 5, y0 + ((i / cols) | 0) * dy + (hash(i * 2.9) - 0.5) * 5]);
+    const order = P.map((_, i) => i).sort((a, b) => hash(a * 0.913 + 5) - hash(b * 0.913 + 5));
+    const GOLD = new Set(order.slice(0, goldDots));
+    const AMB = new Set(order.slice(goldDots, goldDots + amberDots));
+    g.fillStyle = 'rgba(142,162,184,0.30)'; P.forEach(([x, y], i) => { if (!GOLD.has(i) && !AMB.has(i)) { g.beginPath(); g.arc(x, y, 2.1, 0, 7); g.fill(); } });
+    AMB.forEach(i => { const [x, y] = P[i]; glow(x, y, 16, 'rgba(244,184,96,0.55)'); });
+    g.fillStyle = C.amber; AMB.forEach(i => { const [x, y] = P[i]; g.beginPath(); g.arc(x, y, 3.3, 0, 7); g.fill(); });
+    GOLD.forEach(i => { const [x, y] = P[i]; glow(x, y, 46, 'rgba(255,216,102,0.85)'); });
+    GOLD.forEach(i => { const [x, y] = P[i]; g.fillStyle = '#FFF4C8'; g.beginPath(); g.arc(x, y, 5.5, 0, 7); g.fill();
+      g.strokeStyle = C.gold; g.lineWidth = 2.5; g.beginPath(); g.arc(x, y, 14, 0, 7); g.stroke(); });
+    label(`${fmt(N)} people take the test`, 110, 128, C.ivory); label(`1 dot = ${PER} people`, 1199, 128, C.fog, 'right');
+    const ly = 990, dot = (x, c, r) => { g.fillStyle = c; g.beginPath(); g.arc(x, ly - 9, r, 0, 7); g.fill(); };
+    dot(118, 'rgba(142,162,184,0.6)', 4); label('negative', 136, ly, C.fog, 'left', 22);
+    glow(370, ly - 9, 16, 'rgba(244,184,96,0.55)'); dot(370, C.amber, 5); label('positive, healthy', 388, ly, C.amber, 'left', 22);
+    glow(740, ly - 9, 30, 'rgba(255,216,102,0.8)'); dot(740, '#FFF4C8', 6); label('positive, truly sick', 760, ly, C.gold, 'left', 22);
+    const X = 1300, R = 1824; g.fillStyle = 'rgba(142,162,184,0.35)'; g.fillRect(X - 40, 100, 2, 900);
+    label('sick · 1 in 1,000', X, 128, C.fog); text(fmt(sick), X, 210, `600 72px ${CG}`, C.ivory);
+    text(`test catches ${fmt(caught)}`, R, 210, `italic 500 44px ${CG}`, C.gold, 'right');
+    label('healthy · 5% false alarm', X, 290, C.fog); text(fmt(healthy), X, 372, `600 72px ${CG}`, C.ivory);
+    text(`${fmt(falsePos)} lit by mistake`, R, 372, `italic 500 44px ${CG}`, C.amber, 'right');
+    g.fillStyle = 'rgba(142,162,184,0.35)'; g.fillRect(X, 420, R - X, 2);
+    label('holding a positive result', X, 480, C.fog); text(`${fmt(caught)} + ${fmt(falsePos)} = ${fmt(lit)}`, X, 556, `600 60px ${CG}`, C.ivory);
+    label('truly sick, among the lit', X, 650, C.fog);
+    text(`${fmt(caught)} / ${fmt(lit)} ≈ ${pct}%`, X, 724, `600 60px ${CG}`, C.ivory);
+    glow(1560, 860, 260, 'rgba(255,216,102,0.18)');
+    text(`≈ ${round}%`, X, 940, `600 230px ${CG}`, C.gold);
+  },
+];
+
+(async () => {
+  await Promise.all(['italic 500 64px', 'italic 600 64px', 'italic 500 44px', 'italic 500 40px'].map(f => document.fonts.load(`${f} ${CG}`))
+    .concat(['600 300px', '600 230px', '600 72px', '600 60px'].map(f => document.fonts.load(`${f} ${CG}`)))
+    .concat(['500 26px', '500 22px'].map(f => document.fonts.load(`${f} ${MONO}`))));
+  await new Promise((res, rej) => { const im = new Image(); im.onload = () => { IM['coin-cover'] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img'));
+    im.src = '../../assets/character-v2/cut/pose-coin-cover.png'; });
+  SKY = sky(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(SKY, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

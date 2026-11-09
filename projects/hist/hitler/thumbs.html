@@ -1,0 +1,78 @@
+<!doctype html><meta charset="utf-8">
+<title>hitler — thumbnail A/B/C</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Thumbnail tập 4 "hitler" (2026-10-30) — 3 thế giới khác hẳn nhau và khác bộ wrong-turn / berlin / pearl (THUMB-LOG):
+//   t 0.5 = A bàn bản đồ chiến tranh (bối cảnh video): mũi tên đỏ Berlin → Moscow lao vào tuyết, Hitler tự tin giơ tay, người dẫn (sĩ quan
+//           tuỳ tùng) úp tay che mặt · t 1.5 = B bảng xếp hạng tier list các quyết định ngu nhất (thế giới "internet") · t 2.5 = C ẢNH THẬT
+//           PD Dunkirk 1940 kín khung, Hitler vẫy tay tạm biệt — "HE LET THEM GO".
+// Nhân vật nổi tiếng: _kit/famous.js (băng tay trơn, không biểu tượng — chờ người dùng quyết).
+import { INK, loadMap, view, ll } from '../_kit/mapkit.js';
+import * as S from '../_kit/stage.js';
+import { bindNarrator, narrator } from '../_kit/narrator.js';
+import { bindFamous, famous } from '../_kit/famous.js';
+const g = document.getElementById('cv').getContext('2d');
+const { W, H, hash } = S;
+const IM = {}; let ready = false, M = null;
+const img = (k, src) => { const im = new Image(); im.src = src; return im.decode().then(() => { IM[k] = im; }); };
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  img('dunkirk', 'assets/photos/dunkirk.jpg'), ...['dday', 'watercolor', 'stalingrad', 'blitz', 'arizona'].map(k => img(k, `assets/photos/${k}.jpg`)), loadMap('../_kit/maps/europe1960.json').then(m => { M = m; })])
+  .then(() => { S.bindStage(g, { IM }); bindNarrator(g); bindFamous(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+function big(txt, x, y, size, col = '#FFF', o = {}) { g.save(); g.font = `900 ${size}px Archivo, sans-serif`; g.textAlign = o.align ?? 'center'; g.lineJoin = 'round';
+  if (o.rot) { g.translate(x, y); g.rotate(o.rot); x = 0; y = 0; }
+  g.fillStyle = 'rgba(0,0,0,0.5)'; g.fillText(txt, x + size * 0.04, y + size * 0.05);
+  g.strokeStyle = o.stroke ?? INK; g.lineWidth = size * 0.14; g.strokeText(txt, x, y); g.fillStyle = col; g.fillText(txt, x, y); g.restore(); }
+function cover(im, x, y, w, h, fx = 0.5, fy = 0.5, z = 1) { const s = Math.max(w / im.width, h / im.height) * z, iw = im.width * s, ih = im.height * s;
+  g.drawImage(im, x + (w - iw) * fx, y + (h - ih) * fy, iw, ih); }
+function flake(x, y, r) { g.save(); g.strokeStyle = '#FFFFFF'; g.lineWidth = r * 0.22; g.lineCap = 'round'; for (let k = 0; k < 3; k++) { const a = k * Math.PI / 3; g.beginPath(); g.moveTo(x - Math.cos(a) * r, y - Math.sin(a) * r); g.lineTo(x + Math.cos(a) * r, y + Math.sin(a) * r); g.stroke(); } g.restore(); }
+
+function frame(t) { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1;
+  if (!ready) { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); return; }
+  if (t < 1) return A(); if (t < 2) return B(); return C(); }
+
+// A — bàn bản đồ: chỉ bờ biển (không biên giới 1960 — sai năm), tuyết phủ phía đông, mũi tên đỏ Berlin → Moscow
+function A() { const V = view(M, { cx: 27, cy: 51, zoom: 1.25 });
+  g.fillStyle = '#7FA6C2'; g.fillRect(0, 0, W, H); g.save(); V.apply(g); for (const n of Object.keys(M.path)) { g.fillStyle = '#E6D9B8'; g.fill(M.path[n]); } g.restore();
+  const mos = V.pt(ll(M, 37.6, 55.75)), ber = V.pt(ll(M, 13.4, 52.5));
+  const sn = g.createRadialGradient(mos[0], mos[1], 60, mos[0], mos[1], 760); sn.addColorStop(0, 'rgba(255,255,255,0.97)'); sn.addColorStop(0.55, 'rgba(255,255,255,0.85)'); sn.addColorStop(1, 'rgba(255,255,255,0)');
+  g.fillStyle = sn; g.fillRect(0, 0, W, H); for (let i = 0; i < 46; i++) flake(mos[0] - 500 + hash(i) * 1100, 40 + hash(i + 50) * 900, 10 + 14 * hash(i + 99));
+  g.save(); g.strokeStyle = '#C8262C'; g.lineWidth = 46; g.lineCap = 'round'; const cx = (ber[0] + mos[0]) / 2, cy = Math.min(ber[1], mos[1]) - 160;
+  g.beginPath(); g.moveTo(ber[0], ber[1]); g.quadraticCurveTo(cx, cy, mos[0] - 40, mos[1] - 10); g.stroke(); g.strokeStyle = INK; g.lineWidth = 6; g.stroke();
+  g.fillStyle = '#C8262C'; g.translate(mos[0] - 40, mos[1] - 10); g.rotate(0.35); g.beginPath(); g.moveTo(40, 0); g.lineTo(-50, -55); g.lineTo(-50, 55); g.closePath(); g.fill(); g.stroke(); g.restore();
+  g.fillStyle = INK; g.beginPath(); g.arc(mos[0], mos[1], 12, 0, 7); g.fill(); S.label('MOSCOW', mos[0] + 20, mos[1] + 75, 40, 1, INK, { stroke: '#FFF', free: true });
+  g.save(); g.translate(1130, 610); g.rotate(0.07); g.fillStyle = 'rgba(0,0,0,0.35)'; g.fillRect(-196, -126, 400, 270); g.fillStyle = '#FBF8F0'; g.fillRect(-210, -140, 400, 270); cover(IM.stalingrad, -196, -126, 372, 210, 0.5, 0.4);
+  g.fillStyle = INK; g.font = '800 30px Archivo, sans-serif'; g.textAlign = 'center'; g.fillText('STALINGRAD, 1943', -10, 118); g.fillStyle = '#C8262C'; g.beginPath(); g.arc(-10, -128, 16, 0, 7); g.fill(); g.strokeStyle = INK; g.lineWidth = 4; g.stroke(); g.restore();
+  famous(430, 1210, 980, 'hitler', { eyes: 'happy', mouth: 'grin', arms: ['down', 'orate'] });
+  narrator(1660, 1080 + 30, 560, { v: 'C', outfit: 'officer', mood: 'closed', mouth: 'flat', arms: 'facepalm' });
+  big('BAD IDEA', 1430, 210, 170, '#FFE04A', { rot: -0.05 }); }
+
+// B — tier list: hàng S/A/B/C/D, thẻ biểu tượng từng quyết định (tuyết = Nga, cờ Mỹ, bãi biển Dunkirk, giường = D-Day, cọ vẽ = trường mỹ thuật)
+function card(x, y, kind) { g.save(); g.fillStyle = '#FFFFFF'; g.strokeStyle = INK; g.lineWidth = 6; g.beginPath(); g.roundRect(x, y, 150, 140, 16); g.fill(); g.stroke(); const cx = x + 75, cy = y + 70;
+  if (kind === 'snow') { g.fillStyle = '#BFE0F5'; g.fillRect(x + 8, y + 8, 134, 124); flake(cx, cy, 44); g.strokeStyle = '#3E7FB8'; g.lineWidth = 4; for (let k = 0; k < 3; k++) { const a = k * Math.PI / 3; g.beginPath(); g.moveTo(cx - Math.cos(a) * 44, cy - Math.sin(a) * 44); g.lineTo(cx + Math.cos(a) * 44, cy + Math.sin(a) * 44); g.stroke(); } }
+  if (kind === 'usa') { for (let i = 0; i < 7; i++) { g.fillStyle = i % 2 ? '#FFFFFF' : '#C8262C'; g.fillRect(x + 12, y + 20 + i * 14.3, 126, 14.3); } g.fillStyle = '#2B3F7E'; g.fillRect(x + 12, y + 20, 56, 57); g.strokeRect(x + 12, y + 20, 126, 100);
+    g.fillStyle = '#FFF'; for (let i = 0; i < 9; i++) { g.beginPath(); g.arc(x + 20 + (i % 3) * 18, y + 30 + Math.floor(i / 3) * 17, 3.5, 0, 7); g.fill(); } }
+  if (kind === 'beach') { g.fillStyle = '#9CCBE6'; g.fillRect(x + 8, y + 8, 134, 70); g.fillStyle = '#E8D7A8'; g.fillRect(x + 8, y + 78, 134, 54); g.fillStyle = '#4A4A50';
+    g.beginPath(); g.moveTo(x + 40, y + 70); g.lineTo(x + 115, y + 70); g.lineTo(x + 105, y + 82); g.lineTo(x + 50, y + 82); g.closePath(); g.fill(); g.fillRect(x + 72, y + 50, 6, 20); for (let i = 0; i < 6; i++) g.fillRect(x + 22 + i * 20, y + 98, 8, 18); }
+  if (kind === 'bed') { g.fillStyle = '#7A5A3A'; g.fillRect(x + 18, y + 80, 114, 18); g.fillStyle = '#E8EEF8'; g.fillRect(x + 18, y + 62, 114, 20); g.strokeRect(x + 18, y + 62, 114, 20); g.fillStyle = '#FFF'; g.beginPath(); g.ellipse(x + 38, y + 58, 18, 10, 0, 0, 7); g.fill(); g.stroke();
+    g.fillStyle = INK; g.font = '900 34px Archivo, sans-serif'; g.textAlign = 'left'; g.fillText('zZ', x + 78, y + 48); }
+  if (kind === 'brush') { g.fillStyle = '#E2B97A'; g.beginPath(); g.ellipse(cx - 6, cy + 6, 52, 40, -0.2, 0, 7); g.fill(); g.stroke(); [['#C8262C', -30, -10], ['#2E6FC2', -6, -24], ['#3EA45A', 20, -12]].forEach(([c, dx, dy]) => { g.fillStyle = c; g.beginPath(); g.arc(cx + dx - 6, cy + dy + 6, 9, 0, 7); g.fill(); });
+    g.strokeStyle = '#7A4A26'; g.lineWidth = 9; g.beginPath(); g.moveTo(cx + 10, cy + 40); g.lineTo(cx + 58, cy - 30); g.stroke(); }
+  g.restore(); }
+// thẻ ẢNH THẬT (người dùng 10-30: xen ảnh thật vào thumbnail) — ảnh PD cắt vừa thẻ, viền trắng
+function pcard(x, y, k, w = 230, h = 140) { g.save(); g.fillStyle = '#FFFFFF'; g.strokeStyle = INK; g.lineWidth = 6; g.beginPath(); g.roundRect(x, y, w, h, 14); g.fill(); g.stroke();
+  g.beginPath(); g.roundRect(x + 7, y + 7, w - 14, h - 14, 9); g.clip(); cover(IM[k], x + 7, y + 7, w - 14, h - 14); g.restore(); }
+function B() { g.fillStyle = '#26272D'; g.fillRect(0, 0, W, H);
+  const rows = [['S', '#E2463A', ['stalingrad', 'arizona']], ['A', '#F08A2E', ['dunkirk']], ['B', '#F2C230', ['dday']], ['C', '#7CC46A', ['blitz']], ['D', '#5AA0E0', ['watercolor']]];
+  rows.forEach(([lab, col, items], i) => { const y = 70 + i * 186; g.fillStyle = '#34363E'; g.fillRect(60, y, 1060, 170); g.fillStyle = col; g.fillRect(60, y, 170, 170); g.strokeStyle = INK; g.lineWidth = 6; g.strokeRect(60, y, 1060, 170);
+    g.fillStyle = INK; g.font = '900 110px Archivo, sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(lab, 145, y + 92); items.forEach((k, j) => pcard(250 + j * 245, y + 15, k)); });
+  famous(1520, 1330, 1000, 'hitler', { eyes: 'sad', mouth: 'frown' });
+  big('RANKED', 1490, 190, 150, '#FFE04A', { rot: 0.06 }); }
+
+// C — ẢNH THẬT Dunkirk 26–29/5/1940 (PD, NYP68075) kín khung, Hitler vẫy tay tạm biệt bên phải
+function C() { const im = IM.dunkirk; cover(im, 0, 0, W, H, 0.4, 0.55, 1.05); g.fillStyle = 'rgba(20,24,30,0.18)'; g.fillRect(0, 0, W, H);
+  famous(1520, 1260, 1040, 'hitler', { eyes: 'happy', mouth: 'smile', arms: ['down', 'orate'] });
+  big('HE LET', 560, 270, 190, '#FFFFFF'); big('THEM GO', 560, 470, 190, '#FFE04A'); }
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 3, LEAD: 0, error: null };
+</script>

@@ -1,0 +1,69 @@
+<!doctype html><meta charset="utf-8">
+<title>What Is Pi, Really? — p2</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Phần p2 (lời audio/p2.wav, mốc data/p2.timeline.json — align.py; trước khi có giọng: estimate.py).
+// Cảnh: plates/*.js, mỗi file `export default class` có static ERA, IMAGES {key: đường dẫn}, POSES [..];
+// sau init({ tl }) có START (câu đầu của mục) và FROM (lúc cảnh bắt đầu hiện; mở hồi = START − 2.6).
+// Chuyển: khác ERA → nền mới loang từ WIPE (mặc định giữa khung); cùng ERA → nạp giấy (tờ cũ trượt lên). 0.9 s từ FROM.
+// Chụp riêng vài cảnh: p2.html?plates=a1-x,a2-y
+import { makeTimeline } from '../../../engine/timeline.js';
+import { loadKit, outCubic, prog, W, H } from './kit.js';
+import { ALL } from './plates/p2-order.js';
+import { collectCues } from '../../../engine/sfx.js';
+// LEAD/TAIL đọc từ build.json (MỘT nguồn): trang và build lệch LEAD là hình lệch tiếng cả phần (zero-div suýt mắc).
+let LEAD = 0, TAIL = 0; const g = document.getElementById('cv').getContext('2d');
+let ready = false, plates = [], DUR = 0, CUES = [];
+(async () => {
+  const fonts = ['600 18px', '700 26px', '700 120px', '700 64px'].map(f => f + ' "Archivo"')
+    .concat(['500 34px', '500 28px', '500 26px', '500 24px', '500 22px', '500 20px', '500 18px'].map(f => f + ' "IBM Plex Mono"'))
+    .concat(['600 120px', '600 96px', '600 72px', '600 62px', '600 54px', '600 46px', '600 40px',
+      'italic 600 96px', 'italic 600 76px', 'italic 600 72px', 'italic 600 54px', 'italic 600 44px', 'italic 600 40px',
+      'italic 700 140px', 'italic 700 96px', 'italic 700 72px', 'italic 700 46px'].map(f => f + ' "Cormorant Garamond"'));
+  await Promise.all(fonts.map(f => document.fonts.load(f)));
+  const part = (await (await fetch('./build.json')).json()).parts.find(p => p.page === 'p2');
+  LEAD = part.lead; TAIL = part.tail;
+  const tl = makeTimeline(await (await fetch('./data/p2.timeline.json')).json());
+  const want = new URLSearchParams(location.search).get('plates');
+  const names = want ? want.split(',') : ALL;
+  const mods = await Promise.all(names.map(n => import(`./plates/${n}.js`)));
+  const C = '../../../assets/character-v2/cut/', imgs = {};
+  for (const m of mods) { Object.assign(imgs, m.default.IMAGES || {}); for (const p of m.default.POSES || []) imgs['pose-' + p] = C + `pose-${p}.png`; }
+  await loadKit(imgs);
+  plates = mods.map(m => { const p = new m.default(); p.init({ tl }); return p; }).sort((a, b) => a.FROM - b.FROM);
+  DUR = LEAD + tl.lines.at(-1).end + TAIL;
+  CUES = collectCues(plates, LEAD); // tiếng hiệu ứng: chuyển cảnh tự có + sfx() của từng cảnh (docs/lesson/SFX.md)
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const frame = t => {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.textAlign = 'left'; g.filter = 'none';
+  const T = t - LEAD;
+  let i = 0; for (let j = 0; j < plates.length; j++) if (T >= plates[j].FROM) i = j;
+  const cur = plates[i], prev = plates[i - 1];
+  // CONTINUES = true (trường của cảnh): cảnh nối tiếp bố cục cảnh trước (cùng cán cân, cùng đèn) → cắt thẳng, không
+  // trượt — trượt hai bản cùng bố cục trông như hình nhân đôi (fifty-percent, LESSONS §50).
+  const k = prev && !cur.CONTINUES ? prog(T, cur.FROM, cur.FROM + 0.9) : 1;
+  if (k >= 1) { cur.render(g, T); return; }
+  if (prev.constructor.ERA !== cur.constructor.ERA) {
+    prev.render(g, T);
+    const [cx, cy] = cur.WIPE || [W / 2, H / 2];
+    g.save(); g.beginPath(); g.arc(cx, cy, 2300 * Math.pow(outCubic(k), 1.3), 0, 7); g.clip(); cur.render(g, T); g.restore();
+  } else {
+    const e = outCubic(k);
+    // clip mỗi cảnh vào ô của nó: cảnh tô nền tràn khung (pattern, camera) sẽ phủ kín cảnh kia → chuyển thành cắt cứng
+    // (pemdas, LESSONS §47). Làm tròn độ dịch: dịch lẻ để lại vệt 1 px ở mép clip.
+    const d = Math.round(H * e);
+    g.save(); g.translate(0, -d); g.beginPath(); g.rect(0, 0, W, H); g.clip(); prev.render(g, T); g.restore();
+    g.save(); g.translate(0, H - d); g.beginPath(); g.rect(0, 0, W, H); g.clip(); cur.render(g, T); g.restore();
+  }
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, get DUR() { return DUR; }, get LEAD() { return LEAD; }, get cues() { return CUES; } };
+</script>

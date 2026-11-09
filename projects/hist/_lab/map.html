@@ -1,0 +1,39 @@
+<!doctype html><meta charset="utf-8">
+<title>hist-ww1 — bàn thử bản đồ quốc gia</title>
+<style>html,body{margin:0;background:#A9C9DE;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử bộ bản đồ (mapkit.js): t < 1 = toàn châu Âu, hai băng; t ≥ 1 = cận cảnh Áo-Hung / Serbia biết diễn.
+// node engine/render/shoot.js stills --page projects/hist/_lab/map.html --t 0.5,1.5 --outdir out/hist/ww1/qa/lab-map
+import { loadMap, view, drawMap, country, bubble } from '../_kit/mapkit.js';
+const g = document.getElementById('cv').getContext('2d');
+let M = null, ready = false;
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  loadMap('../_kit/maps/europe1914.json').then(m => { M = m; })]).then(() => { ready = true; });
+const ALL = { 'German Empire': 'flag', 'Austro-Hungarian Empire': 'flag', 'Kingdom of Italy': 'flag', 'France': 'flag', 'Russian Empire': 'flag',
+  'United Kingdom of Great Britain and Ireland': 'flag', 'Serbia': 'flag', 'Belgium': 'flag', 'Ottoman Empire': 'flag' };
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); if (!ready) return;
+  if (t < 1) {
+    const V = view(M, { cx: 16, cy: 49, zoom: 1.05 });
+    drawMap(g, M, V, { fill: ALL });
+    country(g, M, V, 'German Empire', { mood: 'smug', arms: 'hold' });
+    country(g, M, V, 'Austro-Hungarian Empire', { mood: 'angry', arms: 'cross' });
+    country(g, M, V, 'Kingdom of Italy', { mood: 'sleepy', arms: 'wave', t: 0.3 });
+    country(g, M, V, 'France', { mood: 'angry', arms: 'cross', look: [1, 0] });
+    country(g, M, V, 'Russian Empire', { mood: 'sleepy', arms: 'down' });
+    country(g, M, V, 'United Kingdom of Great Britain and Ireland', { mood: 'cool', arms: 'hold' });
+    country(g, M, V, 'Serbia', { mood: 'shock', arms: 'up' });
+    country(g, M, V, 'Belgium', { mood: 'calm', arms: 'down' });
+    const it = country(g, M, V, 'Kingdom of Italy', { mood: 'sleepy', arms: 'wave', t: 0.3 });
+    bubble(g, 'Technically.', it.x + 170, it.y - 120, it.x + 20, it.y - 30);
+  } else {
+    const V = view(M, { cx: 19.5, cy: 45.5, zoom: 3.2 });
+    drawMap(g, M, V, { fill: { 'Austro-Hungarian Empire': 'flag', 'Serbia': 'flag' } });
+    const a = country(g, M, V, 'Austro-Hungarian Empire', { mood: 'angry', arms: 'point', k: 1.3 });
+    const s = country(g, M, V, 'Serbia', { mood: 'shock', arms: 'up', k: 1.1 });
+    bubble(g, 'Answer. Quickly.', a.x - 40, a.y - 260, a.x, a.y - 80, 1, 44);
+  }
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2, LEAD: 0 };
+</script>

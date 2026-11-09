@@ -1,0 +1,149 @@
+## Cold open
+p1 0 0.02 6.82 in the seventeen nineties a schoolboy in grenoble asked his maths teachers a simple question why does a minus times a minus make a plus
+p1 1 7.27 11.41 nobody could give him a reason he was told more or less to learn the rule and move on
+p1 2 11.84 18.31 that boy grew up to be the french novelist stendhal and forty years later he was still annoyed enough to write about it in his memoir
+p1 3 19.34 23.28 you probably know the rule without thinking negative times negative is positive
+p1 4 23.69 26.67 but if you stop and ask why the answers you get are a strange mix
+p1 5 27.18 30.18 some people say it's just a convention so accept it and keep going
+p1 6 30.57 36.25 some people tell a story about debts some say that walking backwards and then turning around makes you walk forwards
+p1 7 36.70 41.02 each of those has something to it but are they proofs or are they just ways to remember
+p1 8 42.37 45.02 so in this video i want to answer three questions with you
+p1 9 45.49 49.61 one why did people refuse to accept negative numbers for more than a thousand years
+p1 10 50.08 53.45 two are the usual explanations real proofs or only ways to remember
+p1 11 53.84 58.28 and three is negative times negative a convention that someone chose or is it forced on us
+p1 12 59.35 63.24 here is where we are going the rule is not an arbitrary choice that someone made up
+p1 13 63.67 67.60 it is what has to happen the moment you ask negative numbers to behave like numbers
+p1 14 68.03 73.53 but to see why we first have to understand why for most of history people didn't think they were numbers at all
+## ACT ONE — A number nobody wanted / A length can't be negative
+p2 0 0.02 6.30 today a negative number feels completely natural that is mostly because you were taught it as a child not because it is obvious
+p2 1 6.77 12.84 the ancient greeks thought about mathematics through geometry a number was a length an area a quantity of something
+p2 2 13.22 14.87 and a length cannot be less than nothing
+p2 3 15.34 22.64 so when diophantus of alexandria around the year two hundred and fifty met the equation four x plus twenty equals four he called it absurd
+p2 4 23.07 27.60 the only answer would be negative and to him a negative answer simply was not an answer
+## ACT ONE — A number nobody wanted / Debts and fortunes
+p2 5 29.26 32.29 in other places negative numbers were already being put to work
+p2 6 32.70 42.68 in china the book known as the nine chapters on the mathematical art used red counting rods for positive amounts and black rods for negative ones with rules for adding and subtracting them
+p2 7 43.11 48.80 and in the year six twenty-eight in india brahmagupta wrote down rules for calculating with fortunes and debts
+p2 8 49.29 54.61 among them is the oldest written version of our rule that survives the product of two debts is a fortune
+p2 9 55.00 61.45 but brahmagupta gave it as a rule explained through debts and fortunes he did not prove it the way a mathematician would today
+## ACT ONE — A number nobody wanted / Fictitious, absurd, meaningless
+p2 10 63.10 64.46 europe was even more suspicious
+p2 11 64.89 68.75 in fifteen forty-five gerolamo cardano called negative numbers fictitious
+p2 12 69.19 77.19 in seventeen fifty-nine the english mathematician francis maseres wrote a whole dissertation arguing that the negative sign should be kept out of algebra
+p2 13 77.64 83.72 and in seventeen ninety-six william frend published a textbook of algebra that refused to use negative numbers at all
+p2 14 84.17 88.18 that is more than a thousand years after brahmagupta first wrote the rule down
+p2 15 88.63 93.51 if negative times negative were so obvious that it needed no proof it would not have taken that long
+## ACT TWO — Explanations that feel right / The debt story
+p2 16 95.97 99.66 you have probably met a few explanations already let's look at them honestly
+p2 17 100.09 101.09 the first one is about debt
+p2 18 101.61 104.97 if you owe three million that is minus three million in your accounts
+p2 19 105.42 110.88 if someone takes that debt away they have subtracted minus three million and you are three million richer
+p2 20 111.31 116.67 so subtracting a negative is the same as adding a positive for subtraction this story works beautifully
+p2 21 117.08 119.53 but try it for multiplication and it starts to creak
+p2 22 120.00 124.89 negative three times negative two becomes something like take away a debt of two three times over
+p2 23 125.68 130.84 you can make yourself accept that but notice that you are no longer seeing it you are leaning on a feeling
+## ACT TWO — Explanations that feel right / The pattern
+p2 24 132.48 134.06 the second explanation uses a pattern
+p2 25 134.51 137.92 three times minus two is minus six two times minus two is minus four
+p2 26 138.33 141.27 one times minus two is minus two zero times minus two is zero
+p2 27 141.72 144.76 each time the first number drops by one the answer goes up by two
+p2 28 145.19 150.89 so if the pattern keeps going minus one times minus two has to be two and minus two times minus two has to be four
+p2 29 151.34 155.56 it is convincing but it rests on one big assumption that the pattern has to continue
+p2 30 155.95 161.12 why should it that is exactly the question we are trying to answer and the pattern cannot answer it for us
+## ACT TWO — Explanations that feel right / The about-turn
+p2 31 162.82 165.21 the third explanation is a picture on the number line
+p2 32 165.60 170.54 multiplying by a negative number is like turning around a turn of one hundred and eighty degrees
+p2 33 170.97 175.81 turn around once and you face the other way turn around twice and you are facing forwards again
+p2 34 176.22 180.82 this is a lovely picture and it will matter a great deal later when you meet complex numbers
+p2 35 181.27 185.58 but for ordinary numbers it is still a picture it describes the rule it does not prove it
+## ACT TWO — Explanations that feel right / Even Euler
+p2 36 187.26 193.39 even the great leonhard euler in his algebra textbook of seventeen seventy gave an argument that only sounds like a proof
+p2 37 193.94 196.79 minus a times minus b he said must be either a b or minus a b
+p2 38 197.28 201.04 but minus a b is already taken by minus a times b so the only thing left is a b
+p2 39 201.79 207.14 why must there be only two choices and why can't two different products give the same answer euler doesn't say
+## ACT TWO — Explanations that feel right / Feeling is not proof
+p2 40 208.86 212.85 all of these make the rule feel reasonable but feeling right is not the same as being proved
+p2 41 213.30 216.16 a real proof does not lean on feelings or stories or trust
+p2 42 216.57 222.24 it starts only from things you have already agreed to and shows that the conclusion has no other way to come out
+p2 43 222.71 223.72 so let's do that now
+## ACT THREE — The proof / The rules you already use
+p2 44 226.20 230.43 we are going to prove that minus a times minus b equals a times b for any numbers a and b
+p2 45 231.13 237.72 to do it i need you to agree to a few rules you have been using every one of them since primary school i am only giving them names
+p2 46 238.77 242.58 first the distributive law a times b plus c equals a times b plus a times c
+p2 47 242.97 252.52 you use it every time you multiply in your head twenty-three times seven is twenty times seven plus three times seven one hundred and forty plus twenty-one one hundred and sixty-one
+p2 48 253.05 260.97 second opposites every number has an opposite and a number plus its opposite is zero three plus minus three is zero that is what a negative number is
+p2 49 261.42 266.39 and a number has only one opposite if two numbers add up to zero each one is the other's opposite
+p2 50 266.78 269.55 third zero adding zero to a number leaves it unchanged
+p2 51 269.94 275.40 and finally the order and the grouping of a sum or a product don't matter two times three is three times two
+p2 52 276.45 284.75 together these rules are what modern mathematicians call a ring you don't need to remember the name you only need to agree that these are the rules you already use
+## ACT THREE — The proof / Zero times anything
+p2 53 286.43 292.12 i'll do the proof with real numbers first three and two and keep the letters alongside for anyone who wants them
+p2 54 292.59 297.16 step one is a small fact that sounds too obvious to need proving zero times anything is zero
+p2 55 297.61 302.87 take zero times two since zero plus zero is zero zero times two is the same as zero plus zero times two
+p2 56 303.28 306.59 by the distributive law that is zero times two plus zero times two
+p2 57 307.00 309.94 so zero times two equals zero times two plus zero times two
+p2 58 310.37 315.27 now add the opposite of zero times two to both sides and you are left with zero equals zero times two
+p2 59 315.70 320.29 so zero times two is zero not because we said so but because the rules leave it no choice
+## ACT THREE — The proof / A negative times a positive
+p2 60 321.97 323.93 step two what is minus three times two
+p2 61 324.36 331.21 start with three plus minus three that is zero so three plus minus three times two is zero times two which we just showed is zero
+p2 62 331.64 338.29 but by the distributive law the same thing is three times two plus minus three times two that is six plus minus three times two
+p2 63 338.74 340.89 so six plus minus three times two equals zero
+p2 64 341.32 347.05 two numbers that add up to zero are opposites so minus three times two is the opposite of six which is minus six
+## ACT THREE — The proof / A negative times a negative
+p2 65 348.81 351.67 step three the one we came for minus three times minus two
+p2 66 352.10 354.60 start with minus three times two plus minus two
+p2 67 354.99 360.00 inside the brackets is zero so the whole thing is minus three times zero and by step one that is zero
+p2 68 360.43 365.41 by the distributive law the same thing is minus three times two plus minus three times minus two
+p2 69 365.82 371.36 from step two minus three times two is minus six so minus six plus minus three times minus two equals zero
+p2 70 371.77 377.11 two numbers that add up to zero are opposites so minus three times minus two is the opposite of minus six
+p2 71 377.60 379.15 and the opposite of minus six is six
+p2 72 379.64 381.05 minus three times minus two is six
+p2 73 382.16 388.42 nothing in those steps used anything special about three and two put a and b in their place and every line still holds
+p2 74 388.85 390.48 minus a times minus b equals a times b
+## ACT THREE — The proof / Nobody chose
+p2 75 392.26 394.43 if you followed that notice what did not happen
+p2 76 394.82 400.56 at no point did we decide that negative times negative is positive nobody banged on the table and said let it be so
+p2 77 401.05 405.06 we used the distributive law the meaning of an opposite and the behaviour of zero
+p2 78 405.52 406.67 the answer fell out on its own
+## ACT FOUR — Convention, or forced? / The real choice
+p2 79 409.15 411.40 but you might push back and it's a very good question
+p2 80 411.79 418.02 you used the distributive law how do you know it has to work for negative numbers maybe that is where the convention is hiding
+p2 81 418.41 422.55 and that is exactly right this is the one place where people really did make a choice
+p2 82 422.98 430.94 every time mathematicians widened the world of numbers from counting numbers to negatives from whole numbers to fractions they faced the same question
+p2 83 431.33 434.78 how should adding and multiplying work out here in the new territory
+p2 84 435.17 442.99 in eighteen thirty the english mathematician george peacock gave an answer and in eighteen sixty-seven hermann hankel in germany put it even more sharply
+p2 85 443.42 450.02 it's often called the principle of permanence when you extend the numbers keep the old rules working as far as you possibly can
+## ACT FOUR — Convention, or forced? / Try to break it
+p2 86 451.68 458.85 so let's see what happens if you don't suppose we decide just for fun that minus one times minus one is minus one and we keep everything else
+p2 87 459.30 461.14 take minus one times one plus minus one
+p2 88 461.59 465.50 inside the brackets is zero so the answer is minus one times zero which is zero
+p2 89 465.93 470.29 but the distributive law says it's also minus one times one plus minus one times minus one
+p2 90 470.68 472.92 that's minus one plus our new minus one minus two
+p2 91 473.33 474.89 so zero equals minus two
+p2 92 475.32 477.25 one small change and arithmetic collapses
+p2 93 478.29 483.20 to make negative times negative come out negative it is not enough to pick a different convention
+p2 94 483.59 487.22 you would have to throw away the distributive law or the meaning of an opposite
+p2 95 487.65 492.32 and without the distributive law a lot more goes with it doing sums in your head stops working
+p2 96 492.71 495.37 the formula for a plus b all squared stops being true
+p2 97 495.76 500.40 even the idea that one expression can be rewritten in another equivalent form falls apart
+p2 98 500.87 506.95 you would no longer be in the numbers you know you would be in some strange other system perhaps consistent but almost useless
+## ACT FOUR — Convention, or forced? / What we chose
+p2 99 508.65 510.68 so here is the honest answer to the convention question
+p2 100 511.07 516.33 there was one choice and people did make it negative numbers should obey the same rules as every other number
+p2 101 516.80 522.28 once you make that choice nothing else is a choice the distributive law forces zero times anything to be zero
+p2 102 522.71 526.21 the meaning of an opposite forces a negative times a positive to be negative
+p2 103 526.60 531.99 and together they force a negative times a negative to be positive there is no other way for it to come out
+## ACT FIVE — Putting it together / Putting it together
+p2 104 534.47 542.26 people refused negative numbers for more than a thousand years because they thought of numbers as lengths and amounts and nothing can be less than nothing
+p2 105 542.65 549.85 the usual explanations debts patterns turning around are good ways to remember the rule but they make it feel right they don't prove it
+p2 106 550.28 558.84 and the rule is not a convention someone picked the only choice was to keep the old rules and once that choice is made negative times negative has to be positive
+## ACT FIVE — Putting it together / Next time
+p2 107 560.54 561.64 here is something to think about
+p2 108 562.44 566.94 multiplying by minus one turns the number line around a turn of one hundred and eighty degrees
+p2 109 567.57 570.77 so what would you multiply by to turn only halfway ninety degrees
+p2 110 571.18 576.66 do it twice and you would have turned all the way around so that number times itself would be minus one
+p2 111 577.07 583.07 no ordinary number can do that mathematicians took a long time to accept it too but that is a story for another video
+p2 112 584.12 585.79 thank you for watching all the way to the end
+p2 113 586.28 592.16 if there's a rule in maths that you were always told to just accept tell me in the comments it might be the next video
+p2 114 592.64 596.69 and subscribe to ninety-nine percent from scratch so you don't miss it see you soon

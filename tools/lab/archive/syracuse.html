@@ -1,0 +1,217 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — syracuse</title>
+<style>
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#1A2C40;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Vòng tròn trên cát Syracuse" (pi). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/syracuse.html --dur 2 --t 0.5,1.5 --outdir out/_lab/syracuse
+// Ý: Archimedes vẽ hình trên cát ("đừng xoá vòng tròn của ta"); π đến từ tay người vẽ + mặt trời quay. Hình = RÃNH ấn cát dưới nắng xiên trên-trái (vai phía nắng sẫm xanh biển, vai kia sáng kem), điểm = SỎI, số = viết que, đa giác = DÂY căng giữa cọc sỏi (thẳng; chỉ vòng tròn cong). Mặt trời là nhân vật thứ hai: bóng que gnomon quét vòng = "bóng của một vòng quay", đầu bóng theo thời gian = sóng sin.
+// Vật xuyên suốt: MỘT vòng tròn rãnh sâu nhất bãi, đáy ướt sẫm có ánh nước — bị dây đa giác kẹp → que gnomon cắm tâm, cung nửa vòng tím → chữ số ấn mãi quanh vành → ấn lên đụn cát tròn / đụn yên ngựa.
+// Màu: cát #DCBE8E (hạt, gợn gió, nắng xiên) · bóng/biển/đêm #1F3550 #1A2C40 · mép nắng #FFF3DA · đáy ướt #6C5A44 · dây ngoài #1F3550, dây trong #8A3A12 · chữ #22344A · tím ốc murex #8A1A5A = SỰ THẬT (π, nửa vòng, giá trị đúng) · đỏ #C0392B CHỈ cho cái sai.
+// Chữ: Cormorant Garamond LN (số viết que, câu dẫn nghiêng) · IBM Plex Mono (nhãn nhỏ). Mọi chữ là rãnh: mép sáng lệch khỏi nắng. Tiếng: pen (que vạch) · tick (đặt sỏi) · whoosh-long (bóng quét, sóng tràn) · shimmer (π hiện) · correct · error · page.
+// Người xưa đo: bảng đất sét + papyrus nằm trên cát, 3 · 3⅛ · 3.16 khắc vào · Tổ Xung Chi / van Ceulen: dây đa giác dày tới mức thành vòng, 355/113 xếp sỏi, bia van Ceulen = phiến đá ướt khắc 35 chữ số · 360° vs radian: 360 vạch que quanh vòng như đồng hồ mặt trời, rồi sợi dây dài bằng bán kính uốn theo vành = 1 rad · chia 1 cho 7: phép chia viết que dọc bãi, dư số lặp khoanh sỏi.
+// Lambert / Lindemann: chữ số ấn liên tục quanh vành rồi chạy dọc bãi, sóng tràn liếm mất rồi que viết tiếp, không bao giờ lặp · cầu phương: hình vuông thước-compa, cát đổ mãi không khép (đỏ) · cầu: vòng xích đạo vẽ trên đụn cát tròn, đường kính đo vòng qua đỉnh → C/d = 2 · yên ngựa: đụn hình yên, vòng dài ra, C/d > π · hố đen: trời tối xanh đêm, cát lún thành phễu.
+// Tóm tắt: bãi lúc hoàng hôn, ba hình còn in trên cát, mỗi câu trả lời viết que cạnh hình đã giải thích nó; sóng chạm tới mép nhưng vòng tròn vẫn còn.
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { sand: '#DCBE8E', shade: '#1F3550', lit: '#FFF3DA', wet: '#6C5A44', murex: '#8A1A5A', sea: '#1A2C40', ink: '#22344A', red: '#C0392B', soft: '#5A4A3A', rope: '#8A3A12' };
+const IM = {}; let SAND, ready = false;
+const CG = '"Cormorant Garamond"', MONO = '"IBM Plex Mono"';
+const SUN = [-1, -1];                                  // hướng VỀ phía mặt trời (trên-trái): bóng đổ xuống-phải
+
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+const r4 = s => `Math.round((${s}) * 1e4) / 1e4`;
+
+function vnoise(x, y, seed) {                          // nhiễu giá trị mượt, tất định
+  const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi, s = t => t * t * (3 - 2 * t);
+  const h = (i, j) => hash(i * 12.9898 + j * 78.233 + seed * 3.17);
+  const a = h(xi, yi), b = h(xi + 1, yi), c = h(xi, yi + 1), d = h(xi + 1, yi + 1), u = s(xf), v = s(yf);
+  return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v;
+}
+function sand() {                                      // cát: nền ấm + gợn gió (sườn đón/khuất nắng) + hạt + khoáng đen/thạch anh + nắng xiên
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H), base = [0xDC, 0xBE, 0x8E];
+  for (let py = 0; py < H; py++) for (let px = 0; px < W; px++) {
+    const i = py * W + px, k = i * 4;
+    const warp = vnoise(px / 260, py / 260, 1) * 9 + vnoise(px / 90, py / 90, 2) * 1.2;
+    const ph = (px * 0.34 + py * 0.94) / 34 + warp, rip = Math.sin(ph), slope = Math.cos(ph);   // gợn gió chéo; sườn trước sáng, sau tối
+    const ripA = 0.35 + 0.65 * vnoise(px / 340, py / 340, 3);
+    const big = (vnoise(px / 420, py / 420, 4) - 0.5) * 14;
+    const sun = 10 - 22 * Math.min(1, Math.hypot(px + 200, py + 300) / 2300);                  // nắng xiên từ trên-trái
+    let n = (hash(i * 0.731) - 0.5) * 16 + big + sun + ripA * (rip * 3 + Math.max(0, slope) * 6 - Math.max(0, -slope) * 9);
+    const sp = hash(i * 1.937 + 11);
+    if (sp > 0.9965) n -= 55; else if (sp < 0.0025) n += 30;                                     // hạt khoáng đen / thạch anh
+    d.data[k] = base[0] + n; d.data[k + 1] = base[1] + n * 0.92; d.data[k + 2] = base[2] + n * 0.8 - (sun < 0 ? sun * 0.3 : 0); d.data[k + 3] = 255;
+  }
+  x.putImageData(d, 0, 0);
+  return c;
+}
+// rãnh ấn: mép phía mặt trời trong bóng (xanh biển), mép kia bắt nắng (kem), đáy ở giữa
+function groove(path, w, { trough = '#AE8758', depth = 1, wet = false } = {}) {
+  const o = 0.2 * w * depth, sx = SUN[0] / Math.SQRT2, sy = SUN[1] / Math.SQRT2;
+  const at = (k, fn) => { g.setTransform(1, 0, 0, 1, sx * k, sy * k); fn(); };
+  g.save(); g.lineCap = g.lineJoin = 'round';
+  at(-o, () => { g.strokeStyle = 'rgba(255,243,218,0.95)'; g.lineWidth = w; g.stroke(path); });          // vai rãnh xa nắng: bắt sáng
+  at(o, () => { g.strokeStyle = 'rgba(31,53,80,0.40)'; g.lineWidth = w; g.stroke(path); });               // vai rãnh phía nắng: bóng
+  at(0, () => { g.strokeStyle = trough; g.lineWidth = w * 0.72; g.stroke(path); });                        // đáy
+  at(o * 0.9, () => { g.strokeStyle = 'rgba(31,53,80,0.42)'; g.lineWidth = w * 0.3; g.stroke(path); });   // bóng trong lòng rãnh
+  if (wet) at(-o * 0.6, () => { g.strokeStyle = 'rgba(255,250,235,0.6)'; g.lineWidth = Math.max(1.5, w * 0.1); g.stroke(path); });
+  g.restore();
+}
+// chữ viết que: cùng logic rãnh, thân chữ màu đậm để đọc được
+function scrawl(s, x, y, font, color = C.ink, align = 'left', depth = 1.6) {
+  g.font = font; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.fillStyle = 'rgba(255,243,218,0.9)'; g.fillText(s, x - SUN[0] * depth, y - SUN[1] * depth);
+  g.fillStyle = 'rgba(31,53,80,0.5)'; g.fillText(s, x + SUN[0] * depth * 0.6, y + SUN[1] * depth * 0.6);
+  g.fillStyle = color; g.fillText(s, x, y); return g.measureText(s).width;
+}
+const label = (s, x, y, color = C.ink, align = 'left', size = 24) => { g.letterSpacing = '3px'; const w = scrawl(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 1); g.letterSpacing = '0px'; return w; };
+function pebble(x, y, r, i, tint) {                    // sỏi: bóng dài xuống-phải (nắng thấp), thân gradient, đốm sáng trên-trái
+  const pal = [['#E9E4DA', '#8D8678'], ['#9AA7B1', '#43505C'], ['#C9A57A', '#6E5233'], ['#5E6670', '#22282F']];
+  const [hi, lo] = tint ?? pal[Math.floor(hash(i * 3.71) * pal.length)], rot = (hash(i * 5.3) - 0.5) * 1.2, ex = 1 + hash(i * 7.1) * 0.35;
+  g.save(); g.fillStyle = 'rgba(31,53,80,0.38)'; g.translate(x + r * 0.9, y + r * 0.9); g.rotate(Math.PI / 4); g.beginPath(); g.ellipse(r * 0.4, 0, r * 1.7, r * 0.8, 0, 0, 7); g.fill(); g.restore();
+  g.save(); g.translate(x, y); g.rotate(rot); const gr = g.createRadialGradient(-r * 0.35, -r * 0.4, r * 0.1, 0, 0, r * ex);
+  gr.addColorStop(0, hi); gr.addColorStop(1, lo); g.fillStyle = gr; g.beginPath(); g.ellipse(0, 0, r * ex, r, 0, 0, 7); g.fill(); g.restore();
+}
+const poly = (cx, cy, R, n, a0 = -Math.PI / 2) => { const p = new Path2D(); for (let k = 0; k <= n; k++) { const a = a0 + k / n * 2 * Math.PI; k ? p.lineTo(cx + R * Math.cos(a), cy + R * Math.sin(a)) : p.moveTo(cx + R * Math.cos(a), cy + R * Math.sin(a)); } return p; };
+const circ = (cx, cy, R, a0 = 0, a1 = 2 * Math.PI, ccw = false) => { const p = new Path2D(); p.arc(cx, cy, R, a0, a1, ccw); return p; };
+const line = pts => { const p = new Path2D(); pts.forEach(([x, y], k) => k ? p.lineTo(x, y) : p.moveTo(x, y)); return p; };
+function cord(path, color) {                           // dây căng giữa các cọc sỏi: thẳng, nổi trên cát, đổ bóng dài xuống-phải
+  g.save(); g.lineCap = g.lineJoin = 'round';
+  g.setTransform(1, 0, 0, 1, 6, 6); g.strokeStyle = 'rgba(31,53,80,0.28)'; g.lineWidth = 4; g.stroke(path);
+  g.setTransform(1, 0, 0, 1, 0, 0); g.strokeStyle = color; g.lineWidth = 3.4; g.stroke(path);
+  g.setTransform(1, 0, 0, 1, -0.8, -0.8); g.strokeStyle = 'rgba(255,245,225,0.45)'; g.lineWidth = 1; g.stroke(path); g.restore();
+}
+function dashed(path, w = 5) { g.save(); g.setLineDash([10, 16]); groove(path, w, { depth: 0.8 }); g.restore(); }
+function theCircle(cx, cy, R, w = 20) {                        // vật xuyên suốt: rãnh sâu nhất, đáy ướt sẫm có ánh nước
+  groove(circ(cx, cy, R), w, { trough: C.wet, depth: 1.1, wet: true });
+}
+function figure(pose, cx, foot, h, crop = 1) {         // mascot dưới nắng chiều: ám ấm nhẹ, sườn phải (khuất nắng) xanh biển
+  const im = IM[pose], sh = im.height * crop, s = h / sh, w = im.width * s, c = mk(Math.ceil(w), h), x = c.getContext('2d');
+  x.drawImage(im, 0, 0, im.width, sh, 0, 0, w, h); x.globalCompositeOperation = 'source-atop';
+  x.fillStyle = 'rgba(255,200,130,0.10)'; x.fillRect(0, 0, w, h);
+  const gr = x.createLinearGradient(0, 0, w, h * 0.6); gr.addColorStop(0.55, 'rgba(31,53,80,0)'); gr.addColorStop(1, 'rgba(31,53,80,0.30)');
+  x.fillStyle = gr; x.fillRect(0, 0, w, h);
+  g.drawImage(c, cx - w / 2, foot - h); return { x: cx - w / 2, y: foot - h, w, h };
+}
+function surf() {                                      // mép sóng trên cùng: biển, bọt, cát ướt — nhắc đây là bãi biển
+  const y = x => 26 + 10 * Math.sin(x / 140) + 6 * Math.sin(x / 53 + 1);
+  const wetG = g.createLinearGradient(0, 20, 0, 120); wetG.addColorStop(0, 'rgba(110,84,52,0.30)'); wetG.addColorStop(1, 'rgba(110,84,52,0)');
+  g.fillStyle = wetG; g.fillRect(0, 0, W, 120);
+  g.fillStyle = C.sea; g.beginPath(); g.moveTo(0, 0); for (let x = 0; x <= W; x += 8) g.lineTo(x, y(x)); g.lineTo(W, 0); g.fill();
+  for (let i = 0; i < 26; i++) { const gx = Math.pow(hash(i * 2.13), 1.8) * 700, gy = 6 + hash(i * 4.7) * 12;       // ánh mặt trời lấp lánh trên biển, dày về phía trái
+    if (gy < y(gx) - 4) { g.fillStyle = `rgba(255,226,160,${0.35 + 0.4 * hash(i * 9.1)})`; g.fillRect(gx, gy, 4 + hash(i) * 8, 1.5); } }
+  const sun = g.createRadialGradient(0, 0, 0, 0, 0, 900); sun.addColorStop(0, 'rgba(255,214,150,0.30)'); sun.addColorStop(1, 'rgba(255,214,150,0)');
+  g.save(); g.globalCompositeOperation = 'lighter'; g.fillStyle = sun; g.fillRect(0, 0, 900, 900); g.restore();
+  g.strokeStyle = 'rgba(255,250,240,0.85)'; g.lineWidth = 5; g.beginPath(); for (let x = 0; x <= W; x += 8) x ? g.lineTo(x, y(x) + 2) : g.moveTo(x, y(x) + 2); g.stroke();
+  g.strokeStyle = 'rgba(255,250,240,0.35)'; g.lineWidth = 2; g.beginPath(); for (let x = 0; x <= W; x += 8) x ? g.lineTo(x, y(x) + 14 + 4 * Math.sin(x / 37)) : g.moveTo(x, y(x) + 14); g.stroke();
+}
+
+const frames = [
+  () => {                                              // 0 · Hồi 1: vòng tròn bị kẹp giữa 12-giác trong và ngoài; đường tới 96 cạnh
+    const inner = must(r4('12 * Math.sin(Math.PI / 12)'), 3.1058), outer = must(r4('12 * Math.tan(Math.PI / 12)'), 3.2154);
+    const lo = must(r4('223 / 71'), 3.1408), hi = must(r4('22 / 7'), 3.1429);
+    const pi4 = must(r4('Math.PI'), 3.1416);
+    if (!(lo < pi4 && pi4 < hi && inner < lo && hi < outer)) throw new Error('sai thứ tự kẹp');
+    if (!(96 * Math.sin(Math.PI / 96) > 223 / 71 && 96 * Math.tan(Math.PI / 96) < 22 / 7)) throw new Error('sai: 96-giác không nằm trong khoảng Archimedes');
+    surf();
+    const F = figure('pose-compass', 1612, 1080, 760);
+    const cx = 905, cy = 560, R = 290, n = 12, Ro = R / Math.cos(Math.PI / n);
+    theCircle(cx, cy, R, 24);
+    cord(poly(cx, cy, Ro, n, -Math.PI / 2 + Math.PI / n), C.shade);                 // ngoài: đỉnh lệch nửa bước để cạnh tiếp tuyến
+    cord(poly(cx, cy, R, n), C.rope);
+    for (let k = 0; k < n; k++) { const a = -Math.PI / 2 + (k + 0.5) / n * 2 * Math.PI; pebble(cx + Ro * Math.cos(a), cy + Ro * Math.sin(a), 6.5, k + 70, ['#7C8792', '#2A323B']); }
+    for (let k = 0; k < n; k++) { const a = -Math.PI / 2 + k / n * 2 * Math.PI; pebble(cx + R * Math.cos(a), cy + R * Math.sin(a), 7, k + 40, ['#F3EEE4', '#9A9283']); }
+    pebble(cx, cy, 7, 3, ['#5E6670', '#22282F']);
+    // nhãn trái: chu vi / đường kính của hai đa giác, nối bằng vạch que đứt
+    const ao = Math.PI + Math.PI / n * 2, ai = Math.PI - Math.PI / n * 3;                     // điểm neo trên cạnh ngoài/trong
+    label('outside · 12 sides', 96, 330, C.shade); scrawl(outer.toFixed(4), 96, 400, `600 66px ${CG}`, C.shade);
+    dashed(line([[330, 380], [cx + R * 1.02 * Math.cos(ao), cy + R * 1.02 * Math.sin(ao)]]));
+    label('inside · 12 sides', 96, 690, C.rope); scrawl(inner.toFixed(4), 96, 760, `600 66px ${CG}`, C.rope);
+    dashed(line([[330, 740], [cx + R * 0.93 * Math.cos(ai), cy + R * 0.93 * Math.sin(ai)]]));
+    label('the circle', 96, 510, C.murex); scrawl('caught between', 96, 570, `italic 600 46px ${CG}`, C.murex);
+    // tiêu đề
+    scrawl('Trap the circle between', 96, 176, `italic 600 62px ${CG}`);
+    scrawl('two numbers you can measure.', 96, 240, `italic 600 62px ${CG}`);
+    // chuỗi nhân đôi cạnh: các đa giác nhỏ ấn vào cát, tới 96
+    const row = [6, 12, 24, 48, 96], ry = 176;
+    row.forEach((m, k) => { const x = 940 + k * 78, y = ry - 18, r = 24;
+      groove(poly(x, y, r, m), m === 96 ? 5 : 4, { depth: 0.8, trough: m === 96 ? C.murex : undefined });
+      label(String(m), x, y + 62, m === 96 ? C.murex : C.ink, 'center', 22); });
+    label('sides', 940 + 4 * 78 + 52, ry + 44, C.ink, 'left', 22);
+    // kết luận: khoảng kẹp của Archimedes ở 96 cạnh
+    label('archimedes, 96 sides', 96, 902);
+    let x = 96; const big = `600 76px ${CG}`, sm = `500 40px ${CG}`;
+    x += scrawl('223/71', x, 990, sm) + 12; x += scrawl(`≈ ${lo.toFixed(4)}`, x, 990, big) + 26;
+    x += scrawl('<', x, 990, big) + 26; x += scrawl('π', x, 990, `600 92px ${CG}`, C.murex) + 26;
+    x += scrawl('<', x, 990, big) + 26; x += scrawl('22/7', x, 990, sm) + 12; scrawl(`≈ ${hi.toFixed(4)}`, x, 990, big);
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h] };
+  },
+  () => {                                              // 1 · Hồi 2: que gnomon ở tâm, bóng quay theo mặt trời; bóng của điểm theo thời gian = sóng sin
+    surf();
+    const F = figure('pose-spin', 300, 1080, 640, 0.45);
+    const tip = [F.x + F.w * 0.205, F.y + F.h * 0.205];
+    // vệt quay quanh đầu ngón: ba cung rãnh nhỏ thuôn dần + mũi tên
+    { const oc = [tip[0], tip[1] - 62], sp = []; for (let a = 0; a <= 1.75 * 2 * Math.PI; a += 0.05) { const rr = 26 + a * 4.2; sp.push([oc[0] + rr * Math.cos(-a + 1.2), oc[1] + rr * 0.42 * Math.sin(-a + 1.2)]); }
+      groove(line(sp), 5, { depth: 0.6, trough: C.ink });                                       // vệt xoáy hình elip quanh đầu ngón
+      const [ax, ay] = sp[sp.length - 1], [bx, by] = sp[sp.length - 4], an = Math.atan2(ay - by, ax - bx);
+      groove(line([[ax - 18 * Math.cos(an - 0.5), ay - 18 * Math.sin(an - 0.5)], [ax, ay], [ax - 18 * Math.cos(an + 0.5), ay - 18 * Math.sin(an + 0.5)]]), 5, { depth: 0.6, trough: C.ink }); }
+    const cx = 850, cy = 600, R = 220, th = 11 * Math.PI / 6, s = must(r4('Math.sin(11 * Math.PI / 6)'), -0.5);
+    const deg = must('Math.round(11 * 180 / 6)', 330);
+    const px = cx + R * Math.cos(th), py = cy - R * Math.sin(th);
+    // trục và vạch đo
+    groove(line([[cx - R - 40, cy], [cx + R + 40, cy]]), 4, { depth: 0.6 });
+    const wx0 = 1190, wx1 = 1770, per = wx1 - wx0, X = a => wx0 + a / (2 * Math.PI) * per;
+    groove(line([[wx0, cy], [wx1 + 20, cy]]), 4, { depth: 0.6 });
+    groove(line([[wx0, cy - R - 20], [wx0, cy + R + 20]]), 4, { depth: 0.6 });
+    // nửa vòng = π: cung murex ấn ngay trong rãnh (0 → π, phía trên)
+    theCircle(cx, cy, R);
+    groove(circ(cx, cy, R, 0, Math.PI, true), 9, { depth: 0.6, trough: C.murex });
+    scrawl('π', cx, cy - R - 34, `600 96px ${CG}`, C.murex, 'center');
+    label('half a turn', cx + 52, cy - R - 54, C.murex, 'left');
+    // bán kính 1 và bóng gnomon tới điểm
+    groove(line([[cx, cy], [cx + R, cy]]), 5, { depth: 0.7 });
+    scrawl('1', cx + R / 2, cy + 46, `600 46px ${CG}`, C.ink, 'center');
+    g.save(); g.fillStyle = 'rgba(31,53,80,0.55)'; g.beginPath(); const nx = -(py - cy) / R, ny = (px - cx) / R;
+    g.moveTo(cx + nx * 6, cy + ny * 6); g.lineTo(px, py); g.lineTo(cx - nx * 6, cy - ny * 6); g.fill(); g.restore();
+    pebble(cx, cy, 8, 5, ['#8E7A5E', '#3A2E20']);                                              // chân que gnomon
+    g.save(); g.lineCap = 'round'; g.strokeStyle = '#5A3B1E'; g.lineWidth = 9; g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx - 8, cy - 70); g.stroke();
+    g.strokeStyle = 'rgba(255,230,180,0.6)'; g.lineWidth = 2.5; g.beginPath(); g.moveTo(cx - 3, cy - 4); g.lineTo(cx - 10, cy - 68); g.stroke(); g.restore();
+    label('the sun’s shadow', cx - 150, cy + 128, C.ink, 'left', 22);
+    // sóng: đầu bóng theo thời gian, đã vẽ tới θ; phần còn lại là chấm sỏi mờ
+    const wave = []; for (let a = 0; a <= th + 1e-9; a += 0.02) wave.push([X(a), cy - R * Math.sin(a)]); wave.push([X(th), cy - R * Math.sin(th)]);
+    groove(line(wave), 10, { depth: 1 });
+    for (let a = th + 0.18; a <= 2 * Math.PI; a += 0.18) pebble(X(a), cy - R * Math.sin(a), 3, Math.round(a * 50), ['#C9B08A', '#8A7556']);
+    const wy = cy - R * s;
+    dashed(line([[px + 16, py], [X(th) - 16, wy]]), 4);
+    pebble(px, py, 13, 7, ['#FFFFFF', '#9C9384']); pebble(X(th), wy, 13, 8, ['#FFFFFF', '#9C9384']);
+    // vạch trên trục thời gian
+    [[Math.PI, 'π'], [2 * Math.PI, '2π']].forEach(([a, t]) => { groove(line([[X(a), cy - 14], [X(a), cy + 14]]), 4, { depth: 0.6 });
+      scrawl(t, X(a) - (t === 'π' ? 34 : 0), cy + 66, `600 50px ${CG}`, t === 'π' ? C.murex : C.ink, 'center'); });
+    label('time →', wx1 + 4, cy - 26, C.ink, 'right', 22);
+    label(`shadow = sin ${deg}° = ${String(s).replace('-', '−')}`, wx1 + 20, cy + R + 76, C.ink, 'right', 22);
+    // tiêu đề
+    scrawl('Half a turn is π.', 96, 176, `italic 600 76px ${CG}`);
+    scrawl('Watch only the shadow — over time it draws a wave.', 96, 246, `italic 500 46px ${CG}`);
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], tip };
+  },
+];
+
+(async () => {
+  await Promise.all(['italic 600 62px', 'italic 600 76px', 'italic 500 46px', '600 66px', '600 76px', '600 92px', '600 96px', '600 46px', '600 50px', '500 40px']
+    .map(f => document.fonts.load(`${f} ${CG}`)).concat(['500 24px', '500 22px'].map(f => document.fonts.load(`${f} ${MONO}`))));
+  await Promise.all(['pose-compass', 'pose-spin'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../../assets/character-v2/cut/${p}.png`; })));
+  SAND = sand(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(SAND, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

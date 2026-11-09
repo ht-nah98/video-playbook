@@ -1,0 +1,48 @@
+{
+ "_note": "Video gốc của từng bài học (tra YouTube Data API 2026-10-23, khớp kênh + độ dài ±1 s). 08 = 6 video hướng dẫn Alan Becker + nguồn web, không gắn một link.",
+ "00": {
+  "video": "UXk8T9fpcWQ",
+  "title": "Bản chất thật của số Pi",
+  "channel": "median"
+ },
+ "01": {
+  "video": "5zu8s38ZwtQ",
+  "title": "How MrBeast Solved YouTube (Retention)",
+  "channel": "Aprilynne Alter"
+ },
+ "02": {
+  "video": "KE4zqD0ONDI",
+  "title": "give me 9 minutes, I'll make your thumbnails 81% better",
+  "channel": "Aprilynne Alter"
+ },
+ "03": {
+  "video": "eRWyf-oDdCI",
+  "title": "how to make an EVEN MORE killer youtube intro",
+  "channel": "Aprilynne Alter"
+ },
+ "04": {
+  "video": "5wvmDSMH9AM",
+  "title": "I Watched Every MrBeast Interview (here's his top YouTube advice)",
+  "channel": "Aprilynne Alter"
+ },
+ "05": {
+  "video": "mOFJLBV0LbM",
+  "title": "Stuck in \"The YouTube Dip\"? Watch this video",
+  "channel": "Aprilynne Alter"
+ },
+ "06": {
+  "video": "VEJWE6cpqw0",
+  "title": "Animation vs. Geometry",
+  "channel": "Alan Becker"
+ },
+ "07": {
+  "video": "ptPvraS02Eg",
+  "title": "Giải tích là gì?",
+  "channel": "median"
+ },
+ "10": {
+  "video": "B1J6Ou4q8vE",
+  "title": "Animation vs. Math",
+  "channel": "Alan Becker"
+ }
+}

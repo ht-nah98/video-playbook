@@ -1,0 +1,10454 @@
+{
+ "sections": [
+  {
+   "name": "A bowl",
+   "act": "ACT ONE — Two points",
+   "start": 0.02,
+   "end": 19.643
+  },
+  {
+   "name": "The secant",
+   "act": "ACT ONE — Two points",
+   "start": 19.643,
+   "end": 41.704
+  },
+  {
+   "name": "An average",
+   "act": "ACT ONE — Two points",
+   "start": 41.704,
+   "end": 57.827
+  },
+  {
+   "name": "Sliding in",
+   "act": "ACT TWO — Closer and closer",
+   "start": 57.827,
+   "end": 82.816
+  },
+  {
+   "name": "Lining up",
+   "act": "ACT TWO — Closer and closer",
+   "start": 82.816,
+   "end": 94.321
+  },
+  {
+   "name": "The line turns",
+   "act": "ACT TWO — Closer and closer",
+   "start": 94.321,
+   "end": 106.728
+  },
+  {
+   "name": "The tangent",
+   "act": "ACT TWO — Closer and closer",
+   "start": 106.728,
+   "end": 131.725
+  },
+  {
+   "name": "Where it's heading",
+   "act": "ACT THREE — The hole",
+   "start": 131.725,
+   "end": 154.23
+  },
+  {
+   "name": "Sneaking up",
+   "act": "ACT THREE — The hole",
+   "start": 154.23,
+   "end": 175.886
+  },
+  {
+   "name": "A hole in the line",
+   "act": "ACT THREE — The hole",
+   "start": 175.886,
+   "end": 196.286
+  },
+  {
+   "name": "Back to the bowl",
+   "act": "ACT FOUR — The derivative",
+   "start": 196.286,
+   "end": 223.281
+  },
+  {
+   "name": "Every point at once",
+   "act": "ACT FOUR — The derivative",
+   "start": 223.281,
+   "end": 244.701
+  },
+  {
+   "name": "The speedometer",
+   "act": "ACT FOUR — The derivative",
+   "start": 244.701,
+   "end": 275.64
+  },
+  {
+   "name": "The area under the bowl",
+   "act": "ACT FIVE — Adding up thin slices",
+   "start": 275.64,
+   "end": 291.663
+  },
+  {
+   "name": "Four strips",
+   "act": "ACT FIVE — Adding up thin slices",
+   "start": 291.663,
+   "end": 313.684
+  },
+  {
+   "name": "Thinner and thinner",
+   "act": "ACT FIVE — Adding up thin slices",
+   "start": 313.684,
+   "end": 344.613
+  },
+  {
+   "name": "Archimedes",
+   "act": "ACT FIVE — Adding up thin slices",
+   "start": 344.613,
+   "end": 358.81
+  },
+  {
+   "name": "The growing area",
+   "act": "ACT SIX — Two sides of one coin",
+   "start": 358.81,
+   "end": 388.705
+  },
+  {
+   "name": "Check it",
+   "act": "ACT SIX — Two sides of one coin",
+   "start": 388.705,
+   "end": 401.193
+  },
+  {
+   "name": "The car, again",
+   "act": "ACT SIX — Two sides of one coin",
+   "start": 401.193,
+   "end": 417.682
+  },
+  {
+   "name": "Putting it together",
+   "act": "ACT SEVEN — Putting it together",
+   "start": 417.682,
+   "end": 440.191
+  },
+  {
+   "name": "Next time",
+   "act": "ACT SEVEN — Putting it together",
+   "start": 440.191,
+   "end": 459.056
+  }
+ ],
+ "lines": [
+  {
+   "section": "A bowl",
+   "act": "ACT ONE — Two points",
+   "text": "Take a curve you've probably met before: y equals x squared.",
+   "idea": false,
+   "start": 0.02,
+   "end": 2.853,
+   "words": [
+    {
+     "w": "take",
+     "start": 0.02,
+     "end": 0.161,
+     "conf": 0.81
+    },
+    {
+     "w": "a",
+     "start": 0.181,
+     "end": 0.201,
+     "conf": 0.982
+    },
+    {
+     "w": "curve",
+     "start": 0.261,
+     "end": 0.563,
+     "conf": 0.547
+    },
+    {
+     "w": "you've",
+     "start": 0.583,
+     "end": 0.703,
+     "conf": 0.509
+    },
+    {
+     "w": "probably",
+     "start": 0.723,
+     "end": 1.005,
+     "conf": 0.996
+    },
+    {
+     "w": "met",
+     "start": 1.085,
+     "end": 1.185,
+     "conf": 0.661
+    },
+    {
+     "w": "before",
+     "start": 1.246,
+     "end": 1.567,
+     "conf": 0.842
+    },
+    {
+     "w": "y",
+     "start": 2.029,
+     "end": 2.049,
+     "conf": 0.993
+    },
+    {
+     "w": "equals",
+     "start": 2.13,
+     "end": 2.331,
+     "conf": 0.329
+    },
+    {
+     "w": "x",
+     "start": 2.431,
+     "end": 2.451,
+     "conf": 0.971
+    },
+    {
+     "w": "squared",
+     "start": 2.471,
+     "end": 2.853,
+     "conf": 0.767
+    }
+   ]
+  },
+  {
+   "section": "A bowl",
+   "act": "ACT ONE — Two points",
+   "text": "It's shaped like a bowl, sitting the right way up. It comes down, flattens out at the bottom, and climbs again.",
+   "idea": false,
+   "start": 3.263,
+   "end": 8.733,
+   "words": [
+    {
+     "w": "it's",
+     "start": 3.263,
+     "end": 3.383,
+     "conf": 0.499
+    },
+    {
+     "w": "shaped",
+     "start": 3.403,
+     "end": 3.624,
+     "conf": 0.904
+    },
+    {
+     "w": "like",
+     "start": 3.644,
+     "end": 3.764,
+     "conf": 0.946
+    },
+    {
+     "w": "a",
+     "start": 3.784,
+     "end": 3.804,
+     "conf": 0.996
+    },
+    {
+     "w": "bowl",
+     "start": 3.884,
+     "end": 4.165,
+     "conf": 0.712
+    },
+    {
+     "w": "sitting",
+     "start": 4.485,
+     "end": 4.746,
+     "conf": 0.852
+    },
+    {
+     "w": "the",
+     "start": 4.766,
+     "end": 4.826,
+     "conf": 0.955
+    },
+    {
+     "w": "right",
+     "start": 4.926,
+     "end": 5.147,
+     "conf": 0.892
+    },
+    {
+     "w": "way",
+     "start": 5.167,
+     "end": 5.307,
+     "conf": 0.998
+    },
+    {
+     "w": "up",
+     "start": 5.407,
+     "end": 5.507,
+     "conf": 0.5
+    },
+    {
+     "w": "it",
+     "start": 5.888,
+     "end": 5.968,
+     "conf": 0.976
+    },
+    {
+     "w": "comes",
+     "start": 6.309,
+     "end": 6.489,
+     "conf": 0.798
+    },
+    {
+     "w": "down",
+     "start": 6.509,
+     "end": 6.73,
+     "conf": 0.77
+    },
+    {
+     "w": "flattens",
+     "start": 6.91,
+     "end": 7.271,
+     "conf": 0.761
+    },
+    {
+     "w": "out",
+     "start": 7.291,
+     "end": 7.351,
+     "conf": 0.001
+    },
+    {
+     "w": "at",
+     "start": 7.371,
+     "end": 7.411,
+     "conf": 0.471
+    },
+    {
+     "w": "the",
+     "start": 7.431,
+     "end": 7.491,
+     "conf": 0.997
+    },
+    {
+     "w": "bottom",
+     "start": 7.511,
+     "end": 7.752,
+     "conf": 0.846
+    },
+    {
+     "w": "and",
+     "start": 8.052,
+     "end": 8.112,
+     "conf": 0.663
+    },
+    {
+     "w": "climbs",
+     "start": 8.132,
+     "end": 8.413,
+     "conf": 0.725
+    },
+    {
+     "w": "again",
+     "start": 8.513,
+     "end": 8.733,
+     "conf": 0.925
+    }
+   ]
+  },
+  {
+   "section": "A bowl",
+   "act": "ACT ONE — Two points",
+   "text": "Our walker stands on the right-hand side, at the point where x is one. One squared is one, so the point is one, one.",
+   "idea": false,
+   "start": 9.204,
+   "end": 14.779,
+   "words": [
+    {
+     "w": "our",
+     "start": 9.204,
+     "end": 9.284,
+     "conf": 0.222
+    },
+    {
+     "w": "walker",
+     "start": 9.324,
+     "end": 9.625,
+     "conf": 0.783
+    },
+    {
+     "w": "stands",
+     "start": 9.706,
+     "end": 9.966,
+     "conf": 0.912
+    },
+    {
+     "w": "on",
+     "start": 9.986,
+     "end": 10.046,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 10.066,
+     "end": 10.127,
+     "conf": 0.991
+    },
+    {
+     "w": "right-hand",
+     "start": 10.147,
+     "end": 10.528,
+     "conf": 0.908
+    },
+    {
+     "w": "side",
+     "start": 10.588,
+     "end": 10.829,
+     "conf": 0.999
+    },
+    {
+     "w": "at",
+     "start": 10.849,
+     "end": 10.909,
+     "conf": 0.993
+    },
+    {
+     "w": "the",
+     "start": 10.929,
+     "end": 10.989,
+     "conf": 0.991
+    },
+    {
+     "w": "point",
+     "start": 11.049,
+     "end": 11.23,
+     "conf": 0.81
+    },
+    {
+     "w": "where",
+     "start": 11.25,
+     "end": 11.41,
+     "conf": 0.748
+    },
+    {
+     "w": "x",
+     "start": 11.591,
+     "end": 11.611,
+     "conf": 0.993
+    },
+    {
+     "w": "is",
+     "start": 11.771,
+     "end": 11.811,
+     "conf": 0.476
+    },
+    {
+     "w": "one",
+     "start": 12.032,
+     "end": 12.112,
+     "conf": 0.639
+    },
+    {
+     "w": "one",
+     "start": 12.774,
+     "end": 12.874,
+     "conf": 0.457
+    },
+    {
+     "w": "squared",
+     "start": 12.934,
+     "end": 13.215,
+     "conf": 0.621
+    },
+    {
+     "w": "is",
+     "start": 13.275,
+     "end": 13.335,
+     "conf": 0.366
+    },
+    {
+     "w": "one",
+     "start": 13.456,
+     "end": 13.596,
+     "conf": 0.416
+    },
+    {
+     "w": "so",
+     "start": 13.696,
+     "end": 13.756,
+     "conf": 0.316
+    },
+    {
+     "w": "the",
+     "start": 13.817,
+     "end": 13.877,
+     "conf": 0.312
+    },
+    {
+     "w": "point",
+     "start": 13.897,
+     "end": 14.097,
+     "conf": 0.794
+    },
+    {
+     "w": "is",
+     "start": 14.177,
+     "end": 14.218,
+     "conf": 0.274
+    },
+    {
+     "w": "one",
+     "start": 14.238,
+     "end": 14.498,
+     "conf": 0.24
+    },
+    {
+     "w": "one",
+     "start": 14.518,
+     "end": 14.779,
+     "conf": 0.244
+    }
+   ]
+  },
+  {
+   "section": "A bowl",
+   "act": "ACT ONE — Two points",
+   "text": "And that's our question. How steep is the curve, right here?",
+   "idea": true,
+   "start": 15.189,
+   "end": 18.003,
+   "words": [
+    {
+     "w": "and",
+     "start": 15.189,
+     "end": 15.249,
+     "conf": 0.99
+    },
+    {
+     "w": "that's",
+     "start": 15.27,
+     "end": 15.43,
+     "conf": 0.632
+    },
+    {
+     "w": "our",
+     "start": 15.491,
+     "end": 15.551,
+     "conf": 0.372
+    },
+    {
+     "w": "question",
+     "start": 15.611,
+     "end": 15.993,
+     "conf": 0.88
+    },
+    {
+     "w": "how",
+     "start": 16.476,
+     "end": 16.576,
+     "conf": 0.997
+    },
+    {
+     "w": "steep",
+     "start": 16.697,
+     "end": 16.938,
+     "conf": 0.792
+    },
+    {
+     "w": "is",
+     "start": 17.059,
+     "end": 17.139,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 17.159,
+     "end": 17.26,
+     "conf": 0.749
+    },
+    {
+     "w": "curve",
+     "start": 17.28,
+     "end": 17.601,
+     "conf": 0.858
+    },
+    {
+     "w": "right",
+     "start": 17.662,
+     "end": 17.822,
+     "conf": 0.965
+    },
+    {
+     "w": "here",
+     "start": 17.843,
+     "end": 18.003,
+     "conf": 0.827
+    }
+   ]
+  },
+  {
+   "section": "The secant",
+   "act": "ACT ONE — Two points",
+   "text": "We don't know how to handle a single point yet, so let's cheat, and take a second one, where x is two. Two squared is four.",
+   "idea": false,
+   "start": 19.643,
+   "end": 25.331,
+   "words": [
+    {
+     "w": "we",
+     "start": 19.643,
+     "end": 19.683,
+     "conf": 0.014
+    },
+    {
+     "w": "don't",
+     "start": 19.703,
+     "end": 19.823,
+     "conf": 0.596
+    },
+    {
+     "w": "know",
+     "start": 19.843,
+     "end": 19.943,
+     "conf": 0.965
+    },
+    {
+     "w": "how",
+     "start": 19.963,
+     "end": 20.064,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 20.084,
+     "end": 20.144,
+     "conf": 0.999
+    },
+    {
+     "w": "handle",
+     "start": 20.164,
+     "end": 20.364,
+     "conf": 0.998
+    },
+    {
+     "w": "a",
+     "start": 20.424,
+     "end": 20.444,
+     "conf": 0.001
+    },
+    {
+     "w": "single",
+     "start": 20.464,
+     "end": 20.725,
+     "conf": 0.873
+    },
+    {
+     "w": "point",
+     "start": 20.745,
+     "end": 20.945,
+     "conf": 0.883
+    },
+    {
+     "w": "yet",
+     "start": 20.965,
+     "end": 21.125,
+     "conf": 0.75
+    },
+    {
+     "w": "so",
+     "start": 21.225,
+     "end": 21.265,
+     "conf": 0.5
+    },
+    {
+     "w": "let's",
+     "start": 21.385,
+     "end": 21.546,
+     "conf": 0.601
+    },
+    {
+     "w": "cheat",
+     "start": 21.666,
+     "end": 21.866,
+     "conf": 0.696
+    },
+    {
+     "w": "and",
+     "start": 22.126,
+     "end": 22.187,
+     "conf": 0.344
+    },
+    {
+     "w": "take",
+     "start": 22.207,
+     "end": 22.387,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 22.407,
+     "end": 22.427,
+     "conf": 0.997
+    },
+    {
+     "w": "second",
+     "start": 22.507,
+     "end": 22.727,
+     "conf": 0.828
+    },
+    {
+     "w": "one",
+     "start": 22.807,
+     "end": 22.928,
+     "conf": 0.666
+    },
+    {
+     "w": "where",
+     "start": 23.068,
+     "end": 23.208,
+     "conf": 0.761
+    },
+    {
+     "w": "x",
+     "start": 23.388,
+     "end": 23.408,
+     "conf": 0.998
+    },
+    {
+     "w": "is",
+     "start": 23.548,
+     "end": 23.588,
+     "conf": 0.003
+    },
+    {
+     "w": "two",
+     "start": 23.608,
+     "end": 23.669,
+     "conf": 0.001
+    },
+    {
+     "w": "two",
+     "start": 23.689,
+     "end": 23.869,
+     "conf": 0.747
+    },
+    {
+     "w": "squared",
+     "start": 23.889,
+     "end": 24.93,
+     "conf": 0.0
+    },
+    {
+     "w": "is",
+     "start": 24.95,
+     "end": 25.05,
+     "conf": 0.001
+    },
+    {
+     "w": "four",
+     "start": 25.07,
+     "end": 25.331,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "The secant",
+   "act": "ACT ONE — Two points",
+   "text": "Join the two points with a straight line. A line that cuts through two points of a curve like this is called a secant.",
+   "idea": false,
+   "start": 25.741,
+   "end": 31.305,
+   "words": [
+    {
+     "w": "join",
+     "start": 25.741,
+     "end": 25.982,
+     "conf": 0.855
+    },
+    {
+     "w": "the",
+     "start": 26.022,
+     "end": 26.083,
+     "conf": 0.993
+    },
+    {
+     "w": "two",
+     "start": 26.123,
+     "end": 26.283,
+     "conf": 0.746
+    },
+    {
+     "w": "points",
+     "start": 26.344,
+     "end": 26.625,
+     "conf": 0.85
+    },
+    {
+     "w": "with",
+     "start": 26.645,
+     "end": 26.786,
+     "conf": 0.747
+    },
+    {
+     "w": "a",
+     "start": 26.846,
+     "end": 26.866,
+     "conf": 0.001
+    },
+    {
+     "w": "straight",
+     "start": 26.966,
+     "end": 27.248,
+     "conf": 0.767
+    },
+    {
+     "w": "line",
+     "start": 27.328,
+     "end": 27.589,
+     "conf": 0.751
+    },
+    {
+     "w": "a",
+     "start": 27.951,
+     "end": 27.971,
+     "conf": 0.007
+    },
+    {
+     "w": "line",
+     "start": 27.991,
+     "end": 28.212,
+     "conf": 0.378
+    },
+    {
+     "w": "that",
+     "start": 28.232,
+     "end": 28.312,
+     "conf": 0.998
+    },
+    {
+     "w": "cuts",
+     "start": 28.332,
+     "end": 28.573,
+     "conf": 0.823
+    },
+    {
+     "w": "through",
+     "start": 28.594,
+     "end": 28.794,
+     "conf": 0.828
+    },
+    {
+     "w": "two",
+     "start": 28.855,
+     "end": 29.076,
+     "conf": 0.708
+    },
+    {
+     "w": "points",
+     "start": 29.156,
+     "end": 29.477,
+     "conf": 0.851
+    },
+    {
+     "w": "of",
+     "start": 29.538,
+     "end": 29.578,
+     "conf": 0.498
+    },
+    {
+     "w": "a",
+     "start": 29.598,
+     "end": 29.618,
+     "conf": 0.995
+    },
+    {
+     "w": "curve",
+     "start": 29.718,
+     "end": 29.96,
+     "conf": 0.739
+    },
+    {
+     "w": "like",
+     "start": 30.0,
+     "end": 30.16,
+     "conf": 0.872
+    },
+    {
+     "w": "this",
+     "start": 30.181,
+     "end": 30.381,
+     "conf": 0.999
+    },
+    {
+     "w": "is",
+     "start": 30.482,
+     "end": 30.542,
+     "conf": 0.499
+    },
+    {
+     "w": "called",
+     "start": 30.562,
+     "end": 30.783,
+     "conf": 0.926
+    },
+    {
+     "w": "a",
+     "start": 30.823,
+     "end": 30.843,
+     "conf": 0.027
+    },
+    {
+     "w": "secant",
+     "start": 30.944,
+     "end": 31.305,
+     "conf": 0.514
+    }
+   ]
+  },
+  {
+   "section": "The secant",
+   "act": "ACT ONE — Two points",
+   "text": "Its steepness is easy. From one to two, the curve rises from one to four, so the rise is three, and the run is one.",
+   "idea": false,
+   "start": 31.736,
+   "end": 37.087,
+   "words": [
+    {
+     "w": "its",
+     "start": 31.736,
+     "end": 31.816,
+     "conf": 0.836
+    },
+    {
+     "w": "steepness",
+     "start": 31.936,
+     "end": 32.277,
+     "conf": 0.889
+    },
+    {
+     "w": "is",
+     "start": 32.317,
+     "end": 32.397,
+     "conf": 0.996
+    },
+    {
+     "w": "easy",
+     "start": 32.458,
+     "end": 32.658,
+     "conf": 0.999
+    },
+    {
+     "w": "from",
+     "start": 32.979,
+     "end": 33.079,
+     "conf": 0.76
+    },
+    {
+     "w": "one",
+     "start": 33.179,
+     "end": 33.259,
+     "conf": 0.616
+    },
+    {
+     "w": "to",
+     "start": 33.279,
+     "end": 33.359,
+     "conf": 0.95
+    },
+    {
+     "w": "two",
+     "start": 33.44,
+     "end": 33.66,
+     "conf": 0.213
+    },
+    {
+     "w": "the",
+     "start": 33.68,
+     "end": 33.86,
+     "conf": 0.658
+    },
+    {
+     "w": "curve",
+     "start": 33.921,
+     "end": 34.121,
+     "conf": 0.504
+    },
+    {
+     "w": "rises",
+     "start": 34.141,
+     "end": 34.442,
+     "conf": 0.844
+    },
+    {
+     "w": "from",
+     "start": 34.462,
+     "end": 34.582,
+     "conf": 0.921
+    },
+    {
+     "w": "one",
+     "start": 34.682,
+     "end": 34.762,
+     "conf": 0.561
+    },
+    {
+     "w": "to",
+     "start": 34.782,
+     "end": 34.843,
+     "conf": 0.93
+    },
+    {
+     "w": "four",
+     "start": 34.863,
+     "end": 35.123,
+     "conf": 0.271
+    },
+    {
+     "w": "so",
+     "start": 35.283,
+     "end": 35.324,
+     "conf": 0.496
+    },
+    {
+     "w": "the",
+     "start": 35.384,
+     "end": 35.444,
+     "conf": 0.682
+    },
+    {
+     "w": "rise",
+     "start": 35.464,
+     "end": 35.704,
+     "conf": 0.818
+    },
+    {
+     "w": "is",
+     "start": 35.724,
+     "end": 35.785,
+     "conf": 0.496
+    },
+    {
+     "w": "three",
+     "start": 35.885,
+     "end": 36.105,
+     "conf": 0.584
+    },
+    {
+     "w": "and",
+     "start": 36.386,
+     "end": 36.506,
+     "conf": 0.69
+    },
+    {
+     "w": "the",
+     "start": 36.526,
+     "end": 36.586,
+     "conf": 0.983
+    },
+    {
+     "w": "run",
+     "start": 36.646,
+     "end": 36.767,
+     "conf": 0.73
+    },
+    {
+     "w": "is",
+     "start": 36.827,
+     "end": 36.887,
+     "conf": 0.499
+    },
+    {
+     "w": "one",
+     "start": 37.007,
+     "end": 37.087,
+     "conf": 0.635
+    }
+   ]
+  },
+  {
+   "section": "The secant",
+   "act": "ACT ONE — Two points",
+   "text": "Three divided by one. The secant has a slope of three.",
+   "idea": true,
+   "start": 37.477,
+   "end": 40.043,
+   "words": [
+    {
+     "w": "three",
+     "start": 37.477,
+     "end": 37.698,
+     "conf": 0.922
+    },
+    {
+     "w": "divided",
+     "start": 37.778,
+     "end": 38.099,
+     "conf": 0.845
+    },
+    {
+     "w": "by",
+     "start": 38.119,
+     "end": 38.239,
+     "conf": 0.996
+    },
+    {
+     "w": "one",
+     "start": 38.379,
+     "end": 38.52,
+     "conf": 0.632
+    },
+    {
+     "w": "the",
+     "start": 38.54,
+     "end": 38.66,
+     "conf": 0.651
+    },
+    {
+     "w": "secant",
+     "start": 38.82,
+     "end": 39.161,
+     "conf": 0.634
+    },
+    {
+     "w": "has",
+     "start": 39.221,
+     "end": 39.321,
+     "conf": 0.734
+    },
+    {
+     "w": "a",
+     "start": 39.362,
+     "end": 39.382,
+     "conf": 0.124
+    },
+    {
+     "w": "slope",
+     "start": 39.442,
+     "end": 39.682,
+     "conf": 0.98
+    },
+    {
+     "w": "of",
+     "start": 39.702,
+     "end": 39.763,
+     "conf": 0.994
+    },
+    {
+     "w": "three",
+     "start": 39.823,
+     "end": 40.043,
+     "conf": 0.896
+    }
+   ]
+  },
+  {
+   "section": "An average",
+   "act": "ACT ONE — Two points",
+   "text": "But three isn't our answer.",
+   "idea": false,
+   "start": 41.704,
+   "end": 42.806,
+   "words": [
+    {
+     "w": "but",
+     "start": 41.704,
+     "end": 41.766,
+     "conf": 0.413
+    },
+    {
+     "w": "three",
+     "start": 41.786,
+     "end": 42.031,
+     "conf": 0.762
+    },
+    {
+     "w": "isn't",
+     "start": 42.072,
+     "end": 42.296,
+     "conf": 0.802
+    },
+    {
+     "w": "our",
+     "start": 42.357,
+     "end": 42.459,
+     "conf": 0.984
+    },
+    {
+     "w": "answer",
+     "start": 42.5,
+     "end": 42.806,
+     "conf": 0.618
+    }
+   ]
+  },
+  {
+   "section": "An average",
+   "act": "ACT ONE — Two points",
+   "text": "It's the average steepness of the whole stretch from one to two, and along that stretch the curve keeps getting steeper.",
+   "idea": false,
+   "start": 43.216,
+   "end": 49.111,
+   "words": [
+    {
+     "w": "it's",
+     "start": 43.216,
+     "end": 43.296,
+     "conf": 0.598
+    },
+    {
+     "w": "the",
+     "start": 43.316,
+     "end": 43.376,
+     "conf": 0.993
+    },
+    {
+     "w": "average",
+     "start": 43.457,
+     "end": 43.798,
+     "conf": 0.917
+    },
+    {
+     "w": "steepness",
+     "start": 43.818,
+     "end": 44.279,
+     "conf": 0.834
+    },
+    {
+     "w": "of",
+     "start": 44.359,
+     "end": 44.399,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 44.419,
+     "end": 44.499,
+     "conf": 0.996
+    },
+    {
+     "w": "whole",
+     "start": 44.519,
+     "end": 44.72,
+     "conf": 0.989
+    },
+    {
+     "w": "stretch",
+     "start": 44.78,
+     "end": 45.141,
+     "conf": 0.962
+    },
+    {
+     "w": "from",
+     "start": 45.301,
+     "end": 45.442,
+     "conf": 0.767
+    },
+    {
+     "w": "one",
+     "start": 45.582,
+     "end": 45.722,
+     "conf": 0.606
+    },
+    {
+     "w": "to",
+     "start": 46.164,
+     "end": 46.224,
+     "conf": 0.552
+    },
+    {
+     "w": "two",
+     "start": 46.304,
+     "end": 46.464,
+     "conf": 0.395
+    },
+    {
+     "w": "and",
+     "start": 46.705,
+     "end": 46.785,
+     "conf": 0.668
+    },
+    {
+     "w": "along",
+     "start": 46.805,
+     "end": 47.066,
+     "conf": 0.999
+    },
+    {
+     "w": "that",
+     "start": 47.146,
+     "end": 47.307,
+     "conf": 0.615
+    },
+    {
+     "w": "stretch",
+     "start": 47.407,
+     "end": 47.708,
+     "conf": 0.803
+    },
+    {
+     "w": "the",
+     "start": 47.788,
+     "end": 47.848,
+     "conf": 0.733
+    },
+    {
+     "w": "curve",
+     "start": 47.868,
+     "end": 48.189,
+     "conf": 0.822
+    },
+    {
+     "w": "keeps",
+     "start": 48.209,
+     "end": 48.409,
+     "conf": 0.833
+    },
+    {
+     "w": "getting",
+     "start": 48.429,
+     "end": 48.73,
+     "conf": 0.832
+    },
+    {
+     "w": "steeper",
+     "start": 48.81,
+     "end": 49.111,
+     "conf": 0.821
+    }
+   ]
+  },
+  {
+   "section": "An average",
+   "act": "ACT ONE — Two points",
+   "text": "So that three has some of the steep part, far up the slope, mixed into it.",
+   "idea": false,
+   "start": 49.522,
+   "end": 52.984,
+   "words": [
+    {
+     "w": "so",
+     "start": 49.522,
+     "end": 49.583,
+     "conf": 0.999
+    },
+    {
+     "w": "that",
+     "start": 49.603,
+     "end": 49.744,
+     "conf": 0.799
+    },
+    {
+     "w": "three",
+     "start": 49.784,
+     "end": 50.025,
+     "conf": 0.931
+    },
+    {
+     "w": "has",
+     "start": 50.126,
+     "end": 50.267,
+     "conf": 0.975
+    },
+    {
+     "w": "some",
+     "start": 50.347,
+     "end": 50.488,
+     "conf": 0.748
+    },
+    {
+     "w": "of",
+     "start": 50.549,
+     "end": 50.589,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 50.609,
+     "end": 50.69,
+     "conf": 0.934
+    },
+    {
+     "w": "steep",
+     "start": 50.851,
+     "end": 51.092,
+     "conf": 0.794
+    },
+    {
+     "w": "part",
+     "start": 51.173,
+     "end": 51.434,
+     "conf": 0.798
+    },
+    {
+     "w": "far",
+     "start": 51.454,
+     "end": 51.636,
+     "conf": 0.75
+    },
+    {
+     "w": "up",
+     "start": 51.656,
+     "end": 51.716,
+     "conf": 0.996
+    },
+    {
+     "w": "the",
+     "start": 51.736,
+     "end": 51.837,
+     "conf": 0.773
+    },
+    {
+     "w": "slope",
+     "start": 51.877,
+     "end": 52.159,
+     "conf": 0.986
+    },
+    {
+     "w": "mixed",
+     "start": 52.4,
+     "end": 52.642,
+     "conf": 0.761
+    },
+    {
+     "w": "into",
+     "start": 52.722,
+     "end": 52.904,
+     "conf": 0.751
+    },
+    {
+     "w": "it",
+     "start": 52.924,
+     "end": 52.984,
+     "conf": 0.333
+    }
+   ]
+  },
+  {
+   "section": "An average",
+   "act": "ACT ONE — Two points",
+   "text": "To get rid of it, we need a shorter stretch.",
+   "idea": true,
+   "start": 53.374,
+   "end": 55.326,
+   "words": [
+    {
+     "w": "to",
+     "start": 53.374,
+     "end": 53.414,
+     "conf": 0.998
+    },
+    {
+     "w": "get",
+     "start": 53.435,
+     "end": 53.535,
+     "conf": 1.0
+    },
+    {
+     "w": "rid",
+     "start": 53.555,
+     "end": 53.716,
+     "conf": 0.616
+    },
+    {
+     "w": "of",
+     "start": 53.736,
+     "end": 53.797,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 53.857,
+     "end": 53.918,
+     "conf": 0.499
+    },
+    {
+     "w": "we",
+     "start": 54.179,
+     "end": 54.219,
+     "conf": 0.499
+    },
+    {
+     "w": "need",
+     "start": 54.28,
+     "end": 54.401,
+     "conf": 0.751
+    },
+    {
+     "w": "a",
+     "start": 54.421,
+     "end": 54.441,
+     "conf": 0.99
+    },
+    {
+     "w": "shorter",
+     "start": 54.602,
+     "end": 54.924,
+     "conf": 0.685
+    },
+    {
+     "w": "stretch",
+     "start": 55.004,
+     "end": 55.326,
+     "conf": 0.808
+    }
+   ]
+  },
+  {
+   "section": "Sliding in",
+   "act": "ACT TWO — Closer and closer",
+   "text": "So let's slide the second point back towards the first.",
+   "idea": false,
+   "start": 57.827,
+   "end": 60.464,
+   "words": [
+    {
+     "w": "so",
+     "start": 57.827,
+     "end": 57.888,
+     "conf": 0.995
+    },
+    {
+     "w": "let's",
+     "start": 57.928,
+     "end": 58.089,
+     "conf": 0.731
+    },
+    {
+     "w": "slide",
+     "start": 58.19,
+     "end": 58.532,
+     "conf": 0.719
+    },
+    {
+     "w": "the",
+     "start": 58.552,
+     "end": 58.733,
+     "conf": 0.654
+    },
+    {
+     "w": "second",
+     "start": 58.814,
+     "end": 59.055,
+     "conf": 0.838
+    },
+    {
+     "w": "point",
+     "start": 59.075,
+     "end": 59.317,
+     "conf": 0.964
+    },
+    {
+     "w": "back",
+     "start": 59.377,
+     "end": 59.599,
+     "conf": 0.779
+    },
+    {
+     "w": "towards",
+     "start": 59.74,
+     "end": 60.042,
+     "conf": 0.849
+    },
+    {
+     "w": "the",
+     "start": 60.082,
+     "end": 60.142,
+     "conf": 0.951
+    },
+    {
+     "w": "first",
+     "start": 60.162,
+     "end": 60.464,
+     "conf": 0.764
+    }
+   ]
+  },
+  {
+   "section": "Sliding in",
+   "act": "ACT TWO — Closer and closer",
+   "text": "At x equals one point five, y is two point two five. The rise is one point two five, the run is a half, and the slope is two point five.",
+   "idea": false,
+   "start": 60.874,
+   "end": 67.455,
+   "words": [
+    {
+     "w": "at",
+     "start": 60.874,
+     "end": 60.954,
+     "conf": 0.933
+    },
+    {
+     "w": "x",
+     "start": 61.055,
+     "end": 61.075,
+     "conf": 0.905
+    },
+    {
+     "w": "equals",
+     "start": 61.195,
+     "end": 61.356,
+     "conf": 0.319
+    },
+    {
+     "w": "one",
+     "start": 61.376,
+     "end": 61.536,
+     "conf": 0.003
+    },
+    {
+     "w": "point",
+     "start": 61.556,
+     "end": 61.737,
+     "conf": 0.003
+    },
+    {
+     "w": "five",
+     "start": 61.757,
+     "end": 62.499,
+     "conf": 0.022
+    },
+    {
+     "w": "y",
+     "start": 62.519,
+     "end": 62.539,
+     "conf": 0.0
+    },
+    {
+     "w": "is",
+     "start": 62.579,
+     "end": 62.66,
+     "conf": 0.727
+    },
+    {
+     "w": "two",
+     "start": 62.68,
+     "end": 62.88,
+     "conf": 0.002
+    },
+    {
+     "w": "point",
+     "start": 62.9,
+     "end": 63.101,
+     "conf": 0.001
+    },
+    {
+     "w": "two",
+     "start": 63.121,
+     "end": 63.282,
+     "conf": 0.0
+    },
+    {
+     "w": "five",
+     "start": 63.302,
+     "end": 63.683,
+     "conf": 0.001
+    },
+    {
+     "w": "the",
+     "start": 63.703,
+     "end": 64.225,
+     "conf": 0.662
+    },
+    {
+     "w": "rise",
+     "start": 64.285,
+     "end": 64.526,
+     "conf": 0.771
+    },
+    {
+     "w": "is",
+     "start": 64.546,
+     "end": 64.586,
+     "conf": 0.5
+    },
+    {
+     "w": "one",
+     "start": 64.606,
+     "end": 64.746,
+     "conf": 0.008
+    },
+    {
+     "w": "point",
+     "start": 64.766,
+     "end": 64.907,
+     "conf": 0.01
+    },
+    {
+     "w": "two",
+     "start": 64.927,
+     "end": 65.027,
+     "conf": 0.002
+    },
+    {
+     "w": "five",
+     "start": 65.047,
+     "end": 65.348,
+     "conf": 0.001
+    },
+    {
+     "w": "the",
+     "start": 65.368,
+     "end": 65.428,
+     "conf": 0.994
+    },
+    {
+     "w": "run",
+     "start": 65.449,
+     "end": 65.589,
+     "conf": 0.751
+    },
+    {
+     "w": "is",
+     "start": 65.609,
+     "end": 65.689,
+     "conf": 0.654
+    },
+    {
+     "w": "a",
+     "start": 65.749,
+     "end": 65.77,
+     "conf": 0.001
+    },
+    {
+     "w": "half",
+     "start": 65.79,
+     "end": 66.03,
+     "conf": 0.72
+    },
+    {
+     "w": "and",
+     "start": 66.351,
+     "end": 66.412,
+     "conf": 0.637
+    },
+    {
+     "w": "the",
+     "start": 66.432,
+     "end": 66.492,
+     "conf": 0.49
+    },
+    {
+     "w": "slope",
+     "start": 66.512,
+     "end": 66.793,
+     "conf": 0.837
+    },
+    {
+     "w": "is",
+     "start": 66.813,
+     "end": 66.853,
+     "conf": 0.502
+    },
+    {
+     "w": "two",
+     "start": 66.873,
+     "end": 67.013,
+     "conf": 0.187
+    },
+    {
+     "w": "point",
+     "start": 67.034,
+     "end": 67.214,
+     "conf": 0.009
+    },
+    {
+     "w": "five",
+     "start": 67.234,
+     "end": 67.455,
+     "conf": 0.006
+    }
+   ]
+  },
+  {
+   "section": "Sliding in",
+   "act": "ACT TWO — Closer and closer",
+   "text": "Closer. At one point one, y is one point two one. The rise is zero point two one, the run is zero point one. The slope is two point one.",
+   "idea": false,
+   "start": 67.845,
+   "end": 74.348,
+   "words": [
+    {
+     "w": "closer",
+     "start": 67.845,
+     "end": 68.246,
+     "conf": 0.814
+    },
+    {
+     "w": "at",
+     "start": 68.447,
+     "end": 68.507,
+     "conf": 0.973
+    },
+    {
+     "w": "one",
+     "start": 68.608,
+     "end": 68.708,
+     "conf": 0.724
+    },
+    {
+     "w": "point",
+     "start": 68.728,
+     "end": 68.909,
+     "conf": 0.735
+    },
+    {
+     "w": "one",
+     "start": 68.989,
+     "end": 69.089,
+     "conf": 0.225
+    },
+    {
+     "w": "y",
+     "start": 69.27,
+     "end": 69.29,
+     "conf": 0.114
+    },
+    {
+     "w": "is",
+     "start": 69.33,
+     "end": 69.391,
+     "conf": 0.55
+    },
+    {
+     "w": "one",
+     "start": 69.411,
+     "end": 69.591,
+     "conf": 0.23
+    },
+    {
+     "w": "point",
+     "start": 69.611,
+     "end": 69.792,
+     "conf": 0.386
+    },
+    {
+     "w": "two",
+     "start": 69.852,
+     "end": 70.013,
+     "conf": 0.069
+    },
+    {
+     "w": "one",
+     "start": 70.113,
+     "end": 70.254,
+     "conf": 0.384
+    },
+    {
+     "w": "the",
+     "start": 70.394,
+     "end": 70.454,
+     "conf": 0.643
+    },
+    {
+     "w": "rise",
+     "start": 70.535,
+     "end": 70.816,
+     "conf": 0.671
+    },
+    {
+     "w": "is",
+     "start": 70.876,
+     "end": 70.916,
+     "conf": 0.483
+    },
+    {
+     "w": "zero",
+     "start": 70.976,
+     "end": 71.157,
+     "conf": 0.235
+    },
+    {
+     "w": "point",
+     "start": 71.177,
+     "end": 71.398,
+     "conf": 0.133
+    },
+    {
+     "w": "two",
+     "start": 71.418,
+     "end": 71.699,
+     "conf": 0.067
+    },
+    {
+     "w": "one",
+     "start": 71.719,
+     "end": 71.819,
+     "conf": 0.11
+    },
+    {
+     "w": "the",
+     "start": 71.839,
+     "end": 72.0,
+     "conf": 0.616
+    },
+    {
+     "w": "run",
+     "start": 72.1,
+     "end": 72.241,
+     "conf": 0.612
+    },
+    {
+     "w": "is",
+     "start": 72.281,
+     "end": 72.341,
+     "conf": 0.489
+    },
+    {
+     "w": "zero",
+     "start": 72.361,
+     "end": 72.562,
+     "conf": 0.512
+    },
+    {
+     "w": "point",
+     "start": 72.582,
+     "end": 72.823,
+     "conf": 0.221
+    },
+    {
+     "w": "one",
+     "start": 72.843,
+     "end": 73.043,
+     "conf": 0.135
+    },
+    {
+     "w": "the",
+     "start": 73.064,
+     "end": 73.284,
+     "conf": 0.625
+    },
+    {
+     "w": "slope",
+     "start": 73.365,
+     "end": 73.605,
+     "conf": 0.732
+    },
+    {
+     "w": "is",
+     "start": 73.626,
+     "end": 73.686,
+     "conf": 0.503
+    },
+    {
+     "w": "two",
+     "start": 73.706,
+     "end": 73.886,
+     "conf": 0.118
+    },
+    {
+     "w": "point",
+     "start": 73.906,
+     "end": 74.147,
+     "conf": 0.137
+    },
+    {
+     "w": "one",
+     "start": 74.167,
+     "end": 74.348,
+     "conf": 0.156
+    }
+   ]
+  },
+  {
+   "section": "Sliding in",
+   "act": "ACT TWO — Closer and closer",
+   "text": "Closer still. At one point zero one, the slope is two point zero one.",
+   "idea": false,
+   "start": 74.738,
+   "end": 77.969,
+   "words": [
+    {
+     "w": "closer",
+     "start": 74.738,
+     "end": 75.059,
+     "conf": 0.744
+    },
+    {
+     "w": "still",
+     "start": 75.139,
+     "end": 75.34,
+     "conf": 0.825
+    },
+    {
+     "w": "at",
+     "start": 75.581,
+     "end": 75.621,
+     "conf": 0.49
+    },
+    {
+     "w": "one",
+     "start": 75.681,
+     "end": 75.802,
+     "conf": 0.725
+    },
+    {
+     "w": "point",
+     "start": 75.862,
+     "end": 76.063,
+     "conf": 0.747
+    },
+    {
+     "w": "zero",
+     "start": 76.083,
+     "end": 76.283,
+     "conf": 0.131
+    },
+    {
+     "w": "one",
+     "start": 76.303,
+     "end": 76.604,
+     "conf": 0.2
+    },
+    {
+     "w": "the",
+     "start": 76.624,
+     "end": 76.685,
+     "conf": 0.877
+    },
+    {
+     "w": "slope",
+     "start": 76.765,
+     "end": 76.986,
+     "conf": 0.641
+    },
+    {
+     "w": "is",
+     "start": 77.006,
+     "end": 77.086,
+     "conf": 0.735
+    },
+    {
+     "w": "two",
+     "start": 77.106,
+     "end": 77.307,
+     "conf": 0.602
+    },
+    {
+     "w": "point",
+     "start": 77.327,
+     "end": 77.528,
+     "conf": 0.719
+    },
+    {
+     "w": "zero",
+     "start": 77.548,
+     "end": 77.728,
+     "conf": 0.163
+    },
+    {
+     "w": "one",
+     "start": 77.748,
+     "end": 77.969,
+     "conf": 0.04
+    }
+   ]
+  },
+  {
+   "section": "Sliding in",
+   "act": "ACT TWO — Closer and closer",
+   "text": "And at one point zero zero one, it's two point zero zero one.",
+   "idea": true,
+   "start": 78.36,
+   "end": 81.177,
+   "words": [
+    {
+     "w": "and",
+     "start": 78.36,
+     "end": 78.42,
+     "conf": 0.97
+    },
+    {
+     "w": "at",
+     "start": 78.441,
+     "end": 78.521,
+     "conf": 0.951
+    },
+    {
+     "w": "one",
+     "start": 78.602,
+     "end": 78.722,
+     "conf": 0.715
+    },
+    {
+     "w": "point",
+     "start": 78.742,
+     "end": 78.964,
+     "conf": 0.845
+    },
+    {
+     "w": "zero",
+     "start": 78.984,
+     "end": 79.245,
+     "conf": 0.145
+    },
+    {
+     "w": "zero",
+     "start": 79.265,
+     "end": 79.567,
+     "conf": 0.121
+    },
+    {
+     "w": "one",
+     "start": 79.728,
+     "end": 79.849,
+     "conf": 0.068
+    },
+    {
+     "w": "it's",
+     "start": 79.869,
+     "end": 79.99,
+     "conf": 0.624
+    },
+    {
+     "w": "two",
+     "start": 80.07,
+     "end": 80.191,
+     "conf": 0.414
+    },
+    {
+     "w": "point",
+     "start": 80.211,
+     "end": 80.392,
+     "conf": 0.734
+    },
+    {
+     "w": "zero",
+     "start": 80.412,
+     "end": 80.634,
+     "conf": 0.212
+    },
+    {
+     "w": "zero",
+     "start": 80.654,
+     "end": 80.895,
+     "conf": 0.178
+    },
+    {
+     "w": "one",
+     "start": 81.056,
+     "end": 81.177,
+     "conf": 0.139
+    }
+   ]
+  },
+  {
+   "section": "Lining up",
+   "act": "ACT TWO — Closer and closer",
+   "text": "Look at the numbers lining up: three, two point five, two point one, two point zero one, two point zero zero one.",
+   "idea": false,
+   "start": 82.816,
+   "end": 88.318,
+   "words": [
+    {
+     "w": "look",
+     "start": 82.816,
+     "end": 82.916,
+     "conf": 1.0
+    },
+    {
+     "w": "at",
+     "start": 82.937,
+     "end": 82.997,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 83.017,
+     "end": 83.077,
+     "conf": 0.996
+    },
+    {
+     "w": "numbers",
+     "start": 83.097,
+     "end": 83.398,
+     "conf": 0.931
+    },
+    {
+     "w": "lining",
+     "start": 83.418,
+     "end": 83.7,
+     "conf": 0.834
+    },
+    {
+     "w": "up",
+     "start": 83.78,
+     "end": 83.88,
+     "conf": 0.5
+    },
+    {
+     "w": "three",
+     "start": 83.9,
+     "end": 84.563,
+     "conf": 0.083
+    },
+    {
+     "w": "two",
+     "start": 84.583,
+     "end": 84.724,
+     "conf": 0.008
+    },
+    {
+     "w": "point",
+     "start": 84.744,
+     "end": 84.904,
+     "conf": 0.049
+    },
+    {
+     "w": "five",
+     "start": 84.924,
+     "end": 85.286,
+     "conf": 0.001
+    },
+    {
+     "w": "two",
+     "start": 85.346,
+     "end": 85.507,
+     "conf": 0.0
+    },
+    {
+     "w": "point",
+     "start": 85.527,
+     "end": 85.748,
+     "conf": 0.0
+    },
+    {
+     "w": "one",
+     "start": 85.768,
+     "end": 85.969,
+     "conf": 0.0
+    },
+    {
+     "w": "two",
+     "start": 85.989,
+     "end": 86.451,
+     "conf": 0.0
+    },
+    {
+     "w": "point",
+     "start": 86.471,
+     "end": 86.671,
+     "conf": 0.001
+    },
+    {
+     "w": "zero",
+     "start": 86.691,
+     "end": 86.852,
+     "conf": 0.0
+    },
+    {
+     "w": "one",
+     "start": 86.872,
+     "end": 87.093,
+     "conf": 0.0
+    },
+    {
+     "w": "two",
+     "start": 87.113,
+     "end": 87.414,
+     "conf": 0.0
+    },
+    {
+     "w": "point",
+     "start": 87.434,
+     "end": 87.635,
+     "conf": 0.003
+    },
+    {
+     "w": "zero",
+     "start": 87.655,
+     "end": 87.816,
+     "conf": 0.001
+    },
+    {
+     "w": "zero",
+     "start": 87.836,
+     "end": 88.077,
+     "conf": 0.001
+    },
+    {
+     "w": "one",
+     "start": 88.218,
+     "end": 88.318,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "Lining up",
+   "act": "ACT TWO — Closer and closer",
+   "text": "They're closing in on two. Every step gets closer, and not one of them goes past it.",
+   "idea": true,
+   "start": 88.728,
+   "end": 92.58,
+   "words": [
+    {
+     "w": "they're",
+     "start": 88.728,
+     "end": 88.868,
+     "conf": 0.014
+    },
+    {
+     "w": "closing",
+     "start": 88.889,
+     "end": 89.25,
+     "conf": 0.843
+    },
+    {
+     "w": "in",
+     "start": 89.27,
+     "end": 89.35,
+     "conf": 0.993
+    },
+    {
+     "w": "on",
+     "start": 89.43,
+     "end": 89.49,
+     "conf": 0.499
+    },
+    {
+     "w": "two",
+     "start": 89.591,
+     "end": 89.831,
+     "conf": 0.625
+    },
+    {
+     "w": "every",
+     "start": 90.032,
+     "end": 90.193,
+     "conf": 0.766
+    },
+    {
+     "w": "step",
+     "start": 90.273,
+     "end": 90.433,
+     "conf": 0.75
+    },
+    {
+     "w": "gets",
+     "start": 90.493,
+     "end": 90.634,
+     "conf": 0.749
+    },
+    {
+     "w": "closer",
+     "start": 90.694,
+     "end": 91.055,
+     "conf": 0.798
+    },
+    {
+     "w": "and",
+     "start": 91.256,
+     "end": 91.336,
+     "conf": 0.669
+    },
+    {
+     "w": "not",
+     "start": 91.396,
+     "end": 91.496,
+     "conf": 0.728
+    },
+    {
+     "w": "one",
+     "start": 91.637,
+     "end": 91.697,
+     "conf": 0.663
+    },
+    {
+     "w": "of",
+     "start": 91.717,
+     "end": 91.777,
+     "conf": 0.665
+    },
+    {
+     "w": "them",
+     "start": 91.797,
+     "end": 91.938,
+     "conf": 0.813
+    },
+    {
+     "w": "goes",
+     "start": 91.998,
+     "end": 92.158,
+     "conf": 0.6
+    },
+    {
+     "w": "past",
+     "start": 92.219,
+     "end": 92.479,
+     "conf": 0.654
+    },
+    {
+     "w": "it",
+     "start": 92.5,
+     "end": 92.58,
+     "conf": 0.665
+    }
+   ]
+  },
+  {
+   "section": "The line turns",
+   "act": "ACT TWO — Closer and closer",
+   "text": "On the picture, you can watch it happen.",
+   "idea": false,
+   "start": 94.321,
+   "end": 95.92,
+   "words": [
+    {
+     "w": "on",
+     "start": 94.321,
+     "end": 94.382,
+     "conf": 0.988
+    },
+    {
+     "w": "the",
+     "start": 94.402,
+     "end": 94.463,
+     "conf": 0.981
+    },
+    {
+     "w": "picture",
+     "start": 94.524,
+     "end": 94.847,
+     "conf": 0.717
+    },
+    {
+     "w": "you",
+     "start": 95.05,
+     "end": 95.111,
+     "conf": 0.663
+    },
+    {
+     "w": "can",
+     "start": 95.131,
+     "end": 95.252,
+     "conf": 0.933
+    },
+    {
+     "w": "watch",
+     "start": 95.273,
+     "end": 95.515,
+     "conf": 0.897
+    },
+    {
+     "w": "it",
+     "start": 95.556,
+     "end": 95.617,
+     "conf": 0.921
+    },
+    {
+     "w": "happen",
+     "start": 95.637,
+     "end": 95.92,
+     "conf": 0.842
+    }
+   ]
+  },
+  {
+   "section": "The line turns",
+   "act": "ACT TWO — Closer and closer",
+   "text": "Each time the second point slides in, the secant turns a little, around the point at x equals one.",
+   "idea": false,
+   "start": 96.31,
+   "end": 101.127,
+   "words": [
+    {
+     "w": "each",
+     "start": 96.31,
+     "end": 96.491,
+     "conf": 0.819
+    },
+    {
+     "w": "time",
+     "start": 96.571,
+     "end": 96.792,
+     "conf": 0.658
+    },
+    {
+     "w": "the",
+     "start": 96.812,
+     "end": 96.912,
+     "conf": 0.746
+    },
+    {
+     "w": "second",
+     "start": 96.992,
+     "end": 97.273,
+     "conf": 0.832
+    },
+    {
+     "w": "point",
+     "start": 97.334,
+     "end": 97.534,
+     "conf": 0.825
+    },
+    {
+     "w": "slides",
+     "start": 97.615,
+     "end": 97.916,
+     "conf": 0.743
+    },
+    {
+     "w": "in",
+     "start": 97.976,
+     "end": 98.056,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 98.237,
+     "end": 98.297,
+     "conf": 0.967
+    },
+    {
+     "w": "secant",
+     "start": 98.377,
+     "end": 98.718,
+     "conf": 0.486
+    },
+    {
+     "w": "turns",
+     "start": 98.738,
+     "end": 98.999,
+     "conf": 0.833
+    },
+    {
+     "w": "a",
+     "start": 99.019,
+     "end": 99.039,
+     "conf": 0.995
+    },
+    {
+     "w": "little",
+     "start": 99.06,
+     "end": 99.3,
+     "conf": 0.856
+    },
+    {
+     "w": "around",
+     "start": 99.461,
+     "end": 99.722,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 99.742,
+     "end": 99.822,
+     "conf": 0.993
+    },
+    {
+     "w": "point",
+     "start": 99.842,
+     "end": 100.123,
+     "conf": 0.964
+    },
+    {
+     "w": "at",
+     "start": 100.284,
+     "end": 100.344,
+     "conf": 0.494
+    },
+    {
+     "w": "x",
+     "start": 100.484,
+     "end": 100.504,
+     "conf": 0.997
+    },
+    {
+     "w": "equals",
+     "start": 100.665,
+     "end": 100.886,
+     "conf": 0.817
+    },
+    {
+     "w": "one",
+     "start": 101.026,
+     "end": 101.127,
+     "conf": 0.611
+    }
+   ]
+  },
+  {
+   "section": "The line turns",
+   "act": "ACT TWO — Closer and closer",
+   "text": "It turns less and less each time, and it settles at one particular angle.",
+   "idea": true,
+   "start": 101.537,
+   "end": 105.088,
+   "words": [
+    {
+     "w": "it",
+     "start": 101.537,
+     "end": 101.597,
+     "conf": 0.998
+    },
+    {
+     "w": "turns",
+     "start": 101.617,
+     "end": 101.858,
+     "conf": 0.977
+    },
+    {
+     "w": "less",
+     "start": 101.978,
+     "end": 102.159,
+     "conf": 0.747
+    },
+    {
+     "w": "and",
+     "start": 102.219,
+     "end": 102.299,
+     "conf": 0.533
+    },
+    {
+     "w": "less",
+     "start": 102.32,
+     "end": 102.48,
+     "conf": 0.998
+    },
+    {
+     "w": "each",
+     "start": 102.56,
+     "end": 102.681,
+     "conf": 0.75
+    },
+    {
+     "w": "time",
+     "start": 102.741,
+     "end": 102.982,
+     "conf": 0.77
+    },
+    {
+     "w": "and",
+     "start": 103.222,
+     "end": 103.283,
+     "conf": 0.735
+    },
+    {
+     "w": "it",
+     "start": 103.303,
+     "end": 103.383,
+     "conf": 0.996
+    },
+    {
+     "w": "settles",
+     "start": 103.483,
+     "end": 103.864,
+     "conf": 0.842
+    },
+    {
+     "w": "at",
+     "start": 103.965,
+     "end": 104.025,
+     "conf": 0.499
+    },
+    {
+     "w": "one",
+     "start": 104.185,
+     "end": 104.286,
+     "conf": 0.666
+    },
+    {
+     "w": "particular",
+     "start": 104.306,
+     "end": 104.767,
+     "conf": 0.999
+    },
+    {
+     "w": "angle",
+     "start": 104.868,
+     "end": 105.088,
+     "conf": 0.412
+    }
+   ]
+  },
+  {
+   "section": "The tangent",
+   "act": "ACT TWO — Closer and closer",
+   "text": "The line it settles on is special. It touches the curve at exactly one point, like a ruler laid gently against the outside of a bowl.",
+   "idea": false,
+   "start": 106.728,
+   "end": 113.177,
+   "words": [
+    {
+     "w": "the",
+     "start": 106.728,
+     "end": 106.788,
+     "conf": 0.906
+    },
+    {
+     "w": "line",
+     "start": 106.808,
+     "end": 107.008,
+     "conf": 0.929
+    },
+    {
+     "w": "it",
+     "start": 107.028,
+     "end": 107.089,
+     "conf": 0.991
+    },
+    {
+     "w": "settles",
+     "start": 107.129,
+     "end": 107.429,
+     "conf": 0.994
+    },
+    {
+     "w": "on",
+     "start": 107.509,
+     "end": 107.589,
+     "conf": 0.499
+    },
+    {
+     "w": "is",
+     "start": 107.769,
+     "end": 107.81,
+     "conf": 0.497
+    },
+    {
+     "w": "special",
+     "start": 107.93,
+     "end": 108.27,
+     "conf": 0.643
+    },
+    {
+     "w": "it",
+     "start": 108.571,
+     "end": 108.631,
+     "conf": 0.999
+    },
+    {
+     "w": "touches",
+     "start": 108.691,
+     "end": 109.011,
+     "conf": 0.937
+    },
+    {
+     "w": "the",
+     "start": 109.031,
+     "end": 109.131,
+     "conf": 0.721
+    },
+    {
+     "w": "curve",
+     "start": 109.171,
+     "end": 109.432,
+     "conf": 0.763
+    },
+    {
+     "w": "at",
+     "start": 109.452,
+     "end": 109.532,
+     "conf": 0.996
+    },
+    {
+     "w": "exactly",
+     "start": 109.552,
+     "end": 109.933,
+     "conf": 0.965
+    },
+    {
+     "w": "one",
+     "start": 110.113,
+     "end": 110.193,
+     "conf": 0.737
+    },
+    {
+     "w": "point",
+     "start": 110.233,
+     "end": 110.493,
+     "conf": 0.851
+    },
+    {
+     "w": "like",
+     "start": 110.874,
+     "end": 111.014,
+     "conf": 0.901
+    },
+    {
+     "w": "a",
+     "start": 111.034,
+     "end": 111.074,
+     "conf": 0.53
+    },
+    {
+     "w": "ruler",
+     "start": 111.154,
+     "end": 111.375,
+     "conf": 0.793
+    },
+    {
+     "w": "laid",
+     "start": 111.455,
+     "end": 111.615,
+     "conf": 0.582
+    },
+    {
+     "w": "gently",
+     "start": 111.695,
+     "end": 111.995,
+     "conf": 0.833
+    },
+    {
+     "w": "against",
+     "start": 112.055,
+     "end": 112.296,
+     "conf": 0.875
+    },
+    {
+     "w": "the",
+     "start": 112.316,
+     "end": 112.396,
+     "conf": 0.895
+    },
+    {
+     "w": "outside",
+     "start": 112.456,
+     "end": 112.797,
+     "conf": 0.857
+    },
+    {
+     "w": "of",
+     "start": 112.817,
+     "end": 112.877,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 112.897,
+     "end": 112.917,
+     "conf": 0.997
+    },
+    {
+     "w": "bowl",
+     "start": 112.997,
+     "end": 113.177,
+     "conf": 0.385
+    }
+   ]
+  },
+  {
+   "section": "The tangent",
+   "act": "ACT TWO — Closer and closer",
+   "text": "It's called the tangent.",
+   "idea": false,
+   "start": 113.587,
+   "end": 114.518,
+   "words": [
+    {
+     "w": "it's",
+     "start": 113.587,
+     "end": 113.668,
+     "conf": 0.539
+    },
+    {
+     "w": "called",
+     "start": 113.729,
+     "end": 113.911,
+     "conf": 0.768
+    },
+    {
+     "w": "the",
+     "start": 113.931,
+     "end": 113.992,
+     "conf": 0.924
+    },
+    {
+     "w": "tangent",
+     "start": 114.032,
+     "end": 114.518,
+     "conf": 0.668
+    }
+   ]
+  },
+  {
+   "section": "The tangent",
+   "act": "ACT TWO — Closer and closer",
+   "text": "And the slope of the tangent is what we were looking for all along: the steepness of the curve at that single point.",
+   "idea": false,
+   "start": 114.969,
+   "end": 120.627,
+   "words": [
+    {
+     "w": "and",
+     "start": 114.969,
+     "end": 115.029,
+     "conf": 0.996
+    },
+    {
+     "w": "the",
+     "start": 115.049,
+     "end": 115.11,
+     "conf": 0.35
+    },
+    {
+     "w": "slope",
+     "start": 115.13,
+     "end": 115.451,
+     "conf": 0.716
+    },
+    {
+     "w": "of",
+     "start": 115.471,
+     "end": 115.531,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 115.571,
+     "end": 115.631,
+     "conf": 0.997
+    },
+    {
+     "w": "tangent",
+     "start": 115.731,
+     "end": 116.233,
+     "conf": 0.827
+    },
+    {
+     "w": "is",
+     "start": 116.394,
+     "end": 116.454,
+     "conf": 0.499
+    },
+    {
+     "w": "what",
+     "start": 116.514,
+     "end": 116.614,
+     "conf": 0.749
+    },
+    {
+     "w": "we",
+     "start": 116.674,
+     "end": 116.755,
+     "conf": 0.996
+    },
+    {
+     "w": "were",
+     "start": 116.795,
+     "end": 116.915,
+     "conf": 0.99
+    },
+    {
+     "w": "looking",
+     "start": 116.935,
+     "end": 117.176,
+     "conf": 1.0
+    },
+    {
+     "w": "for",
+     "start": 117.196,
+     "end": 117.337,
+     "conf": 0.998
+    },
+    {
+     "w": "all",
+     "start": 117.477,
+     "end": 117.597,
+     "conf": 0.666
+    },
+    {
+     "w": "along",
+     "start": 117.658,
+     "end": 117.938,
+     "conf": 0.852
+    },
+    {
+     "w": "the",
+     "start": 118.259,
+     "end": 118.32,
+     "conf": 0.338
+    },
+    {
+     "w": "steepness",
+     "start": 118.44,
+     "end": 118.942,
+     "conf": 0.887
+    },
+    {
+     "w": "of",
+     "start": 119.082,
+     "end": 119.142,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 119.162,
+     "end": 119.243,
+     "conf": 0.749
+    },
+    {
+     "w": "curve",
+     "start": 119.263,
+     "end": 119.584,
+     "conf": 0.814
+    },
+    {
+     "w": "at",
+     "start": 119.604,
+     "end": 119.684,
+     "conf": 0.996
+    },
+    {
+     "w": "that",
+     "start": 119.704,
+     "end": 119.865,
+     "conf": 0.97
+    },
+    {
+     "w": "single",
+     "start": 120.025,
+     "end": 120.306,
+     "conf": 0.833
+    },
+    {
+     "w": "point",
+     "start": 120.386,
+     "end": 120.627,
+     "conf": 0.784
+    }
+   ]
+  },
+  {
+   "section": "The tangent",
+   "act": "ACT TWO — Closer and closer",
+   "text": "But notice what we never did. We never put the second point right on top of the first. If we had, we'd be back at zero over zero.",
+   "idea": false,
+   "start": 121.057,
+   "end": 127.073,
+   "words": [
+    {
+     "w": "but",
+     "start": 121.057,
+     "end": 121.117,
+     "conf": 0.834
+    },
+    {
+     "w": "notice",
+     "start": 121.157,
+     "end": 121.418,
+     "conf": 0.676
+    },
+    {
+     "w": "what",
+     "start": 121.438,
+     "end": 121.538,
+     "conf": 0.998
+    },
+    {
+     "w": "we",
+     "start": 121.558,
+     "end": 121.619,
+     "conf": 0.997
+    },
+    {
+     "w": "never",
+     "start": 121.639,
+     "end": 121.859,
+     "conf": 0.722
+    },
+    {
+     "w": "did",
+     "start": 121.919,
+     "end": 122.1,
+     "conf": 0.667
+    },
+    {
+     "w": "we",
+     "start": 122.36,
+     "end": 122.401,
+     "conf": 0.502
+    },
+    {
+     "w": "never",
+     "start": 122.461,
+     "end": 122.641,
+     "conf": 0.92
+    },
+    {
+     "w": "put",
+     "start": 122.701,
+     "end": 122.802,
+     "conf": 0.667
+    },
+    {
+     "w": "the",
+     "start": 122.822,
+     "end": 122.902,
+     "conf": 0.996
+    },
+    {
+     "w": "second",
+     "start": 123.002,
+     "end": 123.283,
+     "conf": 0.832
+    },
+    {
+     "w": "point",
+     "start": 123.303,
+     "end": 123.503,
+     "conf": 0.851
+    },
+    {
+     "w": "right",
+     "start": 123.523,
+     "end": 123.704,
+     "conf": 0.773
+    },
+    {
+     "w": "on",
+     "start": 123.724,
+     "end": 123.784,
+     "conf": 0.998
+    },
+    {
+     "w": "top",
+     "start": 123.804,
+     "end": 123.925,
+     "conf": 0.999
+    },
+    {
+     "w": "of",
+     "start": 123.945,
+     "end": 123.985,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 124.005,
+     "end": 124.085,
+     "conf": 0.853
+    },
+    {
+     "w": "first",
+     "start": 124.105,
+     "end": 124.486,
+     "conf": 0.688
+    },
+    {
+     "w": "if",
+     "start": 125.168,
+     "end": 125.228,
+     "conf": 0.505
+    },
+    {
+     "w": "we",
+     "start": 125.248,
+     "end": 125.328,
+     "conf": 0.667
+    },
+    {
+     "w": "had",
+     "start": 125.408,
+     "end": 125.569,
+     "conf": 0.666
+    },
+    {
+     "w": "we'd",
+     "start": 125.589,
+     "end": 125.729,
+     "conf": 0.393
+    },
+    {
+     "w": "be",
+     "start": 125.749,
+     "end": 125.789,
+     "conf": 0.996
+    },
+    {
+     "w": "back",
+     "start": 125.87,
+     "end": 126.01,
+     "conf": 0.726
+    },
+    {
+     "w": "at",
+     "start": 126.03,
+     "end": 126.11,
+     "conf": 0.661
+    },
+    {
+     "w": "zero",
+     "start": 126.13,
+     "end": 126.411,
+     "conf": 0.184
+    },
+    {
+     "w": "over",
+     "start": 126.591,
+     "end": 126.752,
+     "conf": 0.435
+    },
+    {
+     "w": "zero",
+     "start": 126.772,
+     "end": 127.073,
+     "conf": 0.163
+    }
+   ]
+  },
+  {
+   "section": "The tangent",
+   "act": "ACT TWO — Closer and closer",
+   "text": "We only asked where the slopes were heading.",
+   "idea": true,
+   "start": 127.523,
+   "end": 129.285,
+   "words": [
+    {
+     "w": "we",
+     "start": 127.523,
+     "end": 127.564,
+     "conf": 0.994
+    },
+    {
+     "w": "only",
+     "start": 127.645,
+     "end": 127.787,
+     "conf": 0.994
+    },
+    {
+     "w": "asked",
+     "start": 127.888,
+     "end": 128.151,
+     "conf": 0.959
+    },
+    {
+     "w": "where",
+     "start": 128.171,
+     "end": 128.333,
+     "conf": 0.818
+    },
+    {
+     "w": "the",
+     "start": 128.354,
+     "end": 128.414,
+     "conf": 0.98
+    },
+    {
+     "w": "slopes",
+     "start": 128.536,
+     "end": 128.86,
+     "conf": 0.934
+    },
+    {
+     "w": "were",
+     "start": 128.88,
+     "end": 129.022,
+     "conf": 0.766
+    },
+    {
+     "w": "heading",
+     "start": 129.042,
+     "end": 129.285,
+     "conf": 0.712
+    }
+   ]
+  },
+  {
+   "section": "Where it's heading",
+   "act": "ACT THREE — The hole",
+   "text": "That idea, asking where something is heading instead of what it is at one exact spot, is called a limit.",
+   "idea": false,
+   "start": 131.725,
+   "end": 136.856,
+   "words": [
+    {
+     "w": "that",
+     "start": 131.725,
+     "end": 131.845,
+     "conf": 0.75
+    },
+    {
+     "w": "idea",
+     "start": 131.966,
+     "end": 132.226,
+     "conf": 1.0
+    },
+    {
+     "w": "asking",
+     "start": 132.427,
+     "end": 132.707,
+     "conf": 0.998
+    },
+    {
+     "w": "where",
+     "start": 132.727,
+     "end": 132.868,
+     "conf": 0.951
+    },
+    {
+     "w": "something",
+     "start": 132.888,
+     "end": 133.128,
+     "conf": 0.937
+    },
+    {
+     "w": "is",
+     "start": 133.148,
+     "end": 133.248,
+     "conf": 0.666
+    },
+    {
+     "w": "heading",
+     "start": 133.308,
+     "end": 133.569,
+     "conf": 0.826
+    },
+    {
+     "w": "instead",
+     "start": 133.709,
+     "end": 133.97,
+     "conf": 0.864
+    },
+    {
+     "w": "of",
+     "start": 133.99,
+     "end": 134.05,
+     "conf": 0.997
+    },
+    {
+     "w": "what",
+     "start": 134.07,
+     "end": 134.19,
+     "conf": 0.993
+    },
+    {
+     "w": "it",
+     "start": 134.21,
+     "end": 134.291,
+     "conf": 0.597
+    },
+    {
+     "w": "is",
+     "start": 134.431,
+     "end": 134.471,
+     "conf": 0.499
+    },
+    {
+     "w": "at",
+     "start": 134.531,
+     "end": 134.591,
+     "conf": 0.492
+    },
+    {
+     "w": "one",
+     "start": 134.732,
+     "end": 134.812,
+     "conf": 0.665
+    },
+    {
+     "w": "exact",
+     "start": 134.872,
+     "end": 135.193,
+     "conf": 0.799
+    },
+    {
+     "w": "spot",
+     "start": 135.273,
+     "end": 135.533,
+     "conf": 0.977
+    },
+    {
+     "w": "is",
+     "start": 135.994,
+     "end": 136.054,
+     "conf": 0.499
+    },
+    {
+     "w": "called",
+     "start": 136.135,
+     "end": 136.415,
+     "conf": 0.831
+    },
+    {
+     "w": "a",
+     "start": 136.515,
+     "end": 136.536,
+     "conf": 0.001
+    },
+    {
+     "w": "limit",
+     "start": 136.616,
+     "end": 136.856,
+     "conf": 0.806
+    }
+   ]
+  },
+  {
+   "section": "Where it's heading",
+   "act": "ACT THREE — The hole",
+   "text": "Here's a cleaner example, so you can feel it.",
+   "idea": false,
+   "start": 137.347,
+   "end": 139.208,
+   "words": [
+    {
+     "w": "here's",
+     "start": 137.347,
+     "end": 137.488,
+     "conf": 0.398
+    },
+    {
+     "w": "a",
+     "start": 137.509,
+     "end": 137.529,
+     "conf": 0.995
+    },
+    {
+     "w": "cleaner",
+     "start": 137.569,
+     "end": 137.832,
+     "conf": 0.975
+    },
+    {
+     "w": "example",
+     "start": 137.853,
+     "end": 138.298,
+     "conf": 0.874
+    },
+    {
+     "w": "so",
+     "start": 138.561,
+     "end": 138.642,
+     "conf": 0.999
+    },
+    {
+     "w": "you",
+     "start": 138.723,
+     "end": 138.783,
+     "conf": 0.671
+    },
+    {
+     "w": "can",
+     "start": 138.803,
+     "end": 138.884,
+     "conf": 0.997
+    },
+    {
+     "w": "feel",
+     "start": 138.905,
+     "end": 139.107,
+     "conf": 0.693
+    },
+    {
+     "w": "it",
+     "start": 139.127,
+     "end": 139.208,
+     "conf": 0.664
+    }
+   ]
+  },
+  {
+   "section": "Where it's heading",
+   "act": "ACT THREE — The hole",
+   "text": "Take x squared minus twenty-five, divided by x minus five.",
+   "idea": false,
+   "start": 139.619,
+   "end": 142.458,
+   "words": [
+    {
+     "w": "take",
+     "start": 139.619,
+     "end": 139.78,
+     "conf": 0.784
+    },
+    {
+     "w": "x",
+     "start": 139.881,
+     "end": 139.901,
+     "conf": 0.67
+    },
+    {
+     "w": "squared",
+     "start": 139.921,
+     "end": 140.263,
+     "conf": 0.532
+    },
+    {
+     "w": "minus",
+     "start": 140.284,
+     "end": 140.505,
+     "conf": 0.767
+    },
+    {
+     "w": "twenty-five",
+     "start": 140.525,
+     "end": 141.129,
+     "conf": 0.005
+    },
+    {
+     "w": "divided",
+     "start": 141.149,
+     "end": 141.451,
+     "conf": 0.946
+    },
+    {
+     "w": "by",
+     "start": 141.472,
+     "end": 141.592,
+     "conf": 0.923
+    },
+    {
+     "w": "x",
+     "start": 141.753,
+     "end": 141.774,
+     "conf": 0.878
+    },
+    {
+     "w": "minus",
+     "start": 141.915,
+     "end": 142.156,
+     "conf": 0.605
+    },
+    {
+     "w": "five",
+     "start": 142.176,
+     "end": 142.458,
+     "conf": 0.338
+    }
+   ]
+  },
+  {
+   "section": "Where it's heading",
+   "act": "ACT THREE — The hole",
+   "text": "Put in five, and the top is twenty-five minus twenty-five, which is zero. The bottom is five minus five, also zero. Zero over zero, again.",
+   "idea": false,
+   "start": 142.848,
+   "end": 149.636,
+   "words": [
+    {
+     "w": "put",
+     "start": 142.848,
+     "end": 142.928,
+     "conf": 0.665
+    },
+    {
+     "w": "in",
+     "start": 143.008,
+     "end": 143.048,
+     "conf": 0.498
+    },
+    {
+     "w": "five",
+     "start": 143.148,
+     "end": 143.489,
+     "conf": 0.353
+    },
+    {
+     "w": "and",
+     "start": 143.509,
+     "end": 143.689,
+     "conf": 0.081
+    },
+    {
+     "w": "the",
+     "start": 143.709,
+     "end": 143.769,
+     "conf": 0.995
+    },
+    {
+     "w": "top",
+     "start": 143.789,
+     "end": 143.949,
+     "conf": 0.91
+    },
+    {
+     "w": "is",
+     "start": 144.029,
+     "end": 144.069,
+     "conf": 0.498
+    },
+    {
+     "w": "twenty-five",
+     "start": 144.089,
+     "end": 144.59,
+     "conf": 0.025
+    },
+    {
+     "w": "minus",
+     "start": 144.61,
+     "end": 144.81,
+     "conf": 0.902
+    },
+    {
+     "w": "twenty-five",
+     "start": 144.83,
+     "end": 145.311,
+     "conf": 0.001
+    },
+    {
+     "w": "which",
+     "start": 145.451,
+     "end": 145.571,
+     "conf": 0.402
+    },
+    {
+     "w": "is",
+     "start": 145.591,
+     "end": 145.651,
+     "conf": 0.968
+    },
+    {
+     "w": "zero",
+     "start": 145.731,
+     "end": 145.992,
+     "conf": 0.367
+    },
+    {
+     "w": "the",
+     "start": 146.012,
+     "end": 146.452,
+     "conf": 0.665
+    },
+    {
+     "w": "bottom",
+     "start": 146.472,
+     "end": 146.692,
+     "conf": 0.989
+    },
+    {
+     "w": "is",
+     "start": 146.712,
+     "end": 146.792,
+     "conf": 0.663
+    },
+    {
+     "w": "five",
+     "start": 146.812,
+     "end": 147.033,
+     "conf": 0.338
+    },
+    {
+     "w": "minus",
+     "start": 147.053,
+     "end": 147.233,
+     "conf": 0.912
+    },
+    {
+     "w": "five",
+     "start": 147.253,
+     "end": 147.493,
+     "conf": 0.292
+    },
+    {
+     "w": "also",
+     "start": 147.613,
+     "end": 147.774,
+     "conf": 0.738
+    },
+    {
+     "w": "zero",
+     "start": 147.794,
+     "end": 148.094,
+     "conf": 0.087
+    },
+    {
+     "w": "zero",
+     "start": 148.114,
+     "end": 148.654,
+     "conf": 0.086
+    },
+    {
+     "w": "over",
+     "start": 148.675,
+     "end": 148.775,
+     "conf": 0.243
+    },
+    {
+     "w": "zero",
+     "start": 148.795,
+     "end": 149.035,
+     "conf": 0.129
+    },
+    {
+     "w": "again",
+     "start": 149.435,
+     "end": 149.636,
+     "conf": 0.735
+    }
+   ]
+  },
+  {
+   "section": "Where it's heading",
+   "act": "ACT THREE — The hole",
+   "text": "At x equals five, this expression simply has no value.",
+   "idea": true,
+   "start": 150.046,
+   "end": 152.59,
+   "words": [
+    {
+     "w": "at",
+     "start": 150.046,
+     "end": 150.107,
+     "conf": 0.932
+    },
+    {
+     "w": "x",
+     "start": 150.228,
+     "end": 150.268,
+     "conf": 0.701
+    },
+    {
+     "w": "equals",
+     "start": 150.389,
+     "end": 150.591,
+     "conf": 0.446
+    },
+    {
+     "w": "five",
+     "start": 150.611,
+     "end": 151.035,
+     "conf": 0.081
+    },
+    {
+     "w": "this",
+     "start": 151.055,
+     "end": 151.197,
+     "conf": 0.963
+    },
+    {
+     "w": "expression",
+     "start": 151.217,
+     "end": 151.641,
+     "conf": 0.849
+    },
+    {
+     "w": "simply",
+     "start": 151.701,
+     "end": 151.923,
+     "conf": 0.823
+    },
+    {
+     "w": "has",
+     "start": 151.984,
+     "end": 152.085,
+     "conf": 0.684
+    },
+    {
+     "w": "no",
+     "start": 152.145,
+     "end": 152.206,
+     "conf": 0.98
+    },
+    {
+     "w": "value",
+     "start": 152.307,
+     "end": 152.59,
+     "conf": 0.637
+    }
+   ]
+  },
+  {
+   "section": "Sneaking up",
+   "act": "ACT THREE — The hole",
+   "text": "But nothing stops us from trying numbers near five.",
+   "idea": false,
+   "start": 154.23,
+   "end": 156.546,
+   "words": [
+    {
+     "w": "but",
+     "start": 154.23,
+     "end": 154.291,
+     "conf": 0.811
+    },
+    {
+     "w": "nothing",
+     "start": 154.311,
+     "end": 154.572,
+     "conf": 0.877
+    },
+    {
+     "w": "stops",
+     "start": 154.613,
+     "end": 154.834,
+     "conf": 0.995
+    },
+    {
+     "w": "us",
+     "start": 154.895,
+     "end": 154.935,
+     "conf": 0.502
+    },
+    {
+     "w": "from",
+     "start": 154.975,
+     "end": 155.096,
+     "conf": 0.965
+    },
+    {
+     "w": "trying",
+     "start": 155.116,
+     "end": 155.398,
+     "conf": 0.948
+    },
+    {
+     "w": "numbers",
+     "start": 155.438,
+     "end": 155.801,
+     "conf": 0.86
+    },
+    {
+     "w": "near",
+     "start": 155.901,
+     "end": 156.062,
+     "conf": 0.913
+    },
+    {
+     "w": "five",
+     "start": 156.143,
+     "end": 156.546,
+     "conf": 0.082
+    }
+   ]
+  },
+  {
+   "section": "Sneaking up",
+   "act": "ACT THREE — The hole",
+   "text": "At four point nine, it gives nine point nine. At four point nine nine, nine point nine nine.",
+   "idea": false,
+   "start": 156.936,
+   "end": 161.342,
+   "words": [
+    {
+     "w": "at",
+     "start": 156.936,
+     "end": 157.016,
+     "conf": 0.807
+    },
+    {
+     "w": "four",
+     "start": 157.156,
+     "end": 157.357,
+     "conf": 0.028
+    },
+    {
+     "w": "point",
+     "start": 157.437,
+     "end": 157.617,
+     "conf": 0.12
+    },
+    {
+     "w": "nine",
+     "start": 157.637,
+     "end": 157.977,
+     "conf": 0.033
+    },
+    {
+     "w": "it",
+     "start": 158.058,
+     "end": 158.098,
+     "conf": 0.439
+    },
+    {
+     "w": "gives",
+     "start": 158.118,
+     "end": 158.318,
+     "conf": 0.805
+    },
+    {
+     "w": "nine",
+     "start": 158.338,
+     "end": 158.638,
+     "conf": 0.035
+    },
+    {
+     "w": "point",
+     "start": 158.658,
+     "end": 158.859,
+     "conf": 0.072
+    },
+    {
+     "w": "nine",
+     "start": 158.879,
+     "end": 159.159,
+     "conf": 0.044
+    },
+    {
+     "w": "at",
+     "start": 159.179,
+     "end": 159.319,
+     "conf": 0.233
+    },
+    {
+     "w": "four",
+     "start": 159.339,
+     "end": 159.6,
+     "conf": 0.012
+    },
+    {
+     "w": "point",
+     "start": 159.62,
+     "end": 159.82,
+     "conf": 0.052
+    },
+    {
+     "w": "nine",
+     "start": 159.84,
+     "end": 160.06,
+     "conf": 0.019
+    },
+    {
+     "w": "nine",
+     "start": 160.08,
+     "end": 160.501,
+     "conf": 0.024
+    },
+    {
+     "w": "nine",
+     "start": 160.521,
+     "end": 160.641,
+     "conf": 0.039
+    },
+    {
+     "w": "point",
+     "start": 160.661,
+     "end": 160.841,
+     "conf": 0.06
+    },
+    {
+     "w": "nine",
+     "start": 160.862,
+     "end": 161.062,
+     "conf": 0.063
+    },
+    {
+     "w": "nine",
+     "start": 161.082,
+     "end": 161.342,
+     "conf": 0.097
+    }
+   ]
+  },
+  {
+   "section": "Sneaking up",
+   "act": "ACT THREE — The hole",
+   "text": "From the other side, five point one gives ten point one, and five point zero one gives ten point zero one.",
+   "idea": false,
+   "start": 161.752,
+   "end": 166.872,
+   "words": [
+    {
+     "w": "from",
+     "start": 161.752,
+     "end": 161.832,
+     "conf": 0.753
+    },
+    {
+     "w": "the",
+     "start": 161.852,
+     "end": 161.913,
+     "conf": 0.996
+    },
+    {
+     "w": "other",
+     "start": 161.973,
+     "end": 162.093,
+     "conf": 0.797
+    },
+    {
+     "w": "side",
+     "start": 162.113,
+     "end": 162.435,
+     "conf": 0.748
+    },
+    {
+     "w": "five",
+     "start": 162.455,
+     "end": 162.776,
+     "conf": 0.029
+    },
+    {
+     "w": "point",
+     "start": 162.796,
+     "end": 162.997,
+     "conf": 0.046
+    },
+    {
+     "w": "one",
+     "start": 163.017,
+     "end": 163.218,
+     "conf": 0.065
+    },
+    {
+     "w": "gives",
+     "start": 163.318,
+     "end": 163.459,
+     "conf": 0.778
+    },
+    {
+     "w": "ten",
+     "start": 163.479,
+     "end": 163.639,
+     "conf": 0.013
+    },
+    {
+     "w": "point",
+     "start": 163.659,
+     "end": 163.86,
+     "conf": 0.016
+    },
+    {
+     "w": "one",
+     "start": 163.88,
+     "end": 164.101,
+     "conf": 0.042
+    },
+    {
+     "w": "and",
+     "start": 164.442,
+     "end": 164.503,
+     "conf": 0.61
+    },
+    {
+     "w": "five",
+     "start": 164.523,
+     "end": 164.844,
+     "conf": 0.002
+    },
+    {
+     "w": "point",
+     "start": 164.864,
+     "end": 165.065,
+     "conf": 0.004
+    },
+    {
+     "w": "zero",
+     "start": 165.085,
+     "end": 165.507,
+     "conf": 0.006
+    },
+    {
+     "w": "one",
+     "start": 165.527,
+     "end": 165.647,
+     "conf": 0.042
+    },
+    {
+     "w": "gives",
+     "start": 165.748,
+     "end": 165.908,
+     "conf": 0.783
+    },
+    {
+     "w": "ten",
+     "start": 165.928,
+     "end": 166.109,
+     "conf": 0.018
+    },
+    {
+     "w": "point",
+     "start": 166.129,
+     "end": 166.35,
+     "conf": 0.012
+    },
+    {
+     "w": "zero",
+     "start": 166.37,
+     "end": 166.751,
+     "conf": 0.007
+    },
+    {
+     "w": "one",
+     "start": 166.771,
+     "end": 166.872,
+     "conf": 0.056
+    }
+   ]
+  },
+  {
+   "section": "Sneaking up",
+   "act": "ACT THREE — The hole",
+   "text": "From the left or from the right, the answers close in on ten.",
+   "idea": false,
+   "start": 167.282,
+   "end": 170.174,
+   "words": [
+    {
+     "w": "from",
+     "start": 167.282,
+     "end": 167.382,
+     "conf": 0.811
+    },
+    {
+     "w": "the",
+     "start": 167.403,
+     "end": 167.483,
+     "conf": 0.903
+    },
+    {
+     "w": "left",
+     "start": 167.543,
+     "end": 167.804,
+     "conf": 0.748
+    },
+    {
+     "w": "or",
+     "start": 167.965,
+     "end": 168.005,
+     "conf": 0.393
+    },
+    {
+     "w": "from",
+     "start": 168.065,
+     "end": 168.166,
+     "conf": 0.747
+    },
+    {
+     "w": "the",
+     "start": 168.206,
+     "end": 168.266,
+     "conf": 0.987
+    },
+    {
+     "w": "right",
+     "start": 168.346,
+     "end": 168.587,
+     "conf": 0.793
+    },
+    {
+     "w": "the",
+     "start": 168.728,
+     "end": 168.788,
+     "conf": 0.483
+    },
+    {
+     "w": "answers",
+     "start": 168.869,
+     "end": 169.13,
+     "conf": 0.654
+    },
+    {
+     "w": "close",
+     "start": 169.19,
+     "end": 169.471,
+     "conf": 0.711
+    },
+    {
+     "w": "in",
+     "start": 169.572,
+     "end": 169.612,
+     "conf": 0.498
+    },
+    {
+     "w": "on",
+     "start": 169.732,
+     "end": 169.833,
+     "conf": 0.992
+    },
+    {
+     "w": "ten",
+     "start": 169.853,
+     "end": 170.174,
+     "conf": 0.101
+    }
+   ]
+  },
+  {
+   "section": "Sneaking up",
+   "act": "ACT THREE — The hole",
+   "text": "So we say that the limit of this expression, as x approaches five, is ten.",
+   "idea": true,
+   "start": 170.624,
+   "end": 174.206,
+   "words": [
+    {
+     "w": "so",
+     "start": 170.624,
+     "end": 170.705,
+     "conf": 0.999
+    },
+    {
+     "w": "we",
+     "start": 170.785,
+     "end": 170.825,
+     "conf": 0.5
+    },
+    {
+     "w": "say",
+     "start": 170.906,
+     "end": 171.047,
+     "conf": 0.999
+    },
+    {
+     "w": "that",
+     "start": 171.067,
+     "end": 171.187,
+     "conf": 0.799
+    },
+    {
+     "w": "the",
+     "start": 171.208,
+     "end": 171.288,
+     "conf": 0.918
+    },
+    {
+     "w": "limit",
+     "start": 171.348,
+     "end": 171.509,
+     "conf": 0.804
+    },
+    {
+     "w": "of",
+     "start": 171.57,
+     "end": 171.61,
+     "conf": 0.499
+    },
+    {
+     "w": "this",
+     "start": 171.63,
+     "end": 171.771,
+     "conf": 0.998
+    },
+    {
+     "w": "expression",
+     "start": 171.831,
+     "end": 172.294,
+     "conf": 0.901
+    },
+    {
+     "w": "as",
+     "start": 172.616,
+     "end": 172.697,
+     "conf": 0.506
+    },
+    {
+     "w": "x",
+     "start": 172.918,
+     "end": 172.938,
+     "conf": 0.0
+    },
+    {
+     "w": "approaches",
+     "start": 172.958,
+     "end": 173.361,
+     "conf": 0.839
+    },
+    {
+     "w": "five",
+     "start": 173.441,
+     "end": 173.723,
+     "conf": 0.513
+    },
+    {
+     "w": "is",
+     "start": 173.823,
+     "end": 173.864,
+     "conf": 0.491
+    },
+    {
+     "w": "ten",
+     "start": 173.884,
+     "end": 174.206,
+     "conf": 0.257
+    }
+   ]
+  },
+  {
+   "section": "A hole in the line",
+   "act": "ACT THREE — The hole",
+   "text": "Draw it, and you get a straight line, with a single hole punched out of it at x equals five.",
+   "idea": false,
+   "start": 175.886,
+   "end": 180.179,
+   "words": [
+    {
+     "w": "draw",
+     "start": 175.886,
+     "end": 176.047,
+     "conf": 0.726
+    },
+    {
+     "w": "it",
+     "start": 176.127,
+     "end": 176.207,
+     "conf": 0.5
+    },
+    {
+     "w": "and",
+     "start": 176.588,
+     "end": 176.648,
+     "conf": 0.658
+    },
+    {
+     "w": "you",
+     "start": 176.668,
+     "end": 176.729,
+     "conf": 0.999
+    },
+    {
+     "w": "get",
+     "start": 176.749,
+     "end": 176.849,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 176.909,
+     "end": 176.929,
+     "conf": 0.001
+    },
+    {
+     "w": "straight",
+     "start": 176.989,
+     "end": 177.21,
+     "conf": 0.772
+    },
+    {
+     "w": "line",
+     "start": 177.27,
+     "end": 177.511,
+     "conf": 0.819
+    },
+    {
+     "w": "with",
+     "start": 177.691,
+     "end": 177.772,
+     "conf": 0.745
+    },
+    {
+     "w": "a",
+     "start": 177.792,
+     "end": 177.812,
+     "conf": 0.999
+    },
+    {
+     "w": "single",
+     "start": 177.892,
+     "end": 178.113,
+     "conf": 0.855
+    },
+    {
+     "w": "hole",
+     "start": 178.153,
+     "end": 178.313,
+     "conf": 0.758
+    },
+    {
+     "w": "punched",
+     "start": 178.373,
+     "end": 178.634,
+     "conf": 0.856
+    },
+    {
+     "w": "out",
+     "start": 178.714,
+     "end": 178.815,
+     "conf": 0.666
+    },
+    {
+     "w": "of",
+     "start": 178.835,
+     "end": 178.895,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 178.915,
+     "end": 179.015,
+     "conf": 0.665
+    },
+    {
+     "w": "at",
+     "start": 179.216,
+     "end": 179.276,
+     "conf": 0.493
+    },
+    {
+     "w": "x",
+     "start": 179.457,
+     "end": 179.477,
+     "conf": 0.004
+    },
+    {
+     "w": "equals",
+     "start": 179.617,
+     "end": 179.818,
+     "conf": 0.606
+    },
+    {
+     "w": "five",
+     "start": 179.838,
+     "end": 180.179,
+     "conf": 0.012
+    }
+   ]
+  },
+  {
+   "section": "A hole in the line",
+   "act": "ACT THREE — The hole",
+   "text": "Everywhere else, the expression is just x plus five. Only at five itself is there nothing there.",
+   "idea": false,
+   "start": 180.569,
+   "end": 185.348,
+   "words": [
+    {
+     "w": "everywhere",
+     "start": 180.569,
+     "end": 180.85,
+     "conf": 0.924
+    },
+    {
+     "w": "else",
+     "start": 180.89,
+     "end": 181.131,
+     "conf": 0.985
+    },
+    {
+     "w": "the",
+     "start": 181.232,
+     "end": 181.292,
+     "conf": 0.995
+    },
+    {
+     "w": "expression",
+     "start": 181.332,
+     "end": 181.754,
+     "conf": 0.994
+    },
+    {
+     "w": "is",
+     "start": 181.814,
+     "end": 181.894,
+     "conf": 0.996
+    },
+    {
+     "w": "just",
+     "start": 181.995,
+     "end": 182.176,
+     "conf": 0.741
+    },
+    {
+     "w": "x",
+     "start": 182.437,
+     "end": 182.457,
+     "conf": 0.072
+    },
+    {
+     "w": "plus",
+     "start": 182.477,
+     "end": 182.718,
+     "conf": 0.094
+    },
+    {
+     "w": "five",
+     "start": 182.738,
+     "end": 183.159,
+     "conf": 0.019
+    },
+    {
+     "w": "only",
+     "start": 183.501,
+     "end": 183.621,
+     "conf": 0.748
+    },
+    {
+     "w": "at",
+     "start": 183.682,
+     "end": 183.742,
+     "conf": 0.505
+    },
+    {
+     "w": "five",
+     "start": 183.822,
+     "end": 184.043,
+     "conf": 0.547
+    },
+    {
+     "w": "itself",
+     "start": 184.063,
+     "end": 184.425,
+     "conf": 0.998
+    },
+    {
+     "w": "is",
+     "start": 184.525,
+     "end": 184.585,
+     "conf": 0.499
+    },
+    {
+     "w": "there",
+     "start": 184.605,
+     "end": 184.746,
+     "conf": 0.994
+    },
+    {
+     "w": "nothing",
+     "start": 184.766,
+     "end": 185.067,
+     "conf": 0.945
+    },
+    {
+     "w": "there",
+     "start": 185.107,
+     "end": 185.348,
+     "conf": 0.794
+    }
+   ]
+  },
+  {
+   "section": "A hole in the line",
+   "act": "ACT THREE — The hole",
+   "text": "And that hole is the whole spirit of a limit.",
+   "idea": false,
+   "start": 185.778,
+   "end": 187.596,
+   "words": [
+    {
+     "w": "and",
+     "start": 185.778,
+     "end": 185.839,
+     "conf": 0.765
+    },
+    {
+     "w": "that",
+     "start": 185.859,
+     "end": 186.0,
+     "conf": 0.986
+    },
+    {
+     "w": "hole",
+     "start": 186.081,
+     "end": 186.263,
+     "conf": 0.762
+    },
+    {
+     "w": "is",
+     "start": 186.283,
+     "end": 186.344,
+     "conf": 0.976
+    },
+    {
+     "w": "the",
+     "start": 186.364,
+     "end": 186.465,
+     "conf": 0.748
+    },
+    {
+     "w": "whole",
+     "start": 186.485,
+     "end": 186.687,
+     "conf": 0.908
+    },
+    {
+     "w": "spirit",
+     "start": 186.768,
+     "end": 187.111,
+     "conf": 0.845
+    },
+    {
+     "w": "of",
+     "start": 187.131,
+     "end": 187.212,
+     "conf": 0.663
+    },
+    {
+     "w": "a",
+     "start": 187.273,
+     "end": 187.293,
+     "conf": 0.004
+    },
+    {
+     "w": "limit",
+     "start": 187.374,
+     "end": 187.596,
+     "conf": 0.8
+    }
+   ]
+  },
+  {
+   "section": "A hole in the line",
+   "act": "ACT THREE — The hole",
+   "text": "A limit doesn't care what happens at the hole. It only cares what happens around it, as you creep closer and closer.",
+   "idea": true,
+   "start": 188.027,
+   "end": 193.826,
+   "words": [
+    {
+     "w": "a",
+     "start": 188.027,
+     "end": 188.047,
+     "conf": 0.999
+    },
+    {
+     "w": "limit",
+     "start": 188.127,
+     "end": 188.348,
+     "conf": 0.843
+    },
+    {
+     "w": "doesn't",
+     "start": 188.368,
+     "end": 188.609,
+     "conf": 0.804
+    },
+    {
+     "w": "care",
+     "start": 188.669,
+     "end": 188.83,
+     "conf": 0.74
+    },
+    {
+     "w": "what",
+     "start": 188.85,
+     "end": 188.97,
+     "conf": 0.955
+    },
+    {
+     "w": "happens",
+     "start": 189.05,
+     "end": 189.331,
+     "conf": 0.876
+    },
+    {
+     "w": "at",
+     "start": 189.372,
+     "end": 189.432,
+     "conf": 0.991
+    },
+    {
+     "w": "the",
+     "start": 189.452,
+     "end": 189.532,
+     "conf": 0.76
+    },
+    {
+     "w": "hole",
+     "start": 189.612,
+     "end": 189.853,
+     "conf": 0.921
+    },
+    {
+     "w": "it",
+     "start": 190.435,
+     "end": 190.475,
+     "conf": 0.5
+    },
+    {
+     "w": "only",
+     "start": 190.576,
+     "end": 190.756,
+     "conf": 0.75
+    },
+    {
+     "w": "cares",
+     "start": 190.856,
+     "end": 191.178,
+     "conf": 0.664
+    },
+    {
+     "w": "what",
+     "start": 191.198,
+     "end": 191.318,
+     "conf": 0.905
+    },
+    {
+     "w": "happens",
+     "start": 191.398,
+     "end": 191.659,
+     "conf": 0.857
+    },
+    {
+     "w": "around",
+     "start": 191.719,
+     "end": 192.02,
+     "conf": 0.814
+    },
+    {
+     "w": "it",
+     "start": 192.081,
+     "end": 192.161,
+     "conf": 0.5
+    },
+    {
+     "w": "as",
+     "start": 192.502,
+     "end": 192.562,
+     "conf": 0.499
+    },
+    {
+     "w": "you",
+     "start": 192.602,
+     "end": 192.683,
+     "conf": 0.998
+    },
+    {
+     "w": "creep",
+     "start": 192.743,
+     "end": 192.943,
+     "conf": 0.798
+    },
+    {
+     "w": "closer",
+     "start": 193.024,
+     "end": 193.365,
+     "conf": 0.795
+    },
+    {
+     "w": "and",
+     "start": 193.385,
+     "end": 193.485,
+     "conf": 0.741
+    },
+    {
+     "w": "closer",
+     "start": 193.505,
+     "end": 193.826,
+     "conf": 0.946
+    }
+   ]
+  },
+  {
+   "section": "Back to the bowl",
+   "act": "ACT FOUR — The derivative",
+   "text": "Now the slope at a single point isn't stuck anymore.",
+   "idea": false,
+   "start": 196.286,
+   "end": 198.451,
+   "words": [
+    {
+     "w": "now",
+     "start": 196.286,
+     "end": 196.366,
+     "conf": 0.67
+    },
+    {
+     "w": "the",
+     "start": 196.386,
+     "end": 196.446,
+     "conf": 0.843
+    },
+    {
+     "w": "slope",
+     "start": 196.547,
+     "end": 196.827,
+     "conf": 0.749
+    },
+    {
+     "w": "at",
+     "start": 196.887,
+     "end": 196.968,
+     "conf": 0.814
+    },
+    {
+     "w": "a",
+     "start": 196.988,
+     "end": 197.008,
+     "conf": 0.946
+    },
+    {
+     "w": "single",
+     "start": 197.108,
+     "end": 197.349,
+     "conf": 0.826
+    },
+    {
+     "w": "point",
+     "start": 197.369,
+     "end": 197.549,
+     "conf": 0.954
+    },
+    {
+     "w": "isn't",
+     "start": 197.609,
+     "end": 197.79,
+     "conf": 0.81
+    },
+    {
+     "w": "stuck",
+     "start": 197.87,
+     "end": 198.07,
+     "conf": 0.549
+    },
+    {
+     "w": "anymore",
+     "start": 198.13,
+     "end": 198.451,
+     "conf": 0.874
+    }
+   ]
+  },
+  {
+   "section": "Back to the bowl",
+   "act": "ACT FOUR — The derivative",
+   "text": "Call the gap between our two points h. The second point sits at one plus h.",
+   "idea": false,
+   "start": 198.861,
+   "end": 201.951,
+   "words": [
+    {
+     "w": "call",
+     "start": 198.861,
+     "end": 199.022,
+     "conf": 0.962
+    },
+    {
+     "w": "the",
+     "start": 199.042,
+     "end": 199.102,
+     "conf": 0.977
+    },
+    {
+     "w": "gap",
+     "start": 199.162,
+     "end": 199.323,
+     "conf": 0.664
+    },
+    {
+     "w": "between",
+     "start": 199.403,
+     "end": 199.684,
+     "conf": 0.849
+    },
+    {
+     "w": "our",
+     "start": 199.724,
+     "end": 199.784,
+     "conf": 0.614
+    },
+    {
+     "w": "two",
+     "start": 199.824,
+     "end": 199.945,
+     "conf": 0.97
+    },
+    {
+     "w": "points",
+     "start": 199.965,
+     "end": 200.206,
+     "conf": 0.818
+    },
+    {
+     "w": "h",
+     "start": 200.446,
+     "end": 200.466,
+     "conf": 0.023
+    },
+    {
+     "w": "the",
+     "start": 200.487,
+     "end": 200.567,
+     "conf": 0.824
+    },
+    {
+     "w": "second",
+     "start": 200.627,
+     "end": 200.888,
+     "conf": 0.904
+    },
+    {
+     "w": "point",
+     "start": 200.908,
+     "end": 201.109,
+     "conf": 0.996
+    },
+    {
+     "w": "sits",
+     "start": 201.189,
+     "end": 201.37,
+     "conf": 0.997
+    },
+    {
+     "w": "at",
+     "start": 201.43,
+     "end": 201.47,
+     "conf": 0.481
+    },
+    {
+     "w": "one",
+     "start": 201.49,
+     "end": 201.671,
+     "conf": 0.006
+    },
+    {
+     "w": "plus",
+     "start": 201.691,
+     "end": 201.911,
+     "conf": 0.071
+    },
+    {
+     "w": "h",
+     "start": 201.931,
+     "end": 201.951,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "Back to the bowl",
+   "act": "ACT FOUR — The derivative",
+   "text": "The rise is one plus h, squared, minus one. Multiply it out, and that's two h plus h squared.",
+   "idea": false,
+   "start": 202.623,
+   "end": 207.252,
+   "words": [
+    {
+     "w": "the",
+     "start": 202.623,
+     "end": 202.683,
+     "conf": 0.037
+    },
+    {
+     "w": "rise",
+     "start": 202.703,
+     "end": 202.944,
+     "conf": 0.951
+    },
+    {
+     "w": "is",
+     "start": 202.964,
+     "end": 203.044,
+     "conf": 0.976
+    },
+    {
+     "w": "one",
+     "start": 203.064,
+     "end": 203.224,
+     "conf": 0.053
+    },
+    {
+     "w": "plus",
+     "start": 203.244,
+     "end": 203.465,
+     "conf": 0.104
+    },
+    {
+     "w": "h",
+     "start": 203.685,
+     "end": 203.705,
+     "conf": 0.008
+    },
+    {
+     "w": "squared",
+     "start": 203.725,
+     "end": 204.066,
+     "conf": 0.648
+    },
+    {
+     "w": "minus",
+     "start": 204.126,
+     "end": 204.387,
+     "conf": 0.722
+    },
+    {
+     "w": "one",
+     "start": 204.527,
+     "end": 204.647,
+     "conf": 0.665
+    },
+    {
+     "w": "multiply",
+     "start": 205.128,
+     "end": 205.489,
+     "conf": 0.872
+    },
+    {
+     "w": "it",
+     "start": 205.529,
+     "end": 205.589,
+     "conf": 0.962
+    },
+    {
+     "w": "out",
+     "start": 205.669,
+     "end": 205.789,
+     "conf": 0.666
+    },
+    {
+     "w": "and",
+     "start": 205.81,
+     "end": 205.93,
+     "conf": 0.662
+    },
+    {
+     "w": "that's",
+     "start": 205.95,
+     "end": 206.11,
+     "conf": 0.847
+    },
+    {
+     "w": "two",
+     "start": 206.13,
+     "end": 206.351,
+     "conf": 0.379
+    },
+    {
+     "w": "h",
+     "start": 206.591,
+     "end": 206.611,
+     "conf": 0.006
+    },
+    {
+     "w": "plus",
+     "start": 206.631,
+     "end": 206.812,
+     "conf": 0.46
+    },
+    {
+     "w": "h",
+     "start": 206.992,
+     "end": 207.012,
+     "conf": 0.003
+    },
+    {
+     "w": "squared",
+     "start": 207.032,
+     "end": 207.252,
+     "conf": 0.634
+    }
+   ]
+  },
+  {
+   "section": "Back to the bowl",
+   "act": "ACT FOUR — The derivative",
+   "text": "Divide by the run, which is h, and the slope of the secant is simply two plus h.",
+   "idea": false,
+   "start": 207.642,
+   "end": 211.284,
+   "words": [
+    {
+     "w": "divide",
+     "start": 207.642,
+     "end": 207.944,
+     "conf": 0.576
+    },
+    {
+     "w": "by",
+     "start": 207.984,
+     "end": 208.125,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 208.145,
+     "end": 208.246,
+     "conf": 0.745
+    },
+    {
+     "w": "run",
+     "start": 208.346,
+     "end": 208.527,
+     "conf": 0.662
+    },
+    {
+     "w": "which",
+     "start": 208.547,
+     "end": 208.789,
+     "conf": 0.803
+    },
+    {
+     "w": "is",
+     "start": 208.829,
+     "end": 208.889,
+     "conf": 0.499
+    },
+    {
+     "w": "h",
+     "start": 209.191,
+     "end": 209.211,
+     "conf": 0.84
+    },
+    {
+     "w": "and",
+     "start": 209.232,
+     "end": 209.473,
+     "conf": 0.654
+    },
+    {
+     "w": "the",
+     "start": 209.493,
+     "end": 209.553,
+     "conf": 0.97
+    },
+    {
+     "w": "slope",
+     "start": 209.574,
+     "end": 209.815,
+     "conf": 0.821
+    },
+    {
+     "w": "of",
+     "start": 209.835,
+     "end": 209.895,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 209.916,
+     "end": 209.996,
+     "conf": 0.96
+    },
+    {
+     "w": "secant",
+     "start": 210.097,
+     "end": 210.358,
+     "conf": 0.499
+    },
+    {
+     "w": "is",
+     "start": 210.378,
+     "end": 210.479,
+     "conf": 0.661
+    },
+    {
+     "w": "simply",
+     "start": 210.499,
+     "end": 210.761,
+     "conf": 0.817
+    },
+    {
+     "w": "two",
+     "start": 210.781,
+     "end": 211.022,
+     "conf": 0.001
+    },
+    {
+     "w": "plus",
+     "start": 211.042,
+     "end": 211.243,
+     "conf": 0.017
+    },
+    {
+     "w": "h",
+     "start": 211.264,
+     "end": 211.284,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "Back to the bowl",
+   "act": "ACT FOUR — The derivative",
+   "text": "Check it. When h was a tenth, we got two point one. When h was a hundredth, two point zero one.",
+   "idea": false,
+   "start": 211.956,
+   "end": 216.499,
+   "words": [
+    {
+     "w": "check",
+     "start": 211.956,
+     "end": 212.157,
+     "conf": 0.909
+    },
+    {
+     "w": "it",
+     "start": 212.237,
+     "end": 212.298,
+     "conf": 0.491
+    },
+    {
+     "w": "when",
+     "start": 212.619,
+     "end": 212.74,
+     "conf": 0.88
+    },
+    {
+     "w": "h",
+     "start": 212.881,
+     "end": 212.901,
+     "conf": 0.992
+    },
+    {
+     "w": "was",
+     "start": 212.921,
+     "end": 213.001,
+     "conf": 0.96
+    },
+    {
+     "w": "a",
+     "start": 213.041,
+     "end": 213.062,
+     "conf": 0.014
+    },
+    {
+     "w": "tenth",
+     "start": 213.122,
+     "end": 213.363,
+     "conf": 0.778
+    },
+    {
+     "w": "we",
+     "start": 213.443,
+     "end": 213.504,
+     "conf": 0.98
+    },
+    {
+     "w": "got",
+     "start": 213.524,
+     "end": 213.604,
+     "conf": 0.483
+    },
+    {
+     "w": "two",
+     "start": 213.624,
+     "end": 213.845,
+     "conf": 0.396
+    },
+    {
+     "w": "point",
+     "start": 213.866,
+     "end": 214.067,
+     "conf": 0.051
+    },
+    {
+     "w": "one",
+     "start": 214.087,
+     "end": 214.308,
+     "conf": 0.018
+    },
+    {
+     "w": "when",
+     "start": 214.328,
+     "end": 214.73,
+     "conf": 0.305
+    },
+    {
+     "w": "h",
+     "start": 214.871,
+     "end": 214.891,
+     "conf": 0.927
+    },
+    {
+     "w": "was",
+     "start": 214.911,
+     "end": 215.011,
+     "conf": 0.676
+    },
+    {
+     "w": "a",
+     "start": 215.031,
+     "end": 215.072,
+     "conf": 0.477
+    },
+    {
+     "w": "hundredth",
+     "start": 215.172,
+     "end": 215.534,
+     "conf": 0.376
+    },
+    {
+     "w": "two",
+     "start": 215.554,
+     "end": 215.896,
+     "conf": 0.005
+    },
+    {
+     "w": "point",
+     "start": 215.916,
+     "end": 216.097,
+     "conf": 0.011
+    },
+    {
+     "w": "zero",
+     "start": 216.117,
+     "end": 216.278,
+     "conf": 0.004
+    },
+    {
+     "w": "one",
+     "start": 216.298,
+     "end": 216.499,
+     "conf": 0.008
+    }
+   ]
+  },
+  {
+   "section": "Back to the bowl",
+   "act": "ACT FOUR — The derivative",
+   "text": "We never set h to zero. We only let it shrink towards zero, and two plus h heads straight for two.",
+   "idea": true,
+   "start": 216.889,
+   "end": 221.602,
+   "words": [
+    {
+     "w": "we",
+     "start": 216.889,
+     "end": 216.929,
+     "conf": 0.5
+    },
+    {
+     "w": "never",
+     "start": 216.949,
+     "end": 217.15,
+     "conf": 0.801
+    },
+    {
+     "w": "set",
+     "start": 217.23,
+     "end": 217.35,
+     "conf": 0.534
+    },
+    {
+     "w": "h",
+     "start": 217.591,
+     "end": 217.611,
+     "conf": 0.202
+    },
+    {
+     "w": "to",
+     "start": 217.631,
+     "end": 217.711,
+     "conf": 0.375
+    },
+    {
+     "w": "zero",
+     "start": 217.771,
+     "end": 218.032,
+     "conf": 0.255
+    },
+    {
+     "w": "we",
+     "start": 218.413,
+     "end": 218.453,
+     "conf": 0.499
+    },
+    {
+     "w": "only",
+     "start": 218.554,
+     "end": 218.654,
+     "conf": 0.724
+    },
+    {
+     "w": "let",
+     "start": 218.734,
+     "end": 218.834,
+     "conf": 0.666
+    },
+    {
+     "w": "it",
+     "start": 218.854,
+     "end": 218.915,
+     "conf": 0.994
+    },
+    {
+     "w": "shrink",
+     "start": 218.975,
+     "end": 219.175,
+     "conf": 0.987
+    },
+    {
+     "w": "towards",
+     "start": 219.195,
+     "end": 219.476,
+     "conf": 0.835
+    },
+    {
+     "w": "zero",
+     "start": 219.536,
+     "end": 219.777,
+     "conf": 0.444
+    },
+    {
+     "w": "and",
+     "start": 220.038,
+     "end": 220.118,
+     "conf": 0.654
+    },
+    {
+     "w": "two",
+     "start": 220.138,
+     "end": 220.298,
+     "conf": 0.006
+    },
+    {
+     "w": "plus",
+     "start": 220.318,
+     "end": 220.519,
+     "conf": 0.097
+    },
+    {
+     "w": "h",
+     "start": 220.76,
+     "end": 220.78,
+     "conf": 0.022
+    },
+    {
+     "w": "heads",
+     "start": 220.8,
+     "end": 220.98,
+     "conf": 0.821
+    },
+    {
+     "w": "straight",
+     "start": 221.04,
+     "end": 221.281,
+     "conf": 0.838
+    },
+    {
+     "w": "for",
+     "start": 221.301,
+     "end": 221.401,
+     "conf": 0.862
+    },
+    {
+     "w": "two",
+     "start": 221.421,
+     "end": 221.602,
+     "conf": 0.08
+    }
+   ]
+  },
+  {
+   "section": "Every point at once",
+   "act": "ACT FOUR — The derivative",
+   "text": "Do the same at any point x, and the secant's slope comes out as two x plus h. Let h shrink, and you're left with two x.",
+   "idea": false,
+   "start": 223.281,
+   "end": 228.919,
+   "words": [
+    {
+     "w": "do",
+     "start": 223.281,
+     "end": 223.321,
+     "conf": 0.773
+    },
+    {
+     "w": "the",
+     "start": 223.381,
+     "end": 223.442,
+     "conf": 0.887
+    },
+    {
+     "w": "same",
+     "start": 223.542,
+     "end": 223.783,
+     "conf": 0.413
+    },
+    {
+     "w": "at",
+     "start": 223.803,
+     "end": 223.863,
+     "conf": 0.801
+    },
+    {
+     "w": "any",
+     "start": 223.923,
+     "end": 224.003,
+     "conf": 0.598
+    },
+    {
+     "w": "point",
+     "start": 224.064,
+     "end": 224.244,
+     "conf": 0.892
+    },
+    {
+     "w": "x",
+     "start": 224.505,
+     "end": 224.525,
+     "conf": 0.851
+    },
+    {
+     "w": "and",
+     "start": 224.545,
+     "end": 224.786,
+     "conf": 0.647
+    },
+    {
+     "w": "the",
+     "start": 224.806,
+     "end": 224.866,
+     "conf": 0.962
+    },
+    {
+     "w": "secant's",
+     "start": 224.906,
+     "end": 225.247,
+     "conf": 0.394
+    },
+    {
+     "w": "slope",
+     "start": 225.268,
+     "end": 225.528,
+     "conf": 0.978
+    },
+    {
+     "w": "comes",
+     "start": 225.609,
+     "end": 225.769,
+     "conf": 0.797
+    },
+    {
+     "w": "out",
+     "start": 225.849,
+     "end": 225.93,
+     "conf": 0.663
+    },
+    {
+     "w": "as",
+     "start": 225.95,
+     "end": 226.01,
+     "conf": 0.992
+    },
+    {
+     "w": "two",
+     "start": 226.07,
+     "end": 226.251,
+     "conf": 0.055
+    },
+    {
+     "w": "x",
+     "start": 226.271,
+     "end": 226.291,
+     "conf": 0.0
+    },
+    {
+     "w": "plus",
+     "start": 226.311,
+     "end": 226.692,
+     "conf": 0.103
+    },
+    {
+     "w": "h",
+     "start": 226.712,
+     "end": 226.732,
+     "conf": 0.0
+    },
+    {
+     "w": "let",
+     "start": 227.334,
+     "end": 227.415,
+     "conf": 0.667
+    },
+    {
+     "w": "h",
+     "start": 227.535,
+     "end": 227.555,
+     "conf": 0.06
+    },
+    {
+     "w": "shrink",
+     "start": 227.655,
+     "end": 227.896,
+     "conf": 0.934
+    },
+    {
+     "w": "and",
+     "start": 228.037,
+     "end": 228.097,
+     "conf": 0.658
+    },
+    {
+     "w": "you're",
+     "start": 228.117,
+     "end": 228.257,
+     "conf": 0.595
+    },
+    {
+     "w": "left",
+     "start": 228.277,
+     "end": 228.398,
+     "conf": 0.705
+    },
+    {
+     "w": "with",
+     "start": 228.418,
+     "end": 228.538,
+     "conf": 0.793
+    },
+    {
+     "w": "two",
+     "start": 228.598,
+     "end": 228.719,
+     "conf": 0.279
+    },
+    {
+     "w": "x",
+     "start": 228.899,
+     "end": 228.919,
+     "conf": 0.991
+    }
+   ]
+  },
+  {
+   "section": "Every point at once",
+   "act": "ACT FOUR — The derivative",
+   "text": "That's the slope of the bowl at every point at once. At x equals one, it's two. At x equals three, it's six. At the very bottom, at zero, it's zero: perfectly flat.",
+   "idea": false,
+   "start": 229.41,
+   "end": 237.237,
+   "words": [
+    {
+     "w": "that's",
+     "start": 229.41,
+     "end": 229.55,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 229.59,
+     "end": 229.67,
+     "conf": 0.984
+    },
+    {
+     "w": "slope",
+     "start": 229.77,
+     "end": 229.991,
+     "conf": 0.798
+    },
+    {
+     "w": "of",
+     "start": 230.011,
+     "end": 230.051,
+     "conf": 0.996
+    },
+    {
+     "w": "the",
+     "start": 230.071,
+     "end": 230.131,
+     "conf": 0.993
+    },
+    {
+     "w": "bowl",
+     "start": 230.151,
+     "end": 230.371,
+     "conf": 0.718
+    },
+    {
+     "w": "at",
+     "start": 230.391,
+     "end": 230.451,
+     "conf": 0.564
+    },
+    {
+     "w": "every",
+     "start": 230.471,
+     "end": 230.611,
+     "conf": 0.832
+    },
+    {
+     "w": "point",
+     "start": 230.691,
+     "end": 230.831,
+     "conf": 0.801
+    },
+    {
+     "w": "at",
+     "start": 230.851,
+     "end": 230.911,
+     "conf": 0.965
+    },
+    {
+     "w": "once",
+     "start": 231.011,
+     "end": 231.232,
+     "conf": 0.745
+    },
+    {
+     "w": "at",
+     "start": 231.572,
+     "end": 231.612,
+     "conf": 0.486
+    },
+    {
+     "w": "x",
+     "start": 231.712,
+     "end": 231.732,
+     "conf": 0.992
+    },
+    {
+     "w": "equals",
+     "start": 231.892,
+     "end": 232.092,
+     "conf": 0.555
+    },
+    {
+     "w": "one",
+     "start": 232.112,
+     "end": 232.313,
+     "conf": 0.145
+    },
+    {
+     "w": "it's",
+     "start": 232.333,
+     "end": 232.473,
+     "conf": 0.402
+    },
+    {
+     "w": "two",
+     "start": 232.493,
+     "end": 232.793,
+     "conf": 0.057
+    },
+    {
+     "w": "at",
+     "start": 233.233,
+     "end": 233.273,
+     "conf": 0.425
+    },
+    {
+     "w": "x",
+     "start": 233.374,
+     "end": 233.394,
+     "conf": 0.961
+    },
+    {
+     "w": "equals",
+     "start": 233.494,
+     "end": 233.654,
+     "conf": 0.465
+    },
+    {
+     "w": "three",
+     "start": 233.674,
+     "end": 233.894,
+     "conf": 0.102
+    },
+    {
+     "w": "it's",
+     "start": 233.954,
+     "end": 234.034,
+     "conf": 0.421
+    },
+    {
+     "w": "six",
+     "start": 234.134,
+     "end": 234.314,
+     "conf": 0.333
+    },
+    {
+     "w": "at",
+     "start": 234.755,
+     "end": 234.815,
+     "conf": 0.496
+    },
+    {
+     "w": "the",
+     "start": 234.835,
+     "end": 234.895,
+     "conf": 0.986
+    },
+    {
+     "w": "very",
+     "start": 234.915,
+     "end": 235.075,
+     "conf": 0.996
+    },
+    {
+     "w": "bottom",
+     "start": 235.155,
+     "end": 235.435,
+     "conf": 0.796
+    },
+    {
+     "w": "at",
+     "start": 235.596,
+     "end": 235.656,
+     "conf": 0.472
+    },
+    {
+     "w": "zero",
+     "start": 235.676,
+     "end": 235.936,
+     "conf": 0.363
+    },
+    {
+     "w": "it's",
+     "start": 236.036,
+     "end": 236.116,
+     "conf": 0.329
+    },
+    {
+     "w": "zero",
+     "start": 236.136,
+     "end": 236.376,
+     "conf": 0.488
+    },
+    {
+     "w": "perfectly",
+     "start": 236.516,
+     "end": 236.897,
+     "conf": 0.853
+    },
+    {
+     "w": "flat",
+     "start": 236.997,
+     "end": 237.237,
+     "conf": 0.749
+    }
+   ]
+  },
+  {
+   "section": "Every point at once",
+   "act": "ACT FOUR — The derivative",
+   "text": "This new function, the slope at every point, is called the derivative. The derivative of x squared is two x.",
+   "idea": true,
+   "start": 237.687,
+   "end": 242.86,
+   "words": [
+    {
+     "w": "this",
+     "start": 237.687,
+     "end": 237.787,
+     "conf": 0.25
+    },
+    {
+     "w": "new",
+     "start": 237.868,
+     "end": 237.948,
+     "conf": 0.667
+    },
+    {
+     "w": "function",
+     "start": 238.028,
+     "end": 238.429,
+     "conf": 0.871
+    },
+    {
+     "w": "the",
+     "start": 238.629,
+     "end": 238.71,
+     "conf": 0.934
+    },
+    {
+     "w": "slope",
+     "start": 238.77,
+     "end": 238.99,
+     "conf": 0.791
+    },
+    {
+     "w": "at",
+     "start": 239.01,
+     "end": 239.051,
+     "conf": 0.96
+    },
+    {
+     "w": "every",
+     "start": 239.111,
+     "end": 239.251,
+     "conf": 0.795
+    },
+    {
+     "w": "point",
+     "start": 239.311,
+     "end": 239.552,
+     "conf": 0.812
+    },
+    {
+     "w": "is",
+     "start": 239.692,
+     "end": 239.732,
+     "conf": 0.499
+    },
+    {
+     "w": "called",
+     "start": 239.752,
+     "end": 239.973,
+     "conf": 0.855
+    },
+    {
+     "w": "the",
+     "start": 239.993,
+     "end": 240.053,
+     "conf": 0.899
+    },
+    {
+     "w": "derivative",
+     "start": 240.073,
+     "end": 240.655,
+     "conf": 0.908
+    },
+    {
+     "w": "the",
+     "start": 240.935,
+     "end": 240.995,
+     "conf": 0.679
+    },
+    {
+     "w": "derivative",
+     "start": 241.016,
+     "end": 241.417,
+     "conf": 0.999
+    },
+    {
+     "w": "of",
+     "start": 241.477,
+     "end": 241.517,
+     "conf": 0.495
+    },
+    {
+     "w": "x",
+     "start": 241.637,
+     "end": 241.657,
+     "conf": 0.976
+    },
+    {
+     "w": "squared",
+     "start": 241.677,
+     "end": 242.078,
+     "conf": 0.514
+    },
+    {
+     "w": "is",
+     "start": 242.199,
+     "end": 242.239,
+     "conf": 0.477
+    },
+    {
+     "w": "two",
+     "start": 242.359,
+     "end": 242.539,
+     "conf": 0.504
+    },
+    {
+     "w": "x",
+     "start": 242.84,
+     "end": 242.86,
+     "conf": 0.971
+    }
+   ]
+  },
+  {
+   "section": "The speedometer",
+   "act": "ACT FOUR — The derivative",
+   "text": "And the derivative isn't only about hills.",
+   "idea": false,
+   "start": 244.701,
+   "end": 246.489,
+   "words": [
+    {
+     "w": "and",
+     "start": 244.701,
+     "end": 244.761,
+     "conf": 0.598
+    },
+    {
+     "w": "the",
+     "start": 244.781,
+     "end": 244.842,
+     "conf": 0.977
+    },
+    {
+     "w": "derivative",
+     "start": 244.902,
+     "end": 245.364,
+     "conf": 0.891
+    },
+    {
+     "w": "isn't",
+     "start": 245.504,
+     "end": 245.645,
+     "conf": 0.582
+    },
+    {
+     "w": "only",
+     "start": 245.746,
+     "end": 245.826,
+     "conf": 0.522
+    },
+    {
+     "w": "about",
+     "start": 245.886,
+     "end": 246.107,
+     "conf": 0.841
+    },
+    {
+     "w": "hills",
+     "start": 246.127,
+     "end": 246.489,
+     "conf": 0.907
+    }
+   ]
+  },
+  {
+   "section": "The speedometer",
+   "act": "ACT FOUR — The derivative",
+   "text": "Swap height for distance, and the run for time, and the slope becomes speed.",
+   "idea": false,
+   "start": 246.999,
+   "end": 250.751,
+   "words": [
+    {
+     "w": "swap",
+     "start": 246.999,
+     "end": 247.24,
+     "conf": 0.772
+    },
+    {
+     "w": "height",
+     "start": 247.3,
+     "end": 247.541,
+     "conf": 0.766
+    },
+    {
+     "w": "for",
+     "start": 247.601,
+     "end": 247.681,
+     "conf": 0.692
+    },
+    {
+     "w": "distance",
+     "start": 247.762,
+     "end": 248.243,
+     "conf": 0.995
+    },
+    {
+     "w": "and",
+     "start": 248.404,
+     "end": 248.464,
+     "conf": 0.651
+    },
+    {
+     "w": "the",
+     "start": 248.484,
+     "end": 248.544,
+     "conf": 0.949
+    },
+    {
+     "w": "run",
+     "start": 248.564,
+     "end": 248.745,
+     "conf": 0.617
+    },
+    {
+     "w": "for",
+     "start": 248.825,
+     "end": 248.905,
+     "conf": 0.653
+    },
+    {
+     "w": "time",
+     "start": 248.986,
+     "end": 249.327,
+     "conf": 0.8
+    },
+    {
+     "w": "and",
+     "start": 249.427,
+     "end": 249.487,
+     "conf": 0.672
+    },
+    {
+     "w": "the",
+     "start": 249.507,
+     "end": 249.567,
+     "conf": 0.98
+    },
+    {
+     "w": "slope",
+     "start": 249.648,
+     "end": 249.889,
+     "conf": 0.756
+    },
+    {
+     "w": "becomes",
+     "start": 249.909,
+     "end": 250.23,
+     "conf": 0.906
+    },
+    {
+     "w": "speed",
+     "start": 250.37,
+     "end": 250.751,
+     "conf": 0.795
+    }
+   ]
+  },
+  {
+   "section": "The speedometer",
+   "act": "ACT FOUR — The derivative",
+   "text": "Your car's speedometer shows a derivative. Not your average speed over the whole trip, but how fast you're going right now, at a single instant.",
+   "idea": false,
+   "start": 251.141,
+   "end": 258.593,
+   "words": [
+    {
+     "w": "your",
+     "start": 251.141,
+     "end": 251.221,
+     "conf": 0.457
+    },
+    {
+     "w": "car's",
+     "start": 251.281,
+     "end": 251.542,
+     "conf": 0.363
+    },
+    {
+     "w": "speedometer",
+     "start": 251.682,
+     "end": 252.243,
+     "conf": 0.582
+    },
+    {
+     "w": "shows",
+     "start": 252.423,
+     "end": 252.623,
+     "conf": 0.797
+    },
+    {
+     "w": "a",
+     "start": 252.683,
+     "end": 252.704,
+     "conf": 0.0
+    },
+    {
+     "w": "derivative",
+     "start": 252.764,
+     "end": 253.365,
+     "conf": 0.899
+    },
+    {
+     "w": "not",
+     "start": 253.805,
+     "end": 253.905,
+     "conf": 0.989
+    },
+    {
+     "w": "your",
+     "start": 253.925,
+     "end": 254.046,
+     "conf": 0.783
+    },
+    {
+     "w": "average",
+     "start": 254.126,
+     "end": 254.386,
+     "conf": 0.679
+    },
+    {
+     "w": "speed",
+     "start": 254.406,
+     "end": 254.687,
+     "conf": 0.833
+    },
+    {
+     "w": "over",
+     "start": 254.707,
+     "end": 254.847,
+     "conf": 0.79
+    },
+    {
+     "w": "the",
+     "start": 254.867,
+     "end": 254.927,
+     "conf": 0.998
+    },
+    {
+     "w": "whole",
+     "start": 254.987,
+     "end": 255.167,
+     "conf": 0.798
+    },
+    {
+     "w": "trip",
+     "start": 255.228,
+     "end": 255.428,
+     "conf": 0.757
+    },
+    {
+     "w": "but",
+     "start": 255.708,
+     "end": 255.788,
+     "conf": 0.334
+    },
+    {
+     "w": "how",
+     "start": 255.849,
+     "end": 255.949,
+     "conf": 0.761
+    },
+    {
+     "w": "fast",
+     "start": 256.089,
+     "end": 256.389,
+     "conf": 0.75
+    },
+    {
+     "w": "you're",
+     "start": 256.409,
+     "end": 256.53,
+     "conf": 0.499
+    },
+    {
+     "w": "going",
+     "start": 256.55,
+     "end": 256.77,
+     "conf": 0.98
+    },
+    {
+     "w": "right",
+     "start": 256.79,
+     "end": 256.95,
+     "conf": 0.994
+    },
+    {
+     "w": "now",
+     "start": 256.97,
+     "end": 257.131,
+     "conf": 0.947
+    },
+    {
+     "w": "at",
+     "start": 257.531,
+     "end": 257.631,
+     "conf": 0.656
+    },
+    {
+     "w": "a",
+     "start": 257.691,
+     "end": 257.711,
+     "conf": 0.002
+    },
+    {
+     "w": "single",
+     "start": 257.892,
+     "end": 258.192,
+     "conf": 0.821
+    },
+    {
+     "w": "instant",
+     "start": 258.272,
+     "end": 258.593,
+     "conf": 0.869
+    }
+   ]
+  },
+  {
+   "section": "The speedometer",
+   "act": "ACT FOUR — The derivative",
+   "text": "In the sixteen sixties and seventies, Isaac Newton in England and Gottfried Leibniz in Germany each turned this idea into a complete method. Leibniz published his first, in sixteen eighty-four.",
+   "idea": false,
+   "start": 259.003,
+   "end": 269.142,
+   "words": [
+    {
+     "w": "in",
+     "start": 259.003,
+     "end": 259.043,
+     "conf": 0.454
+    },
+    {
+     "w": "the",
+     "start": 259.063,
+     "end": 259.123,
+     "conf": 0.0
+    },
+    {
+     "w": "sixteen",
+     "start": 259.143,
+     "end": 259.524,
+     "conf": 0.004
+    },
+    {
+     "w": "sixties",
+     "start": 259.544,
+     "end": 259.965,
+     "conf": 0.026
+    },
+    {
+     "w": "and",
+     "start": 259.985,
+     "end": 260.085,
+     "conf": 0.114
+    },
+    {
+     "w": "seventies",
+     "start": 260.105,
+     "end": 260.606,
+     "conf": 0.063
+    },
+    {
+     "w": "isaac",
+     "start": 260.947,
+     "end": 261.167,
+     "conf": 0.849
+    },
+    {
+     "w": "newton",
+     "start": 261.367,
+     "end": 261.708,
+     "conf": 0.674
+    },
+    {
+     "w": "in",
+     "start": 261.788,
+     "end": 261.848,
+     "conf": 0.498
+    },
+    {
+     "w": "england",
+     "start": 261.989,
+     "end": 262.329,
+     "conf": 0.869
+    },
+    {
+     "w": "and",
+     "start": 262.389,
+     "end": 262.47,
+     "conf": 0.705
+    },
+    {
+     "w": "gottfried",
+     "start": 262.51,
+     "end": 262.81,
+     "conf": 0.663
+    },
+    {
+     "w": "leibniz",
+     "start": 262.83,
+     "end": 263.171,
+     "conf": 0.518
+    },
+    {
+     "w": "in",
+     "start": 263.271,
+     "end": 263.331,
+     "conf": 0.997
+    },
+    {
+     "w": "germany",
+     "start": 263.351,
+     "end": 263.692,
+     "conf": 0.875
+    },
+    {
+     "w": "each",
+     "start": 263.832,
+     "end": 263.972,
+     "conf": 0.75
+    },
+    {
+     "w": "turned",
+     "start": 264.053,
+     "end": 264.253,
+     "conf": 0.434
+    },
+    {
+     "w": "this",
+     "start": 264.273,
+     "end": 264.413,
+     "conf": 0.999
+    },
+    {
+     "w": "idea",
+     "start": 264.573,
+     "end": 264.774,
+     "conf": 0.749
+    },
+    {
+     "w": "into",
+     "start": 264.914,
+     "end": 265.034,
+     "conf": 0.748
+    },
+    {
+     "w": "a",
+     "start": 265.114,
+     "end": 265.135,
+     "conf": 0.002
+    },
+    {
+     "w": "complete",
+     "start": 265.155,
+     "end": 265.595,
+     "conf": 0.994
+    },
+    {
+     "w": "method",
+     "start": 265.656,
+     "end": 265.976,
+     "conf": 0.854
+    },
+    {
+     "w": "leibniz",
+     "start": 266.718,
+     "end": 266.998,
+     "conf": 0.414
+    },
+    {
+     "w": "published",
+     "start": 267.138,
+     "end": 267.499,
+     "conf": 0.958
+    },
+    {
+     "w": "his",
+     "start": 267.519,
+     "end": 267.619,
+     "conf": 0.96
+    },
+    {
+     "w": "first",
+     "start": 267.699,
+     "end": 268.02,
+     "conf": 0.571
+    },
+    {
+     "w": "in",
+     "start": 268.2,
+     "end": 268.24,
+     "conf": 0.435
+    },
+    {
+     "w": "sixteen",
+     "start": 268.26,
+     "end": 268.681,
+     "conf": 0.002
+    },
+    {
+     "w": "eighty-four",
+     "start": 268.701,
+     "end": 269.142,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "The speedometer",
+   "act": "ACT FOUR — The derivative",
+   "text": "The derivative takes a change apart, so you can see each instant clearly.",
+   "idea": true,
+   "start": 269.552,
+   "end": 273.18,
+   "words": [
+    {
+     "w": "the",
+     "start": 269.552,
+     "end": 269.612,
+     "conf": 0.002
+    },
+    {
+     "w": "derivative",
+     "start": 269.632,
+     "end": 270.133,
+     "conf": 0.899
+    },
+    {
+     "w": "takes",
+     "start": 270.314,
+     "end": 270.474,
+     "conf": 0.792
+    },
+    {
+     "w": "a",
+     "start": 270.494,
+     "end": 270.514,
+     "conf": 0.994
+    },
+    {
+     "w": "change",
+     "start": 270.594,
+     "end": 270.815,
+     "conf": 0.824
+    },
+    {
+     "w": "apart",
+     "start": 270.835,
+     "end": 271.156,
+     "conf": 0.98
+    },
+    {
+     "w": "so",
+     "start": 271.316,
+     "end": 271.356,
+     "conf": 0.499
+    },
+    {
+     "w": "you",
+     "start": 271.436,
+     "end": 271.496,
+     "conf": 0.969
+    },
+    {
+     "w": "can",
+     "start": 271.516,
+     "end": 271.617,
+     "conf": 0.898
+    },
+    {
+     "w": "see",
+     "start": 271.697,
+     "end": 271.797,
+     "conf": 0.665
+    },
+    {
+     "w": "each",
+     "start": 271.997,
+     "end": 272.178,
+     "conf": 0.798
+    },
+    {
+     "w": "instant",
+     "start": 272.378,
+     "end": 272.739,
+     "conf": 0.999
+    },
+    {
+     "w": "clearly",
+     "start": 272.819,
+     "end": 273.18,
+     "conf": 0.862
+    }
+   ]
+  },
+  {
+   "section": "The area under the bowl",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "Integrals use the same idea of cutting things small, but in the opposite direction: adding up countless small pieces to see the whole.",
+   "idea": false,
+   "start": 275.64,
+   "end": 282.454,
+   "words": [
+    {
+     "w": "integrals",
+     "start": 275.64,
+     "end": 276.001,
+     "conf": 0.963
+    },
+    {
+     "w": "use",
+     "start": 276.081,
+     "end": 276.161,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 276.181,
+     "end": 276.261,
+     "conf": 0.97
+    },
+    {
+     "w": "same",
+     "start": 276.281,
+     "end": 276.482,
+     "conf": 1.0
+    },
+    {
+     "w": "idea",
+     "start": 276.562,
+     "end": 276.742,
+     "conf": 1.0
+    },
+    {
+     "w": "of",
+     "start": 276.802,
+     "end": 276.843,
+     "conf": 0.5
+    },
+    {
+     "w": "cutting",
+     "start": 276.863,
+     "end": 277.183,
+     "conf": 0.83
+    },
+    {
+     "w": "things",
+     "start": 277.203,
+     "end": 277.444,
+     "conf": 0.873
+    },
+    {
+     "w": "small",
+     "start": 277.524,
+     "end": 277.785,
+     "conf": 0.829
+    },
+    {
+     "w": "but",
+     "start": 277.965,
+     "end": 278.065,
+     "conf": 0.666
+    },
+    {
+     "w": "in",
+     "start": 278.125,
+     "end": 278.165,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 278.185,
+     "end": 278.246,
+     "conf": 0.999
+    },
+    {
+     "w": "opposite",
+     "start": 278.326,
+     "end": 278.606,
+     "conf": 0.502
+    },
+    {
+     "w": "direction",
+     "start": 278.626,
+     "end": 279.047,
+     "conf": 0.992
+    },
+    {
+     "w": "adding",
+     "start": 279.909,
+     "end": 280.109,
+     "conf": 0.828
+    },
+    {
+     "w": "up",
+     "start": 280.149,
+     "end": 280.23,
+     "conf": 0.633
+    },
+    {
+     "w": "countless",
+     "start": 280.35,
+     "end": 280.871,
+     "conf": 0.87
+    },
+    {
+     "w": "small",
+     "start": 280.991,
+     "end": 281.232,
+     "conf": 0.832
+    },
+    {
+     "w": "pieces",
+     "start": 281.312,
+     "end": 281.733,
+     "conf": 0.72
+    },
+    {
+     "w": "to",
+     "start": 281.833,
+     "end": 281.873,
+     "conf": 0.5
+    },
+    {
+     "w": "see",
+     "start": 281.973,
+     "end": 282.094,
+     "conf": 0.661
+    },
+    {
+     "w": "the",
+     "start": 282.114,
+     "end": 282.194,
+     "conf": 0.967
+    },
+    {
+     "w": "whole",
+     "start": 282.254,
+     "end": 282.454,
+     "conf": 0.603
+    }
+   ]
+  },
+  {
+   "section": "The area under the bowl",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "Take the area under our bowl, from zero to one.",
+   "idea": false,
+   "start": 282.845,
+   "end": 285.008,
+   "words": [
+    {
+     "w": "take",
+     "start": 282.845,
+     "end": 282.987,
+     "conf": 0.78
+    },
+    {
+     "w": "the",
+     "start": 283.007,
+     "end": 283.088,
+     "conf": 0.926
+    },
+    {
+     "w": "area",
+     "start": 283.169,
+     "end": 283.33,
+     "conf": 0.746
+    },
+    {
+     "w": "under",
+     "start": 283.411,
+     "end": 283.533,
+     "conf": 0.671
+    },
+    {
+     "w": "our",
+     "start": 283.553,
+     "end": 283.674,
+     "conf": 0.007
+    },
+    {
+     "w": "bowl",
+     "start": 283.694,
+     "end": 283.957,
+     "conf": 0.709
+    },
+    {
+     "w": "from",
+     "start": 284.179,
+     "end": 284.301,
+     "conf": 0.941
+    },
+    {
+     "w": "zero",
+     "start": 284.361,
+     "end": 284.584,
+     "conf": 0.188
+    },
+    {
+     "w": "to",
+     "start": 284.604,
+     "end": 284.745,
+     "conf": 0.139
+    },
+    {
+     "w": "one",
+     "start": 284.766,
+     "end": 285.008,
+     "conf": 0.039
+    }
+   ]
+  },
+  {
+   "section": "The area under the bowl",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "There's no simple formula for a curved shape like this. But there is one for rectangles.",
+   "idea": true,
+   "start": 285.68,
+   "end": 290.003,
+   "words": [
+    {
+     "w": "there's",
+     "start": 285.68,
+     "end": 285.82,
+     "conf": 0.805
+    },
+    {
+     "w": "no",
+     "start": 285.84,
+     "end": 285.881,
+     "conf": 1.0
+    },
+    {
+     "w": "simple",
+     "start": 285.981,
+     "end": 286.182,
+     "conf": 0.821
+    },
+    {
+     "w": "formula",
+     "start": 286.243,
+     "end": 286.625,
+     "conf": 0.836
+    },
+    {
+     "w": "for",
+     "start": 286.765,
+     "end": 286.866,
+     "conf": 0.666
+    },
+    {
+     "w": "a",
+     "start": 286.926,
+     "end": 286.946,
+     "conf": 0.0
+    },
+    {
+     "w": "curved",
+     "start": 287.027,
+     "end": 287.348,
+     "conf": 0.823
+    },
+    {
+     "w": "shape",
+     "start": 287.449,
+     "end": 287.69,
+     "conf": 0.988
+    },
+    {
+     "w": "like",
+     "start": 287.71,
+     "end": 287.891,
+     "conf": 0.799
+    },
+    {
+     "w": "this",
+     "start": 287.911,
+     "end": 288.133,
+     "conf": 0.993
+    },
+    {
+     "w": "but",
+     "start": 288.675,
+     "end": 288.736,
+     "conf": 0.336
+    },
+    {
+     "w": "there",
+     "start": 288.756,
+     "end": 288.877,
+     "conf": 0.958
+    },
+    {
+     "w": "is",
+     "start": 288.897,
+     "end": 288.977,
+     "conf": 0.666
+    },
+    {
+     "w": "one",
+     "start": 289.078,
+     "end": 289.218,
+     "conf": 0.999
+    },
+    {
+     "w": "for",
+     "start": 289.279,
+     "end": 289.359,
+     "conf": 0.622
+    },
+    {
+     "w": "rectangles",
+     "start": 289.44,
+     "end": 290.003,
+     "conf": 0.879
+    }
+   ]
+  },
+  {
+   "section": "Four strips",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "So cut the area into four strips, and give each one a rectangle that reaches the curve at its right edge.",
+   "idea": false,
+   "start": 291.663,
+   "end": 296.916,
+   "words": [
+    {
+     "w": "so",
+     "start": 291.663,
+     "end": 291.723,
+     "conf": 0.999
+    },
+    {
+     "w": "cut",
+     "start": 291.823,
+     "end": 291.964,
+     "conf": 0.988
+    },
+    {
+     "w": "the",
+     "start": 291.984,
+     "end": 292.064,
+     "conf": 0.75
+    },
+    {
+     "w": "area",
+     "start": 292.144,
+     "end": 292.345,
+     "conf": 0.762
+    },
+    {
+     "w": "into",
+     "start": 292.445,
+     "end": 292.585,
+     "conf": 0.999
+    },
+    {
+     "w": "four",
+     "start": 292.685,
+     "end": 292.866,
+     "conf": 0.967
+    },
+    {
+     "w": "strips",
+     "start": 292.946,
+     "end": 293.267,
+     "conf": 0.794
+    },
+    {
+     "w": "and",
+     "start": 293.568,
+     "end": 293.648,
+     "conf": 0.727
+    },
+    {
+     "w": "give",
+     "start": 293.688,
+     "end": 293.828,
+     "conf": 0.79
+    },
+    {
+     "w": "each",
+     "start": 293.908,
+     "end": 294.069,
+     "conf": 0.8
+    },
+    {
+     "w": "one",
+     "start": 294.269,
+     "end": 294.37,
+     "conf": 0.744
+    },
+    {
+     "w": "a",
+     "start": 294.59,
+     "end": 294.61,
+     "conf": 0.004
+    },
+    {
+     "w": "rectangle",
+     "start": 294.69,
+     "end": 295.151,
+     "conf": 0.864
+    },
+    {
+     "w": "that",
+     "start": 295.171,
+     "end": 295.272,
+     "conf": 0.975
+    },
+    {
+     "w": "reaches",
+     "start": 295.332,
+     "end": 295.572,
+     "conf": 0.856
+    },
+    {
+     "w": "the",
+     "start": 295.592,
+     "end": 295.693,
+     "conf": 0.749
+    },
+    {
+     "w": "curve",
+     "start": 295.713,
+     "end": 296.034,
+     "conf": 0.976
+    },
+    {
+     "w": "at",
+     "start": 296.154,
+     "end": 296.214,
+     "conf": 0.499
+    },
+    {
+     "w": "its",
+     "start": 296.234,
+     "end": 296.334,
+     "conf": 0.998
+    },
+    {
+     "w": "right",
+     "start": 296.434,
+     "end": 296.615,
+     "conf": 0.823
+    },
+    {
+     "w": "edge",
+     "start": 296.695,
+     "end": 296.916,
+     "conf": 0.71
+    }
+   ]
+  },
+  {
+   "section": "Four strips",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "Add them up, and you get about zero point four seven. That's too much, because every rectangle sticks out above the curve.",
+   "idea": false,
+   "start": 297.366,
+   "end": 303.579,
+   "words": [
+    {
+     "w": "add",
+     "start": 297.366,
+     "end": 297.466,
+     "conf": 0.356
+    },
+    {
+     "w": "them",
+     "start": 297.486,
+     "end": 297.586,
+     "conf": 0.998
+    },
+    {
+     "w": "up",
+     "start": 297.647,
+     "end": 297.767,
+     "conf": 1.0
+    },
+    {
+     "w": "and",
+     "start": 298.168,
+     "end": 298.228,
+     "conf": 0.661
+    },
+    {
+     "w": "you",
+     "start": 298.248,
+     "end": 298.308,
+     "conf": 0.997
+    },
+    {
+     "w": "get",
+     "start": 298.328,
+     "end": 298.428,
+     "conf": 1.0
+    },
+    {
+     "w": "about",
+     "start": 298.448,
+     "end": 298.649,
+     "conf": 0.983
+    },
+    {
+     "w": "zero",
+     "start": 298.669,
+     "end": 298.969,
+     "conf": 0.094
+    },
+    {
+     "w": "point",
+     "start": 299.13,
+     "end": 299.29,
+     "conf": 0.005
+    },
+    {
+     "w": "four",
+     "start": 299.31,
+     "end": 299.49,
+     "conf": 0.001
+    },
+    {
+     "w": "seven",
+     "start": 299.51,
+     "end": 299.851,
+     "conf": 0.009
+    },
+    {
+     "w": "that's",
+     "start": 300.312,
+     "end": 300.492,
+     "conf": 0.646
+    },
+    {
+     "w": "too",
+     "start": 300.572,
+     "end": 300.693,
+     "conf": 0.429
+    },
+    {
+     "w": "much",
+     "start": 300.753,
+     "end": 301.013,
+     "conf": 0.797
+    },
+    {
+     "w": "because",
+     "start": 301.314,
+     "end": 301.554,
+     "conf": 0.862
+    },
+    {
+     "w": "every",
+     "start": 301.615,
+     "end": 301.755,
+     "conf": 0.831
+    },
+    {
+     "w": "rectangle",
+     "start": 301.855,
+     "end": 302.336,
+     "conf": 0.857
+    },
+    {
+     "w": "sticks",
+     "start": 302.416,
+     "end": 302.677,
+     "conf": 0.817
+    },
+    {
+     "w": "out",
+     "start": 302.737,
+     "end": 302.837,
+     "conf": 0.667
+    },
+    {
+     "w": "above",
+     "start": 302.897,
+     "end": 303.098,
+     "conf": 0.797
+    },
+    {
+     "w": "the",
+     "start": 303.118,
+     "end": 303.198,
+     "conf": 0.969
+    },
+    {
+     "w": "curve",
+     "start": 303.218,
+     "end": 303.579,
+     "conf": 0.732
+    }
+   ]
+  },
+  {
+   "section": "Four strips",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "Let the rectangles reach the curve at their left edge instead, and you get about zero point two two. Too little.",
+   "idea": false,
+   "start": 303.968,
+   "end": 309.502,
+   "words": [
+    {
+     "w": "let",
+     "start": 303.968,
+     "end": 304.048,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 304.068,
+     "end": 304.128,
+     "conf": 0.998
+    },
+    {
+     "w": "rectangles",
+     "start": 304.169,
+     "end": 304.65,
+     "conf": 0.969
+    },
+    {
+     "w": "reach",
+     "start": 304.71,
+     "end": 304.87,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 304.89,
+     "end": 304.991,
+     "conf": 0.733
+    },
+    {
+     "w": "curve",
+     "start": 305.011,
+     "end": 305.392,
+     "conf": 0.769
+    },
+    {
+     "w": "at",
+     "start": 305.452,
+     "end": 305.492,
+     "conf": 0.498
+    },
+    {
+     "w": "their",
+     "start": 305.512,
+     "end": 305.632,
+     "conf": 0.869
+    },
+    {
+     "w": "left",
+     "start": 305.693,
+     "end": 305.913,
+     "conf": 0.878
+    },
+    {
+     "w": "edge",
+     "start": 306.033,
+     "end": 306.214,
+     "conf": 0.752
+    },
+    {
+     "w": "instead",
+     "start": 306.495,
+     "end": 306.856,
+     "conf": 0.855
+    },
+    {
+     "w": "and",
+     "start": 306.876,
+     "end": 307.237,
+     "conf": 0.315
+    },
+    {
+     "w": "you",
+     "start": 307.257,
+     "end": 307.317,
+     "conf": 0.996
+    },
+    {
+     "w": "get",
+     "start": 307.337,
+     "end": 307.437,
+     "conf": 1.0
+    },
+    {
+     "w": "about",
+     "start": 307.457,
+     "end": 307.698,
+     "conf": 0.831
+    },
+    {
+     "w": "zero",
+     "start": 307.718,
+     "end": 308.039,
+     "conf": 0.143
+    },
+    {
+     "w": "point",
+     "start": 308.059,
+     "end": 308.319,
+     "conf": 0.07
+    },
+    {
+     "w": "two",
+     "start": 308.339,
+     "end": 308.48,
+     "conf": 0.008
+    },
+    {
+     "w": "two",
+     "start": 308.5,
+     "end": 308.7,
+     "conf": 0.007
+    },
+    {
+     "w": "too",
+     "start": 309.121,
+     "end": 309.242,
+     "conf": 0.249
+    },
+    {
+     "w": "little",
+     "start": 309.302,
+     "end": 309.502,
+     "conf": 0.825
+    }
+   ]
+  },
+  {
+   "section": "Four strips",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "The true area is trapped somewhere in between.",
+   "idea": true,
+   "start": 309.913,
+   "end": 312.024,
+   "words": [
+    {
+     "w": "the",
+     "start": 309.913,
+     "end": 309.973,
+     "conf": 0.0
+    },
+    {
+     "w": "true",
+     "start": 309.994,
+     "end": 310.215,
+     "conf": 0.955
+    },
+    {
+     "w": "area",
+     "start": 310.295,
+     "end": 310.516,
+     "conf": 0.982
+    },
+    {
+     "w": "is",
+     "start": 310.717,
+     "end": 310.757,
+     "conf": 0.497
+    },
+    {
+     "w": "trapped",
+     "start": 310.878,
+     "end": 311.22,
+     "conf": 0.81
+    },
+    {
+     "w": "somewhere",
+     "start": 311.28,
+     "end": 311.602,
+     "conf": 0.781
+    },
+    {
+     "w": "in",
+     "start": 311.622,
+     "end": 311.662,
+     "conf": 0.132
+    },
+    {
+     "w": "between",
+     "start": 311.682,
+     "end": 312.024,
+     "conf": 0.91
+    }
+   ]
+  },
+  {
+   "section": "Thinner and thinner",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "Now make the strips thinner. With ten of them, the two answers are zero point two eight five and zero point three eight five.",
+   "idea": false,
+   "start": 313.684,
+   "end": 319.711,
+   "words": [
+    {
+     "w": "now",
+     "start": 313.684,
+     "end": 313.824,
+     "conf": 0.954
+    },
+    {
+     "w": "make",
+     "start": 313.844,
+     "end": 313.984,
+     "conf": 0.602
+    },
+    {
+     "w": "the",
+     "start": 314.004,
+     "end": 314.064,
+     "conf": 0.991
+    },
+    {
+     "w": "strips",
+     "start": 314.084,
+     "end": 314.365,
+     "conf": 0.947
+    },
+    {
+     "w": "thinner",
+     "start": 314.385,
+     "end": 314.665,
+     "conf": 0.771
+    },
+    {
+     "w": "with",
+     "start": 315.526,
+     "end": 315.646,
+     "conf": 0.997
+    },
+    {
+     "w": "ten",
+     "start": 315.666,
+     "end": 315.826,
+     "conf": 0.748
+    },
+    {
+     "w": "of",
+     "start": 315.887,
+     "end": 315.927,
+     "conf": 0.5
+    },
+    {
+     "w": "them",
+     "start": 315.947,
+     "end": 316.047,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 316.067,
+     "end": 316.147,
+     "conf": 0.998
+    },
+    {
+     "w": "two",
+     "start": 316.167,
+     "end": 316.287,
+     "conf": 0.994
+    },
+    {
+     "w": "answers",
+     "start": 316.407,
+     "end": 316.627,
+     "conf": 0.5
+    },
+    {
+     "w": "are",
+     "start": 316.687,
+     "end": 316.788,
+     "conf": 0.656
+    },
+    {
+     "w": "zero",
+     "start": 316.808,
+     "end": 317.068,
+     "conf": 0.112
+    },
+    {
+     "w": "point",
+     "start": 317.088,
+     "end": 317.368,
+     "conf": 0.008
+    },
+    {
+     "w": "two",
+     "start": 317.388,
+     "end": 317.528,
+     "conf": 0.001
+    },
+    {
+     "w": "eight",
+     "start": 317.548,
+     "end": 317.689,
+     "conf": 0.0
+    },
+    {
+     "w": "five",
+     "start": 317.709,
+     "end": 318.169,
+     "conf": 0.001
+    },
+    {
+     "w": "and",
+     "start": 318.349,
+     "end": 318.45,
+     "conf": 0.833
+    },
+    {
+     "w": "zero",
+     "start": 318.47,
+     "end": 318.67,
+     "conf": 0.027
+    },
+    {
+     "w": "point",
+     "start": 318.69,
+     "end": 318.93,
+     "conf": 0.004
+    },
+    {
+     "w": "three",
+     "start": 318.95,
+     "end": 319.25,
+     "conf": 0.0
+    },
+    {
+     "w": "eight",
+     "start": 319.27,
+     "end": 319.371,
+     "conf": 0.0
+    },
+    {
+     "w": "five",
+     "start": 319.391,
+     "end": 319.711,
+     "conf": 0.001
+    }
+   ]
+  },
+  {
+   "section": "Thinner and thinner",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "With a hundred, zero point three two eight and zero point three three eight. With a thousand, they agree to two decimal places.",
+   "idea": false,
+   "start": 320.101,
+   "end": 326.395,
+   "words": [
+    {
+     "w": "with",
+     "start": 320.101,
+     "end": 320.201,
+     "conf": 0.734
+    },
+    {
+     "w": "a",
+     "start": 320.221,
+     "end": 320.241,
+     "conf": 0.251
+    },
+    {
+     "w": "hundred",
+     "start": 320.261,
+     "end": 320.602,
+     "conf": 0.015
+    },
+    {
+     "w": "zero",
+     "start": 320.622,
+     "end": 321.063,
+     "conf": 0.017
+    },
+    {
+     "w": "point",
+     "start": 321.083,
+     "end": 321.364,
+     "conf": 0.005
+    },
+    {
+     "w": "three",
+     "start": 321.384,
+     "end": 321.604,
+     "conf": 0.001
+    },
+    {
+     "w": "two",
+     "start": 321.624,
+     "end": 321.805,
+     "conf": 0.0
+    },
+    {
+     "w": "eight",
+     "start": 321.825,
+     "end": 321.985,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 322.085,
+     "end": 322.145,
+     "conf": 0.596
+    },
+    {
+     "w": "zero",
+     "start": 322.166,
+     "end": 322.386,
+     "conf": 0.047
+    },
+    {
+     "w": "point",
+     "start": 322.406,
+     "end": 322.667,
+     "conf": 0.006
+    },
+    {
+     "w": "three",
+     "start": 322.687,
+     "end": 322.947,
+     "conf": 0.001
+    },
+    {
+     "w": "three",
+     "start": 322.967,
+     "end": 323.328,
+     "conf": 0.004
+    },
+    {
+     "w": "eight",
+     "start": 323.348,
+     "end": 323.488,
+     "conf": 0.002
+    },
+    {
+     "w": "with",
+     "start": 324.07,
+     "end": 324.17,
+     "conf": 0.738
+    },
+    {
+     "w": "a",
+     "start": 324.19,
+     "end": 324.23,
+     "conf": 0.405
+    },
+    {
+     "w": "thousand",
+     "start": 324.33,
+     "end": 324.751,
+     "conf": 0.861
+    },
+    {
+     "w": "they",
+     "start": 324.771,
+     "end": 324.891,
+     "conf": 0.914
+    },
+    {
+     "w": "agree",
+     "start": 324.911,
+     "end": 325.132,
+     "conf": 0.981
+    },
+    {
+     "w": "to",
+     "start": 325.152,
+     "end": 325.232,
+     "conf": 0.665
+    },
+    {
+     "w": "two",
+     "start": 325.352,
+     "end": 325.553,
+     "conf": 0.68
+    },
+    {
+     "w": "decimal",
+     "start": 325.633,
+     "end": 325.974,
+     "conf": 0.628
+    },
+    {
+     "w": "places",
+     "start": 325.994,
+     "end": 326.395,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "Thinner and thinner",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "The overhang shrinks every time. In fact, the gap between the two answers is exactly one divided by the number of strips.",
+   "idea": false,
+   "start": 326.845,
+   "end": 332.611,
+   "words": [
+    {
+     "w": "the",
+     "start": 326.845,
+     "end": 326.905,
+     "conf": 0.0
+    },
+    {
+     "w": "overhang",
+     "start": 326.925,
+     "end": 327.245,
+     "conf": 0.929
+    },
+    {
+     "w": "shrinks",
+     "start": 327.346,
+     "end": 327.626,
+     "conf": 0.85
+    },
+    {
+     "w": "every",
+     "start": 327.726,
+     "end": 327.866,
+     "conf": 0.751
+    },
+    {
+     "w": "time",
+     "start": 328.146,
+     "end": 328.407,
+     "conf": 0.786
+    },
+    {
+     "w": "in",
+     "start": 328.567,
+     "end": 328.607,
+     "conf": 0.5
+    },
+    {
+     "w": "fact",
+     "start": 328.627,
+     "end": 328.807,
+     "conf": 0.803
+    },
+    {
+     "w": "the",
+     "start": 328.827,
+     "end": 328.887,
+     "conf": 0.994
+    },
+    {
+     "w": "gap",
+     "start": 328.947,
+     "end": 329.127,
+     "conf": 0.666
+    },
+    {
+     "w": "between",
+     "start": 329.187,
+     "end": 329.428,
+     "conf": 0.992
+    },
+    {
+     "w": "the",
+     "start": 329.448,
+     "end": 329.508,
+     "conf": 0.996
+    },
+    {
+     "w": "two",
+     "start": 329.528,
+     "end": 329.668,
+     "conf": 0.745
+    },
+    {
+     "w": "answers",
+     "start": 329.768,
+     "end": 330.028,
+     "conf": 0.425
+    },
+    {
+     "w": "is",
+     "start": 330.108,
+     "end": 330.168,
+     "conf": 0.499
+    },
+    {
+     "w": "exactly",
+     "start": 330.228,
+     "end": 330.829,
+     "conf": 0.843
+    },
+    {
+     "w": "one",
+     "start": 331.029,
+     "end": 331.169,
+     "conf": 0.663
+    },
+    {
+     "w": "divided",
+     "start": 331.249,
+     "end": 331.61,
+     "conf": 0.854
+    },
+    {
+     "w": "by",
+     "start": 331.67,
+     "end": 331.75,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 331.77,
+     "end": 331.85,
+     "conf": 0.932
+    },
+    {
+     "w": "number",
+     "start": 331.87,
+     "end": 332.09,
+     "conf": 0.986
+    },
+    {
+     "w": "of",
+     "start": 332.11,
+     "end": 332.17,
+     "conf": 0.681
+    },
+    {
+     "w": "strips",
+     "start": 332.27,
+     "end": 332.611,
+     "conf": 0.794
+    }
+   ]
+  },
+  {
+   "section": "Thinner and thinner",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "So as the strips get thinner and thinner, both answers are squeezed onto a single number: one third.",
+   "idea": false,
+   "start": 333.06,
+   "end": 338.017,
+   "words": [
+    {
+     "w": "so",
+     "start": 333.06,
+     "end": 333.1,
+     "conf": 0.999
+    },
+    {
+     "w": "as",
+     "start": 333.18,
+     "end": 333.221,
+     "conf": 0.989
+    },
+    {
+     "w": "the",
+     "start": 333.261,
+     "end": 333.321,
+     "conf": 0.996
+    },
+    {
+     "w": "strips",
+     "start": 333.341,
+     "end": 333.582,
+     "conf": 0.858
+    },
+    {
+     "w": "get",
+     "start": 333.602,
+     "end": 333.722,
+     "conf": 1.0
+    },
+    {
+     "w": "thinner",
+     "start": 333.803,
+     "end": 334.064,
+     "conf": 0.874
+    },
+    {
+     "w": "and",
+     "start": 334.124,
+     "end": 334.184,
+     "conf": 0.651
+    },
+    {
+     "w": "thinner",
+     "start": 334.284,
+     "end": 334.505,
+     "conf": 0.815
+    },
+    {
+     "w": "both",
+     "start": 334.907,
+     "end": 335.087,
+     "conf": 0.75
+    },
+    {
+     "w": "answers",
+     "start": 335.188,
+     "end": 335.469,
+     "conf": 0.471
+    },
+    {
+     "w": "are",
+     "start": 335.489,
+     "end": 335.589,
+     "conf": 0.976
+    },
+    {
+     "w": "squeezed",
+     "start": 335.609,
+     "end": 335.97,
+     "conf": 0.69
+    },
+    {
+     "w": "onto",
+     "start": 335.99,
+     "end": 336.191,
+     "conf": 0.761
+    },
+    {
+     "w": "a",
+     "start": 336.271,
+     "end": 336.291,
+     "conf": 0.025
+    },
+    {
+     "w": "single",
+     "start": 336.412,
+     "end": 336.653,
+     "conf": 0.832
+    },
+    {
+     "w": "number",
+     "start": 336.673,
+     "end": 336.934,
+     "conf": 0.938
+    },
+    {
+     "w": "one",
+     "start": 336.954,
+     "end": 337.616,
+     "conf": 0.131
+    },
+    {
+     "w": "third",
+     "start": 337.636,
+     "end": 338.017,
+     "conf": 0.065
+    }
+   ]
+  },
+  {
+   "section": "Thinner and thinner",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "That number, the limit of the sums as the width of the strips shrinks to zero, is the integral.",
+   "idea": true,
+   "start": 338.428,
+   "end": 342.973,
+   "words": [
+    {
+     "w": "that",
+     "start": 338.428,
+     "end": 338.529,
+     "conf": 0.748
+    },
+    {
+     "w": "number",
+     "start": 338.589,
+     "end": 338.83,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 338.85,
+     "end": 339.092,
+     "conf": 0.666
+    },
+    {
+     "w": "limit",
+     "start": 339.152,
+     "end": 339.353,
+     "conf": 0.932
+    },
+    {
+     "w": "of",
+     "start": 339.434,
+     "end": 339.474,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 339.494,
+     "end": 339.574,
+     "conf": 0.761
+    },
+    {
+     "w": "sums",
+     "start": 339.675,
+     "end": 339.956,
+     "conf": 0.722
+    },
+    {
+     "w": "as",
+     "start": 340.057,
+     "end": 340.097,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 340.117,
+     "end": 340.218,
+     "conf": 0.787
+    },
+    {
+     "w": "width",
+     "start": 340.318,
+     "end": 340.519,
+     "conf": 0.615
+    },
+    {
+     "w": "of",
+     "start": 340.6,
+     "end": 340.64,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 340.66,
+     "end": 340.741,
+     "conf": 0.746
+    },
+    {
+     "w": "strips",
+     "start": 340.821,
+     "end": 341.103,
+     "conf": 0.831
+    },
+    {
+     "w": "shrinks",
+     "start": 341.223,
+     "end": 341.505,
+     "conf": 0.939
+    },
+    {
+     "w": "to",
+     "start": 341.565,
+     "end": 341.625,
+     "conf": 0.506
+    },
+    {
+     "w": "zero",
+     "start": 341.706,
+     "end": 341.967,
+     "conf": 0.681
+    },
+    {
+     "w": "is",
+     "start": 342.41,
+     "end": 342.47,
+     "conf": 0.497
+    },
+    {
+     "w": "the",
+     "start": 342.51,
+     "end": 342.591,
+     "conf": 0.987
+    },
+    {
+     "w": "integral",
+     "start": 342.671,
+     "end": 342.973,
+     "conf": 0.866
+    }
+   ]
+  },
+  {
+   "section": "Archimedes",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "This isn't a modern trick.",
+   "idea": false,
+   "start": 344.613,
+   "end": 345.674,
+   "words": [
+    {
+     "w": "this",
+     "start": 344.613,
+     "end": 344.715,
+     "conf": 0.369
+    },
+    {
+     "w": "isn't",
+     "start": 344.777,
+     "end": 344.919,
+     "conf": 0.666
+    },
+    {
+     "w": "a",
+     "start": 345.001,
+     "end": 345.021,
+     "conf": 0.003
+    },
+    {
+     "w": "modern",
+     "start": 345.042,
+     "end": 345.328,
+     "conf": 0.856
+    },
+    {
+     "w": "trick",
+     "start": 345.409,
+     "end": 345.674,
+     "conf": 0.963
+    }
+   ]
+  },
+  {
+   "section": "Archimedes",
+   "act": "ACT FIVE — Adding up thin slices",
+   "text": "More than two thousand years ago, Archimedes found the area of a curved piece of a parabola by filling it with smaller and smaller shapes, and trapping the answer from both sides, in the same spirit as this.",
+   "idea": true,
+   "start": 346.106,
+   "end": 356.29,
+   "words": [
+    {
+     "w": "more",
+     "start": 346.106,
+     "end": 346.186,
+     "conf": 0.504
+    },
+    {
+     "w": "than",
+     "start": 346.206,
+     "end": 346.307,
+     "conf": 0.997
+    },
+    {
+     "w": "two",
+     "start": 346.327,
+     "end": 346.487,
+     "conf": 0.114
+    },
+    {
+     "w": "thousand",
+     "start": 346.507,
+     "end": 346.848,
+     "conf": 0.198
+    },
+    {
+     "w": "years",
+     "start": 346.908,
+     "end": 347.108,
+     "conf": 0.761
+    },
+    {
+     "w": "ago",
+     "start": 347.149,
+     "end": 347.289,
+     "conf": 0.999
+    },
+    {
+     "w": "archimedes",
+     "start": 347.61,
+     "end": 348.111,
+     "conf": 0.594
+    },
+    {
+     "w": "found",
+     "start": 348.191,
+     "end": 348.331,
+     "conf": 0.799
+    },
+    {
+     "w": "the",
+     "start": 348.351,
+     "end": 348.412,
+     "conf": 0.994
+    },
+    {
+     "w": "area",
+     "start": 348.492,
+     "end": 348.712,
+     "conf": 0.728
+    },
+    {
+     "w": "of",
+     "start": 348.833,
+     "end": 348.873,
+     "conf": 0.497
+    },
+    {
+     "w": "a",
+     "start": 348.933,
+     "end": 348.953,
+     "conf": 0.002
+    },
+    {
+     "w": "curved",
+     "start": 349.013,
+     "end": 349.294,
+     "conf": 0.776
+    },
+    {
+     "w": "piece",
+     "start": 349.314,
+     "end": 349.534,
+     "conf": 0.609
+    },
+    {
+     "w": "of",
+     "start": 349.554,
+     "end": 349.634,
+     "conf": 0.993
+    },
+    {
+     "w": "a",
+     "start": 349.695,
+     "end": 349.715,
+     "conf": 0.001
+    },
+    {
+     "w": "parabola",
+     "start": 349.775,
+     "end": 350.196,
+     "conf": 0.756
+    },
+    {
+     "w": "by",
+     "start": 350.396,
+     "end": 350.496,
+     "conf": 0.5
+    },
+    {
+     "w": "filling",
+     "start": 350.597,
+     "end": 350.837,
+     "conf": 0.816
+    },
+    {
+     "w": "it",
+     "start": 350.877,
+     "end": 350.938,
+     "conf": 0.5
+    },
+    {
+     "w": "with",
+     "start": 351.018,
+     "end": 351.138,
+     "conf": 0.775
+    },
+    {
+     "w": "smaller",
+     "start": 351.258,
+     "end": 351.619,
+     "conf": 0.856
+    },
+    {
+     "w": "and",
+     "start": 351.679,
+     "end": 351.759,
+     "conf": 0.655
+    },
+    {
+     "w": "smaller",
+     "start": 351.84,
+     "end": 352.14,
+     "conf": 0.864
+    },
+    {
+     "w": "shapes",
+     "start": 352.221,
+     "end": 352.541,
+     "conf": 0.832
+    },
+    {
+     "w": "and",
+     "start": 352.922,
+     "end": 353.002,
+     "conf": 0.665
+    },
+    {
+     "w": "trapping",
+     "start": 353.103,
+     "end": 353.464,
+     "conf": 0.881
+    },
+    {
+     "w": "the",
+     "start": 353.484,
+     "end": 353.564,
+     "conf": 0.749
+    },
+    {
+     "w": "answer",
+     "start": 353.644,
+     "end": 353.925,
+     "conf": 0.556
+    },
+    {
+     "w": "from",
+     "start": 354.045,
+     "end": 354.185,
+     "conf": 0.752
+    },
+    {
+     "w": "both",
+     "start": 354.245,
+     "end": 354.426,
+     "conf": 0.709
+    },
+    {
+     "w": "sides",
+     "start": 354.446,
+     "end": 354.827,
+     "conf": 0.858
+    },
+    {
+     "w": "in",
+     "start": 355.067,
+     "end": 355.107,
+     "conf": 0.03
+    },
+    {
+     "w": "the",
+     "start": 355.127,
+     "end": 355.188,
+     "conf": 0.999
+    },
+    {
+     "w": "same",
+     "start": 355.288,
+     "end": 355.488,
+     "conf": 0.786
+    },
+    {
+     "w": "spirit",
+     "start": 355.569,
+     "end": 355.829,
+     "conf": 0.834
+    },
+    {
+     "w": "as",
+     "start": 355.909,
+     "end": 355.969,
+     "conf": 0.5
+    },
+    {
+     "w": "this",
+     "start": 356.05,
+     "end": 356.29,
+     "conf": 0.745
+    }
+   ]
+  },
+  {
+   "section": "The growing area",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "So derivatives cut a change into instants, and integrals add slices back into a whole. Here's the surprise: each one undoes the other.",
+   "idea": false,
+   "start": 358.81,
+   "end": 365.582,
+   "words": [
+    {
+     "w": "so",
+     "start": 358.81,
+     "end": 358.89,
+     "conf": 0.668
+    },
+    {
+     "w": "derivatives",
+     "start": 359.01,
+     "end": 359.451,
+     "conf": 0.907
+    },
+    {
+     "w": "cut",
+     "start": 359.471,
+     "end": 359.632,
+     "conf": 0.746
+    },
+    {
+     "w": "a",
+     "start": 359.652,
+     "end": 359.672,
+     "conf": 0.998
+    },
+    {
+     "w": "change",
+     "start": 359.772,
+     "end": 360.092,
+     "conf": 0.833
+    },
+    {
+     "w": "into",
+     "start": 360.112,
+     "end": 360.233,
+     "conf": 0.901
+    },
+    {
+     "w": "instants",
+     "start": 360.353,
+     "end": 360.754,
+     "conf": 0.661
+    },
+    {
+     "w": "and",
+     "start": 360.974,
+     "end": 361.074,
+     "conf": 0.998
+    },
+    {
+     "w": "integrals",
+     "start": 361.174,
+     "end": 361.575,
+     "conf": 0.869
+    },
+    {
+     "w": "add",
+     "start": 361.715,
+     "end": 361.815,
+     "conf": 0.55
+    },
+    {
+     "w": "slices",
+     "start": 361.916,
+     "end": 362.236,
+     "conf": 0.74
+    },
+    {
+     "w": "back",
+     "start": 362.256,
+     "end": 362.416,
+     "conf": 0.936
+    },
+    {
+     "w": "into",
+     "start": 362.497,
+     "end": 362.617,
+     "conf": 0.749
+    },
+    {
+     "w": "a",
+     "start": 362.697,
+     "end": 362.717,
+     "conf": 0.009
+    },
+    {
+     "w": "whole",
+     "start": 362.737,
+     "end": 363.038,
+     "conf": 0.563
+    },
+    {
+     "w": "here's",
+     "start": 363.619,
+     "end": 363.759,
+     "conf": 0.349
+    },
+    {
+     "w": "the",
+     "start": 363.779,
+     "end": 363.839,
+     "conf": 0.966
+    },
+    {
+     "w": "surprise",
+     "start": 363.859,
+     "end": 364.34,
+     "conf": 0.727
+    },
+    {
+     "w": "each",
+     "start": 364.681,
+     "end": 364.821,
+     "conf": 1.0
+    },
+    {
+     "w": "one",
+     "start": 364.901,
+     "end": 364.981,
+     "conf": 0.705
+    },
+    {
+     "w": "undoes",
+     "start": 365.001,
+     "end": 365.262,
+     "conf": 0.898
+    },
+    {
+     "w": "the",
+     "start": 365.282,
+     "end": 365.362,
+     "conf": 0.93
+    },
+    {
+     "w": "other",
+     "start": 365.442,
+     "end": 365.582,
+     "conf": 0.788
+    }
+   ]
+  },
+  {
+   "section": "The growing area",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "Let the area start at zero and stretch out to some point x, and watch how fast it grows.",
+   "idea": false,
+   "start": 365.992,
+   "end": 370.099,
+   "words": [
+    {
+     "w": "let",
+     "start": 365.992,
+     "end": 366.072,
+     "conf": 0.751
+    },
+    {
+     "w": "the",
+     "start": 366.092,
+     "end": 366.152,
+     "conf": 0.999
+    },
+    {
+     "w": "area",
+     "start": 366.212,
+     "end": 366.373,
+     "conf": 0.749
+    },
+    {
+     "w": "start",
+     "start": 366.473,
+     "end": 366.713,
+     "conf": 0.8
+    },
+    {
+     "w": "at",
+     "start": 366.793,
+     "end": 366.833,
+     "conf": 0.484
+    },
+    {
+     "w": "zero",
+     "start": 366.934,
+     "end": 367.194,
+     "conf": 0.499
+    },
+    {
+     "w": "and",
+     "start": 367.555,
+     "end": 367.615,
+     "conf": 0.462
+    },
+    {
+     "w": "stretch",
+     "start": 367.635,
+     "end": 367.895,
+     "conf": 0.766
+    },
+    {
+     "w": "out",
+     "start": 367.915,
+     "end": 368.016,
+     "conf": 0.998
+    },
+    {
+     "w": "to",
+     "start": 368.036,
+     "end": 368.076,
+     "conf": 0.511
+    },
+    {
+     "w": "some",
+     "start": 368.136,
+     "end": 368.256,
+     "conf": 0.641
+    },
+    {
+     "w": "point",
+     "start": 368.276,
+     "end": 368.496,
+     "conf": 0.98
+    },
+    {
+     "w": "x",
+     "start": 368.717,
+     "end": 368.737,
+     "conf": 0.987
+    },
+    {
+     "w": "and",
+     "start": 369.037,
+     "end": 369.117,
+     "conf": 0.995
+    },
+    {
+     "w": "watch",
+     "start": 369.137,
+     "end": 369.298,
+     "conf": 0.99
+    },
+    {
+     "w": "how",
+     "start": 369.318,
+     "end": 369.418,
+     "conf": 0.993
+    },
+    {
+     "w": "fast",
+     "start": 369.438,
+     "end": 369.698,
+     "conf": 0.824
+    },
+    {
+     "w": "it",
+     "start": 369.718,
+     "end": 369.779,
+     "conf": 0.998
+    },
+    {
+     "w": "grows",
+     "start": 369.799,
+     "end": 370.099,
+     "conf": 0.993
+    }
+   ]
+  },
+  {
+   "section": "The growing area",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "Push x a tiny bit further, by h, and the area gains one more thin slice.",
+   "idea": false,
+   "start": 370.529,
+   "end": 373.816,
+   "words": [
+    {
+     "w": "push",
+     "start": 370.529,
+     "end": 370.669,
+     "conf": 0.768
+    },
+    {
+     "w": "x",
+     "start": 370.75,
+     "end": 370.77,
+     "conf": 0.813
+    },
+    {
+     "w": "a",
+     "start": 370.83,
+     "end": 370.85,
+     "conf": 0.888
+    },
+    {
+     "w": "tiny",
+     "start": 370.87,
+     "end": 371.09,
+     "conf": 0.682
+    },
+    {
+     "w": "bit",
+     "start": 371.11,
+     "end": 371.211,
+     "conf": 0.76
+    },
+    {
+     "w": "further",
+     "start": 371.231,
+     "end": 371.531,
+     "conf": 0.79
+    },
+    {
+     "w": "by",
+     "start": 371.652,
+     "end": 371.752,
+     "conf": 0.506
+    },
+    {
+     "w": "h",
+     "start": 372.012,
+     "end": 372.032,
+     "conf": 0.872
+    },
+    {
+     "w": "and",
+     "start": 372.052,
+     "end": 372.193,
+     "conf": 0.441
+    },
+    {
+     "w": "the",
+     "start": 372.213,
+     "end": 372.273,
+     "conf": 0.527
+    },
+    {
+     "w": "area",
+     "start": 372.353,
+     "end": 372.513,
+     "conf": 0.703
+    },
+    {
+     "w": "gains",
+     "start": 372.614,
+     "end": 372.854,
+     "conf": 0.984
+    },
+    {
+     "w": "one",
+     "start": 372.954,
+     "end": 373.055,
+     "conf": 0.663
+    },
+    {
+     "w": "more",
+     "start": 373.075,
+     "end": 373.215,
+     "conf": 0.686
+    },
+    {
+     "w": "thin",
+     "start": 373.235,
+     "end": 373.395,
+     "conf": 0.958
+    },
+    {
+     "w": "slice",
+     "start": 373.476,
+     "end": 373.816,
+     "conf": 0.491
+    }
+   ]
+  },
+  {
+   "section": "The growing area",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "That slice is almost a rectangle. Its width is h, and its height is the height of the curve.",
+   "idea": false,
+   "start": 374.227,
+   "end": 378.637,
+   "words": [
+    {
+     "w": "that",
+     "start": 374.227,
+     "end": 374.327,
+     "conf": 0.316
+    },
+    {
+     "w": "slice",
+     "start": 374.427,
+     "end": 374.748,
+     "conf": 0.665
+    },
+    {
+     "w": "is",
+     "start": 374.808,
+     "end": 374.848,
+     "conf": 0.499
+    },
+    {
+     "w": "almost",
+     "start": 374.929,
+     "end": 375.169,
+     "conf": 0.817
+    },
+    {
+     "w": "a",
+     "start": 375.189,
+     "end": 375.209,
+     "conf": 0.001
+    },
+    {
+     "w": "rectangle",
+     "start": 375.289,
+     "end": 375.73,
+     "conf": 0.987
+    },
+    {
+     "w": "its",
+     "start": 375.891,
+     "end": 375.971,
+     "conf": 0.662
+    },
+    {
+     "w": "width",
+     "start": 376.051,
+     "end": 376.231,
+     "conf": 0.455
+    },
+    {
+     "w": "is",
+     "start": 376.332,
+     "end": 376.412,
+     "conf": 0.495
+    },
+    {
+     "w": "h",
+     "start": 376.672,
+     "end": 376.713,
+     "conf": 0.793
+    },
+    {
+     "w": "and",
+     "start": 376.853,
+     "end": 376.913,
+     "conf": 0.649
+    },
+    {
+     "w": "its",
+     "start": 376.933,
+     "end": 377.053,
+     "conf": 0.994
+    },
+    {
+     "w": "height",
+     "start": 377.133,
+     "end": 377.354,
+     "conf": 0.775
+    },
+    {
+     "w": "is",
+     "start": 377.635,
+     "end": 377.715,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 377.735,
+     "end": 377.815,
+     "conf": 0.997
+    },
+    {
+     "w": "height",
+     "start": 377.835,
+     "end": 378.035,
+     "conf": 0.824
+    },
+    {
+     "w": "of",
+     "start": 378.056,
+     "end": 378.116,
+     "conf": 0.664
+    },
+    {
+     "w": "the",
+     "start": 378.136,
+     "end": 378.196,
+     "conf": 0.99
+    },
+    {
+     "w": "curve",
+     "start": 378.256,
+     "end": 378.637,
+     "conf": 0.713
+    }
+   ]
+  },
+  {
+   "section": "The growing area",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "So the extra area, divided by h, is just the height of the curve, and as h shrinks, that becomes exact.",
+   "idea": false,
+   "start": 379.047,
+   "end": 384.353,
+   "words": [
+    {
+     "w": "so",
+     "start": 379.047,
+     "end": 379.127,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 379.167,
+     "end": 379.227,
+     "conf": 0.999
+    },
+    {
+     "w": "extra",
+     "start": 379.307,
+     "end": 379.548,
+     "conf": 0.849
+    },
+    {
+     "w": "area",
+     "start": 379.648,
+     "end": 379.868,
+     "conf": 0.75
+    },
+    {
+     "w": "divided",
+     "start": 380.128,
+     "end": 380.449,
+     "conf": 0.995
+    },
+    {
+     "w": "by",
+     "start": 380.509,
+     "end": 380.609,
+     "conf": 0.5
+    },
+    {
+     "w": "h",
+     "start": 380.889,
+     "end": 380.929,
+     "conf": 0.827
+    },
+    {
+     "w": "is",
+     "start": 381.009,
+     "end": 381.069,
+     "conf": 0.499
+    },
+    {
+     "w": "just",
+     "start": 381.089,
+     "end": 381.249,
+     "conf": 0.991
+    },
+    {
+     "w": "the",
+     "start": 381.269,
+     "end": 381.35,
+     "conf": 0.997
+    },
+    {
+     "w": "height",
+     "start": 381.41,
+     "end": 381.59,
+     "conf": 0.696
+    },
+    {
+     "w": "of",
+     "start": 381.63,
+     "end": 381.69,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 381.71,
+     "end": 381.79,
+     "conf": 0.997
+    },
+    {
+     "w": "curve",
+     "start": 381.81,
+     "end": 382.17,
+     "conf": 0.909
+    },
+    {
+     "w": "and",
+     "start": 382.351,
+     "end": 382.431,
+     "conf": 0.995
+    },
+    {
+     "w": "as",
+     "start": 382.451,
+     "end": 382.551,
+     "conf": 0.68
+    },
+    {
+     "w": "h",
+     "start": 382.791,
+     "end": 382.831,
+     "conf": 0.793
+    },
+    {
+     "w": "shrinks",
+     "start": 382.871,
+     "end": 383.232,
+     "conf": 0.841
+    },
+    {
+     "w": "that",
+     "start": 383.352,
+     "end": 383.512,
+     "conf": 0.983
+    },
+    {
+     "w": "becomes",
+     "start": 383.632,
+     "end": 383.932,
+     "conf": 0.856
+    },
+    {
+     "w": "exact",
+     "start": 383.992,
+     "end": 384.353,
+     "conf": 0.799
+    }
+   ]
+  },
+  {
+   "section": "The growing area",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "The rate at which the area grows is the curve itself.",
+   "idea": true,
+   "start": 384.763,
+   "end": 387.005,
+   "words": [
+    {
+     "w": "the",
+     "start": 384.763,
+     "end": 384.824,
+     "conf": 0.002
+    },
+    {
+     "w": "rate",
+     "start": 384.844,
+     "end": 385.006,
+     "conf": 0.529
+    },
+    {
+     "w": "at",
+     "start": 385.026,
+     "end": 385.066,
+     "conf": 0.02
+    },
+    {
+     "w": "which",
+     "start": 385.086,
+     "end": 385.248,
+     "conf": 0.976
+    },
+    {
+     "w": "the",
+     "start": 385.268,
+     "end": 385.369,
+     "conf": 0.751
+    },
+    {
+     "w": "area",
+     "start": 385.45,
+     "end": 385.652,
+     "conf": 0.754
+    },
+    {
+     "w": "grows",
+     "start": 385.753,
+     "end": 386.116,
+     "conf": 0.733
+    },
+    {
+     "w": "is",
+     "start": 386.217,
+     "end": 386.258,
+     "conf": 0.489
+    },
+    {
+     "w": "the",
+     "start": 386.278,
+     "end": 386.338,
+     "conf": 0.966
+    },
+    {
+     "w": "curve",
+     "start": 386.358,
+     "end": 386.621,
+     "conf": 0.585
+    },
+    {
+     "w": "itself",
+     "start": 386.641,
+     "end": 387.005,
+     "conf": 0.988
+    }
+   ]
+  },
+  {
+   "section": "Check it",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "For our bowl, the area from zero to x turns out to be x cubed over three. At x equals one, that's the one third we just found.",
+   "idea": false,
+   "start": 388.705,
+   "end": 395.027,
+   "words": [
+    {
+     "w": "for",
+     "start": 388.705,
+     "end": 388.805,
+     "conf": 0.994
+    },
+    {
+     "w": "our",
+     "start": 388.866,
+     "end": 388.946,
+     "conf": 0.201
+    },
+    {
+     "w": "bowl",
+     "start": 388.966,
+     "end": 389.187,
+     "conf": 0.494
+    },
+    {
+     "w": "the",
+     "start": 389.207,
+     "end": 389.408,
+     "conf": 0.663
+    },
+    {
+     "w": "area",
+     "start": 389.508,
+     "end": 389.689,
+     "conf": 0.749
+    },
+    {
+     "w": "from",
+     "start": 389.749,
+     "end": 389.869,
+     "conf": 0.865
+    },
+    {
+     "w": "zero",
+     "start": 389.99,
+     "end": 390.19,
+     "conf": 0.528
+    },
+    {
+     "w": "to",
+     "start": 390.291,
+     "end": 390.331,
+     "conf": 0.483
+    },
+    {
+     "w": "x",
+     "start": 390.652,
+     "end": 390.672,
+     "conf": 0.0
+    },
+    {
+     "w": "turns",
+     "start": 390.692,
+     "end": 390.933,
+     "conf": 0.834
+    },
+    {
+     "w": "out",
+     "start": 390.953,
+     "end": 391.073,
+     "conf": 0.756
+    },
+    {
+     "w": "to",
+     "start": 391.093,
+     "end": 391.154,
+     "conf": 0.983
+    },
+    {
+     "w": "be",
+     "start": 391.174,
+     "end": 391.214,
+     "conf": 0.997
+    },
+    {
+     "w": "x",
+     "start": 391.395,
+     "end": 391.415,
+     "conf": 0.991
+    },
+    {
+     "w": "cubed",
+     "start": 391.515,
+     "end": 391.776,
+     "conf": 0.797
+    },
+    {
+     "w": "over",
+     "start": 391.916,
+     "end": 392.037,
+     "conf": 0.75
+    },
+    {
+     "w": "three",
+     "start": 392.097,
+     "end": 392.298,
+     "conf": 0.601
+    },
+    {
+     "w": "at",
+     "start": 392.679,
+     "end": 392.739,
+     "conf": 0.465
+    },
+    {
+     "w": "x",
+     "start": 392.96,
+     "end": 392.98,
+     "conf": 0.001
+    },
+    {
+     "w": "equals",
+     "start": 393.0,
+     "end": 393.241,
+     "conf": 0.229
+    },
+    {
+     "w": "one",
+     "start": 393.261,
+     "end": 393.502,
+     "conf": 0.266
+    },
+    {
+     "w": "that's",
+     "start": 393.522,
+     "end": 393.783,
+     "conf": 0.672
+    },
+    {
+     "w": "the",
+     "start": 393.803,
+     "end": 393.903,
+     "conf": 0.741
+    },
+    {
+     "w": "one",
+     "start": 394.004,
+     "end": 394.104,
+     "conf": 0.659
+    },
+    {
+     "w": "third",
+     "start": 394.204,
+     "end": 394.425,
+     "conf": 0.792
+    },
+    {
+     "w": "we",
+     "start": 394.445,
+     "end": 394.505,
+     "conf": 0.668
+    },
+    {
+     "w": "just",
+     "start": 394.586,
+     "end": 394.726,
+     "conf": 0.746
+    },
+    {
+     "w": "found",
+     "start": 394.746,
+     "end": 395.027,
+     "conf": 0.832
+    }
+   ]
+  },
+  {
+   "section": "Check it",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "And the derivative of x cubed over three is x squared, the very bowl we started with.",
+   "idea": true,
+   "start": 395.417,
+   "end": 399.552,
+   "words": [
+    {
+     "w": "and",
+     "start": 395.417,
+     "end": 395.477,
+     "conf": 0.914
+    },
+    {
+     "w": "the",
+     "start": 395.497,
+     "end": 395.558,
+     "conf": 0.992
+    },
+    {
+     "w": "derivative",
+     "start": 395.578,
+     "end": 396.08,
+     "conf": 0.998
+    },
+    {
+     "w": "of",
+     "start": 396.1,
+     "end": 396.16,
+     "conf": 0.992
+    },
+    {
+     "w": "x",
+     "start": 396.34,
+     "end": 396.361,
+     "conf": 0.983
+    },
+    {
+     "w": "cubed",
+     "start": 396.481,
+     "end": 396.722,
+     "conf": 0.794
+    },
+    {
+     "w": "over",
+     "start": 396.782,
+     "end": 396.943,
+     "conf": 0.778
+    },
+    {
+     "w": "three",
+     "start": 397.003,
+     "end": 397.244,
+     "conf": 0.798
+    },
+    {
+     "w": "is",
+     "start": 397.404,
+     "end": 397.465,
+     "conf": 0.499
+    },
+    {
+     "w": "x",
+     "start": 397.625,
+     "end": 397.645,
+     "conf": 0.965
+    },
+    {
+     "w": "squared",
+     "start": 397.665,
+     "end": 398.107,
+     "conf": 0.804
+    },
+    {
+     "w": "the",
+     "start": 398.368,
+     "end": 398.428,
+     "conf": 0.497
+    },
+    {
+     "w": "very",
+     "start": 398.448,
+     "end": 398.649,
+     "conf": 0.8
+    },
+    {
+     "w": "bowl",
+     "start": 398.729,
+     "end": 398.93,
+     "conf": 0.667
+    },
+    {
+     "w": "we",
+     "start": 398.95,
+     "end": 399.03,
+     "conf": 0.666
+    },
+    {
+     "w": "started",
+     "start": 399.111,
+     "end": 399.412,
+     "conf": 0.856
+    },
+    {
+     "w": "with",
+     "start": 399.432,
+     "end": 399.552,
+     "conf": 0.998
+    }
+   ]
+  },
+  {
+   "section": "The car, again",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "Your car knows this too.",
+   "idea": false,
+   "start": 401.193,
+   "end": 402.32,
+   "words": [
+    {
+     "w": "your",
+     "start": 401.193,
+     "end": 401.294,
+     "conf": 0.864
+    },
+    {
+     "w": "car",
+     "start": 401.314,
+     "end": 401.495,
+     "conf": 0.707
+    },
+    {
+     "w": "knows",
+     "start": 401.515,
+     "end": 401.797,
+     "conf": 0.779
+    },
+    {
+     "w": "this",
+     "start": 401.817,
+     "end": 402.038,
+     "conf": 0.821
+    },
+    {
+     "w": "too",
+     "start": 402.139,
+     "end": 402.32,
+     "conf": 0.613
+    }
+   ]
+  },
+  {
+   "section": "The car, again",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "The speedometer shows the derivative of the distance. The odometer adds the speed up, moment by moment, into a distance. That's an integral.",
+   "idea": false,
+   "start": 402.79,
+   "end": 409.917,
+   "words": [
+    {
+     "w": "the",
+     "start": 402.79,
+     "end": 402.85,
+     "conf": 0.008
+    },
+    {
+     "w": "speedometer",
+     "start": 402.87,
+     "end": 403.23,
+     "conf": 0.615
+    },
+    {
+     "w": "shows",
+     "start": 403.25,
+     "end": 403.471,
+     "conf": 0.732
+    },
+    {
+     "w": "the",
+     "start": 403.491,
+     "end": 403.591,
+     "conf": 0.746
+    },
+    {
+     "w": "derivative",
+     "start": 403.711,
+     "end": 404.291,
+     "conf": 0.898
+    },
+    {
+     "w": "of",
+     "start": 404.391,
+     "end": 404.452,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 404.512,
+     "end": 404.572,
+     "conf": 0.655
+    },
+    {
+     "w": "distance",
+     "start": 404.652,
+     "end": 405.152,
+     "conf": 0.868
+    },
+    {
+     "w": "the",
+     "start": 405.172,
+     "end": 405.633,
+     "conf": 0.443
+    },
+    {
+     "w": "odometer",
+     "start": 405.653,
+     "end": 406.033,
+     "conf": 0.785
+    },
+    {
+     "w": "adds",
+     "start": 406.113,
+     "end": 406.293,
+     "conf": 0.992
+    },
+    {
+     "w": "the",
+     "start": 406.373,
+     "end": 406.433,
+     "conf": 0.541
+    },
+    {
+     "w": "speed",
+     "start": 406.553,
+     "end": 406.814,
+     "conf": 0.994
+    },
+    {
+     "w": "up",
+     "start": 406.894,
+     "end": 406.974,
+     "conf": 0.5
+    },
+    {
+     "w": "moment",
+     "start": 407.154,
+     "end": 407.434,
+     "conf": 0.791
+    },
+    {
+     "w": "by",
+     "start": 407.494,
+     "end": 407.594,
+     "conf": 0.538
+    },
+    {
+     "w": "moment",
+     "start": 407.675,
+     "end": 407.935,
+     "conf": 0.832
+    },
+    {
+     "w": "into",
+     "start": 408.095,
+     "end": 408.275,
+     "conf": 0.998
+    },
+    {
+     "w": "a",
+     "start": 408.375,
+     "end": 408.395,
+     "conf": 0.007
+    },
+    {
+     "w": "distance",
+     "start": 408.415,
+     "end": 408.936,
+     "conf": 0.999
+    },
+    {
+     "w": "that's",
+     "start": 409.276,
+     "end": 409.456,
+     "conf": 0.642
+    },
+    {
+     "w": "an",
+     "start": 409.476,
+     "end": 409.556,
+     "conf": 0.83
+    },
+    {
+     "w": "integral",
+     "start": 409.596,
+     "end": 409.917,
+     "conf": 0.873
+    }
+   ]
+  },
+  {
+   "section": "The car, again",
+   "act": "ACT SIX — Two sides of one coin",
+   "text": "Newton and Leibniz both saw this connection. Today it's called the fundamental theorem of calculus.",
+   "idea": true,
+   "start": 410.307,
+   "end": 415.143,
+   "words": [
+    {
+     "w": "newton",
+     "start": 410.307,
+     "end": 410.588,
+     "conf": 0.498
+    },
+    {
+     "w": "and",
+     "start": 410.608,
+     "end": 410.708,
+     "conf": 0.586
+    },
+    {
+     "w": "leibniz",
+     "start": 410.728,
+     "end": 411.09,
+     "conf": 0.566
+    },
+    {
+     "w": "both",
+     "start": 411.35,
+     "end": 411.571,
+     "conf": 1.0
+    },
+    {
+     "w": "saw",
+     "start": 411.692,
+     "end": 411.812,
+     "conf": 0.505
+    },
+    {
+     "w": "this",
+     "start": 411.832,
+     "end": 411.992,
+     "conf": 0.749
+    },
+    {
+     "w": "connection",
+     "start": 412.013,
+     "end": 412.414,
+     "conf": 0.896
+    },
+    {
+     "w": "today",
+     "start": 412.715,
+     "end": 412.936,
+     "conf": 0.8
+    },
+    {
+     "w": "it's",
+     "start": 413.036,
+     "end": 413.136,
+     "conf": 0.557
+    },
+    {
+     "w": "called",
+     "start": 413.176,
+     "end": 413.357,
+     "conf": 0.607
+    },
+    {
+     "w": "the",
+     "start": 413.377,
+     "end": 413.457,
+     "conf": 0.996
+    },
+    {
+     "w": "fundamental",
+     "start": 413.537,
+     "end": 413.999,
+     "conf": 0.864
+    },
+    {
+     "w": "theorem",
+     "start": 414.079,
+     "end": 414.36,
+     "conf": 0.629
+    },
+    {
+     "w": "of",
+     "start": 414.4,
+     "end": 414.46,
+     "conf": 0.607
+    },
+    {
+     "w": "calculus",
+     "start": 414.581,
+     "end": 415.143,
+     "conf": 0.75
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT SEVEN — Putting it together",
+   "text": "A single point has a steepness because we never measure at the point. We watch the slopes of shorter and shorter secants, and see where they're heading.",
+   "idea": false,
+   "start": 417.682,
+   "end": 425.214,
+   "words": [
+    {
+     "w": "a",
+     "start": 417.682,
+     "end": 417.702,
+     "conf": 0.001
+    },
+    {
+     "w": "single",
+     "start": 417.722,
+     "end": 417.943,
+     "conf": 0.949
+    },
+    {
+     "w": "point",
+     "start": 417.963,
+     "end": 418.123,
+     "conf": 0.943
+    },
+    {
+     "w": "has",
+     "start": 418.143,
+     "end": 418.223,
+     "conf": 0.993
+    },
+    {
+     "w": "a",
+     "start": 418.283,
+     "end": 418.303,
+     "conf": 0.001
+    },
+    {
+     "w": "steepness",
+     "start": 418.403,
+     "end": 418.884,
+     "conf": 0.878
+    },
+    {
+     "w": "because",
+     "start": 419.245,
+     "end": 419.505,
+     "conf": 0.857
+    },
+    {
+     "w": "we",
+     "start": 419.525,
+     "end": 419.605,
+     "conf": 0.666
+    },
+    {
+     "w": "never",
+     "start": 419.685,
+     "end": 419.826,
+     "conf": 0.793
+    },
+    {
+     "w": "measure",
+     "start": 419.886,
+     "end": 420.146,
+     "conf": 0.881
+    },
+    {
+     "w": "at",
+     "start": 420.166,
+     "end": 420.206,
+     "conf": 0.966
+    },
+    {
+     "w": "the",
+     "start": 420.226,
+     "end": 420.306,
+     "conf": 0.979
+    },
+    {
+     "w": "point",
+     "start": 420.366,
+     "end": 420.627,
+     "conf": 0.792
+    },
+    {
+     "w": "we",
+     "start": 421.188,
+     "end": 421.248,
+     "conf": 0.501
+    },
+    {
+     "w": "watch",
+     "start": 421.328,
+     "end": 421.488,
+     "conf": 0.806
+    },
+    {
+     "w": "the",
+     "start": 421.508,
+     "end": 421.609,
+     "conf": 0.699
+    },
+    {
+     "w": "slopes",
+     "start": 421.629,
+     "end": 422.009,
+     "conf": 0.844
+    },
+    {
+     "w": "of",
+     "start": 422.109,
+     "end": 422.149,
+     "conf": 0.495
+    },
+    {
+     "w": "shorter",
+     "start": 422.57,
+     "end": 422.931,
+     "conf": 0.851
+    },
+    {
+     "w": "and",
+     "start": 423.051,
+     "end": 423.131,
+     "conf": 0.66
+    },
+    {
+     "w": "shorter",
+     "start": 423.211,
+     "end": 423.472,
+     "conf": 0.827
+    },
+    {
+     "w": "secants",
+     "start": 423.552,
+     "end": 423.932,
+     "conf": 0.44
+    },
+    {
+     "w": "and",
+     "start": 424.093,
+     "end": 424.193,
+     "conf": 0.995
+    },
+    {
+     "w": "see",
+     "start": 424.313,
+     "end": 424.453,
+     "conf": 0.665
+    },
+    {
+     "w": "where",
+     "start": 424.553,
+     "end": 424.714,
+     "conf": 0.967
+    },
+    {
+     "w": "they're",
+     "start": 424.734,
+     "end": 424.914,
+     "conf": 0.621
+    },
+    {
+     "w": "heading",
+     "start": 424.974,
+     "end": 425.214,
+     "conf": 0.857
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT SEVEN — Putting it together",
+   "text": "Where they're heading is a limit. It doesn't care about the hole at zero over zero, only about what happens around it.",
+   "idea": false,
+   "start": 425.605,
+   "end": 431.119,
+   "words": [
+    {
+     "w": "where",
+     "start": 425.605,
+     "end": 425.705,
+     "conf": 0.579
+    },
+    {
+     "w": "they're",
+     "start": 425.725,
+     "end": 425.866,
+     "conf": 0.548
+    },
+    {
+     "w": "heading",
+     "start": 425.886,
+     "end": 426.126,
+     "conf": 0.851
+    },
+    {
+     "w": "is",
+     "start": 426.166,
+     "end": 426.227,
+     "conf": 0.656
+    },
+    {
+     "w": "a",
+     "start": 426.267,
+     "end": 426.287,
+     "conf": 0.001
+    },
+    {
+     "w": "limit",
+     "start": 426.327,
+     "end": 426.608,
+     "conf": 1.0
+    },
+    {
+     "w": "it",
+     "start": 427.109,
+     "end": 427.149,
+     "conf": 0.5
+    },
+    {
+     "w": "doesn't",
+     "start": 427.169,
+     "end": 427.43,
+     "conf": 0.82
+    },
+    {
+     "w": "care",
+     "start": 427.49,
+     "end": 427.67,
+     "conf": 0.632
+    },
+    {
+     "w": "about",
+     "start": 427.69,
+     "end": 427.911,
+     "conf": 0.832
+    },
+    {
+     "w": "the",
+     "start": 427.931,
+     "end": 427.991,
+     "conf": 0.997
+    },
+    {
+     "w": "hole",
+     "start": 428.071,
+     "end": 428.352,
+     "conf": 0.933
+    },
+    {
+     "w": "at",
+     "start": 428.372,
+     "end": 428.452,
+     "conf": 0.958
+    },
+    {
+     "w": "zero",
+     "start": 428.533,
+     "end": 428.753,
+     "conf": 0.684
+    },
+    {
+     "w": "over",
+     "start": 428.894,
+     "end": 429.054,
+     "conf": 0.743
+    },
+    {
+     "w": "zero",
+     "start": 429.114,
+     "end": 429.315,
+     "conf": 0.459
+    },
+    {
+     "w": "only",
+     "start": 429.335,
+     "end": 429.976,
+     "conf": 0.995
+    },
+    {
+     "w": "about",
+     "start": 430.036,
+     "end": 430.237,
+     "conf": 0.832
+    },
+    {
+     "w": "what",
+     "start": 430.257,
+     "end": 430.377,
+     "conf": 0.991
+    },
+    {
+     "w": "happens",
+     "start": 430.438,
+     "end": 430.738,
+     "conf": 0.881
+    },
+    {
+     "w": "around",
+     "start": 430.758,
+     "end": 431.039,
+     "conf": 0.863
+    },
+    {
+     "w": "it",
+     "start": 431.059,
+     "end": 431.119,
+     "conf": 0.574
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT SEVEN — Putting it together",
+   "text": "And derivatives and integrals are two sides of one idea. One cuts a change into instants. The other adds the instants back into a whole.",
+   "idea": true,
+   "start": 431.509,
+   "end": 438.551,
+   "words": [
+    {
+     "w": "and",
+     "start": 431.509,
+     "end": 431.569,
+     "conf": 0.989
+    },
+    {
+     "w": "derivatives",
+     "start": 431.589,
+     "end": 432.051,
+     "conf": 0.994
+    },
+    {
+     "w": "and",
+     "start": 432.071,
+     "end": 432.151,
+     "conf": 0.72
+    },
+    {
+     "w": "integrals",
+     "start": 432.211,
+     "end": 432.653,
+     "conf": 0.971
+    },
+    {
+     "w": "are",
+     "start": 432.713,
+     "end": 432.773,
+     "conf": 0.609
+    },
+    {
+     "w": "two",
+     "start": 432.793,
+     "end": 432.994,
+     "conf": 0.781
+    },
+    {
+     "w": "sides",
+     "start": 433.114,
+     "end": 433.535,
+     "conf": 0.95
+    },
+    {
+     "w": "of",
+     "start": 433.575,
+     "end": 433.615,
+     "conf": 0.5
+    },
+    {
+     "w": "one",
+     "start": 433.756,
+     "end": 433.856,
+     "conf": 0.695
+    },
+    {
+     "w": "idea",
+     "start": 433.977,
+     "end": 434.217,
+     "conf": 0.75
+    },
+    {
+     "w": "one",
+     "start": 434.679,
+     "end": 434.799,
+     "conf": 0.732
+    },
+    {
+     "w": "cuts",
+     "start": 434.859,
+     "end": 435.06,
+     "conf": 0.778
+    },
+    {
+     "w": "a",
+     "start": 435.12,
+     "end": 435.14,
+     "conf": 0.002
+    },
+    {
+     "w": "change",
+     "start": 435.22,
+     "end": 435.521,
+     "conf": 0.822
+    },
+    {
+     "w": "into",
+     "start": 435.541,
+     "end": 435.702,
+     "conf": 0.998
+    },
+    {
+     "w": "instants",
+     "start": 435.802,
+     "end": 436.183,
+     "conf": 0.653
+    },
+    {
+     "w": "the",
+     "start": 436.564,
+     "end": 436.625,
+     "conf": 1.0
+    },
+    {
+     "w": "other",
+     "start": 436.685,
+     "end": 436.825,
+     "conf": 0.799
+    },
+    {
+     "w": "adds",
+     "start": 436.946,
+     "end": 437.126,
+     "conf": 0.609
+    },
+    {
+     "w": "the",
+     "start": 437.146,
+     "end": 437.247,
+     "conf": 0.749
+    },
+    {
+     "w": "instants",
+     "start": 437.307,
+     "end": 437.668,
+     "conf": 0.625
+    },
+    {
+     "w": "back",
+     "start": 437.768,
+     "end": 437.969,
+     "conf": 0.996
+    },
+    {
+     "w": "into",
+     "start": 438.049,
+     "end": 438.189,
+     "conf": 0.75
+    },
+    {
+     "w": "a",
+     "start": 438.27,
+     "end": 438.29,
+     "conf": 0.008
+    },
+    {
+     "w": "whole",
+     "start": 438.31,
+     "end": 438.551,
+     "conf": 0.822
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT SEVEN — Putting it together",
+   "text": "Next time you're walking up a hill and it starts to feel harder, that's a derivative you're feeling, in your legs.",
+   "idea": false,
+   "start": 440.191,
+   "end": 445.597,
+   "words": [
+    {
+     "w": "next",
+     "start": 440.191,
+     "end": 440.411,
+     "conf": 0.899
+    },
+    {
+     "w": "time",
+     "start": 440.431,
+     "end": 440.632,
+     "conf": 0.8
+    },
+    {
+     "w": "you're",
+     "start": 440.652,
+     "end": 440.772,
+     "conf": 0.312
+    },
+    {
+     "w": "walking",
+     "start": 440.792,
+     "end": 441.072,
+     "conf": 0.969
+    },
+    {
+     "w": "up",
+     "start": 441.112,
+     "end": 441.172,
+     "conf": 0.5
+    },
+    {
+     "w": "a",
+     "start": 441.192,
+     "end": 441.212,
+     "conf": 0.998
+    },
+    {
+     "w": "hill",
+     "start": 441.292,
+     "end": 441.472,
+     "conf": 0.792
+    },
+    {
+     "w": "and",
+     "start": 441.573,
+     "end": 441.653,
+     "conf": 0.985
+    },
+    {
+     "w": "it",
+     "start": 441.673,
+     "end": 441.733,
+     "conf": 0.998
+    },
+    {
+     "w": "starts",
+     "start": 441.813,
+     "end": 442.073,
+     "conf": 0.833
+    },
+    {
+     "w": "to",
+     "start": 442.093,
+     "end": 442.173,
+     "conf": 0.666
+    },
+    {
+     "w": "feel",
+     "start": 442.253,
+     "end": 442.434,
+     "conf": 0.749
+    },
+    {
+     "w": "harder",
+     "start": 442.514,
+     "end": 442.814,
+     "conf": 0.977
+    },
+    {
+     "w": "that's",
+     "start": 443.415,
+     "end": 443.615,
+     "conf": 0.658
+    },
+    {
+     "w": "a",
+     "start": 443.695,
+     "end": 443.715,
+     "conf": 0.003
+    },
+    {
+     "w": "derivative",
+     "start": 443.735,
+     "end": 444.175,
+     "conf": 0.995
+    },
+    {
+     "w": "you're",
+     "start": 444.195,
+     "end": 444.356,
+     "conf": 0.418
+    },
+    {
+     "w": "feeling",
+     "start": 444.376,
+     "end": 444.696,
+     "conf": 0.852
+    },
+    {
+     "w": "in",
+     "start": 445.016,
+     "end": 445.076,
+     "conf": 0.499
+    },
+    {
+     "w": "your",
+     "start": 445.137,
+     "end": 445.257,
+     "conf": 0.687
+    },
+    {
+     "w": "legs",
+     "start": 445.277,
+     "end": 445.597,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT SEVEN — Putting it together",
+   "text": "And next time your eyes drift from the speedometer to the odometer, you're looking at both sides of calculus at once.",
+   "idea": false,
+   "start": 446.047,
+   "end": 451.547,
+   "words": [
+    {
+     "w": "and",
+     "start": 446.047,
+     "end": 446.107,
+     "conf": 0.866
+    },
+    {
+     "w": "next",
+     "start": 446.127,
+     "end": 446.328,
+     "conf": 0.915
+    },
+    {
+     "w": "time",
+     "start": 446.348,
+     "end": 446.549,
+     "conf": 0.8
+    },
+    {
+     "w": "your",
+     "start": 446.569,
+     "end": 446.649,
+     "conf": 0.71
+    },
+    {
+     "w": "eyes",
+     "start": 446.75,
+     "end": 446.91,
+     "conf": 0.724
+    },
+    {
+     "w": "drift",
+     "start": 446.97,
+     "end": 447.191,
+     "conf": 0.799
+    },
+    {
+     "w": "from",
+     "start": 447.272,
+     "end": 447.372,
+     "conf": 0.743
+    },
+    {
+     "w": "the",
+     "start": 447.392,
+     "end": 447.512,
+     "conf": 0.641
+    },
+    {
+     "w": "speedometer",
+     "start": 447.653,
+     "end": 448.255,
+     "conf": 0.65
+    },
+    {
+     "w": "to",
+     "start": 448.336,
+     "end": 448.376,
+     "conf": 0.494
+    },
+    {
+     "w": "the",
+     "start": 448.396,
+     "end": 448.476,
+     "conf": 0.718
+    },
+    {
+     "w": "odometer",
+     "start": 448.617,
+     "end": 449.078,
+     "conf": 0.651
+    },
+    {
+     "w": "you're",
+     "start": 449.098,
+     "end": 449.48,
+     "conf": 0.215
+    },
+    {
+     "w": "looking",
+     "start": 449.5,
+     "end": 449.701,
+     "conf": 0.921
+    },
+    {
+     "w": "at",
+     "start": 449.721,
+     "end": 449.781,
+     "conf": 0.992
+    },
+    {
+     "w": "both",
+     "start": 449.841,
+     "end": 450.042,
+     "conf": 0.798
+    },
+    {
+     "w": "sides",
+     "start": 450.142,
+     "end": 450.443,
+     "conf": 0.797
+    },
+    {
+     "w": "of",
+     "start": 450.463,
+     "end": 450.504,
+     "conf": 0.626
+    },
+    {
+     "w": "calculus",
+     "start": 450.584,
+     "end": 451.025,
+     "conf": 0.757
+    },
+    {
+     "w": "at",
+     "start": 451.086,
+     "end": 451.146,
+     "conf": 0.499
+    },
+    {
+     "w": "once",
+     "start": 451.307,
+     "end": 451.547,
+     "conf": 0.732
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT SEVEN — Putting it together",
+   "text": "Thanks for watching all the way to the end. If you enjoyed this, leave a like and subscribe, so you don't miss the next one. See you then.",
+   "idea": false,
+   "start": 451.997,
+   "end": 458.645,
+   "words": [
+    {
+     "w": "thanks",
+     "start": 451.997,
+     "end": 452.137,
+     "conf": 0.481
+    },
+    {
+     "w": "for",
+     "start": 452.157,
+     "end": 452.217,
+     "conf": 0.963
+    },
+    {
+     "w": "watching",
+     "start": 452.237,
+     "end": 452.498,
+     "conf": 0.936
+    },
+    {
+     "w": "all",
+     "start": 452.638,
+     "end": 452.778,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 452.798,
+     "end": 452.878,
+     "conf": 0.748
+    },
+    {
+     "w": "way",
+     "start": 452.898,
+     "end": 453.018,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 453.098,
+     "end": 453.138,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 453.158,
+     "end": 453.239,
+     "conf": 0.825
+    },
+    {
+     "w": "end",
+     "start": 453.339,
+     "end": 453.499,
+     "conf": 0.667
+    },
+    {
+     "w": "if",
+     "start": 453.879,
+     "end": 453.939,
+     "conf": 0.5
+    },
+    {
+     "w": "you",
+     "start": 453.959,
+     "end": 454.04,
+     "conf": 0.998
+    },
+    {
+     "w": "enjoyed",
+     "start": 454.06,
+     "end": 454.34,
+     "conf": 0.717
+    },
+    {
+     "w": "this",
+     "start": 454.36,
+     "end": 454.54,
+     "conf": 0.998
+    },
+    {
+     "w": "leave",
+     "start": 454.981,
+     "end": 455.121,
+     "conf": 0.922
+    },
+    {
+     "w": "a",
+     "start": 455.141,
+     "end": 455.161,
+     "conf": 0.795
+    },
+    {
+     "w": "like",
+     "start": 455.181,
+     "end": 455.361,
+     "conf": 0.673
+    },
+    {
+     "w": "and",
+     "start": 455.381,
+     "end": 455.461,
+     "conf": 0.661
+    },
+    {
+     "w": "subscribe",
+     "start": 455.481,
+     "end": 455.902,
+     "conf": 0.996
+    },
+    {
+     "w": "so",
+     "start": 456.302,
+     "end": 456.362,
+     "conf": 0.999
+    },
+    {
+     "w": "you",
+     "start": 456.382,
+     "end": 456.523,
+     "conf": 0.729
+    },
+    {
+     "w": "don't",
+     "start": 456.583,
+     "end": 456.743,
+     "conf": 0.777
+    },
+    {
+     "w": "miss",
+     "start": 456.823,
+     "end": 457.003,
+     "conf": 0.749
+    },
+    {
+     "w": "the",
+     "start": 457.023,
+     "end": 457.163,
+     "conf": 0.664
+    },
+    {
+     "w": "next",
+     "start": 457.224,
+     "end": 457.444,
+     "conf": 0.759
+    },
+    {
+     "w": "one",
+     "start": 457.544,
+     "end": 457.644,
+     "conf": 0.689
+    },
+    {
+     "w": "see",
+     "start": 457.664,
+     "end": 458.405,
+     "conf": 0.324
+    },
+    {
+     "w": "you",
+     "start": 458.445,
+     "end": 458.505,
+     "conf": 0.485
+    },
+    {
+     "w": "then",
+     "start": 458.525,
+     "end": 458.645,
+     "conf": 0.974
+    }
+   ]
+  }
+ ]
+}

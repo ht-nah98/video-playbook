@@ -1,0 +1,67 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — hero (người que xuyên suốt)</title>
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử nhân vật người que XUYÊN SUỐT (người dùng 2026-10-23): khán giả chính của video như pi creature của 3B1B —
+// tương tác, bị số rơi trúng đầu, mang số từ A sang B, đóng giả con số, phân thân, kéo tay nhau. Cậu bé anime vẫn là
+// thương hiệu + người dẫn thỉnh thoảng. Ba phương án nhận dạng, cùng năm tình huống:
+//   A · người que số 9 — đầu đặc gắn thân ở cạnh phải → dáng đứng đọc thành "9"; hai bạn = "99", + % = tên kênh
+//   B · người que cổ điển + mắt biết diễn
+//   C · người que cổ điển + mắt + khăn quàng đỏ (món đồ nhận diện)
+// Khung xương + tư thế dùng engine/stick.js (tính khớp, vẽ ẩn), phần nhận dạng (đầu, mắt, khăn) vẽ ở đây.
+// node engine/render/shoot.js stills --page tools/lab/hero.html --t 0.5 --outdir out/_lab/hero
+import { P } from '../../engine/stick.js';
+import { hero, card, star, VAR, INK, RED, TEAL, PAPER } from '../../engine/hero.js';
+const g = document.getElementById('cv').getContext('2d');
+let fontsReady = false;
+Promise.all([new FontFace('Archivo', 'url("../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load()
+  .then(f => document.fonts.add(f)).catch(() => {})]).then(() => { fontsReady = true; });
+function label(g, s, x, y, size = 26, col = INK, align = 'center', wgt = 700) { g.fillStyle = col; g.font = `${wgt} ${size}px Archivo, sans-serif`; g.textAlign = align; g.textBaseline = 'alphabetic'; g.fillText(s, x, y); }
+function floor(g, x0, x1, y) { g.strokeStyle = 'rgba(34,48,60,0.22)'; g.lineWidth = 3; g.beginPath(); g.moveTo(x0, y); g.lineTo(x1, y); g.stroke(); }
+
+const COLS = [560, 830, 1110, 1390, 1690];
+const FRONT = { ...P.stand, lean: 0, shL: -0.22, elL: -0.2, shR: 0.22, elR: 0.2, hipL: -0.13, hipR: 0.13 };   // chính diện, nhìn người xem
+const HEAD = ['đứng · nhìn bạn', 'tò mò', 'bị số rơi trúng đầu', 'mang số từ A → B', 'phân thân · kéo tay'];
+function row(v, gy) {
+  const V = VAR[v], h = 190;
+  label(g, V.name.split(' · ')[0], 60, gy - 150, 64, V.color, 'left', 800);
+  label(g, V.name.split(' · ')[1], 60, gy - 95, 30, INK, 'left', 800);
+  V.sub.split(', ').forEach((s, i) => label(g, s, 60, gy - 55 + i * 32, 24, INK, 'left', 500));
+  for (const cx of COLS) floor(g, cx - 120, cx + 120, gy);
+  // 1 đứng, nhìn thẳng người xem
+  hero(g, v, COLS[0], gy, FRONT, { h, dir: 1, eye: { look: [0, 0.2] } });
+  // 2 tò mò: ngẩng nhìn dấu ? phía trên phải
+  hero(g, v, COLS[1] - 20, gy, P.lookUp, { h, dir: 1, eye: { look: [0.8, -0.9] } });
+  label(g, '?', COLS[1] + 80, gy - 215, 84, RED, 'center', 800);
+  // 3 bị "1/6" rơi trúng đầu: dẹt người, mắt choáng, sao
+  const J3 = hero(g, v, COLS[2], gy, FRONT, { h, dir: 1, squash: 0.8, eye: { shape: 'x' } });
+  card(g, J3.C[0] + 6, J3.C[1] - J3.r - 30, 64, '1/6', -0.12);
+  star(g, J3.C[0] - 70, J3.C[1] - 10, 16); star(g, J3.C[0] + 72, J3.C[1] - 30, 12); star(g, J3.C[0] + 60, J3.C[1] + 22, 9);
+  // 4 vác "1/6" đi từ A sang B
+  g.save(); g.setLineDash([12, 10]); g.strokeStyle = RED; g.lineWidth = 4; g.beginPath(); g.moveTo(COLS[3] - 110, gy + 22); g.lineTo(COLS[3] + 100, gy + 22); g.stroke(); g.restore();
+  label(g, 'A', COLS[3] - 130, gy + 32, 30, RED); label(g, 'B', COLS[3] + 122, gy + 32, 30, RED);
+  const J4 = hero(g, v, COLS[3], gy, P.carry, { h, dir: 1, eye: { look: [0, -1] } });
+  card(g, (J4.handL[0] + J4.handR[0]) / 2, Math.min(J4.handL[1], J4.handR[1], J4.C[1] - J4.r) - 32, 70, '1/6');
+  // 5 phân thân: kéo tay nhau
+  if (V.nine) {
+    const xs = [COLS[4] - 120, COLS[4] - 10];
+    hero(g, v, xs[0], gy, FRONT, { h, dir: 1, eye: { look: [0.6, 0], shape: 'happy' } });
+    hero(g, v, xs[1], gy, FRONT, { h, dir: 1, eye: { look: [-0.6, 0], shape: 'happy' } });
+    label(g, '%', COLS[4] + 105, gy - 60, 140, TEAL, 'center', 800);
+  } else {
+    const xs = [COLS[4] - 110, COLS[4], COLS[4] + 110];
+    xs.forEach((x, i) => {
+      const hl = i > 0 ? [(xs[i - 1] + x) / 2, gy - 112] : null, hr = i < 2 ? [(xs[i + 1] + x) / 2, gy - 112] : null;
+      hero(g, v, x, gy, P.balance, { h: 165, dir: 1, hands: [hl ?? [x - 70, gy - 70], hr ?? [x + 70, gy - 70]], eye: { shape: 'happy' } });
+    });
+  }
+}
+
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = PAPER; g.fillRect(0, 0, 1920, 1080);
+  HEAD.forEach((s, i) => label(g, s, COLS[i], 60, 28, INK, 'center', 800));
+  row('A', 350); row('B', 680); row('C', 1005);
+}
+window.__intro = { get ready() { return fontsReady; }, still: frame, frame, DUR: 1 };
+</script>

@@ -1,0 +1,998 @@
+{
+ "duration": 540.473,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "People knew pi roughly long before anyone could explain it, because they measured it.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "Measured, not explained",
+   "opens": "act",
+   "start": 0.0,
+   "end": 4.147,
+   "wav": "audio/voice/2b5f4a5b5f0922a3.wav"
+  },
+  {
+   "text": "Babylonian scribes usually just used three, and one clay tablet uses three and one eighth.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "Measured, not explained",
+   "opens": null,
+   "start": 4.497,
+   "end": 9.181,
+   "wav": "audio/voice/765e50851090584b.wav"
+  },
+  {
+   "text": "In Egypt, the Rhind papyrus, copied around sixteen fifty BC, finds the area of a round field in a way that works out to about three point one six.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "Measured, not explained",
+   "opens": null,
+   "start": 9.531,
+   "end": 16.982,
+   "wav": "audio/voice/f6fe387bfaaff95f.wav"
+  },
+  {
+   "text": "These numbers were good enough for fields and granaries. But they were measurements, not reasons. Nobody could say why the number was what it was.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "Measured, not explained",
+   "opens": null,
+   "start": 17.332,
+   "end": 24.476,
+   "wav": "audio/voice/1acf0f28c441a02e.wav"
+  },
+  {
+   "text": "The first person to go after the question systematically was Archimedes, in Syracuse, in the third century BC.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The squeeze",
+   "opens": "stop",
+   "start": 26.076,
+   "end": 31.744,
+   "wav": "audio/voice/7e766bd858ee08a7.wav"
+  },
+  {
+   "text": "His problem is easy to state. You can't lay a straight ruler along a curve and read off its length.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The squeeze",
+   "opens": null,
+   "start": 32.094,
+   "end": 36.858,
+   "wav": "audio/voice/e87d7bca5833c29a.wav"
+  },
+  {
+   "text": "But you can do this. Draw a polygon inside the circle. Its perimeter is a little shorter than the circle.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The squeeze",
+   "opens": null,
+   "start": 37.208,
+   "end": 42.396,
+   "wav": "audio/voice/537d5ef4b9c3ba1e.wav"
+  },
+  {
+   "text": "Then draw a polygon outside, hugging the circle. Its perimeter is a little longer.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The squeeze",
+   "opens": null,
+   "start": 42.746,
+   "end": 46.886,
+   "wav": "audio/voice/96617332a8b85017.wav"
+  },
+  {
+   "text": "So the circle, which you cannot measure directly, is trapped between two numbers that you can.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The squeeze",
+   "opens": null,
+   "start": 47.236,
+   "end": 51.987,
+   "wav": "audio/voice/792aee4395977367.wav"
+  },
+  {
+   "text": "Archimedes started with hexagons, six sides each, and got a rough squeeze, somewhere between three and about three point four six.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The squeeze",
+   "opens": null,
+   "start": 52.937,
+   "end": 59.849,
+   "wav": "audio/voice/fc213b2748b3544f.wav"
+  },
+  {
+   "text": "Then he doubled the sides. Twelve. Twenty-four. Forty-eight. Ninety-six.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The squeeze",
+   "opens": null,
+   "start": 60.199,
+   "end": 63.807,
+   "wav": "audio/voice/c345cce2537cada4.wav"
+  },
+  {
+   "text": "With every doubling, the polygons hug the circle a little tighter, and the gap between them shrinks.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The squeeze",
+   "opens": null,
+   "start": 64.157,
+   "end": 69.135,
+   "wav": "audio/voice/197cdaa753d54188.wav"
+  },
+  {
+   "text": "At ninety-six sides, he proved that pi lies between three point one four zero eight and three point one four two nine.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The squeeze",
+   "opens": null,
+   "start": 69.485,
+   "end": 75.497,
+   "wav": "audio/voice/276f9134b79b37c5.wav"
+  },
+  {
+   "text": "That upper bound is twenty-two over seven, the very fraction many of us still use today.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The squeeze",
+   "opens": null,
+   "start": 75.847,
+   "end": 80.267,
+   "wav": "audio/voice/70a1ca37ef8c6d2a.wav"
+  },
+  {
+   "text": "The same idea was found again, independently, in China.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The idea that wouldn't die",
+   "opens": "stop",
+   "start": 81.867,
+   "end": 84.579,
+   "wav": "audio/voice/9217fc951ae56965.wav"
+  },
+  {
+   "text": "In the fifth century, Zu Chongzhi went all the way to a polygon with twelve thousand two hundred and eighty-eight sides, and pinned pi down to seven decimal places.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The idea that wouldn't die",
+   "opens": null,
+   "start": 84.929,
+   "end": 93.322,
+   "wav": "audio/voice/615174372d25b726.wav"
+  },
+  {
+   "text": "He also gave the fraction three hundred and fifty-five over one hundred and thirteen, which is right to six decimal places.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The idea that wouldn't die",
+   "opens": null,
+   "start": 93.672,
+   "end": 100.067,
+   "wav": "audio/voice/5a36c00badeb27c9.wav"
+  },
+  {
+   "text": "In Europe, Archimedes' squeeze stayed the method of choice for almost nineteen hundred years.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The idea that wouldn't die",
+   "opens": null,
+   "start": 100.417,
+   "end": 105.044,
+   "wav": "audio/voice/cc6ddb65b580098e.wav"
+  },
+  {
+   "text": "As late as sixteen ten, Ludolph van Ceulen was still doubling polygons, out to a shape with more than four quintillion sides, and he got thirty-five digits.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The idea that wouldn't die",
+   "opens": null,
+   "start": 105.394,
+   "end": 113.476,
+   "wav": "audio/voice/08d2ac8b33fcb82b.wav"
+  },
+  {
+   "text": "They were carved on his tombstone, and for a long time German speakers called pi the Ludolphine number.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "The idea that wouldn't die",
+   "opens": null,
+   "start": 113.826,
+   "end": 119.006,
+   "wav": "audio/voice/71fb100f28142178.wav"
+  },
+  {
+   "text": "But the real gift of Archimedes isn't the digits. It's what his method shows pi to be.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "A limit",
+   "opens": "stop",
+   "start": 120.606,
+   "end": 124.813,
+   "wav": "audio/voice/3b20815a4f46faa0.wav"
+  },
+  {
+   "text": "Pi is the end of a process. It is where those polygons are heading as their sides grow without limit.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "A limit",
+   "opens": null,
+   "start": 125.163,
+   "end": 129.957,
+   "wav": "audio/voice/9d2fd4962aa36380.wav"
+  },
+  {
+   "text": "In other words, pi lives right on the border between straight and curved.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "A limit",
+   "opens": null,
+   "start": 130.307,
+   "end": 133.993,
+   "wav": "audio/voice/52ed6ef6b273a400.wav"
+  },
+  {
+   "text": "It is the price you pay to turn something with corners into something perfectly smooth.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Trapping the circle",
+   "section": "A limit",
+   "opens": null,
+   "start": 134.343,
+   "end": 138.634,
+   "wav": "audio/voice/7131faed2877facd.wav"
+  },
+  {
+   "text": "Now for the most important part.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "Not about circles",
+   "opens": "act",
+   "start": 141.034,
+   "end": 142.332,
+   "wav": "audio/voice/f483291d78e4b49e.wav"
+  },
+  {
+   "text": "In school, pi arrives as a fact about circles, so it's natural to think pi is about circles.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "Not about circles",
+   "opens": null,
+   "start": 142.682,
+   "end": 147.131,
+   "wav": "audio/voice/d1975d7ecc36bedc.wav"
+  },
+  {
+   "text": "It isn't, really. Pi is about turning.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "Not about circles",
+   "opens": null,
+   "start": 147.482,
+   "end": 149.081,
+   "wav": "audio/voice/9c41eb8e26b3540b.wav"
+  },
+  {
+   "text": "To see why, we need a unit of angle that most of us met once, briefly, and then forgot. The radian.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "Not about circles",
+   "opens": null,
+   "start": 149.431,
+   "end": 154.176,
+   "wav": "audio/voice/12d755a2e0872cce.wav"
+  },
+  {
+   "text": "We usually measure angles in degrees, and a full turn is three hundred and sixty of them.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "Three hundred and sixty",
+   "opens": "stop",
+   "start": 155.776,
+   "end": 160.127,
+   "wav": "audio/voice/40aec80ee245fe03.wav"
+  },
+  {
+   "text": "But there's nothing mathematical about three hundred and sixty. Somebody chose it.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "Three hundred and sixty",
+   "opens": null,
+   "start": 160.477,
+   "end": 164.55,
+   "wav": "audio/voice/3bdf80e5091b77e0.wav"
+  },
+  {
+   "text": "It most likely comes from Babylonian astronomy, which counted in sixties.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "Three hundred and sixty",
+   "opens": null,
+   "start": 164.9,
+   "end": 168.505,
+   "wav": "audio/voice/52cf384ecc9ce691.wav"
+  },
+  {
+   "text": "Three hundred and sixty can be divided evenly in twenty-four different ways, and it's close to the number of days in a year.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "Three hundred and sixty",
+   "opens": null,
+   "start": 168.855,
+   "end": 174.852,
+   "wav": "audio/voice/172a7c39490c2605.wav"
+  },
+  {
+   "text": "Very handy. But still, a convention.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "Three hundred and sixty",
+   "opens": null,
+   "start": 175.202,
+   "end": 176.869,
+   "wav": "audio/voice/ca1471b74d173bd5.wav"
+  },
+  {
+   "text": "A radian is different, because nobody had to pick a number.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "A unit nobody chose",
+   "opens": "stop",
+   "start": 178.469,
+   "end": 181.354,
+   "wav": "audio/voice/dce5ebe6b8c1cc1f.wav"
+  },
+  {
+   "text": "Take a circle whose radius is one. Walk along its edge a distance of exactly one radius.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "A unit nobody chose",
+   "opens": null,
+   "start": 181.704,
+   "end": 186.026,
+   "wav": "audio/voice/f6079e7520735b34.wav"
+  },
+  {
+   "text": "The angle you've swept out from the centre is one radian, a little over fifty-seven degrees. That's the whole definition.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "A unit nobody chose",
+   "opens": null,
+   "start": 186.376,
+   "end": 192.616,
+   "wav": "audio/voice/f4793475f28402af.wav"
+  },
+  {
+   "text": "And this is where pi steps in. A circle of radius one has a circumference of two pi.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "A unit nobody chose",
+   "opens": null,
+   "start": 192.966,
+   "end": 197.037,
+   "wav": "audio/voice/e8b7106da89929d9.wav"
+  },
+  {
+   "text": "So a full turn is two pi radians. Half a turn is pi. A quarter turn is pi over two.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "A unit nobody chose",
+   "opens": null,
+   "start": 197.387,
+   "end": 201.472,
+   "wav": "audio/voice/a7fa722d0ab5ec33.wav"
+  },
+  {
+   "text": "So pi isn't some number that just happens to pop out when you measure circles.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "A unit nobody chose",
+   "opens": null,
+   "start": 202.422,
+   "end": 205.973,
+   "wav": "audio/voice/3a0eb10e4439b739.wav"
+  },
+  {
+   "text": "Pi is how far you travel along the edge when you turn halfway round a circle of radius one. It is the natural measure of half a turn.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "A unit nobody chose",
+   "opens": null,
+   "start": 206.323,
+   "end": 212.883,
+   "wav": "audio/voice/b5efbed31f5f734b.wav"
+  },
+  {
+   "text": "Some mathematicians even argue that the real constant should be the full turn, two pi, which they call tau.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "A unit nobody chose",
+   "opens": null,
+   "start": 213.233,
+   "end": 218.52,
+   "wav": "audio/voice/add97ea26ac196ac.wav"
+  },
+  {
+   "text": "Either way, it is a story about turning.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "A unit nobody chose",
+   "opens": null,
+   "start": 218.87,
+   "end": 220.468,
+   "wav": "audio/voice/023a75a65501c960.wav"
+  },
+  {
+   "text": "Look at pi this way, and it starts showing up in places with no circles at all.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "The shadow of a turn",
+   "opens": "stop",
+   "start": 222.068,
+   "end": 226.024,
+   "wav": "audio/voice/e04e9fbf62cd7b2e.wav"
+  },
+  {
+   "text": "Imagine a point running steadily around a circle, and look only at its shadow on a wall.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "The shadow of a turn",
+   "opens": null,
+   "start": 226.374,
+   "end": 230.663,
+   "wav": "audio/voice/503e6a561ab171c8.wav"
+  },
+  {
+   "text": "The shadow just slides up and down, up and down. Trace it out over time, and you get a wave. A sine wave.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "The shadow of a turn",
+   "opens": null,
+   "start": 231.013,
+   "end": 236.141,
+   "wav": "audio/voice/a83fd3d167e1f12d.wav"
+  },
+  {
+   "text": "That is exactly how a pendulum swings, at least for small swings, and it's why the formula for its period has a two pi in it.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "The shadow of a turn",
+   "opens": null,
+   "start": 236.491,
+   "end": 242.75,
+   "wav": "audio/voice/e30eb65f99087315.wav"
+  },
+  {
+   "text": "A sound wave is air pressure rising and falling in that same rhythm.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "The shadow of a turn",
+   "opens": null,
+   "start": 243.1,
+   "end": 246.123,
+   "wav": "audio/voice/3ef0765a4f6eb13d.wav"
+  },
+  {
+   "text": "And the alternating current in your walls is made by a coil spinning inside a generator.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "The shadow of a turn",
+   "opens": null,
+   "start": 246.473,
+   "end": 251.081,
+   "wav": "audio/voice/1e4c77e289dcee01.wav"
+  },
+  {
+   "text": "Wherever something repeats, there is a hidden turn behind it, and pi comes along to measure it.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "The shadow of a turn",
+   "opens": null,
+   "start": 251.431,
+   "end": 256.186,
+   "wav": "audio/voice/781ba7694df5207a.wav"
+  },
+  {
+   "text": "The circle is just the easiest picture of a turn to see. It isn't where pi comes from.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Pi is about turning",
+   "section": "The shadow of a turn",
+   "opens": null,
+   "start": 256.536,
+   "end": 260.61,
+   "wav": "audio/voice/cb704c3bd106b9d3.wav"
+  },
+  {
+   "text": "Pi is irrational. That means you cannot write it as one whole number divided by another.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "A fraction has to repeat",
+   "opens": "act",
+   "start": 263.01,
+   "end": 267.431,
+   "wav": "audio/voice/5219210e19be800e.wav"
+  },
+  {
+   "text": "To see why that matters, look at what fractions do.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "A fraction has to repeat",
+   "opens": null,
+   "start": 267.781,
+   "end": 270.254,
+   "wav": "audio/voice/2d5f07f395408b77.wav"
+  },
+  {
+   "text": "Divide one by three, and you get zero point three three three, repeating forever. A tiny bar over the three writes it down completely.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "A fraction has to repeat",
+   "opens": null,
+   "start": 270.604,
+   "end": 277.298,
+   "wav": "audio/voice/d9077af196a6a7b4.wav"
+  },
+  {
+   "text": "Divide one by seven, and you get one four two eight five seven, then one four two eight five seven again, and again.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "A fraction has to repeat",
+   "opens": null,
+   "start": 277.648,
+   "end": 283.484,
+   "wav": "audio/voice/ae7fd20af0782811.wav"
+  },
+  {
+   "text": "That isn't luck. Each step of the division leaves a remainder, and unless the division comes out exactly, there are only six remainders it can be.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "A fraction has to repeat",
+   "opens": null,
+   "start": 283.834,
+   "end": 291.27,
+   "wav": "audio/voice/73a4e2fcc1ed85d9.wav"
+  },
+  {
+   "text": "So within six steps, some remainder has to come back, and from that moment, the digits repeat.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "A fraction has to repeat",
+   "opens": null,
+   "start": 291.62,
+   "end": 296.316,
+   "wav": "audio/voice/0c53797bb0efdc43.wav"
+  },
+  {
+   "text": "Every fraction behaves like this. Its digits either stop, or they fall into a loop.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "A fraction has to repeat",
+   "opens": null,
+   "start": 296.666,
+   "end": 300.811,
+   "wav": "audio/voice/127c593192b66c8b.wav"
+  },
+  {
+   "text": "So if the digits of pi never stop and never loop, pi cannot be a fraction.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "A fraction has to repeat",
+   "opens": null,
+   "start": 301.161,
+   "end": 304.803,
+   "wav": "audio/voice/17162b0b27f2696b.wav"
+  },
+  {
+   "text": "And they don't. This isn't a hunch. It's a theorem.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "Proved, not guessed",
+   "opens": "stop",
+   "start": 306.403,
+   "end": 308.505,
+   "wav": "audio/voice/49d31754421b4dc2.wav"
+  },
+  {
+   "text": "In seventeen sixty-one, the Swiss mathematician Johann Heinrich Lambert proved that pi is irrational.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "Proved, not guessed",
+   "opens": null,
+   "start": 308.855,
+   "end": 314.09,
+   "wav": "audio/voice/5ef5021fb7895d50.wav"
+  },
+  {
+   "text": "More than a century later, in eighteen eighty-two, the German mathematician Ferdinand von Lindemann proved something even stronger. Pi is transcendental.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "Proved, not guessed",
+   "opens": null,
+   "start": 314.44,
+   "end": 322.391,
+   "wav": "audio/voice/55fc7d6fbff6e0c3.wav"
+  },
+  {
+   "text": "That means pi is not the solution of any polynomial equation with whole-number coefficients. No finite piece of algebra will ever pin it down.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "Proved, not guessed",
+   "opens": null,
+   "start": 322.741,
+   "end": 330.116,
+   "wav": "audio/voice/91e3812a4ba2bb86.wav"
+  },
+  {
+   "text": "You might hope for a simple reason why a number born from a circle has to behave like this.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "No shortcut",
+   "opens": "stop",
+   "start": 331.716,
+   "end": 336.099,
+   "wav": "audio/voice/2539a9bfe752bb30.wav"
+  },
+  {
+   "text": "Honestly, there isn't a one-line one. The proofs are real, but subtle.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "No shortcut",
+   "opens": null,
+   "start": 336.449,
+   "end": 339.727,
+   "wav": "audio/voice/61936c2caa54bb2d.wav"
+  },
+  {
+   "text": "The shortest, by Ivan Niven in nineteen forty-seven, fits on a single page, but it needs calculus.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "No shortcut",
+   "opens": null,
+   "start": 340.077,
+   "end": 344.99,
+   "wav": "audio/voice/97707f81e6e22a58.wav"
+  },
+  {
+   "text": "What we can show is what it costs.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "No shortcut",
+   "opens": null,
+   "start": 345.34,
+   "end": 346.789,
+   "wav": "audio/voice/567bec6180f26f22.wav"
+  },
+  {
+   "text": "The ancient Greeks asked a famous question. With only a compass and a straight edge, can you draw a square with exactly the same area as a circle?",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "No shortcut",
+   "opens": null,
+   "start": 347.139,
+   "end": 354.288,
+   "wav": "audio/voice/229029f4892978e7.wav"
+  },
+  {
+   "text": "For more than two thousand years, people tried. Lindemann's result finally settled it. It is impossible, because pi is transcendental.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "No shortcut",
+   "opens": null,
+   "start": 354.638,
+   "end": 361.443,
+   "wav": "audio/voice/5206d1ccb6d5c48e.wav"
+  },
+  {
+   "text": "So the endless digits aren't a flaw in the number. They are the reason one of the oldest problems in mathematics could never be solved.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Why pi never ends",
+   "section": "No shortcut",
+   "opens": null,
+   "start": 361.793,
+   "end": 368.599,
+   "wav": "audio/voice/ea1c06fca06fb505.wav"
+  },
+  {
+   "text": "Here is something textbooks rarely mention.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "A circle on a ball",
+   "opens": "act",
+   "start": 370.999,
+   "end": 372.72,
+   "wav": "audio/voice/e24bb68a6e08fbe9.wav"
+  },
+  {
+   "text": "Pi itself, the number, never changes. It is three point one four one five nine, and so on, forever.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "A circle on a ball",
+   "opens": null,
+   "start": 373.07,
+   "end": 377.964,
+   "wav": "audio/voice/d6a65acc1eca8a2d.wav"
+  },
+  {
+   "text": "But the ratio of a circle's circumference to its diameter only equals pi on a flat surface.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "A circle on a ball",
+   "opens": null,
+   "start": 378.314,
+   "end": 382.909,
+   "wav": "audio/voice/1af1f3cd12fe1114.wav"
+  },
+  {
+   "text": "Imagine you are standing on a huge ball, like the Earth. You draw a circle the honest way, by walking the same distance from a centre point in every direction.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "A circle on a ball",
+   "opens": null,
+   "start": 383.259,
+   "end": 390.904,
+   "wav": "audio/voice/4a02581ea9120e33.wav"
+  },
+  {
+   "text": "Now measure around that circle, and divide by its diameter, measured along the ground.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "A circle on a ball",
+   "opens": null,
+   "start": 391.254,
+   "end": 395.413,
+   "wav": "audio/voice/07b3d3cef8ccf1af.wav"
+  },
+  {
+   "text": "You get less than pi. Your diameter had to follow the curve of the ball, so it is longer than it would be on a flat floor, and the ratio shrinks.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "A circle on a ball",
+   "opens": null,
+   "start": 395.763,
+   "end": 402.892,
+   "wav": "audio/voice/fbf97a9aacebdfa1.wav"
+  },
+  {
+   "text": "Push it to the extreme. Put the centre at the North Pole, and let your circle be the equator.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "A circle on a ball",
+   "opens": null,
+   "start": 403.842,
+   "end": 408.389,
+   "wav": "audio/voice/ffc47b978cee03e3.wav"
+  },
+  {
+   "text": "The circumference is the whole equator. The diameter runs from the equator, over the pole, and down to the other side. That is half the equator.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "A circle on a ball",
+   "opens": null,
+   "start": 408.739,
+   "end": 416.116,
+   "wav": "audio/voice/acd7413a656cfc35.wav"
+  },
+  {
+   "text": "So the ratio is exactly two.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "A circle on a ball",
+   "opens": null,
+   "start": 416.466,
+   "end": 417.858,
+   "wav": "audio/voice/bbc68fcdb4b3433f.wav"
+  },
+  {
+   "text": "And on a saddle, which curves the other way, the ratio comes out bigger than pi.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "A circle on a ball",
+   "opens": null,
+   "start": 418.208,
+   "end": 422.031,
+   "wav": "audio/voice/a4146f6d76069a23.wav"
+  },
+  {
+   "text": "So the formula you learned, circumference equals pi times diameter, is only true in flat space. Not curving up, not curving down.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "Our universe",
+   "opens": "stop",
+   "start": 423.631,
+   "end": 430.333,
+   "wav": "audio/voice/b00b2a398d0b6d76.wav"
+  },
+  {
+   "text": "As far as our best measurements can tell, our universe is flat on the largest scales, to within a fraction of a percent. That's why the school formula works so well for everyday circles.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "Our universe",
+   "opens": null,
+   "start": 430.683,
+   "end": 440.349,
+   "wav": "audio/voice/1426dec3a945e298.wav"
+  },
+  {
+   "text": "But Einstein's general relativity says that space near heavy objects does curve.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "Our universe",
+   "opens": null,
+   "start": 440.699,
+   "end": 444.914,
+   "wav": "audio/voice/fa6983bbb65eab84.wav"
+  },
+  {
+   "text": "Draw a circle around a black hole, and the distance around it no longer matches pi times the distance across.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "Our universe",
+   "opens": null,
+   "start": 445.264,
+   "end": 450.714,
+   "wav": "audio/voice/9dbe2928ddbad4a6.wav"
+  },
+  {
+   "text": "Pi didn't change. The world did.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "Our universe",
+   "opens": null,
+   "start": 451.064,
+   "end": 452.658,
+   "wav": "audio/voice/4cc962782c0ca807.wav"
+  },
+  {
+   "text": "Pi is the constant of flat geometry. When space bends, pi is still there as a number. It just stops describing the circles around you.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 When the ratio isn't pi",
+   "section": "Our universe",
+   "opens": null,
+   "start": 453.008,
+   "end": 459.781,
+   "wav": "audio/voice/ef7f19e64a335216.wav"
+  },
+  {
+   "text": "So, what is pi, really?",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": "act",
+   "start": 462.181,
+   "end": 463.485,
+   "wav": "audio/voice/7d3cea2744c70935.wav"
+  },
+  {
+   "text": "It is not just circumference over diameter. That's the easiest way to measure it, not what it is.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 463.835,
+   "end": 468.305,
+   "wav": "audio/voice/0169179a59edef7d.wav"
+  },
+  {
+   "text": "Pi is a limit. It's where the polygons end up as their sides multiply without end, the border between straight and curved.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 468.655,
+   "end": 474.633,
+   "wav": "audio/voice/69fd96b6701bd1da.wav"
+  },
+  {
+   "text": "Pi is the natural measure of turning. Half a turn, on a circle of radius one.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 474.983,
+   "end": 478.576,
+   "wav": "audio/voice/9ec54232e6b0abce.wav"
+  },
+  {
+   "text": "Pi is irrational, and transcendental. Lambert proved the first in seventeen sixty-one, Lindemann the second in eighteen eighty-two, and that is why no compass will ever square the circle.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 478.926,
+   "end": 488.763,
+   "wav": "audio/voice/bbbec74a84030add.wav"
+  },
+  {
+   "text": "And pi is the constant of flat space. Bend space, and circles stop obeying it.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 489.113,
+   "end": 493.02,
+   "wav": "audio/voice/ff931bf3a3bd433f.wav"
+  },
+  {
+   "text": "Put it all together, and pi is what flat geometry has to say about turning.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 493.97,
+   "end": 497.515,
+   "wav": "audio/voice/a4fb19b6b385f440.wav"
+  },
+  {
+   "text": "Our universe is very nearly flat, which is why pi works so well here, and why it turns up in fields that seem to have nothing to do with circles. Statistics, quantum physics, probability, number theory.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 497.865,
+   "end": 508.307,
+   "wav": "audio/voice/1e8056d2740bc5cb.wav"
+  },
+  {
+   "text": "So the next time you see pi in a formula, try this.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": "stop",
+   "start": 509.907,
+   "end": 512.242,
+   "wav": "audio/voice/65507f782c9e2a9c.wav"
+  },
+  {
+   "text": "There may be no circle anywhere in the problem.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 512.592,
+   "end": 514.935,
+   "wav": "audio/voice/5de1ea335a0dfda0.wav"
+  },
+  {
+   "text": "The bell curve of statistics has a square root of pi inside it. Add one, plus a quarter, plus a ninth, plus a sixteenth, on forever, and you get pi squared over six.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 515.285,
+   "end": 523.742,
+   "wav": "audio/voice/e75f821dcca79ee5.wav"
+  },
+  {
+   "text": "But almost always, if you dig, there is a turn, a wave, or a circle hiding somewhere inside the calculation.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 524.092,
+   "end": 529.511,
+   "wav": "audio/voice/4a3dd04b99c3c76c.wav"
+  },
+  {
+   "text": "Thank you for watching all the way to the end.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 530.461,
+   "end": 532.301,
+   "wav": "audio/voice/68f0d722151e0fa3.wav"
+  },
+  {
+   "text": "If you'll never look at pi quite the same way again, subscribe to ninety-nine percent from scratch, so you don't miss the next one. See you soon.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 532.651,
+   "end": 540.123,
+   "wav": "audio/voice/a8a883fd6834db48.wav"
+  }
+ ]
+}

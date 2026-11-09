@@ -1,0 +1,98 @@
+<!doctype html><meta charset="utf-8">
+<title>ja/gacha — tờ thử kit</title>
+<style>
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Tờ thử MỌI hàm kit có tham số k ở k = 0.25 / 0.5 / 0.75 / 1 (LESSONS §89). Khung i (giây) → tờ ⌊i / 4⌋, k = KS[i % 4]:
+//   A [0,4) viên nang, chữ, dấu · B [4,8) máy ガシャポン, điện thoại, sao kê · C [8,12) pityBars + firstHit
+//   D [12,16) lưới 1000 / 100, mascot · E [16,20) thẻ ảnh · F [20,24) ERA casino: slot, chữ son · G [24,28) thẻ hồi 4 mốc
+//   node engine/render/shoot.js stills --page projects/ja/gacha/kit-test.html --dur 28 --t 0.5,1.5,…,27.5 --outdir out/_lab/gacha/kit
+import { W, H, C, MIN, JP, FONTS, FONT_SAMPLE, loadKit, ground, write, telop, card, wrong, strike, stamp, heading, actCard, normal, rising,
+  win, sure, money, casino, capsule, capsuleGrid, pityBars, firstHit, machine, slot, slotStop, phone, photoTag, photoImages, receipt,
+  figure, goldStar, gem, glint, TONES, P, MEDIAN, must } from './kit.js';
+const g = document.getElementById('cv').getContext('2d'), KS = [0.25, 0.5, 0.75, 1];
+let ready = false;
+const PH = ['gashapon', 'slot', 'casino', 'skinner', 'skinnerScheme', 'belgium', 'netherlands', 'pachinko', 'beReport', 'nlReport', 'itmedia', 'cesa', 'kokusen', 'swrve', 'hooked', 'apple'];
+(async () => {
+  await Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE)));
+  const Pp = '../../../assets/character-v2/cut/', poses = ['ponder', 'pointer', 'calculator', 'phone', 'coin-flip', 'halt', 'wave'];
+  await loadKit({ ...photoImages(...PH), ...Object.fromEntries(poses.map(p => ['pose-' + p, Pp + `pose-${p}.png`])) });
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const lab = (s, on = 'light') => write(g, s, 1824, 1040, 1, { font: `500 28px ${JP}`, color: '@dim', align: 'right', on });
+const frame = t => {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1;
+  const i = Math.floor(t), k = KS[i % 4], sheet = Math.floor(i / 4);
+  ground(g, t, { era: sheet === 5 ? 'casino' : 'studio', floor: sheet !== 2 });
+  if (sheet === 0) {                                                  // ── A: viên nang, chữ, dấu ──
+    lab(`A · k = ${k}`);
+    heading(g, 1, '100回の箱', k);
+    TONES.concat(['coral', 'blank']).forEach((tn, j) => capsule(g, 140 + j * 120, 330, 46, k, { tone: tn, rot: -0.45 + j * 0.4 }));
+    capsule(g, 1000, 330, 70, k, { gold: true, glow: 1 }); glint(g, 1060, 270, 26 * k);
+    capsule(g, 1180, 330, 70, 1, { tone: 'sky', open: k, content: (gg, r) => write(gg, '①', 0, -r * 0.35, 1, { font: `700 56px ${MIN}`, align: 'center' }) });
+    capsule(g, 1360, 330, 70, 1, { tone: 'lemon', shake: 1, t: t * 3 });
+    capsule(g, 1540, 330, 70, 1, { gold: true, open: k, glow: k, content: (gg, r) => goldStar(gg, 0, -r * 0.45, r * 0.5, k) });
+    telop(g, [['ベルギーでは、どちらも', `700 54px ${MIN}`], ['「賭博」', `700 54px ${MIN}`, '@lac']], 560, 510, k, { size: 54 });
+    telop(g, '半分以上の人は、何も手に入りません', 1380, 510, k, { size: 44 });
+    normal(g, `${must('0.006 * 100', 0.6)}%　いつも同じ`, 120, 640, k, { font: `700 48px ${MIN}` });
+    rising(g, '74回目から上がる', 120, 715, k, { font: `700 48px ${MIN}` });
+    win(g, '★5　最高レア', 120, 790, k, { font: `700 48px ${MIN}` });
+    sure(g, '90回目で必ず', 620, 640, k, { font: `700 48px ${MIN}` });
+    money(g, '石 160個 = 1回', 620, 715, k, { font: `700 48px ${MIN}` }); gem(g, 1000, 700, 22, k);
+    casino(g, '賭博', 620, 790, k, { font: `700 48px ${MIN}` });
+    const B = wrong(g, '外れが続けば、次は当たる', 520, 900, k, { peel: 0 }); wrong(g, '次こそ当たる？', 1060, 900, 1, { peel: k * 1.0 });
+    strike(g, B.x + 10, B.y + B.h + 16, B.x + B.w - 10, B.y + B.h + 12, k);
+    card(g, [['3つの問い'], [['1. なぜ回してしまうのか', `700 40px ${MIN}`]], [['2. 確率表の裏で何が起きているのか', `700 40px ${MIN}`]], [['3. なぜベルギーでは違法なのか', `700 40px ${MIN}`, '@lac']]], 1180, 600, k, { size: 48 });
+    stamp(g, '賭博', 1560, 920, k); stamp(g, '天井', 1760, 920, k, { size: 56, rot: 0.06 });
+  } else if (sheet === 1) {                                           // ── B: máy, điện thoại, sao kê ──
+    lab(`B · k = ${k}`);
+    machine(g, 260, 960, 620, k, { turn: k * 3.2, out: { tone: 'pink', k } });
+    machine(g, 640, 960, 420, k, { clock: { h: 23, m: 0 }, label: null });
+    machine(g, 900, 960, 260, k, { out: { gold: true, k, open: k } });
+    phone(g, 1180, 140, k, { state: ['idle', 'spin', 'miss', 'gold'][i % 4], press: k, t, stones: 14400 });
+    phone(g, 1460, 520, k, { s: 0.6, state: 'gold' });
+    receipt(g, 1500, 110, 400, [['6480石 ×1', 15000], ['6480石 ×1', 15000]], k, { expect: 30000 });
+  } else if (sheet === 2) {                                           // ── C: đồ thị ──
+    lab(`C · k = ${k}`);
+    write(g, '1回ごとに当たる確率', 200, 120, 1, { font: `700 30px ${JP}`, color: '@dim' });
+    pityBars(g, { x: 136, y: 140, w: 1340, h: 440 }, k);
+    write(g, '200人が、最初に当たった回', 200, 640, 1, { font: `700 30px ${JP}`, color: '@dim' });
+    firstHit(g, { x: 136, y: 650, w: 1340, h: 400 }, k);
+    figure(g, 'pointer', 1722, 1080, 450, k, { flip: true });
+  } else if (sheet === 3) {                                           // ── D: lưới, mascot ──
+    lab(`D · k = ${k}`);
+    capsuleGrid(g, { x: 96, y: 90, w: 900, h: 560 }, 1000, 6, k);
+    capsuleGrid(g, { x: 1040, y: 90, w: 520, h: 520 }, 100, 0, k, { blank: 55, cols: 10 });
+    write(g, '55人は何も出ない', 1300, 660, k, { font: `700 40px ${MIN}`, align: 'center' });
+    [['ponder', false], ['calculator', false], ['phone', false], ['coin-flip', false], ['halt', true], ['wave', true]].forEach(([p, f], j) => figure(g, p, 170 + j * 300, 1080, 400, k, { flip: f }));
+  } else if (sheet === 4) {                                           // ── E: thẻ ảnh ──
+    lab(`E · k = ${k}`);
+    const sets = [['gashapon', 'slot', 'casino', 'pachinko'], ['skinner', 'skinnerScheme', 'belgium', 'netherlands'], ['beReport', 'nlReport', 'itmedia', 'cesa'], ['kokusen', 'swrve', 'hooked', 'apple']][i % 4];
+    sets.forEach((key, j) => photoTag(g, key, 120 + (j % 2) * 880, 110 + Math.floor(j / 2) * 480, 760, 330, i % 4 === 0 ? k : 1, { rot: j % 2 ? 0.02 : -0.025, zoom: 1 + 0.08 * k }));
+  } else if (sheet === 5) {                                           // ── F: casino ──
+    lab(`F · casino · k = ${k}`, 'dark');
+    const st = slotStop('seven'), spin = [st + (1 - k) * 7.4, st + (1 - k) * 9.6, st + (1 - k) * 12.2];
+    slot(g, 120, 150, k, { reels: spin, blur: spin.map((v, j) => Math.min(1, (1 - k) * (1.4 + j * 0.3))), lever: 1 - k, lights: k });
+    slot(g, 760, 400, 1, { s: 0.6, reels: [slotStop('seven'), slotStop('seven'), slotStop('cher')], lit: false });
+    write(g, 'カジノのスロット', 1160, 220, k, { font: `700 56px ${MIN}`, on: 'dark' });
+    casino(g, '賭博として規制', 1160, 320, k, { font: `700 48px ${MIN}`, on: 'dark' });
+    win(g, '777', 1160, 420, k, { font: `700 64px ${MIN}`, on: 'dark' });
+    write(g, '違法・禁止の判子', 1160, 500, k, { font: `500 32px ${JP}`, color: '@dim', on: 'dark' });
+    stamp(g, '賭博', 1300, 700, k, { size: 80 }); stamp(g, '禁止', 1600, 720, k, { size: 64, rot: 0.08 });
+    telop(g, 'どちらも「お金を払って、運で決まる」', 1360, 900, k, { size: 44, on: 'dark' });
+  } else {                                                            // ── G: thẻ hồi ──
+    const tt = [10.95, 11.6, 12.3, 13.3][i % 4];
+    lab(`actCard t = START ${(tt - 12.6).toFixed(2)}`);
+    capsuleGrid(g, { x: 96, y: 120, w: 500, h: 360 }, 100, 1, 1);
+    actCard(g, tt, 10, 12.6, 2);
+  }
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 28 };
+</script>

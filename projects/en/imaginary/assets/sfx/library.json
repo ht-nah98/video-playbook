@@ -1,0 +1,39 @@
+{
+ "_": "bộ tiếng chất liệu \"paper\" của bài — tools/sfx/material.py; đè assets/sfx đúng các loại dưới đây",
+ "pen": {
+  "db": -9,
+  "gap": 0.25
+ },
+ "tick": {
+  "db": -2,
+  "gap": 0.08
+ },
+ "pop": {
+  "db": -2,
+  "gap": 0.08
+ },
+ "whoosh": {
+  "db": -3,
+  "gap": 0.3
+ },
+ "page": {
+  "db": 2,
+  "gap": 0.5
+ },
+ "tear": {
+  "db": -2,
+  "gap": 1.0
+ },
+ "card": {
+  "db": 0,
+  "gap": 0.15
+ },
+ "dice": {
+  "db": 5,
+  "gap": 0.5
+ },
+ "wood": {
+  "db": -2,
+  "gap": 0.12
+ }
+}

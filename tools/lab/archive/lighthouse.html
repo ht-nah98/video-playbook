@@ -1,0 +1,272 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — lighthouse</title>
+<style>
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-weight:300 700;font-style:italic;}
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  html,body{margin:0;background:#F2E8D2;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Hải đăng & hải đồ" (trig). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/lighthouse.html --dur 2 --t 0.5,1.5 --outdir out/_lab/lighthouse
+// Ý: lượng giác sinh ra để đo cái không chạm được — người đi biển đo khoảng cách tới bờ, núi, Mặt Trăng bằng góc. Nên cả bài là BÀN HẢI ĐỒ ban ngày: giấy hải đồ kem, mực xanh biển, dụng cụ đồng thau, đèn hổ phách. Hoa gió (compass rose) trên hải đồ CHÍNH LÀ đường tròn đơn vị — góc đọc theo vạch độ quanh hoa gió.
+// Vật xuyên suốt: NGỌN ĐÈN HẢI ĐĂNG QUAY. (1) tia đèn quét một vòng = bán kính vẽ đường tròn · (2) dây neo căng ngang một cung = dây cung (jya) · (3) đốm sáng tia đèn chạm vòng = điểm chạy quanh vòng · (4) độ cao đốm sáng hắt lên mặt biển → mặt biển dâng/hạ = sóng sin duỗi theo thời gian · (5) dây buồm/dây neo căng rung = dây đàn (ACT SIX).
+// Màu (một màu một nghĩa): giấy #F2E8D2→#E9DCC0 · mực xanh biển #1E3550 = trung tính (trục, nhãn) · HỔ PHÁCH #E39A1E (chữ #8A4F00) = SIN / ánh đèn / độ cao · XANH LỤC BIỂN #13707A = COS / khoảng ngang trên mặt nước · ĐỎ HẢI ĐỒ #B8322A = GÓC (cung, nhãn độ) · ĐÁ XÁM LẠNH #6E7B87 (chữ #4E5A66) = "sai" / tam giác hỏng · đồng thau #C9A55A→#7A5A22 = dụng cụ (máy tính, đèn) · mặt biển #DCE6EA (nền sóng, không mang nghĩa).
+// Chữ: Cormorant Garamond (chữ khắc hải đồ — nhãn, phương trình, tiêu đề) · Archivo nén mảnh (số ống Nixie trên máy tính). Không có θ trong cả hai font → viết "angle" hoặc dùng Noto khi cần θ. Chữ ≥ 28 px.
+// Tiếng: phím = phím đồng cơ học (wood/tick, mới: brass key clack) · Nixie bật = tick + hum ngắn (mới) · tam giác gãy = crack · đèn quay/điểm chạy = tick đều theo vạch độ (mới: ratchet đèn hải đăng) · sóng duỗi = whoosh-long + tiếng sóng vỗ nhẹ (mới) · dây rung = dây thừng căng "twang" (mới) · chữ hiện = pen · đúng = correct (chuông tàu nhỏ, mới).
+// Các phần khác: núi/thuyền/Mặt Trăng = vẽ khắc trên hải đồ, tia đèn + thước đo góc đồng thau ngắm từ bờ · Hipparchus + ảnh thật (Almagest, Babylon, Fourier) = ảnh dán vào hải đồ bằng góc giấy, khung nẹp đồng thau như ô chú giải (cartouche) · họ tam giác 30° = các tam giác đồng dạng vẽ bằng compa chia, cùng góc đỏ · jya → sinus = dây neo căng ngang cung, chữ Phạn/Ả Rập/Latin viết trong cartouche · radian = tia đèn lăn cung đúng bằng bán kính (sợi dây neo uốn theo cung) · sóng = đốm sáng hắt mặt biển, con lắc = đèn bão treo đung đưa, dây đàn = dây buồm rung, ổ điện = cáp ngầm trên hải đồ · sin²+cos²=1 = hai đoạn hổ phách/lục biển ghép thành bán kính 1 · Fourier = nhiều đèn quay khác tốc độ cộng sóng lên cùng mặt biển.
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const CG = '"Cormorant Garamond"', AR = '"Archivo"';
+const C = { paper: '#F2E8D2', ink: '#1E3550', amber: '#E39A1E', amberTx: '#8A4F00', teal: '#13707A', red: '#B8322A', slate: '#6E7B87', slateTx: '#4E5A66', brass: '#C9A55A', brassDk: '#7A5A22', sea: '#DCE6EA' };
+const IM = {}; let BG, ready = false;
+
+// ---- số: tính bằng code, must() ----
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { const r = ev(s); if (r !== v) throw new Error(`sai: ${s} = ${r} ≠ ${v}`); return v; };
+const D = Math.PI / 180;
+const SIN120 = must('Math.round(Math.sin(120 * Math.PI / 180) * 1000) / 1000', 0.866);
+const COS120 = must('Math.round(Math.cos(120 * Math.PI / 180) * 1000) / 1000', -0.5);
+must('Math.abs(Math.sin(2 * Math.PI / 3) - Math.sin(120 * Math.PI / 180)) < 1e-12', true);   // sóng ở x = 2π/3 cao đúng bằng điểm
+must('Math.round(Math.hypot(Math.cos(120 * Math.PI / 180), Math.sin(120 * Math.PI / 180)) * 1e9)', 1e9);
+const num = v => (v < 0 ? '−' : '') + String(Math.abs(v));   // dấu trừ thật U+2212
+const T120 = must('[...String(0.866)].filter(c => c !== ".").join("")', '0866');
+
+// ---- vẽ chung ----
+const rr = (x, y, w, h, r) => { const p = new Path2D(); p.roundRect(x, y, w, h, r); return p; };
+const txt = (s, x, y, font, col = C.ink, align = 'left') => { g.save(); g.font = font; g.textAlign = align; g.fillStyle = col; g.fillText(s, x, y); const w = g.measureText(s).width; g.restore(); return w; };
+const line = (pts, col, lw, dash) => { g.save(); g.strokeStyle = col; g.lineWidth = lw; g.lineCap = 'round'; g.lineJoin = 'round'; if (dash) g.setLineDash(dash); g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.stroke(); g.restore(); };
+const pill = (s, x, y, font, col, align = 'center', pad = 18) => { g.font = font; const w = g.measureText(s).width, x0 = align === 'center' ? x - w / 2 : align === 'right' ? x - w : x;
+  g.save(); g.fillStyle = 'rgba(246,239,222,0.94)'; g.fill(rr(x0 - pad, y - 44, w + pad * 2, 60, 10)); g.strokeStyle = 'rgba(30,53,80,0.25)'; g.lineWidth = 1.5; g.stroke(rr(x0 - pad, y - 44, w + pad * 2, 60, 10)); g.restore();
+  txt(s, x, y, font, col, align); return [x0 - pad, y - 44, w + pad * 2, 60]; };
+const glow = (x, y, r, a = 1) => { const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, `rgba(255,236,170,${a})`); gr.addColorStop(0.25, `rgba(250,190,70,${0.75 * a})`); gr.addColorStop(1, 'rgba(240,160,40,0)'); g.fillStyle = gr; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); };
+
+// ---- giấy hải đồ: kem, lưới kinh vĩ, đường đẳng sâu, hạt giấy ----
+function chart() {
+  const c = mk(), x = c.getContext('2d');
+  const gr = x.createRadialGradient(W * 0.55, H * 0.45, 200, W * 0.55, H * 0.45, 1250); gr.addColorStop(0, '#F6EEDB'); gr.addColorStop(1, '#E6D8BA'); x.fillStyle = gr; x.fillRect(0, 0, W, H);
+  x.strokeStyle = 'rgba(30,53,80,0.07)'; x.lineWidth = 1.5;
+  for (let i = 0; i <= W; i += 160) { x.beginPath(); x.moveTo(i, 0); x.lineTo(i, H); x.stroke(); }
+  for (let j = 0; j <= H; j += 160) { x.beginPath(); x.moveTo(0, j); x.lineTo(W, j); x.stroke(); }
+  // khung viền hải đồ: hai nét + vạch chia độ
+  x.strokeStyle = 'rgba(30,53,80,0.30)'; x.lineWidth = 2; x.strokeRect(26, 26, W - 52, H - 52); x.lineWidth = 1; x.strokeRect(38, 38, W - 76, H - 76);
+  for (let i = 38; i < W - 38; i += 32) { x.fillStyle = (i / 32) % 2 ? 'rgba(30,53,80,0.28)' : 'rgba(30,53,80,0.0)'; x.fillRect(i, 26, 32, 12); x.fillRect(i, H - 38, 32, 12); }
+  for (let j = 38; j < H - 38; j += 32) { x.fillStyle = (j / 32) % 2 ? 'rgba(30,53,80,0.28)' : 'rgba(30,53,80,0.0)'; x.fillRect(26, j, 12, 32); x.fillRect(W - 38, j, 12, 32); }
+  // hạt giấy + vết ố (tất định)
+  const d = x.getImageData(0, 0, W, H);
+  for (let i = 0; i < W * H; i += 1) { const n = (hash(i * 0.731 + 11) - 0.5) * 9; d.data[i * 4] += n; d.data[i * 4 + 1] += n; d.data[i * 4 + 2] += n; }
+  x.putImageData(d, 0, 0);
+  for (let k = 0; k < 7; k++) { const cx = hash(k * 3.1) * W, cy = hash(k * 5.7 + 1) * H, r = 60 + hash(k * 9.3) * 160; const sg = x.createRadialGradient(cx, cy, r * 0.6, cx, cy, r); sg.addColorStop(0, 'rgba(160,120,60,0)'); sg.addColorStop(0.85, 'rgba(160,120,60,0.05)'); sg.addColorStop(1, 'rgba(160,120,60,0)'); x.fillStyle = sg; x.fillRect(cx - r, cy - r, r * 2, r * 2); }
+  return c;
+}
+
+// đường bờ khắc + đường đẳng sâu (frame 0, góc trên trái)
+function coast() {
+  const ring = (k, off) => { g.beginPath(); for (let i = 0; i <= 60; i++) { const a = Math.PI * 0.02 + i / 60 * Math.PI * 0.5, r = 420 + off + Math.sin(i * 0.7 + k) * 14 + Math.sin(i * 0.23 + k * 2) * 22; const px = 40 + Math.cos(a) * r * 1.25, py = 40 + Math.sin(a) * r * 0.62; i ? g.lineTo(px, py) : g.moveTo(px, py); } };
+  g.save(); ring(0, 0); g.lineTo(40, 40); g.closePath(); g.fillStyle = 'rgba(214,196,150,0.55)'; g.fill(); g.restore();
+  [[0, 0, 0.55, 2.2], [1, 36, 0.22, 1.4], [2, 74, 0.16, 1.2], [3, 118, 0.11, 1.2]].forEach(([k, o, a, lw]) => { ring(k * 0.0, o); g.strokeStyle = `rgba(30,53,80,${a})`; g.lineWidth = lw; if (k) g.setLineDash([4, 6]); g.stroke(); g.setLineDash([]); });
+}
+
+// ngọn hải đăng khắc nét (đứng), đèn ở (x, top)
+function lighthouse(x, base, h) {
+  const top = base - h, w0 = h * 0.16, w1 = h * 0.10;
+  g.save();
+  const tw = g.createLinearGradient(x - w0, 0, x + w0, 0); tw.addColorStop(0, '#FBF5E8'); tw.addColorStop(0.7, '#EFE4CC'); tw.addColorStop(1, '#D9C9A6');
+  g.beginPath(); g.moveTo(x - w0, base); g.lineTo(x - w1, top + h * 0.22); g.lineTo(x + w1, top + h * 0.22); g.lineTo(x + w0, base); g.closePath(); g.fillStyle = tw; g.fill();
+  g.strokeStyle = C.ink; g.lineWidth = 2.5; g.stroke();
+  // sọc đỏ hải đồ
+  [0.42, 0.68].forEach(f => { const y0 = top + h * f, y1 = y0 + h * 0.12, wa = w1 + (w0 - w1) * ((y0 - top - h * 0.22) / (h * 0.78)), wb = w1 + (w0 - w1) * ((y1 - top - h * 0.22) / (h * 0.78));
+    g.beginPath(); g.moveTo(x - wa, y0); g.lineTo(x + wa, y0); g.lineTo(x + wb, y1); g.lineTo(x - wb, y1); g.closePath(); g.fillStyle = 'rgba(184,50,42,0.85)'; g.fill(); });
+  // ban công + lồng đèn đồng thau
+  g.fillStyle = C.ink; g.fillRect(x - w1 * 1.5, top + h * 0.2, w1 * 3, 5);
+  const lg = g.createLinearGradient(x - w1, 0, x + w1, 0); lg.addColorStop(0, C.brassDk); lg.addColorStop(0.5, '#E8CC86'); lg.addColorStop(1, C.brassDk);
+  g.fillStyle = lg; g.fill(rr(x - w1 * 0.8, top + h * 0.06, w1 * 1.6, h * 0.14, 4));
+  g.beginPath(); g.moveTo(x - w1, top + h * 0.06); g.lineTo(x, top - h * 0.02); g.lineTo(x + w1, top + h * 0.06); g.closePath(); g.fillStyle = C.ink; g.fill();
+  g.restore();
+  return [x, top + h * 0.13];
+}
+
+// tia đèn: hình nêm hổ phách từ (x0,y0) theo góc a (rad, toạ độ màn hình), dài L, nửa góc mở s
+function beam(x0, y0, a, L, s, alpha = 0.32) {
+  g.save(); const gr = g.createRadialGradient(x0, y0, 0, x0, y0, L); gr.addColorStop(0, `rgba(255,214,120,${alpha * 1.6})`); gr.addColorStop(0.6, `rgba(244,176,60,${alpha})`); gr.addColorStop(1, 'rgba(240,160,40,0)');
+  g.fillStyle = gr; g.beginPath(); g.moveTo(x0, y0); g.arc(x0, y0, L, a - s, a + s); g.closePath(); g.fill(); g.restore();
+}
+
+function figure(pose, cx, foot, h, flip = false) {
+  const im = IM[pose], s = h / im.height, w = im.width * s, x0 = cx - w / 2, y0 = foot - h;
+  g.save(); g.shadowColor = 'rgba(60,45,25,0.28)'; g.shadowBlur = 24; g.shadowOffsetX = flip ? -6 : 6; g.shadowOffsetY = 8;
+  if (flip) { g.translate(cx * 2, 0); g.scale(-1, 1); } g.drawImage(im, x0, y0, w, h); g.restore();
+  return { x: x0, y: y0, w, h };
+}
+
+// ---- máy tính bỏ túi đồng thau + men kem, màn ống Nixie ----
+function nixie(x, y, w, h, ch, size) {
+  g.save();
+  const gl = g.createLinearGradient(x, y, x + w, y); gl.addColorStop(0, '#3A2618'); gl.addColorStop(0.5, '#24160D'); gl.addColorStop(1, '#3A2618');
+  g.fillStyle = gl; g.fill(rr(x, y, w, h, w * 0.42));
+  g.save(); g.clip(rr(x, y, w, h, w * 0.42)); g.strokeStyle = 'rgba(200,150,90,0.10)'; g.lineWidth = 1;
+  for (let i = -h; i < w + h; i += 10) { g.beginPath(); g.moveTo(x + i, y); g.lineTo(x + i + h * 0.5, y + h); g.stroke(); g.beginPath(); g.moveTo(x + i + h * 0.5, y); g.lineTo(x + i, y + h); g.stroke(); }
+  // các số tắt chồng phía sau (đặc trưng Nixie)
+  g.font = `200 ${size}px ${AR}`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillStyle = 'rgba(200,150,90,0.10)'; ['8', '3', '0'].forEach(d => g.fillText(d, x + w / 2, y + h * 0.53));
+  g.restore();
+  g.strokeStyle = 'rgba(255,240,210,0.35)'; g.lineWidth = 2; g.stroke(rr(x + 3, y + 3, w - 6, h - 6, w * 0.4));
+  g.font = `300 ${size}px ${AR}`; g.textAlign = 'center'; g.textBaseline = 'middle';
+  g.shadowColor = 'rgba(255,140,30,0.95)'; g.shadowBlur = 28; g.fillStyle = '#FFB547'; g.fillText(ch, x + w / 2, y + h * 0.53);
+  g.shadowBlur = 8; g.fillStyle = '#FFE6B0'; g.fillText(ch, x + w / 2, y + h * 0.53);
+  g.restore();
+}
+function calculator(x0, y0, w, h) {
+  // thân đồng thau
+  g.save(); g.shadowColor = 'rgba(60,40,15,0.40)'; g.shadowBlur = 50; g.shadowOffsetY = 22;
+  const bg = g.createLinearGradient(x0, y0, x0 + w, y0 + h); bg.addColorStop(0, '#E2C47E'); bg.addColorStop(0.45, C.brass); bg.addColorStop(1, '#8E6B2C'); g.fillStyle = bg; g.fill(rr(x0, y0, w, h, 52)); g.restore();
+  g.strokeStyle = 'rgba(90,64,24,0.9)'; g.lineWidth = 3; g.stroke(rr(x0, y0, w, h, 52)); g.strokeStyle = 'rgba(255,240,200,0.55)'; g.lineWidth = 2; g.stroke(rr(x0 + 10, y0 + 10, w - 20, h - 20, 44));
+  // đinh tán
+  [[30, 30], [w - 30, 30], [30, h - 30], [w - 30, h - 30]].forEach(([dx, dy]) => { const rg = g.createRadialGradient(x0 + dx - 3, y0 + dy - 3, 1, x0 + dx, y0 + dy, 9); rg.addColorStop(0, '#FFF2C8'); rg.addColorStop(1, '#7A5A22'); g.fillStyle = rg; g.beginPath(); g.arc(x0 + dx, y0 + dy, 9, 0, 7); g.fill(); });
+  // biểu tượng hoa gió nhỏ trên nắp
+  const ex = x0 + w / 2, ey = y0 + 58; g.save(); g.translate(ex, ey); g.fillStyle = '#6A4C18';
+  for (let k = 0; k < 8; k++) { g.rotate(Math.PI / 4); const L = k % 2 ? 12 : 22; g.beginPath(); g.moveTo(0, -L); g.lineTo(4, 0); g.lineTo(-4, 0); g.closePath(); g.fill(); } g.restore();
+  // cửa sổ màn hình kính khói
+  const dx = x0 + 44, dy = y0 + 92, dw = w - 88, dh = 330;
+  g.fillStyle = '#5E431A'; g.fill(rr(dx - 8, dy - 8, dw + 16, dh + 16, 26));
+  const sg = g.createLinearGradient(0, dy, 0, dy + dh); sg.addColorStop(0, '#2C1C10'); sg.addColorStop(1, '#1A0F08'); g.fillStyle = sg; g.fill(rr(dx, dy, dw, dh, 20));
+  // dòng trên: phép tính (chữ phát sáng nhỏ)
+  g.save(); g.font = `400 58px ${AR}`; g.textAlign = 'right'; g.shadowColor = 'rgba(255,140,30,0.85)'; g.shadowBlur = 16; g.fillStyle = '#FFC66B'; g.fillText('sin(120°)', dx + dw - 30, dy + 72); g.restore();
+  // dòng dưới: 4 ống Nixie + dấu chấm
+  const tw = 104, th = 210, gap = 16, n = T120.length, tot = n * tw + (n - 1) * gap + 30, tx = dx + dw - 26 - tot, ty = dy + 98;
+  [...T120].forEach((d, i) => nixie(tx + i * (tw + gap) + (i >= 1 ? 30 : 0), ty, tw, th, d, 170));
+  g.save(); g.shadowColor = 'rgba(255,140,30,0.95)'; g.shadowBlur = 18; g.fillStyle = '#FFE6B0'; g.beginPath(); g.arc(tx + tw + gap / 2 + 15, ty + th - 38, 9, 0, 7); g.fill(); g.restore();
+  g.strokeStyle = 'rgba(255,240,210,0.045)'; g.lineWidth = 30; g.beginPath(); g.moveTo(dx + 40, dy + dh - 20); g.lineTo(dx + 200, dy + 20); g.stroke();
+  // bàn phím men kem
+  const keys = [['sin', 'cos', 'tan', '°'], ['7', '8', '9', '÷'], ['4', '5', '6', '×'], ['1', '2', '3', '−'], ['0', '.', '=', '+']];
+  const kx0 = x0 + 56, ky0 = dy + dh + 46, kw = (w - 112) / 4, kh = (y0 + h - 44 - ky0) / keys.length;
+  keys.forEach((row, r) => row.forEach((k, c) => {
+    const cx = kx0 + kw * (c + 0.5), cy = ky0 + kh * (r + 0.5), rad = Math.min(kw, kh) * 0.40, hot = k === 'sin';
+    g.save(); g.shadowColor = 'rgba(70,45,15,0.55)'; g.shadowBlur = 6; g.shadowOffsetY = hot ? 2 : 6; g.fillStyle = '#6A4C18'; g.beginPath(); g.arc(cx, cy + 3, rad + 6, 0, 7); g.fill(); g.restore();
+    const kg = g.createRadialGradient(cx - rad * 0.3, cy - rad * 0.4, 2, cx, cy, rad); kg.addColorStop(0, hot ? '#FFE7B0' : '#FFFBF0'); kg.addColorStop(1, hot ? '#F2B65A' : '#E8DCC2'); g.fillStyle = kg; g.beginPath(); g.arc(cx, cy + (hot ? 3 : 0), rad, 0, 7); g.fill();
+    if (hot) { g.save(); g.strokeStyle = 'rgba(255,170,50,0.9)'; g.shadowColor = 'rgba(255,150,40,0.9)'; g.shadowBlur = 18; g.lineWidth = 4; g.beginPath(); g.arc(cx, cy + 3, rad + 8, 0, 7); g.stroke(); g.restore(); }
+    txt(k, cx, cy + (hot ? 3 : 0) + 12, `700 ${k.length > 1 ? 34 : '°×−÷'.includes(k) ? 54 : 40}px ${CG}`, hot ? '#5A3200' : C.ink, 'center');
+  }));
+}
+
+// ---- tam giác vuông bị kéo mở tới 120° và gãy ở góc vuông ----
+function brokenTriangle(cx, cy, L1, L2) {
+  const B = [cx + L1, cy], Aorig = [cx, cy - L2], A = [cx + Math.cos(120 * D) * L2, cy - Math.sin(120 * D) * L2];
+  // bóng ma: tam giác vuông ban đầu (nét đứt mờ)
+  line([[cx, cy], Aorig, B, [cx, cy]], 'rgba(78,90,102,0.38)', 2.5, [8, 10]);
+  g.save(); g.strokeStyle = 'rgba(78,90,102,0.38)'; g.lineWidth = 2.5; g.strokeRect(cx, cy - 34, 34, 34); g.restore();
+  // mũi tên cong: chân bị kéo từ 90° sang 120°
+  g.save(); g.strokeStyle = 'rgba(78,90,102,0.6)'; g.lineWidth = 3; g.setLineDash([2, 8]); g.lineCap = 'round'; g.beginPath(); g.arc(cx, cy, L2 * 0.82, -90 * D, -112 * D, true); g.stroke(); g.restore();
+  // hai chân đá xám
+  const leg = (P, Q) => { line([P, Q], '#5B6670', 16); line([P, Q], '#8D99A4', 9); };
+  leg([cx, cy], B); leg([cx, cy], A);
+  // cạnh huyền gãy làm hai, không chạm được nhau
+  const lerp = (P, Q, f) => [P[0] + (Q[0] - P[0]) * f, P[1] + (Q[1] - P[1]) * f];
+  const h1 = lerp(A, B, 0.30), h2 = lerp(B, A, 0.36);   // hai mảnh treo, khoảng hở ở giữa
+  const droop = (P, Q, dy) => [Q[0], Q[1] + dy];
+  const e1 = droop(A, h1, 46), e2 = droop(B, h2, 64);
+  line([A, e1], '#5B6670', 12); line([A, e1], '#8D99A4', 6); line([B, e2], '#5B6670', 12); line([B, e2], '#8D99A4', 6);
+  const jag = (P, s) => line([[P[0] - 10 * s, P[1] - 12], [P[0] + 4 * s, P[1] - 3], [P[0] - 6 * s, P[1] + 4], [P[0] + 8 * s, P[1] + 13]], '#3E4852', 3);
+  jag(e1, 1); jag(e2, -1);
+  // mảnh vụn rơi giữa khoảng hở (tất định)
+  for (let k = 0; k < 6; k++) { const px = (e1[0] + e2[0]) / 2 + (hash(k * 4.1) - 0.5) * 120, py = (e1[1] + e2[1]) / 2 + 40 + hash(k * 7.7) * 120, s = 5 + hash(k * 2.3) * 7;
+    g.save(); g.translate(px, py); g.rotate(hash(k) * 6); g.fillStyle = '#7D8A96'; g.beginPath(); g.moveTo(-s, 0); g.lineTo(0, -s * 0.7); g.lineTo(s, s * 0.4); g.closePath(); g.fill(); g.restore(); }
+  // vết nứt ở góc vuông cũ
+  line([[cx - 6, cy + 4], [cx + 8, cy - 10], [cx - 2, cy - 18], [cx + 12, cy - 30]], '#2E3640', 3);
+  // khớp
+  g.fillStyle = '#4E5A66'; g.beginPath(); g.arc(cx, cy, 14, 0, 7); g.fill(); g.fillStyle = '#A9B3BC'; g.beginPath(); g.arc(cx, cy, 6, 0, 7); g.fill();
+  // cung 120° đỏ + nhãn
+  g.save(); g.strokeStyle = C.red; g.lineWidth = 4; g.beginPath(); g.arc(cx, cy, 70, 0, -120 * D, true); g.stroke(); g.restore();
+  txt('120°', cx + Math.cos(60 * D) * 128, cy - Math.sin(60 * D) * 128 + 14, `700 48px ${CG}`, C.red, 'center');
+  return { A, B };
+}
+
+const frames = [
+  () => {                                               // 0 · cold open: máy tính trả lời, tam giác gãy
+    g.drawImage(BG, 0, 0);
+    coast();
+    const L = lighthouse(214, 290, 200);
+    beam(L[0], L[1], Math.atan2(260 - L[1], 1380 - L[0]), 1300, 0.07, 0.30);
+    glow(L[0], L[1], 46);
+    brokenTriangle(540, 800, 470, 390);
+    calculator(1080, 92, 620, 910);
+    const F = figure('pose-ponder', 150, 1080, 270);
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h] };
+  },
+  () => {                                               // 1 · ACT FOUR/SIX: hoa gió = đường tròn đơn vị, đốm sáng → sóng
+    g.drawImage(BG, 0, 0);
+    const cx = 610, cy = 500, R = 270, ang = 120 * D;
+    const P = [cx + Math.cos(ang) * R, cy - Math.sin(ang) * R];
+    must(`Math.round((${P[1]} - ${cy}) / -${R} * 1000) / 1000`, SIN120);
+    must(`Math.round((${P[0]} - ${cx}) / ${R} * 1000) / 1000`, COS120);
+    // hoa gió mờ trong vòng
+    g.save(); g.translate(cx, cy); g.fillStyle = 'rgba(30,53,80,0.06)';
+    for (let k = 0; k < 16; k++) { g.rotate(Math.PI / 8); const Lr = k % 2 ? R * 0.42 : (k % 4 === 1 ? R * 0.62 : R * 0.88); g.beginPath(); g.moveTo(0, -Lr); g.lineTo(R * 0.05, 0); g.lineTo(-R * 0.05, 0); g.closePath(); g.fill(); }
+    g.restore();
+    // mặt biển bên phải: sóng = độ cao đốm sáng
+    const X0 = 1010, SP = 760, Y0 = cy, A = R, wx = u => X0 + u / (2 * Math.PI) * SP, wy = u => Y0 - Math.sin(u) * A;
+    g.save(); g.beginPath(); g.moveTo(wx(0), H - 40); for (let i = 0; i <= 200; i++) { const u = i / 200 * 2 * Math.PI; g.lineTo(wx(u), wy(u)); } g.lineTo(wx(2 * Math.PI), H - 40); g.closePath();
+    const sg = g.createLinearGradient(0, Y0 - A, 0, H); sg.addColorStop(0, 'rgba(160,190,205,0.45)'); sg.addColorStop(1, 'rgba(190,210,220,0.20)'); g.fillStyle = sg; g.fill();
+    // gợn sóng khắc
+    g.clip(); g.strokeStyle = 'rgba(30,53,80,0.10)'; g.lineWidth = 1.5;
+    for (let j = 0; j < 14; j++) { const yy = Y0 - A + 30 + j * 40; g.beginPath(); for (let xx = X0; xx <= X0 + SP; xx += 8) { const v = yy + Math.sin(xx * 0.05 + j) * 3; xx === X0 ? g.moveTo(xx, v) : g.lineTo(xx, v); } g.stroke(); }
+    g.restore();
+    // trục sóng + vạch π/2 π 3π/2 2π (nhãn dưới đáy sóng)
+    line([[X0 - 10, Y0], [X0 + SP + 24, Y0]], C.ink, 2.5);
+    [[Math.PI / 2, 'π/2'], [Math.PI, 'π'], [3 * Math.PI / 2, '3π/2'], [2 * Math.PI, '2π']].forEach(([u, s]) => {
+      line([[wx(u), Y0 - 10], [wx(u), Y0 + 10]], C.ink, 2.5); line([[wx(u), Y0 + 16], [wx(u), Y0 + A + 24]], 'rgba(30,53,80,0.28)', 1.5, [3, 7]);
+      txt(s, wx(u), Y0 + A + 70, `600 40px ${CG}`, C.ink, 'center'); });
+    // sóng hổ phách
+    g.save(); g.shadowColor = 'rgba(240,160,40,0.55)'; g.shadowBlur = 10;
+    line(Array.from({ length: 241 }, (_, i) => { const u = i / 240 * 2 * Math.PI; return [wx(u), wy(u)]; }), C.amber, 6); g.restore();
+    // vòng tròn đơn vị = vành hoa gió có vạch độ
+    g.save(); g.strokeStyle = C.ink; g.lineWidth = 3; g.beginPath(); g.arc(cx, cy, R, 0, 7); g.stroke();
+    g.lineWidth = 1.2; g.beginPath(); g.arc(cx, cy, R + 16, 0, 7); g.stroke();
+    for (let d = 0; d < 360; d += 5) { const a = d * D, l = d % 30 === 0 ? 16 : d % 10 === 0 ? 10 : 6; g.lineWidth = d % 30 === 0 ? 2.2 : 1.2; g.beginPath(); g.moveTo(cx + Math.cos(a) * R, cy - Math.sin(a) * R); g.lineTo(cx + Math.cos(a) * (R + l), cy - Math.sin(a) * (R + l)); g.stroke(); }
+    g.restore();
+    // trục x / y
+    line([[cx - R - 50, cy], [cx + R + 50, cy]], C.ink, 2); line([[cx, cy - R - 50], [cx, cy + R + 50]], C.ink, 2);
+    txt('1', cx + R + 28, cy - 14, `600 34px ${CG}`, C.ink, 'left');
+    // đường nối ngang: đốm sáng → mặt biển
+    line([P, [wx(2 * Math.PI / 3), P[1]]], 'rgba(170,100,10,0.85)', 3, [10, 9]);
+    line([[wx(2 * Math.PI / 3), P[1]], [wx(2 * Math.PI / 3), Y0]], C.amber, 4, [2, 8]);
+    glow(wx(2 * Math.PI / 3), P[1], 40, 0.9); g.fillStyle = '#FFF4D6'; g.beginPath(); g.arc(wx(2 * Math.PI / 3), P[1], 8, 0, 7); g.fill();
+    // tia đèn = bán kính tới đốm sáng
+    beam(cx, cy, -ang, R + 30, 0.10, 0.38);
+    line([[cx, cy], P], '#C98512', 4);
+    // cung góc 120° đỏ
+    g.save(); g.strokeStyle = C.red; g.lineWidth = 4.5; g.beginPath(); g.arc(cx, cy, 74, 0, -ang, true); g.stroke(); g.restore();
+    txt('120°', cx + Math.cos(55 * D) * 126, cy - Math.sin(55 * D) * 126 + 14, `700 46px ${CG}`, C.red, 'center');
+    // cos: đoạn ngang lục biển · sin: thanh dọc hổ phách
+    line([[cx, cy], [P[0], cy]], C.teal, 9);
+    line([[P[0], cy], P], C.amber, 9);
+    // đèn đồng thau ở tâm (nhìn từ trên)
+    const lg = g.createRadialGradient(cx - 6, cy - 6, 2, cx, cy, 24); lg.addColorStop(0, '#FFF0C0'); lg.addColorStop(0.5, '#E8C070'); lg.addColorStop(1, C.brassDk); g.fillStyle = lg; g.beginPath(); g.arc(cx, cy, 22, 0, 7); g.fill(); g.strokeStyle = C.ink; g.lineWidth = 2; g.stroke();
+    // đốm sáng trên vòng
+    glow(P[0], P[1], 54); g.fillStyle = '#FFF4D6'; g.beginPath(); g.arc(P[0], P[1], 11, 0, 7); g.fill(); g.strokeStyle = '#C98512'; g.lineWidth = 3; g.stroke();
+    // nhãn
+    const bS = pill(`sin 120° = ${num(SIN120)}`, P[0] - 44, P[1] + 16, `700 46px ${CG}`, C.amberTx, 'right');
+    const bC = pill(`cos 120° = ${num(COS120)}`, (cx + P[0]) / 2 + 16, cy + 82, `700 46px ${CG}`, C.teal, 'center');
+    // mascot chỉ vào đốm sáng
+    const F = figure('pose-pointer', 150, 1080, 280), tip = [F.x + F.w * 0.97, F.y + F.h * 0.28];
+    g.save(); g.setLineDash([2, 10]); g.lineCap = 'round'; g.strokeStyle = 'rgba(170,100,10,0.75)'; g.lineWidth = 3; g.beginPath(); g.moveTo(tip[0] + 4, tip[1] - 4); g.lineTo(P[0] - 14, P[1] + 30); g.stroke(); g.restore();
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], tip, P, bS, bC };
+  },
+];
+
+(async () => {
+  const S = 'sin cos tan 120° = 0.866 −0.5 π/2 π 3π/2 2π 1 ÷×−+.0123456789';
+  await Promise.all([
+    ...['700 46px', '700 48px', '600 40px', '600 34px', '700 34px', '700 40px'].map(f => document.fonts.load(`${f} ${CG}`, S)),
+    document.fonts.load(`400 58px ${AR}`, 'sin(120°)'), document.fonts.load(`300 170px ${AR}`, '0123456789'), document.fonts.load(`200 170px ${AR}`, '0123456789'),
+  ]);
+  await Promise.all(['pose-ponder', 'pose-pointer'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../../assets/character-v2/cut/${p}.png`; })));
+  BG = chart(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; frames[t < 1 ? 0 : 1](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

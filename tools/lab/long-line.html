@@ -1,0 +1,282 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — the long line</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử khung phong cách cho math-30k ("The Long Line"). KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/long-line.html --dur 5 \
+//     --t 0.5,1.5,2.5,3.5,4.5 --outdir out/_lab/long-line
+// 0 = xương (Hồi 1) · 1 = cát Euclid (Hồi 2) · 2 = khắc đồng Descartes (Hồi 4) · 3 = bảng đen Cantor (Hồi 5) · 4 = băng Turing (Hồi 6)
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080;
+const g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const IM = {}, TEX = {};
+let ready = false;
+
+// ── chất liệu theo thời đại: nền = một màu + hạt (tất định, sinh một lần) ──
+const ERA = {
+  bone:   { bg: '#2B2019', ink: '#EADFC8', accent: '#C8713A', dim: '#7A6450', amp: 16 },
+  sand:   { bg: '#D8C19A', ink: '#5B4026', accent: '#A4452C', dim: '#9C8462', amp: 14 },
+  paper:  { bg: '#EEE5D1', ink: '#26242C', accent: '#9B2D24', dim: '#A79C86', amp: 10 },
+  chalk:  { bg: '#1F2B27', ink: '#ECEDE4', accent: '#F2C94C', dim: '#8FA39A', amp: 12 },
+  screen: { bg: '#0E1013', ink: '#E6E2D6', accent: '#F2C94C', dim: '#7D8590', amp: 6 },
+};
+function vnoise(x, y) {        // value noise: lưới hash, nội suy smoothstep — không lộ ô
+  const xi = Math.floor(x), yi = Math.floor(y), fx = x - xi, fy = y - yi, sx = fx * fx * (3 - 2 * fx), sy = fy * fy * (3 - 2 * fy);
+  const h = (a, b) => hash(a * 12.9898 + b * 78.233);
+  const top = h(xi, yi) * (1 - sx) + h(xi + 1, yi) * sx, bot = h(xi, yi + 1) * (1 - sx) + h(xi + 1, yi + 1) * sx;
+  return top * (1 - sy) + bot * sy;
+}
+function texture(e) {
+  const c = mk(W / 2, H / 2), x = c.getContext('2d'), d = x.createImageData(c.width, c.height);
+  const b = [1, 3, 5].map(i => parseInt(e.bg.slice(i, i + 2), 16));
+  for (let i = 0; i < c.width * c.height; i++) {
+    const px = i % c.width, py = (i / c.width) | 0;
+    const blot = (vnoise(px / 70, py / 70) - 0.5) * e.amp * 0.9 + (vnoise(px / 9 + 50, py / 9) - 0.5) * e.amp * 0.4;
+    const n = (hash(i * 0.731) - 0.5) * e.amp + blot;
+    for (let k = 0; k < 3; k++) d.data[i * 4 + k] = b[k] + n;
+    d.data[i * 4 + 3] = 255;
+  }
+  x.putImageData(d, 0, 0); return c;
+}
+function ground(e) { g.setTransform(1, 0, 0, 1, 0, 0); g.globalCompositeOperation = 'source-over'; g.globalAlpha = 1; g.drawImage(TEX[e], 0, 0, W, H); }
+
+// ── thước thời gian chung (đáy khung): mỗi mốc là một VẠCH KHẮC — cả video là một mẩu xương dài ──
+const STOPS = [-30000, -3000, -1700, -300, 628, 820, 1202, 1545, 1585, 1637, 1670, 1806, 1829, 1854, 1874, 1901, 1931, 1936];
+const TL = { x0: 112, w: 660, y0: 300 };
+const tx = y => { const a = Math.log(2030 - -30000), b = Math.log(2030 - 1936), v = Math.log(2030 - y); return TL.x0 + (a - v) / (a - b) * TL.w; };
+function timeline(e, year) {
+  const E = ERA[e], y0 = TL.y0;
+  g.save(); g.strokeStyle = E.dim; g.lineWidth = 2; g.beginPath(); g.moveTo(TL.x0 - 4, y0); g.lineTo(TL.x0 + TL.w + 8, y0); g.stroke();
+  STOPS.forEach((s, i) => { const x = tx(s); g.lineWidth = s <= year ? 3 : 2; g.strokeStyle = s <= year ? E.ink : E.dim;
+    g.beginPath(); g.moveTo(x + (hash(i) - .5) * 3, y0 - 14); g.lineTo(x, y0 + 4); g.stroke(); });
+  const x = tx(year); g.fillStyle = E.accent; g.beginPath(); g.moveTo(x, y0 - 18); g.lineTo(x - 8, y0 - 32); g.lineTo(x + 8, y0 - 32); g.fill();
+  g.font = '500 15px "IBM Plex Mono"'; g.fillStyle = E.dim; g.textAlign = 'left'; g.fillText('30,000 YEARS AGO', TL.x0 - 4, y0 + 26);
+  g.textAlign = 'right'; g.fillText('TODAY', TL.x0 + TL.w + 8, y0 + 26); g.restore();
+}
+// ── thẻ mốc: hồi · năm · tên trạm ──
+function card(e, act, year, title) {
+  const E = ERA[e]; g.save(); g.textAlign = 'left';
+  g.fillStyle = E.accent; g.font = '500 20px "IBM Plex Mono"'; g.fillText(act, 110, 108);
+  g.fillStyle = E.ink; g.font = '800 92px "Archivo"'; g.fontStretch = 'condensed'; g.fillText(year, 104, 196);
+  g.font = 'italic 500 46px "Cormorant Garamond"'; g.fillText(title, 110, 250); g.restore();
+}
+// ── nhân vật: ảnh đặc + viền bóng lệch một màu của thời đại ──
+function figure(pose, cx, foot, h, e, { flip = false } = {}) {
+  const im = IM[pose], s = h / im.height, w = im.width * s, E = ERA[e];
+  const sh = mk(im.width, im.height), x = sh.getContext('2d'); x.drawImage(im, 0, 0); x.globalCompositeOperation = 'source-in'; x.fillStyle = E.accent; x.fillRect(0, 0, im.width, im.height);
+  g.save(); g.translate(cx, foot); if (flip) g.scale(-1, 1);
+  g.drawImage(sh, -w / 2 + 12, -h + 10, w, h); g.drawImage(im, -w / 2, -h, w, h); g.restore();
+}
+// nét tay (rung nhẹ, tất định)
+function hand(pts, { w = 4, color, jit = 1.5, seed = 1, passes = 1 } = {}) {
+  g.save(); g.strokeStyle = color; g.lineWidth = w; g.lineCap = g.lineJoin = 'round';
+  for (let p = 0; p < passes; p++) { g.beginPath();
+    pts.forEach(([x, y], i) => { const jx = (hash(i * 3.1 + seed + p * 9) - .5) * jit, jy = (hash(i * 5.7 + seed + p * 9) - .5) * jit; i ? g.lineTo(x + jx, y + jy) : g.moveTo(x + jx, y + jy); });
+    g.stroke(); }
+  g.restore();
+}
+const seg = (x0, y0, x1, y1, n = 24) => Array.from({ length: n + 1 }, (_, i) => [x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n]);
+const circ = (cx, cy, r, a0 = 0, a1 = Math.PI * 2, n = 90) => Array.from({ length: n + 1 }, (_, i) => { const a = a0 + (a1 - a0) * i / n; return [cx + r * Math.cos(a), cy + r * Math.sin(a)]; });
+
+// ===== 0: xương — "ba con cừu, ba ngày, ba mặt trăng = ba vạch" (Hồi 1) =====
+function frameBone() {
+  const E = ERA.bone; ground('bone');
+  card('bone', 'ACT ONE · COUNTING', '≈ 30,000 YEARS AGO', 'a scratch on a bone');
+  // mẩu xương: thân dài nhạt, hai đầu phình
+  g.save(); g.translate(170, 800); g.rotate(-0.03);
+  g.fillStyle = '#E3D5B8';
+  for (const [x, y, r] of [[18, -30, 40], [22, 30, 38], [1018, -26, 36], [1014, 28, 34]]) { g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); }
+  g.beginPath(); g.moveTo(30, -40); g.bezierCurveTo(300, -20, 700, -22, 1010, -36); g.lineTo(1010, 34); g.bezierCurveTo(700, 20, 300, 22, 30, 40); g.fill();
+  g.fillStyle = 'rgba(120,90,60,0.22)'; g.beginPath(); g.moveTo(60, 10); g.bezierCurveTo(400, 22, 700, 20, 990, 12); g.lineTo(990, 24); g.bezierCurveTo(700, 30, 400, 32, 60, 26); g.fill();
+  // khía theo nhóm, như Ishango
+  const groups = [11, 13, 17, 19, 3, 6, 4, 8];
+  let x = 100; groups.forEach((n, gi) => { for (let i = 0; i < n; i++) { const xx = x + i * 9;
+    g.strokeStyle = '#5A3E28'; g.lineWidth = 3; g.beginPath(); g.moveTo(xx, -26 + hash(gi * 40 + i) * 6); g.lineTo(xx + 2, 24 - hash(gi * 31 + i) * 6); g.stroke(); }
+    x += n * 9 + 26; });
+  g.restore();
+  // ba hàng vật → một nhóm ba vạch
+  const rows = [['sheep', 420], ['sun', 530], ['moon', 640]];
+  for (const [k, y] of rows) for (let i = 0; i < 3; i++) icon(k, 170 + i * 92, y, E);
+  g.strokeStyle = E.dim; g.lineWidth = 3;
+  for (const [, y] of rows) hand([[460, y], [600, y], [700, 530]], { color: E.dim, w: 3, seed: y });
+  for (let i = 0; i < 3; i++) hand(seg(760 + i * 46, 460, 768 + i * 46, 600, 10), { color: E.ink, w: 14, jit: 2, seed: i });
+  g.fillStyle = E.accent; g.font = 'italic 600 44px "Cormorant Garamond"'; g.fillText('three', 760, 660);
+  g.fillStyle = E.dim; g.font = '500 20px "IBM Plex Mono"'; g.fillText('ISHANGO BONE · ~20,000 YEARS', 190, 910);
+  figure('three', 1580, 1080, 840, 'bone');
+  timeline('bone', -30000);
+}
+function icon(k, x, y, E) {
+  g.save(); g.fillStyle = g.strokeStyle = E.ink; g.lineWidth = 3;
+  if (k === 'sheep') { for (const [dx, dy] of [[-18, 0], [0, -10], [18, 0], [0, 8]]) { g.beginPath(); g.arc(x + dx, y + dy, 16, 0, 7); g.fill(); }
+    g.fillStyle = E.dim; g.beginPath(); g.ellipse(x + 34, y - 4, 11, 14, 0.4, 0, 7); g.fill(); g.beginPath(); g.ellipse(x + 30, y - 18, 8, 4, -0.5, 0, 7); g.fill(); g.fillStyle = E.ink; g.fillRect(x - 16, y + 18, 4, 14); g.fillRect(x + 12, y + 18, 4, 14); }
+  if (k === 'sun') { g.beginPath(); g.arc(x, y, 18, 0, 7); g.fill(); for (let i = 0; i < 8; i++) { const a = i * Math.PI / 4; g.beginPath(); g.moveTo(x + 26 * Math.cos(a), y + 26 * Math.sin(a)); g.lineTo(x + 36 * Math.cos(a), y + 36 * Math.sin(a)); g.stroke(); } }
+  if (k === 'moon') { g.beginPath(); g.arc(x, y, 24, 0, 7); g.fill(); g.fillStyle = E.bg; g.beginPath(); g.arc(x + 12, y - 6, 22, 0, 7); g.fill(); }
+  g.restore();
+}
+
+// ===== 1: cát — Euclid, mệnh đề I.1 dựng bằng compa trên cát (Hồi 2) =====
+function carve(pts, w = 6, seed = 1) {     // rãnh trên cát: bóng tối + mép sáng lệch
+  hand(pts, { w: w + 2, color: 'rgba(80,55,30,0.55)', jit: 1.2, seed });
+  g.save(); g.translate(-2, -2); hand(pts, { w: 2, color: 'rgba(255,240,210,0.6)', jit: 1.2, seed }); g.restore();
+}
+function frameSand() {
+  const E = ERA.sand; ground('sand');
+  card('sand', 'ACT TWO · PROOF', '≈ 300 BC', 'Euclid, the Elements');
+  const A = [560, 690], B = [800, 690], r = B[0] - A[0], C = [(A[0] + B[0]) / 2, A[1] - r * Math.sin(Math.PI / 3)];   // I.1: r = |AB|
+  carve(circ(A[0], A[1], r), 4, 2); carve(circ(B[0], B[1], r), 4, 3);
+  carve(seg(...A, ...B), 7, 4); carve(seg(...A, ...C), 7, 5); carve(seg(...B, ...C), 7, 6);
+  g.fillStyle = E.ink; for (const P of [A, B, C]) { g.beginPath(); g.arc(P[0], P[1], 8, 0, 7); g.fill(); }
+  g.font = 'italic 600 52px "Cormorant Garamond"'; g.fillText('A', A[0] - 50, A[1] + 40); g.fillText('B', B[0] + 22, B[1] + 40); g.fillText('C', C[0] - 12, C[1] - 24);
+  // năm tiên đề: bốn ngắn, cái thứ năm dài — gieo hạt cho Hồi 5
+  const ax = ['two points → a line', 'a line extends', 'a centre, a circle', 'right angles are equal', 'if a line falling on two lines makes the interior angles on one side less than two right angles, the two lines, if produced indefinitely, meet on that side'];
+  g.font = '500 19px "IBM Plex Mono"'; let y = 400;
+  ax.forEach((s, i) => { g.fillStyle = i === 4 ? E.accent : E.ink; const words = s.split(' '); let line = `${i + 1}. `; const lines = [];
+    for (const w of words) { if (g.measureText(line + w).width > 420) { lines.push(line); line = '   '; } line += w + ' '; } lines.push(line);
+    lines.forEach(l => { g.fillText(l, 1220, y); y += 28; }); y += 14; });
+  g.fillStyle = E.dim; g.font = 'italic 500 34px "Cormorant Garamond"'; g.fillText('Proposition 1:', 1220, 760); g.fillText('on a given line, an equilateral triangle.', 1220, 800);
+  timeline('sand', -300);
+}
+
+// ===== 2: giấy khắc đồng — Descartes, toạ độ (Hồi 4) =====
+function frameEngrave() {
+  const E = ERA.paper; ground('paper');
+  card('paper', 'ACT FOUR · THE LANGUAGE OF CHANGE', '1637', 'Descartes, La Géométrie');
+  const O = [640, 660], S = 52;
+  g.save(); g.strokeStyle = E.ink; g.lineWidth = 3;
+  g.beginPath(); g.moveTo(O[0] - 380, O[1]); g.lineTo(O[0] + 330, O[1]); g.moveTo(O[0], O[1] + 300); g.lineTo(O[0], O[1] - 330); g.stroke();
+  // vùng trong đường tròn: gạch chéo kiểu khắc đồng, mật độ theo khoảng cách tâm
+  g.save(); g.beginPath(); g.arc(O[0], O[1], 5 * S, 0, 7); g.clip(); g.lineWidth = 1.4;
+  for (let k = -400; k < 400; k += 9) { g.beginPath(); g.moveTo(O[0] + k - 300, O[1] - 300); g.lineTo(O[0] + k + 300, O[1] + 300); g.stroke(); }
+  g.restore();
+  g.lineWidth = 5; g.beginPath(); g.arc(O[0], O[1], 5 * S, 0, 7); g.stroke();
+  for (let i = -5; i <= 5; i++) if (i) { g.lineWidth = 2; g.beginPath(); g.moveTo(O[0] + i * S, O[1] - 8); g.lineTo(O[0] + i * S, O[1] + 8); g.moveTo(O[0] - 8, O[1] - i * S); g.lineTo(O[0] + 8, O[1] - i * S); g.stroke(); }
+  const P = [O[0] + 3 * S, O[1] - 4 * S];
+  g.setLineDash([8, 8]); g.lineWidth = 2; g.beginPath(); g.moveTo(P[0], O[1]); g.lineTo(P[0], P[1]); g.lineTo(O[0], P[1]); g.stroke(); g.setLineDash([]);
+  g.fillStyle = E.accent; g.beginPath(); g.arc(P[0], P[1], 11, 0, 7); g.fill();
+  g.fillStyle = E.ink; g.font = 'italic 600 46px "Cormorant Garamond"'; g.fillText('(3, 4)', P[0] + 22, P[1] - 16);
+  g.fillText('x', O[0] + 340, O[1] + 14); g.fillText('y', O[0] + 16, O[1] - 310);
+  g.restore();
+  g.fillStyle = E.ink; g.font = 'italic 600 78px "Cormorant Garamond"'; g.fillText('x² + y² = 25', 1040, 500);
+  g.fillStyle = E.dim; g.font = '500 20px "IBM Plex Mono"'; g.fillText('3² + 4² = 9 + 16 = 25', 1046, 550);
+  g.fillStyle = E.accent; g.font = 'italic 500 40px "Cormorant Garamond"'; g.fillText('a shape is an equation', 1046, 640); g.fillText('an equation is a shape', 1046, 690);
+  figure('point', 1680, 1060, 700, 'paper', { flip: true });
+  timeline('paper', 1637);
+}
+
+// ===== 3: bảng đen — Cantor, đường chéo (Hồi 5) =====
+function chalkText(s, x, y, px, color, seed = 1) {
+  g.save(); g.font = `500 ${px}px "IBM Plex Mono"`; g.fillStyle = color;
+  for (let p = 0; p < 3; p++) { g.globalAlpha = p ? 0.35 : 0.9; g.fillText(s, x + (hash(seed + p) - .5) * 2, y + (hash(seed * 2 + p) - .5) * 2); }
+  g.restore();
+}
+function frameChalk() {
+  const E = ERA.chalk; ground('chalk');
+  g.save(); g.globalAlpha = 0.045; g.fillStyle = '#fff'; for (let i = 0; i < 7; i++) { g.beginPath(); g.ellipse(300 + hash(i) * 1300, 200 + hash(i + 9) * 650, 380, 46, (hash(i + 3) - .5) * 0.25, 0, 7); g.fill(); } g.restore();
+  card('chalk', 'ACT FIVE · QUESTIONING THE FOUNDATIONS', '1891', 'Cantor, the diagonal argument');
+  const rows = ['5 1 4 1 5 9 2', '3 3 3 3 3 3 3', '7 1 8 2 8 1 8', '4 1 4 2 1 3 5', '0 0 0 0 0 0 0', '6 1 8 0 3 3 9'];
+  const x0 = 400, y0 = 420, dx = 50, dy = 70;
+  rows.forEach((r, i) => { chalkText(`${i + 1}  →  0.`, x0 - 250, y0 + i * dy, 46, E.ink, i + 1); chalkText(r, x0, y0 + i * dy, 46, E.ink, i + 7);
+    const cx = x0 + i * 2 * dx * 0.5 + i * dx * 0.5 + 13, cy = y0 + i * dy - 15;
+    hand(circ(x0 + i * 55.2 + 14, cy, 30, 0, Math.PI * 2, 40), { w: 3, color: E.accent, jit: 3, seed: i * 4 }); });
+  g.save(); g.globalAlpha = 0.5; hand(seg(x0 - 10, y0 - 50, x0 + 6 * 55 + 40, y0 + 5 * dy + 24, 20), { w: 2, color: E.accent, jit: 2 }); g.restore();
+  hand(seg(x0 - 260, y0 + 6 * dy - 20, x0 + 420, y0 + 6 * dy - 20, 30), { w: 3, color: E.ink, jit: 2, seed: 41 });
+  chalkText('new →  0.', x0 - 278, y0 + 6 * dy + 50, 46, E.accent, 50);
+  chalkText('6 4 9 3 1 4 …', x0, y0 + 6 * dy + 50, 46, E.accent, 51);
+  g.fillStyle = E.ink; g.font = 'italic 500 40px "Cormorant Garamond"';
+  g.fillText('change the n-th digit of the n-th number:', 860, 420); g.fillText('the new number is on no row.', 860, 470);
+  g.fillStyle = E.accent; g.fillText('a real number is always left over.', 860, 540);
+  figure('chalk', 1660, 1080, 640, 'chalk');
+  timeline('chalk', 1891);
+}
+
+// ===== 4: màn hình — băng Turing; dấu trên băng là VẠCH KHẮC (khép vòng với xương) (Hồi 6) =====
+function frameTape() {
+  const E = ERA.screen; ground('screen');
+  card('screen', 'ACT SIX · THE MACHINE', '1936', 'Turing, an endless tape');
+  const y = 560, cw = 112, n = 18, x0 = -40;
+  g.save();
+  for (let i = 0; i < n; i++) { const x = x0 + i * cw;
+    g.strokeStyle = E.dim; g.lineWidth = 3; g.strokeRect(x, y - 70, cw, 140);
+    const marks = [0, 1, 1, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1][i];
+    if (marks) hand(seg(x + cw / 2 - 2, y - 40, x + cw / 2 + 2, y + 40, 8), { w: 10, color: E.ink, jit: 2, seed: i }); }
+  const hx = x0 + 7 * cw + cw / 2;
+  g.strokeStyle = E.accent; g.lineWidth = 5; g.strokeRect(hx - cw / 2 - 6, y - 76, cw + 12, 152);
+  g.fillStyle = E.accent; g.beginPath(); g.moveTo(hx, y - 92); g.lineTo(hx - 22, y - 130); g.lineTo(hx + 22, y - 130); g.fill();
+  g.font = '500 26px "IBM Plex Mono"'; g.textAlign = 'center'; g.fillText('q₁', hx, y - 146);
+  g.textAlign = 'left'; g.fillStyle = E.ink; g.font = '500 24px "IBM Plex Mono"';
+  ['q₁  |  →  |  R  q₁', 'q₁  ·  →  |  L  q₂', 'q₂  |  →  ·  R  halt'].forEach((s, i) => g.fillText(s, 300, 790 + i * 40));
+  g.fillStyle = E.dim; g.font = '500 18px "IBM Plex Mono"'; g.fillText('STATE  READ    WRITE MOVE NEXT', 300, 752);
+  g.restore();
+  g.fillStyle = E.ink; g.font = 'italic 500 42px "Cormorant Garamond"'; g.fillText('a tape · a head · a table of rules', 1000, 820);
+  g.fillStyle = E.accent; g.fillText('the same marks as on the bone.', 1000, 872);
+  timeline('screen', 1936);
+}
+
+// ── chân dung theo chất liệu: duotone (mực ↔ nền của thời đại) + lưới khắc ngang cho giấy in ──
+function portrait(src, e, h, { screen = false } = {}) {
+  // ở ĐÚNG cỡ hiển thị (lưới khắc theo pixel màn hình, không moiré), kéo giãn mức xám p2–p98 (tranh sơn dầu tối)
+  const E = ERA[e], w = Math.round(src.width * h / src.height), c = mk(w, h), x = c.getContext('2d', { willReadFrequently: true });
+  x.drawImage(src, 0, 0, w, h);
+  const d = x.getImageData(0, 0, w, h), n = w * h, L = new Float32Array(n), hist = new Uint32Array(256);
+  for (let i = 0; i < n; i++) { const v = 0.3 * d.data[i * 4] + 0.59 * d.data[i * 4 + 1] + 0.11 * d.data[i * 4 + 2]; L[i] = v; hist[v | 0]++; }
+  const pct = q => { let acc = 0; for (let v = 0; v < 256; v++) { acc += hist[v]; if (acc >= q * n) return v; } return 255; };
+  const lo0 = pct(0.02), hi0 = Math.max(lo0 + 1, pct(0.98));
+  const hex = s => [1, 3, 5].map(i => parseInt(s.slice(i, i + 2), 16)), ink = hex(E.ink), bg = hex(E.bg);
+  const darkGround = bg[0] + bg[1] + bg[2] < ink[0] + ink[1] + ink[2];
+  for (let i = 0; i < n; i++) {
+    let v = Math.min(1, Math.max(0, (L[i] - lo0) / (hi0 - lo0)));      // 0 = tối, 1 = sáng
+    if (screen) { const py = (i / w) | 0, line = Math.abs(Math.sin(py * Math.PI / 5)); v = (1 - v) * 1.08 > line ? 0 : 1; }   // nét dày ở vùng tối
+    const k = darkGround ? v : 1 - v;                                   // k = lượng MỰC
+    for (let j = 0; j < 3; j++) d.data[i * 4 + j] = bg[j] + (ink[j] - bg[j]) * k;
+  }
+  x.putImageData(d, 0, 0); return c;
+}
+function portraitCard(key, e, x, y, h, name, life, note, { screen = false, pin = false, rot = 0, lift = 1 } = {}) {
+  const E = ERA[e], im = (PORT[key + e + h] ??= portrait(IM[key], e, h, { screen })), w = im.width;
+  g.save(); g.translate(x, y); g.rotate(rot);
+  if (pin) { g.fillStyle = 'rgba(0,0,0,0.35)'; g.fillRect(10, 12, w + 24, h + 24); g.fillStyle = '#E9E4D6'; g.fillRect(-12, -12, w + 24, h + 24); }
+  else { g.strokeStyle = E.ink; g.lineWidth = 3; g.strokeRect(-10, -10, w + 20, h + 20); }
+  if (pin) g.filter = `brightness(${lift}) contrast(1.05)`; g.drawImage(pin ? IM[key] : im, 0, 0, w, h); g.filter = 'none';
+  if (pin) { g.globalCompositeOperation = 'saturation'; g.fillStyle = '#888'; g.fillRect(0, 0, w, h); g.globalCompositeOperation = 'source-over';
+    g.fillStyle = 'rgba(242,201,76,0.85)'; g.save(); g.translate(w / 2, -14); g.rotate(-0.06); g.fillRect(-46, -12, 92, 26); g.restore(); }
+  g.restore();
+  g.save(); g.textAlign = 'left'; g.fillStyle = E.ink; g.font = 'italic 600 40px "Cormorant Garamond"'; g.fillText(name, x, y + h + 62);
+  g.font = '500 18px "IBM Plex Mono"'; g.fillStyle = E.dim; g.fillText(life, x, y + h + 92); if (note) g.fillText(note, x, y + h + 118); g.restore();
+}
+const PORT = {};
+// ===== 5: chân dung trên giấy in (khắc) và trên bảng đen (ảnh ghim) — cùng một khung để so =====
+function framePortraits() {
+  ground('paper'); card('paper', 'ACT FOUR · THE LANGUAGE OF CHANGE', '1665–1684', 'Newton and Leibniz');
+  portraitCard('newton', 'paper', 150, 400, 420, 'Isaac Newton', '1643–1727', 'PORTRAIT BY KNELLER, 1689', { screen: true });
+  portraitCard('leibniz', 'paper', 560, 400, 420, 'Gottfried Leibniz', '1646–1716', 'PORTRAIT BY FRANCKE, c. 1700', { screen: true });
+  g.save(); g.beginPath(); g.rect(1000, 0, 920, H); g.clip(); g.drawImage(TEX.chalk, 0, 0, W, H); g.restore();
+  portraitCard('cantor', 'chalk', 1110, 330, 470, 'Georg Cantor', '1845–1918', 'PHOTOGRAPH, c. 1870', { pin: true, rot: -0.03 });
+  portraitCard('euclid', 'chalk', 1520, 360, 400, 'Euclid', 'c. 300 BC', 'IMAGINED · NO LIKENESS SURVIVES', { pin: true, rot: 0.04, lift: 1.7 });
+}
+
+(async () => {
+  await Promise.all([document.fonts.load('800 92px "Archivo"'), document.fonts.load('500 20px "IBM Plex Mono"'),
+    document.fonts.load('italic 500 46px "Cormorant Garamond"'), document.fonts.load('500 46px "Cormorant Garamond"')]);
+  for (const e of Object.keys(ERA)) TEX[e] = texture(ERA[e]);
+  const H_ = '../../projects/en/math-30k/assets/history/';
+  const SRC = { three: '../../assets/character-v2/cut/pose-three.png', point: '../../assets/character-v2/cut/pose-point.png', chalk: '../../assets/character-v2/cut/pose-chalk.png',
+    newton: H_ + 'Portrait_of_Sir_Isaac_Newton,_1689.jpg', leibniz: H_ + 'Gottfried_Wilhelm_von_Leibniz.jpg', cantor: H_ + 'Georg_Cantor-_colorized.jpg', euclid: H_ + 'euclid.jpeg' };
+  await Promise.all(Object.entries(SRC).map(([p, u]) => new Promise((res, rej) => {
+    const im = new Image(); im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = u;
+  })));
+  ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => [frameBone, frameSand, frameEngrave, frameChalk, frameTape, framePortraits][Math.min(5, Math.floor(t))]();
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 6 };
+</script>

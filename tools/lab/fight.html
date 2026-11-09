@@ -1,0 +1,10 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — fight</title>
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Clip thử "đánh nhau" người que khăn đỏ vs 49% (study 10) — kịch bản tools/lab/fight-scene.js, vẽ tools/lab/fight-page.js.
+// node engine/render/shoot.js stills --page tools/lab/fight.html --t 1.4,2.14,3.2,4.6,5.96,6.3,7 --outdir out/_lab/fight
+import { run } from './fight-page.js';
+run(0);
+</script>

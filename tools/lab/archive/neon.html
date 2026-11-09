@@ -1,0 +1,303 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — neon</title>
+<style>
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  html,body{margin:0;background:#07060F;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "ゲーセンの夜" (ja/gacha). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/neon.html --dur 2 --t 0.5,1.5 --outdir out/_lab/neon
+// Ý: ガチャ và slot đều là máy bán "chờ đợi" — nơi người Nhật gặp cả hai là GAME CENTER về đêm: dãy máy sáng đèn trong bóng tối, ánh rò từ thân máy. Cả video là MỘT hành lang ゲーセン ban đêm; mỗi vật là ống neon thủy tinh (ống = nét, quầng = khí). Sang, tiết chế: nền chàm-đen, chỉ 1–2 vật sáng mỗi khung, chữ trắng ấm đọc rõ trên nền tối. Khác ja/pi (sơn mài vàng), 2048 (gỗ), hikari (phòng tối).
+// Vật xuyên suốt: MỘT LƯỢT QUAY = MỘT BÓNG ĐÈN / Ô NEON (tròn, ~13 px). 1000 người = lưới 40×25 bóng, 6 bóng vàng; 90 cột = ống neon đứng; 160 viên đá → 1 lượt = 160 chấm nhỏ cyan gom vào một bóng; điểm trên phân bố = bóng xếp chồng. Trượt = bóng tối (kính đen, viền mờ); trúng ★5 = bóng vàng "nở" (quầng to, hiếm nhất, sáng nhất).
+// Màu (một màu = một nghĩa): chàm đêm #07060F/#120E24 = nền · cyan kính #3FE0F0 = ガチャ/mobile/lượt thường/xác suất phẳng · hồng magenta #FF4FB6 = ĐÀ TĂNG (天井 đếm lên) · đỏ casino #FF3B3B = slot/赌博/cảnh báo · vàng ấm #FFC857→#FFF0C0 = ★5 / trúng / tiền (chỉ dùng cho điều hiếm) · trắng ấm #F4EEE4 = chữ.
+// Chữ: Shippori Mincho Bold (tiêu đề/テロップ) · Noto Sans JP (số, nhãn). ≥ 28 px; chữ không nằm trên ống neon mà trên nền chàm hoặc thanh テロップ kính tối.
+// Tiếng (~1/3 s): nút bấm click · coin-drop / ガチャ ガチャ quay (rattle) · tick từng bóng sáng (nhịp tăng dần tới 90) · chime kính "chiin" khi ★5 nở · buzz điện neon 50 Hz rất nhỏ (nền) · reel-stop thunk (slot) · whoosh-long khi cột dựng · cash-register cho 3万円.
+// Các phần khác: lưới 1000 = tường bóng 40×25, 6 bóng vàng nở lần lượt · hộp Skinner = máy arcade có đèn + ảnh thật trong khung neon · Hooked 4 bước = 4 ống neon nối thành vòng · 23時間 = đồng hồ 7 đoạn đỏ · bảng tin SNS = màn hình CRT quét dòng, phosphor lục · bản đồ Bỉ/NL = ảnh dán lên tường, viền neon · ảnh báo cáo thật = poster dán kính · 0.15% = một bóng vàng giữa bảng 667 bóng · 天井 ≈ 3万円 = bảng giá đèn LED đỏ · 3 khúc rẽ = 3 lối ra ゲーセン, 3 biển EXIT neon.
+// Khung ảnh: ảnh thật đặt trong khung ống neon mảnh + vignette (thử ở khung 1, góc trên-phải).
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { bg: '#07060F', bg2: '#120E24', cy: '#3FE0F0', mg: '#FF4FB6', red: '#FF3B3B', gold: '#FFC857', goldHi: '#FFF0C0', ink: '#F4EEE4' };
+const MIN = '"Shippori Mincho"', NS = '"Noto Sans JP"';
+const IM = {}; let BG, PHOTO, ready = false;
+
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+// tương phản WCAG, đo bằng số
+const lum = hex => { const c = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(v => v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
+const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+const CR = {};
+for (const [k, fg, bg, min] of [['telop', C.ink, '#0B0918', 4.5], ['label', C.ink, C.bg, 4.5], ['cyan', C.cy, C.bg, 4.5], ['mg', C.mg, C.bg, 4.5], ['gold', C.gold, C.bg, 4.5], ['red', '#FF6B6B', C.bg, 4.5], ['btn', '#FFFFFF', '#B0145F', 4.5], ['screen', '#1A1440', '#DCEBFF', 4.5]]) {
+  CR[k] = +contrast(fg, bg).toFixed(2); if (CR[k] < min) throw new Error(`tương phản ${k} ${CR[k]} < ${min}`);
+}
+
+const rgba = (hex, a) => `rgba(${parseInt(hex.slice(1, 3), 16)},${parseInt(hex.slice(3, 5), 16)},${parseInt(hex.slice(5, 7), 16)},${a})`;
+const sstep = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+
+// ---- nền: chàm-đen, ánh rò từ thân máy (bokeh xa), sàn phản chiếu, scanline mảnh ----
+function background() {
+  const c = mk(), x = c.getContext('2d');
+  const gr = x.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, '#0A0816'); gr.addColorStop(0.6, '#110C22'); gr.addColorStop(1, '#07060F');
+  x.fillStyle = gr; x.fillRect(0, 0, W, H);
+  // dãy máy xa: bokeh mờ, rất thấp độ sáng, hai tông cyan/magenta, ít ánh vàng
+  const cols = [C.cy, C.mg, C.cy, '#7A6CFF', C.mg];
+  for (let i = 0; i < 46; i++) {
+    const px = hash(i * 3.1 + 1) * W, py = 80 + hash(i * 7.7 + 2) * 520, r = 20 + hash(i * 1.9) * 54, col = cols[i % cols.length], a = 0.035 + hash(i * 5.3) * 0.05;
+    const rg = x.createRadialGradient(px, py, 0, px, py, r); rg.addColorStop(0, rgba(col, a * 1.6)); rg.addColorStop(0.7, rgba(col, a)); rg.addColorStop(1, rgba(col, 0));
+    x.fillStyle = rg; x.beginPath(); x.arc(px, py, r, 0, 7); x.fill();
+  }
+  // sàn: ánh phản chiếu mờ (ẩm, kính) ở nửa dưới
+  const fl = x.createLinearGradient(0, 700, 0, H); fl.addColorStop(0, 'rgba(63,224,240,0)'); fl.addColorStop(1, 'rgba(255,79,182,0.05)');
+  x.fillStyle = fl; x.fillRect(0, 700, W, H - 700);
+  // vignette
+  const v = x.createRadialGradient(W / 2, H / 2, 380, W / 2, H / 2, 1180); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(0,0,0,0.55)');
+  x.fillStyle = v; x.fillRect(0, 0, W, H);
+  // scanline CRT, rất nhẹ
+  x.fillStyle = 'rgba(0,0,0,0.10)'; for (let y = 0; y < H; y += 3) x.fillRect(0, y, W, 1);
+  return c;
+}
+
+// ---- ống neon: quầng rộng + quầng vừa + lõi sáng trắng. path là Path2D ----
+function neon(path, col, w = 5, k = 1, core = true) {
+  g.save(); g.lineCap = g.lineJoin = 'round'; g.globalCompositeOperation = 'lighter';
+  g.shadowColor = col; g.strokeStyle = rgba(col, 0.20 * k); g.lineWidth = w * 4.2; g.shadowBlur = 46 * k; g.stroke(path);
+  g.strokeStyle = rgba(col, 0.55 * k); g.lineWidth = w * 1.5; g.shadowBlur = 16 * k; g.stroke(path);
+  g.globalCompositeOperation = 'source-over'; g.shadowBlur = 0;
+  if (core) { g.strokeStyle = col; g.lineWidth = w; g.stroke(path); g.strokeStyle = 'rgba(255,250,245,0.85)'; g.lineWidth = w * 0.42; g.stroke(path); }
+  g.restore();
+}
+const P = () => new Path2D();
+const rr = (x, y, w, h, r) => { const p = P(); p.roundRect(x, y, w, h, r); return p; };
+const circ = (x, y, r) => { const p = P(); p.arc(x, y, r, 0, 2 * Math.PI); return p; };
+const line = pts => { const p = P(); pts.forEach(([x, y], k) => k ? p.lineTo(x, y) : p.moveTo(x, y)); return p; };
+// bóng đèn: lượt quay. state: 'dim' | 'on' (màu) | 'gold' (★5, nở)
+function bulb(x, y, r, col, lit = 1) {
+  g.save();
+  if (lit > 0) {
+    g.globalCompositeOperation = 'lighter';
+    const rg = g.createRadialGradient(x, y, 0, x, y, r * 4.2); rg.addColorStop(0, rgba(col, 0.55 * lit)); rg.addColorStop(0.4, rgba(col, 0.16 * lit)); rg.addColorStop(1, rgba(col, 0));
+    g.fillStyle = rg; g.beginPath(); g.arc(x, y, r * 4.2, 0, 7); g.fill(); g.globalCompositeOperation = 'source-over';
+    const b = g.createRadialGradient(x - r * 0.25, y - r * 0.3, 0, x, y, r); b.addColorStop(0, '#FFFFFF'); b.addColorStop(0.35, col); b.addColorStop(1, rgba(col, 0.7));
+    g.fillStyle = b; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill();
+  } else {
+    g.fillStyle = '#17132B'; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill();
+    g.strokeStyle = rgba(col, 0.28); g.lineWidth = 1.3; g.stroke(circ(x, y, r));
+  }
+  g.restore();
+}
+// ★5: vàng ấm nở — quầng to + tia dài + ★ trắng
+function star5(x, y, s, dark = false) {
+  g.save(); g.globalCompositeOperation = 'lighter';
+  const rg = g.createRadialGradient(x, y, 0, x, y, s * 2.4); rg.addColorStop(0, rgba(C.gold, 0.7)); rg.addColorStop(0.35, rgba(C.gold, 0.22)); rg.addColorStop(1, rgba(C.gold, 0));
+  g.fillStyle = rg; g.beginPath(); g.arc(x, y, s * 2.4, 0, 7); g.fill();
+  for (let k = 0; k < 4; k++) { const a = k * Math.PI / 2 + Math.PI / 4 * (k % 2 ? 0 : 0), l = s * (k % 2 ? 1.5 : 2.3);
+    const lg = g.createLinearGradient(x, y, x + l * Math.cos(a), y + l * Math.sin(a)); lg.addColorStop(0, rgba(C.goldHi, 0.8)); lg.addColorStop(1, rgba(C.gold, 0));
+    g.strokeStyle = lg; g.lineWidth = s * 0.07; g.beginPath(); g.moveTo(x, y); g.lineTo(x + l * Math.cos(a), y + l * Math.sin(a)); g.stroke(); g.beginPath(); g.moveTo(x, y); g.lineTo(x - l * Math.cos(a), y - l * Math.sin(a)); g.stroke(); }
+  g.restore();
+  const p = P(); for (let k = 0; k < 10; k++) { const a = -Math.PI / 2 + k * Math.PI / 5, rad = k % 2 ? s * 0.4 : s; k ? p.lineTo(x + rad * Math.cos(a), y + rad * Math.sin(a)) : p.moveTo(x + rad * Math.cos(a), y + rad * Math.sin(a)); } p.closePath();
+  g.save(); g.fillStyle = C.goldHi; g.shadowColor = C.gold; g.shadowBlur = 18; g.fill(p); g.restore();
+  if (dark) { g.save(); g.strokeStyle = '#B8741A'; g.lineWidth = 4; g.lineJoin = 'round'; g.stroke(p); g.fillStyle = '#FFB81F'; g.fill(p); g.restore(); }
+}
+function text(s, x, y, font, col = C.ink, align = 'left', glow = 0, gcol = col) {
+  g.save(); g.font = font; g.textAlign = align; g.textBaseline = 'alphabetic'; g.fillStyle = col;
+  if (glow) { g.shadowColor = gcol; g.shadowBlur = glow; g.fillText(s, x, y); g.shadowBlur = glow * 0.4; }
+  g.fillText(s, x, y); g.restore();
+}
+// thanh テロップ kính tối: nền chàm đặc 84%, viền neon cyan mảnh
+function telop(s, cx, y, size) {
+  g.save(); g.font = `700 ${size}px ${MIN}`; const w = g.measureText(s).width + 90, h = size + 44, x0 = cx - w / 2;
+  g.fillStyle = 'rgba(11,9,24,0.88)'; g.fill(rr(x0, y, w, h, 14)); g.restore();
+  neon(rr(x0, y, w, h, 14), C.cy, 2, 0.7);
+  text(s, cx, y + size + 11, `700 ${size}px ${MIN}`, C.ink, 'center'); return [x0, y, w, h];
+}
+function figure(pose, x0, foot, h, flip = false) {
+  const im = IM[pose], s = h / im.height, w = im.width * s, y0 = foot - h;
+  // ánh rò cyan/magenta ở hai bên (rim light) trên nền chàm
+  const c = mk(Math.ceil(w), Math.ceil(h)), x = c.getContext('2d');
+  if (flip) { x.translate(w, 0); x.scale(-1, 1); }
+  x.drawImage(im, 0, 0, w, h); x.setTransform(1, 0, 0, 1, 0, 0); x.globalCompositeOperation = 'source-atop';
+  x.fillStyle = 'rgba(40,36,110,0.22)'; x.fillRect(0, 0, w, h);                         // hạ sáng cho hợp đêm
+  const gr = x.createLinearGradient(0, 0, w, 0); gr.addColorStop(0, 'rgba(255,79,182,0.0)'); gr.addColorStop(1, 'rgba(255,79,182,0.16)'); x.fillStyle = gr; x.fillRect(0, 0, w, h);
+  const fg = x.createLinearGradient(0, h * 0.7, 0, h); fg.addColorStop(0, 'rgba(7,6,15,0)'); fg.addColorStop(1, 'rgba(7,6,15,0.55)'); x.fillStyle = fg; x.fillRect(0, 0, w, h);
+  g.save(); g.shadowColor = 'rgba(63,224,240,0.45)'; g.shadowBlur = 40; g.drawImage(c, x0, y0); g.restore(); g.drawImage(c, x0, y0);
+  return { x: x0, y: y0, w, h };
+}
+
+// ---- khung 0: điện thoại ガチャ (sáng, cyan) ↔ máy slot (đỏ casino, tối) ----
+function phone(cx, top, w, h) {
+  const x0 = cx - w / 2;
+  // thân kính
+  g.save(); g.fillStyle = '#0D0A1E'; g.fill(rr(x0, top, w, h, 54)); g.restore();
+  // màn hình đang sáng: pastel lavender → cyan nhạt (đối trọng "sáng" với slot)
+  const sx = x0 + 22, sy = top + 24, sw = w - 44, sh = h - 48;
+  g.save(); g.clip(rr(sx, sy, sw, sh, 36));
+  const sg = g.createLinearGradient(0, sy, 0, sy + sh); sg.addColorStop(0, '#EAF3FF'); sg.addColorStop(0.6, '#CFE4FF'); sg.addColorStop(1, '#BFD6FF');
+  g.fillStyle = sg; g.fillRect(sx, sy, sw, sh);
+  const gx = sx + sw / 2, gy = sy + sh * 0.40, R = 124;
+  // hào quang sau viên nang
+  g.globalCompositeOperation = 'lighter'; const hl = g.createRadialGradient(gx, gy, 10, gx, gy, 250); hl.addColorStop(0, 'rgba(255,200,87,0.85)'); hl.addColorStop(0.5, 'rgba(255,200,87,0.25)'); hl.addColorStop(1, 'rgba(255,200,87,0)');
+  g.fillStyle = hl; g.fillRect(sx, sy, sw, sh); g.globalCompositeOperation = 'source-over';
+  // tia
+  for (let k = 0; k < 12; k++) { const a = k / 12 * 2 * Math.PI + 0.2; g.strokeStyle = 'rgba(255,170,40,0.45)'; g.lineWidth = 7; g.beginPath(); g.moveTo(gx + (R + 18) * Math.cos(a), gy + (R + 18) * Math.sin(a)); g.lineTo(gx + (R + 62 - (k % 2) * 24) * Math.cos(a), gy + (R + 62 - (k % 2) * 24) * Math.sin(a)); g.stroke(); }
+  // viên nang: nửa trên vàng, nửa dưới trắng; mở ra
+  g.save(); g.translate(gx, gy); g.rotate(-0.35);
+  g.fillStyle = '#FFFFFF'; g.beginPath(); g.arc(0, 0, R * 0.7, 0, Math.PI); g.fill();
+  g.fillStyle = '#FFC857'; g.beginPath(); g.arc(0, -10, R * 0.7, Math.PI, 2 * Math.PI); g.fill();
+  g.strokeStyle = '#7A5A14'; g.lineWidth = 3; g.beginPath(); g.arc(0, 0, R * 0.7, 0, Math.PI); g.stroke(); g.beginPath(); g.arc(0, -10, R * 0.7, Math.PI, 2 * Math.PI); g.stroke();
+  g.restore();
+  star5(gx, gy - 6, 52, true);
+  // dãy lượt quay: 10 ô, 1 ô vàng = lượt vừa quay
+  for (let k = 0; k < 10; k++) { const bx = sx + sw / 2 + (k - 4.5) * 34, by = sy + sh * 0.66; g.fillStyle = k === 6 ? '#FFC857' : '#8FA9D8'; g.strokeStyle = '#4B5C94'; g.lineWidth = 1.5; g.beginPath(); g.arc(bx, by, 11, 0, 7); g.fill(); g.stroke(); }
+  text('SSR', sx + sw / 2, sy + 70, `700 38px ${NS}`, '#1A1440', 'center');
+  // nút 「回す」
+  const bw = 230, bh = 76, bx = sx + sw / 2 - bw / 2, by = sy + sh - 132;
+  g.fillStyle = '#B0145F'; g.shadowColor = C.mg; g.shadowBlur = 24; g.fill(rr(bx, by, bw, bh, 38)); g.shadowBlur = 0;
+  g.strokeStyle = 'rgba(255,255,255,0.7)'; g.lineWidth = 2.5; g.stroke(rr(bx + 4, by + 4, bw - 8, bh - 8, 34));
+  text('回す', bx + bw / 2, by + 56, `700 46px ${MIN}`, '#FFFFFF', 'center');
+  g.restore();
+  // ống neon cyan quanh thân + ánh lan ra nền
+  neon(rr(x0, top, w, h, 54), C.cy, 5, 1.1);
+  g.save(); g.globalCompositeOperation = 'lighter'; const lk = g.createRadialGradient(cx, top + h * 0.45, 100, cx, top + h * 0.45, 560); lk.addColorStop(0, 'rgba(120,190,255,0.22)'); lk.addColorStop(1, 'rgba(120,190,255,0)');
+  g.fillStyle = lk; g.fillRect(cx - 560, top - 100, 1120, h + 240); g.restore();
+}
+function slot(cx, top, w, h) {
+  const x0 = cx - w / 2;
+  // ánh rò đỏ trên sàn
+  g.save(); g.globalCompositeOperation = 'lighter'; const lk = g.createRadialGradient(cx, top + h * 0.5, 80, cx, top + h * 0.5, 520); lk.addColorStop(0, 'rgba(255,59,59,0.20)'); lk.addColorStop(1, 'rgba(255,59,59,0)');
+  g.fillStyle = lk; g.fillRect(cx - 560, top - 100, 1120, h + 240); g.restore();
+  const body = g.createLinearGradient(0, top, 0, top + h); body.addColorStop(0, '#2A0A14'); body.addColorStop(1, '#13060C');
+  g.fillStyle = body; g.fill(rr(x0, top, w, h, 30));
+  // marquee: hàng bóng đèn trên đỉnh
+  const my = top + 46; for (let k = 0; k < 9; k++) bulb(x0 + 44 + k * (w - 88) / 8, my, 9, k === 4 ? C.gold : C.red, 1);
+  text('JACKPOT', cx, my + 78, `700 44px ${NS}`, '#FFB3B3', 'center', 14, C.red);
+  // cửa sổ cuộn
+  const wx = x0 + 40, wy = top + 170, ww = w - 80, wh = 250;
+  g.fillStyle = '#FFF3E2'; g.fill(rr(wx, wy, ww, wh, 14));
+  const cw = ww / 3; ['7', '★', '7'].forEach((s, k) => {
+    if (k) { g.fillStyle = '#C9B8A6'; g.fillRect(wx + k * cw - 2, wy, 4, wh); }
+    const gcx = wx + k * cw + cw / 2;
+    if (s === '★') { g.save(); star5(gcx, wy + wh / 2 + 4, 56, true); g.restore(); }
+    else text(s, gcx, wy + wh / 2 + 52, `800 150px ${NS}`, '#D81F26', 'center');
+  });
+  // bóng đổ trên/dưới cuộn (cuộn tròn)
+  const sh1 = g.createLinearGradient(0, wy, 0, wy + wh); sh1.addColorStop(0, 'rgba(60,20,20,0.5)'); sh1.addColorStop(0.28, 'rgba(60,20,20,0)'); sh1.addColorStop(0.72, 'rgba(60,20,20,0)'); sh1.addColorStop(1, 'rgba(60,20,20,0.5)');
+  g.fillStyle = sh1; g.fill(rr(wx, wy, ww, wh, 14));
+  neon(rr(wx - 4, wy - 4, ww + 8, wh + 8, 18), C.red, 4, 1);
+  neon(line([[wx + 14, wy + wh / 2], [wx + ww - 14, wy + wh / 2]]), C.gold, 2.5, 0.8);              // vạch thắng vàng
+  // bàn phím: 3 nút tròn
+  const by = top + 500; for (let k = 0; k < 3; k++) { const bx = cx - 90 + k * 90; g.fillStyle = '#3A0E18'; g.beginPath(); g.arc(bx, by, 28, 0, 7); g.fill(); neon(circ(bx, by, 26), k === 1 ? C.gold : C.red, 3, 0.8); }
+  g.fillStyle = '#0A0408'; g.fill(rr(x0 + 70, top + h - 110, w - 140, 62, 10));                      // khay tiền
+  neon(rr(x0 + 70, top + h - 110, w - 140, 62, 10), C.red, 2, 0.5);
+  // cần gạt bên phải
+  const lx = x0 + w + 34; neon(line([[x0 + w, top + 250], [lx, top + 230], [lx, top + 70]]), '#C8C2D8', 9, 0.4); neon(circ(lx, top + 62, 26), C.red, 8, 1.2);
+  neon(rr(x0, top, w, h, 30), C.red, 5, 1.1);
+}
+
+const PM = (n) => n <= 73 ? 0.006 : Math.min(1, 0.006 + 0.06 * (n - 73));
+// pmf, 200 người (làm tròn đúng tổng)
+function model() {
+  const p = []; let S = 1; const pmf = [];
+  for (let n = 1; n <= 90; n++) { p[n] = PM(n); pmf[n] = S * p[n]; S *= 1 - p[n]; }
+  const cum = n => pmf.slice(1, n + 1).reduce((a, b) => a + b, 0);
+  const le73 = cum(73), mid = cum(80) - cum(73);
+  const mean = pmf.reduce((a, v, n) => a + n * v, 0); let c = 0, med = 0; for (let n = 1; n <= 90; n++) { c += pmf[n]; if (c >= 0.5) { med = n; break; } }
+  // Hamilton cho 200 người
+  const raw = pmf.map((v, n) => n ? v * 200 : 0), fl = raw.map(Math.floor), rem = 200 - fl.reduce((a, b) => a + b, 0);
+  const idx = raw.map((v, n) => [v - Math.floor(v), n]).filter(a => a[1]).sort((a, b) => b[0] - a[0]);
+  for (let k = 0; k < rem; k++) fl[idx[k][1]]++;
+  return { p, pmf, le73, mid, mean, med, people: fl };
+}
+
+const frames = [
+  () => {
+    const F = figure('pose-phone', 1590, 1080, 470);
+    // dạng gốc pose-phone cầm điện thoại: nhìn trái → đặt sát mép phải
+    phone(470, 96, 420, 770);
+    slot(1130, 130, 430, 740);
+    // "=" giữa + 「同じ？」: hai ống neon, một cyan một đỏ gộp thành trắng ấm
+    const mx = 800, my = 450; neon(line([[mx - 56, my - 22], [mx + 56, my - 22]]), C.cy, 6, 1); neon(line([[mx - 56, my + 22], [mx + 56, my + 22]]), C.red, 6, 1);
+    text('同じ？', mx, my + 116, `700 54px ${MIN}`, C.goldHi, 'center', 22, C.gold);
+    const T = telop('ベルギーでは、どちらも「賭博」', 910, 900, 54);
+    if (T[0] < 96 || T[0] + T[2] > 1824 || T[1] + T[3] > 1016) throw new Error('telop ngoài vùng an toàn');
+    if (T[0] + T[2] > F.x - 10) throw new Error('telop chạm mascot');
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], telop: T, contrast: CR };
+  },
+  () => {
+    const M = model();
+    must('Math.round(' + (M.le73 * 100) + ')', 36); must('Math.round(' + (M.mid * 100) + ')', 56); must('' + M.med, 76); must('Math.round(' + (M.mean * 10) + ')', 623);
+    must('' + M.people.reduce((a, b) => a + b, 0), 200);
+    must('Math.round(' + (PM(74) * 1000) + ')', 66); must('Math.round(' + (PM(90) * 1000) + ')', 1000); must('Math.round(' + (PM(73) * 1000) + ')', 6);
+    const pitch = 15.4, X0 = 150, X = n => X0 + (n - 0.5) * pitch;
+    const base = 520, hh = 300;                                              // đáy ống xác suất, chiều cao 100%
+    // tiêu đề (trái trên)
+    text('74回目から', 112, 142, `700 76px ${MIN}`, C.ink, 'left', 0);
+    neon(line([[112, 170], [112 + 330, 170]]), C.mg, 3, 0.9);
+    // trục + đường 100%
+    g.save(); g.strokeStyle = 'rgba(244,238,228,0.18)'; g.setLineDash([3, 9]); g.lineWidth = 1.5; g.beginPath(); g.moveTo(X0, base - hh); g.lineTo(X(90) + 30, base - hh); g.stroke(); g.restore();
+    text('100%', X0 - 12, base - hh + 10, `500 30px ${NS}`, C.ink, 'right');
+    text('0', X0 - 12, base + 10, `500 30px ${NS}`, C.ink, 'right');
+    // 90 cột ống neon: cyan phẳng → magenta dựng → vàng ở 90
+    for (let n = 1; n <= 90; n++) {
+      const v = M.p[n], x = X(n), top = base - Math.max(2.5, v * hh), isCap = n === 90;
+      const col = n <= 73 ? C.cy : isCap ? C.gold : C.mg;
+      if (n <= 73) { g.save(); g.fillStyle = rgba(C.cy, 0.9); g.shadowColor = C.cy; g.shadowBlur = 8; g.fillRect(x - 3.2, top, 6.4, base - top); g.restore(); }
+      else neon(line([[x, base], [x, top]]), col, 5, isCap ? 1.4 : 0.9);
+    }
+    // đáy kính
+    neon(line([[X0 - 4, base + 8], [X(90) + 24, base + 8]]), '#9AA0D8', 2, 0.4);
+    // nhãn 74 và 90
+    const x74 = X(74), x90 = X(90);
+    neon(line([[x74, base + 22], [x74, base + 44]]), C.mg, 3, 0.8); text('74', x74, base + 82, `700 40px ${NS}`, C.mg, 'center', 10);
+    neon(line([[x90, base + 22], [x90, base + 44]]), C.gold, 3, 0.8); text('90', x90, base + 82, `700 40px ${NS}`, C.gold, 'center', 10);
+    text('天井', x90 + 4, base + 130, `700 38px ${MIN}`, C.goldHi, 'center', 14, C.gold);
+    text('6.6%', x74 - 8, base - 0.066 * hh - 22, `700 32px ${NS}`, '#FF8FCF', 'right');
+    text('0.6%', X(40), base - 22, `500 30px ${NS}`, C.cy, 'center');
+    text('100%', x90 + 6, base - hh - 18, `700 32px ${NS}`, C.goldHi, 'center');
+    // 200 người: bóng xếp chồng theo lần trúng đầu; ≤73 cyan, 74–80 vàng, 81+ cyan nhạt/ magenta
+    const by0 = 940, r = 5.9, dy = 13.4, pitchD = pitch;
+    text('200人が、はじめて当たるのは何回目？', 112, by0 - 190, `700 36px ${MIN}`, C.ink);
+    for (let n = 1; n <= 90; n++) for (let k = 0; k < M.people[n]; k++) {
+      const gold = n >= 74 && n <= 80, col = gold ? C.gold : n <= 73 ? C.cy : C.mg; bulb(X(n), by0 - k * dy, r, col, gold ? 1 : 0.8);
+    }
+    neon(line([[X0 - 4, by0 + 16], [X(90) + 24, by0 + 16]]), '#9AA0D8', 2, 0.4);
+    // ngoặc 36% (1–73) và 56% (74–80)
+    const bracket = (a, b, y, col) => neon(line([[X(a) - 6, y - 10], [X(a) - 6, y], [X(b) + 6, y], [X(b) + 6, y - 10]]), col, 3, 0.9);
+    bracket(1, 73, by0 + 52, C.cy); bracket(74, 80, by0 + 52, C.gold);
+    text('36%', (X(1) + X(73)) / 2, by0 + 104, `700 56px ${NS}`, C.cy, 'center', 14);
+    text('〜73回目', (X(1) + X(73)) / 2 + 110, by0 + 104, `500 30px ${NS}`, C.ink, 'left');
+    text('56%', (X(74) + X(80)) / 2 + 12, by0 + 104, `700 64px ${NS}`, C.goldHi, 'center', 24, C.gold);
+    // 74–80 vùng sáng
+    g.save(); g.globalCompositeOperation = 'lighter'; const zx0 = X(74) - 8, zx1 = X(80) + 8, zg = g.createLinearGradient(0, by0 - 200, 0, by0 + 20); zg.addColorStop(0, 'rgba(255,200,87,0)'); zg.addColorStop(1, 'rgba(255,200,87,0.10)'); g.fillStyle = zg; g.fillRect(zx0, by0 - 200, zx1 - zx0, 220); g.restore();
+    // ảnh thật trong khung neon (góc trên-phải)
+    const px = 760, py = 100, pw = 300, ph = 200;
+    g.save(); g.clip(rr(px, py, pw, ph, 10)); g.drawImage(PHOTO, 0, 0, PHOTO.width, PHOTO.height, px, py, pw, ph); const v = g.createLinearGradient(0, py, 0, py + ph); v.addColorStop(0, 'rgba(7,6,15,0.15)'); v.addColorStop(1, 'rgba(7,6,15,0.45)'); g.fillStyle = v; g.fillRect(px, py, pw, ph); g.restore();
+    neon(rr(px, py, pw, ph, 10), C.red, 3, 0.9);
+    text('スロット', px + pw / 2, py + ph + 40, `500 28px ${NS}`, '#FF9B9B', 'center');
+    // mascot lật, chỉ vào vùng 74–80
+    const F = figure('pose-pointer', 1560, 1080, 470, true);
+    const tip = [F.x + F.w * 0.03, F.y + F.h * 0.275];
+    g.save(); g.globalCompositeOperation = 'lighter'; g.strokeStyle = rgba(C.gold, 0.5); g.lineWidth = 3; g.setLineDash([2, 10]); g.beginPath(); g.moveTo(tip[0], tip[1]); g.lineTo(X(80) + 30, by0 - 100); g.stroke(); g.restore();
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], model: { le73: M.le73, mid: M.mid, med: M.med, mean: M.mean }, tip };
+  },
+];
+
+(async () => {
+  const JA = 'ベルギーでは、どちらも「賭博」同じ？回す最初当たるのは何回目？〜スロット天井から人が、';
+  await Promise.all([
+    ...['700 54px', '700 76px', '700 36px', '700 46px'].map(f => document.fonts.load(`${f} ${MIN}`, JA)),
+    ...['700 40px', '500 30px', '800 150px', '700 44px'].map(f => document.fonts.load(`${f} ${NS}`, JA + '0123456789%.★7SSRJACKPOT')),
+  ]);
+  const load = src => new Promise((res, rej) => { const im = new Image(); im.onload = () => res(im); im.onerror = () => rej(new Error('img ' + src)); im.src = src; });
+  await Promise.all(['pose-phone', 'pose-pointer'].map(async p => { IM[p] = toCanvas(await load(`../../../assets/character-v2/cut/${p}.png`)); }));
+  const ph = await load('../../../projects/ja/gacha/assets/photos/Slot_machine.jpg');
+  PHOTO = mk(ph.width, ph.height); PHOTO.getContext('2d').drawImage(ph, 0, 0);
+  BG = background(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.drawImage(BG, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

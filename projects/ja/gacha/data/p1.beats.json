@@ -1,0 +1,185 @@
+{
+ "duration": 70.523,
+ "tempo": 1.0,
+ "voice": "49f48276",
+ "lang": "ja",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "\u30b9\u30de\u30db\u306e\u30ac\u30c1\u30e3\u3068\u3001\u30ab\u30b8\u30ce\u306e\u30b9\u30ed\u30c3\u30c8\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u30b9\u30de\u30db\u306e\u30ac\u30c1\u30e3\u3068\u3001\u30ab\u30b8\u30ce\u306e\u30b9\u30ed\u30c3\u30c8\u3002",
+   "start": 0.0,
+   "end": 2.637,
+   "wav": "audio/voice/d1feff4156da1d7e.wav"
+  },
+  {
+   "text": "\u30d9\u30eb\u30ae\u30fc\u3067\u306f\u3001\u3069\u3061\u3089\u3082\u300c{\u8ced\u535a|\u3068\u3070\u304f}\u300d\u3067\u3059\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u30d9\u30eb\u30ae\u30fc\u3067\u306f\u3001\u3069\u3061\u3089\u3082\u300c\u3068\u3070\u304f\u300d\u3067\u3059\u3002",
+   "start": 2.987,
+   "end": 5.506,
+   "wav": "audio/voice/be183cb97f22f680.wav"
+  },
+  {
+   "text": "\u65e5\u672c\u3067\u306f\u3001\u30ac\u30c1\u30e3\u306f\u5408\u6cd5\u3067\u3059\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u65e5\u672c\u3067\u306f\u3001\u30ac\u30c1\u30e3\u306f\u5408\u6cd5\u3067\u3059\u3002",
+   "start": 5.856,
+   "end": 8.069,
+   "wav": "audio/voice/896afc1c49ce7c29.wav"
+  },
+  {
+   "text": "\u4eba\u6c17\u30b2\u30fc\u30e0\u300c{\u539f\u795e|\u3052\u3093\u3057\u3093}\u300d\u3067\u3001\u6700\u9ad8\u30ec\u30a2\u306e{\u26055|\u307b\u3057\u3054}\u304c\u51fa\u308b\u78ba\u7387\u306f\u3001{0.6%|\u308c\u3044\u3066\u3093\u308d\u304f\u30d1\u30fc\u30bb\u30f3\u30c8}\u3067\u3059\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u4eba\u6c17\u30b2\u30fc\u30e0\u300c\u3052\u3093\u3057\u3093\u300d\u3067\u3001\u6700\u9ad8\u30ec\u30a2\u306e\u307b\u3057\u3054\u304c\u51fa\u308b\u78ba\u7387\u306f\u3001\u308c\u3044\u3066\u3093\u308d\u304f\u30d1\u30fc\u30bb\u30f3\u30c8\u3067\u3059\u3002",
+   "start": 8.419,
+   "end": 15.121,
+   "wav": "audio/voice/d09873b165185694.wav"
+  },
+  {
+   "text": "{1000\u4eba|\u305b\u3093\u306b\u3093}\u304c{1\u56de|\u3044\u3063\u304b\u3044}\u305a\u3064\u56de\u3059\u3068\u3001\u91d1\u8272\u306e\u5149\u3092\u898b\u308b\u306e\u306f\u3001{6\u4eba|\u308d\u304f\u306b\u3093}\u3060\u3051\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u305b\u3093\u306b\u3093\u304c\u3044\u3063\u304b\u3044\u305a\u3064\u56de\u3059\u3068\u3001\u91d1\u8272\u306e\u5149\u3092\u898b\u308b\u306e\u306f\u3001\u308d\u304f\u306b\u3093\u3060\u3051\u3002",
+   "start": 15.471,
+   "end": 20.605,
+   "wav": "audio/voice/c80ea0326a7af9fe.wav"
+  },
+  {
+   "text": "\u3053\u306e\u6570\u5b57\u3069\u304a\u308a\u306a\u3089\u3001{100\u56de|\u3072\u3083\u3063\u304b\u3044}\u56de\u3057\u3066\u3082\u3001\u534a\u5206\u4ee5\u4e0a\u306e\u4eba\u306f\u3001\u4f55\u3082\u624b\u306b\u5165\u308a\u307e\u305b\u3093\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u3053\u306e\u6570\u5b57\u3069\u304a\u308a\u306a\u3089\u3001\u3072\u3083\u3063\u304b\u3044\u56de\u3057\u3066\u3082\u3001\u534a\u5206\u4ee5\u4e0a\u306e\u4eba\u306f\u3001\u4f55\u3082\u624b\u306b\u5165\u308a\u307e\u305b\u3093\u3002",
+   "start": 20.955,
+   "end": 27.282,
+   "wav": "audio/voice/bb9e9c3e3fecaaa6.wav"
+  },
+  {
+   "text": "\u3053\u306e\u78ba\u7387\u306f\u3001\u96a0\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u3053\u306e\u78ba\u7387\u306f\u3001\u96a0\u3055\u308c\u3066\u3044\u307e\u305b\u3093\u3002",
+   "start": 27.632,
+   "end": 29.955,
+   "wav": "audio/voice/54277a55105bcfbf.wav"
+  },
+  {
+   "text": "\u753b\u9762\u306e\u78ba\u7387\u8868\u306b\u3001\u3061\u3083\u3093\u3068\u66f8\u3044\u3066\u3042\u308a\u307e\u3059\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u753b\u9762\u306e\u78ba\u7387\u8868\u306b\u3001\u3061\u3083\u3093\u3068\u66f8\u3044\u3066\u3042\u308a\u307e\u3059\u3002",
+   "start": 30.305,
+   "end": 33.415,
+   "wav": "audio/voice/9e789a6431d7477b.wav"
+  },
+  {
+   "text": "\u305d\u308c\u3067\u3082\u3001{\u79c1|\u308f\u305f\u3057}\u305f\u3061\u306f\u56de\u3057\u3066\u3057\u307e\u3046\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u305d\u308c\u3067\u3082\u3001\u308f\u305f\u3057\u305f\u3061\u306f\u56de\u3057\u3066\u3057\u307e\u3046\u3002",
+   "start": 33.765,
+   "end": 36.452,
+   "wav": "audio/voice/761f790188c71d2c.wav"
+  },
+  {
+   "text": "\u7406\u7531\u306f\u3001\u78ba\u7387\u3067\u306f\u3042\u308a\u307e\u305b\u3093\u3002\u8a2d\u8a08\u3067\u3059\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u7406\u7531\u306f\u3001\u78ba\u7387\u3067\u306f\u3042\u308a\u307e\u305b\u3093\u3002\u8a2d\u8a08\u3067\u3059\u3002",
+   "start": 36.802,
+   "end": 39.841,
+   "wav": "audio/voice/7cff22a0a1d7fb8c.wav"
+  },
+  {
+   "text": "\u3057\u304b\u3082\u3001\u672c\u5f53\u306e\u30ac\u30c1\u30e3\u306f\u3001\u3053\u306e\u6570\u5b57\u3069\u304a\u308a\u306b\u306f\u52d5\u3044\u3066\u3044\u307e\u305b\u3093\u3002",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u3057\u304b\u3082\u3001\u672c\u5f53\u306e\u30ac\u30c1\u30e3\u306f\u3001\u3053\u306e\u6570\u5b57\u3069\u304a\u308a\u306b\u306f\u52d5\u3044\u3066\u3044\u307e\u305b\u3093\u3002",
+   "start": 40.191,
+   "end": 44.847,
+   "wav": "audio/voice/548a42dc6d65052b.wav"
+  },
+  {
+   "text": "\u3053\u306e\u52d5\u753b\u3067\u306f\u3001{3\u3064|\u307f\u3063\u3064}\u306e\u554f\u3044\u306b\u7b54\u3048\u3066\u3044\u304d\u307e\u3059\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u3053\u306e\u52d5\u753b\u3067\u306f\u3001\u307f\u3063\u3064\u306e\u554f\u3044\u306b\u7b54\u3048\u3066\u3044\u304d\u307e\u3059\u3002",
+   "start": 45.797,
+   "end": 49.371,
+   "wav": "audio/voice/f6305c68d272fe58.wav"
+  },
+  {
+   "text": "{1\u3064\u76ee|\u3072\u3068\u3064\u3081}\u3002{0.6%|\u308c\u3044\u3066\u3093\u308d\u304f\u30d1\u30fc\u30bb\u30f3\u30c8}\u3068\u77e5\u3063\u3066\u3044\u3066\u3001\u306a\u305c\u56de\u3057\u3066\u3057\u307e\u3046\u306e\u304b\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u3072\u3068\u3064\u3081\u3002\u308c\u3044\u3066\u3093\u308d\u304f\u30d1\u30fc\u30bb\u30f3\u30c8\u3068\u77e5\u3063\u3066\u3044\u3066\u3001\u306a\u305c\u56de\u3057\u3066\u3057\u307e\u3046\u306e\u304b\u3002",
+   "start": 49.721,
+   "end": 55.007,
+   "wav": "audio/voice/9633f06a95935ebd.wav"
+  },
+  {
+   "text": "{2\u3064\u76ee|\u3075\u305f\u3064\u3081}\u3002\u78ba\u7387\u8868\u306e\u6570\u5b57\u306e\u88cf\u3067\u3001\u4f55\u304c\u8d77\u304d\u3066\u3044\u308b\u306e\u304b\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u3075\u305f\u3064\u3081\u3002\u78ba\u7387\u8868\u306e\u6570\u5b57\u306e\u88cf\u3067\u3001\u4f55\u304c\u8d77\u304d\u3066\u3044\u308b\u306e\u304b\u3002",
+   "start": 55.357,
+   "end": 59.478,
+   "wav": "audio/voice/51ff6e3aec3eb20c.wav"
+  },
+  {
+   "text": "{3\u3064\u76ee|\u307f\u3063\u3064\u3081}\u3002\u306a\u305c\u30d9\u30eb\u30ae\u30fc\u3067\u306f\u9055\u6cd5\u3067\u3001\u65e5\u672c\u3067\u306f\u5408\u6cd5\u306a\u306e\u304b\u3002",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u307f\u3063\u3064\u3081\u3002\u306a\u305c\u30d9\u30eb\u30ae\u30fc\u3067\u306f\u9055\u6cd5\u3067\u3001\u65e5\u672c\u3067\u306f\u5408\u6cd5\u306a\u306e\u304b\u3002",
+   "start": 59.828,
+   "end": 64.188,
+   "wav": "audio/voice/86d655f3717cb738.wav"
+  },
+  {
+   "text": "\u6570\u5b66\u3068\u3001\u8133\u306e\u7814\u7a76\u3068\u3001\u5404\u56fd\u306e\u6cd5\u5f8b\u304b\u3089\u3001\u9806\u756a\u306b\u307b\u3069\u3044\u3066\u3044\u304d\u307e\u3059\u3002",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "\u6570\u5b66\u3068\u3001\u8133\u306e\u7814\u7a76\u3068\u3001\u5404\u56fd\u306e\u6cd5\u5f8b\u304b\u3089\u3001\u9806\u756a\u306b\u307b\u3069\u3044\u3066\u3044\u304d\u307e\u3059\u3002",
+   "start": 64.538,
+   "end": 69.573,
+   "wav": "audio/voice/23dfdd3836febfe2.wav"
+  }
+ ]
+}

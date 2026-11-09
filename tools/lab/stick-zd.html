@@ -1,0 +1,54 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — stick zero-div</title>
+<style>html,body{margin:0;background:#F2EEE3;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử người que cho zero-div (mở bài, câu "…nobody has managed to patch it"): vác miếng vá dọc trục số → lấy đà →
+// ném → miếng vá nằm lên lỗ ở 0 → rơi tuột → người que cúi nhìn, đứng lên gãi đầu. Màu theo DNA zero-div (mực navy).
+// Gác: node tools/lab/stick2-qa.mjs tools/lab/stick-zd-scene.js
+// Clip: node engine/render/shoot.js video --page tools/lab/stick-zd.html --dur 8 --audio out/_lab/silence12.wav --out out/_lab/stick-zd.mp4
+import { stick } from '../../engine/stick.js';
+import { actor, H, DIR, NY, HX, HR, PATCH, SCENE } from './stick-zd-scene.js';
+const g = document.getElementById('cv').getContext('2d');
+const PAPER = '#F2EEE3', GRIDC = '#C9D6E3', INK = '#1C2640', RED = '#C8382A', DIM = '#7C869B';
+let fontsReady = false;
+Promise.all([new FontFace('Archivo', 'url("../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load()
+  .then(f => document.fonts.add(f)).catch(() => {})]).then(() => { fontsReady = true; });
+
+function page() {
+  g.fillStyle = PAPER; g.fillRect(0, 0, 1920, 1080);
+  g.strokeStyle = GRIDC; g.lineWidth = 1; g.globalAlpha = 0.6;
+  for (let x = 24; x < 1920; x += 48) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, 1080); g.stroke(); }
+  for (let y = 12; y < 1080; y += 48) { g.beginPath(); g.moveTo(0, y); g.lineTo(1920, y); g.stroke(); }
+  g.globalAlpha = 1;
+  // trục số −5 … 5, số 0 ở HX — mặt đất của người que
+  g.strokeStyle = INK; g.lineWidth = 5; g.lineCap = 'round';
+  g.beginPath(); g.moveTo(340, NY); g.lineTo(1580, NY); g.stroke();
+  g.font = '800 42px Archivo, sans-serif'; g.textAlign = 'center'; g.fillStyle = INK;
+  for (let i = -5; i <= 5; i++) { if (!i) continue; const x = HX + i * 110;
+    g.beginPath(); g.moveTo(x, NY - 16); g.lineTo(x, NY + 16); g.stroke(); g.fillText(i < 0 ? '−' + -i : String(i), x, NY + 66); }
+}
+function hole() {
+  g.fillStyle = '#0A0A0D'; g.beginPath(); g.ellipse(HX, NY, HR, HR, 0, 0, 7); g.fill();
+  g.strokeStyle = '#FFFDF6'; g.lineWidth = 5; g.stroke();
+}
+function patch(P) {
+  const s = 1 - 0.9 * P.fall; if (s <= 0.05) return;
+  g.save(); g.translate(P.c[0], P.c[1]); g.rotate(P.rot); g.scale(s, s);
+  if (P.fall > 0) { g.globalAlpha = 1 - P.fall * 0.3; }
+  g.fillStyle = 'rgba(244,236,205,0.97)'; g.fillRect(-PATCH.w / 2, -PATCH.h / 2, PATCH.w, PATCH.h);
+  g.strokeStyle = 'rgba(28,38,64,.35)'; g.lineWidth = 2; g.strokeRect(-PATCH.w / 2, -PATCH.h / 2, PATCH.w, PATCH.h);
+  g.fillStyle = DIM; g.font = '700 26px Archivo, sans-serif'; g.textAlign = 'center'; g.fillText('PATCH', 0, 9);
+  g.restore();
+}
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  page(); hole();
+  const A = actor(t);
+  patch(A.patch);
+  stick(g, A.hip[0], 0, A.pose, { h: H, color: INK, dir: DIR, hip: A.hip, feet: A.feet, hands: A.hands });
+  g.fillStyle = 'rgba(28,38,64,0.5)'; g.font = '600 26px Archivo, sans-serif'; g.textAlign = 'left';
+  g.fillText(`stick · zero-div · ${A.phase} · t ${t.toFixed(2)}`, 60, 70);
+}
+window.__intro = { get ready() { return fontsReady; }, still: frame, frame, DUR: SCENE.dur };
+</script>

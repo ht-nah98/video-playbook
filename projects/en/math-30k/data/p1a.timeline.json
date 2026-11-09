@@ -1,0 +1,1214 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 57.915
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "In twelve ninety-nine, the city of Florence banned the numbers you use every single day.",
+   "idea": false,
+   "start": 0.02,
+   "end": 4.175,
+   "words": [
+    {
+     "w": "in",
+     "start": 0.02,
+     "end": 0.08,
+     "conf": 0.998
+    },
+    {
+     "w": "twelve",
+     "start": 0.1,
+     "end": 0.401,
+     "conf": 0.004
+    },
+    {
+     "w": "ninety-nine",
+     "start": 0.422,
+     "end": 1.044,
+     "conf": 0.0
+    },
+    {
+     "w": "the",
+     "start": 1.064,
+     "end": 1.144,
+     "conf": 0.993
+    },
+    {
+     "w": "city",
+     "start": 1.285,
+     "end": 1.526,
+     "conf": 0.999
+    },
+    {
+     "w": "of",
+     "start": 1.626,
+     "end": 1.666,
+     "conf": 0.492
+    },
+    {
+     "w": "florence",
+     "start": 1.746,
+     "end": 2.128,
+     "conf": 0.729
+    },
+    {
+     "w": "banned",
+     "start": 2.228,
+     "end": 2.509,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 2.529,
+     "end": 2.609,
+     "conf": 0.986
+    },
+    {
+     "w": "numbers",
+     "start": 2.63,
+     "end": 2.951,
+     "conf": 0.981
+    },
+    {
+     "w": "you",
+     "start": 2.971,
+     "end": 3.071,
+     "conf": 0.885
+    },
+    {
+     "w": "use",
+     "start": 3.172,
+     "end": 3.312,
+     "conf": 0.849
+    },
+    {
+     "w": "every",
+     "start": 3.432,
+     "end": 3.633,
+     "conf": 0.754
+    },
+    {
+     "w": "single",
+     "start": 3.734,
+     "end": 3.954,
+     "conf": 0.833
+    },
+    {
+     "w": "day",
+     "start": 3.974,
+     "end": 4.175,
+     "conf": 0.993
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Zero was once treated as nothing at all. Negative numbers were called fictitious.",
+   "idea": false,
+   "start": 4.605,
+   "end": 8.728,
+   "words": [
+    {
+     "w": "zero",
+     "start": 4.605,
+     "end": 4.826,
+     "conf": 0.782
+    },
+    {
+     "w": "was",
+     "start": 4.887,
+     "end": 4.987,
+     "conf": 0.996
+    },
+    {
+     "w": "once",
+     "start": 5.088,
+     "end": 5.289,
+     "conf": 0.946
+    },
+    {
+     "w": "treated",
+     "start": 5.349,
+     "end": 5.631,
+     "conf": 0.874
+    },
+    {
+     "w": "as",
+     "start": 5.651,
+     "end": 5.731,
+     "conf": 1.0
+    },
+    {
+     "w": "nothing",
+     "start": 5.832,
+     "end": 6.113,
+     "conf": 0.981
+    },
+    {
+     "w": "at",
+     "start": 6.174,
+     "end": 6.254,
+     "conf": 0.5
+    },
+    {
+     "w": "all",
+     "start": 6.375,
+     "end": 6.536,
+     "conf": 0.645
+    },
+    {
+     "w": "negative",
+     "start": 6.938,
+     "end": 7.3,
+     "conf": 0.879
+    },
+    {
+     "w": "numbers",
+     "start": 7.32,
+     "end": 7.581,
+     "conf": 0.996
+    },
+    {
+     "w": "were",
+     "start": 7.602,
+     "end": 7.742,
+     "conf": 0.8
+    },
+    {
+     "w": "called",
+     "start": 7.762,
+     "end": 8.044,
+     "conf": 1.0
+    },
+    {
+     "w": "fictitious",
+     "start": 8.145,
+     "end": 8.728,
+     "conf": 0.798
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "The square root of minus one was dismissed as useless.",
+   "idea": false,
+   "start": 9.179,
+   "end": 11.511,
+   "words": [
+    {
+     "w": "the",
+     "start": 9.179,
+     "end": 9.239,
+     "conf": 0.92
+    },
+    {
+     "w": "square",
+     "start": 9.3,
+     "end": 9.581,
+     "conf": 0.621
+    },
+    {
+     "w": "root",
+     "start": 9.601,
+     "end": 9.722,
+     "conf": 0.409
+    },
+    {
+     "w": "of",
+     "start": 9.742,
+     "end": 9.802,
+     "conf": 0.814
+    },
+    {
+     "w": "minus",
+     "start": 9.863,
+     "end": 10.144,
+     "conf": 0.617
+    },
+    {
+     "w": "one",
+     "start": 10.305,
+     "end": 10.365,
+     "conf": 0.456
+    },
+    {
+     "w": "was",
+     "start": 10.426,
+     "end": 10.506,
+     "conf": 0.665
+    },
+    {
+     "w": "dismissed",
+     "start": 10.566,
+     "end": 10.968,
+     "conf": 0.851
+    },
+    {
+     "w": "as",
+     "start": 10.989,
+     "end": 11.069,
+     "conf": 0.662
+    },
+    {
+     "w": "useless",
+     "start": 11.169,
+     "end": 11.511,
+     "conf": 0.923
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And a man who claimed that some infinities are bigger than others was called a corrupter of youth.",
+   "idea": true,
+   "start": 11.941,
+   "end": 16.881,
+   "words": [
+    {
+     "w": "and",
+     "start": 11.941,
+     "end": 12.021,
+     "conf": 0.995
+    },
+    {
+     "w": "a",
+     "start": 12.041,
+     "end": 12.062,
+     "conf": 0.993
+    },
+    {
+     "w": "man",
+     "start": 12.102,
+     "end": 12.363,
+     "conf": 1.0
+    },
+    {
+     "w": "who",
+     "start": 12.644,
+     "end": 12.724,
+     "conf": 0.999
+    },
+    {
+     "w": "claimed",
+     "start": 12.845,
+     "end": 13.226,
+     "conf": 0.857
+    },
+    {
+     "w": "that",
+     "start": 13.347,
+     "end": 13.487,
+     "conf": 0.792
+    },
+    {
+     "w": "some",
+     "start": 13.668,
+     "end": 13.809,
+     "conf": 0.75
+    },
+    {
+     "w": "infinities",
+     "start": 13.869,
+     "end": 14.431,
+     "conf": 0.853
+    },
+    {
+     "w": "are",
+     "start": 14.531,
+     "end": 14.612,
+     "conf": 0.737
+    },
+    {
+     "w": "bigger",
+     "start": 14.652,
+     "end": 14.833,
+     "conf": 0.739
+    },
+    {
+     "w": "than",
+     "start": 14.853,
+     "end": 14.993,
+     "conf": 0.799
+    },
+    {
+     "w": "others",
+     "start": 15.074,
+     "end": 15.375,
+     "conf": 0.812
+    },
+    {
+     "w": "was",
+     "start": 15.395,
+     "end": 15.636,
+     "conf": 0.666
+    },
+    {
+     "w": "called",
+     "start": 15.716,
+     "end": 15.957,
+     "conf": 0.854
+    },
+    {
+     "w": "a",
+     "start": 15.977,
+     "end": 15.997,
+     "conf": 0.994
+    },
+    {
+     "w": "corrupter",
+     "start": 16.058,
+     "end": 16.499,
+     "conf": 0.862
+    },
+    {
+     "w": "of",
+     "start": 16.519,
+     "end": 16.6,
+     "conf": 0.664
+    },
+    {
+     "w": "youth",
+     "start": 16.66,
+     "end": 16.881,
+     "conf": 0.771
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Today, every one of those ideas sits quietly in a school textbook.",
+   "idea": false,
+   "start": 17.911,
+   "end": 20.996,
+   "words": [
+    {
+     "w": "today",
+     "start": 17.911,
+     "end": 18.173,
+     "conf": 0.999
+    },
+    {
+     "w": "every",
+     "start": 18.355,
+     "end": 18.516,
+     "conf": 0.997
+    },
+    {
+     "w": "one",
+     "start": 18.576,
+     "end": 18.657,
+     "conf": 0.974
+    },
+    {
+     "w": "of",
+     "start": 18.677,
+     "end": 18.718,
+     "conf": 0.979
+    },
+    {
+     "w": "those",
+     "start": 18.738,
+     "end": 18.919,
+     "conf": 0.999
+    },
+    {
+     "w": "ideas",
+     "start": 19.02,
+     "end": 19.262,
+     "conf": 0.742
+    },
+    {
+     "w": "sits",
+     "start": 19.363,
+     "end": 19.524,
+     "conf": 0.749
+    },
+    {
+     "w": "quietly",
+     "start": 19.645,
+     "end": 20.048,
+     "conf": 0.84
+    },
+    {
+     "w": "in",
+     "start": 20.129,
+     "end": 20.169,
+     "conf": 0.498
+    },
+    {
+     "w": "a",
+     "start": 20.209,
+     "end": 20.229,
+     "conf": 0.934
+    },
+    {
+     "w": "school",
+     "start": 20.31,
+     "end": 20.512,
+     "conf": 0.819
+    },
+    {
+     "w": "textbook",
+     "start": 20.592,
+     "end": 20.996,
+     "conf": 0.829
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "The maths you learned at school, from simple addition all the way to derivatives and integrals, did not just appear on its own.",
+   "idea": false,
+   "start": 21.406,
+   "end": 27.916,
+   "words": [
+    {
+     "w": "the",
+     "start": 21.406,
+     "end": 21.466,
+     "conf": 0.003
+    },
+    {
+     "w": "maths",
+     "start": 21.486,
+     "end": 21.767,
+     "conf": 0.686
+    },
+    {
+     "w": "you",
+     "start": 21.827,
+     "end": 21.887,
+     "conf": 0.629
+    },
+    {
+     "w": "learned",
+     "start": 21.907,
+     "end": 22.147,
+     "conf": 0.868
+    },
+    {
+     "w": "at",
+     "start": 22.167,
+     "end": 22.247,
+     "conf": 0.996
+    },
+    {
+     "w": "school",
+     "start": 22.327,
+     "end": 22.588,
+     "conf": 0.847
+    },
+    {
+     "w": "from",
+     "start": 22.948,
+     "end": 23.088,
+     "conf": 0.999
+    },
+    {
+     "w": "simple",
+     "start": 23.209,
+     "end": 23.529,
+     "conf": 0.816
+    },
+    {
+     "w": "addition",
+     "start": 23.589,
+     "end": 23.99,
+     "conf": 0.851
+    },
+    {
+     "w": "all",
+     "start": 24.17,
+     "end": 24.25,
+     "conf": 0.334
+    },
+    {
+     "w": "the",
+     "start": 24.27,
+     "end": 24.35,
+     "conf": 0.89
+    },
+    {
+     "w": "way",
+     "start": 24.39,
+     "end": 24.511,
+     "conf": 0.667
+    },
+    {
+     "w": "to",
+     "start": 24.591,
+     "end": 24.631,
+     "conf": 0.499
+    },
+    {
+     "w": "derivatives",
+     "start": 24.711,
+     "end": 25.292,
+     "conf": 0.907
+    },
+    {
+     "w": "and",
+     "start": 25.312,
+     "end": 25.412,
+     "conf": 0.748
+    },
+    {
+     "w": "integrals",
+     "start": 25.432,
+     "end": 25.893,
+     "conf": 0.915
+    },
+    {
+     "w": "did",
+     "start": 26.473,
+     "end": 26.574,
+     "conf": 0.666
+    },
+    {
+     "w": "not",
+     "start": 26.654,
+     "end": 26.794,
+     "conf": 0.969
+    },
+    {
+     "w": "just",
+     "start": 26.874,
+     "end": 27.054,
+     "conf": 0.78
+    },
+    {
+     "w": "appear",
+     "start": 27.114,
+     "end": 27.395,
+     "conf": 0.802
+    },
+    {
+     "w": "on",
+     "start": 27.455,
+     "end": 27.515,
+     "conf": 0.616
+    },
+    {
+     "w": "its",
+     "start": 27.555,
+     "end": 27.655,
+     "conf": 0.664
+    },
+    {
+     "w": "own",
+     "start": 27.775,
+     "end": 27.916,
+     "conf": 0.655
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Every symbol, every rule, every concept was invented, at a particular moment, inside one particular person's head.",
+   "idea": false,
+   "start": 28.346,
+   "end": 34.059,
+   "words": [
+    {
+     "w": "every",
+     "start": 28.346,
+     "end": 28.546,
+     "conf": 0.998
+    },
+    {
+     "w": "symbol",
+     "start": 28.647,
+     "end": 29.028,
+     "conf": 0.768
+    },
+    {
+     "w": "every",
+     "start": 29.148,
+     "end": 29.308,
+     "conf": 0.998
+    },
+    {
+     "w": "rule",
+     "start": 29.428,
+     "end": 29.689,
+     "conf": 0.687
+    },
+    {
+     "w": "every",
+     "start": 29.789,
+     "end": 29.909,
+     "conf": 0.797
+    },
+    {
+     "w": "concept",
+     "start": 29.99,
+     "end": 30.35,
+     "conf": 0.856
+    },
+    {
+     "w": "was",
+     "start": 30.371,
+     "end": 30.471,
+     "conf": 0.999
+    },
+    {
+     "w": "invented",
+     "start": 30.491,
+     "end": 30.932,
+     "conf": 0.999
+    },
+    {
+     "w": "at",
+     "start": 31.032,
+     "end": 31.092,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 31.112,
+     "end": 31.132,
+     "conf": 0.996
+    },
+    {
+     "w": "particular",
+     "start": 31.192,
+     "end": 31.673,
+     "conf": 0.9
+    },
+    {
+     "w": "moment",
+     "start": 31.733,
+     "end": 32.054,
+     "conf": 0.843
+    },
+    {
+     "w": "inside",
+     "start": 32.295,
+     "end": 32.676,
+     "conf": 0.832
+    },
+    {
+     "w": "one",
+     "start": 32.776,
+     "end": 32.876,
+     "conf": 0.666
+    },
+    {
+     "w": "particular",
+     "start": 32.916,
+     "end": 33.397,
+     "conf": 1.0
+    },
+    {
+     "w": "person's",
+     "start": 33.417,
+     "end": 33.818,
+     "conf": 0.931
+    },
+    {
+     "w": "head",
+     "start": 33.858,
+     "end": 34.059,
+     "conf": 0.97
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And many of them were once seen as crazy, forbidden, or simply meaningless, long before they became something every student learns by heart.",
+   "idea": true,
+   "start": 34.488,
+   "end": 41.616,
+   "words": [
+    {
+     "w": "and",
+     "start": 34.488,
+     "end": 34.608,
+     "conf": 0.749
+    },
+    {
+     "w": "many",
+     "start": 34.628,
+     "end": 34.808,
+     "conf": 0.8
+    },
+    {
+     "w": "of",
+     "start": 34.888,
+     "end": 34.929,
+     "conf": 0.5
+    },
+    {
+     "w": "them",
+     "start": 34.949,
+     "end": 35.069,
+     "conf": 0.944
+    },
+    {
+     "w": "were",
+     "start": 35.089,
+     "end": 35.229,
+     "conf": 0.929
+    },
+    {
+     "w": "once",
+     "start": 35.289,
+     "end": 35.429,
+     "conf": 0.796
+    },
+    {
+     "w": "seen",
+     "start": 35.449,
+     "end": 35.649,
+     "conf": 0.668
+    },
+    {
+     "w": "as",
+     "start": 35.669,
+     "end": 35.75,
+     "conf": 0.996
+    },
+    {
+     "w": "crazy",
+     "start": 35.87,
+     "end": 36.31,
+     "conf": 0.599
+    },
+    {
+     "w": "forbidden",
+     "start": 36.57,
+     "end": 36.991,
+     "conf": 0.877
+    },
+    {
+     "w": "or",
+     "start": 37.411,
+     "end": 37.472,
+     "conf": 0.475
+    },
+    {
+     "w": "simply",
+     "start": 37.572,
+     "end": 37.852,
+     "conf": 0.815
+    },
+    {
+     "w": "meaningless",
+     "start": 38.012,
+     "end": 38.513,
+     "conf": 0.897
+    },
+    {
+     "w": "long",
+     "start": 38.853,
+     "end": 38.973,
+     "conf": 0.798
+    },
+    {
+     "w": "before",
+     "start": 38.993,
+     "end": 39.214,
+     "conf": 0.572
+    },
+    {
+     "w": "they",
+     "start": 39.234,
+     "end": 39.334,
+     "conf": 0.998
+    },
+    {
+     "w": "became",
+     "start": 39.354,
+     "end": 39.654,
+     "conf": 0.992
+    },
+    {
+     "w": "something",
+     "start": 39.714,
+     "end": 40.035,
+     "conf": 0.868
+    },
+    {
+     "w": "every",
+     "start": 40.155,
+     "end": 40.355,
+     "conf": 0.799
+    },
+    {
+     "w": "student",
+     "start": 40.455,
+     "end": 40.815,
+     "conf": 0.974
+    },
+    {
+     "w": "learns",
+     "start": 40.916,
+     "end": 41.156,
+     "conf": 0.817
+    },
+    {
+     "w": "by",
+     "start": 41.176,
+     "end": 41.276,
+     "conf": 0.999
+    },
+    {
+     "w": "heart",
+     "start": 41.356,
+     "end": 41.616,
+     "conf": 0.861
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So in this video, we'll walk along the timeline together, from the very first mark to the machine in your pocket.",
+   "idea": false,
+   "start": 42.647,
+   "end": 48.143,
+   "words": [
+    {
+     "w": "so",
+     "start": 42.647,
+     "end": 42.687,
+     "conf": 0.988
+    },
+    {
+     "w": "in",
+     "start": 42.747,
+     "end": 42.787,
+     "conf": 0.687
+    },
+    {
+     "w": "this",
+     "start": 42.808,
+     "end": 42.948,
+     "conf": 0.996
+    },
+    {
+     "w": "video",
+     "start": 42.988,
+     "end": 43.229,
+     "conf": 1.0
+    },
+    {
+     "w": "we'll",
+     "start": 43.59,
+     "end": 43.73,
+     "conf": 0.593
+    },
+    {
+     "w": "walk",
+     "start": 43.79,
+     "end": 43.971,
+     "conf": 0.749
+    },
+    {
+     "w": "along",
+     "start": 44.031,
+     "end": 44.211,
+     "conf": 0.8
+    },
+    {
+     "w": "the",
+     "start": 44.232,
+     "end": 44.312,
+     "conf": 0.999
+    },
+    {
+     "w": "timeline",
+     "start": 44.332,
+     "end": 44.853,
+     "conf": 0.917
+    },
+    {
+     "w": "together",
+     "start": 44.934,
+     "end": 45.275,
+     "conf": 0.804
+    },
+    {
+     "w": "from",
+     "start": 45.636,
+     "end": 45.756,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 45.776,
+     "end": 45.856,
+     "conf": 0.748
+    },
+    {
+     "w": "very",
+     "start": 45.916,
+     "end": 46.097,
+     "conf": 0.75
+    },
+    {
+     "w": "first",
+     "start": 46.217,
+     "end": 46.438,
+     "conf": 0.8
+    },
+    {
+     "w": "mark",
+     "start": 46.498,
+     "end": 46.759,
+     "conf": 0.75
+    },
+    {
+     "w": "to",
+     "start": 47.08,
+     "end": 47.12,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 47.14,
+     "end": 47.22,
+     "conf": 0.748
+    },
+    {
+     "w": "machine",
+     "start": 47.24,
+     "end": 47.621,
+     "conf": 0.852
+    },
+    {
+     "w": "in",
+     "start": 47.661,
+     "end": 47.701,
+     "conf": 0.5
+    },
+    {
+     "w": "your",
+     "start": 47.721,
+     "end": 47.862,
+     "conf": 0.606
+    },
+    {
+     "w": "pocket",
+     "start": 47.902,
+     "end": 48.143,
+     "conf": 0.624
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "We'll stop at each turning point, to see what was invented, and why it changed everything.",
+   "idea": false,
+   "start": 48.533,
+   "end": 52.912,
+   "words": [
+    {
+     "w": "we'll",
+     "start": 48.533,
+     "end": 48.674,
+     "conf": 0.198
+    },
+    {
+     "w": "stop",
+     "start": 48.754,
+     "end": 49.015,
+     "conf": 0.766
+    },
+    {
+     "w": "at",
+     "start": 49.095,
+     "end": 49.136,
+     "conf": 0.5
+    },
+    {
+     "w": "each",
+     "start": 49.216,
+     "end": 49.357,
+     "conf": 0.796
+    },
+    {
+     "w": "turning",
+     "start": 49.437,
+     "end": 49.738,
+     "conf": 0.862
+    },
+    {
+     "w": "point",
+     "start": 49.798,
+     "end": 50.019,
+     "conf": 0.805
+    },
+    {
+     "w": "to",
+     "start": 50.08,
+     "end": 50.14,
+     "conf": 0.5
+    },
+    {
+     "w": "see",
+     "start": 50.24,
+     "end": 50.361,
+     "conf": 0.666
+    },
+    {
+     "w": "what",
+     "start": 50.381,
+     "end": 50.542,
+     "conf": 0.833
+    },
+    {
+     "w": "was",
+     "start": 50.562,
+     "end": 50.682,
+     "conf": 1.0
+    },
+    {
+     "w": "invented",
+     "start": 50.743,
+     "end": 51.225,
+     "conf": 0.875
+    },
+    {
+     "w": "and",
+     "start": 51.606,
+     "end": 51.687,
+     "conf": 0.665
+    },
+    {
+     "w": "why",
+     "start": 51.767,
+     "end": 51.988,
+     "conf": 0.976
+    },
+    {
+     "w": "it",
+     "start": 52.048,
+     "end": 52.108,
+     "conf": 0.5
+    },
+    {
+     "w": "changed",
+     "start": 52.169,
+     "end": 52.49,
+     "conf": 0.857
+    },
+    {
+     "w": "everything",
+     "start": 52.51,
+     "end": 52.912,
+     "conf": 0.911
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And the first stop is much older, and much simpler, than you might think.",
+   "idea": true,
+   "start": 53.583,
+   "end": 56.905,
+   "words": [
+    {
+     "w": "and",
+     "start": 53.583,
+     "end": 53.663,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 53.684,
+     "end": 53.744,
+     "conf": 0.998
+    },
+    {
+     "w": "first",
+     "start": 53.825,
+     "end": 54.066,
+     "conf": 0.797
+    },
+    {
+     "w": "stop",
+     "start": 54.086,
+     "end": 54.308,
+     "conf": 0.999
+    },
+    {
+     "w": "is",
+     "start": 54.388,
+     "end": 54.428,
+     "conf": 0.5
+    },
+    {
+     "w": "much",
+     "start": 54.529,
+     "end": 54.71,
+     "conf": 0.772
+    },
+    {
+     "w": "older",
+     "start": 54.851,
+     "end": 55.113,
+     "conf": 0.824
+    },
+    {
+     "w": "and",
+     "start": 55.294,
+     "end": 55.375,
+     "conf": 0.666
+    },
+    {
+     "w": "much",
+     "start": 55.395,
+     "end": 55.576,
+     "conf": 0.833
+    },
+    {
+     "w": "simpler",
+     "start": 55.656,
+     "end": 55.979,
+     "conf": 0.853
+    },
+    {
+     "w": "than",
+     "start": 56.24,
+     "end": 56.361,
+     "conf": 0.988
+    },
+    {
+     "w": "you",
+     "start": 56.381,
+     "end": 56.462,
+     "conf": 0.749
+    },
+    {
+     "w": "might",
+     "start": 56.482,
+     "end": 56.683,
+     "conf": 0.823
+    },
+    {
+     "w": "think",
+     "start": 56.703,
+     "end": 56.905,
+     "conf": 0.871
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,180 @@
+{
+ "cta": "FULL VIDEO ▶ link below",
+ "shorts": [
+  {
+   "name": "halfway",
+   "hook": [
+    "HALFWAY: 1 TO −1",
+    "{NOT ALWAYS 0}"
+   ],
+   "pieces": [
+    {
+     "from": "p1:0",
+     "to": "p1:1",
+     "crop": [
+      1760,
+      30,
+      30,
+      0
+     ]
+    },
+    {
+     "from": "p2:40",
+     "to": "p2:40",
+     "crop": [
+      1215,
+      400,
+      400,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "three-plus-four",
+   "hook": [
+    "3 VOLTS + 4 VOLTS",
+    "PEAK AT {5 VOLTS}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:66",
+     "to": "p2:69",
+     "crop": [
+      1780,
+      70,
+      70,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "neg-times-neg",
+   "hook": [
+    "NEGATIVE × NEGATIVE:",
+    "WHY {POSITIVE}?"
+   ],
+   "pieces": [
+    {
+     "from": "p2:3",
+     "to": "p2:6",
+     "crop": [
+      1400,
+      260,
+      260,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "i-to-the-100",
+   "hook": [
+    "i TO THE POWER 100?",
+    "{EASY}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:41",
+     "to": "p2:42",
+     "crop": [
+      1500,
+      200,
+      200,
+      0
+     ]
+    },
+    {
+     "from": "p2:43",
+     "to": "p2:43",
+     "crop": [
+      960,
+      920,
+      920,
+      0
+     ],
+     "tail": -0.25
+    }
+   ]
+  },
+  {
+   "name": "forbidden-four",
+   "hook": [
+    "THE ANSWER IS 4",
+    "BUT THE ROAD NEEDS",
+    "{√−121}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:17",
+     "to": "p2:20",
+     "crop": [
+      1780,
+      70,
+      70,
+      0
+     ]
+    },
+    {
+     "from": "p2:22",
+     "to": "p2:22",
+     "crop": [
+      1780,
+      70,
+      70,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "quarter-turn",
+   "hook": [
+    "√−1 IS NO MYSTERY",
+    "IT'S A {QUARTER TURN}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:8",
+     "to": "p2:9",
+     "crop": [
+      1780,
+      70,
+      70,
+      0
+     ]
+    },
+    {
+     "from": "p2:34",
+     "to": "p2:38",
+     "crop": [
+      1780,
+      70,
+      70,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "wave-arrow",
+   "hook": [
+    "EVERY SMOOTH WAVE:",
+    "A {TURNING ARROW}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:63",
+     "to": "p2:65",
+     "crop": [
+      1840,
+      40,
+      40,
+      0
+     ]
+    }
+   ]
+  }
+ ]
+}

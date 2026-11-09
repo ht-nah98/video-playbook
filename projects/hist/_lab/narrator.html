@@ -1,0 +1,50 @@
+<!doctype html><meta charset="utf-8">
+<title>hist lab — người dẫn v2 (bảng thiết kế + đồ)</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử (người dùng 2026-10-28): (1) người dẫn thiết kế v2 — tóc đen búi củ tỏi, hông cạo, cười toe, má hồng (bỏ "cục đen
+// sau đầu"); (2) DNA "người dẫn là người trong cuộc" — sát thủ thứ bảy đứng hóng, khán giả xem xe, ngồi ghế phụ cạnh tài xế.
+// Dùng ĐÚNG kit sẽ dựng tập: _kit/stage.js + _kit/narrator.js.
+//   t 0–15 clip · t 20 bảng thiết kế · t 21 bảng đồ
+import { INK } from '../_kit/mapkit.js';
+import * as S from '../_kit/stage.js';
+import { bindNarrator, narrator, cornerHost, mouthAt } from '../_kit/narrator.js';
+const g = document.getElementById('cv').getContext('2d');
+const { W, H, clamp, lerp, easeOut } = S;
+const IM = {}; let ready = false;
+const img = (k, src) => { const im = new Image(); im.src = src; return im.decode().then(() => { IM[k] = im; }); };
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  fetch('../sarajevo/data/narration.mouth.json').then(r => r.json()).then(j => bindNarrator(g, { mouth: j })),
+  ...['car', 'boom1', 'ff_bust', 'sophie_bust'].map(k => img(k, `../sarajevo/assets/cut/${k}.png`)), img('p_sarajevo', '../sarajevo/assets/photos/sarajevo.jpg')])
+  .then(() => { S.bindStage(g, { IM }); bindNarrator(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+function meTag(x, y, k) { if (k <= 0) return; S.label('← that\'s me', x, y, 40, k, '#FFF', { align: 'left', stroke: INK }); }
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  if (!ready) { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); return; }
+  if (t >= 21) { S.paper('#F7F3EA'); S.label('Người dẫn v2 — đồ đổi bằng code', 960, 80, 52, 1, INK);
+    [['plain', 'thường', 'pockets', 'grin'], ['suit', 'sát thủ thứ 7', 'rest', 'rest'], ['bowler', 'khán giả 1914', 'flag', 'smile'], ['soldier', 'lính', 'rest', 'grit'], ['officer', 'sĩ quan', 'shrug', 'mid'], ['reporter', 'phóng viên', 'rest', 'o']]
+      .forEach(([k, name, arms, mouth], i) => { const x = 180 + i * 312; narrator(x, 900, 520, { outfit: k, arms, mouth, mood: k === 'suit' ? 'angry' : 'smug', t: 0.4 }); S.label(name, x, 1000, 32, 1, INK); });
+    return; }
+  if (t >= 20) { S.paper('#F7F3EA'); S.label('Người dẫn v2 (cảm hứng ảnh bạn gửi, vẽ riêng)', 960, 80, 52, 1, INK);
+    narrator(420, 960, 760, { arms: 'pockets', mouth: 'grin' });
+    ['rest', 'small', 'mid', 'wide', 'grin', 'grit'].forEach((m, i) => { g.save(); g.beginPath(); g.rect(860 + (i % 3) * 340, 160 + Math.floor(i / 3) * 420, 320, 400); g.clip();
+      narrator(1020 + (i % 3) * 340, 560 + Math.floor(i / 3) * 420 + 120, 520, { v: 'C', mouth: m }); g.restore(); S.label(m, 1020 + (i % 3) * 340, 590 + Math.floor(i / 3) * 420, 30, 1, INK); });
+    return; }
+  if (t < 5) {                                                                       // A — phòng Black Hand: người dẫn là "sát thủ thứ bảy" đứng hóng
+    S.paper('#17151A'); S.label('BLACK HAND — the briefing', 960, 160, 70, 1, '#F4F1E8');
+    for (let i = 0; i < 6; i++) S.assassin(150 + i * 175, 960, 300, { look: 1 });
+    narrator(1330, 960 - Math.max(0, Math.sin(t * 3)) * 4, 340, { outfit: 'suit', arms: 'rest', mood: 'smug', mouth: t > 2.5 ? 'grin' : 'rest', look: -1 });
+    meTag(1450, 660, clamp((t - 1.5) / 0.3)); return; }
+  if (t < 10) { const u = t - 5;                                                      // B — khán giả vẫy cờ, xe Thái tử chạy qua
+    S.photoBg(IM.p_sarajevo, u, { desat: 0.4, fy: 0.5, zoom: 1.14 }); S.crowdRow(-40, 1960, 760, 230, t, { cheer: true, skip: [1560] });
+    narrator(1560, 770 - Math.max(0, Math.sin(t * 8)) * 10, 235, { outfit: 'bowler', arms: 'flag', mouth: 'grin', t });
+    S.carPhoto(lerp(-600, 900, easeOut(u / 2.6)), 1060, 1000, t, { moving: u < 2.6 }); S.label("that's me →", 1470, 470, 40, clamp((u - 2.8) / 0.3), '#FFF', { align: 'right', stroke: INK }); return; }
+  const u = t - 10;                                                                    // C — ngồi ghế phụ cạnh tài xế
+  g.fillStyle = '#0E0E10'; g.fillRect(0, 0, W, H); const cx = 960, cy = 980, w = 1300, h = w * IM.car.height / IM.car.width;
+  S.carPhoto(cx, cy, w, t, { moving: true });
+  g.save(); g.beginPath(); g.rect(0, 0, W, cy - h * 0.6); g.clip(); narrator(cx + 0.03 * w, cy - h * 0.26, 0.64 * h, { v: 'C', mouth: u > 2 ? 'grin' : 'rest', look: 1 }); g.restore();   // ghế phụ, trước tài xế S.label('passenger seat: me', 960, 140, 56, clamp((u - 1) / 0.3), '#FFF', { stroke: INK });
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 22, LEAD: 0, error: null };
+</script>

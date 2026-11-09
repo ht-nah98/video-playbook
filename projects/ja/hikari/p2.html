@@ -1,0 +1,59 @@
+<!doctype html><meta charset="utf-8">
+<title>なぜ世界は見えるのか ― 光の正体 — p2</title>
+<style>
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  html,body{margin:0;background:#0B0B0E;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Phần p2 (lời audio/p2.wav, mốc data/p2.timeline.json — align.py).
+// Cảnh: plates/*.js, mỗi file `export default class` có static ERA ('darkroom' | 'lab' | 'sky' | 'eye' | 'day'), IMAGES, POSES;
+// sau init({ tl }) có START (câu đầu của mục) và FROM (lúc cảnh bắt đầu hiện; mở hồi = START − 2.6).
+// Chuyển cảnh (DNA §7, kit.transition, 0.9 s từ FROM): cùng ERA → 雨戸 khép rồi mở (tiếng amado); khác ERA → vòng sáng mở
+// từ LỖ (cur.WIPE || APT, whoosh-long). CONTINUES = cắt thẳng, im. Hạt chống dải màu (kit.grain) phủ cuối MỌI khung.
+// Chụp riêng vài cảnh: p2.html?plates=a,b
+import { makeTimeline } from '../../../engine/timeline.js';
+import { loadKit, setTalk, transition, grain, prog, FONTS, FONT_SAMPLE } from './kit.js';
+import { ALL } from './plates/p2-order.js';
+import { collectCues } from '../../../engine/sfx.js';
+// LEAD/TAIL đọc từ build.json (MỘT nguồn): trang và build lệch LEAD là hình lệch tiếng cả phần.
+let LEAD = 0, TAIL = 0; const g = document.getElementById('cv').getContext('2d');
+let ready = false, plates = [], DUR = 0, CUES = [];
+(async () => {
+  // MỌI mặt chữ của kit (kit.FONTS) — Promise.all trước init (đua font, LESSONS §16).
+  await Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE)));
+  const part = (await (await fetch('./build.json')).json()).parts.find(p => p.page === 'p2');
+  LEAD = part.lead; TAIL = part.tail;
+  const tl = makeTimeline(await (await fetch('./data/p2.timeline.json')).json());
+  // miệng nói (engine/talk.js): đường bao giọng từ tools/voice/mouth_env.py. Chưa có tệp → mascot im;
+  // build.py chặn render khi thiếu hoặc cũ hơn audio/p2.dry.wav.
+  const mo = await fetch('./data/p2.mouth.json'); if (mo.ok) setTalk(await mo.json());
+  const want = new URLSearchParams(location.search).get('plates');
+  const names = want ? want.split(',') : ALL;
+  const mods = await Promise.all(names.map(n => import(`./plates/${n}.js`)));
+  const P = '../../../assets/character-v2/cut/', imgs = {};
+  for (const m of mods) { Object.assign(imgs, m.default.IMAGES || {}); for (const p of m.default.POSES || []) imgs['pose-' + p] = P + `pose-${p}.png`; }
+  await loadKit(imgs);
+  plates = mods.map(m => { const p = new m.default(); p.init({ tl }); return p; }).sort((a, b) => a.FROM - b.FROM);
+  // 雨戸 (DNA §10): chuyển cảnh cùng ERA kêu một tiếng gỗ trượt thay whoosh mặc định (cảnh tự đặt TRANSITION thì giữ).
+  plates.forEach((p, j) => { if (j && !p.CONTINUES && p.TRANSITION === undefined && p.constructor.ERA === plates[j - 1].constructor.ERA) p.TRANSITION = 'amado'; });
+  DUR = LEAD + tl.lines.at(-1).end + TAIL;
+  CUES = collectCues(plates, LEAD); // chuyển cảnh tự có tiếng + sfx() của từng cảnh (docs/lesson/SFX.md)
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const frame = t => {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.textAlign = 'left'; g.filter = 'none';
+  const T = t - LEAD;
+  let i = 0; for (let j = 0; j < plates.length; j++) if (T >= plates[j].FROM) i = j;
+  const cur = plates[i], prev = plates[i - 1];
+  const k = prev && !cur.CONTINUES ? prog(T, cur.FROM, cur.FROM + 0.9) : 1;   // CONTINUES: cắt thẳng (LESSONS §50)
+  if (k >= 1) cur.render(g, T);
+  else transition(g, T, prev, cur, k, prev.constructor.ERA === cur.constructor.ERA);
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over';
+  grain(g, t);
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, get DUR() { return DUR; }, get LEAD() { return LEAD; }, get cues() { return CUES; } };
+</script>

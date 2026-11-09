@@ -1,0 +1,18 @@
+{
+ "id": "en",
+ "name": "99% from scratch",
+ "youtube_id": "UCwVlTcq6Ne470kQCjhd-1rA",
+ "handle": "@99fromscratch",
+ "lang": "en",
+ "voice": {
+  "lang": "en",
+  "id": "03572937",
+  "tempo": 1.08
+ },
+ "intro": null,
+ "projects": "projects/en/<p>",
+ "outro": {
+  "name": "99% from scratch",
+  "cta": "SUBSCRIBE"
+ }
+}

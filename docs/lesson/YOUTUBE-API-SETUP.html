@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<title>Tạo client_secret cho YouTube API</title>
+<style>
+  @page { size: A4; margin: 16mm 15mm 16mm 15mm; }
+  :root { --ink:#1C2640; --dim:#5B6478; --line:#D9DEE8; --acc:#C8382A; --ok:#1E7A4C; --box:#F4F6FA; }
+  body { font-family: "Noto Sans", "DejaVu Sans", sans-serif; color: var(--ink); font-size: 10.5pt; line-height: 1.5; margin: 0; }
+  h1 { font-size: 20pt; margin: 0 0 2mm; }
+  .sub { color: var(--dim); margin: 0 0 6mm; }
+  h2 { font-size: 13.5pt; margin: 7mm 0 2mm; padding-bottom: 1mm; border-bottom: 2px solid var(--ink); break-after: avoid; }
+  h2 .n { display:inline-block; background: var(--ink); color:#fff; border-radius: 50%; width: 7mm; height: 7mm; line-height: 7mm;
+          text-align:center; font-size: 11pt; margin-right: 2mm; }
+  ol, ul { margin: 1mm 0 2mm; padding-left: 6mm; }
+  li { margin: 0.8mm 0; }
+  .btn { display:inline-block; border:1px solid #9AA3B5; border-radius: 3px; padding: 0 1.5mm; background:#fff; font-weight: 600; font-size: 9.5pt; white-space: nowrap; }
+  code, .cmd { font-family: "DejaVu Sans Mono", monospace; font-size: 9pt; }
+  .cmd { display:block; background: var(--ink); color: #F2EEE3; padding: 2.5mm 3mm; border-radius: 3px; margin: 1.5mm 0; white-space: pre-wrap; word-break: break-all; }
+  .note { background: var(--box); border-left: 4px solid var(--ink); padding: 2mm 3mm; margin: 2mm 0; break-inside: avoid; }
+  .warn { background: #FBEDEB; border-left: 4px solid var(--acc); padding: 2mm 3mm; margin: 2mm 0; break-inside: avoid; }
+  .good { background: #E9F5EE; border-left: 4px solid var(--ok); padding: 2mm 3mm; margin: 2mm 0; break-inside: avoid; }
+  table { border-collapse: collapse; width: 100%; margin: 2mm 0; font-size: 9.5pt; break-inside: avoid; }
+  td, th { border: 1px solid var(--line); padding: 1.5mm 2mm; text-align: left; vertical-align: top; }
+  th { background: var(--box); }
+  .check { font-size: 12pt; margin-right: 1.5mm; }
+  .section { break-inside: avoid-page; }
+  .foot { color: var(--dim); font-size: 8.5pt; margin-top: 6mm; border-top: 1px solid var(--line); padding-top: 2mm; }
+</style></head>
+<body>
+
+<h1>Tạo client_secret cho YouTube API</h1>
+<p class="sub">Làm một lần, khoảng 10 phút. Xong rồi thì bản dịch title + mô tả 10 ngôn ngữ được gắn lên YouTube bằng một lệnh,
+không phải bấm tay trong Studio nữa. Miễn phí, không cần thẻ thanh toán.</p>
+
+<div class="note"><b>Bạn sẽ tạo ra gì?</b> Một "ứng dụng" riêng của bạn trên Google Cloud, chỉ bạn dùng. File
+<code>client_secret.json</code> là "chìa khoá" để công cụ của repo xin phép bạn sửa video. Công cụ chỉ <b>thêm bản dịch</b>,
+không đổi title, mô tả, tags hay thumbnail gốc.</div>
+
+<table>
+  <tr><th style="width:8mm">#</th><th>Việc</th><th style="width:22mm">Thời gian</th></tr>
+  <tr><td>1</td><td>Tạo project trên Google Cloud</td><td>1 phút</td></tr>
+  <tr><td>2</td><td>Bật YouTube Data API v3 + YouTube Analytics API</td><td>1 phút</td></tr>
+  <tr><td>3</td><td>Khai báo màn hình xin quyền (OAuth consent)</td><td>3 phút</td></tr>
+  <tr><td>4</td><td>Thêm chính bạn làm "người dùng thử"</td><td>1 phút</td></tr>
+  <tr><td>5</td><td>Tạo OAuth client loại Desktop app → tải file JSON</td><td>2 phút</td></tr>
+  <tr><td>6</td><td>Cất file vào đúng chỗ</td><td>1 phút</td></tr>
+  <tr><td>7</td><td>Báo Claude → đăng nhập lần đầu, chọn đúng kênh</td><td>1 phút</td></tr>
+</table>
+
+<div class="warn"><b>Dùng đúng tài khoản Google.</b> Đăng nhập bằng tài khoản Google bạn dùng để vào YouTube Studio của kênh
+<b>99% from scratch</b>. Nếu bạn có nhiều tài khoản Google, kiểm tra ảnh đại diện góc trên bên phải trước mỗi bước.</div>
+
+<div class="section">
+<h2><span class="n">1</span>Tạo project</h2>
+<ol>
+  <li>Mở <code>https://console.cloud.google.com</code>. Lần đầu vào sẽ có hộp đồng ý điều khoản: chọn quốc gia, tick đồng ý,
+      bấm <span class="btn">Agree and continue</span>.</li>
+  <li>Bấm ô chọn project ở thanh trên cùng (cạnh logo Google Cloud, có thể ghi "Select a project") → <span class="btn">New project</span>.</li>
+  <li><b>Project name:</b> <code>99fs-tools</code> (tên gì cũng được). <b>Location:</b> để "No organization". Bấm <span class="btn">Create</span>.</li>
+  <li>Đợi vài giây, bấm vào chuông thông báo → <span class="btn">Select project</span>. Thanh trên cùng phải hiện <b>99fs-tools</b>.</li>
+</ol>
+</div>
+
+<div class="section">
+<h2><span class="n">2</span>Bật YouTube Data API v3 và YouTube Analytics API</h2>
+<ol>
+  <li>Ô tìm kiếm trên cùng, gõ <code>YouTube Data API v3</code> → chọn kết quả có biểu tượng API (mục Marketplace / APIs).</li>
+  <li>Bấm <span class="btn">Enable</span>. Trang chuyển sang "API/Service details" là xong.</li>
+  <li>Làm lại y hệt với <code>YouTube Analytics API</code> (để Claude đọc số liệu kênh: nguồn lượt xem, giữ chân — chỉ đọc).</li>
+</ol>
+</div>
+
+<div class="section">
+<h2><span class="n">3</span>Khai báo màn hình xin quyền (OAuth consent)</h2>
+<ol>
+  <li>Menu ☰ bên trái → <b>APIs &amp; Services</b> → <b>OAuth consent screen</b>. Google có thể đưa bạn sang trang
+      <b>Google Auth Platform</b> — đúng chỗ. Bấm <span class="btn">Get started</span>.</li>
+  <li><b>App Information:</b> App name <code>99fs translations</code>; User support email: chọn email của bạn. <span class="btn">Next</span></li>
+  <li><b>Audience:</b> chọn <b>External</b>. <span class="btn">Next</span></li>
+  <li><b>Contact Information:</b> nhập email của bạn. <span class="btn">Next</span></li>
+  <li><b>Finish:</b> tick đồng ý chính sách dữ liệu người dùng → <span class="btn">Continue</span> → <span class="btn">Create</span>.</li>
+</ol>
+<div class="note">Không cần điền logo, trang chủ, chính sách bảo mật, cũng không cần gửi Google xác minh — app chỉ để bạn tự dùng.</div>
+</div>
+
+<div class="section">
+<h2><span class="n">4</span>Thêm chính bạn làm người dùng thử</h2>
+<ol>
+  <li>Trong Google Auth Platform, menu trái → <b>Audience</b>. Phần "Publishing status" để nguyên <b>Testing</b>.</li>
+  <li>Kéo xuống <b>Test users</b> → <span class="btn">+ Add users</span> → nhập email tài khoản Google bạn sẽ đăng nhập ở bước 7
+      (chính tài khoản đang dùng) → <span class="btn">Save</span>.</li>
+</ol>
+<div class="warn"><b>Không làm bước này</b> thì lúc đăng nhập Google sẽ báo <i>"Access blocked: … has not completed the Google
+verification process"</i> (lỗi 403: access_denied).</div>
+</div>
+
+<div class="section">
+<h2><span class="n">5</span>Tạo OAuth client và tải file JSON</h2>
+<ol>
+  <li>Menu trái → <b>Clients</b> → <span class="btn">+ Create client</span>.<br>
+      (Giao diện cũ: APIs &amp; Services → Credentials → <span class="btn">+ Create credentials</span> → OAuth client ID.)</li>
+  <li><b>Application type:</b> chọn <b>Desktop app</b>. <b>Name:</b> <code>mascot-mv</code>. Bấm <span class="btn">Create</span>.</li>
+  <li>Hộp "OAuth client created" hiện ra → bấm <span class="btn">Download JSON</span>. File tải về có tên dạng
+      <code>client_secret_123…apps.googleusercontent.com.json</code> trong thư mục <b>Downloads</b>.</li>
+</ol>
+<div class="warn"><b>Tải ngay ở hộp này.</b> Google hiện chỉ cho xem / tải client secret lúc vừa tạo. Lỡ đóng hộp mà chưa tải:
+mở client vừa tạo → <span class="btn">Add secret</span> để tạo secret mới rồi tải, hoặc xoá client và tạo lại.</div>
+</div>
+
+<div class="section">
+<h2><span class="n">6</span>Cất file vào đúng chỗ</h2>
+<p>Trong Claude Code, gõ dòng dưới (dấu <code>!</code> ở đầu để chạy lệnh ngay trong phiên):</p>
+<span class="cmd">! mkdir -p ~/.config/mascot-mv &amp;&amp; mv ~/Downloads/client_secret_*.json ~/.config/mascot-mv/client_secret.json &amp;&amp; chmod 600 ~/.config/mascot-mv/client_secret.json</span>
+<div class="note">File nằm <b>ngoài repo</b> nên không bao giờ bị commit. Đừng gửi file này cho ai, đừng dán nội dung vào chat.</div>
+</div>
+
+<div class="section">
+<h2><span class="n">7</span>Báo Claude — đăng nhập lần đầu</h2>
+<ol>
+  <li>Nhắn Claude: <b>"xong client_secret"</b>. Claude chạy:
+      <span class="cmd">tools/i18n/.venv/bin/python tools/i18n/push.py --login</span>
+      Trình duyệt tự mở trang đăng nhập Google.</li>
+  <li>Chọn tài khoản Google của bạn. Nếu Google hỏi chọn <b>tài khoản hoặc kênh</b>, chọn <b>99% from scratch</b>.</li>
+  <li>Màn hình <i>"Google hasn't verified this app"</i> là bình thường (app của chính bạn): bấm <span class="btn">Advanced</span>
+      → <span class="btn">Go to 99fs translations (unsafe)</span>.</li>
+  <li>Màn hình xin quyền "Manage your YouTube account": tick ô quyền (nếu có) → <span class="btn">Continue</span>.</li>
+  <li>Trình duyệt báo "The authentication flow has completed". Đóng tab. Trong terminal Claude sẽ thấy dòng
+      <code>Kênh: 99% from scratch (UC…)</code>.</li>
+</ol>
+<div class="good"><b>Sau đó Claude làm tiếp:</b> liệt kê video của kênh để khớp ID → chạy thử <code>--dry-run</code> cho video π và
+cho bạn xem → bạn đồng ý mới gửi thật cho 5 video → Claude đọc lại từ YouTube để soát title/mô tả gốc còn nguyên.</div>
+</div>
+
+<div class="section">
+<h2>Lỗi hay gặp</h2>
+<table>
+  <tr><th style="width:42%">Thấy gì</th><th>Làm gì</th></tr>
+  <tr><td>"Access blocked … has not completed the Google verification process"</td>
+      <td>Chưa thêm email vào Test users (bước 4), hoặc đăng nhập nhầm tài khoản khác.</td></tr>
+  <tr><td><code>Kênh:</code> hiện tên khác, hoặc báo "không có kênh"</td>
+      <td>Lúc đăng nhập đã chọn nhầm tài khoản / kênh. Nhắn Claude xoá token và đăng nhập lại, lần này chọn đúng
+      <b>99% from scratch</b>.</td></tr>
+  <tr><td>Lỗi 403 <code>forbidden</code> khi gửi bản dịch, dù đăng nhập đúng</td>
+      <td>Studio của bạn ghi "You're a manager": nếu quyền này là <b>quyền kênh trong Studio</b> (Settings → Permissions) thì
+      API không cho sửa video. Cách sửa: đăng nhập bằng tài khoản <b>chủ sở hữu</b> kênh, hoặc chủ kênh thêm bạn làm
+      <b>Manager của Brand Account</b> (myaccount.google.com/brandaccounts). Claude sẽ báo nếu gặp.</td></tr>
+  <tr><td>Một tuần sau lệnh đòi đăng nhập lại</td>
+      <td>Bình thường: app ở chế độ Testing, Google cho token sống 7 ngày. Trình duyệt tự mở, đăng nhập lại 30 giây là xong.</td></tr>
+  <tr><td>"quotaExceeded"</td>
+      <td>Hạn mức miễn phí 10.000 điểm/ngày; mỗi video tốn ~50. Gần như không thể chạm; nếu có, đợi sang ngày (giờ Thái Bình Dương).</td></tr>
+</table>
+</div>
+
+<div class="section">
+<h2>Sau này, mỗi video mới đăng</h2>
+<ol>
+  <li>Bạn nhắn Claude: "đăng rồi, làm bản dịch".</li>
+  <li>Claude viết bản dịch 10 ngôn ngữ (<code>tools/i18n/&lt;bài&gt;.py</code>), thêm ID video, chạy thử, rồi gửi bằng một lệnh.</li>
+  <li>Bạn mở Studio → Languages để nhìn lại (không phải gõ gì).</li>
+</ol>
+<p><span class="check">☐</span>Bước 1 &nbsp; <span class="check">☐</span>Bước 2 &nbsp; <span class="check">☐</span>Bước 3 &nbsp;
+<span class="check">☐</span>Bước 4 &nbsp; <span class="check">☐</span>Bước 5 &nbsp; <span class="check">☐</span>Bước 6 &nbsp;
+<span class="check">☐</span>Bước 7</p>
+</div>
+
+<p class="foot">mascot-mv · docs/lesson/YOUTUBE-API-SETUP.pdf · 2026-10-22 · công cụ: tools/i18n/push.py (YouTube Data API v3,
+videos.update phần localizations). Giao diện Google Cloud thay đổi theo thời gian — tên nút có thể hơi khác, thứ tự các bước vẫn vậy.</p>
+</body></html>

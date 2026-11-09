@@ -1,0 +1,312 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — sangaku</title>
+<style>
+  @font-face{font-family:"Shippori Mincho";src:url("../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#0E0B0A;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "算額" (ja/pi). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/sangaku.html --dur 2 --t 0.5,1.5 --outdir out/_lab/sangaku
+// Ý: thời Edo người Nhật khắc bài hình học đẹp nhất lên bảng gỗ dâng đền (算額); bài có 和算 (村松・関・建部) nên CẢ video là một chuỗi 算額 treo dọc hành lang đền — mỗi hồi một tấm, triện son 第一問・第二問… Người Nhật nhận ra ngay (sách giáo khoa, đền thật), và nó nói đúng ý bài: π không phải số đo mà là một BÀI GIẢI đáng dâng. Cùng nhà với intro 漆と金: khung sơn mài đen, kim khí vàng, viền son.
+// Vật xuyên suốt: VÒNG TRÒN VÀNG LÁ (金箔 dán từng tờ vuông trên lót sơn đen) — bị 群青/緑青 kẹp → kim son quét nửa vòng → chữ số viết mực chạy quanh vành vàng → dán lên quả cầu / yên ngựa vẽ 胡粉; tóm tắt: hành lang ba tấm算額, vòng vàng ở cả ba.
+// Màu: gỗ hinoki già #D6BE96 (vân #B08D62, ánh xiên trên-trái) · khung 漆 #0E0B0A + son lót #9E2B1B + 金具 · mực 墨 #1E1914 (chữ chính) · 金 #C9A24A→#F2DD9C = vòng tròn/sự thật · 群青 #2E4A7A (chữ #22385E) = ngoài/chặn trên · 緑青 #3F7D66 (chữ #1F4A3C) = trong/chặn dưới · 朱 #B23A22 = ĐÁP ÁN (π, 答, nửa vòng, triện; chữ son #76200F/#8C2614 cho đủ tương phản) · 胡粉 #EEE6D4 = mặt phẳng/tường chiếu. Không có màu "sai" riêng: cái sai = nét mực gạch + triện 誤 son ngược.
+// Chữ: Shippori Mincho (tiêu đề dọc 縦書き như算額 thật, nhãn ngắn) · Cormorant Garamond LN (số, π, < ≈ −, sin) — Mincho THIẾU π. Tiêu đề luôn là cột dọc ở phía đối diện mascot + triện son.
+// Tiếng (~1/3 s): 拍子木 (tấm算額 mới treo = chuyển hồi) · 筆 brush/pen (mỗi nét mực, mỗi テロップ) · 判子 (triện 答/第n問) · 鈴 shimmer (vàng lá hiện / "à ra thế") · 算盤 (hạt bàn tính khi chữ số chạy, đếm cạnh 6→96) · whoosh-long (kim quay, sóng trải) · 和太鼓 impact (π > 3.05 chốt, 超越数) · page (lật hồi) · tick/pop thư viện cho chấm/hạt.
+// Các phần khác: người xưa đo = bảng đất sét/papyrus vẽ 胡粉 trên gỗ, giá trị 3・3.125・3.16 viết mực · đề 東大 = tờ đề dán (貼紙) lên算額, lời giải viết mực, triện 証明終 · 劉徽/祖沖之 = cuộn thư Hán (縦), 355/113 · 村松・関孝和・建部賢弘 = 算額 thật thời Edo, chân dung IMAGINED · NO LIKENESS SURVIVES, 2^n cạnh đếm bằng bàn tính · 360° vs ラジアン = vòng vàng chia 360 khắc mực, rồi sợi chỉ son dài bằng bán kính uốn theo vành.
+//  1÷7 余り = phép chia dọc 縦, dư số khoanh son lặp · ランベルト/リンデマン = chữ số mực chạy mãi quanh vành vàng, không lặp; triện 超越 · 円積問題 = hình vuông 群青 thước-compa không bao giờ khớp đĩa vàng, nét gạch + triện 不能 · 100兆桁 = vân gỗ hoá ra là chữ số li ti · cầu: vòng vàng dán quanh xích đạo quả cầu 胡粉, C/d = 2 · 馬の鞍 = yên ngựa sơn mài, vòng dài ra · ブラックホール = tấm算額 đen tuyền, vòng vàng méo · まとめ = hành lang đền, ba tấm, ba câu trả lời.
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { ink: '#1E1914', shu: '#B23A22', shuInk: '#76200F', shuHero: '#8C2614', gunjo: '#2E4A7A', gunjoInk: '#22385E', roku: '#3F7D66', rokuInk: '#1F4A3C', gofun: '#EEE6D4', urushi: '#0E0B0A', gold: '#C9A24A' };
+const MIN = '"Shippori Mincho"', CG = '"Cormorant Garamond"';
+const FR = 46;                                          // bề dày khung sơn mài
+const IM = {}, SH = {}; let BG, WOOD, PIG, ready = false;
+
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+const r4 = s => `Math.round((${s}) * 1e4) / 1e4`;
+
+function vnoise(x, y, seed) {                          // nhiễu giá trị mượt, tất định
+  const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi, s = t => t * t * (3 - 2 * t);
+  const h = (i, j) => hash(i * 12.9898 + j * 78.233 + seed * 3.17);
+  const a = h(xi, yi), b = h(xi + 1, yi), c = h(xi, yi + 1), d = h(xi + 1, yi + 1), u = s(xf), v = s(yf);
+  return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v;
+}
+const sstep = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+
+// gỗ hinoki 柾目: ba tấm ván ngang, vân thẳng mịn uốn nhẹ, thớ sợi, lỗ mạch; ánh xiên trên-trái, góc dưới-phải trầm
+function wood() {
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H);
+  const seams = [372, 716], early = [218, 194, 154], late = [168, 128, 86];
+  for (let py = 0; py < H; py++) {
+    const plank = py < seams[0] ? 0 : py < seams[1] ? 1 : 2, tone = [0, -7, 4][plank];
+    for (let px = 0; px < W; px++) {
+      const i = py * W + px, k = i * 4;
+      const warp = 26 * vnoise(px / 820, py / 260, 1 + plank) + 6 * vnoise(px / 170, py / 70, 4 + plank);
+      const ph = (py + warp) / (7.5 + 6 * vnoise(px / 2000, py / 160, 17 + plank)) + 3.2 * vnoise(px / 1400, py / 120, 7 + plank) + plank * 0.37;
+      const f = ph - Math.floor(ph), band = vnoise(Math.floor(ph) * 1.7, 0.5, 9);           // độ đậm từng vòng năm
+      const lw = sstep(0.66, 0.92, f) * (1 - sstep(0.94, 1, f)) * (0.15 + 0.75 * band * band) + 0.12 * vnoise(px / 600, ph * 0.31, 21);          // mộc muộn: vạch mảnh sẫm
+      const fib = (vnoise(px / 46, py / 1.3, 11) - 0.5) * 10 + (hash(i * 0.731) - 0.5) * 7;    // thớ sợi kéo ngang + hạt
+      const pore = hash(Math.floor(px / 7) * 3.1 + py * 17.3) > 0.985 ? -14 : 0;               // lỗ mạch ngắn
+      const light = 14 - 34 * Math.min(1.2, Math.hypot(px + 260, py + 340) / 2350);           // nắng xiên trên-trái
+      const edge = Math.min(px, W - px, py * 1.6, (H - py) * 1.6), soot = -18 * (1 - sstep(40, 260, edge));
+      const n = fib + pore + light + soot + tone + (vnoise(px / 300, py / 300, 13) - 0.5) * 10;
+      for (let ch = 0; ch < 3; ch++) d.data[k + ch] = early[ch] + (late[ch] - early[ch]) * lw + n * [1, 0.93, 0.8][ch];
+      d.data[k + 3] = 255;
+    }
+  }
+  x.putImageData(d, 0, 0);
+  for (const sy of seams) {                            // mối ghép ván: khe tối + mép sáng dưới
+    x.fillStyle = 'rgba(70,44,22,0.42)'; x.fillRect(0, sy - 1, W, 1.5);
+    x.fillStyle = 'rgba(255,240,210,0.22)'; x.fillRect(0, sy + 1, W, 1);
+  }
+  return c;
+}
+// hạt khoáng của sơn màu: lốm đốm sáng/tối rất mịn
+function pigTex() {
+  const c = mk(512, 512), x = c.getContext('2d'), d = x.createImageData(512, 512);
+  for (let i = 0; i < 512 * 512; i++) { const h = hash(i * 1.311 + 5), v = h > 0.5 ? 255 : 0, a = Math.abs(h - 0.5) > 0.47 ? 34 : Math.abs(h - 0.5) * 22;
+    d.data[i * 4] = d.data[i * 4 + 1] = d.data[i * 4 + 2] = v; d.data[i * 4 + 3] = a; }
+  x.putImageData(d, 0, 0); return c;
+}
+// khung sơn mài đen + lót son + 金具 bốn góc, bóng khung đổ lên gỗ
+function frameOn(x) {
+  const sh = (x0, y0, x1, y1, a) => { const gr = x.createLinearGradient(x0, y0, x1, y1); gr.addColorStop(0, `rgba(40,22,8,${a})`); gr.addColorStop(1, 'rgba(40,22,8,0)'); return gr; };
+  x.fillStyle = sh(0, FR, 0, FR + 34, 0.5); x.fillRect(FR, FR, W - 2 * FR, 34);           // khung trên/trái che nắng → bóng xuống/phải
+  x.fillStyle = sh(FR, 0, FR + 26, 0, 0.42); x.fillRect(FR, FR, 26, H - 2 * FR);
+  x.fillStyle = sh(0, H - FR, 0, H - FR - 8, 0.25); x.fillRect(FR, H - FR - 8, W - 2 * FR, 8);
+  const lac = (x0, y0, x1, y1) => { const gr = x.createLinearGradient(x0, y0, x1, y1);
+    gr.addColorStop(0, '#2A2522'); gr.addColorStop(0.18, '#0A0807'); gr.addColorStop(0.55, '#151110'); gr.addColorStop(1, '#050404'); return gr; };
+  x.fillStyle = lac(0, 0, 0, FR); x.fillRect(0, 0, W, FR);
+  x.fillStyle = lac(0, H, 0, H - FR); x.fillRect(0, H - FR, W, FR);
+  x.fillStyle = lac(0, 0, FR, 0); x.fillRect(0, FR, FR, H - 2 * FR);
+  x.fillStyle = lac(W, 0, W - FR, 0); x.fillRect(W - FR, FR, FR, H - 2 * FR);
+  const gl = x.createLinearGradient(0, 0, W, 0);                                             // vệt bóng sơn mài dọc thanh trên, sáng ở trái
+  gl.addColorStop(0, 'rgba(255,236,210,0.30)'); gl.addColorStop(0.45, 'rgba(255,236,210,0.06)'); gl.addColorStop(1, 'rgba(255,236,210,0.02)');
+  x.fillStyle = gl; x.fillRect(0, 12, W, 2);
+  x.strokeStyle = 'rgba(255,240,220,0.10)'; x.lineWidth = 1; x.strokeRect(FR - 9.5, FR - 9.5, W - 2 * FR + 19, H - 2 * FR + 19);   // gờ
+  x.strokeStyle = '#9E2B1B'; x.lineWidth = 3; x.strokeRect(FR - 1.5, FR - 1.5, W - 2 * FR + 3, H - 2 * FR + 3);                 // lót son
+  [[0, 0, 1, 1], [W, 0, -1, 1], [0, H, 1, -1], [W, H, -1, -1]].forEach(([cx, cy, sx, sy], q) => {
+    x.save(); x.translate(cx, cy); x.scale(sx, sy);
+    const L = 118, T = FR + 6, gr = x.createLinearGradient(0, 0, L * sx, L * sy);
+    gr.addColorStop(0, q === 0 ? '#F4E2A6' : '#E2C77E'); gr.addColorStop(0.5, '#B98F3A'); gr.addColorStop(1, '#7C5A1E');
+    const p = new Path2D(); p.moveTo(0, 0); p.lineTo(L, 0); p.lineTo(L, T * 0.62); p.lineTo(L - 16, T); p.lineTo(T, T); p.lineTo(T, L - 16); p.lineTo(T * 0.62, L); p.lineTo(0, L); p.closePath();
+    x.fillStyle = 'rgba(0,0,0,0.45)'; x.translate(2, 2); x.fill(p); x.translate(-2, -2);
+    x.fillStyle = gr; x.fill(p);
+    x.strokeStyle = 'rgba(70,46,12,0.75)'; x.lineWidth = 1.2; x.stroke(p);
+    x.strokeStyle = 'rgba(90,60,18,0.55)'; x.beginPath(); x.moveTo(10, T - 8); x.lineTo(L - 14, T - 8); x.moveTo(T - 8, 10); x.lineTo(T - 8, L - 14); x.stroke();   // khắc chỉ
+    [[24, 22], [L - 26, 20], [22, L - 26]].forEach(([bx, by]) => { const b = x.createRadialGradient(bx - 2, by - 2, 0.5, bx, by, 6);
+      b.addColorStop(0, '#FFF4C8'); b.addColorStop(1, '#8A6420'); x.fillStyle = b; x.beginPath(); x.arc(bx, by, 5.5, 0, 7); x.fill(); });                  // đinh tán
+    x.restore();
+  });
+}
+function background() { const c = mk(), x = c.getContext('2d'); x.drawImage(WOOD, 0, 0); frameOn(x); return c; }
+
+// ---- vẽ ----
+const P = () => new Path2D();
+const poly = (cx, cy, R, n, a0 = -Math.PI / 2) => { const p = P(); for (let k = 0; k <= n; k++) { const a = a0 + k / n * 2 * Math.PI; k ? p.lineTo(cx + R * Math.cos(a), cy + R * Math.sin(a)) : p.moveTo(cx + R * Math.cos(a), cy + R * Math.sin(a)); } p.closePath(); return p; };
+const circ = (cx, cy, R) => { const p = P(); p.arc(cx, cy, R, 0, 2 * Math.PI); return p; };
+const line = pts => { const p = P(); pts.forEach(([x, y], k) => k ? p.lineTo(x, y) : p.moveTo(x, y)); return p; };
+// màu khoáng: lớp dày đổ bóng nhẹ, hạt khoáng, vân gỗ hằn qua, nắng xiên, viền mực mảnh
+function pigment(path, col, { outline = 1.6, through = 0.16 } = {}) {
+  g.save(); g.translate(2, 2.5); g.fillStyle = 'rgba(60,34,14,0.24)'; g.fill(path); g.restore();
+  g.save(); g.fillStyle = col; g.fill(path); g.clip(path);
+  g.globalCompositeOperation = 'multiply'; g.globalAlpha = through; g.drawImage(WOOD, 0, 0); g.globalAlpha = 1;
+  g.globalCompositeOperation = 'source-over'; g.fillStyle = g.createPattern(PIG, 'repeat'); g.fillRect(0, 0, W, H);
+  const lt = g.createLinearGradient(0, 0, W, H); lt.addColorStop(0, 'rgba(255,248,228,0.16)'); lt.addColorStop(1, 'rgba(50,28,8,0.14)');
+  g.fillStyle = lt; g.fillRect(0, 0, W, H); g.restore();
+  if (outline) { g.save(); g.strokeStyle = 'rgba(30,25,20,0.88)'; g.lineWidth = outline; g.lineJoin = 'round'; g.stroke(path); g.restore(); }
+}
+// nét mực: thân + vầng loang mảnh (滲み)
+function inkStroke(path, w, col = C.ink, dash = null) {
+  g.save(); g.lineCap = g.lineJoin = 'round'; if (dash) g.setLineDash(dash);
+  g.strokeStyle = col; g.globalAlpha = 0.18; g.lineWidth = w + 2; g.stroke(path);
+  g.globalAlpha = 0.92; g.lineWidth = w; g.stroke(path); g.restore();
+}
+function ink(s, x, y, font, col = C.ink, align = 'left', base = 'alphabetic') {
+  g.save(); g.font = font; g.textAlign = align; g.textBaseline = base; g.fillStyle = col;
+  g.globalAlpha = 0.16; for (const [dx, dy] of [[-0.7, 0], [0.7, 0], [0, 0.7]]) g.fillText(s, x + dx, y + dy);
+  g.globalAlpha = 0.94; g.fillText(s, x, y); const w = g.measureText(s).width; g.restore(); return w;
+}
+// một dòng nhiều mặt chữ: [chữ, font, màu, khoảng sau]
+function runs(parts, x, y, align = 'left') {
+  const ws = parts.map(([s, f]) => { g.font = f; return g.measureText(s).width; }), tot = ws.reduce((a, w, i) => a + w + (parts[i][3] ?? 0), 0);
+  let cx = align === 'right' ? x - tot : align === 'center' ? x - tot / 2 : x;
+  parts.forEach(([s, f, col, gap = 0], i) => { ink(s, cx, y, f, col ?? C.ink); cx += ws[i] + gap; });
+  return [align === 'right' ? x - tot : align === 'center' ? x - tot / 2 : x, tot];
+}
+// 縦書き: mỗi ký tự giữa ô vuông; ký tự trong `latin` vẽ bằng Cormorant đứng
+function vtext(s, x, y, size, col = C.ink, wt = 700) {
+  [...s].forEach((ch, i) => { const cy = y + i * size * 1.1 + size / 2, lat = /[π0-9=]/.test(ch);
+    ink(ch, x, cy, lat ? `600 ${size * 1.45}px ${CG}` : `${wt} ${size}px ${MIN}`, col, 'center', 'middle'); });
+  return y + [...s].length * size * 1.1;
+}
+// triện son 白文: nền son, chữ màu gỗ, mép ăn mòn
+function seal(s, x, y, size) {
+  const n = [...s].length, w = size * 1.5, h = n * size * 1.08 + size * 0.5;
+  g.save(); g.translate(x - w / 2, y);
+  const p = P(); p.roundRect(0, 0, w, h + size * 0.12, 5); g.fillStyle = C.shu; g.globalAlpha = 0.93; g.fill(p); g.globalAlpha = 1;
+  g.clip(p); g.fillStyle = 'rgba(214,190,150,0.85)';
+  for (let i = 0; i < 26; i++) { const hx = hash(i * 3.7 + n) * w, hy = hash(i * 9.1 + n) * h, r = 0.5 + hash(i * 1.3) * 1.1; g.beginPath(); g.arc(hx, hy, r, 0, 7); g.fill(); }
+  g.restore();
+  [...s].forEach((ch, i) => ink(ch, x, y + size * 0.25 + i * size * 1.08 + size / 2, `700 ${size}px ${MIN}`, '#F3E6CC', 'center', 'middle'));
+  return { x: x - w / 2, y, w, h };
+}
+// VÒNG TRÒN VÀNG LÁ: lót sơn đen, các tờ vàng vuông (mép nối), nắng xiên, viền mực
+function goldRing(cx, cy, R, w = 15, { a0 = 0, a1 = 2 * Math.PI } = {}) {
+  const arc = (r, b0, b1) => { const p = P(); p.arc(cx, cy, r, b0, b1); return p; };
+  g.save(); g.lineCap = 'butt';
+  g.strokeStyle = 'rgba(40,22,8,0.30)'; g.lineWidth = w + 8; g.save(); g.translate(2.5, 3); g.stroke(arc(R, a0, a1)); g.restore();
+  g.strokeStyle = C.urushi; g.lineWidth = w + 6; g.stroke(arc(R, a0, a1));
+  const gr = g.createLinearGradient(cx - R, cy - R, cx + R, cy + R);
+  gr.addColorStop(0, '#F6E6AE'); gr.addColorStop(0.35, '#D9B661'); gr.addColorStop(0.7, '#B48A35'); gr.addColorStop(1, '#8E6A26');
+  g.strokeStyle = gr; g.lineWidth = w; g.stroke(arc(R, a0, a1));
+  const sheet = Math.max(8, Math.round(2 * Math.PI * R / 46));                               // tờ vàng ~46 px
+  for (let k = 0; k < sheet; k++) { const b0 = k / sheet * 2 * Math.PI, b1 = (k + 1) / sheet * 2 * Math.PI; const v = hash(k * 7.7 + R);
+    g.strokeStyle = v > 0.5 ? `rgba(255,246,214,${(v - 0.5) * 0.36})` : `rgba(90,58,12,${(0.5 - v) * 0.3})`; g.lineWidth = w - 1; g.stroke(arc(R, b0, b1));
+    g.strokeStyle = 'rgba(110,74,20,0.45)'; g.lineWidth = 0.9; g.beginPath(); g.moveTo(cx + (R - w / 2) * Math.cos(b0), cy + (R - w / 2) * Math.sin(b0)); g.lineTo(cx + (R + w / 2) * Math.cos(b0), cy + (R + w / 2) * Math.sin(b0)); g.stroke(); }
+  g.strokeStyle = 'rgba(255,252,236,0.85)'; g.lineWidth = w * 0.22; g.stroke(arc(R + w * 0.18, -3 * Math.PI / 4 - 0.55, -3 * Math.PI / 4 + 0.55));   // ánh xiên
+  g.strokeStyle = 'rgba(255,250,230,0.35)'; g.lineWidth = w * 0.12; g.stroke(arc(R - w * 0.2, Math.PI / 4 - 0.4, Math.PI / 4 + 0.4));
+  g.strokeStyle = 'rgba(30,20,10,0.9)'; g.lineWidth = 1.3; g.stroke(arc(R - w / 2 - 3, a0, a1)); g.stroke(arc(R + w / 2 + 3, a0, a1));
+  g.restore();
+}
+function bead(x, y, r, col) {                          // hạt sơn tròn có ánh
+  g.save(); g.fillStyle = 'rgba(40,22,8,0.35)'; g.beginPath(); g.arc(x + 2, y + 3, r, 0, 7); g.fill();
+  const b = g.createRadialGradient(x - r * 0.35, y - r * 0.4, r * 0.1, x, y, r); b.addColorStop(0, '#FFF6DE'); b.addColorStop(0.35, col); b.addColorStop(1, '#2A1A10');
+  g.fillStyle = b; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); g.restore();
+}
+function arrowHead(x, y, an, s, col = C.ink) { inkStroke(line([[x - s * Math.cos(an - 0.45), y - s * Math.sin(an - 0.45)], [x, y], [x - s * Math.cos(an + 0.45), y - s * Math.sin(an + 0.45)]]), 3, col); }
+// mascot đứng TRƯỚC tấm gỗ: bóng mềm đổ xuống-phải lên gỗ, ánh ấm trên-trái, sườn phải trầm
+function figure(pose, cx, foot, h, crop = 1) {
+  const im = IM[pose], sh = im.height * crop, s = h / sh, w = im.width * s, x0 = cx - w / 2, y0 = foot - h;
+  const S = SH[pose], srcH = Math.min(S.height, 30 + sh + (crop < 1 ? 0 : 30));
+  g.save(); g.globalAlpha = 0.34; g.drawImage(S, 0, 0, S.width, srcH, x0 + 26 - 30 * s, y0 + 18 - 30 * s, S.width * s, srcH * s); g.restore();
+  const c = mk(Math.ceil(w), Math.ceil(h)), x = c.getContext('2d');
+  x.drawImage(im, 0, 0, im.width, sh, 0, 0, w, h); x.globalCompositeOperation = 'source-atop';
+  x.fillStyle = 'rgba(255,214,160,0.07)'; x.fillRect(0, 0, w, h);
+  const gr = x.createLinearGradient(0, 0, w, h * 0.7); gr.addColorStop(0.5, 'rgba(40,22,8,0)'); gr.addColorStop(1, 'rgba(40,22,8,0.24)'); x.fillStyle = gr; x.fillRect(0, 0, w, h);
+  g.drawImage(c, x0, y0); return { x: x0, y: y0, w, h };
+}
+const fmt = v => String(v).replace('-', '−');
+
+const frames = [
+  () => {                                              // 0 · 第一問 はさみうち: 群青 ngoài · đĩa 胡粉 · 緑青 trong · vòng vàng; 6→96; 答 223/71 < π < 22/7
+    const inner = must(r4('6 * Math.sin(Math.PI / 6)'), 3), outer = must(r4('6 * Math.tan(Math.PI / 6)'), 3.4641);
+    const lo = must(r4('223 / 71'), 3.1408), hi = must(r4('22 / 7'), 3.1429), pi4 = must(r4('Math.PI'), 3.1416);
+    const in96 = must(r4('96 * Math.sin(Math.PI / 96)'), 3.141), out96 = must(r4('96 * Math.tan(Math.PI / 96)'), 3.1427);
+    if (!(inner < lo && lo < in96 && in96 < pi4 && pi4 < out96 && out96 < hi && hi < outer)) throw new Error('sai thứ tự kẹp');
+    const F = figure('pose-compass', 1572, 1080, 760);
+    const cx = 890, cy = 592, R = 250, n = 6, Ro = R / Math.cos(Math.PI / n);
+    pigment(poly(cx, cy, Ro, n, -Math.PI / 2 + Math.PI / n), C.gunjo);                       // ngoài: cạnh tiếp xúc vòng
+    pigment(circ(cx, cy, R), C.gofun, { outline: 0, through: 0.10 });
+    pigment(poly(cx, cy, R, n), C.roku);
+    goldRing(cx, cy, R, 12);
+    bead(cx, cy, 5, '#1E1914');
+    // tiêu đề dọc + triện, cột trái
+    const S = seal('第一問', 150, 96, 30);
+    vtext('円をはさみうちにする', 150, S.y + S.h + 26, 56);
+    // nhãn ngoài / trong + leader mực tới cạnh
+    const ao = Math.PI, ai = Math.PI - Math.PI / n * 0.5;
+    runs([['外接', `700 34px ${MIN}`, C.gunjoInk, 10], ['正6角形', `400 30px ${MIN}`, C.gunjoInk]], 262, 318);
+    ink(outer.toFixed(4), 262, 392, `600 70px ${CG}`, C.gunjoInk);
+    inkStroke(line([[478, 370], [cx + Ro * 0.9 * Math.cos(ao), cy + Ro * 0.9 * Math.sin(ao)]]), 1.6, C.ink, [2, 7]);
+    runs([['内接', `700 34px ${MIN}`, C.rokuInk, 10], ['正6角形', `400 30px ${MIN}`, C.rokuInk]], 262, 738);
+    ink(Number.isInteger(inner) ? String(inner) : inner.toFixed(4), 262, 812, `600 70px ${CG}`, C.rokuInk);
+    inkStroke(line([[478, 790], [cx + R * 0.7 * Math.cos(ai), cy + R * 0.7 * Math.sin(ai)]]), 1.6, C.ink, [2, 7]);
+    runs([['π', `600 66px ${CG}`, C.shuHero, 14], ['は', `700 36px ${MIN}`, C.ink]], 262, 586);
+    ink('このふたつの間', 262, 636, `400 30px ${MIN}`);
+    // 6 → 96: cạnh nhân đôi, hàng trên
+    const row = [6, 12, 24, 48, 96], ry = 152;
+    row.forEach((m, k) => { const x = 398 + k * 150;
+      pigment(circ(x, ry, 34), C.gofun, { outline: 0, through: 0.1 }); goldRing(x, ry, 34, 3); pigment(poly(x, ry, 34, m), C.roku, { outline: m >= 48 ? 0.5 : 1.2 });
+      ink(String(m), x, ry + 80, `600 34px ${CG}`, m === 96 ? C.shuInk : C.ink, 'center');
+      if (k < row.length - 1) { inkStroke(line([[x + 48, ry], [x + 102, ry]]), 2); arrowHead(x + 102, ry, 0, 9); } });
+    runs([['正', `700 34px ${MIN}`, C.shuInk, 2], ['96', `600 42px ${CG}`, C.shuInk, 2], ['角形まで', `700 34px ${MIN}`, C.shuInk]], 1052, ry + 14);
+    // 答: dòng đáy
+    const A = seal('答', 300, 884, 34);
+    let x = 368; const big = `600 82px ${CG}`, sm = `500 34px ${CG}`, by = 992;
+    const w1 = ink(lo.toFixed(4), x, by, big); ink('223/71', x + w1 / 2, by - 76, sm, C.ink, 'center'); x += w1 + 26;
+    x += ink('<', x, by, big) + 26; x += ink('π', x, by, `600 96px ${CG}`, C.shuHero) + 26; x += ink('<', x, by, big) + 26;
+    const w2 = ink(hi.toFixed(4), x, by, big); ink('22/7', x + w2 / 2, by - 76, sm, C.ink, 'center'); x += w2;
+    if (x > F.x + 40) throw new Error('答 đè mascot');
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], answerEnd: x, seal: [A.x, A.y, A.w, A.h] };
+  },
+  () => {                                              // 1 · 第二問 回転の影: điểm quay trên vòng vàng, nửa vòng son = π, bóng trên tường 胡粉 → sóng sin 群青
+    const F = figure('pose-spin', 336, 1080, 640, 0.45);
+    const tip = [F.x + F.w * 0.199, F.y + F.h * 0.215];
+    { const oc = [tip[0] + 2, tip[1] - 6], sp = [];                                          // vệt quay quanh đầu ngón: xoáy vàng lá mảnh
+      for (let a = 0; a <= 1.8 * 2 * Math.PI; a += 0.04) { const rr = 16 + a * 3.4; sp.push([oc[0] + rr * Math.cos(-a + 1.4), oc[1] + rr * 0.4 * Math.sin(-a + 1.4)]); }
+      g.save(); g.lineCap = 'round'; g.strokeStyle = C.urushi; g.lineWidth = 6; g.stroke(line(sp));
+      const gg = g.createLinearGradient(oc[0] - 60, 0, oc[0] + 60, 0); gg.addColorStop(0, '#F6E6AE'); gg.addColorStop(1, '#A57E30'); g.strokeStyle = gg; g.lineWidth = 3.2; g.stroke(line(sp)); g.restore();
+      const [ax, ay] = sp[sp.length - 1], [bx, by] = sp[sp.length - 5]; arrowHead(ax, ay, Math.atan2(ay - by, ax - bx), 13); }
+    const cx = 862, cy = 600, R = 200, th = 11 * Math.PI / 6;
+    const s = must(r4('Math.sin(11 * Math.PI / 6)'), -0.5), deg = must('Math.round(11 * 180 / 6)', 330), halfDeg = must('Math.round(Math.PI * 180 / Math.PI)', 180);
+    const px = cx + R * Math.cos(th), py = cy - R * Math.sin(th);
+    const wx0 = 1150, wx1 = 1600, X = a => wx0 + a / (2 * Math.PI) * (wx1 - wx0);
+    if (Math.abs((py - cy) / R + s) > 1e-9) throw new Error('sai: bóng ≠ sin');
+    // trục
+    inkStroke(line([[cx - R - 34, cy], [cx + R + 34, cy]]), 1.6, C.ink, [2, 7]);
+    inkStroke(line([[cx, cy - R - 34], [cx, cy + R + 34]]), 1.6, C.ink, [2, 7]);
+    pigment(circ(cx, cy, R), C.gofun, { outline: 0, through: 0.1 });
+    // nửa vòng: dải son phủ lên vành vàng 0 → π (phía trên)
+    goldRing(cx, cy, R, 15);
+    g.save(); g.lineCap = 'butt'; g.strokeStyle = C.shu; g.lineWidth = 9; g.beginPath(); g.arc(cx, cy, R + 19, 0, Math.PI, true); g.stroke(); g.restore();
+    arrowHead(cx - R - 19, cy + 2, Math.PI / 2, 16, C.shu);
+    ink('π', cx, cy - R - 46, `600 104px ${CG}`, C.shuHero, 'center');
+    runs([['半回転', `700 34px ${MIN}`, C.shuInk, 10], ['= 180°', `600 40px ${CG}`, C.shuInk]], cx - 66, cy - R - 66, 'right');
+    // bán kính 1 + điểm quay
+    inkStroke(line([[cx, cy], [cx + R - 10, cy]]), 2.4);
+    ink('1', cx + R / 2, cy + 42, `600 44px ${CG}`, C.ink, 'center');
+    inkStroke(line([[cx, cy], [px, py]]), 2.4);
+    bead(cx, cy, 5, '#1E1914');
+    // đề bài kiểu算額: 問 + một dòng
+    const Q = seal('問', 150, 112, 32);
+    ink('一定の速さで回る点。', 210, 150, `700 44px ${MIN}`);
+    ink('壁に映る影は、どう動く？', 210, 214, `400 38px ${MIN}`);
+    // tường 胡粉 + sóng 群青
+    const wall = P(); wall.rect(wx0 - 14, cy - R - 40, 28, 2 * R + 80); pigment(wall, C.gofun, { outline: 1.2, through: 0.08 });
+    ink('壁', wx0, cy + R + 90, `700 34px ${MIN}`, C.ink, 'center');
+    inkStroke(line([[wx0 + 14, cy], [wx1 + 34, cy]]), 1.6);
+    arrowHead(wx1 + 34, cy, 0, 11);
+    ink('時間', wx1 + 30, cy - 20, `400 28px ${MIN}`, C.ink, 'right');
+    const wave = []; for (let a = 0; a <= th + 1e-9; a += 0.02) wave.push([X(a), cy - R * Math.sin(a)]); wave.push([X(th), cy - R * Math.sin(th)]);
+    inkStroke(line(wave), 7, C.gunjo);
+    const rest = []; for (let a = th; a <= 2 * Math.PI + 1e-9; a += 0.02) rest.push([X(a), cy - R * Math.sin(a)]);
+    inkStroke(line(rest), 2, C.gunjo, [1, 9]);
+    ink('サイン波', X(Math.PI / 2), cy - R - 26, `700 34px ${MIN}`, C.gunjoInk, 'center');
+    [[Math.PI, 'π', C.shuInk], [2 * Math.PI, '2π', C.ink]].forEach(([a, t, col]) => { inkStroke(line([[X(a), cy - 12], [X(a), cy + 12]]), 2);
+      ink(t, X(a) + (t === 'π' ? -26 : 0), cy + 64, `600 50px ${CG}`, col, 'center'); });
+    const wy = cy - R * s;
+    inkStroke(line([[px + 12, py], [wx0 - 16, wy]]), 1.8, C.ink, [3, 8]);
+    bead(px, py, 12, '#2A211B'); g.save(); g.fillStyle = 'rgba(30,25,20,0.78)'; g.beginPath(); g.ellipse(wx0, wy, 11, 8, 0, 0, 7); g.fill(); g.restore(); bead(X(th), wy, 8, C.gunjo);
+    runs([['影の高さ', `700 32px ${MIN}`, C.ink, 14], [`=  sin ${deg}°  =  ${fmt(s)}`, `italic 600 42px ${CG}`, C.ink]], wx1 + 34, cy + R + 132, 'right');
+    // tiêu đề dọc + triện, cột phải (mascot bên trái)
+    const S = seal('第二問', 1770, 96, 30);
+    const yEnd = vtext('回転の影', 1770, S.y + S.h + 26, 60);
+    vtext('半回転はπ', 1684, S.y + S.h + 92, 42, C.shuInk);
+    if (halfDeg !== 180 || yEnd > 1000) throw new Error('bố cục cột dọc');
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], tip };
+  },
+];
+
+(async () => {
+  const JA = '映どう動く？。このふたつ第一二問円をはさみうちにする外接内正角形ふたつの間まで答回転の影半壁時間サイン波高さ一定速で回る点は';
+  await Promise.all([
+    ...['400 30px', '700 34px', '700 60px'].map(f => document.fonts.load(`${f} ${MIN}`, JA)),
+    ...['600 70px', '500 34px', 'italic 600 42px'].map(f => document.fonts.load(`${f} ${CG}`, '0123456789.<π=°−/')),
+  ]);
+  await Promise.all(['pose-compass', 'pose-spin'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im);                                                // bóng mascot làm sẵn lúc nạp (filter chỉ ở đây)
+      const s = mk(im.width + 60, im.height + 60), x = s.getContext('2d'); x.filter = 'blur(16px) brightness(0)'; x.drawImage(im, 30, 30); x.filter = 'none'; SH[p] = s; res(); };
+    im.onerror = () => rej(new Error('img ' + p)); im.src = `../../assets/character-v2/cut/${p}.png`; })));
+  WOOD = wood(); PIG = pigTex(); BG = background(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.drawImage(BG, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

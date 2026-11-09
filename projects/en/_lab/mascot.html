@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8">
+<title>en lab — mascot đầu tròn</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử mascot vẽ nét kênh Anh (_kit/mascot.js). t 0.5 = so với bản anime gốc · 1.5 = biểu cảm · 2.5 = tư thế · 3.5 = cỡ nhỏ (thumbnail 168 px)
+import { bindMascot, mascot, head, INK } from '../_kit/mascot.js';
+const g = document.getElementById('cv').getContext('2d'), W = 1920, H = 1080;
+let ready = false; const ORIG = new Image(); ORIG.src = '../../../assets/character-v2/cut/pose-idle.png';
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)), ORIG.decode()])
+  .then(() => { bindMascot(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+const label = (s, x, y, px, al = 'center') => { g.save(); g.font = `800 ${px}px Archivo, sans-serif`; g.fillStyle = INK; g.textAlign = al; g.textBaseline = 'middle'; g.fillText(s, x, y); g.restore(); };
+const MOODS = [['deadpan', 'flat'], ['shock', 'wide'], ['smug', 'smirk'], ['happy', 'grin'], ['angry', 'frown'], ['sad', 'wavy'], ['confused', 'wavy'], ['think', 'o']];
+const POSES = ['rest', 'point', 'shrug', 'think', 'cheer', 'facepalm', 'hold', 'present'];
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); if (!ready) return;
+  const k = Math.floor(t);
+  if (k === 0) { label('gốc anime  →  vẽ nét đầu tròn', 960, 60, 44);
+    const s = 900 / ORIG.height; g.drawImage(ORIG, 150, 120, ORIG.width * s, 900);
+    mascot(760, 1020, 860, {}); mascot(1180, 1020, 860, { mood: 'smug', mouth: 'smirk', arms: 'pockets' }); mascot(1600, 1020, 860, { mood: 'shock', mouth: 'wide', arms: 'shrug' }); }
+  if (k === 1) { label('biểu cảm (mood + miệng)', 960, 60, 44);
+    MOODS.forEach(([m, mo], i) => { const cx = 240 + (i % 4) * 480, cy = 300 + Math.floor(i / 4) * 470; head(cx, cy, 140, { mood: m, mouth: mo, blush: m === 'happy', sweat: m === 'confused' || m === 'sad' }); label(m, cx, cy + 190, 34); }); }
+  if (k === 2) { label('tư thế (arms)', 960, 50, 44);
+    POSES.forEach((a, i) => { const cx = 200 + i * 220; mascot(cx + (a === 'point' || a === 'present' ? -30 : 0), 960, 520, { arms: a, mood: a === 'cheer' ? 'happy' : a === 'facepalm' ? 'sad' : a === 'think' ? 'think' : 'deadpan', mouth: a === 'cheer' ? 'grin' : 'flat' }); label(a, cx, 1030, 30); }); }
+  if (k === 3) { label('cỡ nhỏ — đầu cận mặt ở 168 / 120 / 64 px', 960, 60, 44);
+    [[168, 300], [120, 560], [64, 760]].forEach(([d, x]) => { g.save(); g.fillStyle = '#F7C948'; g.fillRect(x - d * 0.9, 300 - d * 0.6, d * 1.8, d * 1.2); head(x, 300, d * 0.42, { mood: 'shock', mouth: 'wide' }); g.restore(); });
+    [[168, 300], [120, 560], [64, 760]].forEach(([d, x]) => { g.save(); g.fillStyle = '#2E5E8C'; g.fillRect(x - d * 0.9, 650 - d * 0.6, d * 1.8, d * 1.2); head(x, 650, d * 0.42, { mood: 'smug', mouth: 'smirk' }); g.restore(); });
+    mascot(1400, 1040, 900, { mood: 'confused', mouth: 'wavy', arms: 'think', sweat: true }); }
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 4, LEAD: 0, error: null };
+</script>

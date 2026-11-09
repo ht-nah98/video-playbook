@@ -1,0 +1,39 @@
+<!doctype html><meta charset="utf-8">
+<title>en lab — dáng hành động nhìn thẳng</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử dáng HÀNH ĐỘNG của mascot vẽ nét — chỉ góc thẳng, tay ống blouse dày kiểu người dẫn kênh sử (người dùng 2026-10-29 chê
+// bản bọc khung người que: "người nào làm được tư thế này?"). t 0.5 = 10 dáng cỡ trong video (h 300) · 1.5 = 5 dáng cỡ lớn (h 640).
+import { bindMascot, mascot, INK } from '../_kit/mascot.js';
+const g = document.getElementById('cv').getContext('2d'), W = 1920, H = 1080;
+let ready = false;
+new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => { document.fonts.add(f); bindMascot(g); ready = true; })
+  .catch(e => { window.__intro.error = String(e); });
+const label = (s, x, y, px) => { g.save(); g.font = `800 ${px}px Archivo`; g.fillStyle = INK; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(s, x, y); g.restore(); };
+const blockAt = (cx, cyTop, w, hgt, col = '#C83A26', txt = '×2') => { g.save(); g.fillStyle = col; g.strokeStyle = INK; g.lineWidth = 4; g.beginPath(); g.roundRect(cx - w / 2, cyTop, w, hgt, 6); g.fill(); g.stroke();
+  g.fillStyle = '#FFF'; g.font = `900 ${hgt * 0.42}px Archivo`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(txt, cx, cyTop + hgt / 2); g.restore(); };
+// mỗi dáng: (x, chân y, h) → vẽ đạo cụ + mascot. Đích tay tính từ khung cơ thể: vai ≈ y − 0.62h, đỉnh đầu ≈ y − h
+const POSES = [
+  ['đứng nói', (x, y, h) => mascot(x, y, h, { mouth: 'o' })],
+  ['chỉ vào vật', (x, y, h) => mascot(x, y, h, { arms: 'point', mood: 'smug', mouth: 'smirk' })],
+  ['khuỵu lấy đà', (x, y, h) => mascot(x, y, h, { crouch: 0.8, hands: [[x - h * 0.2, y - h * 0.32], [x + h * 0.2, y - h * 0.32]], mood: 'angry', mouth: 'flat' })],
+  ['bật nhảy', (x, y, h) => mascot(x, y - h * 0.35, h, { lift: [0.5, 0.5], hands: [[x - h * 0.3, y - h * 1.32], [x + h * 0.3, y - h * 1.32]], mood: 'happy', mouth: 'grin' })],
+  ['bước nhún', (x, y, h) => mascot(x, y - h * 0.02, h, { lift: [0.9, 0], lean: -0.06, hands: [[x - h * 0.24, y - h * 0.45], [x + h * 0.24, y - h * 0.62]], mouth: 'o' })],
+  ['bê khối trước ngực', (x, y, h) => { mascot(x, y, h, { crouch: 0.2, hands: [[x - h * 0.23, y - h * 0.42], [x + h * 0.23, y - h * 0.42]], mood: 'deadpan' }); blockAt(x, y - h * 0.6, h * 0.4, h * 0.3); }],   // khối TRƯỚC người, tay ôm hai bên
+  ['đỡ khối trên đầu', (x, y, h) => { blockAt(x, y - h * 1.32, h * 0.62, h * 0.3); mascot(x, y, h, { crouch: 0.35, hands: [[x - h * 0.27, y - h * 1.03], [x + h * 0.27, y - h * 1.03]], mood: 'angry', mouth: 'wavy', sweat: true }); }],
+  ['hất khối lên', (x, y, h) => { blockAt(x + h * 0.12, y - h * 1.55, h * 0.36, h * 0.26); mascot(x, y - h * 0.04, h, { lift: [0.3, 0], lean: 0.04, hands: [[x - h * 0.3, y - h * 1.08], [x + h * 0.32, y - h * 1.14]], mood: 'happy', mouth: 'grin' }); }],
+  ['viết lên bảng', (x, y, h) => { g.save(); g.fillStyle = '#FFF'; g.strokeStyle = INK; g.lineWidth = 4; g.fillRect(x + h * 0.25, y - h * 0.95, h * 0.5, h * 0.4); g.strokeRect(x + h * 0.25, y - h * 0.95, h * 0.5, h * 0.4); g.restore();
+    mascot(x, y, h, { hands: [[x - h * 0.22, y - h * 0.4], [x + h * 0.3, y - h * 0.78]], mood: 'think', mouth: 'flat', look: 1 }); }],
+  ['sốc', (x, y, h) => mascot(x, y, h, { arms: 'shrug', mood: 'shock', mouth: 'wide', sweat: true })],
+];
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = '#EEF2EE'; g.fillRect(0, 0, W, H); g.fillStyle = '#E3EDF1'; g.fillRect(0, 0, W, 640); if (!ready) return;
+  if (t < 1) { label('10 dáng hành động — cỡ trong video (cao 300 px), chỉ góc thẳng', 960, 36, 34);
+    POSES.forEach(([n, f], i) => { const x = 190 + (i % 5) * 385, y = i < 5 ? 520 : 1010; f(x, y, 300); });
+    POSES.forEach(([n], i) => { const x = 190 + (i % 5) * 385, yl = i < 5 ? 560 : 1050; g.save(); g.fillStyle = 'rgba(255,255,255,0.85)'; g.fillRect(x - 150, yl - 20, 300, 40); g.restore(); label(n, x, yl, 26); }); }
+  else { label('cỡ lớn (cao 640 px) — soi tay, khớp, chân', 960, 40, 36);
+    [2, 5, 6, 7, 3].forEach((k, i) => { const x = 210 + i * 375; POSES[k][1](x, 1040, 560); label(POSES[k][0], x, 90, 28); }); }
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2, LEAD: 0, error: null };
+</script>

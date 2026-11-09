@@ -1,0 +1,228 @@
+{
+ "duration": 96.103,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "The first mathematical invention was not a formula.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": "act",
+   "start": 0.0,
+   "end": 2.458,
+   "wav": "audio/voice/22defa4a600eeffb.wav"
+  },
+  {
+   "text": "It was just a scratch, carved into a bone.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": null,
+   "start": 2.808,
+   "end": 4.765,
+   "wav": "audio/voice/202a38c347b8af37.wav"
+  },
+  {
+   "text": "In the Czech Republic, archaeologists found a wolf bone with notches cut into it, about thirty thousand years old.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": null,
+   "start": 5.715,
+   "end": 11.332,
+   "wav": "audio/voice/e8b8756d21da2ef1.wav"
+  },
+  {
+   "text": "And in nineteen fifty, in central Africa, they found a baboon bone covered in notches arranged in groups, about twenty thousand years old.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": null,
+   "start": 11.682,
+   "end": 18.743,
+   "wav": "audio/voice/720de0a62a35fbf1.wav"
+  },
+  {
+   "text": "It is called the Ishango bone.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": null,
+   "start": 19.093,
+   "end": 20.514,
+   "wav": "audio/voice/c68fadb9cfd84f98.wav"
+  },
+  {
+   "text": "It sounds simple, doesn't it? But this may be the biggest leap of all.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": null,
+   "start": 21.464,
+   "end": 24.415,
+   "wav": "audio/voice/3dc04db38fb00ceb.wav"
+  },
+  {
+   "text": "Because for the first time, people pulled the quantity apart from the things being counted.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": null,
+   "start": 24.765,
+   "end": 29.426,
+   "wav": "audio/voice/1b351029ac4509c5.wav"
+  },
+  {
+   "text": "Before, three sheep were simply three sheep.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": null,
+   "start": 29.776,
+   "end": 31.905,
+   "wav": "audio/voice/323e4ef5001c4265.wav"
+  },
+  {
+   "text": "After the notches, three sheep, three days, and three moons could all be written the same way: three marks.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": null,
+   "start": 32.255,
+   "end": 37.613,
+   "wav": "audio/voice/4f6101f8534566e0.wav"
+  },
+  {
+   "text": "That is the jump from counting things to the idea of number itself.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": null,
+   "start": 38.563,
+   "end": 41.756,
+   "wav": "audio/voice/a61179daf45e41b9.wav"
+  },
+  {
+   "text": "And in a sense, all of mathematics since then is that same move, made again and again: pulling the idea away from the stuff.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "opens": null,
+   "start": 42.106,
+   "end": 48.131,
+   "wav": "audio/voice/8863a8b7ed76824d.wav"
+  },
+  {
+   "text": "But notches have a problem.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": "stop",
+   "start": 49.731,
+   "end": 51.27,
+   "wav": "audio/voice/565606c514c48b17.wav"
+  },
+  {
+   "text": "If you need to record four hundred and thirty-seven sheep, you can't carve four hundred and thirty-seven lines.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": null,
+   "start": 51.62,
+   "end": 57.287,
+   "wav": "audio/voice/116c39eed2743f01.wav"
+  },
+  {
+   "text": "About five thousand years ago, the Sumerians of Mesopotamia invented the first written numerals.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": null,
+   "start": 58.237,
+   "end": 63.397,
+   "wav": "audio/voice/fb7e90efbdf20014.wav"
+  },
+  {
+   "text": "One sign for one, another for ten, and another for sixty.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": null,
+   "start": 63.747,
+   "end": 66.255,
+   "wav": "audio/voice/43c523c6e3f5fcfe.wav"
+  },
+  {
+   "text": "They counted in base sixty, not base ten.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": null,
+   "start": 66.605,
+   "end": 68.614,
+   "wav": "audio/voice/c1d4ebb230553800.wav"
+  },
+  {
+   "text": "Why sixty?",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": null,
+   "start": 69.564,
+   "end": 70.319,
+   "wav": "audio/voice/a3d40e45366eb410.wav"
+  },
+  {
+   "text": "Because sixty divides evenly by two, three, four, five, six, ten, twelve, fifteen, twenty, and thirty.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": null,
+   "start": 70.669,
+   "end": 75.511,
+   "wav": "audio/voice/9a6f27dd8b7a182e.wav"
+  },
+  {
+   "text": "That makes it wonderful for sharing out land, grain, and time.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": null,
+   "start": 75.861,
+   "end": 78.983,
+   "wav": "audio/voice/d70dbbe98c9d572f.wav"
+  },
+  {
+   "text": "And here is the fun part: Sumer is still alive in your daily life.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": null,
+   "start": 79.933,
+   "end": 83.064,
+   "wav": "audio/voice/db936e625bdf0b12.wav"
+  },
+  {
+   "text": "An hour has sixty minutes, a minute has sixty seconds, and a full circle has three hundred and sixty degrees, which is six times sixty.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": null,
+   "start": 83.414,
+   "end": 90.142,
+   "wav": "audio/voice/f6dc97064b3e0fed.wav"
+  },
+  {
+   "text": "So every time you check a clock, you are using an invention that is five thousand years old.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Counting",
+   "section": "About 3000 BC \u2014 Sumer",
+   "opens": null,
+   "start": 90.492,
+   "end": 95.153,
+   "wav": "audio/voice/fd164234d321b9c6.wav"
+  }
+ ]
+}

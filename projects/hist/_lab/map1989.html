@@ -1,0 +1,23 @@
+<!doctype html><meta charset="utf-8">
+<title>hist — bàn thử bản đồ Chiến tranh Lạnh</title>
+<style>html,body{margin:0;background:#A9C9DE;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử europe1960.json (Đông / Tây Đức, USSR…) + europe1994.json (Đức thống nhất). t 0.5 = Trung Âu 1960 biết diễn · t 1.5 = 1994.
+// node engine/render/shoot.js stills --page projects/hist/_lab/map1989.html --t 0.5,1.5 --outdir out/_lab/hist-map1989
+import { loadMap, view, drawMap, country, ll } from '../_kit/mapkit.js';
+const g = document.getElementById('cv').getContext('2d');
+let A = null, B = null, ready = false;
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  loadMap('../_kit/maps/europe1960.json').then(m => { A = m; }), loadMap('../_kit/maps/europe1994.json').then(m => { B = m; })]).then(() => { ready = true; });
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); if (!ready) return;
+  if (t < 1) { const V = view(A, { cx: 14, cy: 51, zoom: 2.2 });
+    drawMap(g, A, V, { fill: { 'West Germany': 'flag', 'East Germany': 'flag', 'Poland': 'flag', 'Czechoslovakia': 'flag', 'Austria': 'flag', 'Hungary': 'flag' } });
+    country(g, A, V, 'West Germany', { mood: 'smug', arms: 'hold' }); country(g, A, V, 'East Germany', { mood: 'angry', arms: 'cross' });
+    country(g, A, V, 'Hungary', { mood: 'calm', arms: 'wave', t: 0.3 });
+    const [x, y] = V.pt(ll(A, 13.4, 52.52)); g.fillStyle = '#D52B1E'; g.beginPath(); g.arc(x, y, 14, 0, 7); g.fill(); }
+  else { const V = view(B, { cx: 12, cy: 51, zoom: 2.2 }); drawMap(g, B, V, { fill: { 'Germany': 'flag', 'Poland': 'flag' } }); country(g, B, V, 'Germany', { mood: 'happy', arms: 'up' }); }
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2, LEAD: 0 };
+</script>

@@ -1,0 +1,114 @@
+## ACT ONE — Trapping the circle / Measured, not explained
+p2 0 0.02 4.11 people knew pi roughly long before anyone could explain it because they measured it
+p2 1 4.52 9.10 babylonian scribes usually just used three and one clay tablet uses three and one eighth
+p2 2 9.55 16.80 in egypt the rhind papyrus copied around sixteen fifty bc finds the area of a round field in a way that works out to about three point one six
+p2 3 17.35 24.40 these numbers were good enough for fields and granaries but they were measurements not reasons nobody could say why the number was what it was
+## The squeeze
+p2 4 26.10 31.56 the first person to go after the question systematically was archimedes in syracuse in the third century bc
+p2 5 32.11 36.80 his problem is easy to state you can't lay a straight ruler along a curve and read off its length
+p2 6 37.23 42.38 but you can do this draw a polygon inside the circle its perimeter is a little shorter than the circle
+p2 7 42.77 46.87 then draw a polygon outside hugging the circle its perimeter is a little longer
+p2 8 47.26 51.91 so the circle which you cannot measure directly is trapped between two numbers that you can
+p2 9 52.96 59.71 archimedes started with hexagons six sides each and got a rough squeeze somewhere between three and about three point four six
+p2 10 60.22 63.63 then he doubled the sides twelve twenty-four forty-eight ninety-six
+p2 11 64.18 69.06 with every doubling the polygons hug the circle a little tighter and the gap between them shrinks
+p2 12 69.50 75.48 at ninety-six sides he proved that pi lies between three point one four zero eight and three point one four two nine
+p2 13 75.87 80.23 that upper bound is twenty-two over seven the very fraction many of us still use today
+## The idea that wouldn't die
+p2 14 81.89 84.54 the same idea was found again independently in china
+p2 15 84.95 93.26 in the fifth century zu chongzhi went all the way to a polygon with twelve thousand two hundred and eighty-eight sides and pinned pi down to seven decimal places
+p2 16 93.69 100.01 he also gave the fraction three hundred and fifty-five over one hundred and thirteen which is right to six decimal places
+p2 17 100.44 104.96 in europe archimedes' squeeze stayed the method of choice for almost nineteen hundred years
+p2 18 105.41 113.42 as late as sixteen ten ludolph van ceulen was still doubling polygons out to a shape with more than four quintillion sides and he got thirty-five digits
+p2 19 113.85 118.97 they were carved on his tombstone and for a long time german speakers called pi the ludolphine number
+## A limit
+p2 20 120.63 124.65 but the real gift of archimedes isn't the digits it's what his method shows pi to be
+p2 21 125.18 129.92 pi is the end of a process it is where those polygons are heading as their sides grow without limit
+p2 22 130.33 133.93 in other words pi lives right on the border between straight and curved
+p2 23 134.36 138.59 it is the price you pay to turn something with corners into something perfectly smooth
+## ACT TWO — Pi is about turning / Not about circles
+p2 24 141.05 142.29 now for the most important part
+p2 25 142.70 147.07 in school pi arrives as a fact about circles so it's natural to think pi is about circles
+p2 26 147.50 149.06 it isn't really pi is about turning
+p2 27 149.45 154.13 to see why we need a unit of angle that most of us met once briefly and then forgot the radian
+## Three hundred and sixty
+p2 28 156.04 160.11 we usually measure angles in degrees and a full turn is three hundred and sixty of them
+p2 29 160.50 164.51 but there's nothing mathematical about three hundred and sixty somebody chose it
+p2 30 164.92 168.47 it most likely comes from babylonian astronomy which counted in sixties
+p2 31 168.88 174.79 three hundred and sixty can be divided evenly in twenty-four different ways and it's close to the number of days in a year
+p2 32 175.22 176.83 very handy but still a convention
+## A unit nobody chose
+p2 33 178.49 181.29 a radian is different because nobody had to pick a number
+p2 34 181.72 185.94 take a circle whose radius is one walk along its edge a distance of exactly one radius
+p2 35 186.40 192.58 the angle you've swept out from the centre is one radian a little over fifty-seven degrees that's the whole definition
+p2 36 192.99 196.98 and this is where pi steps in a circle of radius one has a circumference of two pi
+p2 37 197.41 201.41 so a full turn is two pi radians half a turn is pi a quarter turn is pi over two
+p2 38 202.44 205.93 so pi isn't some number that just happens to pop out when you measure circles
+p2 39 206.34 212.84 pi is how far you travel along the edge when you turn halfway round a circle of radius one it is the natural measure of half a turn
+p2 40 213.25 218.44 some mathematicians even argue that the real constant should be the full turn two pi which they call tau
+p2 41 218.91 220.45 either way it is a story about turning
+## The shadow of a turn
+p2 42 222.09 225.96 look at pi this way and it starts showing up in places with no circles at all
+p2 43 226.39 230.62 imagine a point running steadily around a circle and look only at its shadow on a wall
+p2 44 231.03 236.10 the shadow just slides up and down up and down trace it out over time and you get a wave a sine wave
+p2 45 236.51 242.69 that is exactly how a pendulum swings at least for small swings and it's why the formula for its period has a two pi in it
+p2 46 243.14 246.10 a sound wave is air pressure rising and falling in that same rhythm
+p2 47 246.71 251.06 and the alternating current in your walls is made by a coil spinning inside a generator
+p2 48 251.45 256.13 wherever something repeats there is a hidden turn behind it and pi comes along to measure it
+p2 49 256.56 260.55 the circle is just the easiest picture of a turn to see it isn't where pi comes from
+## ACT THREE — Why pi never ends / A fraction has to repeat
+p2 50 263.03 267.39 pi is irrational that means you cannot write it as one whole number divided by another
+p2 51 267.80 270.15 to see why that matters look at what fractions do
+p2 52 270.62 277.28 divide one by three and you get zero point three three three repeating forever a tiny bar over the three writes it down completely
+p2 53 277.67 283.44 divide one by seven and you get one four two eight five seven then one four two eight five seven again and again
+p2 54 283.85 291.15 that isn't luck each step of the division leaves a remainder and unless the division comes out exactly there are only six remainders it can be
+p2 55 291.64 296.26 so within six steps some remainder has to come back and from that moment the digits repeat
+p2 56 296.69 300.75 every fraction behaves like this its digits either stop or they fall into a loop
+p2 57 301.18 304.78 so if the digits of pi never stop and never loop pi cannot be a fraction
+## Proved, not guessed
+p2 58 306.42 308.49 and they don't this isn't a hunch it's a theorem
+p2 59 308.88 314.07 in seventeen sixty-one the swiss mathematician johann heinrich lambert proved that pi is irrational
+p2 60 314.46 322.33 more than a century later in eighteen eighty-two the german mathematician ferdinand von lindemann proved something even stronger pi is transcendental
+p2 61 322.76 330.06 that means pi is not the solution of any polynomial equation with whole-number coefficients no finite piece of algebra will ever pin it down
+## No shortcut
+p2 62 331.74 335.98 you might hope for a simple reason why a number born from a circle has to behave like this
+p2 63 336.47 339.71 honestly there isn't a one-line one the proofs are real but subtle
+p2 64 340.10 344.93 the shortest by ivan niven in nineteen forty-seven fits on a single page but it needs calculus
+p2 65 345.36 346.75 what we can show is what it costs
+p2 66 347.16 354.27 the ancient greeks asked a famous question with only a compass and a straight edge can you draw a square with exactly the same area as a circle
+p2 67 354.66 361.40 for more than two thousand years people tried lindemann's result finally settled it it is impossible because pi is transcendental
+p2 68 361.81 368.56 so the endless digits aren't a flaw in the number they are the reason one of the oldest problems in mathematics could never be solved
+## ACT FOUR — When the ratio isn't pi / A circle on a ball
+p2 69 371.02 372.70 here is something textbooks rarely mention
+p2 70 373.09 377.92 pi itself the number never changes it is three point one four one five nine and so on forever
+p2 71 378.33 382.87 but the ratio of a circle's circumference to its diameter only equals pi on a flat surface
+p2 72 383.28 390.88 imagine you are standing on a huge ball like the earth you draw a circle the honest way by walking the same distance from a centre point in every direction
+p2 73 391.27 395.35 now measure around that circle and divide by its diameter measured along the ground
+p2 74 395.78 402.79 you get less than pi your diameter had to follow the curve of the ball so it is longer than it would be on a flat floor and the ratio shrinks
+p2 75 403.86 408.37 push it to the extreme put the centre at the north pole and let your circle be the equator
+p2 76 408.76 416.08 the circumference is the whole equator the diameter runs from the equator over the pole and down to the other side that is half the equator
+p2 77 416.51 417.82 so the ratio is exactly two
+p2 78 418.23 421.97 and on a saddle which curves the other way the ratio comes out bigger than pi
+## Our universe
+p2 79 423.65 430.31 so the formula you learned circumference equals pi times diameter is only true in flat space not curving up not curving down
+p2 80 430.70 440.29 as far as our best measurements can tell our universe is flat on the largest scales to within a fraction of a percent that's why the school formula works so well for everyday circles
+p2 81 440.72 444.89 but einstein's general relativity says that space near heavy objects does curve
+p2 82 445.28 450.61 draw a circle around a black hole and the distance around it no longer matches pi times the distance across
+p2 83 451.08 452.60 pi didn't change the world did
+p2 84 453.03 459.74 pi is the constant of flat geometry when space bends pi is still there as a number it just stops describing the circles around you
+## ACT FIVE — Putting it together / Putting it together
+p2 85 462.20 463.44 so what is pi really
+p2 86 463.86 468.23 it is not just circumference over diameter that's the easiest way to measure it not what it is
+p2 87 468.68 474.61 pi is a limit it's where the polygons end up as their sides multiply without end the border between straight and curved
+p2 88 475.00 478.56 pi is the natural measure of turning half a turn on a circle of radius one
+p2 89 478.95 488.74 pi is irrational and transcendental lambert proved the first in seventeen sixty-one lindemann the second in eighteen eighty-two and that is why no compass will ever square the circle
+p2 90 489.13 493.00 and pi is the constant of flat space bend space and circles stop obeying it
+p2 91 493.99 497.50 put it all together and pi is what flat geometry has to say about turning
+p2 92 497.88 508.25 our universe is very nearly flat which is why pi works so well here and why it turns up in fields that seem to have nothing to do with circles statistics quantum physics probability number theory
+## Next time
+p2 93 509.93 512.16 so the next time you see pi in a formula try this
+p2 94 513.12 514.91 there may be no circle anywhere in the problem
+p2 95 515.30 523.62 the bell curve of statistics has a square root of pi inside it add one plus a quarter plus a ninth plus a sixteenth on forever and you get pi squared over six
+p2 96 524.11 529.49 but almost always if you dig there is a turn a wave or a circle hiding somewhere inside the calculation
+p2 97 530.48 532.28 thank you for watching all the way to the end
+p2 98 532.67 540.08 if you'll never look at pi quite the same way again subscribe to ninety-nine percent from scratch so you don't miss the next one see you soon

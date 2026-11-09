@@ -1,0 +1,96 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — boardgame</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  html,body{margin:0;background:#FFF3DC;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "boardgame · bàn cờ in bìa cứng" (probability). Bàn thử. Chụp: node engine/render/shoot.js stills --page tools/lab/boardgame.html --dur 2 --t 0.5,1.5 --outdir out/_lab/boardgame
+// Ý: xác suất là LUẬT CHƠI của một trò chơi — ai biết đếm ô thì thắng. Cả bài là một hộp board game hiện đại: bàn cờ
+//   bìa cứng in offset (viền trắng, góc bo), xúc xắc nhựa trong đỏ / xanh, quân cờ gỗ, thẻ bài luật. Cược de Méré = hai
+//   thẻ "BET" trên bàn; lưới 36 = chính bàn cờ 6×6; mỗi "bước" của hồi ba = một thẻ luật rút ra.
+// Vật xuyên suốt: BÀN CỜ 6×6. (1) hai ô cược · (2) 36 ô, quân vàng đứng trên ô tổng 7 · (3) phần bù = lật ô (mặt sau xám)
+//   · (4) cây = đường đi của quân trên bàn · (5) 1000 người = 1000 quân tí hon.
+// Màu: bìa kem #FFF3DC · bàn #FDFBF6 viền mực #23264A · VÀNG CAM #FFB627 = cái ta đếm (quân / ô) · TÍM #6B4BD8 = ca hiếm
+//   · XANH NGỌC #0E8C7F = thắng · SAN HÔ #E5484D (chữ #B92F34) = thua/sai · xúc xắc đỏ #E5484D / xanh #2F6DE0.
+// Chữ: Archivo 900 nén nhẹ như chữ in hộp game; nhãn trên thẻ bo góc. Người que: nét mực dày, mũ 1654, là "quân cờ người".
+// Tiếng: xúc xắc nhựa lăn trên bìa, quân gỗ đặt (tock), lật ô bìa (flip), thẻ rút (card slide), chuông thắng nhỏ.
+import { run, W, H, mk, rr, txt, line, contact, PIPS, mix, hash, stick, P } from './prob-common.js';
+const C = { felt: '#FFF3DC', board: '#FDFBF6', ink: '#23264A', ink2: '#3E4166', win: '#0E8C7F', winInk: '#0B6E64', lose: '#E5484D', loseInk: '#B92F34',
+  gold: '#FFB627', purple: '#6B4BD8', purpleInk: '#5233B8', dieA: '#E5484D', dieB: '#2F6DE0', card: '#FFFFFF' };
+const F = { big: '"Archivo"', bigW: 900, small: '"Archivo"', smallW: 700, mono: '"Archivo"', monoW: 600 };
+const T = {
+  C, F,
+  fonts: ['900 150px "Archivo"', '900 108px "Archivo"', '700 36px "Archivo"', '600 38px "Archivo"'],
+  contrast: [['ink', C.ink, C.felt], ['ink2', C.ink2, C.card], ['win', C.winInk, C.card], ['lose', C.loseInk, C.card], ['inkOnGold', C.ink, C.gold], ['purple', C.purpleInk, C.board], ['whiteOnInk', '#FFFFFF', C.ink]],
+  bg(k) {
+    const c = mk(), x = c.getContext('2d');
+    x.fillStyle = C.felt; x.fillRect(0, 0, W, H);
+    // hoạ tiết in hộp: chấm bi mờ + các đường chéo màu ở mép
+    for (let r = 0; r < 28; r++) for (let q = 0; q < 50; q++) { x.fillStyle = 'rgba(35,38,74,0.05)'; x.beginPath(); x.arc(q * 40 + (r % 2) * 20, r * 40, 4, 0, 7); x.fill(); }
+    const band = (col, y, h) => { x.fillStyle = col; x.fillRect(0, y, W, h); };
+    band(C.ink, H - 46, 46); band(C.gold, H - 58, 12); band(C.ink, 0, 26); band(C.gold, 26, 10);
+    return c;
+  },
+  panel(g, x, y, w, h, i) {                                     // thẻ bài luật: viền mực dày, dải màu đầu thẻ
+    contact(g, x + w / 2, y + h + 10, w * 0.55, 26, 0.25, '35,38,74');
+    g.fillStyle = C.ink; g.fill(rr(x + 8, y + 10, w, h, 26));
+    g.fillStyle = C.card; g.fill(rr(x, y, w, h, 26)); g.strokeStyle = C.ink; g.lineWidth = 6; g.stroke(rr(x, y, w, h, 26));
+    g.save(); g.clip(rr(x, y, w, h, 26)); g.fillStyle = i ? C.lose : C.win; g.fillRect(x, y, w, 70); g.restore();
+    line(g, x, y + 70, x + w, y + 70, C.ink, 6, 'butt');
+    txt(g, i ? 'BET TWO' : 'BET ONE', x + w / 2, y + 48, '900 38px "Archivo"', '#FFFFFF', 'center');
+  },
+  die(g, cx, cy, s, n, col, rot, seed) {                        // nhựa trong bóng: gradient + mảng sáng + bóng đổ
+    contact(g, cx + s * 0.08, cy + s * 0.52, s * 0.6, s * 0.12, 0.3, '35,38,74');
+    g.save(); g.translate(cx, cy); g.rotate(rot);
+    const p = rr(-s / 2, -s / 2, s, s, s * 0.2), gr = g.createLinearGradient(-s / 2, -s / 2, s / 2, s / 2);
+    gr.addColorStop(0, mix(col, 0.35)); gr.addColorStop(0.55, col); gr.addColorStop(1, mix(col, -0.3)); g.fillStyle = gr; g.fill(p);
+    g.strokeStyle = mix(col, -0.45); g.lineWidth = Math.max(2, s * 0.03); g.stroke(p);
+    g.fillStyle = 'rgba(255,255,255,0.35)'; g.fill(rr(-s * 0.4, -s * 0.42, s * 0.5, s * 0.16, s * 0.08));
+    g.fillStyle = '#FFFFFF'; for (const [px, py] of PIPS[n]) { g.beginPath(); g.arc(px * s * 0.26, py * s * 0.26, s * 0.08, 0, 7); g.fill(); }
+    g.restore();
+  },
+  strike(g, x, y, w) { g.save(); g.fillStyle = C.lose; g.translate(x, y); g.rotate(-0.03); g.fill(rr(0, -5, w, 10, 5)); g.restore(); },
+  mark(g, cx, cy, w, tag) {
+    if (tag === 'win') { g.save(); g.fillStyle = C.win; g.beginPath(); g.arc(cx + w / 2 + 40, cy - 70, 34, 0, 7); g.fill();
+      g.strokeStyle = '#FFFFFF'; g.lineWidth = 8; g.lineCap = 'round'; g.lineJoin = 'round'; g.beginPath(); g.moveTo(cx + w / 2 + 24, cy - 70); g.lineTo(cx + w / 2 + 36, cy - 56); g.lineTo(cx + w / 2 + 58, cy - 84); g.stroke(); g.restore(); }
+    else { g.save(); g.fillStyle = C.lose; g.beginPath(); g.arc(cx + w / 2 + 40, cy - 70, 34, 0, 7); g.fill();
+      g.strokeStyle = '#FFFFFF'; g.lineWidth = 8; g.lineCap = 'round'; const a = cx + w / 2 + 40, b = cy - 70; g.beginPath(); g.moveTo(a - 13, b - 13); g.lineTo(a + 13, b + 13); g.moveTo(a + 13, b - 13); g.lineTo(a - 13, b + 13); g.stroke(); g.restore(); }
+  },
+  title(g, s, cx, y) {
+    g.font = '900 112px "Archivo"'; const w = g.measureText(s).width;
+    g.fillStyle = C.ink; g.fill(rr(cx - w / 2 - 40 + 8, y - 104 + 10, w + 80, 136, 30));
+    g.fillStyle = C.gold; g.fill(rr(cx - w / 2 - 40, y - 104, w + 80, 136, 30)); g.strokeStyle = C.ink; g.lineWidth = 6; g.stroke(rr(cx - w / 2 - 40, y - 104, w + 80, 136, 30));
+    txt(g, s, cx, y, '900 112px "Archivo"', C.ink, 'center');
+  },
+  gambler(g, x, y, h) {
+    contact(g, x, y + 6, 70, 14, 0.3, '35,38,74');
+    const J = stick(g, x, y, P.shrug, { h, color: C.ink, dir: 1, width: 12 });
+    const hx = J.head[0], hy = J.head[1] - J.headR * 0.55;
+    g.save(); g.fillStyle = C.ink; g.beginPath(); g.ellipse(hx, hy, h * 0.17, h * 0.032, -0.06, 0, 7); g.fill();
+    g.beginPath(); g.moveTo(hx - h * 0.08, hy); g.quadraticCurveTo(hx - h * 0.08, hy - h * 0.1, hx, hy - h * 0.1); g.quadraticCurveTo(hx + h * 0.08, hy - h * 0.1, hx + h * 0.08, hy); g.fill();
+    g.fillStyle = C.gold; g.fillRect(hx - h * 0.08, hy - h * 0.03, h * 0.16, h * 0.022); g.restore();
+  },
+  gridBack(g, x, y, c, n) {
+    contact(g, x + n * c / 2, y + n * c + 18, n * c * 0.6, 30, 0.25, '35,38,74');
+    g.fillStyle = C.ink; g.fill(rr(x - 18 + 10, y - 18 + 12, n * c + 36, n * c + 36, 28));
+    g.fillStyle = C.board; g.fill(rr(x - 18, y - 18, n * c + 36, n * c + 36, 28)); g.strokeStyle = C.ink; g.lineWidth = 6; g.stroke(rr(x - 18, y - 18, n * c + 36, n * c + 36, 28));
+  },
+  cell(g, x, y, c, s, kind, seed) {
+    const p = rr(x + 5, y + 5, c - 10, c - 10, 14);
+    g.fillStyle = kind === 'seven' ? C.gold : kind === 'twelve' ? C.purple : ((x / c + y / c) % 2 < 1 ? '#F1ECE0' : '#E8E2D3'); g.fill(p);
+    g.strokeStyle = 'rgba(35,38,74,0.35)'; g.lineWidth = 2; g.stroke(p);
+    txt(g, String(s), x + c / 2, y + c / 2 + 3, `${kind ? 900 : 700} 40px "Archivo"`, kind === 'twelve' ? '#FFFFFF' : kind ? C.ink : C.ink2, 'center', 'middle');
+  },
+  key(g, x, y, s, frac, kind) {
+    const col = kind === 'seven' ? C.gold : C.purple;
+    g.fillStyle = C.ink; g.fill(rr(x + 6, y - 74, 110, 100, 18)); g.fillStyle = col; g.fill(rr(x, y - 80, 110, 100, 18)); g.strokeStyle = C.ink; g.lineWidth = 5; g.stroke(rr(x, y - 80, 110, 100, 18));
+    txt(g, s, x + 55, y - 6, '900 66px "Archivo"', kind === 'seven' ? C.ink : '#FFFFFF', 'center');
+    txt(g, frac, x + 140, y - 6, '900 64px "Archivo"', kind === 'seven' ? C.ink : C.purpleInk, 'left');
+  },
+  stickGrid(g, gx, gy, c) { contact(g, gx + 6 * c + 74, gy + 6 * c + 10, 40, 8, 0.3, '35,38,74'); stick(g, gx + 6 * c + 74, gy + 6 * c + 6, P.point, { h: 170, color: C.ink, dir: -1, width: 10 }); },
+};
+run(T);
+</script>

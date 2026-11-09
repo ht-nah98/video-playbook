@@ -1,0 +1,42 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — stick 2</title>
+<style>html,body{margin:0;background:#EDEAE2;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử người que bản 2 — áp docs/study/08-stick-animation.md: tư thế chính đặt tay + ease (keys), đi bộ theo bản đồ
+// bước (chân trụ khoá, hông theo đường mượt), dốc 22°, lấy đà → bay theo cung → tiếp đất dồn + vượt → ngồi mép thẻ.
+// node engine/render/shoot.js stills --page tools/lab/stick2.html --dur 12 --t 1,3,5,7.4,7.8,8.17,10.8 --outdir out/_lab/stick2
+// node tools/lab/stick2-qa.mjs   (gác chất lượng §3.5: gối, chân trượt, độ dài chi)
+import { stick } from '../../engine/stick.js';
+import { actor, ground, CARD, H, DIR, SCENE } from './stick2-scene.js';
+const g = document.getElementById('cv').getContext('2d');
+const PAPER = '#EDEAE2', INK = '#2B3440', FIG = '#1F3A5F', CARDC = '#F7F4EC', SOFT = '#C9C3B4';
+let fontsReady = false;
+Promise.all([new FontFace('Archivo', 'url("../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load()
+  .then(f => document.fonts.add(f)).catch(() => {})]).then(() => { fontsReady = true; });
+
+function world() {
+  // đất: phẳng → dốc 22° → bằng (bo góc), tô nhạt bên dưới
+  g.beginPath(); g.moveTo(0, ground(0));
+  for (let x = 0; x <= 1920; x += 8) g.lineTo(x, ground(x));
+  g.lineTo(1920, 1080); g.lineTo(0, 1080); g.closePath(); g.fillStyle = '#E2DDD1'; g.fill();
+  g.beginPath(); for (let x = 0; x <= 1920; x += 8) x ? g.lineTo(x, ground(x)) : g.moveTo(x, ground(x));
+  g.strokeStyle = INK; g.lineWidth = 5; g.lineCap = 'round'; g.stroke();
+  g.fillStyle = INK; g.font = '600 30px Archivo, sans-serif'; g.textAlign = 'left'; g.fillText('22°', 980, 860);
+  // thẻ LIMIT trên cao nguyên (chân đỡ là hai cột mảnh)
+  const { x0, x1, top } = CARD, bot = ground(1500);
+  g.strokeStyle = SOFT; g.lineWidth = 6; g.beginPath(); g.moveTo(x0 + 40, top + 110); g.lineTo(x0 + 40, bot); g.moveTo(x1 - 40, top + 110); g.lineTo(x1 - 40, bot); g.stroke();
+  g.fillStyle = CARDC; g.strokeStyle = INK; g.lineWidth = 5; g.beginPath(); g.roundRect(x0, top, x1 - x0, 110, 10); g.fill(); g.stroke();
+  g.fillStyle = INK; g.font = '800 72px Archivo, sans-serif'; g.textAlign = 'center'; g.fillText('LIMIT', (x0 + x1) / 2, top + 80);
+}
+
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = PAPER; g.fillRect(0, 0, 1920, 1080);
+  world();
+  const A = actor(t);
+  stick(g, A.hip[0], 0, A.pose, { h: H, color: FIG, dir: DIR, hip: A.hip, feet: A.feet, hands: A.hands, squash: A.squash ?? 1 });
+  g.fillStyle = 'rgba(43,52,64,0.55)'; g.font = '600 26px Archivo, sans-serif'; g.textAlign = 'left';
+  g.fillText(`stick 2 · ${A.phase} · t ${t.toFixed(2)}`, 60, 70);
+}
+window.__intro = { get ready() { return fontsReady; }, still: frame, frame, DUR: SCENE.dur };
+</script>

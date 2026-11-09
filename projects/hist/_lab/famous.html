@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8">
+<title>hist lab — nhân vật nổi tiếng đầu tròn</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử 10 nhân vật lịch sử nổi tiếng vẽ đầu tròn (_kit/famous.js) — người dùng 2026-10-30 xem mức hoàn thiện.
+//   t 0.5 = 10 nhân vật cỡ lớn · t 1.5 = cỡ nhỏ (đám đông / góc khung, 150 px) — còn nhận ra không · t 2.5 = biểu cảm + đứng chung cảnh
+import { INK } from '../_kit/mapkit.js';
+import * as S from '../_kit/stage.js';
+import { bindFamous, famous, WHO } from '../_kit/famous.js';
+const g = document.getElementById('cv').getContext('2d');
+const { W, H } = S;
+let ready = false;
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f))])
+  .then(() => { S.bindStage(g, {}); bindFamous(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+const ORDER = ['hitler', 'napoleon', 'stalin', 'churchill', 'lincoln', 'einstein', 'caesar', 'cleopatra', 'victoria', 'antoinette'];
+const BG = ['#E8E2D2', '#DDE6F2', '#E6E1D3', '#E4E4E8', '#E9E4DA', '#E2ECE4', '#F4ECDA', '#F2E6C8', '#E6E2EC', '#F7E4EA'];
+const txt = (s, x, y, size, col = INK) => { g.save(); g.font = `800 ${size}px Archivo, sans-serif`; g.fillStyle = col; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(s, x, y); g.restore(); };
+function big() { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H);
+  ORDER.forEach((k, i) => { const col = i % 5, row = Math.floor(i / 5), x = 14 + col * 382, y = 12 + row * 534;
+    g.fillStyle = BG[i]; g.beginPath(); g.roundRect(x, y, 370, 522, 18); g.fill(); g.save(); g.beginPath(); g.roundRect(x, y, 370, 522, 18); g.clip();
+    famous(x + 185, y + 470, 330, k); g.restore(); txt(`${i + 1}. ${WHO[k].name}`, x + 185, y + 498, 26); }); }
+function small() { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); txt('cỡ nhỏ: 150 px (đám đông, góc khung) · 90 px (thumbnail trên điện thoại)', 960, 70, 34);
+  ORDER.forEach((k, i) => { const x = 110 + i * 190; famous(x, 420, 150, k); famous(x, 760, 90, k); txt(WHO[k].name.split(' ').pop(), x, 830, 22); }); }
+function mix() { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H);
+  txt('biểu cảm: cùng nhân vật, đổi mắt / miệng / tay', 520, 60, 32);
+  [['angry', null], ['shock', 'o'], ['sad', 'frown'], ['happy', 'grin']].forEach(([e, m], i) => famous(140 + i * 250, 520, 330, 'hitler', { eyes: e, mouth: m }));
+  [['shock', 'o', ['down', 'vsign']], ['happy', 'grin', ['down', 'vsign']]].forEach(([e, m, a], i) => famous(140 + i * 250, 1010, 330, 'churchill', { eyes: e, mouth: m, arms: a }));
+  [['angry', 'flat'], ['sad', 'frown']].forEach(([e, m], i) => famous(640 + i * 250, 1010, 330, 'napoleon', { eyes: e, mouth: m }));
+  g.fillStyle = '#E2DCC8'; g.beginPath(); g.roundRect(1080, 100, 820, 940, 20); g.fill(); txt('đứng chung cảnh: Thế chiến II', 1490, 150, 32);
+  famous(1260, 900, 380, 'churchill'); famous(1490, 900, 380, 'stalin', { eyes: 'side', look: -1 }); famous(1720, 900, 380, 'hitler', { eyes: 'side', look: -1 }); }
+function more() { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); ['goring', 'hindenburg', 'rommel', 'paulus', 'hitler', 'stalin', 'churchill'].forEach((k, i) => { famous(150 + i * 270, 820, 520, k); txt(WHO[k].name, 150 + i * 270, 880, 24); }); }
+function frame(t) { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); if (!ready) return;
+  if (t < 1) big(); else if (t < 2) small(); else if (t < 3) mix(); else more(); }
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 4, LEAD: 0, error: null };
+</script>

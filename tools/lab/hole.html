@@ -1,0 +1,153 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — the hole in the page</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử khung phong cách cho zero-div ("The Hole in the Page"). KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/hole.html --dur 5 --t 0.5,1.5,2.5,3.5,4.5 --outdir out/_lab/hole
+// 0 = mở bài (trục số, lỗ ở 0) · 1 = 305 (cột chục là lỗ) · 2 = 12 ÷ 0 (không x nào) · 3 = 1/x hai nhánh · 4 = terminal trong lỗ
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { paper: '#F2EEE3', grid: '#C9D6E3', margin: '#E3A79F', ink: '#1C2640', red: '#C8382A', dim: '#8A93A6',
+            void: '#0A0A0D', term: '#E6E2D6', amber: '#F2C94C', clay: '#A9805A', clayInk: '#4A3322' };
+const IM = {}; let PAPER, ready = false;
+
+function paper() {                                   // giấy kẻ ô 48 px + lề đỏ + hạt (sinh một lần)
+  const c = mk(), x = c.getContext('2d');
+  x.fillStyle = C.paper; x.fillRect(0, 0, W, H);
+  const d = x.getImageData(0, 0, W, H);
+  for (let i = 0; i < W * H; i++) { const n = (hash(i * 0.613) - 0.5) * 9; d.data[i * 4] += n; d.data[i * 4 + 1] += n; d.data[i * 4 + 2] += n; }
+  x.putImageData(d, 0, 0);
+  x.strokeStyle = C.grid; x.lineWidth = 1.4;
+  for (let i = 24; i < W; i += 48) { x.beginPath(); x.moveTo(i, 0); x.lineTo(i, H); x.stroke(); }
+  for (let j = 12; j < H; j += 48) { x.beginPath(); x.moveTo(0, j); x.lineTo(W, j); x.stroke(); }
+  x.strokeStyle = C.margin; x.lineWidth = 2.5; x.beginPath(); x.moveTo(168, 0); x.lineTo(168, H); x.stroke();
+  return c;
+}
+const rim = (r, s) => Array.from({ length: 72 }, (_, i) => { const a = i / 72 * Math.PI * 2, q = r * (1 + (hash(i * 7.3 + s) - 0.5) * 0.07); return [Math.cos(a) * q, Math.sin(a) * q]; });
+function hole(cx, cy, r, inside) {                   // lỗ thủng: mép giấy răng cưa, bóng đổ vào trong, nhìn xuyên ra khoảng tối
+  const P = rim(r, 3);
+  g.save(); g.translate(cx, cy);
+  g.beginPath(); P.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath();
+  g.save(); g.clip(); g.fillStyle = C.void; g.fillRect(-r * 1.2, -r * 1.2, r * 2.4, r * 2.4);
+  if (inside) inside();
+  const sh = g.createRadialGradient(r * 0.25, r * 0.3, r * 0.55, 0, 0, r * 1.05);
+  sh.addColorStop(0, 'rgba(0,0,0,0)'); sh.addColorStop(1, 'rgba(0,0,0,0.75)'); g.fillStyle = sh; g.fillRect(-r * 1.2, -r * 1.2, r * 2.4, r * 2.4);
+  // thành vết cắt: dải giấy dày nhìn thấy ở mép dưới-phải bên trong lỗ
+  const th = Math.max(5, r * 0.09);
+  g.save(); g.translate(-th * 0.7, -th * 0.9); g.beginPath(); P.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath();
+  g.restore(); g.lineWidth = th * 1.6; g.strokeStyle = '#D8CFBA'; g.stroke();
+  g.restore();
+  g.lineWidth = Math.max(3, r * 0.05); g.strokeStyle = '#FFFDF6'; g.stroke();           // mép giấy cắt (sáng)
+  g.lineWidth = 1.5; g.strokeStyle = 'rgba(28,38,64,.35)'; g.stroke();
+  g.restore();
+}
+function line(pts, w, col, seed = 1) {
+  g.save(); g.strokeStyle = col; g.lineWidth = w; g.lineCap = g.lineJoin = 'round'; g.beginPath();
+  pts.forEach(([x, y], i) => { x += (hash(i * 3.1 + seed) - .5) * 1.6; y += (hash(i * 5.7 + seed) - .5) * 1.6; i ? g.lineTo(x, y) : g.moveTo(x, y); });
+  g.stroke(); g.restore();
+}
+const seg = (a, b, c, d, n = 20) => Array.from({ length: n + 1 }, (_, i) => [a + (c - a) * i / n, b + (d - b) * i / n]);
+function text(s, x, y, font, col, align = 'left') { g.save(); g.font = font; g.fillStyle = col; g.textAlign = align; g.fillText(s, x, y); g.restore(); }
+function strike(x0, y0, x1, y1, seed) { line(seg(x0, y0, x1, y1, 14), 6, C.red, seed); }
+function cross(x, y, s, seed) { strike(x - s, y - s, x + s, y + s, seed); strike(x + s, y - s, x - s, y + s, seed + 9); }
+function figure(pose, cx, foot, h, flip = false) {
+  const im = IM[pose], s = h / im.height, w = im.width * s;
+  g.save(); if (flip) { g.translate(cx * 2, 0); g.scale(-1, 1); }
+  g.globalAlpha = 0.22; g.filter = 'brightness(0) saturate(100%)';                      // bóng lệch, đỏ nhạt
+  g.drawImage(im, cx - w / 2 + 16, foot - h + 12, w, h); g.filter = 'none'; g.globalAlpha = 1;
+  g.drawImage(im, cx - w / 2, foot - h, w, h); g.restore();
+}
+const A = '800 ', ARC = '"Archivo"', MONO = '500 28px "IBM Plex Mono"', IT = 'italic 600 ';
+
+const frames = [
+  () => {                                            // 0 · mở bài: trục số, số 0 là một lỗ
+    const y = 600, x0 = 250, u = 106, hx = x0 + 5 * u;
+    line(seg(200, y, 1350, y, 40), 5, C.ink, 2);
+    line(seg(1330, y - 14, 1350, y, 3), 5, C.ink, 3); line(seg(1330, y + 14, 1350, y, 3), 5, C.ink, 4);
+    for (let i = -5; i <= 5; i++) { const x = x0 + (i + 5) * u; if (i === 0) continue;
+      line(seg(x, y - 16, x, y + 16, 3), 4, C.ink, i + 20); text(i < 0 ? '−' + -i : String(i), x, y + 70, A + '46px ' + ARC, C.ink, 'center'); }
+    hole(hx, y, 62);
+    text('0', hx, y - 92, IT + '96px "Cormorant Garamond"', C.red, 'center');
+    line(seg(hx - 30, y - 150, hx + 30, y - 110, 6), 5, C.red, 8);                         // "0" bị gạch: chưa phải số
+    text('a world without zero', 230, 230, IT + '72px "Cormorant Garamond"', C.ink);
+    text('NO 0 KEY · NO TENS COLUMN · NO ZERO BALANCE', 236, 290, MONO, C.dim);
+    figure('ponder', 1690, 1080, 820);
+  },
+  () => {                                            // 1 · 305: cột chục cần "trống"
+    const top = 300, bw = 300, xs = [520, 820, 1120];
+    const xs2 = [370, 670, 970, 1270];
+    xs2.forEach((x, i) => line(seg(x, top, x, top + 400, 10), 4, C.ink, i + 1));
+    ['HUNDREDS', 'TENS', 'ONES'].forEach((l, i) => text(l, xs[i], top - 26, MONO, C.dim, 'center'));
+    line(seg(xs[0] - bw / 2, top + 400, xs[2] + bw / 2, top + 400, 30), 4, C.ink, 30);
+    text('3', xs[0], top + 280, A + '150px ' + ARC, C.ink, 'center');
+    hole(xs[1], top + 230, 70);
+    text('5', xs[2], top + 280, A + '150px ' + ARC, C.ink, 'center');
+    text('three hundred and five', xs[1], top + 500, IT + '54px "Cormorant Garamond"', C.ink, 'center');
+    text('35 ?', 1440, 470, A + '92px ' + ARC, C.red); text('no mark for “empty”', 1440, 530, IT + '54px "Cormorant Garamond"', C.dim);
+    // bảng đất sét dán băng keo: dấu giữ chỗ hai nêm nghiêng
+    g.save(); g.translate(1440, 700); g.rotate(-0.06); g.fillStyle = C.clay; g.fillRect(0, 0, 300, 180);
+    g.fillStyle = 'rgba(255,250,235,.55)'; g.fillRect(110, -18, 80, 34);
+    g.fillStyle = C.clayInk; for (const dx of [96, 140]) { g.beginPath(); g.moveTo(dx, 60); g.lineTo(dx + 34, 92); g.lineTo(dx + 6, 116); g.closePath(); g.fill(); }
+    g.restore();
+    text('BABYLON · A PLACEHOLDER,', 1440, 930, '500 22px "IBM Plex Mono"', C.dim); text('NOT YET A NUMBER', 1440, 962, '500 22px "IBM Plex Mono"', C.dim);
+  },
+  () => {                                            // 2 · 12 ÷ 0: tìm x sao cho x × 0 = 12
+    text('12 ÷ 0 = ?', 230, 260, A + '92px ' + ARC, C.ink);
+    text('means: find x with', 236, 340, IT + '54px "Cormorant Garamond"', C.dim);
+    text('x × 0 = 12', 236, 440, A + '92px ' + ARC, C.ink);
+    const tries = [1, 2, 7, 100, 1000000];
+    tries.forEach((n, i) => { const y = 560 + i * 84, s = (n === 1000000 ? '1,000,000' : String(n)) + ' × 0 = 0';
+      text(s, 240, y, A + '46px ' + ARC, C.ink); g.font = A + '46px ' + ARC; const w = g.measureText(s).width;
+      text('≠ 12', 270 + w, y, A + '46px ' + ARC, C.red); });
+    hole(1050, 560, 120);
+    text('NO x', 1050, 760, A + '64px ' + ARC, C.red, 'center');
+    figure('halt', 1640, 1080, 800, true);
+  },
+  () => {                                            // 3 · 1/x: hai nhánh chạy về hai phía, khe ở 0 là lỗ
+    const ox = 1200, oy = 560, s = 70;
+    line(seg(740, oy, 1700, oy, 40), 3, C.ink, 60); line(seg(ox, 120, ox, 1000, 40), 3, C.ink, 61);
+    for (const sg of [1, -1]) {                      // y = 1/x, tính bằng hàm, cắt ở |y| ≤ 6.2
+      const P = []; for (let i = 0; i <= 120; i++) { const x = sg * (0.16 + i * 0.07); const yv = 1 / x; if (Math.abs(yv) > 6.2 || Math.abs(x) > 6.4) continue; P.push([ox + x * s, oy - yv * s]); }
+      line(P, 6, sg > 0 ? C.ink : C.red, sg > 0 ? 62 : 63);
+    }
+    hole(ox, oy, 46);
+    text('+∞ ?', ox + 40, 150, A + '46px ' + ARC, C.ink); text('−∞ ?', ox - 150, 990, A + '46px ' + ARC, C.red);
+    const rows = [['1 ÷ 0.1', '10'], ['1 ÷ 0.01', '100'], ['1 ÷ 0.001', '1000'], ['1 ÷ −0.1', '−10'], ['1 ÷ −0.01', '−100'], ['1 ÷ −0.001', '−1000']];
+    rows.forEach(([a, b], i) => { const y = 260 + i * 70 + (i > 2 ? 40 : 0), col = i > 2 ? C.red : C.ink;
+      if (Math.abs(eval(a.replace('÷', '/').replace('−', '-')) - Number(b.replace('−', '-'))) > 1e-9) throw new Error('bảng sai ' + a);
+      text(a, 230, y, '500 34px "IBM Plex Mono"', col); text('= ' + b, 470, y, '500 34px "IBM Plex Mono"', col); });
+  },
+  () => {                                            // 4 · terminal sống trong lỗ (Hồi 3)
+    hole(960, 540, 470, () => {
+      const L = [['> 1/0', 'Infinity'], ['> 1/-0', '-Infinity'], ['> 0/0', 'NaN'], ['> NaN === NaN', 'false'], ['> Infinity * 0', 'NaN']];
+      L.forEach(([a, b], i) => { const y = -170 + i * 78;
+        text(a, -300, y, '500 34px "IBM Plex Mono"', C.term); text(b, 140, y, '500 34px "IBM Plex Mono"', b === 'NaN' ? C.amber : C.term); });
+      text('IEEE 754', 0, 260, '500 22px "IBM Plex Mono"', '#7D8590', 'center');
+    });
+    figure('point', 250, 1080, 760);
+  },
+];
+
+(async () => {
+  await Promise.all(['800 150px', '800 92px', '800 64px', '800 46px'].map(f => document.fonts.load(f + ' "Archivo"'))
+    .concat(['500 34px', '500 28px', '500 22px'].map(f => document.fonts.load(f + ' "IBM Plex Mono"')))
+    .concat(['italic 600 96px', 'italic 600 72px', 'italic 600 54px'].map(f => document.fonts.load(f + ' "Cormorant Garamond"'))));
+  await Promise.all(['ponder', 'halt', 'point'].map(p => new Promise((res, rej) => {
+    const im = new Image(); im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p));
+    im.src = `../../assets/character-v2/cut/pose-${p}.png`; })));
+  PAPER = paper(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(PAPER, 0, 0); frames[Math.min(4, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 5 };
+</script>

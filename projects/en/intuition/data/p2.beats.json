@@ -1,0 +1,1248 @@
+{
+ "duration": 606.261,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "The first puzzle is called the Monty Hall problem, after the host of an American game show called Let's Make a Deal.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The game",
+   "opens": "act",
+   "start": 0.0,
+   "end": 5.746,
+   "wav": "audio/voice/88cf86f347238d56.wav"
+  },
+  {
+   "text": "If you've seen the movie twenty-one, you've seen it on screen. A professor puts it to a student in the middle of a class, and the student's answer is what gets him invited onto a team of card counters.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The game",
+   "opens": null,
+   "start": 6.096,
+   "end": 15.956,
+   "wav": "audio/voice/da5f6c4c64b482b2.wav"
+  },
+  {
+   "text": "Here are the rules.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The game",
+   "opens": null,
+   "start": 16.906,
+   "end": 17.715,
+   "wav": "audio/voice/daa542adf96fcee2.wav"
+  },
+  {
+   "text": "In front of you are three doors. Behind one is a car. Behind the other two, goats.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The game",
+   "opens": null,
+   "start": 18.065,
+   "end": 22.009,
+   "wav": "audio/voice/ae943eb1d977df10.wav"
+  },
+  {
+   "text": "You pick a door. Say, door number one. But it stays closed for now.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The game",
+   "opens": null,
+   "start": 22.359,
+   "end": 25.394,
+   "wav": "audio/voice/e2ad19454e3af2e7.wav"
+  },
+  {
+   "text": "The host knows where the car is. He opens one of the two doors you didn't pick, and it's always a goat.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The game",
+   "opens": null,
+   "start": 25.744,
+   "end": 30.499,
+   "wav": "audio/voice/a9b7cdb3f9e04dec.wav"
+  },
+  {
+   "text": "Now two doors are still closed. Yours, and one other.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The game",
+   "opens": null,
+   "start": 30.849,
+   "end": 33.387,
+   "wav": "audio/voice/29eb9056ae985f6d.wav"
+  },
+  {
+   "text": "And the host asks you: do you want to switch?",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The game",
+   "opens": null,
+   "start": 33.737,
+   "end": 35.762,
+   "wav": "audio/voice/1a30087b818d93eb.wav"
+  },
+  {
+   "text": "Almost everyone has the same reflex.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Fifty-fifty?",
+   "opens": "stop",
+   "start": 37.362,
+   "end": 39.288,
+   "wav": "audio/voice/4747fe1245cea080.wav"
+  },
+  {
+   "text": "Two doors left. One car, one goat. That's fifty-fifty, so switching can't make any difference.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Fifty-fifty?",
+   "opens": null,
+   "start": 39.638,
+   "end": 44.474,
+   "wav": "audio/voice/20259b3977abfb6e.wav"
+  },
+  {
+   "text": "In one study, out of more than two hundred people, only thirteen percent switched.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Fifty-fifty?",
+   "opens": null,
+   "start": 44.824,
+   "end": 48.64,
+   "wav": "audio/voice/aa25e1af8a08b7ff.wav"
+  },
+  {
+   "text": "It sounds completely reasonable. But the right answer is that you should switch.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Fifty-fifty?",
+   "opens": null,
+   "start": 49.59,
+   "end": 53.471,
+   "wav": "audio/voice/4d1cab064e028fdc.wav"
+  },
+  {
+   "text": "If you stay, you win the car one time in three. If you switch, you win two times in three.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Fifty-fifty?",
+   "opens": null,
+   "start": 53.821,
+   "end": 58.173,
+   "wav": "audio/voice/0585736344ce9699.wav"
+  },
+  {
+   "text": "Switching doubles your chances.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Fifty-fifty?",
+   "opens": null,
+   "start": 58.523,
+   "end": 60.207,
+   "wav": "audio/voice/0538f60d591e14bd.wav"
+  },
+  {
+   "text": "The reason is hiding in the moment you made your first pick.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "What the host knows",
+   "opens": "stop",
+   "start": 61.807,
+   "end": 64.21,
+   "wav": "audio/voice/1200a40c8f5bc386.wav"
+  },
+  {
+   "text": "At that point you knew nothing. So your door has exactly a one in three chance of hiding the car.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "What the host knows",
+   "opens": null,
+   "start": 64.56,
+   "end": 69.405,
+   "wav": "audio/voice/9942afb6123e059f.wav"
+  },
+  {
+   "text": "The other two doors, taken together, hold the remaining two in three.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "What the host knows",
+   "opens": null,
+   "start": 69.755,
+   "end": 73.057,
+   "wav": "audio/voice/7bf110f22a23eb31.wav"
+  },
+  {
+   "text": "Here is the key. The host doesn't open a door at random.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "What the host knows",
+   "opens": null,
+   "start": 74.007,
+   "end": 76.656,
+   "wav": "audio/voice/a24415e125ed6072.wav"
+  },
+  {
+   "text": "He knows where the car is, and he deliberately opens a goat.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "What the host knows",
+   "opens": null,
+   "start": 77.006,
+   "end": 79.685,
+   "wav": "audio/voice/8bb7a791465dd4aa.wav"
+  },
+  {
+   "text": "So when he opens one of those two doors, the two in three doesn't vanish. All of it moves onto the one door he left closed.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "What the host knows",
+   "opens": null,
+   "start": 80.035,
+   "end": 86.087,
+   "wav": "audio/voice/096b449913ed1d45.wav"
+  },
+  {
+   "text": "Your door is still one in three. The other door now holds two in three.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "What the host knows",
+   "opens": null,
+   "start": 86.437,
+   "end": 89.861,
+   "wav": "audio/voice/2b13a8d517360b1b.wav"
+  },
+  {
+   "text": "If that still feels wrong to you, you're in very good company.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Ten thousand letters",
+   "opens": "stop",
+   "start": 91.461,
+   "end": 94.244,
+   "wav": "audio/voice/d4443dc1f467e1d4.wav"
+  },
+  {
+   "text": "In nineteen ninety, Marilyn vos Savant gave exactly this answer in her magazine column. Switch.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Ten thousand letters",
+   "opens": null,
+   "start": 94.594,
+   "end": 99.563,
+   "wav": "audio/voice/9cf4e9053fb051f8.wav"
+  },
+  {
+   "text": "Around ten thousand letters arrived, most of them telling her she was wrong. Nearly a thousand were signed by people with doctorates.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Ten thousand letters",
+   "opens": null,
+   "start": 99.913,
+   "end": 105.987,
+   "wav": "audio/voice/11c45c1f4f0b70ae.wav"
+  },
+  {
+   "text": "Even Paul Erd\u0151s, one of the most brilliant mathematicians of the twentieth century, wasn't convinced, until he watched a computer play the game over and over.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Ten thousand letters",
+   "opens": null,
+   "start": 106.337,
+   "end": 114.798,
+   "wav": "audio/voice/635a3670fbb64e1d.wav"
+  },
+  {
+   "text": "So let's give your intuition a better picture.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "A hundred doors",
+   "opens": "stop",
+   "start": 116.398,
+   "end": 118.373,
+   "wav": "audio/voice/84336f1299e9fe3e.wav"
+  },
+  {
+   "text": "Instead of three doors, imagine a hundred.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "A hundred doors",
+   "opens": null,
+   "start": 118.723,
+   "end": 120.748,
+   "wav": "audio/voice/d38c53b34c2aa36b.wav"
+  },
+  {
+   "text": "You pick one. Your chance of having the car is one in a hundred. Tiny.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "A hundred doors",
+   "opens": null,
+   "start": 121.098,
+   "end": 124.358,
+   "wav": "audio/voice/4aa79c7c83107843.wav"
+  },
+  {
+   "text": "Then the host, who knows where the car is, opens ninety-eight doors. Goat, goat, goat, all the way along.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "A hundred doors",
+   "opens": null,
+   "start": 124.708,
+   "end": 129.834,
+   "wav": "audio/voice/e08c257a489632ba.wav"
+  },
+  {
+   "text": "He leaves exactly one other door closed.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "A hundred doors",
+   "opens": null,
+   "start": 130.184,
+   "end": 131.99,
+   "wav": "audio/voice/3912631e1735e48e.wav"
+  },
+  {
+   "text": "Now it's obvious, isn't it?",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "A hundred doors",
+   "opens": null,
+   "start": 132.94,
+   "end": 133.947,
+   "wav": "audio/voice/efe9ee0a9866d5e7.wav"
+  },
+  {
+   "text": "Out of ninety-nine other doors, he carefully skipped that one. It almost certainly has the car.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "A hundred doors",
+   "opens": null,
+   "start": 134.297,
+   "end": 138.741,
+   "wav": "audio/voice/af22fc7b8cbbcd43.wav"
+  },
+  {
+   "text": "Your door is still the wild guess it always was. One in a hundred.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "A hundred doors",
+   "opens": null,
+   "start": 139.091,
+   "end": 142.249,
+   "wav": "audio/voice/dd7a29188f2b20cf.wav"
+  },
+  {
+   "text": "Of course you switch.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "A hundred doors",
+   "opens": null,
+   "start": 142.599,
+   "end": 143.781,
+   "wav": "audio/voice/dd1693f1ba617110.wav"
+  },
+  {
+   "text": "The three-door game is exactly the same. The numbers are just small enough to fool you.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "A hundred doors",
+   "opens": null,
+   "start": 144.731,
+   "end": 148.989,
+   "wav": "audio/voice/154ff21d46e98173.wav"
+  },
+  {
+   "text": "And you can do what convinced Erd\u0151s.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Play it a thousand times",
+   "opens": "stop",
+   "start": 150.589,
+   "end": 152.312,
+   "wav": "audio/voice/301eae6065695f94.wav"
+  },
+  {
+   "text": "Here are a thousand games, played by a computer. On the left, a player who always stays. On the right, one who always switches.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Play it a thousand times",
+   "opens": null,
+   "start": 152.662,
+   "end": 158.875,
+   "wav": "audio/voice/52582b800b792915.wav"
+  },
+  {
+   "text": "The staying player wins about a third of the time. The switching player wins about two thirds.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Play it a thousand times",
+   "opens": null,
+   "start": 159.225,
+   "end": 163.811,
+   "wav": "audio/voice/42ba07a7704e8dc0.wav"
+  },
+  {
+   "text": "Not because of a formula. You can just watch it happen.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Play it a thousand times",
+   "opens": null,
+   "start": 164.161,
+   "end": 166.789,
+   "wav": "audio/voice/8070a739b844eb7a.wav"
+  },
+  {
+   "text": "Before we call this settled, there's one detail that matters a lot.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The rules nobody said",
+   "opens": "stop",
+   "start": 168.389,
+   "end": 171.672,
+   "wav": "audio/voice/5381dfe2d7d3f758.wav"
+  },
+  {
+   "text": "The answer two in three depends on the rules. The host always knows where the car is, he always opens a goat, and he always offers you the switch.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The rules nobody said",
+   "opens": null,
+   "start": 172.022,
+   "end": 179.034,
+   "wav": "audio/voice/a8dea3a9ac39c335.wav"
+  },
+  {
+   "text": "Change the rules, and the answer changes.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The rules nobody said",
+   "opens": null,
+   "start": 179.984,
+   "end": 181.865,
+   "wav": "audio/voice/f62f75946d128c3d.wav"
+  },
+  {
+   "text": "Suppose the host opens one of the other doors at random, and sometimes, by accident, he reveals the car.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The rules nobody said",
+   "opens": null,
+   "start": 182.215,
+   "end": 187.521,
+   "wav": "audio/voice/45cc1f18b28e634d.wav"
+  },
+  {
+   "text": "In the games where he happens to show a goat, switching and staying are now exactly even. One half each.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The rules nobody said",
+   "opens": null,
+   "start": 187.871,
+   "end": 193.131,
+   "wav": "audio/voice/18a904fe5155ef57.wav"
+  },
+  {
+   "text": "Monty Hall himself made this point. If the host is required to open a door and offer a switch every time, he said, take the switch. But if he has the choice, beware.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The rules nobody said",
+   "opens": null,
+   "start": 194.081,
+   "end": 201.923,
+   "wav": "audio/voice/6a10280539ec4829.wav"
+  },
+  {
+   "text": "And look back at that classroom scene in twenty-one. The professor says the host decides to open a door. He never says the host has to.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The rules nobody said",
+   "opens": null,
+   "start": 202.273,
+   "end": 209.047,
+   "wav": "audio/voice/ffc393bf7c65ff33.wav"
+  },
+  {
+   "text": "The student's answer is right, but only under rules that nobody in the scene actually says out loud.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The rules nobody said",
+   "opens": null,
+   "start": 209.397,
+   "end": 214.731,
+   "wav": "audio/voice/90d44821ffcb76af.wav"
+  },
+  {
+   "text": "That's what makes this puzzle so good. The answer depends on the host working to hide the car, and that's exactly the detail intuition skips.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "The rules nobody said",
+   "opens": null,
+   "start": 215.681,
+   "end": 222.815,
+   "wav": "audio/voice/6b01e15b42638ac9.wav"
+  },
+  {
+   "text": "Now we can finish the cards from the start.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Back to the cards",
+   "opens": "stop",
+   "start": 224.415,
+   "end": 226.349,
+   "wav": "audio/voice/0531abe2226803d8.wav"
+  },
+  {
+   "text": "Your gut counted cards. Two cards could show red, so fifty-fifty.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Back to the cards",
+   "opens": null,
+   "start": 226.699,
+   "end": 229.702,
+   "wav": "audio/voice/4e7a7a29ec6245d0.wav"
+  },
+  {
+   "text": "But count the sides instead. There are three red sides you could be looking at.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Back to the cards",
+   "opens": null,
+   "start": 230.052,
+   "end": 233.98,
+   "wav": "audio/voice/57c5476cc7049228.wav"
+  },
+  {
+   "text": "Two of them belong to the red-red card. Only one belongs to the red-white card.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Back to the cards",
+   "opens": null,
+   "start": 234.33,
+   "end": 238.327,
+   "wav": "audio/voice/17a9d2aede8629ef.wav"
+  },
+  {
+   "text": "So the other side is red two times out of three. Just like the doors, what you see isn't chosen fairly between the two possibilities.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Back to the cards",
+   "opens": null,
+   "start": 238.677,
+   "end": 245.549,
+   "wav": "audio/voice/0ee813bd08534f63.wav"
+  },
+  {
+   "text": "Here's what I find most interesting about Monty Hall.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Intuition, rebuilt",
+   "opens": "stop",
+   "start": 247.149,
+   "end": 249.333,
+   "wav": "audio/voice/1c4b41841a5d6630.wav"
+  },
+  {
+   "text": "Your first intuition led you to the wrong answer. But intuition didn't turn out to be useless.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Intuition, rebuilt",
+   "opens": null,
+   "start": 249.683,
+   "end": 254.379,
+   "wav": "audio/voice/0b1e7378c08ea5fe.wav"
+  },
+  {
+   "text": "The moment you pictured a hundred doors, intuition switched sides and agreed with the calculation.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Intuition, rebuilt",
+   "opens": null,
+   "start": 254.729,
+   "end": 259.84,
+   "wav": "audio/voice/2fc3e9663dfa93c6.wav"
+  },
+  {
+   "text": "A small change in how you look at the problem, and intuition is walking in the right direction again.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three doors",
+   "section": "Intuition, rebuilt",
+   "opens": null,
+   "start": 260.19,
+   "end": 265.345,
+   "wav": "audio/voice/365dffe573e43fe0.wav"
+  },
+  {
+   "text": "The second puzzle is different.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Always a little short",
+   "opens": "act",
+   "start": 267.745,
+   "end": 269.113,
+   "wav": "audio/voice/07f2c0f5eb7db642.wav"
+  },
+  {
+   "text": "Here, even after hearing the explanation, many people still feel uneasy.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Always a little short",
+   "opens": null,
+   "start": 269.463,
+   "end": 273.057,
+   "wav": "audio/voice/65b027d696bba004.wav"
+  },
+  {
+   "text": "The fact is this. Zero point nine nine nine, with the nines going on forever, is exactly equal to one.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Always a little short",
+   "opens": null,
+   "start": 273.407,
+   "end": 278.667,
+   "wav": "audio/voice/859dd59d9b34b015.wav"
+  },
+  {
+   "text": "The natural reaction is to refuse.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Always a little short",
+   "opens": null,
+   "start": 279.617,
+   "end": 281.241,
+   "wav": "audio/voice/4a6643a269a81483.wav"
+  },
+  {
+   "text": "It feels like zero point nine repeating is still just a tiny bit short of one. An infinitely small gap, but still a gap.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Always a little short",
+   "opens": null,
+   "start": 281.591,
+   "end": 287.515,
+   "wav": "audio/voice/23213c126779bed0.wav"
+  },
+  {
+   "text": "And the feeling is strong. People hear the explanation, nod, and then quietly think, it's still a little short.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Always a little short",
+   "opens": null,
+   "start": 287.865,
+   "end": 293.472,
+   "wav": "audio/voice/c880bf4c3488fc9e.wav"
+  },
+  {
+   "text": "There are a couple of familiar arguments that the two numbers are equal.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Two quick proofs",
+   "opens": "stop",
+   "start": 295.072,
+   "end": 298.759,
+   "wav": "audio/voice/b5eff35b0092f054.wav"
+  },
+  {
+   "text": "The first starts with a fraction. One third, written as a decimal, is zero point three three three, with the threes going on forever.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Two quick proofs",
+   "opens": null,
+   "start": 299.109,
+   "end": 305.868,
+   "wav": "audio/voice/41f092bfc79d5415.wav"
+  },
+  {
+   "text": "Multiply both sides by three. The left side becomes one. The right side becomes zero point nine nine nine, forever.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Two quick proofs",
+   "opens": null,
+   "start": 306.218,
+   "end": 312.151,
+   "wav": "audio/voice/981eadb032821bc4.wav"
+  },
+  {
+   "text": "So zero point nine repeating is one.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Two quick proofs",
+   "opens": null,
+   "start": 312.501,
+   "end": 314.106,
+   "wav": "audio/voice/6c7df4d2cc1f92a3.wav"
+  },
+  {
+   "text": "The second is an algebra trick.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Two quick proofs",
+   "opens": null,
+   "start": 315.056,
+   "end": 316.543,
+   "wav": "audio/voice/47515e9eacf3f30e.wav"
+  },
+  {
+   "text": "Call zero point nine repeating x. Multiply by ten, and you get ten x equals nine point nine repeating.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Two quick proofs",
+   "opens": null,
+   "start": 316.893,
+   "end": 322.091,
+   "wav": "audio/voice/c435ba3b54c3121e.wav"
+  },
+  {
+   "text": "Subtract x from ten x, and the endless tails cancel. Nine x equals nine, so x equals one.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Two quick proofs",
+   "opens": null,
+   "start": 322.441,
+   "end": 327.085,
+   "wav": "audio/voice/02c7e47e12d73dc3.wav"
+  },
+  {
+   "text": "Both are easy to remember, and both are pretty convincing.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Two quick proofs",
+   "opens": null,
+   "start": 328.035,
+   "end": 330.907,
+   "wav": "audio/voice/a77d82b090001bfd.wav"
+  },
+  {
+   "text": "But honestly, they take a shortcut.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Two quick proofs",
+   "opens": null,
+   "start": 331.257,
+   "end": 332.612,
+   "wav": "audio/voice/6030efa69501fe55.wav"
+  },
+  {
+   "text": "They assume we're allowed to add, subtract, multiply and divide endless decimals just like ordinary numbers. And that's exactly the part your gut doesn't trust.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Two quick proofs",
+   "opens": null,
+   "start": 332.962,
+   "end": 341.29,
+   "wav": "audio/voice/5b84e753f2123029.wav"
+  },
+  {
+   "text": "The real reason is in a different place. It's in the question, what does zero point nine repeating actually mean?",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "What the dots mean",
+   "opens": "stop",
+   "start": 342.89,
+   "end": 348.503,
+   "wav": "audio/voice/7f5c32c48010b29d.wav"
+  },
+  {
+   "text": "When we write nines that go on forever, we're talking about a list of numbers that keeps getting longer.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "What the dots mean",
+   "opens": null,
+   "start": 349.453,
+   "end": 354.312,
+   "wav": "audio/voice/f97033102ce44eeb.wav"
+  },
+  {
+   "text": "Zero point nine. Then zero point nine nine. Then zero point nine nine nine, and so on.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "What the dots mean",
+   "opens": null,
+   "start": 354.662,
+   "end": 359.027,
+   "wav": "audio/voice/0d26d0f9e63f8ffe.wav"
+  },
+  {
+   "text": "The gap to one is a tenth, then a hundredth, then a thousandth.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "What the dots mean",
+   "opens": null,
+   "start": 359.377,
+   "end": 362.274,
+   "wav": "audio/voice/4f729fa4cb5a95cf.wav"
+  },
+  {
+   "text": "The list keeps closing in on one, and you can push it as close as you like, just by writing enough nines.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "What the dots mean",
+   "opens": null,
+   "start": 362.624,
+   "end": 367.829,
+   "wav": "audio/voice/fcee032f1b96baac.wav"
+  },
+  {
+   "text": "In the real numbers, the numbers we use every day, the symbol zero point nine repeating is defined to be exactly where that list is heading.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "What the dots mean",
+   "opens": null,
+   "start": 368.779,
+   "end": 376.065,
+   "wav": "audio/voice/779936d8465f0548.wav"
+  },
+  {
+   "text": "And where it's heading is one.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "What the dots mean",
+   "opens": null,
+   "start": 376.415,
+   "end": 378.008,
+   "wav": "audio/voice/758314a07db34967.wav"
+  },
+  {
+   "text": "So zero point nine repeating doesn't hover somewhere just before one. It sits exactly on one.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "What the dots mean",
+   "opens": null,
+   "start": 378.358,
+   "end": 383.071,
+   "wav": "audio/voice/355d59e3204bd233.wav"
+  },
+  {
+   "text": "Here's another way to feel safer about it.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Nothing fits in between",
+   "opens": "stop",
+   "start": 384.671,
+   "end": 386.362,
+   "wav": "audio/voice/fa81e591c8b589b6.wav"
+  },
+  {
+   "text": "Take any two different real numbers, and there are always more numbers squeezed between them. Their average, for a start.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Nothing fits in between",
+   "opens": null,
+   "start": 386.712,
+   "end": 392.86,
+   "wav": "audio/voice/a7db9fe7be3eb231.wav"
+  },
+  {
+   "text": "So try to find a number between zero point nine repeating and one. Bigger than zero point nine repeating, and smaller than one.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Nothing fits in between",
+   "opens": null,
+   "start": 393.21,
+   "end": 399.711,
+   "wav": "audio/voice/f61ec5332463dba7.wav"
+  },
+  {
+   "text": "You won't find one, because there isn't one.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Nothing fits in between",
+   "opens": null,
+   "start": 400.061,
+   "end": 402.132,
+   "wav": "audio/voice/3f178f004808e392.wav"
+  },
+  {
+   "text": "And if nothing at all fits between two numbers, they can't be two different numbers.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "Nothing fits in between",
+   "opens": null,
+   "start": 402.482,
+   "end": 406.392,
+   "wav": "audio/voice/48bd2fb414ab16de.wav"
+  },
+  {
+   "text": "I suspect some of you still feel there's a tiny gap left over, somewhere.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "The gap your gut can feel",
+   "opens": "stop",
+   "start": 407.992,
+   "end": 411.465,
+   "wav": "audio/voice/a23260d641552eb3.wav"
+  },
+  {
+   "text": "And honestly, that feeling isn't silly.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "The gap your gut can feel",
+   "opens": null,
+   "start": 411.815,
+   "end": 413.627,
+   "wav": "audio/voice/f569f0dbf4933fe0.wav"
+  },
+  {
+   "text": "The problem is that in the real numbers, there's no distance that is bigger than zero, but smaller than every positive number.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "The gap your gut can feel",
+   "opens": null,
+   "start": 413.977,
+   "end": 420.284,
+   "wav": "audio/voice/1d18ceb7ec65360c.wav"
+  },
+  {
+   "text": "So there's simply nowhere to put that gap.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "The gap your gut can feel",
+   "opens": null,
+   "start": 420.634,
+   "end": 422.653,
+   "wav": "audio/voice/6c288c1d0db89ce4.wav"
+  },
+  {
+   "text": "But mathematics has built other number systems, where distances that small really are allowed to exist.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "The gap your gut can feel",
+   "opens": null,
+   "start": 423.603,
+   "end": 429.243,
+   "wav": "audio/voice/40f5ab5755b180a6.wav"
+  },
+  {
+   "text": "Newton and Leibniz worked with quantities like that when they invented calculus, and in the nineteen sixties Abraham Robinson made them rigorous.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "The gap your gut can feel",
+   "opens": null,
+   "start": 429.593,
+   "end": 437.216,
+   "wav": "audio/voice/4ab212f1ddb4a390.wav"
+  },
+  {
+   "text": "Your intuition is pointing toward systems like those.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "The gap your gut can feel",
+   "opens": null,
+   "start": 437.566,
+   "end": 440.095,
+   "wav": "audio/voice/5efad4536f141625.wav"
+  },
+  {
+   "text": "It's just that the symbol we're talking about lives in the familiar real numbers. And there, it equals one.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "The gap your gut can feel",
+   "opens": null,
+   "start": 440.445,
+   "end": 445.76,
+   "wav": "audio/voice/e551846d4895c66d.wav"
+  },
+  {
+   "text": "That's the difference from Monty Hall.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "A different question",
+   "opens": "stop",
+   "start": 447.36,
+   "end": 448.9,
+   "wav": "audio/voice/5c62e7bad121606c.wav"
+  },
+  {
+   "text": "With Monty Hall, intuition got a probability wrong, plain and simple.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "A different question",
+   "opens": null,
+   "start": 449.25,
+   "end": 452.585,
+   "wav": "audio/voice/d0dc917d49fce574.wav"
+  },
+  {
+   "text": "Here, the intuition about a gap isn't exactly wrong. It's answering a slightly different question from the one we asked.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "A different question",
+   "opens": null,
+   "start": 452.935,
+   "end": 458.701,
+   "wav": "audio/voice/ba09a1f281c3fff9.wav"
+  },
+  {
+   "text": "You're feeling your way through a world with infinitely small distances, while zero point nine repeating is defined in a world that doesn't have them.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "A different question",
+   "opens": null,
+   "start": 459.051,
+   "end": 466.83,
+   "wav": "audio/voice/7543fc0e9e4aec8c.wav"
+  },
+  {
+   "text": "Once it's clear which number system we're talking about, there's nothing left to argue about the symbol.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Zero point nine, repeating",
+   "section": "A different question",
+   "opens": null,
+   "start": 467.18,
+   "end": 472.245,
+   "wav": "audio/voice/9f629e549dea0b86.wav"
+  },
+  {
+   "text": "So, back to the question from the beginning. When you do math, do you need intuition?",
+   "idea": true,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "The engine and the brakes",
+   "opens": "act",
+   "start": 474.645,
+   "end": 478.79,
+   "wav": "audio/voice/f92e43e87d0d7851.wav"
+  },
+  {
+   "text": "The two puzzles show us two different sides of it. Let's put them together.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "The engine and the brakes",
+   "opens": null,
+   "start": 479.74,
+   "end": 482.908,
+   "wav": "audio/voice/f4a06587de89f099.wav"
+  },
+  {
+   "text": "With Monty Hall, intuition made a real mistake, and logic pulled us back.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "The engine and the brakes",
+   "opens": null,
+   "start": 483.258,
+   "end": 486.9,
+   "wav": "audio/voice/a7d17787299dfb0a.wav"
+  },
+  {
+   "text": "But once the logic was done, we could build a better intuition, like the hundred doors, so the next puzzle of that kind doesn't fool us again.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "The engine and the brakes",
+   "opens": null,
+   "start": 487.25,
+   "end": 494.41,
+   "wav": "audio/voice/b2424bd494069df3.wav"
+  },
+  {
+   "text": "With zero point nine repeating, logic didn't throw your feeling away. It showed you where the feeling came from: a different number system.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "The engine and the brakes",
+   "opens": null,
+   "start": 494.76,
+   "end": 501.477,
+   "wav": "audio/voice/a2374be1363b115b.wav"
+  },
+  {
+   "text": "Here's my view, after those two examples.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "The engine and the brakes",
+   "opens": null,
+   "start": 502.427,
+   "end": 504.339,
+   "wav": "audio/voice/17c7005139f285c7.wav"
+  },
+  {
+   "text": "Math does need intuition. But intuition shouldn't get the final word.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "The engine and the brakes",
+   "opens": null,
+   "start": 504.689,
+   "end": 508.272,
+   "wav": "audio/voice/593ab0688a0a4d3c.wav"
+  },
+  {
+   "text": "Intuition is the engine. It's how people sense that something is true or false, and guess which way to go, often long before they know how to prove it.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "The engine and the brakes",
+   "opens": null,
+   "start": 508.622,
+   "end": 516.202,
+   "wav": "audio/voice/83860f6aaa8f4a2a.wav"
+  },
+  {
+   "text": "Logic and careful proof are the brakes. They keep intuition from driving off a cliff, the way it nearly did with the doors.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "The engine and the brakes",
+   "opens": null,
+   "start": 516.552,
+   "end": 522.7,
+   "wav": "audio/voice/a34ca3123132ae6f.wav"
+  },
+  {
+   "text": "The mathematician Henri Poincar\u00e9 put it in one line, in nineteen oh eight.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "Prove and discover",
+   "opens": "stop",
+   "start": 524.3,
+   "end": 528.131,
+   "wav": "audio/voice/bb196ab726f52485.wav"
+  },
+  {
+   "text": "It is by logic that we prove, but by intuition that we discover.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "Prove and discover",
+   "opens": null,
+   "start": 528.481,
+   "end": 531.619,
+   "wav": "audio/voice/94b6def2e9adc681.wav"
+  },
+  {
+   "text": "I think that's still true.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "Prove and discover",
+   "opens": null,
+   "start": 531.969,
+   "end": 532.924,
+   "wav": "audio/voice/4d55ced9ae77382b.wav"
+  },
+  {
+   "text": "The goal isn't to trust your intuition completely, or to distrust it completely. It's to recognize which situation you're in, so you know when to trust it, and when to check it again.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Does math need intuition?",
+   "section": "Prove and discover",
+   "opens": null,
+   "start": 533.274,
+   "end": 542.93,
+   "wav": "audio/voice/880b7fe152139a02.wav"
+  },
+  {
+   "text": "When does intuition lead you wrong? When there's information you didn't count, like a host who knows where the car is, or a card with two red sides.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": "act",
+   "start": 545.33,
+   "end": 552.676,
+   "wav": "audio/voice/60dd91ce874e90f2.wav"
+  },
+  {
+   "text": "What do you do when the proof is right and your gut still says no? Ask what your gut is actually answering. Often it's a different question, in a different system.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 553.026,
+   "end": 561.189,
+   "wav": "audio/voice/365e97c13a615c1a.wav"
+  },
+  {
+   "text": "And does math need intuition? Yes, as the engine. With logic as the brakes.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 561.539,
+   "end": 565.305,
+   "wav": "audio/voice/cc391784fdee9be6.wav"
+  },
+  {
+   "text": "Sometimes, like Monty Hall, the moment you feel most certain is exactly the moment to stop and check.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 566.255,
+   "end": 571.254,
+   "wav": "audio/voice/3e57766e22bfcc5d.wav"
+  },
+  {
+   "text": "Sometimes, like zero point nine repeating, the feeling that won't give up is pointing at a deeper question, one worth digging into.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 571.604,
+   "end": 577.965,
+   "wav": "audio/voice/45cdba8e93f58470.wav"
+  },
+  {
+   "text": "Telling those two apart is the hard part, and the interesting part.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 578.315,
+   "end": 581.563,
+   "wav": "audio/voice/66dfa8f2a787c52b.wav"
+  },
+  {
+   "text": "Here's something to try on your own.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Next time",
+   "opens": "stop",
+   "start": 583.163,
+   "end": 584.997,
+   "wav": "audio/voice/d5e36cb43c28a78e.wav"
+  },
+  {
+   "text": "The next time an answer pops into your head instantly, ask two questions.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 585.347,
+   "end": 588.774,
+   "wav": "audio/voice/6437bbf1db8befed.wav"
+  },
+  {
+   "text": "Who knows something I haven't counted? And which system of numbers am I standing in?",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 589.124,
+   "end": 593.435,
+   "wav": "audio/voice/087daf2e11efb7ac.wav"
+  },
+  {
+   "text": "Thank you for watching all the way to the end.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 594.385,
+   "end": 596.598,
+   "wav": "audio/voice/68f0d722151e0fa3.wav"
+  },
+  {
+   "text": "Which puzzle fooled you more, the doors or the nines? Tell me in the comments.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 596.948,
+   "end": 600.685,
+   "wav": "audio/voice/ac417ee34e731373.wav"
+  },
+  {
+   "text": "And subscribe to ninety-nine percent from scratch, so you don't miss the next one. See you soon.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 601.035,
+   "end": 605.911,
+   "wav": "audio/voice/976e73861b7dda55.wav"
+  }
+ ]
+}

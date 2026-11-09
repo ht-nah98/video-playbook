@@ -1,0 +1,56 @@
+{
+ "_why": "Phân xử tay mốc câu (2026-10-01). Nguồn: whisper trên stem Demucs (words.heard.json), CTC lời gốc trên lead vocal Suno (timeline.ctc.json — conf thấp ở đoạn hát, chỉ 109/541 từ ≥ 0.45), đường bao giọng dải 300–3400Hz của stem lead/backing (bật sau trũng). Luật: CTC conf ≥ 0.45 > đường bao > whisper.",
+ "starts": {
+  "Ninety-nine percent...#2": [
+   229.0,
+   "lead im 228.2–228.95, bật rõ ở 229.00 (CTC 228.04 conf 0.02, whisper 228.66 nằm trong khoảng lặng)"
+  ],
+  "Loading.#2": [
+   230.25,
+   "bật sau trũng 229.9–230.2"
+  ],
+  "See.": [
+   220.68,
+   "lead bật 220.70 sau trũng 220.2–220.6; whisper 220.24 là đuôi 'slice it'"
+  ],
+  "Integral.": [
+   221.9,
+   "whisper nghe 'thing to grow' 221.68–222.10; bật sau trũng 221.80–221.85"
+  ],
+  "Geometry.": [
+   222.68,
+   "4 âm tiết 222.70–223.35 trên đường bao; bản ghép chỉ cho 0.13s"
+  ],
+  "Piece by piece,": [
+   223.45,
+   "sau 'geometry' — âm tiết bật 223.50, 'piece' thứ hai 223.80 (whisper)"
+  ]
+ },
+ "repeat": [
+  {
+   "_why": "lời gốc ghi FROM SCRATCH hai lần; whisper nghe 4 lần ('I'm scratched' @212.30/213.36/214.56/215.78), backing vocal bật ở 212.60/213.56/214.79/216.03 — mỗi tiếng rơi trên phách (beat 0.6186s)",
+   "section": "Group Chant",
+   "before": "Final Hook",
+   "text": "From scratch!",
+   "words": [
+    [
+     "from",
+     0,
+     0.3
+    ],
+    [
+     "scratch",
+     0.35,
+     null
+    ]
+   ],
+   "dur": 1.0,
+   "starts": [
+    212.6,
+    213.56,
+    214.79,
+    216.03
+   ]
+  }
+ ]
+}

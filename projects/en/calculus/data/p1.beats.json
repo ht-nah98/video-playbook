@@ -1,0 +1,152 @@
+{
+ "duration": 65.13,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "lang": "en",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "How steep is a hill, at the exact spot where your foot is standing?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "How steep is a hill, at the exact spot where your foot is standing?",
+   "start": 0.0,
+   "end": 2.917,
+   "wav": "audio/voice/8a60879d6ca029b0.wav"
+  },
+  {
+   "text": "It sounds easy. We measure steepness as rise over run: how much higher you get, divided by how far across you go.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "It sounds easy. We measure steepness as rise over run: how much higher you get, divided by how far across you go.",
+   "start": 3.267,
+   "end": 8.593,
+   "wav": "audio/voice/de2c58fb58069c18.wav"
+  },
+  {
+   "text": "But for that, you need two points, a start and a finish. A single point has neither.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "But for that, you need two points, a start and a finish. A single point has neither.",
+   "start": 8.943,
+   "end": 12.884,
+   "wav": "audio/voice/ac4775aa7dd0b5c5.wav"
+  },
+  {
+   "text": "The rise is zero, the run is zero, and zero divided by zero means nothing at all.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "The rise is zero, the run is zero, and zero divided by zero means nothing at all.",
+   "start": 13.234,
+   "end": 17.155,
+   "wav": "audio/voice/1eceb756263325c5.wav"
+  },
+  {
+   "text": "For centuries, questions like this one were genuinely impossible. Trying to answer them is how calculus was born.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "For centuries, questions like this one were genuinely impossible. Trying to answer them is how calculus was born.",
+   "start": 17.505,
+   "end": 23.344,
+   "wav": "audio/voice/0af6a9981d0bbc85.wav"
+  },
+  {
+   "text": "And here's the twist. The answer isn't nothing. Shape the hill like the curve y equals x squared, stand where x is one, and the steepness there is exactly two.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "And here's the twist. The answer isn't nothing. Shape the hill like the curve y equals x squared, stand where x is one, and the steepness there is exactly two.",
+   "start": 23.694,
+   "end": 31.433,
+   "wav": "audio/voice/7d884f3822964076.wav"
+  },
+  {
+   "text": "Not roughly two. Exactly two.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Not roughly two. Exactly two.",
+   "start": 31.783,
+   "end": 33.308,
+   "wav": "audio/voice/ad6d05b4944e56f9.wav"
+  },
+  {
+   "text": "Run the same idea backwards, and it adds up infinitely many slices, each one infinitely thin, into an exact area. Archimedes was already doing a version of that more than two thousand years ago.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Run the same idea backwards, and it adds up infinitely many slices, each one infinitely thin, into an exact area. Archimedes was already doing a version of that more than two thousand years ago.",
+   "start": 33.658,
+   "end": 43.893,
+   "wav": "audio/voice/05ea5f4d926b2f13.wav"
+  },
+  {
+   "text": "So in this video, I want to answer three questions with you.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "So in this video, I want to answer three questions with you.",
+   "start": 44.843,
+   "end": 47.311,
+   "wav": "audio/voice/931985eaafd74de5.wav"
+  },
+  {
+   "text": "One. How can a single point have a steepness?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "One. How can a single point have a steepness?",
+   "start": 47.661,
+   "end": 49.692,
+   "wav": "audio/voice/ecacf049a43d09f1.wav"
+  },
+  {
+   "text": "Two. What is a limit, and how does it squeeze an answer out of zero over zero?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Two. What is a limit, and how does it squeeze an answer out of zero over zero?",
+   "start": 50.042,
+   "end": 53.678,
+   "wav": "audio/voice/475e9da4079ed663.wav"
+  },
+  {
+   "text": "And three. Why are slopes and areas, derivatives and integrals, really two sides of the same coin?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "And three. Why are slopes and areas, derivatives and integrals, really two sides of the same coin?",
+   "start": 54.028,
+   "end": 58.867,
+   "wav": "audio/voice/995296436aec6117.wav"
+  },
+  {
+   "text": "Let's begin with the one thing we already know how to measure: the slope between two points.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Let's begin with the one thing we already know how to measure: the slope between two points.",
+   "start": 59.817,
+   "end": 64.18,
+   "wav": "audio/voice/ff19abe82fb35666.wav"
+  }
+ ]
+}

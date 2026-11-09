@@ -1,0 +1,24 @@
+{
+ "cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {"name": "stendhal-question", "hook": ["WHY IS MINUS × MINUS", "A {PLUS}?", "NOBODY TOLD HIM"],
+   "pieces": [
+    {"from": "p1:0", "to": "p1:0", "video": 7.5, "crop": [1300, 60, 60, 0]},
+    {"from": "p1:1", "to": "p1:7", "crop": [1300, 60, 60, 0], "tail": 0.3}]},
+  {"name": "break-arithmetic", "hook": ["IF −1 × −1 = −1,", "ARITHMETIC {BREAKS}"],
+   "pieces": [
+    {"from": "p2:86", "to": "p2:92", "crop": [1840, 40, 40, 0], "tail": 0.3}]},
+  {"name": "proof-neg-neg", "hook": ["THE PROOF THAT", "(−3) × (−2) = {6}"],
+   "pieces": [
+    {"from": "p2:66", "to": "p2:72", "crop": [1600, 50, 50, 0], "tail": 0.3}]},
+  {"name": "pattern-not-proof", "hook": ["THIS PATTERN", "IS {NOT} A PROOF"],
+   "pieces": [
+    {"from": "p2:25", "to": "p2:30", "crop": [1800, 60, 60, 0], "tail": 0.3}]},
+  {"name": "called-fictitious", "hook": ["THEY CALLED NEGATIVE", "NUMBERS {FICTITIOUS}"],
+   "pieces": [
+    {"from": "p2:11", "to": "p2:14", "crop": [1760, 60, 60, 0], "tail": 0.3}]},
+  {"name": "quarter-turn", "hook": ["WHAT NUMBER TIMES", "ITSELF IS {−1}?"],
+   "pieces": [
+    {"from": "p2:108", "to": "p2:111", "crop": [1860, 30, 30, 0], "tail": 0.3}]}
+ ]
+}

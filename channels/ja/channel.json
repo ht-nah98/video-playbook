@@ -1,0 +1,32 @@
+{
+ "id": "ja",
+ "name": "99の発見",
+ "youtube_id": "UCkYcrpyEZZYY6xIkBDh2wDA",
+ "lang": "ja",
+ "voice": {
+  "lang": "ja",
+  "id": "49f48276",
+  "tempo": 1.0
+ },
+ "intro": "${REPO}/out/ja/intro/intro.mp4",
+ "projects": "projects/ja/<p>",
+ "outro": {
+  "name": "99の発見",
+  "cta": "チャンネル登録"
+ },
+ "fonts": {
+  "face": [
+   "@font-face{font-family:\"Noto Sans JP\";src:url(\"assets/fonts/NotoSansJP[wght].ttf\");font-weight:100 900;}",
+   "@font-face{font-family:\"Shippori Mincho\";src:url(\"assets/fonts/ShipporiMincho-Regular.ttf\");font-weight:400;}",
+   "@font-face{font-family:\"Shippori Mincho\";src:url(\"assets/fonts/ShipporiMincho-Bold.ttf\");font-weight:700;}"
+  ],
+  "load": [
+   "300 40px \"Noto Sans JP\"",
+   "500 40px \"Noto Sans JP\"",
+   "700 40px \"Noto Sans JP\"",
+   "900 40px \"Noto Sans JP\"",
+   "400 40px \"Shippori Mincho\"",
+   "700 40px \"Shippori Mincho\""
+  ]
+ }
+}

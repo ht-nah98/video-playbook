@@ -1,0 +1,116 @@
+<!doctype html><meta charset="utf-8">
+<title>trig — tờ thử kit</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Tờ thử MỌI vật của kit (DNA §11). Khung i (giây) → tờ ⌊t⌋:
+//  0 cold open (máy bán vé + tam giác gãy + vòng mờ + dây cờ + mascot) · 1 tam giác: nguyên 60° / 84° / gãy giữa chừng / lật / xoay / rã + vé, gạch, bảng lật, bóng đèn
+//  2 vòng chính diện có trục + cabin hồng 120° · 3 vòng nhìn nghiêng + bạt + sóng + biểu tượng · 4 lều: khung gương (có ảnh / thiếu ảnh), biển tên mục
+//  5 thẻ hồi · 6 cảnh xa (núi, thuyền, Mặt Trăng, sao, tia ngắm) · 7 dây cờ quét k 0.5 · 8 rèm lều k 0.3 · 9 rèm k 0.75 · 10 đỉnh trời (khung nối p1 → p2)
+//   node engine/render/shoot.js stills --page projects/en/trig/kit-test.html --dur 11 --t 0.5,1.5,…,10.5 --outdir out/en/trig/qa/kit
+import { W, H, C, AR, CG, FONTS, FONT_SAMPLE, TAU, D2R, loadKit, ground, sky, zenith, bunting, wheel, heroDot, angleArc, ticketMachine, flap, bulbDigits,
+  ticket, brokenTriangle, tarp, waveOnTarp, mirrorFrame, photoImages, strike, sign, actTitle, secTag, mountain, ship, moon, star, icon, dashed,
+  figure, buntingSweep, curtainSwap, text, measure, line, SIN120, COS120, SINM30, SIN1000, num, PHOTO_MISSING, SEC_MAX, ACT_SUB_MAX } from './kit.js';
+const g = document.getElementById('cv').getContext('2d');
+let ready = false;
+(async () => {
+  await Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE)));
+  const Pp = '../../../assets/character-v2/cut/';
+  await loadKit({ ...photoImages('hipparchus', 'babylon'), ...Object.fromEntries(['ponder', 'pointer', 'calculator'].map(p => ['pose-' + p, Pp + `pose-${p}.png`])) });
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const lab = s => text(g, s, 1824, 1050, { font: `600 24px ${AR}`, color: C.dim, align: 'right' });
+const sheets = [
+  t => {                                                               // 0 cold open = thumbnail
+    ground(g, 'fair');
+    wheel(g, 1500, 470, 400, { groundY: 932, alpha: 0.26, theta: 0.3 });
+    bunting(g, -20, 40, 1940, 50, 70, 26, 30, { t });
+    ticketMachine(g, 330, 92, 1, { line: 'sin(120°)', value: num(SIN120), cells: 10 });
+    brokenTriangle(g, 1250, 800, { snap: 1, label: '120°' });
+    figure(g, 'ponder', 170, H, 262, 1, { t: 1 });
+    lab('0 · cold open (thumbnail)');
+  },
+  t => {                                                               // 1 tam giác + vé, gạch, bảng lật, bóng đèn
+    ground(g, 'fair');
+    brokenTriangle(g, 120, 520, { deg: 60, s: 0.5, label: '60°' });
+    brokenTriangle(g, 460, 520, { deg: 84, s: 0.5, label: '84°' });
+    brokenTriangle(g, 800, 520, { deg: 89, snap: 0.45, s: 0.5 });
+    brokenTriangle(g, 1140, 420, { deg: 30, flip: 1, s: 0.5, label: '−30°' });
+    brokenTriangle(g, 1480, 520, { deg: 30, spin: 2.2, apart: 0.6, s: 0.5, label: '1000°' });
+    ticket(g, `sin 120° = ${SIN120}`, 360, 700, { color: C.sinInk, edge: C.sin });
+    ticket(g, `cos 120° = ${num(COS120)}`, 960, 700, { color: C.cosInk, edge: C.cos });
+    ticket(g, 'θ = 120°', 1500, 700, { color: C.angInk, edge: C.ang });
+    text(g, 'SOH-CAH-TOA', 400, 860, { font: `900 72px ${AR}` }); strike(g, 380, 840, 900, 830, 1);
+    strike(g, 1000, 860, 1300, 850, 0.5);
+    flap(g, 'sin(1000°)', 1500, 790, 40, 66, { font: `800 44px ${AR}`, k: 0.45, from: 'sin(−30°)', cells: 10 });
+    g.fillStyle = '#1F2A44'; g.fillRect(1220, 900, 620, 140); bulbDigits(g, num(SIN1000), 1250, 912, 16, { k: 0.7 });
+    lab('1 · tam giác, vé, gạch, bảng lật, bóng đèn');
+  },
+  t => {                                                               // 2 vòng chính diện + trục + cabin hồng 120°
+    ground(g, 'fair', { ground: false });
+    bunting(g, -20, 30, 1940, 36, 46, 30, 24, { t });
+    const cx = 700, cy = 540, R = 290, th = 120 * D2R;
+    const { P } = wheel(g, cx, cy, R, { theta: th, hero: true, groundY: 1000, axes: true });
+    angleArc(g, cx, cy, 70, th);
+    line(g, cx, cy, P[0], cy, C.cos, 12); line(g, P[0], P[1], P[0], cy, C.sin, 12); heroDot(g, P[0], P[1]);
+    ticket(g, `sin 120° = ${SIN120}`, P[0] - 190, P[1] - 72, { color: C.sinInk, edge: C.sin });
+    ticket(g, `cos 120° = ${num(COS120)}`, (P[0] + cx) / 2 + 10, cy + 62, { color: C.cosInk, edge: C.cos });
+    ticket(g, 'θ', cx + 112, cy - 60, { color: C.angInk, edge: C.ang, size: 38 });
+    wheel(g, 1400, 500, 200, { theta: -30 * D2R, hero: true, legs: false });
+    wheel(g, 1700, 800, 120, { theta: 1000 * D2R, hero: true, legs: false, bulbs: a => 0.5 + 0.5 * Math.sin(a * 3) });
+    angleArc(g, 1700, 800, 40, 1000 * D2R);
+    figure(g, 'pointer', 170, H, 270, 1);
+    lab('2 · vòng chính diện, trục, cabin hồng, cung góc (1000° xoắn)');
+  },
+  t => {                                                               // 3 vòng nhìn nghiêng + bạt + sóng + biểu tượng
+    ground(g, 'fair');
+    const cx = 420, cy = 540, R = 300, th = 120 * D2R;
+    const { P } = wheel(g, cx, cy, R, { theta: th, hero: true, side: 0.12, groundY: 930 });
+    heroDot(g, P[0], P[1]);
+    const T = tarp(g, 620, 150, 1200, 760);
+    line(g, 660, cy, 1780, cy, C.ink, 3);
+    const [ex, ey] = waveOnTarp(g, Math.sin, 0.8, { x0: 680, L: 1080, mid: cy, A: R, span: 2 * TAU });
+    dashed(g, P[0], P[1], ex, ey, 1, { color: 'rgba(224,69,123,0.7)', w: 3.5 });
+    waveOnTarp(g, Math.cos, 0.5, { x0: 680, L: 1080, mid: cy, A: R, span: 2 * TAU, color: C.cos, w: 6 });
+    icon(g, 'speaker', 900, 330, 54); icon(g, 'light', 1200, 760, 54); icon(g, 'socket', 1500, 330, 54);
+    lab(`3 · nhìn nghiêng (side 0.12), bạt ${T.w}×${T.h}, sóng sin/cos, biểu tượng`);
+  },
+  t => {                                                               // 4 lều: khung gương + biển tên mục
+    ground(g, 'tent');
+    secTag(g, 'Three hundred and sixty is a choice', { t });
+    mirrorFrame(g, 'hipparchus', 260, 220, 420, 560, { label: 'HIPPARCHUS · c. 190–120 BC', note: 'IMAGINED · NO LIKENESS SURVIVES', t });
+    mirrorFrame(g, 'babylon', 820, 260, 520, 400, { label: 'BABYLONIAN TABLET YBC 7289', t });
+    mirrorFrame(g, 'fourier', 1460, 300, 300, 300, { t, label: 'not loaded' });
+    lab(`4 · lều, khung gương (thiếu: ${PHOTO_MISSING.join(', ') || '—'}), secTag max ${SEC_MAX}`);
+  },
+  t => {                                                               // 5 thẻ hồi
+    ground(g, 'fair');
+    wheel(g, 1500, 520, 380, { theta: t * 0.1 });
+    actTitle(g, 6, 7, 'ACT FIVE', 'Why mathematicians measure in radians');
+    const w = measure(g, 'Why mathematicians measure in radians', `700 56px ${AR}`);
+    lab(`5 · actTitle (phụ đề dài nhất ${Math.round(w)} / ${ACT_SUB_MAX} px)`);
+  },
+  t => {                                                               // 6 cảnh xa
+    ground(g, 'fair');
+    g.fillStyle = '#9CC9DE'; g.fillRect(0, 760, W, 170);
+    mountain(g, 420, 760, 1.1); ship(g, 1080, 800, 0.9, 1, t); moon(g, 1560, 230, 70);
+    for (let i = 0; i < 12; i++) star(g, 200 + i * 140, 120 + (i % 3) * 50, 10);
+    dashed(g, 260, 930, 360, 440); dashed(g, 260, 930, 1080, 680); dashed(g, 260, 930, 1560, 230, 0.7);
+    ticket(g, '?', 760, 560, { size: 46 });
+    figure(g, 'calculator', 170, H, 260, 1);
+    lab('6 · núi, thuyền, Mặt Trăng, sao, tia ngắm');
+  },
+  t => { buntingSweep(g, 0.5, () => { ground(g, 'fair'); wheel(g, 960, 520, 380, { theta: 1 }); }, () => { ground(g, 'fair', { ground: false }); bunting(g, -20, 40, 1940, 50, 70, 26, 30); }); lab('7 · dây cờ quét k 0.5'); },
+  t => { curtainSwap(g, 0.3, () => { ground(g, 'fair'); wheel(g, 960, 520, 380, { theta: 1 }); }, () => ground(g, 'tent')); lab('8 · rèm lều k 0.3'); },
+  t => { curtainSwap(g, 0.75, () => { ground(g, 'fair'); }, () => { ground(g, 'tent'); mirrorFrame(g, 'hipparchus', 750, 220, 420, 560, { note: 'IMAGINED · NO LIKENESS SURVIVES' }); }); lab('9 · rèm lều k 0.75'); },
+  t => { zenith(g); lab('10 · đỉnh trời = khung cuối p1 = khung đầu p2'); },
+];
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; sheets[Math.min(sheets.length - 1, Math.floor(t))](t); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 11 };
+</script>

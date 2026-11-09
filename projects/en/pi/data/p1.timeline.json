@@ -1,0 +1,1664 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.08,
+   "end": 72.332
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Ask anyone why one plus one is two, and the answer comes straight away. One stone and another stone make two stones.",
+   "idea": false,
+   "start": 0.08,
+   "end": 5.862,
+   "words": [
+    {
+     "w": "ask",
+     "start": 0.08,
+     "end": 0.221,
+     "conf": 0.662
+    },
+    {
+     "w": "anyone",
+     "start": 0.261,
+     "end": 0.542,
+     "conf": 0.918
+    },
+    {
+     "w": "why",
+     "start": 0.562,
+     "end": 0.703,
+     "conf": 0.995
+    },
+    {
+     "w": "one",
+     "start": 0.843,
+     "end": 0.923,
+     "conf": 0.1
+    },
+    {
+     "w": "plus",
+     "start": 0.944,
+     "end": 1.124,
+     "conf": 0.277
+    },
+    {
+     "w": "one",
+     "start": 1.225,
+     "end": 1.305,
+     "conf": 0.401
+    },
+    {
+     "w": "is",
+     "start": 1.325,
+     "end": 1.425,
+     "conf": 0.652
+    },
+    {
+     "w": "two",
+     "start": 1.445,
+     "end": 1.686,
+     "conf": 0.284
+    },
+    {
+     "w": "and",
+     "start": 1.967,
+     "end": 2.048,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 2.068,
+     "end": 2.128,
+     "conf": 0.994
+    },
+    {
+     "w": "answer",
+     "start": 2.208,
+     "end": 2.489,
+     "conf": 0.745
+    },
+    {
+     "w": "comes",
+     "start": 2.57,
+     "end": 2.77,
+     "conf": 0.711
+    },
+    {
+     "w": "straight",
+     "start": 2.831,
+     "end": 3.051,
+     "conf": 0.82
+    },
+    {
+     "w": "away",
+     "start": 3.072,
+     "end": 3.312,
+     "conf": 0.995
+    },
+    {
+     "w": "one",
+     "start": 3.794,
+     "end": 3.895,
+     "conf": 0.661
+    },
+    {
+     "w": "stone",
+     "start": 3.975,
+     "end": 4.236,
+     "conf": 0.8
+    },
+    {
+     "w": "and",
+     "start": 4.397,
+     "end": 4.477,
+     "conf": 0.665
+    },
+    {
+     "w": "another",
+     "start": 4.537,
+     "end": 4.758,
+     "conf": 0.869
+    },
+    {
+     "w": "stone",
+     "start": 4.778,
+     "end": 5.019,
+     "conf": 0.833
+    },
+    {
+     "w": "make",
+     "start": 5.039,
+     "end": 5.22,
+     "conf": 1.0
+    },
+    {
+     "w": "two",
+     "start": 5.28,
+     "end": 5.42,
+     "conf": 0.666
+    },
+    {
+     "w": "stones",
+     "start": 5.521,
+     "end": 5.862,
+     "conf": 0.788
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Now ask them why pi is three point one four. Why not two, or four, or seven?",
+   "idea": false,
+   "start": 6.272,
+   "end": 9.893,
+   "words": [
+    {
+     "w": "now",
+     "start": 6.272,
+     "end": 6.373,
+     "conf": 0.983
+    },
+    {
+     "w": "ask",
+     "start": 6.413,
+     "end": 6.574,
+     "conf": 0.826
+    },
+    {
+     "w": "them",
+     "start": 6.594,
+     "end": 6.715,
+     "conf": 0.976
+    },
+    {
+     "w": "why",
+     "start": 6.735,
+     "end": 6.855,
+     "conf": 0.902
+    },
+    {
+     "w": "pi",
+     "start": 6.876,
+     "end": 7.137,
+     "conf": 0.545
+    },
+    {
+     "w": "is",
+     "start": 7.157,
+     "end": 7.258,
+     "conf": 0.635
+    },
+    {
+     "w": "three",
+     "start": 7.278,
+     "end": 7.499,
+     "conf": 0.078
+    },
+    {
+     "w": "point",
+     "start": 7.519,
+     "end": 7.761,
+     "conf": 0.109
+    },
+    {
+     "w": "one",
+     "start": 7.881,
+     "end": 8.022,
+     "conf": 0.075
+    },
+    {
+     "w": "four",
+     "start": 8.042,
+     "end": 8.324,
+     "conf": 0.042
+    },
+    {
+     "w": "why",
+     "start": 8.344,
+     "end": 8.605,
+     "conf": 0.213
+    },
+    {
+     "w": "not",
+     "start": 8.625,
+     "end": 8.726,
+     "conf": 0.629
+    },
+    {
+     "w": "two",
+     "start": 8.827,
+     "end": 8.967,
+     "conf": 0.049
+    },
+    {
+     "w": "or",
+     "start": 8.987,
+     "end": 9.189,
+     "conf": 0.06
+    },
+    {
+     "w": "four",
+     "start": 9.209,
+     "end": 9.41,
+     "conf": 0.243
+    },
+    {
+     "w": "or",
+     "start": 9.51,
+     "end": 9.551,
+     "conf": 0.083
+    },
+    {
+     "w": "seven",
+     "start": 9.571,
+     "end": 9.893,
+     "conf": 0.242
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Most people go quiet. The honest answer is usually, because that's what the calculator says.",
+   "idea": true,
+   "start": 10.303,
+   "end": 14.662,
+   "words": [
+    {
+     "w": "most",
+     "start": 10.303,
+     "end": 10.484,
+     "conf": 1.0
+    },
+    {
+     "w": "people",
+     "start": 10.504,
+     "end": 10.725,
+     "conf": 0.962
+    },
+    {
+     "w": "go",
+     "start": 10.745,
+     "end": 10.825,
+     "conf": 0.736
+    },
+    {
+     "w": "quiet",
+     "start": 10.926,
+     "end": 11.247,
+     "conf": 0.619
+    },
+    {
+     "w": "the",
+     "start": 11.287,
+     "end": 11.991,
+     "conf": 0.996
+    },
+    {
+     "w": "honest",
+     "start": 12.011,
+     "end": 12.272,
+     "conf": 0.851
+    },
+    {
+     "w": "answer",
+     "start": 12.372,
+     "end": 12.593,
+     "conf": 0.828
+    },
+    {
+     "w": "is",
+     "start": 12.613,
+     "end": 12.694,
+     "conf": 0.734
+    },
+    {
+     "w": "usually",
+     "start": 12.814,
+     "end": 13.075,
+     "conf": 0.857
+    },
+    {
+     "w": "because",
+     "start": 13.136,
+     "end": 13.316,
+     "conf": 0.57
+    },
+    {
+     "w": "that's",
+     "start": 13.336,
+     "end": 13.497,
+     "conf": 0.781
+    },
+    {
+     "w": "what",
+     "start": 13.517,
+     "end": 13.618,
+     "conf": 0.992
+    },
+    {
+     "w": "the",
+     "start": 13.638,
+     "end": 13.698,
+     "conf": 0.993
+    },
+    {
+     "w": "calculator",
+     "start": 13.718,
+     "end": 14.321,
+     "conf": 0.904
+    },
+    {
+     "w": "says",
+     "start": 14.401,
+     "end": 14.662,
+     "conf": 0.749
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "You met pi in school, as the distance around a circle divided by the distance across it.",
+   "idea": false,
+   "start": 15.693,
+   "end": 19.942,
+   "words": [
+    {
+     "w": "you",
+     "start": 15.693,
+     "end": 15.753,
+     "conf": 0.99
+    },
+    {
+     "w": "met",
+     "start": 15.773,
+     "end": 15.934,
+     "conf": 0.999
+    },
+    {
+     "w": "pi",
+     "start": 16.014,
+     "end": 16.234,
+     "conf": 0.321
+    },
+    {
+     "w": "in",
+     "start": 16.314,
+     "end": 16.354,
+     "conf": 0.482
+    },
+    {
+     "w": "school",
+     "start": 16.435,
+     "end": 16.735,
+     "conf": 0.992
+    },
+    {
+     "w": "as",
+     "start": 17.056,
+     "end": 17.136,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 17.156,
+     "end": 17.256,
+     "conf": 0.745
+    },
+    {
+     "w": "distance",
+     "start": 17.276,
+     "end": 17.637,
+     "conf": 0.888
+    },
+    {
+     "w": "around",
+     "start": 17.657,
+     "end": 17.898,
+     "conf": 0.965
+    },
+    {
+     "w": "a",
+     "start": 17.918,
+     "end": 17.938,
+     "conf": 0.992
+    },
+    {
+     "w": "circle",
+     "start": 18.038,
+     "end": 18.379,
+     "conf": 0.811
+    },
+    {
+     "w": "divided",
+     "start": 18.539,
+     "end": 18.94,
+     "conf": 0.996
+    },
+    {
+     "w": "by",
+     "start": 18.96,
+     "end": 19.06,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 19.08,
+     "end": 19.161,
+     "conf": 0.997
+    },
+    {
+     "w": "distance",
+     "start": 19.181,
+     "end": 19.521,
+     "conf": 0.999
+    },
+    {
+     "w": "across",
+     "start": 19.541,
+     "end": 19.842,
+     "conf": 0.96
+    },
+    {
+     "w": "it",
+     "start": 19.862,
+     "end": 19.942,
+     "conf": 0.225
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "That definition is true. But it only tells you how to measure pi. It doesn't tell you what pi is.",
+   "idea": true,
+   "start": 20.332,
+   "end": 25.015,
+   "words": [
+    {
+     "w": "that",
+     "start": 20.332,
+     "end": 20.453,
+     "conf": 0.937
+    },
+    {
+     "w": "definition",
+     "start": 20.513,
+     "end": 20.975,
+     "conf": 0.982
+    },
+    {
+     "w": "is",
+     "start": 21.015,
+     "end": 21.076,
+     "conf": 0.503
+    },
+    {
+     "w": "true",
+     "start": 21.176,
+     "end": 21.397,
+     "conf": 0.783
+    },
+    {
+     "w": "but",
+     "start": 21.839,
+     "end": 21.94,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 21.96,
+     "end": 22.02,
+     "conf": 0.999
+    },
+    {
+     "w": "only",
+     "start": 22.101,
+     "end": 22.261,
+     "conf": 0.747
+    },
+    {
+     "w": "tells",
+     "start": 22.342,
+     "end": 22.523,
+     "conf": 0.658
+    },
+    {
+     "w": "you",
+     "start": 22.543,
+     "end": 22.623,
+     "conf": 0.989
+    },
+    {
+     "w": "how",
+     "start": 22.643,
+     "end": 22.744,
+     "conf": 0.772
+    },
+    {
+     "w": "to",
+     "start": 22.804,
+     "end": 22.844,
+     "conf": 0.5
+    },
+    {
+     "w": "measure",
+     "start": 22.864,
+     "end": 23.106,
+     "conf": 0.829
+    },
+    {
+     "w": "pi",
+     "start": 23.126,
+     "end": 23.367,
+     "conf": 0.797
+    },
+    {
+     "w": "it",
+     "start": 23.93,
+     "end": 23.97,
+     "conf": 0.996
+    },
+    {
+     "w": "doesn't",
+     "start": 23.99,
+     "end": 24.211,
+     "conf": 0.909
+    },
+    {
+     "w": "tell",
+     "start": 24.231,
+     "end": 24.372,
+     "conf": 0.999
+    },
+    {
+     "w": "you",
+     "start": 24.392,
+     "end": 24.452,
+     "conf": 0.997
+    },
+    {
+     "w": "what",
+     "start": 24.472,
+     "end": 24.573,
+     "conf": 0.972
+    },
+    {
+     "w": "pi",
+     "start": 24.593,
+     "end": 24.814,
+     "conf": 0.813
+    },
+    {
+     "w": "is",
+     "start": 24.914,
+     "end": 25.015,
+     "conf": 0.5
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So in this video, I want to answer three questions with you.",
+   "idea": false,
+   "start": 26.327,
+   "end": 28.825,
+   "words": [
+    {
+     "w": "so",
+     "start": 26.327,
+     "end": 26.408,
+     "conf": 1.0
+    },
+    {
+     "w": "in",
+     "start": 26.509,
+     "end": 26.549,
+     "conf": 0.997
+    },
+    {
+     "w": "this",
+     "start": 26.589,
+     "end": 26.73,
+     "conf": 0.999
+    },
+    {
+     "w": "video",
+     "start": 26.75,
+     "end": 26.992,
+     "conf": 0.833
+    },
+    {
+     "w": "i",
+     "start": 27.214,
+     "end": 27.234,
+     "conf": 0.002
+    },
+    {
+     "w": "want",
+     "start": 27.254,
+     "end": 27.335,
+     "conf": 0.486
+    },
+    {
+     "w": "to",
+     "start": 27.355,
+     "end": 27.395,
+     "conf": 0.83
+    },
+    {
+     "w": "answer",
+     "start": 27.476,
+     "end": 27.717,
+     "conf": 0.711
+    },
+    {
+     "w": "three",
+     "start": 27.838,
+     "end": 28.06,
+     "conf": 0.8
+    },
+    {
+     "w": "questions",
+     "start": 28.14,
+     "end": 28.563,
+     "conf": 0.912
+    },
+    {
+     "w": "with",
+     "start": 28.584,
+     "end": 28.705,
+     "conf": 0.786
+    },
+    {
+     "w": "you",
+     "start": 28.725,
+     "end": 28.825,
+     "conf": 0.747
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "One. Why is pi three point one four, and not some other number?",
+   "idea": false,
+   "start": 29.357,
+   "end": 32.076,
+   "words": [
+    {
+     "w": "one",
+     "start": 29.357,
+     "end": 29.438,
+     "conf": 0.51
+    },
+    {
+     "w": "why",
+     "start": 29.719,
+     "end": 29.901,
+     "conf": 0.553
+    },
+    {
+     "w": "is",
+     "start": 29.921,
+     "end": 30.001,
+     "conf": 0.858
+    },
+    {
+     "w": "pi",
+     "start": 30.062,
+     "end": 30.243,
+     "conf": 0.3
+    },
+    {
+     "w": "three",
+     "start": 30.263,
+     "end": 30.465,
+     "conf": 0.018
+    },
+    {
+     "w": "point",
+     "start": 30.485,
+     "end": 30.686,
+     "conf": 0.036
+    },
+    {
+     "w": "one",
+     "start": 30.706,
+     "end": 30.847,
+     "conf": 0.011
+    },
+    {
+     "w": "four",
+     "start": 30.867,
+     "end": 31.109,
+     "conf": 0.004
+    },
+    {
+     "w": "and",
+     "start": 31.25,
+     "end": 31.31,
+     "conf": 0.341
+    },
+    {
+     "w": "not",
+     "start": 31.33,
+     "end": 31.471,
+     "conf": 0.905
+    },
+    {
+     "w": "some",
+     "start": 31.492,
+     "end": 31.633,
+     "conf": 0.772
+    },
+    {
+     "w": "other",
+     "start": 31.653,
+     "end": 31.773,
+     "conf": 0.995
+    },
+    {
+     "w": "number",
+     "start": 31.834,
+     "end": 32.076,
+     "conf": 0.99
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Two. Why do its digits never end?",
+   "idea": false,
+   "start": 32.485,
+   "end": 34.124,
+   "words": [
+    {
+     "w": "two",
+     "start": 32.485,
+     "end": 32.688,
+     "conf": 0.61
+    },
+    {
+     "w": "why",
+     "start": 32.748,
+     "end": 32.87,
+     "conf": 0.665
+    },
+    {
+     "w": "do",
+     "start": 32.89,
+     "end": 32.951,
+     "conf": 0.967
+    },
+    {
+     "w": "its",
+     "start": 33.032,
+     "end": 33.113,
+     "conf": 0.641
+    },
+    {
+     "w": "digits",
+     "start": 33.193,
+     "end": 33.618,
+     "conf": 0.543
+    },
+    {
+     "w": "never",
+     "start": 33.699,
+     "end": 33.881,
+     "conf": 0.893
+    },
+    {
+     "w": "end",
+     "start": 33.983,
+     "end": 34.124,
+     "conf": 0.646
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And three. Why, in a universe with a different geometry, would a circle give you a different number?",
+   "idea": true,
+   "start": 34.515,
+   "end": 39.535,
+   "words": [
+    {
+     "w": "and",
+     "start": 34.515,
+     "end": 34.636,
+     "conf": 0.161
+    },
+    {
+     "w": "three",
+     "start": 34.716,
+     "end": 34.937,
+     "conf": 0.022
+    },
+    {
+     "w": "why",
+     "start": 35.88,
+     "end": 36.081,
+     "conf": 0.967
+    },
+    {
+     "w": "in",
+     "start": 36.182,
+     "end": 36.222,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 36.242,
+     "end": 36.262,
+     "conf": 0.994
+    },
+    {
+     "w": "universe",
+     "start": 36.362,
+     "end": 36.643,
+     "conf": 0.754
+    },
+    {
+     "w": "with",
+     "start": 36.664,
+     "end": 36.764,
+     "conf": 0.737
+    },
+    {
+     "w": "a",
+     "start": 36.784,
+     "end": 36.824,
+     "conf": 0.493
+    },
+    {
+     "w": "different",
+     "start": 36.884,
+     "end": 37.145,
+     "conf": 0.901
+    },
+    {
+     "w": "geometry",
+     "start": 37.165,
+     "end": 37.607,
+     "conf": 0.972
+    },
+    {
+     "w": "would",
+     "start": 38.049,
+     "end": 38.149,
+     "conf": 0.784
+    },
+    {
+     "w": "a",
+     "start": 38.169,
+     "end": 38.21,
+     "conf": 0.563
+    },
+    {
+     "w": "circle",
+     "start": 38.33,
+     "end": 38.611,
+     "conf": 0.791
+    },
+    {
+     "w": "give",
+     "start": 38.671,
+     "end": 38.812,
+     "conf": 0.75
+    },
+    {
+     "w": "you",
+     "start": 38.832,
+     "end": 38.912,
+     "conf": 0.971
+    },
+    {
+     "w": "a",
+     "start": 38.973,
+     "end": 38.993,
+     "conf": 0.0
+    },
+    {
+     "w": "different",
+     "start": 39.013,
+     "end": 39.294,
+     "conf": 0.964
+    },
+    {
+     "w": "number",
+     "start": 39.314,
+     "end": 39.535,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Here is the first strange thing. Nobody chose this number. No committee of mathematicians ever met and voted for three point one four.",
+   "idea": false,
+   "start": 40.545,
+   "end": 47.366,
+   "words": [
+    {
+     "w": "here",
+     "start": 40.545,
+     "end": 40.706,
+     "conf": 0.911
+    },
+    {
+     "w": "is",
+     "start": 40.726,
+     "end": 40.806,
+     "conf": 0.681
+    },
+    {
+     "w": "the",
+     "start": 40.826,
+     "end": 40.926,
+     "conf": 0.749
+    },
+    {
+     "w": "first",
+     "start": 40.946,
+     "end": 41.227,
+     "conf": 0.833
+    },
+    {
+     "w": "strange",
+     "start": 41.327,
+     "end": 41.628,
+     "conf": 0.878
+    },
+    {
+     "w": "thing",
+     "start": 41.689,
+     "end": 41.889,
+     "conf": 0.666
+    },
+    {
+     "w": "nobody",
+     "start": 42.29,
+     "end": 42.551,
+     "conf": 0.834
+    },
+    {
+     "w": "chose",
+     "start": 42.652,
+     "end": 42.852,
+     "conf": 0.783
+    },
+    {
+     "w": "this",
+     "start": 42.872,
+     "end": 43.033,
+     "conf": 0.832
+    },
+    {
+     "w": "number",
+     "start": 43.133,
+     "end": 43.374,
+     "conf": 0.861
+    },
+    {
+     "w": "no",
+     "start": 43.735,
+     "end": 43.795,
+     "conf": 0.5
+    },
+    {
+     "w": "committee",
+     "start": 43.895,
+     "end": 44.196,
+     "conf": 0.823
+    },
+    {
+     "w": "of",
+     "start": 44.216,
+     "end": 44.257,
+     "conf": 0.995
+    },
+    {
+     "w": "mathematicians",
+     "start": 44.297,
+     "end": 44.999,
+     "conf": 0.991
+    },
+    {
+     "w": "ever",
+     "start": 45.019,
+     "end": 45.159,
+     "conf": 0.799
+    },
+    {
+     "w": "met",
+     "start": 45.24,
+     "end": 45.44,
+     "conf": 0.666
+    },
+    {
+     "w": "and",
+     "start": 45.801,
+     "end": 45.902,
+     "conf": 0.999
+    },
+    {
+     "w": "voted",
+     "start": 45.962,
+     "end": 46.243,
+     "conf": 0.8
+    },
+    {
+     "w": "for",
+     "start": 46.323,
+     "end": 46.403,
+     "conf": 0.656
+    },
+    {
+     "w": "three",
+     "start": 46.423,
+     "end": 46.664,
+     "conf": 0.039
+    },
+    {
+     "w": "point",
+     "start": 46.684,
+     "end": 46.925,
+     "conf": 0.022
+    },
+    {
+     "w": "one",
+     "start": 46.945,
+     "end": 47.125,
+     "conf": 0.006
+    },
+    {
+     "w": "four",
+     "start": 47.145,
+     "end": 47.366,
+     "conf": 0.003
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Once you accept the basic rules of flat geometry, pi is forced on you. It could not be anything else.",
+   "idea": false,
+   "start": 47.836,
+   "end": 52.668,
+   "words": [
+    {
+     "w": "once",
+     "start": 47.836,
+     "end": 47.936,
+     "conf": 0.728
+    },
+    {
+     "w": "you",
+     "start": 47.956,
+     "end": 48.037,
+     "conf": 0.997
+    },
+    {
+     "w": "accept",
+     "start": 48.057,
+     "end": 48.357,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 48.377,
+     "end": 48.458,
+     "conf": 0.748
+    },
+    {
+     "w": "basic",
+     "start": 48.478,
+     "end": 48.799,
+     "conf": 1.0
+    },
+    {
+     "w": "rules",
+     "start": 48.879,
+     "end": 49.059,
+     "conf": 0.81
+    },
+    {
+     "w": "of",
+     "start": 49.079,
+     "end": 49.139,
+     "conf": 0.999
+    },
+    {
+     "w": "flat",
+     "start": 49.22,
+     "end": 49.4,
+     "conf": 0.74
+    },
+    {
+     "w": "geometry",
+     "start": 49.42,
+     "end": 49.901,
+     "conf": 0.919
+    },
+    {
+     "w": "pi",
+     "start": 50.262,
+     "end": 50.443,
+     "conf": 0.295
+    },
+    {
+     "w": "is",
+     "start": 50.543,
+     "end": 50.583,
+     "conf": 0.512
+    },
+    {
+     "w": "forced",
+     "start": 50.663,
+     "end": 50.924,
+     "conf": 0.736
+    },
+    {
+     "w": "on",
+     "start": 51.004,
+     "end": 51.044,
+     "conf": 0.5
+    },
+    {
+     "w": "you",
+     "start": 51.064,
+     "end": 51.164,
+     "conf": 0.888
+    },
+    {
+     "w": "it",
+     "start": 51.625,
+     "end": 51.666,
+     "conf": 0.248
+    },
+    {
+     "w": "could",
+     "start": 51.686,
+     "end": 51.806,
+     "conf": 0.813
+    },
+    {
+     "w": "not",
+     "start": 51.866,
+     "end": 51.966,
+     "conf": 0.968
+    },
+    {
+     "w": "be",
+     "start": 52.026,
+     "end": 52.066,
+     "conf": 0.499
+    },
+    {
+     "w": "anything",
+     "start": 52.147,
+     "end": 52.407,
+     "conf": 0.871
+    },
+    {
+     "w": "else",
+     "start": 52.488,
+     "end": 52.668,
+     "conf": 0.75
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And yet it is an ugly number. It isn't a fraction, and its digits run on forever without ever repeating.",
+   "idea": false,
+   "start": 53.078,
+   "end": 58.192,
+   "words": [
+    {
+     "w": "and",
+     "start": 53.078,
+     "end": 53.158,
+     "conf": 0.986
+    },
+    {
+     "w": "yet",
+     "start": 53.178,
+     "end": 53.319,
+     "conf": 0.752
+    },
+    {
+     "w": "it",
+     "start": 53.379,
+     "end": 53.419,
+     "conf": 0.498
+    },
+    {
+     "w": "is",
+     "start": 53.519,
+     "end": 53.62,
+     "conf": 0.5
+    },
+    {
+     "w": "an",
+     "start": 53.68,
+     "end": 53.74,
+     "conf": 0.5
+    },
+    {
+     "w": "ugly",
+     "start": 53.84,
+     "end": 54.061,
+     "conf": 0.969
+    },
+    {
+     "w": "number",
+     "start": 54.141,
+     "end": 54.482,
+     "conf": 0.998
+    },
+    {
+     "w": "it",
+     "start": 54.823,
+     "end": 54.863,
+     "conf": 0.497
+    },
+    {
+     "w": "isn't",
+     "start": 54.903,
+     "end": 55.104,
+     "conf": 0.895
+    },
+    {
+     "w": "a",
+     "start": 55.164,
+     "end": 55.184,
+     "conf": 0.006
+    },
+    {
+     "w": "fraction",
+     "start": 55.244,
+     "end": 55.645,
+     "conf": 0.857
+    },
+    {
+     "w": "and",
+     "start": 55.886,
+     "end": 55.946,
+     "conf": 0.665
+    },
+    {
+     "w": "its",
+     "start": 56.006,
+     "end": 56.087,
+     "conf": 0.665
+    },
+    {
+     "w": "digits",
+     "start": 56.167,
+     "end": 56.468,
+     "conf": 0.648
+    },
+    {
+     "w": "run",
+     "start": 56.548,
+     "end": 56.648,
+     "conf": 0.671
+    },
+    {
+     "w": "on",
+     "start": 56.708,
+     "end": 56.768,
+     "conf": 0.5
+    },
+    {
+     "w": "forever",
+     "start": 56.849,
+     "end": 57.17,
+     "conf": 0.857
+    },
+    {
+     "w": "without",
+     "start": 57.23,
+     "end": 57.47,
+     "conf": 0.883
+    },
+    {
+     "w": "ever",
+     "start": 57.531,
+     "end": 57.691,
+     "conf": 0.75
+    },
+    {
+     "w": "repeating",
+     "start": 57.771,
+     "end": 58.192,
+     "conf": 0.783
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "If you were designing a universe, you would never pick something this messy as a basic constant. Ours picked it anyway.",
+   "idea": false,
+   "start": 58.583,
+   "end": 64.536,
+   "words": [
+    {
+     "w": "if",
+     "start": 58.583,
+     "end": 58.643,
+     "conf": 0.999
+    },
+    {
+     "w": "you",
+     "start": 58.683,
+     "end": 58.743,
+     "conf": 0.998
+    },
+    {
+     "w": "were",
+     "start": 58.763,
+     "end": 58.864,
+     "conf": 0.995
+    },
+    {
+     "w": "designing",
+     "start": 58.884,
+     "end": 59.265,
+     "conf": 0.964
+    },
+    {
+     "w": "a",
+     "start": 59.285,
+     "end": 59.305,
+     "conf": 0.995
+    },
+    {
+     "w": "universe",
+     "start": 59.405,
+     "end": 59.846,
+     "conf": 0.872
+    },
+    {
+     "w": "you",
+     "start": 60.126,
+     "end": 60.187,
+     "conf": 0.666
+    },
+    {
+     "w": "would",
+     "start": 60.207,
+     "end": 60.347,
+     "conf": 0.996
+    },
+    {
+     "w": "never",
+     "start": 60.447,
+     "end": 60.668,
+     "conf": 0.719
+    },
+    {
+     "w": "pick",
+     "start": 60.768,
+     "end": 60.948,
+     "conf": 0.728
+    },
+    {
+     "w": "something",
+     "start": 61.048,
+     "end": 61.329,
+     "conf": 0.828
+    },
+    {
+     "w": "this",
+     "start": 61.349,
+     "end": 61.509,
+     "conf": 0.799
+    },
+    {
+     "w": "messy",
+     "start": 61.61,
+     "end": 61.87,
+     "conf": 0.653
+    },
+    {
+     "w": "as",
+     "start": 61.971,
+     "end": 62.031,
+     "conf": 0.995
+    },
+    {
+     "w": "a",
+     "start": 62.051,
+     "end": 62.071,
+     "conf": 0.996
+    },
+    {
+     "w": "basic",
+     "start": 62.171,
+     "end": 62.512,
+     "conf": 0.768
+    },
+    {
+     "w": "constant",
+     "start": 62.612,
+     "end": 63.153,
+     "conf": 0.872
+    },
+    {
+     "w": "ours",
+     "start": 63.514,
+     "end": 63.855,
+     "conf": 0.941
+    },
+    {
+     "w": "picked",
+     "start": 63.935,
+     "end": 64.095,
+     "conf": 0.579
+    },
+    {
+     "w": "it",
+     "start": 64.115,
+     "end": 64.175,
+     "conf": 0.567
+    },
+    {
+     "w": "anyway",
+     "start": 64.256,
+     "end": 64.536,
+     "conf": 0.83
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So where does it come from? To find out, we have to go back more than two thousand years, to the first person who really caught it.",
+   "idea": true,
+   "start": 64.946,
+   "end": 71.302,
+   "words": [
+    {
+     "w": "so",
+     "start": 64.946,
+     "end": 65.026,
+     "conf": 0.665
+    },
+    {
+     "w": "where",
+     "start": 65.086,
+     "end": 65.187,
+     "conf": 0.736
+    },
+    {
+     "w": "does",
+     "start": 65.207,
+     "end": 65.287,
+     "conf": 0.295
+    },
+    {
+     "w": "it",
+     "start": 65.307,
+     "end": 65.367,
+     "conf": 0.99
+    },
+    {
+     "w": "come",
+     "start": 65.387,
+     "end": 65.548,
+     "conf": 1.0
+    },
+    {
+     "w": "from",
+     "start": 65.628,
+     "end": 65.768,
+     "conf": 0.75
+    },
+    {
+     "w": "to",
+     "start": 66.45,
+     "end": 66.53,
+     "conf": 1.0
+    },
+    {
+     "w": "find",
+     "start": 66.65,
+     "end": 66.891,
+     "conf": 0.799
+    },
+    {
+     "w": "out",
+     "start": 66.971,
+     "end": 67.112,
+     "conf": 0.667
+    },
+    {
+     "w": "we",
+     "start": 67.312,
+     "end": 67.352,
+     "conf": 0.5
+    },
+    {
+     "w": "have",
+     "start": 67.372,
+     "end": 67.513,
+     "conf": 0.799
+    },
+    {
+     "w": "to",
+     "start": 67.533,
+     "end": 67.573,
+     "conf": 0.997
+    },
+    {
+     "w": "go",
+     "start": 67.593,
+     "end": 67.673,
+     "conf": 0.666
+    },
+    {
+     "w": "back",
+     "start": 67.773,
+     "end": 67.954,
+     "conf": 0.792
+    },
+    {
+     "w": "more",
+     "start": 68.054,
+     "end": 68.154,
+     "conf": 0.542
+    },
+    {
+     "w": "than",
+     "start": 68.174,
+     "end": 68.295,
+     "conf": 0.993
+    },
+    {
+     "w": "two",
+     "start": 68.375,
+     "end": 68.495,
+     "conf": 0.616
+    },
+    {
+     "w": "thousand",
+     "start": 68.515,
+     "end": 68.896,
+     "conf": 0.845
+    },
+    {
+     "w": "years",
+     "start": 68.916,
+     "end": 69.237,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 69.678,
+     "end": 69.718,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 69.738,
+     "end": 69.839,
+     "conf": 0.749
+    },
+    {
+     "w": "first",
+     "start": 69.899,
+     "end": 70.139,
+     "conf": 0.818
+    },
+    {
+     "w": "person",
+     "start": 70.2,
+     "end": 70.5,
+     "conf": 0.833
+    },
+    {
+     "w": "who",
+     "start": 70.52,
+     "end": 70.601,
+     "conf": 0.752
+    },
+    {
+     "w": "really",
+     "start": 70.681,
+     "end": 70.821,
+     "conf": 0.671
+    },
+    {
+     "w": "caught",
+     "start": 70.841,
+     "end": 71.122,
+     "conf": 0.742
+    },
+    {
+     "w": "it",
+     "start": 71.262,
+     "end": 71.302,
+     "conf": 0.5
+    }
+   ]
+  }
+ ]
+}

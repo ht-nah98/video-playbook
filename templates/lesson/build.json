@@ -1,0 +1,12 @@
+{
+ "intro": "${REPO}/out/en/intro/intro.mp4",
+ "intro_gain_db": -1.5,
+ "lufs": -16,
+ "sfx_db": -6,
+ "parts": [
+  {"page": "p1", "timeline": "p1", "lead": 0.6, "tail": 1.0, "split": 2},
+  {"intro": true},
+  {"page": "p2", "timeline": "p2", "lead": 3.0, "tail": 2.0, "split": 10}
+ ],
+ "music": {"file": "../../_shared/music/steady-groove.m4a", "lufs": -38, "loop": [9.0, 150.0], "xfade": 2.0}
+}

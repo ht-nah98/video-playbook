@@ -1,0 +1,118 @@
+{
+ "duration": 46.041,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Here's something that's true of every sudoku you have ever finished.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 0.0,
+   "end": 3.521,
+   "wav": "audio/voice/70e69bf83f41a785.wav"
+  },
+  {
+   "text": "Take the sixteen cells that form a ring around the middle box.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 3.871,
+   "end": 6.491,
+   "wav": "audio/voice/9b9727686c9faae0.wav"
+  },
+  {
+   "text": "Now take the four little two by two squares in the corners. That's sixteen cells too.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 6.841,
+   "end": 10.819,
+   "wav": "audio/voice/090a3c98ce13736e.wav"
+  },
+  {
+   "text": "Whatever puzzle you solved, those two groups hold exactly the same digits.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 11.169,
+   "end": 14.987,
+   "wav": "audio/voice/2698420063a23f57.wav"
+  },
+  {
+   "text": "Not the same pattern. The same collection of numbers, every time, in every sudoku ever made.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 15.337,
+   "end": 20.067,
+   "wav": "audio/voice/abc3410acdd15b3d.wav"
+  },
+  {
+   "text": "It sounds like a coincidence. It isn't. And the reason fits into about one minute of careful thinking.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 21.017,
+   "end": 26.107,
+   "wav": "audio/voice/96d4c35214d54535.wav"
+  },
+  {
+   "text": "So in this video, I want to answer three questions with you.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 27.057,
+   "end": 30.019,
+   "wav": "audio/voice/931985eaafd74de5.wav"
+  },
+  {
+   "text": "One. Why does that hidden ring exist?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 30.369,
+   "end": 32.026,
+   "wav": "audio/voice/eb52cc54469fc15d.wav"
+  },
+  {
+   "text": "Two. How far does the same trick go, and what does it have to do with algebra?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 32.376,
+   "end": 36.226,
+   "wav": "audio/voice/30fbc33959d92682.wav"
+  },
+  {
+   "text": "And three. How few clues can a sudoku have, and how do you prove that one fewer is impossible?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 36.576,
+   "end": 41.289,
+   "wav": "audio/voice/39955b5d139071e2.wav"
+  },
+  {
+   "text": "And to get there, we only need the one rule you already know.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 42.239,
+   "end": 45.091,
+   "wav": "audio/voice/a8fb4116bc964540.wav"
+  }
+ ]
+}

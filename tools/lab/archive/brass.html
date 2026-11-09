@@ -1,0 +1,265 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — brass</title>
+<style>
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#0A141C;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "brass" (pi): Cỗ máy quay bằng đồng. Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/brass.html --dur 2 --t 0.5,1.5 --outdir out/_lab/brass
+// Ý trung tâm: "π là chuyện QUAY" → thế giới làm bằng khí cụ quay: astrolabe đồng khắc vạch, vòng, bánh răng, tay quay,
+//   trên nền đêm xanh mực. Vật xuyên suốt = MỘT VÒNG ĐỒNG khắc 360 vạch độ: H1 bị hai đa giác khắc kẹp · H2 thành bánh xe
+//   có tay quay kéo kim ghi sóng trên băng giấy hun khói · H3 chuỗi số chạy quanh vành như thang khắc · H4 thành một vòng
+//   của quả cầu armillary (vòng trên cầu, xích đạo C/d = 2) và vành yên ngựa uốn cong · H5 tóm tắt: vòng đồng quay lại từng trạng thái.
+// Bảng màu: nền #0A141C→#11303A (đêm xanh mực) · đồng #C9A15A / sáng #F3D9A0 / tối #6E4E20 (khí cụ, vạch khắc)
+//   · ngà #EFE6D2 (chữ chính, vết kim khắc) · xanh gỉ đồng #8FB3AE (nhãn phụ) · MỘT màu sự thật #7EE6D3 (π, giá trị đúng)
+//   · đỏ #E0604A CHỈ cho cái sai (gạch hiểu lầm "π chỉ là chuyện hình tròn", 3, 3⅛, C/d ≠ π bị gạch).
+// Chữ: Cormorant Garamond LN (số lớn, câu dẫn nghiêng) · IBM Plex Mono (nhãn khắc, thang số, bảng). Không chữ nào là vạch mảnh.
+// Tiếng: tick (vạch độ, đếm cạnh) · snap (bánh răng ăn khớp, đa giác nhân đôi) · pen (kim ghi sóng) · whoosh-long (vòng quay)
+//   · shimmer (π lộ màu sự thật) · coin (đóng dấu khắc) · error (gạch sai) · correct.
+// Phần khác: người xưa đo = bảng đất sét/papyrus đặt trên bàn đồng, số 3 · 3⅛ · 3.16 khắc như vạch thước lệch · Tổ Xung Chi /
+//   van Ceulen = bánh răng 12 288 răng, rồi bia mộ khắc 35 chữ số (chân dung: IMAGINED · NO LIKENESS SURVIVES) · 360° vs radian
+//   = vòng 360 vạch khắc (quy ước) đối với cung đồng đánh bóng dài đúng một bán kính · chia 1 cho 7 = bánh cóc 6 nấc số dư,
+//   quay hết vòng lại về nấc cũ · Lambert / Lindemann = hai ổ khóa khắc năm 1761 / 1882 · cầu phương = compa + thước đồng không
+//   khớp được hình vuông, gạch đỏ · quả cầu armillary · yên ngựa = vành đồng vênh · hố đen = các vòng quanh khối tối bị kéo giãn.
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { ink: '#0A141C', teal: '#11303A', brass: '#C9A15A', brassL: '#F3D9A0', brassD: '#6E4E20', ivory: '#EFE6D2',
+            verd: '#8FB3AE', truth: '#7EE6D3', red: '#E0604A', soot: '#0D1114' };
+const IM = {}; let BG, ready = false;
+const CG = '"Cormorant Garamond"', MONO = '"IBM Plex Mono"', TAU = Math.PI * 2;
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+const r4 = v => Math.round(v * 1e4) / 1e4;
+
+function ground() {                                   // đêm xanh mực: quầng teal giữa, hạt mịn, vòng khắc mờ kiểu bản đồ sao
+  const c = mk(), x = c.getContext('2d');
+  const gr = x.createRadialGradient(W * 0.42, H * 0.52, 60, W * 0.42, H * 0.52, 1250);
+  gr.addColorStop(0, '#133540'); gr.addColorStop(0.55, '#0E2430'); gr.addColorStop(1, '#081018');
+  x.fillStyle = gr; x.fillRect(0, 0, W, H);
+  x.strokeStyle = 'rgba(201,161,90,0.05)'; x.lineWidth = 1;
+  for (let i = 1; i < 14; i++) { x.beginPath(); x.arc(W * 0.42, H * 0.52, i * 95, 0, TAU); x.stroke(); }
+  for (let i = 0; i < 24; i++) { const a = i / 24 * TAU; x.beginPath(); x.moveTo(W * 0.42, H * 0.52); x.lineTo(W * 0.42 + Math.cos(a) * 1400, H * 0.52 + Math.sin(a) * 1400); x.stroke(); }
+  for (let i = 0; i < 160; i++) { const px = hash(i * 3.17) * W, py = hash(i * 7.91) * H, a = 0.12 + hash(i * 1.3) * 0.25;
+    x.fillStyle = `rgba(239,230,210,${a})`; x.beginPath(); x.arc(px, py, 0.8 + hash(i * 5.5) * 0.9, 0, TAU); x.fill(); }
+  const id = x.getImageData(0, 0, W, H);
+  for (let i = 0; i < W * H; i++) { const n = (hash(i * 0.613) - 0.5) * 6; for (let k = 0; k < 3; k++) id.data[i * 4 + k] += n; }
+  x.putImageData(id, 0, 0); return c;
+}
+function text(s, x, y, font, color, align = 'left', ls = 0) { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.letterSpacing = ls + 'px'; g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; return w; }
+const label = (s, x, y, color = C.verd, align = 'left', size = 24) => text(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 3);
+const pt = (cx, cy, r, a) => [cx + Math.cos(a) * r, cy - Math.sin(a) * r];   // góc toán học: ngược chiều kim đồng hồ, y lên
+
+function brassRing(cx, cy, R, w) {                    // vòng đồng đánh bóng: bóng đổ, thân gradient nón, mép khắc tối, vệt sáng
+  g.save();
+  g.strokeStyle = 'rgba(0,0,0,0.55)'; g.lineWidth = w + 8; g.beginPath(); g.arc(cx + 5, cy + 7, R, 0, TAU); g.stroke();
+  const cg = g.createConicGradient(-0.6, cx, cy);
+  [[0, '#8A6428'], [0.1, '#F3D9A0'], [0.22, '#B8893F'], [0.38, '#6E4E20'], [0.52, '#E8C47E'], [0.66, '#9C7430'], [0.82, '#F6DFA8'], [1, '#8A6428']]
+    .forEach(([k, c]) => cg.addColorStop(k, c));
+  g.strokeStyle = cg; g.lineWidth = w; g.beginPath(); g.arc(cx, cy, R, 0, TAU); g.stroke();
+  g.strokeStyle = '#3B2A12'; g.lineWidth = 1.5;
+  [R - w / 2, R + w / 2].forEach(r => { g.beginPath(); g.arc(cx, cy, r, 0, TAU); g.stroke(); });
+  g.strokeStyle = 'rgba(255,244,214,0.45)'; g.lineWidth = 1.5; g.beginPath(); g.arc(cx, cy, R - w / 4, 0, TAU); g.stroke();
+  g.restore();
+}
+function limb(cx, cy, R0, numbers = true) {           // thang khắc 360 vạch độ quanh vành; số mỗi 30°
+  g.save(); g.strokeStyle = C.brass; g.lineCap = 'butt';
+  for (let d = 0; d < 360; d++) {
+    const L = d % 10 === 0 ? 26 : d % 5 === 0 ? 16 : 9, a = d / 180 * Math.PI;
+    g.lineWidth = d % 10 === 0 ? 2 : 1; g.globalAlpha = d % 5 === 0 ? 0.95 : 0.6;
+    const [x0, y0] = pt(cx, cy, R0, a), [x1, y1] = pt(cx, cy, R0 + L, a);
+    g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke();
+  }
+  g.globalAlpha = 0.7; g.lineWidth = 1; [R0, R0 + 26].forEach(r => { g.beginPath(); g.arc(cx, cy, r, 0, TAU); g.stroke(); });
+  g.globalAlpha = 1;
+  if (numbers) for (let d = 0; d < 360; d += 30) {
+    const a = d / 180 * Math.PI, [x, y] = pt(cx, cy, R0 + 48, a);
+    g.save(); g.translate(x, y); g.rotate(Math.PI / 2 - a); text(`${d}°`, 0, 7, `500 20px ${MONO}`, C.brass, 'center'); g.restore();
+  }
+  g.restore();
+}
+function boss(cx, cy, r) {                            // trục giữa: đinh tán đồng
+  const gr = g.createRadialGradient(cx - r * 0.35, cy - r * 0.35, 1, cx, cy, r);
+  gr.addColorStop(0, '#FFF0C8'); gr.addColorStop(0.5, '#C9A15A'); gr.addColorStop(1, '#5A3E18');
+  g.fillStyle = gr; g.beginPath(); g.arc(cx, cy, r, 0, TAU); g.fill();
+  g.strokeStyle = '#3B2A12'; g.lineWidth = 1.5; g.stroke();
+}
+function gear(cx, cy, r, teeth, rot, alpha = 1) {     // bánh răng khắc (sau vòng), răng hình thang
+  g.save(); g.globalAlpha = alpha; g.translate(cx, cy); g.rotate(rot); g.beginPath();
+  for (let i = 0; i < teeth; i++) {
+    const a0 = i / teeth * TAU, s = TAU / teeth;
+    [[a0, r], [a0 + s * 0.18, r + 14], [a0 + s * 0.5, r + 14], [a0 + s * 0.68, r]].forEach(([a, rr], k) =>
+      (i === 0 && k === 0) ? g.moveTo(Math.cos(a) * rr, Math.sin(a) * rr) : g.lineTo(Math.cos(a) * rr, Math.sin(a) * rr));
+  }
+  g.closePath(); const gr = g.createRadialGradient(0, 0, r * 0.2, 0, 0, r + 14); gr.addColorStop(0, '#7A5A2A'); gr.addColorStop(1, '#4A3416');
+  g.fillStyle = gr; g.fill(); g.strokeStyle = 'rgba(243,217,160,0.55)'; g.lineWidth = 1.2; g.stroke();
+  g.strokeStyle = 'rgba(243,217,160,0.35)'; g.beginPath(); g.arc(0, 0, r * 0.62, 0, TAU); g.stroke();
+  for (let i = 0; i < 5; i++) { const a = i / 5 * TAU; g.fillStyle = 'rgba(10,20,28,0.85)'; g.beginPath(); g.arc(Math.cos(a) * r * 0.4, Math.sin(a) * r * 0.4, r * 0.13, 0, TAU); g.fill(); }
+  g.restore();
+}
+function poly(cx, cy, R, n, rot, outside) {           // đa giác đều: trong (đỉnh trên vòng) hoặc ngoài (cạnh tiếp xúc vòng)
+  const rr = outside ? R / Math.cos(Math.PI / n) : R, a0 = outside ? rot + Math.PI / n : rot;
+  g.beginPath(); for (let i = 0; i <= n; i++) { const [x, y] = pt(cx, cy, rr, a0 + i / n * TAU); i ? g.lineTo(x, y) : g.moveTo(x, y); } g.closePath();
+}
+function figure(pose, cx, foot, h, crop = 1) {        // mascot dưới đèn đêm: phủ xanh mực nhẹ, viền sáng đồng bên phải
+  const im = IM[pose], sh = im.height * crop, s = h / sh, w = im.width * s, c = mk(Math.ceil(w), h), x = c.getContext('2d');
+  x.drawImage(im, 0, 0, im.width, sh, 0, 0, w, h); x.globalCompositeOperation = 'source-atop';
+  x.fillStyle = 'rgba(14,36,48,0.30)'; x.fillRect(0, 0, w, h);
+  const rim = x.createLinearGradient(w, 0, w * 0.55, 0); rim.addColorStop(0, 'rgba(243,217,160,0.28)'); rim.addColorStop(1, 'rgba(243,217,160,0)');
+  x.fillStyle = rim; x.fillRect(0, 0, w, h);
+  g.drawImage(c, cx - w / 2, foot - h); return { x: cx - w / 2, y: foot - h, w, h, s };
+}
+
+const frames = [
+  () => {                                             // 0 · Hồi 1: vòng đồng bị hai đa giác khắc kẹp; bảng nhân đôi cạnh tới 96
+    const N = [6, 12, 24, 48, 96], ins = N.map(n => n * Math.sin(Math.PI / n)), out = N.map(n => n * Math.tan(Math.PI / n));
+    const lo = must('Math.round(223 / 71 * 1e4) / 1e4', 3.1408), hi = must('Math.round(22 / 7 * 1e4) / 1e4', 3.1429);
+    must('Math.round(96 * Math.sin(Math.PI / 96) * 1e4) / 1e4', 3.141); must('Math.round(96 * Math.tan(Math.PI / 96) * 1e4) / 1e4', 3.1427);
+    if (!(223 / 71 < ins[4] && ins[4] < Math.PI && Math.PI < out[4] && out[4] < 22 / 7)) throw new Error('sai thứ tự kẹp');
+    if (N.some((n, i) => i && n !== 2 * N[i - 1])) throw new Error('sai nhân đôi');
+
+    const cx = 500, cy = 600, R = 280, n = 12;
+    gear(cx, cy, 120, 24, 0.13, 0.55);
+    g.save(); poly(cx, cy, R, n, Math.PI / 2, true); g.fillStyle = 'rgba(201,161,90,0.07)'; g.fill();
+    g.strokeStyle = C.brassL; g.lineWidth = 2.5; g.stroke(); g.restore();
+    brassRing(cx, cy, R, 16);
+    g.save(); poly(cx, cy, R, n, Math.PI / 2, false); g.fillStyle = 'rgba(10,20,28,0.55)'; g.fill();
+    g.strokeStyle = C.ivory; g.lineWidth = 2.5; g.stroke(); g.restore();
+    g.save(); g.strokeStyle = 'rgba(239,230,210,0.22)'; g.lineWidth = 1;                         // nan khắc từ tâm tới đỉnh trong
+    for (let i = 0; i < n; i++) { const [x, y] = pt(cx, cy, R - 10, Math.PI / 2 + i / n * TAU); g.beginPath(); g.moveTo(cx, cy); g.lineTo(x, y); g.stroke(); }
+    g.restore();
+    limb(cx, cy, R + 24);
+    boss(cx, cy, 16);
+    text(`${n}`, cx, cy + 92, `600 64px ${CG}`, C.ivory, 'center'); label('sides, drawn', cx, cy + 128, C.verd, 'center', 20);
+
+    label('Act one · trapping the circle', 96, 108, C.brass);
+    text('Shorter inside, longer outside.', 96, 180, `italic 500 60px ${CG}`, C.ivory);
+
+    const X = 930, cols = [X, X + 112, X + 252];
+    label('sides', cols[0], 330, C.verd, 'left', 20); label('inside', cols[1], 330, C.ivory, 'left', 20); label('outside', cols[2], 330, C.brassL, 'left', 20);
+    g.fillStyle = 'rgba(201,161,90,0.5)'; g.fillRect(X, 346, 372, 1.5);
+    N.forEach((k, i) => {
+      const y = 392 + i * 46, last = i === N.length - 1;
+      if (last) { g.fillStyle = 'rgba(126,230,211,0.10)'; g.fillRect(X - 12, y - 33, 396, 46); }
+      text(`${k}`, cols[0], y, `500 28px ${MONO}`, last ? C.truth : C.verd);
+      text(ins[i].toFixed(4), cols[1], y, `500 28px ${MONO}`, C.ivory);
+      text(out[i].toFixed(4), cols[2], y, `500 28px ${MONO}`, C.brassL);
+      if (i) text('×2', X - 20, y - 26, `500 16px ${MONO}`, C.verd, 'right');
+    });
+    label('Archimedes, by hand', X, 690, C.brass, 'left', 20);
+    text(`223/71 ≈ ${lo.toFixed(4)}`, X, 756, `600 56px ${CG}`, C.ivory);
+    const w0 = text('<  ', X + 60, 842, `600 64px ${CG}`, C.verd); const w1 = text('π', X + 60 + w0, 842, `600 76px ${CG}`, C.truth);
+    text('  <', X + 60 + w0 + w1, 842, `600 64px ${CG}`, C.verd);
+    text(`22/7 ≈ ${hi.toFixed(4)}`, X, 922, `600 56px ${CG}`, C.brassL);
+    text('at ninety-six sides', X, 980, `italic 500 36px ${CG}`, C.verd);
+
+    figure('compass', 1640, 1080, 760);
+  },
+  () => {                                             // 1 · Hồi 2: tay quay quay vòng, kim theo BÓNG của điểm vẽ sóng sin lên băng giấy hun khói
+    const th = must('2.3', 2.3), sh = must('Math.round(Math.sin(2.3) * 1000) / 1000', 0.746);
+    const deg = must('Math.round(2.3 * 180 / Math.PI * 10) / 10', 131.8), oneRad = must('Math.round(180 / Math.PI * 10) / 10', 57.3);
+    const cx = 820, cy = 520, R = 200, s = 108, T0 = 1150, T1 = 1824, ty0 = cy - R - 52, ty1 = cy + R + 52;
+    const [px, py] = pt(cx, cy, R, th);
+    if (Math.abs((cy - py) / R - Math.sin(th)) > 1e-9) throw new Error('sai bóng');
+
+    // băng giấy hun khói: nền muội, lỗ kéo hai mép, lưới khắc
+    g.save(); g.fillStyle = C.soot; g.fillRect(T0, ty0, T1 - T0, ty1 - ty0);
+    for (let i = 0; i < 900; i++) { g.fillStyle = `rgba(150,160,160,${0.03 + hash(i * 2.7) * 0.05})`;
+      g.fillRect(T0 + hash(i * 1.37) * (T1 - T0), ty0 + hash(i * 4.11) * (ty1 - ty0), 1 + hash(i * 9.1) * 2, 1); }
+    for (let x = T0 + 18; x < T1; x += 36) [ty0 + 14, ty1 - 14].forEach(y => { g.fillStyle = '#05080A'; g.beginPath(); g.roundRect(x - 6, y - 5, 12, 10, 3); g.fill(); });
+    g.strokeStyle = 'rgba(143,179,174,0.28)'; g.lineWidth = 1;
+    [cy - R, cy, cy + R].forEach(y => { g.setLineDash(y === cy ? [] : [4, 6]); g.beginPath(); g.moveTo(T0, y); g.lineTo(T1, y); g.stroke(); });
+    g.setLineDash([]); g.restore();
+    // vết kim: y = sin(θ − (x − T0)/s) — quá khứ trôi sang phải
+    g.save(); g.lineJoin = g.lineCap = 'round';
+    const trace = () => { g.beginPath(); for (let x = T0; x <= T1; x += 2) { const y = cy - R * Math.sin(th - (x - T0) / s); x === T0 ? g.moveTo(x, y) : g.lineTo(x, y); } };
+    trace(); g.strokeStyle = 'rgba(239,230,210,0.18)'; g.lineWidth = 10; g.stroke();
+    trace(); g.strokeStyle = C.ivory; g.lineWidth = 3.5; g.stroke(); g.restore();
+    // nửa vòng trên băng: hai điểm 0 liên tiếp cách nhau π·s
+    const z0 = T0 + th * s, z1 = T0 + (th + Math.PI) * s;
+    [z0, z1].forEach(x => { g.fillStyle = C.truth; g.beginPath(); g.arc(x, cy, 6, 0, TAU); g.fill(); });
+    g.save(); g.strokeStyle = C.truth; g.lineWidth = 2;
+    const by = ty1 + 34; g.beginPath(); g.moveTo(z0, by - 12); g.lineTo(z0, by); g.lineTo(z1, by); g.lineTo(z1, by - 12); g.stroke();
+    g.setLineDash([3, 5]); g.globalAlpha = 0.6; [z0, z1].forEach(x => { g.beginPath(); g.moveTo(x, cy + 8); g.lineTo(x, by - 12); g.stroke(); }); g.restore();
+    text('π', (z0 + z1) / 2, by + 62, `600 64px ${CG}`, C.truth, 'center');
+    label('half a turn of the wheel', (z0 + z1) / 2, by + 98, C.verd, 'center', 20);
+    label('paper moves →', T1, ty0 - 18, C.verd, 'right', 20);
+
+    // thanh trượt: bóng của điểm lên tường đứng
+    const RX = T0 - 26;
+    g.save(); g.fillStyle = '#4A3416'; g.fillRect(RX - 5, ty0 - 10, 10, ty1 - ty0 + 20);
+    g.fillStyle = C.brass; g.fillRect(RX - 2, ty0 - 10, 3, ty1 - ty0 + 20);
+    [[cy - R, '+1'], [cy, '0'], [cy + R, '−1']].forEach(([y, t]) => { g.fillStyle = C.brass; g.fillRect(RX - 16, y - 1, 11, 2); text(t, RX - 22, y + 8, `500 20px ${MONO}`, C.brass, 'right'); });
+    g.restore();
+    g.save(); g.strokeStyle = 'rgba(126,230,211,0.75)'; g.lineWidth = 2; g.setLineDash([6, 7]);
+    g.beginPath(); g.moveTo(px + 14, py); g.lineTo(RX - 26, py); g.stroke(); g.restore();
+    g.save(); const cg = g.createLinearGradient(0, py - 18, 0, py + 18); cg.addColorStop(0, '#F3D9A0'); cg.addColorStop(1, '#8A6428');
+    g.fillStyle = cg; g.beginPath(); g.roundRect(RX - 14, py - 18, 28, 36, 4); g.fill(); g.strokeStyle = '#3B2A12'; g.lineWidth = 1.5; g.stroke();
+    g.strokeStyle = C.brassL; g.lineWidth = 3; g.beginPath(); g.moveTo(RX + 14, py); g.lineTo(T0 + 2, py); g.stroke();
+    g.fillStyle = C.ivory; g.beginPath(); g.arc(T0 + 2, py, 4, 0, TAU); g.fill(); g.restore();
+
+    // bánh xe: bánh răng sau, vòng đồng, thang độ, nửa vòng π (màu sự thật), cung 1 radian đánh bóng, tay quay
+    gear(cx, cy, 64, 16, -th * 0.5, 0.6);
+    brassRing(cx, cy, R, 16);
+    g.save(); g.strokeStyle = C.truth; g.lineWidth = 6; g.lineCap = 'round';
+    g.beginPath(); g.arc(cx, cy, R - 30, 0, -Math.PI, true); g.stroke(); g.restore();
+    text('π', cx + 72, cy - 76, `600 60px ${CG}`, C.truth, 'center');
+    g.save(); g.strokeStyle = '#FFFBEA'; g.lineWidth = 12; g.lineCap = 'round'; g.shadowColor = 'rgba(255,240,200,0.9)'; g.shadowBlur = 16;
+    g.beginPath(); g.arc(cx, cy, R, -Math.PI, -Math.PI - 1, true); g.stroke(); g.restore();
+    g.save(); g.strokeStyle = '#2A1D0C'; g.lineWidth = 4;                                              // vạch chặn hai đầu cung 1 rad
+    [Math.PI, Math.PI + 1].forEach(a => { const [x0, y0] = pt(cx, cy, R - 13, a), [x1, y1] = pt(cx, cy, R + 13, a); g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke(); });
+    g.restore();
+    g.save(); g.strokeStyle = 'rgba(243,217,160,0.7)'; g.lineWidth = 1.5;
+    [Math.PI, Math.PI + 1].forEach(a => { const [x, y] = pt(cx, cy, R, a); g.beginPath(); g.moveTo(cx, cy); g.lineTo(x, y); g.stroke(); }); g.restore();
+    limb(cx, cy, R + 24, false);
+    { const [lx, ly] = pt(cx, cy, R + 64, Math.PI + 0.5); text('1 rad', lx, ly, `italic 600 40px ${CG}`, C.brassL, 'right');
+      label(`≈ ${oneRad}°`, lx, ly + 30, C.verd, 'right', 18); }
+    // tay quay: cần đồng từ tâm tới điểm, núm tay cầm
+    g.save(); g.lineCap = 'round'; g.strokeStyle = '#3B2A12'; g.lineWidth = 16; g.beginPath(); g.moveTo(cx, cy); g.lineTo(px, py); g.stroke();
+    const ag = g.createLinearGradient(cx, cy, px, py); ag.addColorStop(0, '#8A6428'); ag.addColorStop(0.5, '#F3D9A0'); ag.addColorStop(1, '#B8893F');
+    g.strokeStyle = ag; g.lineWidth = 11; g.stroke(); g.restore();
+    boss(cx, cy, 18);
+    g.save(); const kg = g.createRadialGradient(px - 6, py - 6, 2, px, py, 20); kg.addColorStop(0, '#FFF0C8'); kg.addColorStop(1, '#8A6428');
+    g.fillStyle = kg; g.beginPath(); g.arc(px, py, 18, 0, TAU); g.fill(); g.strokeStyle = '#3B2A12'; g.lineWidth = 1.5; g.stroke();
+    g.fillStyle = C.ivory; g.beginPath(); g.arc(px, py, 5, 0, TAU); g.fill(); g.restore();
+    // cung góc đã quay θ (khắc mảnh quanh trục)
+    g.save(); g.strokeStyle = C.brassL; g.lineWidth = 2; g.beginPath(); g.arc(cx, cy, 52, 0, -th, true); g.stroke(); g.restore();
+
+    label('Act two · pi is about turning', 96, 108, C.brass);
+    text('Follow only the shadow.', 96, 180, `italic 500 60px ${CG}`, C.ivory);
+
+    label('turned', 600, 890, C.verd, 'left', 20);
+    text(`θ = ${th.toFixed(2)} rad = ${deg}°`, 600, 952, `600 48px ${CG}`, C.ivory);
+    label('shadow height', 1040, 890, C.verd, 'left', 20);
+    text(`sin θ = ${sh.toFixed(3)}`, 1040, 952, `600 48px ${CG}`, C.brassL);
+
+    const F = figure('spin', 280, 1080, 600, 0.45);
+    const tip = [F.x + 122 * F.s, F.y + 138 * F.s];                                          // đầu ngón trỏ (đo trên ảnh gốc)
+    g.save(); g.strokeStyle = C.truth; g.lineWidth = 3; g.lineCap = 'round';
+    const ex = tip[0], ey = tip[1] - 34, rx = 54, ry = 17;
+    g.beginPath(); g.ellipse(ex, ey, rx, ry, 0, 0.35, TAU - 0.5); g.stroke();
+    const a = TAU - 0.5, hx = ex + rx * Math.cos(a), hy = ey + ry * Math.sin(a);
+    g.fillStyle = C.truth; g.beginPath(); g.moveTo(hx + 12, hy + 2); g.lineTo(hx - 4, hy - 9); g.lineTo(hx - 3, hy + 9); g.closePath(); g.fill();
+    g.globalAlpha = 0.45; g.beginPath(); g.ellipse(ex, ey - 22, rx * 0.7, ry * 0.7, 0, 0.6, TAU - 0.9); g.stroke(); g.restore();
+  },
+];
+
+(async () => {
+  await Promise.all(['italic 500 60px', 'italic 500 36px', 'italic 600 40px'].map(f => document.fonts.load(`${f} ${CG}`))
+    .concat(['600 76px', '600 64px', '600 60px', '600 56px', '600 48px'].map(f => document.fonts.load(`${f} ${CG}`)))
+    .concat(['500 28px', '500 24px', '500 20px', '500 18px', '500 16px'].map(f => document.fonts.load(`${f} ${MONO}`))));
+  await Promise.all(['compass', 'spin'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../../assets/character-v2/cut/pose-${p}.png`; })));
+  BG = ground(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(BG, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

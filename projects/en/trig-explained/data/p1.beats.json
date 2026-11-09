@@ -1,0 +1,86 @@
+{
+ "duration": 36.901,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "lang": "en",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Type sine of thirty into a scientific calculator, and it says zero point five.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Type sine of thirty into a scientific calculator, and it says zero point five.",
+   "start": 0.0,
+   "end": 3.486,
+   "wav": "audio/voice/f8cc1af786994851.wav"
+  },
+  {
+   "text": "Now change one small setting, type exactly the same thing, and it says minus zero point nine eight eight.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Now change one small setting, type exactly the same thing, and it says minus zero point nine eight eight.",
+   "start": 3.837,
+   "end": 9.121,
+   "wav": "audio/voice/e7f146e495285405.wav"
+  },
+  {
+   "text": "Same keys. Nothing is broken. And both answers are correct.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Same keys. Nothing is broken. And both answers are correct.",
+   "start": 9.471,
+   "end": 12.383,
+   "wav": "audio/voice/bc1f5b0c9c76ee55.wav"
+  },
+  {
+   "text": "To see how that's possible, we're going to build trigonometry from nothing, in under ten minutes.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "To see how that's possible, we're going to build trigonometry from nothing, in under ten minutes.",
+   "start": 13.333,
+   "end": 18.15,
+   "wav": "audio/voice/78c3756a94d9d6cd.wav"
+  },
+  {
+   "text": "You'll see one number that refuses to change, however big the triangle gets, one point walking around a circle, and one measurement that makes that minus sign completely obvious.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "You'll see one number that refuses to change, however big the triangle gets, one point walking around a circle, and one measurement that makes that minus sign completely obvious.",
+   "start": 18.5,
+   "end": 27.765,
+   "wav": "audio/voice/83925069106d23ac.wav"
+  },
+  {
+   "text": "By the end, you won't need to memorize sine and cosine, because you'll be able to read them off a picture.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "By the end, you won't need to memorize sine and cosine, because you'll be able to read them off a picture.",
+   "start": 28.115,
+   "end": 32.88,
+   "wav": "audio/voice/995aa51a36afd3a8.wav"
+  },
+  {
+   "text": "All you need to begin with is a tree you can't climb.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "All you need to begin with is a tree you can't climb.",
+   "start": 33.83,
+   "end": 35.951,
+   "wav": "audio/voice/4d57abd342261ce1.wav"
+  }
+ ]
+}

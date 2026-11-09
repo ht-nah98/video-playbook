@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — fill</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  html,body{margin:0;background:#0B0F1E;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// node engine/render/shoot.js stills --page tools/lab/fill.html --dur 2 --t 0.5 --outdir out/_lab/fill
+import { fillWord } from '../../engine/fill.js';
+const g = document.getElementById('cv').getContext('2d'); let ready = false;
+(async () => { await Promise.all([document.fonts.load('900 300px "Archivo"'), document.fonts.load('500 22px "IBM Plex Mono"')]); await document.fonts.ready; ready = true; })();
+function frame(t) {
+  g.setTransform(1,0,0,1,0,0); g.fillStyle = '#0B0F1E'; g.fillRect(0,0,1920,1080);
+  fillWord(g, 'POWER', 200, 330, { font: '900 300px "Archivo"', inner: ['2·2·2 = 8', '2³ = 8', 'three little factors'], drift: t * 120 });
+  fillWord(g, 'LOGARITHM', 120, 760, { font: '900 250px "Archivo"', inner: ['log₂8 = 3', 'log₂16 = 4', 'log₁₀1000 = 3'], color: '#3FB8FF', innerColor: '#BDE8FF', drift: t * 120 });
+}
+window.__intro = { get ready(){ return ready; }, still: frame, frame, DUR: 2 };
+</script>

@@ -1,0 +1,110 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — stick</title>
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử engine/stick.js — người que sống TRONG hình toán (học "Animation vs. Geometry", Alan Becker; 2026-10-22).
+// 0–1 s: bảng tư thế. 1–12 s: cảnh calculus — leo chén y = x² (chân bám đường cong), đẩy điểm thứ hai trượt về (1, 1),
+// cát tuyến xoay, dốc = x + 1 đếm về 2, thước tiếp tuyến hạ xuống, "aha".
+// node engine/render/shoot.js stills --page tools/lab/stick.html --dur 12 --t 0.5,3,6,8.5,11 --outdir out/_lab/stick
+import { stick, P, mix, walk } from '../../engine/stick.js';
+const g = document.getElementById('cv').getContext('2d');
+const ORANGE = '#F26B1D', INK = '#22303C', BLUE = '#2F6DB5', RED = '#D9481E', PAPER = '#F4F1E8';
+const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
+const prog = (t, a, b) => clamp((t - a) / (b - a));
+const sm = k => k * k * (3 - 2 * k);
+let fontsReady = false;
+Promise.all([new FontFace('Archivo', 'url("../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load()
+  .then(f => document.fonts.add(f)).catch(() => {})]).then(() => { fontsReady = true; });
+
+// ── bảng tư thế ──
+function sheet() {
+  const names = Object.keys(P);
+  g.fillStyle = INK; g.font = '800 44px Archivo, sans-serif'; g.textAlign = 'left';
+  g.fillText('engine/stick.js — tư thế', 110, 110);
+  names.forEach((n, i) => {
+    const cx = 110 + (i % 12) * 155, gy = 360 + Math.floor(i / 12) * 330;   // 12 / hàng (34 tư thế, 2026-10-22)
+    g.strokeStyle = 'rgba(34,48,60,0.25)'; g.lineWidth = 3; g.beginPath(); g.moveTo(cx - 65, gy); g.lineTo(cx + 65, gy); g.stroke();
+    const yy = n === 'hang' ? gy - 30 : gy;
+    if (n === 'hang') { g.strokeStyle = INK; g.lineWidth = 4; g.beginPath(); g.moveTo(cx - 60, gy - 192); g.lineTo(cx + 60, gy - 192); g.stroke(); }
+    stick(g, cx, yy, P[n], { h: 180, color: ORANGE, dir: 1 });
+    g.fillStyle = INK; g.font = '700 22px Archivo, sans-serif'; g.textAlign = 'center'; g.fillText(n, cx, gy + 36);
+  });
+}
+
+// ── cảnh calculus ──
+const X = u => 420 + 560 * u, Y = v => 980 - 175 * v;
+const U = sx => (sx - 420) / 560;
+const ground = sx => Y(U(sx) ** 2);
+function bowl() {
+  g.strokeStyle = INK; g.lineWidth = 6; g.lineCap = 'round'; g.beginPath();
+  for (let i = 0; i <= 200; i++) { const u = -0.75 + 3.0 * i / 200; const sx = X(u), sy = Y(u * u); i ? g.lineTo(sx, sy) : g.moveTo(sx, sy); }
+  g.stroke();
+  g.fillStyle = INK; g.font = 'italic 600 44px Georgia, serif'; g.textAlign = 'left'; g.fillText('y = x²', X(-0.72), Y(0.35) - 20);
+}
+function dot(sx, sy, r, col, ring = false) {
+  g.fillStyle = ring ? PAPER : col; g.strokeStyle = col; g.lineWidth = 6;
+  g.beginPath(); g.arc(sx, sy, r, 0, Math.PI * 2); g.fill(); g.stroke();
+}
+function scene(t) {
+  bowl();
+  const A = [X(1), Y(1)];
+  // 1–5 s: đi từ x = 0.05 lên x = 0.86 (đứng ngay dưới điểm (1, 1)), rồi dừng nghĩ
+  const kw = sm(prog(t, 1.2, 4.6)), u0 = 0.05 + 0.81 * kw;
+  // 5.6–9.6 s: điểm thứ hai trượt từ x = 2 về 1.02 (người que đẩy từ phía trên dốc)
+  const kp = sm(prog(t, 5.6, 9.6)), u2 = 2 - 0.98 * kp, B = [X(u2), Y(u2 * u2)];
+  const sl = 175 * 2 * u2 / 560, nl = Math.hypot(1, sl), RB = 30, BC = [B[0] + sl / nl * RB, B[1] - 1 / nl * RB];   // tâm vòng đẩy, nằm trên dốc
+  const slope = u2 + 1;                               // (u² − 1) / (u − 1) = u + 1
+  // cát tuyến (kéo dài qua hai điểm)
+  const kS = prog(t, 4.6, 5.2);
+  if (kS > 0) {
+    const m = slope, x0 = 0.35, x1 = 2.25, y0 = 1 + m * (x0 - 1), y1 = 1 + m * (x1 - 1);
+    g.save(); g.globalAlpha = kS; g.strokeStyle = BLUE; g.lineWidth = 5;
+    g.beginPath(); g.moveTo(X(x0), Y(y0)); g.lineTo(X(x1), Y(Math.min(y1, 5.4))); g.stroke(); g.restore();
+    // bóng mờ các cát tuyến đã qua
+    for (const uu of [2, 1.5, 1.1]) if (u2 < uu - 0.02) {
+      const mm = uu + 1; g.save(); g.globalAlpha = 0.18; g.strokeStyle = BLUE; g.lineWidth = 3;
+      g.beginPath(); g.moveTo(X(0.35), Y(1 + mm * (0.35 - 1))); g.lineTo(X(2.25), Y(Math.min(1 + mm * 1.25, 5.4))); g.stroke(); g.restore();
+    }
+  }
+  // tiếp tuyến hạ xuống ở cuối
+  const kT = sm(prog(t, 9.8, 10.6));
+  if (kT > 0) { const yo = (1 - kT) * -160;
+    g.save(); g.strokeStyle = RED; g.lineWidth = 10; g.lineCap = 'round';
+    g.beginPath(); g.moveTo(X(0.45), Y(1 + 2 * (0.45 - 1)) + yo); g.lineTo(X(1.7), Y(1 + 2 * 0.7) + yo); g.stroke(); g.restore(); }
+  dot(A[0], A[1], 14, RED);
+  if (kS > 0) { dot(B[0], B[1], 9, BLUE); if (t >= 5.6 && t < 9.8) dot(BC[0], BC[1], RB, BLUE, true); }
+  // thẻ dốc
+  if (kS > 0) {
+    g.fillStyle = INK; g.font = '800 64px Archivo, sans-serif'; g.textAlign = 'left';
+    g.fillText('slope', 140, 200);
+    g.fillStyle = kT > 0 ? RED : BLUE; g.font = '800 120px Archivo, sans-serif';
+    g.fillText(kT > 0.5 ? '2' : slope.toFixed(slope < 2.1 ? 3 : 2), 140, 330);
+  }
+
+  // ── người que ──
+  if (t < 4.6) {                                       // đi lên dốc: chân bám đường cong, thân nghiêng theo dốc
+    const sx = X(u0), dist = 560 * u0, phase = dist / (0.64 * 190);
+    stick(g, sx, ground(sx), walk(phase, { lean: 0.25 * u0 }), { h: 190, color: ORANGE, dir: 1, ground, stride: 0.32 });
+  } else if (t < 5.6) {                                // dừng, nghĩ, nhìn lên điểm thứ hai
+    const sx = X(0.86), k = prog(t, 4.6, 5.0);
+    stick(g, sx, ground(sx), mix(P.stand, P.think, k), { h: 190, color: ORANGE, dir: 1,
+      feet: [[sx - 26, ground(sx - 26)], [sx + 22, ground(sx + 22)]] });
+  } else if (t < 9.8) {                                // đứng thăng bằng trên điểm thứ hai, cưỡi nó trượt về (1, 1)
+    const kin = prog(t, 5.6, 6.1), sway = Math.sin(t * 5.3) * 0.12 * (1 - prog(t, 9.0, 9.6));
+    const top = [BC[0], BC[1] - RB];
+    stick(g, top[0], top[1], mix(P.think, P.balance, kin), { h: 190, color: ORANGE, dir: -1, rot: sway,
+      feet: [[top[0] - 10, top[1] + 2], [top[0] + 10, top[1] + 2]] });
+  } else {                                             // tiếp tuyến xuống: "aha"
+    const sx = B[0] + 80, k = prog(t, 9.8, 10.3);
+    stick(g, sx, ground(sx), mix(P.balance, P.aha, k), { h: 190, color: ORANGE, dir: -1,
+      feet: [[sx - 26, ground(sx - 26)], [sx + 26, ground(sx + 26)]] });
+  }
+}
+
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = PAPER; g.fillRect(0, 0, 1920, 1080);
+  if (t < 1) sheet(); else scene(t);
+}
+window.__intro = { get ready() { return fontsReady; }, still: frame, frame, DUR: 12 };
+</script>

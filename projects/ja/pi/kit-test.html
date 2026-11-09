@@ -1,0 +1,52 @@
+<!doctype html><meta charset="utf-8">
+<title>ja/pi — tờ thử kit</title>
+<style>
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Tờ thử MỌI hàm kit có tham số k ở k = 0.25 / 0.5 / 0.75 / 1 (LESSONS §89). Khung i (t ∈ [i, i+1)) = k của cột i.
+//   node engine/render/shoot.js stills --page projects/ja/pi/kit-test.html --dur 8 --t 0.5,1.5,2.5,3.5,4.5,5.5,6.5,7.5 --outdir out/_lab/ja-pi/kit
+import { W, H, C, MIN, JP, CG, FONTS, FONT_SAMPLE, loadKit, ground, ring360, circleLine, arcShu, needle, bead, polyIn, polyOut, drawPoly, gap,
+  engrave, telop, tag, leader, strikeSteel, stamp, exam, sangaku, plate, actCard, heading, figure, rule } from './kit.js';
+const g = document.getElementById('cv').getContext('2d'), KS = [0.25, 0.5, 0.75, 1];
+let ready = false;
+(async () => {
+  await Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE)));
+  await loadKit({ fetti: './assets/history/Domenico-Fetti_Archimedes_1620.jpg', 'pose-ok': '../../../assets/character-v2/cut/pose-ok.png' });
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const frame = t => {
+  const i = Math.min(7, Math.floor(t)), k = KS[i % 4];
+  g.setTransform(1, 0, 0, 1, 0, 0); ground(g, 'tenkyu', 0);
+  if (i >= 4) { actCard(g, [1.3, 1.8, 2.5, 3.2][i - 4], 3.4, '第二幕', '円周率は「回転」の数'); engrave(g, `actCard t = start − ${(3.4 - [1.3, 1.8, 2.5, 3.2][i - 4]).toFixed(1)}`, 96, 1000, 1, `500 28px "IBM Plex Mono"`, C.dim); return; }
+  engrave(g, `k = ${k}`, 1824, 60, 1, `500 28px "IBM Plex Mono"`, C.dim, { align: 'right' });
+  heading(g, '第一幕　テスト', '円をはさみうち', k, { y: 150, size: 54 });
+  const cx = 330, cy = 500, r = 160;
+  ring360(g, cx, cy, r, k, { marks: [[180, C.shu]] });
+  drawPoly(g, polyOut(cx, cy, r, 12), k, { color: C.steel }); drawPoly(g, polyIn(cx, cy, r, 12), k, { color: C.brass, dots: true });
+  gap(g, polyIn(cx, cy, r, 12), polyOut(cx, cy, r, 12), 0.1 * k);
+  arcShu(g, cx, cy, r, 0, Math.PI, k); needle(g, cx, cy, r * 0.8, 2.2, k); bead(g, cx + r, cy, 7, k);
+  circleLine(g, 330, 880, 70, k);
+  engrave(g, [['3.1408 < ', `500 56px ${CG}`], ['π', `600 64px ${CG}`, C.shu], [' < 3.1429', `500 56px ${CG}`]], 640, 300, k);
+  telop(g, 'なぜ終わらないのか', 640, 410, k, { size: 38 });
+  telop(g, [['なぜ ', `700 38px ${MIN}`], ['π', `600 54px ${CG}`, C.shu], [' にならないのか', `700 38px ${MIN}`]], 640, 500, k, { size: 38 });
+  telop(g, '三行目のテロップ', 640, 590, k, { size: 38 });
+  tag(g, 1, 610, 690, k); tag(g, 2, 670, 690, k); tag(g, 3, 730, 690, k); leader(g, 760, 690, 980, 690, k);
+  const D = engrave(g, '多数決で決めた？', 640, 790, 1, `700 42px ${MIN}`, C.steelDim, { spark: false }); strikeSteel(g, D.x0 - 10, 776, D.x0 + D.w + 10, 770, k);
+  stamp(g, '証明終', 1000, 880, k, { hole: C.ai1 }); stamp(g, '超越数也', 860, 880, k, { hole: C.ai1, size: 36 });
+  rule(g, 640, 980, 960, k);
+  exam(g, 1080, 120, 760, 330, k, { content: X => engrave(g, '証明せよ。', X.ix, X.iy + 40, k, `700 40px ${MIN}`, C.sumi, { spark: false, shadow: false }) });
+  sangaku(g, 1080, 560, 470, 300, k, { title: '算額', content: S => engrave(g, '四十桁', S.x0, S.y0 + 50, k, `700 40px ${MIN}`, C.sumi, { spark: false, shadow: false }) });
+  plate(g, 'fetti', 1600, 540, 230, k, { label: { name: 'アルキメデス', life: '前287?–前212', note: '想像図' } });
+  figure(g, 'ok', 1780, 1080, 220, k);
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 8 };
+</script>

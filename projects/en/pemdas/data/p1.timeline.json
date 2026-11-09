@@ -1,0 +1,1482 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 66.531
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "If you spend enough time on social media, sooner or later you will meet a little sum that looks like nothing special, with thousands of people fighting about it in the comments.",
+   "idea": false,
+   "start": 0.02,
+   "end": 8.833,
+   "words": [
+    {
+     "w": "if",
+     "start": 0.02,
+     "end": 0.1,
+     "conf": 0.667
+    },
+    {
+     "w": "you",
+     "start": 0.18,
+     "end": 0.26,
+     "conf": 0.748
+    },
+    {
+     "w": "spend",
+     "start": 0.32,
+     "end": 0.541,
+     "conf": 0.82
+    },
+    {
+     "w": "enough",
+     "start": 0.561,
+     "end": 0.781,
+     "conf": 0.856
+    },
+    {
+     "w": "time",
+     "start": 0.841,
+     "end": 1.162,
+     "conf": 0.996
+    },
+    {
+     "w": "on",
+     "start": 1.202,
+     "end": 1.262,
+     "conf": 0.5
+    },
+    {
+     "w": "social",
+     "start": 1.362,
+     "end": 1.642,
+     "conf": 0.833
+    },
+    {
+     "w": "media",
+     "start": 1.662,
+     "end": 1.963,
+     "conf": 0.999
+    },
+    {
+     "w": "sooner",
+     "start": 2.484,
+     "end": 2.684,
+     "conf": 0.438
+    },
+    {
+     "w": "or",
+     "start": 2.704,
+     "end": 2.764,
+     "conf": 0.898
+    },
+    {
+     "w": "later",
+     "start": 2.784,
+     "end": 3.045,
+     "conf": 0.998
+    },
+    {
+     "w": "you",
+     "start": 3.065,
+     "end": 3.125,
+     "conf": 0.928
+    },
+    {
+     "w": "will",
+     "start": 3.145,
+     "end": 3.245,
+     "conf": 0.597
+    },
+    {
+     "w": "meet",
+     "start": 3.265,
+     "end": 3.385,
+     "conf": 0.668
+    },
+    {
+     "w": "a",
+     "start": 3.445,
+     "end": 3.465,
+     "conf": 0.001
+    },
+    {
+     "w": "little",
+     "start": 3.485,
+     "end": 3.706,
+     "conf": 0.881
+    },
+    {
+     "w": "sum",
+     "start": 3.766,
+     "end": 3.946,
+     "conf": 0.452
+    },
+    {
+     "w": "that",
+     "start": 4.246,
+     "end": 4.346,
+     "conf": 0.997
+    },
+    {
+     "w": "looks",
+     "start": 4.366,
+     "end": 4.547,
+     "conf": 0.833
+    },
+    {
+     "w": "like",
+     "start": 4.567,
+     "end": 4.767,
+     "conf": 0.8
+    },
+    {
+     "w": "nothing",
+     "start": 4.907,
+     "end": 5.208,
+     "conf": 0.825
+    },
+    {
+     "w": "special",
+     "start": 5.308,
+     "end": 5.688,
+     "conf": 0.744
+    },
+    {
+     "w": "with",
+     "start": 6.189,
+     "end": 6.349,
+     "conf": 0.779
+    },
+    {
+     "w": "thousands",
+     "start": 6.59,
+     "end": 7.091,
+     "conf": 0.993
+    },
+    {
+     "w": "of",
+     "start": 7.111,
+     "end": 7.171,
+     "conf": 0.999
+    },
+    {
+     "w": "people",
+     "start": 7.231,
+     "end": 7.491,
+     "conf": 0.802
+    },
+    {
+     "w": "fighting",
+     "start": 7.571,
+     "end": 7.872,
+     "conf": 0.867
+    },
+    {
+     "w": "about",
+     "start": 7.892,
+     "end": 8.152,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 8.172,
+     "end": 8.232,
+     "conf": 0.97
+    },
+    {
+     "w": "in",
+     "start": 8.292,
+     "end": 8.332,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 8.352,
+     "end": 8.413,
+     "conf": 0.97
+    },
+    {
+     "w": "comments",
+     "start": 8.433,
+     "end": 8.833,
+     "conf": 0.961
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "The classic one goes like this: six divided by two, times the bracket one plus two. What is it?",
+   "idea": true,
+   "start": 9.283,
+   "end": 13.902,
+   "words": [
+    {
+     "w": "the",
+     "start": 9.283,
+     "end": 9.343,
+     "conf": 0.371
+    },
+    {
+     "w": "classic",
+     "start": 9.363,
+     "end": 9.705,
+     "conf": 0.999
+    },
+    {
+     "w": "one",
+     "start": 9.785,
+     "end": 9.865,
+     "conf": 0.665
+    },
+    {
+     "w": "goes",
+     "start": 9.886,
+     "end": 10.046,
+     "conf": 0.976
+    },
+    {
+     "w": "like",
+     "start": 10.066,
+     "end": 10.207,
+     "conf": 0.75
+    },
+    {
+     "w": "this",
+     "start": 10.227,
+     "end": 10.428,
+     "conf": 0.982
+    },
+    {
+     "w": "six",
+     "start": 10.749,
+     "end": 10.869,
+     "conf": 0.665
+    },
+    {
+     "w": "divided",
+     "start": 10.89,
+     "end": 11.251,
+     "conf": 0.865
+    },
+    {
+     "w": "by",
+     "start": 11.271,
+     "end": 11.372,
+     "conf": 0.997
+    },
+    {
+     "w": "two",
+     "start": 11.392,
+     "end": 11.633,
+     "conf": 0.049
+    },
+    {
+     "w": "times",
+     "start": 12.014,
+     "end": 12.215,
+     "conf": 0.824
+    },
+    {
+     "w": "the",
+     "start": 12.235,
+     "end": 12.295,
+     "conf": 0.971
+    },
+    {
+     "w": "bracket",
+     "start": 12.315,
+     "end": 12.637,
+     "conf": 0.797
+    },
+    {
+     "w": "one",
+     "start": 12.657,
+     "end": 12.878,
+     "conf": 0.001
+    },
+    {
+     "w": "plus",
+     "start": 12.898,
+     "end": 13.119,
+     "conf": 0.008
+    },
+    {
+     "w": "two",
+     "start": 13.139,
+     "end": 13.319,
+     "conf": 0.0
+    },
+    {
+     "w": "what",
+     "start": 13.58,
+     "end": 13.681,
+     "conf": 0.645
+    },
+    {
+     "w": "is",
+     "start": 13.741,
+     "end": 13.821,
+     "conf": 0.488
+    },
+    {
+     "w": "it",
+     "start": 13.841,
+     "end": 13.902,
+     "conf": 0.958
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Half the internet swears the answer is nine. The other half is just as sure it is one.",
+   "idea": false,
+   "start": 14.892,
+   "end": 19.001,
+   "words": [
+    {
+     "w": "half",
+     "start": 14.892,
+     "end": 15.072,
+     "conf": 0.845
+    },
+    {
+     "w": "the",
+     "start": 15.092,
+     "end": 15.173,
+     "conf": 0.749
+    },
+    {
+     "w": "internet",
+     "start": 15.253,
+     "end": 15.533,
+     "conf": 0.831
+    },
+    {
+     "w": "swears",
+     "start": 15.654,
+     "end": 15.994,
+     "conf": 0.502
+    },
+    {
+     "w": "the",
+     "start": 16.015,
+     "end": 16.095,
+     "conf": 0.954
+    },
+    {
+     "w": "answer",
+     "start": 16.195,
+     "end": 16.395,
+     "conf": 0.778
+    },
+    {
+     "w": "is",
+     "start": 16.435,
+     "end": 16.476,
+     "conf": 0.495
+    },
+    {
+     "w": "nine",
+     "start": 16.556,
+     "end": 16.937,
+     "conf": 0.815
+    },
+    {
+     "w": "the",
+     "start": 16.957,
+     "end": 17.378,
+     "conf": 0.666
+    },
+    {
+     "w": "other",
+     "start": 17.478,
+     "end": 17.578,
+     "conf": 0.788
+    },
+    {
+     "w": "half",
+     "start": 17.598,
+     "end": 17.819,
+     "conf": 0.895
+    },
+    {
+     "w": "is",
+     "start": 17.899,
+     "end": 17.979,
+     "conf": 0.499
+    },
+    {
+     "w": "just",
+     "start": 18.099,
+     "end": 18.3,
+     "conf": 0.778
+    },
+    {
+     "w": "as",
+     "start": 18.36,
+     "end": 18.4,
+     "conf": 0.491
+    },
+    {
+     "w": "sure",
+     "start": 18.42,
+     "end": 18.58,
+     "conf": 0.396
+    },
+    {
+     "w": "it",
+     "start": 18.6,
+     "end": 18.64,
+     "conf": 0.139
+    },
+    {
+     "w": "is",
+     "start": 18.66,
+     "end": 18.741,
+     "conf": 0.5
+    },
+    {
+     "w": "one",
+     "start": 18.881,
+     "end": 19.001,
+     "conf": 0.631
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And the funny part is that both sides are confident they followed the very same rule. PEMDAS.",
+   "idea": true,
+   "start": 19.411,
+   "end": 24.018,
+   "words": [
+    {
+     "w": "and",
+     "start": 19.411,
+     "end": 19.491,
+     "conf": 0.994
+    },
+    {
+     "w": "the",
+     "start": 19.511,
+     "end": 19.571,
+     "conf": 0.985
+    },
+    {
+     "w": "funny",
+     "start": 19.591,
+     "end": 19.792,
+     "conf": 0.672
+    },
+    {
+     "w": "part",
+     "start": 19.852,
+     "end": 20.072,
+     "conf": 0.999
+    },
+    {
+     "w": "is",
+     "start": 20.132,
+     "end": 20.192,
+     "conf": 0.856
+    },
+    {
+     "w": "that",
+     "start": 20.212,
+     "end": 20.312,
+     "conf": 0.997
+    },
+    {
+     "w": "both",
+     "start": 20.353,
+     "end": 20.573,
+     "conf": 1.0
+    },
+    {
+     "w": "sides",
+     "start": 20.633,
+     "end": 20.994,
+     "conf": 0.838
+    },
+    {
+     "w": "are",
+     "start": 21.014,
+     "end": 21.114,
+     "conf": 0.86
+    },
+    {
+     "w": "confident",
+     "start": 21.134,
+     "end": 21.595,
+     "conf": 0.984
+    },
+    {
+     "w": "they",
+     "start": 21.615,
+     "end": 21.715,
+     "conf": 0.761
+    },
+    {
+     "w": "followed",
+     "start": 21.835,
+     "end": 22.115,
+     "conf": 0.766
+    },
+    {
+     "w": "the",
+     "start": 22.135,
+     "end": 22.196,
+     "conf": 0.996
+    },
+    {
+     "w": "very",
+     "start": 22.256,
+     "end": 22.456,
+     "conf": 0.75
+    },
+    {
+     "w": "same",
+     "start": 22.536,
+     "end": 22.776,
+     "conf": 0.831
+    },
+    {
+     "w": "rule",
+     "start": 22.817,
+     "end": 23.037,
+     "conf": 0.997
+    },
+    {
+     "w": "pemdas",
+     "start": 23.638,
+     "end": 24.018,
+     "conf": 0.736
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "You probably learned it in primary school, as the order of operations.",
+   "idea": false,
+   "start": 25.069,
+   "end": 28.165,
+   "words": [
+    {
+     "w": "you",
+     "start": 25.069,
+     "end": 25.129,
+     "conf": 0.688
+    },
+    {
+     "w": "probably",
+     "start": 25.15,
+     "end": 25.431,
+     "conf": 0.934
+    },
+    {
+     "w": "learned",
+     "start": 25.491,
+     "end": 25.732,
+     "conf": 0.863
+    },
+    {
+     "w": "it",
+     "start": 25.753,
+     "end": 25.813,
+     "conf": 0.757
+    },
+    {
+     "w": "in",
+     "start": 25.853,
+     "end": 25.913,
+     "conf": 0.957
+    },
+    {
+     "w": "primary",
+     "start": 25.994,
+     "end": 26.315,
+     "conf": 0.825
+    },
+    {
+     "w": "school",
+     "start": 26.396,
+     "end": 26.617,
+     "conf": 0.853
+    },
+    {
+     "w": "as",
+     "start": 26.959,
+     "end": 27.079,
+     "conf": 0.994
+    },
+    {
+     "w": "the",
+     "start": 27.099,
+     "end": 27.2,
+     "conf": 0.749
+    },
+    {
+     "w": "order",
+     "start": 27.26,
+     "end": 27.461,
+     "conf": 0.984
+    },
+    {
+     "w": "of",
+     "start": 27.481,
+     "end": 27.541,
+     "conf": 0.997
+    },
+    {
+     "w": "operations",
+     "start": 27.642,
+     "end": 28.165,
+     "conf": 0.891
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Brackets first, then powers, then multiplication and division, and addition and subtraction last of all.",
+   "idea": true,
+   "start": 28.595,
+   "end": 33.845,
+   "words": [
+    {
+     "w": "brackets",
+     "start": 28.595,
+     "end": 28.896,
+     "conf": 0.615
+    },
+    {
+     "w": "first",
+     "start": 28.976,
+     "end": 29.356,
+     "conf": 0.782
+    },
+    {
+     "w": "then",
+     "start": 29.377,
+     "end": 29.517,
+     "conf": 0.746
+    },
+    {
+     "w": "powers",
+     "start": 29.617,
+     "end": 30.038,
+     "conf": 0.807
+    },
+    {
+     "w": "then",
+     "start": 30.058,
+     "end": 30.178,
+     "conf": 0.917
+    },
+    {
+     "w": "multiplication",
+     "start": 30.238,
+     "end": 30.98,
+     "conf": 0.988
+    },
+    {
+     "w": "and",
+     "start": 31.04,
+     "end": 31.12,
+     "conf": 0.645
+    },
+    {
+     "w": "division",
+     "start": 31.14,
+     "end": 31.521,
+     "conf": 0.979
+    },
+    {
+     "w": "and",
+     "start": 31.721,
+     "end": 31.901,
+     "conf": 0.66
+    },
+    {
+     "w": "addition",
+     "start": 32.082,
+     "end": 32.442,
+     "conf": 0.871
+    },
+    {
+     "w": "and",
+     "start": 32.523,
+     "end": 32.583,
+     "conf": 0.506
+    },
+    {
+     "w": "subtraction",
+     "start": 32.663,
+     "end": 33.164,
+     "conf": 0.888
+    },
+    {
+     "w": "last",
+     "start": 33.304,
+     "end": 33.565,
+     "conf": 0.776
+    },
+    {
+     "w": "of",
+     "start": 33.585,
+     "end": 33.665,
+     "conf": 0.977
+    },
+    {
+     "w": "all",
+     "start": 33.745,
+     "end": 33.845,
+     "conf": 0.632
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So today, we are going to ask where that order actually comes from.",
+   "idea": false,
+   "start": 34.875,
+   "end": 37.69,
+   "words": [
+    {
+     "w": "so",
+     "start": 34.875,
+     "end": 34.956,
+     "conf": 0.995
+    },
+    {
+     "w": "today",
+     "start": 35.036,
+     "end": 35.378,
+     "conf": 0.768
+    },
+    {
+     "w": "we",
+     "start": 35.539,
+     "end": 35.579,
+     "conf": 0.495
+    },
+    {
+     "w": "are",
+     "start": 35.619,
+     "end": 35.7,
+     "conf": 0.964
+    },
+    {
+     "w": "going",
+     "start": 35.72,
+     "end": 35.84,
+     "conf": 0.822
+    },
+    {
+     "w": "to",
+     "start": 35.86,
+     "end": 35.901,
+     "conf": 0.982
+    },
+    {
+     "w": "ask",
+     "start": 36.041,
+     "end": 36.182,
+     "conf": 0.663
+    },
+    {
+     "w": "where",
+     "start": 36.202,
+     "end": 36.363,
+     "conf": 0.656
+    },
+    {
+     "w": "that",
+     "start": 36.383,
+     "end": 36.504,
+     "conf": 0.886
+    },
+    {
+     "w": "order",
+     "start": 36.604,
+     "end": 36.805,
+     "conf": 0.757
+    },
+    {
+     "w": "actually",
+     "start": 36.906,
+     "end": 37.188,
+     "conf": 0.681
+    },
+    {
+     "w": "comes",
+     "start": 37.208,
+     "end": 37.469,
+     "conf": 0.819
+    },
+    {
+     "w": "from",
+     "start": 37.529,
+     "end": 37.69,
+     "conf": 0.74
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Is it an unbreakable truth of mathematics, like one plus one making two?",
+   "idea": false,
+   "start": 38.1,
+   "end": 41.623,
+   "words": [
+    {
+     "w": "is",
+     "start": 38.1,
+     "end": 38.14,
+     "conf": 0.994
+    },
+    {
+     "w": "it",
+     "start": 38.161,
+     "end": 38.221,
+     "conf": 0.808
+    },
+    {
+     "w": "an",
+     "start": 38.241,
+     "end": 38.322,
+     "conf": 0.662
+    },
+    {
+     "w": "unbreakable",
+     "start": 38.442,
+     "end": 38.966,
+     "conf": 0.886
+    },
+    {
+     "w": "truth",
+     "start": 39.026,
+     "end": 39.268,
+     "conf": 0.809
+    },
+    {
+     "w": "of",
+     "start": 39.328,
+     "end": 39.388,
+     "conf": 0.998
+    },
+    {
+     "w": "mathematics",
+     "start": 39.408,
+     "end": 40.012,
+     "conf": 0.998
+    },
+    {
+     "w": "like",
+     "start": 40.314,
+     "end": 40.475,
+     "conf": 0.71
+    },
+    {
+     "w": "one",
+     "start": 40.495,
+     "end": 40.616,
+     "conf": 0.01
+    },
+    {
+     "w": "plus",
+     "start": 40.636,
+     "end": 40.838,
+     "conf": 0.042
+    },
+    {
+     "w": "one",
+     "start": 40.858,
+     "end": 41.059,
+     "conf": 0.01
+    },
+    {
+     "w": "making",
+     "start": 41.119,
+     "end": 41.381,
+     "conf": 0.828
+    },
+    {
+     "w": "two",
+     "start": 41.401,
+     "end": 41.623,
+     "conf": 0.008
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Or is it a rule of the game, something people sat down and agreed on, simply because it was convenient?",
+   "idea": true,
+   "start": 42.113,
+   "end": 47.004,
+   "words": [
+    {
+     "w": "or",
+     "start": 42.113,
+     "end": 42.213,
+     "conf": 0.498
+    },
+    {
+     "w": "is",
+     "start": 42.314,
+     "end": 42.394,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 42.414,
+     "end": 42.474,
+     "conf": 0.664
+    },
+    {
+     "w": "a",
+     "start": 42.534,
+     "end": 42.554,
+     "conf": 0.012
+    },
+    {
+     "w": "rule",
+     "start": 42.574,
+     "end": 42.755,
+     "conf": 0.795
+    },
+    {
+     "w": "of",
+     "start": 42.775,
+     "end": 42.815,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 42.835,
+     "end": 42.895,
+     "conf": 0.964
+    },
+    {
+     "w": "game",
+     "start": 42.995,
+     "end": 43.296,
+     "conf": 0.75
+    },
+    {
+     "w": "something",
+     "start": 43.556,
+     "end": 43.777,
+     "conf": 0.894
+    },
+    {
+     "w": "people",
+     "start": 43.797,
+     "end": 44.038,
+     "conf": 0.999
+    },
+    {
+     "w": "sat",
+     "start": 44.138,
+     "end": 44.298,
+     "conf": 0.667
+    },
+    {
+     "w": "down",
+     "start": 44.358,
+     "end": 44.639,
+     "conf": 0.993
+    },
+    {
+     "w": "and",
+     "start": 44.719,
+     "end": 44.799,
+     "conf": 0.723
+    },
+    {
+     "w": "agreed",
+     "start": 44.839,
+     "end": 45.18,
+     "conf": 0.833
+    },
+    {
+     "w": "on",
+     "start": 45.2,
+     "end": 45.361,
+     "conf": 0.666
+    },
+    {
+     "w": "simply",
+     "start": 45.761,
+     "end": 45.942,
+     "conf": 0.845
+    },
+    {
+     "w": "because",
+     "start": 45.962,
+     "end": 46.223,
+     "conf": 0.806
+    },
+    {
+     "w": "it",
+     "start": 46.243,
+     "end": 46.303,
+     "conf": 0.998
+    },
+    {
+     "w": "was",
+     "start": 46.323,
+     "end": 46.403,
+     "conf": 0.999
+    },
+    {
+     "w": "convenient",
+     "start": 46.463,
+     "end": 47.004,
+     "conf": 0.842
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Here is where I stand. PEMDAS is a convention, made by people. But a convention is not the same thing as an arbitrary choice.",
+   "idea": false,
+   "start": 48.055,
+   "end": 54.245,
+   "words": [
+    {
+     "w": "here",
+     "start": 48.055,
+     "end": 48.215,
+     "conf": 0.971
+    },
+    {
+     "w": "is",
+     "start": 48.235,
+     "end": 48.315,
+     "conf": 0.993
+    },
+    {
+     "w": "where",
+     "start": 48.336,
+     "end": 48.476,
+     "conf": 0.989
+    },
+    {
+     "w": "i",
+     "start": 48.576,
+     "end": 48.596,
+     "conf": 0.0
+    },
+    {
+     "w": "stand",
+     "start": 48.616,
+     "end": 48.977,
+     "conf": 0.966
+    },
+    {
+     "w": "pemdas",
+     "start": 49.257,
+     "end": 49.618,
+     "conf": 0.823
+    },
+    {
+     "w": "is",
+     "start": 49.698,
+     "end": 49.758,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 49.818,
+     "end": 49.838,
+     "conf": 0.0
+    },
+    {
+     "w": "convention",
+     "start": 49.858,
+     "end": 50.359,
+     "conf": 1.0
+    },
+    {
+     "w": "made",
+     "start": 50.539,
+     "end": 50.699,
+     "conf": 0.75
+    },
+    {
+     "w": "by",
+     "start": 50.719,
+     "end": 50.82,
+     "conf": 1.0
+    },
+    {
+     "w": "people",
+     "start": 50.88,
+     "end": 51.14,
+     "conf": 0.842
+    },
+    {
+     "w": "but",
+     "start": 51.701,
+     "end": 51.781,
+     "conf": 0.342
+    },
+    {
+     "w": "a",
+     "start": 51.801,
+     "end": 51.821,
+     "conf": 0.998
+    },
+    {
+     "w": "convention",
+     "start": 51.881,
+     "end": 52.322,
+     "conf": 0.9
+    },
+    {
+     "w": "is",
+     "start": 52.382,
+     "end": 52.442,
+     "conf": 0.5
+    },
+    {
+     "w": "not",
+     "start": 52.502,
+     "end": 52.603,
+     "conf": 0.671
+    },
+    {
+     "w": "the",
+     "start": 52.623,
+     "end": 52.703,
+     "conf": 0.996
+    },
+    {
+     "w": "same",
+     "start": 52.723,
+     "end": 52.943,
+     "conf": 0.8
+    },
+    {
+     "w": "thing",
+     "start": 52.963,
+     "end": 53.124,
+     "conf": 0.826
+    },
+    {
+     "w": "as",
+     "start": 53.144,
+     "end": 53.224,
+     "conf": 0.666
+    },
+    {
+     "w": "an",
+     "start": 53.244,
+     "end": 53.324,
+     "conf": 0.927
+    },
+    {
+     "w": "arbitrary",
+     "start": 53.484,
+     "end": 53.845,
+     "conf": 0.717
+    },
+    {
+     "w": "choice",
+     "start": 53.925,
+     "end": 54.245,
+     "conf": 0.833
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And the best evidence that it is a convention, is exactly those sums the internet cannot stop arguing about.",
+   "idea": false,
+   "start": 54.675,
+   "end": 59.931,
+   "words": [
+    {
+     "w": "and",
+     "start": 54.675,
+     "end": 54.735,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 54.755,
+     "end": 54.815,
+     "conf": 0.158
+    },
+    {
+     "w": "best",
+     "start": 54.836,
+     "end": 55.076,
+     "conf": 1.0
+    },
+    {
+     "w": "evidence",
+     "start": 55.177,
+     "end": 55.538,
+     "conf": 0.864
+    },
+    {
+     "w": "that",
+     "start": 55.558,
+     "end": 55.678,
+     "conf": 0.799
+    },
+    {
+     "w": "it",
+     "start": 55.738,
+     "end": 55.778,
+     "conf": 0.493
+    },
+    {
+     "w": "is",
+     "start": 55.859,
+     "end": 55.939,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 55.999,
+     "end": 56.019,
+     "conf": 0.002
+    },
+    {
+     "w": "convention",
+     "start": 56.039,
+     "end": 56.581,
+     "conf": 0.909
+    },
+    {
+     "w": "is",
+     "start": 56.902,
+     "end": 56.942,
+     "conf": 0.5
+    },
+    {
+     "w": "exactly",
+     "start": 57.002,
+     "end": 57.423,
+     "conf": 0.867
+    },
+    {
+     "w": "those",
+     "start": 57.484,
+     "end": 57.704,
+     "conf": 0.798
+    },
+    {
+     "w": "sums",
+     "start": 57.785,
+     "end": 58.025,
+     "conf": 0.676
+    },
+    {
+     "w": "the",
+     "start": 58.086,
+     "end": 58.166,
+     "conf": 0.961
+    },
+    {
+     "w": "internet",
+     "start": 58.266,
+     "end": 58.607,
+     "conf": 0.893
+    },
+    {
+     "w": "cannot",
+     "start": 58.667,
+     "end": 58.948,
+     "conf": 0.833
+    },
+    {
+     "w": "stop",
+     "start": 59.028,
+     "end": 59.229,
+     "conf": 0.75
+    },
+    {
+     "w": "arguing",
+     "start": 59.329,
+     "end": 59.69,
+     "conf": 0.845
+    },
+    {
+     "w": "about",
+     "start": 59.731,
+     "end": 59.931,
+     "conf": 0.6
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "To see why, we first have to look at what the rule really says, because a lot of us remember it slightly wrong.",
+   "idea": true,
+   "start": 60.321,
+   "end": 65.52,
+   "words": [
+    {
+     "w": "to",
+     "start": 60.321,
+     "end": 60.361,
+     "conf": 0.997
+    },
+    {
+     "w": "see",
+     "start": 60.442,
+     "end": 60.582,
+     "conf": 0.997
+    },
+    {
+     "w": "why",
+     "start": 60.602,
+     "end": 60.863,
+     "conf": 0.987
+    },
+    {
+     "w": "we",
+     "start": 61.024,
+     "end": 61.064,
+     "conf": 0.504
+    },
+    {
+     "w": "first",
+     "start": 61.164,
+     "end": 61.385,
+     "conf": 0.8
+    },
+    {
+     "w": "have",
+     "start": 61.405,
+     "end": 61.526,
+     "conf": 0.842
+    },
+    {
+     "w": "to",
+     "start": 61.546,
+     "end": 61.606,
+     "conf": 0.961
+    },
+    {
+     "w": "look",
+     "start": 61.686,
+     "end": 61.807,
+     "conf": 0.751
+    },
+    {
+     "w": "at",
+     "start": 61.867,
+     "end": 61.907,
+     "conf": 0.499
+    },
+    {
+     "w": "what",
+     "start": 61.927,
+     "end": 62.048,
+     "conf": 0.992
+    },
+    {
+     "w": "the",
+     "start": 62.068,
+     "end": 62.128,
+     "conf": 0.997
+    },
+    {
+     "w": "rule",
+     "start": 62.208,
+     "end": 62.409,
+     "conf": 0.752
+    },
+    {
+     "w": "really",
+     "start": 62.489,
+     "end": 62.71,
+     "conf": 0.671
+    },
+    {
+     "w": "says",
+     "start": 62.851,
+     "end": 63.132,
+     "conf": 0.749
+    },
+    {
+     "w": "because",
+     "start": 63.152,
+     "end": 63.694,
+     "conf": 0.845
+    },
+    {
+     "w": "a",
+     "start": 63.714,
+     "end": 63.754,
+     "conf": 0.5
+    },
+    {
+     "w": "lot",
+     "start": 63.834,
+     "end": 63.955,
+     "conf": 0.661
+    },
+    {
+     "w": "of",
+     "start": 63.975,
+     "end": 64.035,
+     "conf": 1.0
+    },
+    {
+     "w": "us",
+     "start": 64.095,
+     "end": 64.175,
+     "conf": 0.517
+    },
+    {
+     "w": "remember",
+     "start": 64.276,
+     "end": 64.617,
+     "conf": 0.875
+    },
+    {
+     "w": "it",
+     "start": 64.677,
+     "end": 64.758,
+     "conf": 0.5
+    },
+    {
+     "w": "slightly",
+     "start": 64.898,
+     "end": 65.219,
+     "conf": 0.865
+    },
+    {
+     "w": "wrong",
+     "start": 65.28,
+     "end": 65.52,
+     "conf": 0.776
+    }
+   ]
+  }
+ ]
+}

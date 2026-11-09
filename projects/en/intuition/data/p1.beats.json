@@ -1,0 +1,168 @@
+{
+ "duration": 71.804,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Here's a quick one. Answer it before you think too hard.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 0.0,
+   "end": 2.55,
+   "wav": "audio/voice/c8b0a4877cb04e04.wav"
+  },
+  {
+   "text": "There are three cards in a bag. One is red on both sides. One is white on both sides. And one is red on one side and white on the other.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 2.9,
+   "end": 9.569,
+   "wav": "audio/voice/0d2dfbf7c81e34dd.wav"
+  },
+  {
+   "text": "I pull out a card without looking, and put it on the table. The side facing up is red.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 9.919,
+   "end": 13.929,
+   "wav": "audio/voice/ef8db48633fd426b.wav"
+  },
+  {
+   "text": "What's the chance that the other side is red too?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 14.279,
+   "end": 15.996,
+   "wav": "audio/voice/441a5c369829bd4f.wav"
+  },
+  {
+   "text": "I'm guessing a number just popped into your head. Fifty percent.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 16.946,
+   "end": 20.022,
+   "wav": "audio/voice/bb7d13eef26f9e89.wav"
+  },
+  {
+   "text": "It's either the red-red card or the red-white card. Two cards, one of each. It feels obvious.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 20.372,
+   "end": 24.831,
+   "wav": "audio/voice/5fddd247e7ae5643.wav"
+  },
+  {
+   "text": "It's also wrong. The answer is two out of three, and by the end of the first part, you'll see exactly why.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 25.181,
+   "end": 30.39,
+   "wav": "audio/voice/5444c6b757d8bc7c.wav"
+  },
+  {
+   "text": "That instant answer, the one that arrives before any thinking, is what we call intuition.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 31.34,
+   "end": 36.083,
+   "wav": "audio/voice/92e9fc5d6ceac6e8.wav"
+  },
+  {
+   "text": "And some puzzles are built so that the instant answer is a trap.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 36.433,
+   "end": 39.36,
+   "wav": "audio/voice/19d93d7425a911f2.wav"
+  },
+  {
+   "text": "There's one puzzle that thousands of smart people, including professors of mathematics, argued about by mail, because they trusted their gut over the calculation.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 39.71,
+   "end": 47.839,
+   "wav": "audio/voice/c1ace373beb4eaf7.wav"
+  },
+  {
+   "text": "So in this video, I want to answer three questions with you.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 48.789,
+   "end": 51.486,
+   "wav": "audio/voice/931985eaafd74de5.wav"
+  },
+  {
+   "text": "One. When does intuition lead you wrong, and why?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 51.836,
+   "end": 54.214,
+   "wav": "audio/voice/6380c20971ba7b24.wav"
+  },
+  {
+   "text": "Two. What do you do when the proof is right, and your gut still says no?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 54.564,
+   "end": 58.011,
+   "wav": "audio/voice/134d284801527b53.wav"
+  },
+  {
+   "text": "And three. Does math need intuition at all, or is logic enough?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 58.361,
+   "end": 61.435,
+   "wav": "audio/voice/e0e24bac8def9a3b.wav"
+  },
+  {
+   "text": "We'll use two famous puzzles. One where intuition loses an argument it was sure it would win.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 62.385,
+   "end": 66.934,
+   "wav": "audio/voice/f99e922f4f6d2e15.wav"
+  },
+  {
+   "text": "And one where intuition loses the argument, and still refuses to give up.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 67.284,
+   "end": 70.854,
+   "wav": "audio/voice/f832d7231da43dbd.wav"
+  }
+ ]
+}

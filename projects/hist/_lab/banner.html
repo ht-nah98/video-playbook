@@ -1,0 +1,147 @@
+<!doctype html><meta charset="utf-8">
+<title>hist lab — banner kênh Blunderstory</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Banner kênh Blunderstory (người dùng chốt tên + avatar B 2026-10-29). Ảnh 2560×1440, vùng an toàn mọi thiết bị 1546×423 ở
+// giữa (x 507–2053, y 509–932): tên, khẩu hiệu, người dẫn nằm trong đó; ngoài vùng chỉ có nền (TV mới thấy).
+// shoot.js chụp 1920×1080 → vẽ banner theo 4 mảnh: t 0.5 / 1.5 / 2.5 / 3.5 = góc (0,0) (640,0) (0,360) (640,360), ghép bằng PIL.
+// t 4.5 = bảng xem: cả banner + khung vùng an toàn + cắt điện thoại.
+import { INK, loadMap, cutout } from '../_kit/mapkit.js';
+import { bindCast, folk } from '../_kit/cast.js';
+import * as S from '../_kit/stage.js';
+import { bindNarrator, narrator } from '../_kit/narrator.js';
+const g = document.getElementById('cv').getContext('2d');
+let ready = false, M = null;
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  loadMap('../_kit/maps/europe1914.json').then(m => { M = m; })])
+  .then(() => { S.bindStage(g, { M }); bindNarrator(g); bindCast(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+const BW = 2560, BH = 1440, SX = 507, SY = 509, SW = 1546, SH = 423;
+function big(txt, x, y, size, col, o = {}) { g.save(); g.font = `900 ${size}px Archivo, sans-serif`; g.textAlign = o.align ?? 'left'; g.textBaseline = 'alphabetic'; g.lineJoin = 'round';
+  g.fillStyle = 'rgba(0,0,0,0.5)'; g.fillText(txt, x + size * 0.04, y + size * 0.05);
+  g.strokeStyle = INK; g.lineWidth = size * (o.sw ?? 0.14); g.strokeText(txt, x, y); g.fillStyle = col; g.fillText(txt, x, y); g.restore(); }
+const LW = 8;
+function shape(pts, fill) { g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath(); g.fillStyle = fill; g.fill(); g.stroke(); }
+function ink() { g.strokeStyle = INK; g.lineWidth = LW; g.lineJoin = 'round'; g.lineCap = 'round'; }
+
+// ── đồ vật các thời đại (vẽ phẳng, viền mực — cùng nét kênh); mỗi cái một chút "hỏng" ──
+function pyramid(x, b, w) { g.save(); ink(); const h = w * 0.62;
+  shape([[x - w / 2, b], [x, b - h], [x + w / 2, b]], '#E9C46A'); shape([[x, b - h], [x + w / 2, b], [x + w * 0.12, b]], '#C99A3E');
+  g.lineWidth = 4; for (let i = 1; i < 5; i++) { const y = b - h * i / 5, hw = w / 2 * (1 - i / 5); g.beginPath(); g.moveTo(x - hw, y); g.lineTo(x + hw * 0.24, y); g.stroke(); }
+  g.restore(); }
+function column(x, b, h) { g.save(); ink(); const w = h * 0.24;
+  shape([[x - w / 2, b], [x - w / 2, b - h * 0.78], [x - w * 0.2, b - h * 0.86], [x + w * 0.05, b - h * 0.74], [x + w / 2, b - h * 0.82], [x + w / 2, b]], '#EFE8D8');
+  shape([[x - w * 0.75, b], [x - w * 0.75, b - 24], [x + w * 0.75, b - 24], [x + w * 0.75, b]], '#EFE8D8');
+  g.lineWidth = 4; [-0.25, 0, 0.25].forEach(k => { g.beginPath(); g.moveTo(x + w * k, b - 30); g.lineTo(x + w * k, b - h * 0.72); g.stroke(); });
+  g.save(); g.translate(x + w * 1.9, b - w * 0.42); g.rotate(-0.15); g.lineWidth = LW;                       // khúc cột gãy nằm dưới đất
+  shape([[-w * 0.9, -w * 0.42], [w * 0.9, -w * 0.42], [w * 0.9, w * 0.42], [-w * 0.9, w * 0.42]], '#E3DAC6'); g.restore(); g.restore(); }
+function castle(x, b, w) { g.save(); ink(); const h = w * 1.25;
+  shape([[x - w / 2, b], [x - w / 2, b - h], [x + w / 2, b - h], [x + w / 2, b]], '#BDB6A8');
+  for (let i = 0; i < 3; i++) { const cx = x - w / 2 + w * (i * 0.4); shape([[cx, b - h], [cx, b - h - w * 0.18], [cx + w * 0.2, b - h - w * 0.18], [cx + w * 0.2, b - h]], '#BDB6A8'); }
+  shape([[x - w * 0.14, b], [x - w * 0.14, b - w * 0.36], [x, b - w * 0.48], [x + w * 0.14, b - w * 0.36], [x + w * 0.14, b]], '#5A4632');
+  g.beginPath(); g.moveTo(x + w * 0.1, b - h * 0.95); g.lineTo(x + w * 0.22, b - h * 0.72); g.lineTo(x + w * 0.12, b - h * 0.6); g.lineTo(x + w * 0.26, b - h * 0.42); g.stroke();   // vết nứt
+  g.beginPath(); g.moveTo(x, b - h - w * 0.18); g.lineTo(x, b - h - w * 0.62); g.stroke(); shape([[x, b - h - w * 0.62], [x + w * 0.34, b - h - w * 0.52], [x, b - h - w * 0.42]], '#E3141B');
+  g.restore(); }
+function ship(x, b, w) { g.save(); ink(); g.fillStyle = '#9FD3EE'; g.fillRect(x - w * 0.75, b - 26, w * 1.55, 26);               // nước
+  shape([[x + w * 0.38, b - 10], [x + w * 0.5, b - w * 0.42], [x + w * 0.62, b - w * 0.3], [x + w * 0.74, b - 10]], '#F4FBFF');        // tảng băng
+  g.save(); g.translate(x, b - 18); g.rotate(-0.07);
+  shape([[-w / 2, -w * 0.2], [w * 0.46, -w * 0.2], [w * 0.38, 0], [-w * 0.44, 0]], '#1E1E22'); shape([[-w * 0.44, 0], [w * 0.38, 0], [w * 0.36, -w * 0.05], [-w * 0.45, -w * 0.05]], '#B3261E');
+  shape([[-w * 0.4, -w * 0.2], [w * 0.36, -w * 0.2], [w * 0.36, -w * 0.3], [-w * 0.4, -w * 0.3]], '#F4F1E8');
+  for (let i = 0; i < 4; i++) { const fx = -w * 0.3 + i * w * 0.17; shape([[fx, -w * 0.3], [fx + w * 0.02, -w * 0.5], [fx + w * 0.1, -w * 0.5], [fx + w * 0.1, -w * 0.3]], '#E9A23B');
+    g.fillStyle = INK; g.fillRect(fx + w * 0.02, -w * 0.5, w * 0.08, w * 0.05); }
+  g.restore(); g.restore(); }
+function rocket(x, b, h) { g.save(); ink(); g.translate(x, b - h * 0.95); g.rotate(0.32); const w = h * 0.26;
+  shape([[-w / 2, h * 0.3], [-w / 2, -h * 0.2], [0, -h * 0.5], [w / 2, -h * 0.2], [w / 2, h * 0.3]], '#F4F1E8');
+  shape([[-w / 2, -h * 0.2], [0, -h * 0.5], [w / 2, -h * 0.2]], '#E3141B');
+  shape([[-w / 2, h * 0.12], [-w, h * 0.38], [-w / 2, h * 0.3]], '#E3141B'); shape([[w / 2, h * 0.12], [w, h * 0.38], [w / 2, h * 0.3]], '#E3141B');
+  g.fillStyle = '#9FD3EE'; g.beginPath(); g.arc(0, -h * 0.06, w * 0.2, 0, 7); g.fill(); g.stroke();
+  [[0, 0.5, 0.2], [-0.12, 0.66, 0.15], [0.1, 0.78, 0.12]].forEach(([dx, dy, r]) => { g.fillStyle = '#D9D4CA'; g.beginPath(); g.arc(h * dx, h * dy, h * r, 0, 7); g.fill(); g.stroke(); });
+  g.restore(); }
+function banana(x, b, s) { g.save(); ink(); g.lineWidth = 6;                                                                    // vỏ chuối — "sai lầm ngớ ngẩn" của mọi thời
+  shape([[x - 60 * s, b], [x - 40 * s, b - 34 * s], [x - 10 * s, b - 10 * s], [x + 6 * s, b - 46 * s], [x + 24 * s, b - 8 * s], [x + 58 * s, b - 26 * s], [x + 54 * s, b]], '#F7D648');
+  g.restore(); }
+
+
+// ── lớp TV (trên + dưới dải desktop): quốc gia biết diễn + dòng thời gian nhân vật lịch sử đầu tròn (nhân vật mẫu theo thời đại) ──
+const SK = '#FCEBD5';
+function hat(k, x, y, r) { g.save(); ink(); g.lineWidth = Math.max(4, r * 0.08);
+  if (k === 'nemes') { shape([[x - r * 1.15, y + r * 0.9], [x - r * 1.05, y - r * 0.5], [x, y - r * 1.05], [x + r * 1.05, y - r * 0.5], [x + r * 1.15, y + r * 0.9], [x + r * 0.75, y + r * 0.9], [x + r * 0.72, y - r * 0.1], [x - r * 0.72, y - r * 0.1], [x - r * 0.75, y + r * 0.9]], '#E9C46A');
+    g.lineWidth = r * 0.05; for (let i = -2; i <= 2; i++) { g.beginPath(); g.moveTo(x + i * r * 0.3, y - r * 0.95 + Math.abs(i) * r * 0.12); g.lineTo(x + i * r * 0.48, y - r * 0.25); g.stroke(); } }
+  if (k === 'laurel') { g.strokeStyle = '#3F7D3A'; g.lineWidth = r * 0.12; g.beginPath(); g.arc(x, y - r * 0.15, r * 0.95, Math.PI * 1.05, Math.PI * 1.95); g.stroke();
+    g.fillStyle = '#5FA055'; for (let i = 0; i < 9; i++) { const a = Math.PI * (1.08 + i * 0.1); g.beginPath(); g.ellipse(x + Math.cos(a) * r * 0.95, y - r * 0.15 + Math.sin(a) * r * 0.95, r * 0.16, r * 0.08, a + 1.2, 0, 7); g.fill(); } }
+  if (k === 'knight') { shape([[x - r * 1.02, y + r * 0.55], [x - r * 1.02, y - r * 0.45], [x, y - r * 1.12], [x + r * 1.02, y - r * 0.45], [x + r * 1.02, y + r * 0.55]], '#B9BEC6');
+    g.fillStyle = INK; g.fillRect(x - r * 0.75, y - r * 0.12, r * 1.5, r * 0.16); g.beginPath(); g.moveTo(x, y - r * 1.12); g.lineTo(x, y + r * 0.55); g.stroke();
+    shape([[x, y - r * 1.12], [x + r * 0.15, y - r * 1.6], [x + r * 0.45, y - r * 1.3]], '#C62828'); }
+  if (k === 'tricorne') { shape([[x - r * 1.15, y - r * 0.55], [x, y - r * 1.25], [x + r * 1.15, y - r * 0.55], [x, y - r * 0.75]], '#2B2B30'); }
+  if (k === 'bicorne') { shape([[x - r * 1.35, y - r * 0.55], [x - r * 0.6, y - r * 1.25], [x + r * 0.6, y - r * 1.25], [x + r * 1.35, y - r * 0.55], [x, y - r * 0.8]], '#1E1E22');
+    g.fillStyle = '#C62828'; g.beginPath(); g.arc(x + r * 0.5, y - r * 0.95, r * 0.14, 0, 7); g.fill(); }
+  if (k === 'captain') { shape([[x - r * 0.95, y - r * 0.55], [x - r * 0.85, y - r * 1.05], [x + r * 0.85, y - r * 1.05], [x + r * 0.95, y - r * 0.55]], '#F4F1E8');
+    shape([[x - r * 1.0, y - r * 0.55], [x + r * 1.0, y - r * 0.55], [x + r * 0.85, y - r * 0.38], [x - r * 0.85, y - r * 0.38]], '#1E1E22'); g.fillStyle = '#E9C46A'; g.fillRect(x - r * 0.18, y - r * 0.9, r * 0.36, r * 0.22); }
+  if (k === 'caesar') { g.fillStyle = '#6B4A2E'; g.beginPath(); g.arc(x, y - r * 0.12, r * 0.92, Math.PI * 1.1, Math.PI * 1.9); g.lineTo(x + r * 0.6, y - r * 0.55); g.lineTo(x - r * 0.6, y - r * 0.55); g.closePath(); g.fill(); g.restore(); return hat('laurel', x, y, r); }
+  if (k === 'cleo') { g.fillStyle = '#16161A'; g.beginPath(); g.moveTo(x - r * 1.12, y + r * 0.75); g.lineTo(x - r * 1.08, y - r * 0.4); g.arc(x, y - r * 0.2, r * 1.08, Math.PI, 0); g.lineTo(x + r * 1.12, y + r * 0.75); g.lineTo(x + r * 0.78, y + r * 0.75); g.lineTo(x + r * 0.78, y - r * 0.3); g.lineTo(x - r * 0.78, y - r * 0.3); g.lineTo(x - r * 0.78, y + r * 0.75); g.closePath(); g.fill(); g.stroke();
+    g.fillStyle = '#E9C46A'; g.fillRect(x - r * 0.95, y - r * 0.5, r * 1.9, r * 0.14); g.strokeRect(x - r * 0.95, y - r * 0.5, r * 1.9, r * 0.14);
+    shape([[x - r * 0.12, y - r * 0.5], [x, y - r * 0.82], [x + r * 0.12, y - r * 0.5]], '#E9C46A'); }
+  if (k === 'columbus') { g.fillStyle = '#B07A45'; g.beginPath(); g.moveTo(x - r * 1.0, y + r * 0.7); g.lineTo(x - r * 1.0, y - r * 0.3); g.lineTo(x + r * 1.0, y - r * 0.3); g.lineTo(x + r * 1.0, y + r * 0.7); g.lineTo(x + r * 0.82, y + r * 0.7); g.lineTo(x + r * 0.82, y - r * 0.1); g.lineTo(x - r * 0.82, y - r * 0.1); g.lineTo(x - r * 0.82, y + r * 0.7); g.closePath(); g.fill(); g.stroke();
+    shape([[x - r * 1.05, y - r * 0.45], [x - r * 0.9, y - r * 0.95], [x + r * 0.95, y - r * 1.0], [x + r * 1.1, y - r * 0.45]], '#3A2A4A'); }
+  if (k === 'napoleon') { g.fillStyle = '#4A3424'; g.beginPath(); g.ellipse(x, y - r * 0.45, r * 0.8, r * 0.3, 0, 0, 7); g.fill(); g.restore(); return hat('bicorne', x, y, r); }
+  if (k === 'smith') { g.fillStyle = '#F2F2F0'; g.beginPath(); g.moveTo(x - r * 0.85, y + r * 0.05); g.quadraticCurveTo(x - r * 0.8, y + r * 1.05, x, y + r * 1.12); g.quadraticCurveTo(x + r * 0.8, y + r * 1.05, x + r * 0.85, y + r * 0.05);
+    g.quadraticCurveTo(x + r * 0.5, y + r * 0.55, x, y + r * 0.5); g.quadraticCurveTo(x - r * 0.5, y + r * 0.55, x - r * 0.85, y + r * 0.05); g.fill(); g.stroke(); g.restore(); return hat('captain', x, y, r); }
+  if (k === 'hitler') { g.fillStyle = '#16161A'; g.beginPath(); g.moveTo(x - r * 0.98, y + r * 0.1); g.arc(x, y - r * 0.05, r * 0.99, Math.PI * 1.03, Math.PI * 1.97); g.quadraticCurveTo(x + r * 0.2, y - r * 0.55, x - r * 0.35, y - r * 0.28); g.quadraticCurveTo(x - r * 0.75, y - r * 0.05, x - r * 0.98, y + r * 0.1); g.fill();
+    g.fillRect(x - r * 0.12, y + r * 0.36, r * 0.24, r * 0.16); }
+  if (k === 'astro') { g.fillStyle = 'rgba(190,225,245,0.35)'; g.beginPath(); g.arc(x, y, r * 1.35, 0, 7); g.fill(); g.stroke();
+    g.strokeStyle = '#FFFFFF'; g.lineWidth = r * 0.1; g.beginPath(); g.arc(x, y, r * 1.12, Math.PI * 1.15, Math.PI * 1.45); g.stroke(); }
+  g.restore(); }
+function cast(x, y, h, coat, hk, year, o = {}) { const f = folk(x, y, h, { skin: SK, coat, eyes: o.eyes ?? 'dot', mouth: o.mouth, look: o.look ?? 0, arm: o.arm });
+  if (o.sash) { g.save(); ink(); g.lineWidth = h * 0.05; g.strokeStyle = o.sash; g.beginPath(); g.moveTo(x - h * 0.17, y - h * 0.55); g.lineTo(x + h * 0.17, y - h * 0.12); g.stroke(); g.restore(); }
+  hat(hk, f.head[0], f.head[1], f.r);
+  g.save(); g.font = '900 40px Archivo, sans-serif'; g.textAlign = 'center'; g.textBaseline = 'middle';
+  const w = g.measureText(year).width + 36; g.fillStyle = INK; g.beginPath(); g.roundRect(x - w / 2, y + 22, w, 56, 12); g.fill();
+  g.fillStyle = '#FFFFFF'; g.fillText(year, x, y + 51); g.restore(); }
+function tvLayers() {
+  // trên: các quốc gia có mặt, mắt, tay chân (đồ diễn chung của kênh) — đứng trên một vạch đất phía trên dải
+  const top = 455; g.save(); ink(); g.lineWidth = 6; g.beginPath(); g.moveTo(0, top); g.lineTo(BW, top); g.stroke(); g.restore();
+  g.save(); g.beginPath(); g.rect(0, 0, BW, top + 4); g.clip();          // đảo xa của bản đồ (Ý: Dodecanese…) không lọt xuống dải chữ
+  [['United Kingdom of Great Britain and Ireland', 300, 260, 'smug'], ['France', 640, 250, 'angry'], ['Kingdom of Italy', 930, 270, 'shock'],
+   ['Belgium', 1640, 230, 'smug'], ['German Empire', 1990, 250, 'angry'], ['Austro-Hungarian Empire', 2320, 240, 'shock']]
+    .forEach(([n, x, h, mood], i) => cutout(g, M, n, x, top, h, { mood, arms: i % 2 ? 'hips' : 'down' }));
+  g.restore();
+  // dưới: dòng thời gian — mỗi thời đại một nhân vật đầu tròn + mốc năm (nhân vật mẫu, không phải người cụ thể)
+  const gy2 = 1300; g.save(); ink(); g.lineWidth = 10; g.beginPath(); g.moveTo(120, gy2 + 50); g.lineTo(BW - 150, gy2 + 50); g.stroke();
+  shape([[BW - 150, gy2 + 22], [BW - 90, gy2 + 50], [BW - 150, gy2 + 78]], INK); g.restore();
+  // người nổi tiếng + cú sai nổi tiếng của họ (vẽ nét kênh, không chép tranh ai): Caesar bỏ qua lời cảnh báo, Cleopatra, Columbus tưởng
+  // tới Ấn Độ, Napoleon đánh Nga mùa đông, thuyền trưởng Titanic, Hitler đánh Liên Xô (không vẽ biểu tượng Quốc xã), Apollo 13
+  const row = [['plain', 'caesar', '44 BC', { sash: '#C62828', eyes: 'shock' }], ['gown', 'cleo', '30 BC', { eyes: 'bored' }], ['worker', 'columbus', '1492', { eyes: 'happy' }],
+    ['police', 'napoleon', '1812', { eyes: 'angry' }], ['police', 'smith', '1912', { eyes: 'shock' }], ['worker', 'hitler', '1941', { eyes: 'angry' }], ['plain', 'astro', '1970', { eyes: 'shock' }]];
+  row.forEach(([coat, hk, year, o], i) => cast(330 + i * 315, gy2, 300, coat, hk, year, o));
+}
+
+/** banner trong hệ toạ độ 2560×1440 — cả kênh, nhiều thời đại (không riêng tập nào) */
+function banner() {
+  const cy = BH / 2, gy = SY + SH - 18;
+  // nền TRẮNG (người dùng 2026-10-30; bản tia vàng trước đó: commit a1648cd)
+  g.fillStyle = '#FFFFFF'; g.fillRect(0, 0, BW, BH);
+  tvLayers();
+  g.save(); g.strokeStyle = INK; g.lineWidth = 6; g.beginPath(); g.moveTo(0, gy); g.lineTo(BW, gy); g.stroke(); g.restore();   // mặt đất chung của dòng thời gian
+  // mép desktop: dòng thời gian trái → phải: kim tự tháp, cột La Mã gãy · lâu đài nứt, tàu đâm băng, tên lửa nghiêng
+  pyramid(150, gy, 260); column(390, gy, 300);
+  castle(2150, gy, 120); ship(2320, gy, 190); rocket(2475, gy, 190);
+  // vùng an toàn: người dẫn TOÀN THÂN (cỡ như trong video) cạnh vỏ chuối + tên + khẩu hiệu
+  narrator(SX + 175, gy, 380, { outfit: 'plain', arms: 'shrug', mood: 'smug', mouth: 'grin', look: 1 });
+  banana(SX + 350, gy, 1.4);
+  big('BLUNDERSTORY', SX + 440, SY + 185, 118, '#F2A93B');
+  g.save(); g.font = '800 42px Archivo, sans-serif'; g.textBaseline = 'alphabetic'; g.fillStyle = INK;
+  g.fillText('History’s biggest disasters started', SX + 446, SY + 280); g.fillText('with tiny, stupid mistakes.', SX + 446, SY + 332); g.restore();
+}
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.fillStyle = '#222'; g.fillRect(0, 0, 1920, 1080);
+  if (!ready) return;
+  if (t < 4) { const [ox, oy] = [[0, 0], [640, 0], [0, 360], [640, 360]][Math.floor(t)]; g.translate(-ox, -oy); banner(); return; }
+  // bảng xem: banner co 0.7 + khung an toàn + vùng desktop (2560×423 giữa)
+  const s = 0.7; g.save(); g.translate(64, 20); g.scale(s, s); banner();
+  g.strokeStyle = '#00E5FF'; g.lineWidth = 6; g.strokeRect(SX, SY, SW, SH);
+  g.strokeStyle = '#FF2BD6'; g.setLineDash([24, 16]); g.strokeRect(0, SY, BW, SH); g.restore();
+  S.label('xanh = vùng an toàn (điện thoại) · hồng = dải desktop', 960, 1050, 30, 1, '#FFF');
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 5, LEAD: 0, error: null };
+</script>

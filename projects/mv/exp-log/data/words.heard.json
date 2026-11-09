@@ -1,0 +1,4860 @@
+[
+ {
+  "w": "99",
+  "start": 2.82,
+  "end": 3.26,
+  "conf": 0.256,
+  "src": "whisper"
+ },
+ {
+  "w": "%",
+  "start": 3.26,
+  "end": 3.66,
+  "conf": 0.856,
+  "src": "whisper"
+ },
+ {
+  "w": "loading",
+  "start": 3.66,
+  "end": 4.62,
+  "conf": 0.809,
+  "src": "whisper"
+ },
+ {
+  "w": "2",
+  "start": 4.78,
+  "end": 6.3,
+  "conf": 0.57,
+  "src": "whisper"
+ },
+ {
+  "w": "to",
+  "start": 6.3,
+  "end": 6.46,
+  "conf": 0.812,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 6.46,
+  "end": 6.56,
+  "conf": 0.99,
+  "src": "whisper"
+ },
+ {
+  "w": "3",
+  "start": 6.56,
+  "end": 6.78,
+  "conf": 0.983,
+  "src": "whisper"
+ },
+ {
+  "w": "easy",
+  "start": 6.96,
+  "end": 7.8,
+  "conf": 0.981,
+  "src": "whisper"
+ },
+ {
+  "w": "2",
+  "start": 8.0,
+  "end": 8.86,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "to",
+  "start": 8.86,
+  "end": 8.96,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 8.96,
+  "end": 9.04,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "root",
+  "start": 9.04,
+  "end": 9.26,
+  "conf": 0.987,
+  "src": "whisper"
+ },
+ {
+  "w": "2",
+  "start": 9.26,
+  "end": 9.54,
+  "conf": 0.968,
+  "src": "whisper"
+ },
+ {
+  "w": "wait",
+  "start": 9.68,
+  "end": 11.04,
+  "conf": 0.545,
+  "src": "whisper"
+ },
+ {
+  "w": "2",
+  "start": 11.8,
+  "end": 12.24,
+  "conf": 0.055,
+  "src": "whisper"
+ },
+ {
+  "w": "times",
+  "start": 12.24,
+  "end": 12.64,
+  "conf": 0.672,
+  "src": "whisper"
+ },
+ {
+  "w": "2",
+  "start": 12.64,
+  "end": 12.86,
+  "conf": 0.869,
+  "src": "whisper"
+ },
+ {
+  "w": "times",
+  "start": 12.86,
+  "end": 13.18,
+  "conf": 0.986,
+  "src": "whisper"
+ },
+ {
+  "w": "2",
+  "start": 13.18,
+  "end": 13.38,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "yeah",
+  "start": 13.46,
+  "end": 13.6,
+  "conf": 0.966,
+  "src": "whisper"
+ },
+ {
+  "w": "i",
+  "start": 13.6,
+  "end": 13.76,
+  "conf": 0.895,
+  "src": "whisper"
+ },
+ {
+  "w": "know",
+  "start": 13.821,
+  "end": 13.941,
+  "conf": 0.703,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 13.9,
+  "end": 13.98,
+  "conf": 0.881,
+  "src": "whisper"
+ },
+ {
+  "w": "game",
+  "start": 13.98,
+  "end": 14.26,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "3",
+  "start": 14.26,
+  "end": 14.68,
+  "conf": 0.513,
+  "src": "whisper"
+ },
+ {
+  "w": "little",
+  "start": 14.921,
+  "end": 15.121,
+  "conf": 0.691,
+  "src": "ctc"
+ },
+ {
+  "w": "factors",
+  "start": 15.181,
+  "end": 15.661,
+  "conf": 0.533,
+  "src": "ctc"
+ },
+ {
+  "w": "power",
+  "start": 15.6,
+  "end": 15.82,
+  "conf": 0.92,
+  "src": "whisper"
+ },
+ {
+  "w": "gets",
+  "start": 15.82,
+  "end": 16.02,
+  "conf": 0.932,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 16.02,
+  "end": 16.14,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "name",
+  "start": 16.281,
+  "end": 16.481,
+  "conf": 0.671,
+  "src": "ctc"
+ },
+ {
+  "w": "but",
+  "start": 16.501,
+  "end": 16.641,
+  "conf": 0.646,
+  "src": "ctc"
+ },
+ {
+  "w": "root",
+  "start": 16.58,
+  "end": 16.84,
+  "conf": 0.984,
+  "src": "whisper"
+ },
+ {
+  "w": "2",
+  "start": 16.84,
+  "end": 17.08,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "on",
+  "start": 17.08,
+  "end": 17.22,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "top",
+  "start": 17.22,
+  "end": 17.38,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "how",
+  "start": 17.42,
+  "end": 17.52,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "many",
+  "start": 17.581,
+  "end": 17.761,
+  "conf": 0.688,
+  "src": "ctc"
+ },
+ {
+  "w": "times",
+  "start": 17.861,
+  "end": 18.122,
+  "conf": 0.628,
+  "src": "ctc"
+ },
+ {
+  "w": "is",
+  "start": 17.94,
+  "end": 18.18,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "that",
+  "start": 18.18,
+  "end": 18.36,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "can't",
+  "start": 18.42,
+  "end": 18.64,
+  "conf": 0.993,
+  "src": "whisper"
+ },
+ {
+  "w": "repeat",
+  "start": 18.64,
+  "end": 18.76,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "multiplication",
+  "start": 18.942,
+  "end": 19.562,
+  "conf": 0.792,
+  "src": "ctc"
+ },
+ {
+  "w": "1",
+  "start": 19.52,
+  "end": 19.64,
+  "conf": 0.983,
+  "src": "whisper"
+ },
+ {
+  "w": "414",
+  "start": 19.64,
+  "end": 20.18,
+  "conf": 0.768,
+  "src": "whisper"
+ },
+ {
+  "w": "like",
+  "start": 20.402,
+  "end": 20.522,
+  "conf": 0.566,
+  "src": "ctc"
+ },
+ {
+  "w": "that",
+  "start": 20.542,
+  "end": 20.742,
+  "conf": 0.47,
+  "src": "ctc"
+ },
+ {
+  "w": "so",
+  "start": 20.62,
+  "end": 20.82,
+  "conf": 0.964,
+  "src": "whisper"
+ },
+ {
+  "w": "maybe",
+  "start": 21.082,
+  "end": 21.282,
+  "conf": 0.601,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 21.18,
+  "end": 21.38,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "meaning",
+  "start": 21.482,
+  "end": 21.702,
+  "conf": 0.645,
+  "src": "ctc"
+ },
+ {
+  "w": "was",
+  "start": 21.722,
+  "end": 21.822,
+  "conf": 0.652,
+  "src": "ctc"
+ },
+ {
+  "w": "never",
+  "start": 21.78,
+  "end": 21.96,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "just",
+  "start": 22.142,
+  "end": 22.382,
+  "conf": 0.592,
+  "src": "ctc"
+ },
+ {
+  "w": "a",
+  "start": 22.28,
+  "end": 22.42,
+  "conf": 0.704,
+  "src": "whisper"
+ },
+ {
+  "w": "count",
+  "start": 22.42,
+  "end": 22.64,
+  "conf": 0.98,
+  "src": "whisper"
+ },
+ {
+  "w": "maybe",
+  "start": 22.822,
+  "end": 23.022,
+  "conf": 0.587,
+  "src": "ctc"
+ },
+ {
+  "w": "there",
+  "start": 23.042,
+  "end": 23.222,
+  "conf": 0.465,
+  "src": "ctc"
+ },
+ {
+  "w": "is",
+  "start": 23.12,
+  "end": 23.28,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "one",
+  "start": 23.422,
+  "end": 23.482,
+  "conf": 0.461,
+  "src": "ctc"
+ },
+ {
+  "w": "deeper",
+  "start": 23.38,
+  "end": 23.56,
+  "conf": 0.946,
+  "src": "whisper"
+ },
+ {
+  "w": "law",
+  "start": 23.782,
+  "end": 23.882,
+  "conf": 0.471,
+  "src": "ctc"
+ },
+ {
+  "w": "that",
+  "start": 23.8,
+  "end": 23.94,
+  "conf": 0.971,
+  "src": "whisper"
+ },
+ {
+  "w": "everything",
+  "start": 24.062,
+  "end": 24.482,
+  "conf": 0.526,
+  "src": "ctc"
+ },
+ {
+  "w": "comes",
+  "start": 24.562,
+  "end": 24.702,
+  "conf": 0.586,
+  "src": "ctc"
+ },
+ {
+  "w": "out",
+  "start": 24.58,
+  "end": 24.8,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "from",
+  "start": 24.922,
+  "end": 25.142,
+  "conf": 0.586,
+  "src": "ctc"
+ },
+ {
+  "w": "same",
+  "start": 25.382,
+  "end": 25.582,
+  "conf": 0.587,
+  "src": "ctc"
+ },
+ {
+  "w": "base",
+  "start": 25.642,
+  "end": 25.862,
+  "conf": 0.602,
+  "src": "ctc"
+ },
+ {
+  "w": "multiply",
+  "start": 25.882,
+  "end": 26.362,
+  "conf": 0.537,
+  "src": "ctc"
+ },
+ {
+  "w": "exponents",
+  "start": 26.38,
+  "end": 26.68,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "combine",
+  "start": 26.822,
+  "end": 27.222,
+  "conf": 0.458,
+  "src": "ctc"
+ },
+ {
+  "w": "keep",
+  "start": 27.502,
+  "end": 27.622,
+  "conf": 0.512,
+  "src": "ctc"
+ },
+ {
+  "w": "that",
+  "start": 27.48,
+  "end": 27.68,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "rule",
+  "start": 27.762,
+  "end": 27.922,
+  "conf": 0.624,
+  "src": "ctc"
+ },
+ {
+  "w": "alive",
+  "start": 27.82,
+  "end": 28.06,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "and",
+  "start": 28.06,
+  "end": 28.34,
+  "conf": 0.982,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 28.34,
+  "end": 28.46,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "rest",
+  "start": 28.46,
+  "end": 28.64,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "falls",
+  "start": 28.64,
+  "end": 28.76,
+  "conf": 0.993,
+  "src": "whisper"
+ },
+ {
+  "w": "in",
+  "start": 28.76,
+  "end": 28.92,
+  "conf": 0.985,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 28.92,
+  "end": 29.0,
+  "conf": 0.96,
+  "src": "whisper"
+ },
+ {
+  "w": "line",
+  "start": 29.0,
+  "end": 29.24,
+  "conf": 0.972,
+  "src": "whisper"
+ },
+ {
+  "w": "zero",
+  "start": 29.24,
+  "end": 29.72,
+  "conf": 0.257,
+  "src": "whisper"
+ },
+ {
+  "w": "has",
+  "start": 29.72,
+  "end": 30.0,
+  "conf": 0.716,
+  "src": "whisper"
+ },
+ {
+  "w": "no",
+  "start": 30.0,
+  "end": 30.2,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "choice",
+  "start": 30.2,
+  "end": 30.54,
+  "conf": 0.99,
+  "src": "whisper"
+ },
+ {
+  "w": "negative",
+  "start": 30.763,
+  "end": 31.183,
+  "conf": 0.703,
+  "src": "ctc"
+ },
+ {
+  "w": "turns",
+  "start": 30.84,
+  "end": 31.3,
+  "conf": 0.99,
+  "src": "whisper"
+ },
+ {
+  "w": "around",
+  "start": 31.3,
+  "end": 31.52,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "fractions",
+  "start": 31.52,
+  "end": 31.94,
+  "conf": 0.852,
+  "src": "whisper"
+ },
+ {
+  "w": "pull",
+  "start": 31.94,
+  "end": 32.1,
+  "conf": 0.982,
+  "src": "whisper"
+ },
+ {
+  "w": "our",
+  "start": 32.1,
+  "end": 32.24,
+  "conf": 0.729,
+  "src": "whisper"
+ },
+ {
+  "w": "roots",
+  "start": 32.24,
+  "end": 32.46,
+  "conf": 0.987,
+  "src": "whisper"
+ },
+ {
+  "w": "when",
+  "start": 32.46,
+  "end": 32.62,
+  "conf": 0.821,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 32.62,
+  "end": 32.74,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 32.863,
+  "end": 33.083,
+  "conf": 0.526,
+  "src": "ctc"
+ },
+ {
+  "w": "law",
+  "start": 32.96,
+  "end": 33.2,
+  "conf": 0.956,
+  "src": "whisper"
+ },
+ {
+  "w": "holds",
+  "start": 33.2,
+  "end": 33.44,
+  "conf": 0.753,
+  "src": "whisper"
+ },
+ {
+  "w": "its",
+  "start": 33.44,
+  "end": 33.58,
+  "conf": 0.777,
+  "src": "whisper"
+ },
+ {
+  "w": "ground",
+  "start": 33.643,
+  "end": 33.883,
+  "conf": 0.456,
+  "src": "ctc"
+ },
+ {
+  "w": "step",
+  "start": 33.903,
+  "end": 34.123,
+  "conf": 0.712,
+  "src": "ctc"
+ },
+ {
+  "w": "by",
+  "start": 33.94,
+  "end": 34.22,
+  "conf": 0.94,
+  "src": "whisper"
+ },
+ {
+  "w": "step",
+  "start": 34.363,
+  "end": 34.603,
+  "conf": 0.523,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 34.56,
+  "end": 34.68,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "old",
+  "start": 34.68,
+  "end": 34.86,
+  "conf": 0.99,
+  "src": "whisper"
+ },
+ {
+  "w": "rule",
+  "start": 35.023,
+  "end": 35.183,
+  "conf": 0.597,
+  "src": "ctc"
+ },
+ {
+  "w": "stretches",
+  "start": 35.06,
+  "end": 35.24,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "through",
+  "start": 35.24,
+  "end": 35.58,
+  "conf": 0.969,
+  "src": "whisper"
+ },
+ {
+  "w": "we",
+  "start": 35.683,
+  "end": 35.743,
+  "conf": 0.775,
+  "src": "ctc"
+ },
+ {
+  "w": "didn't",
+  "start": 35.72,
+  "end": 36.0,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "pick",
+  "start": 36.063,
+  "end": 36.183,
+  "conf": 0.682,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 36.1,
+  "end": 36.24,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "meaning",
+  "start": 36.283,
+  "end": 36.583,
+  "conf": 0.472,
+  "src": "ctc"
+ },
+ {
+  "w": "we",
+  "start": 36.603,
+  "end": 36.663,
+  "conf": 0.746,
+  "src": "ctc"
+ },
+ {
+  "w": "follow",
+  "start": 36.763,
+  "end": 36.983,
+  "conf": 0.537,
+  "src": "ctc"
+ },
+ {
+  "w": "what",
+  "start": 36.86,
+  "end": 37.04,
+  "conf": 0.973,
+  "src": "whisper"
+ },
+ {
+  "w": "had",
+  "start": 37.143,
+  "end": 37.243,
+  "conf": 0.522,
+  "src": "ctc"
+ },
+ {
+  "w": "to",
+  "start": 37.2,
+  "end": 37.3,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "stay",
+  "start": 37.383,
+  "end": 37.563,
+  "conf": 0.791,
+  "src": "ctc"
+ },
+ {
+  "w": "true",
+  "start": 37.48,
+  "end": 37.78,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "keep",
+  "start": 37.78,
+  "end": 38.2,
+  "conf": 0.989,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 38.2,
+  "end": 38.38,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "rule",
+  "start": 38.38,
+  "end": 38.54,
+  "conf": 0.984,
+  "src": "whisper"
+ },
+ {
+  "w": "alive",
+  "start": 38.54,
+  "end": 38.76,
+  "conf": 0.989,
+  "src": "whisper"
+ },
+ {
+  "w": "follow",
+  "start": 39.08,
+  "end": 39.4,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "where",
+  "start": 39.4,
+  "end": 39.6,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 39.6,
+  "end": 39.74,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "goes",
+  "start": 39.74,
+  "end": 39.98,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "every",
+  "start": 39.98,
+  "end": 40.42,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "step",
+  "start": 40.42,
+  "end": 40.66,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "reveals",
+  "start": 40.66,
+  "end": 40.92,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "something",
+  "start": 40.92,
+  "end": 41.22,
+  "conf": 0.986,
+  "src": "whisper"
+ },
+ {
+  "w": "we",
+  "start": 41.22,
+  "end": 41.44,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "already",
+  "start": 41.44,
+  "end": 41.7,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "know",
+  "start": 41.7,
+  "end": 42.06,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "but",
+  "start": 42.06,
+  "end": 42.4,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "turn",
+  "start": 42.4,
+  "end": 42.56,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "that",
+  "start": 42.56,
+  "end": 42.7,
+  "conf": 0.582,
+  "src": "whisper"
+ },
+ {
+  "w": "question",
+  "start": 42.7,
+  "end": 42.92,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "around",
+  "start": 42.92,
+  "end": 43.1,
+  "conf": 0.851,
+  "src": "whisper"
+ },
+ {
+  "w": "and",
+  "start": 43.1,
+  "end": 43.26,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "everything",
+  "start": 43.26,
+  "end": 43.52,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "will",
+  "start": 43.52,
+  "end": 43.88,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "change",
+  "start": 43.88,
+  "end": 44.18,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "what",
+  "start": 44.18,
+  "end": 44.56,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "if",
+  "start": 44.56,
+  "end": 44.72,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 44.72,
+  "end": 44.84,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "exponent",
+  "start": 44.84,
+  "end": 45.12,
+  "conf": 0.991,
+  "src": "whisper"
+ },
+ {
+  "w": "is",
+  "start": 45.12,
+  "end": 45.52,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 45.52,
+  "end": 45.6,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "thing",
+  "start": 45.6,
+  "end": 45.8,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "we",
+  "start": 45.8,
+  "end": 45.9,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "cannot",
+  "start": 45.9,
+  "end": 46.1,
+  "conf": 0.933,
+  "src": "whisper"
+ },
+ {
+  "w": "name",
+  "start": 46.1,
+  "end": 46.38,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "run",
+  "start": 46.52,
+  "end": 46.56,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 46.56,
+  "end": 46.66,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "forward",
+  "start": 46.66,
+  "end": 46.94,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "run",
+  "start": 47.28,
+  "end": 47.86,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 47.86,
+  "end": 48.04,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "back",
+  "start": 48.04,
+  "end": 48.3,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "send",
+  "start": 48.48,
+  "end": 48.64,
+  "conf": 0.446,
+  "src": "whisper"
+ },
+ {
+  "w": "connection",
+  "start": 48.64,
+  "end": 49.06,
+  "conf": 0.987,
+  "src": "whisper"
+ },
+ {
+  "w": "different",
+  "start": 49.58,
+  "end": 50.02,
+  "conf": 0.986,
+  "src": "whisper"
+ },
+ {
+  "w": "track",
+  "start": 50.02,
+  "end": 50.38,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "give",
+  "start": 50.44,
+  "end": 50.58,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "me",
+  "start": 50.58,
+  "end": 50.76,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 50.76,
+  "end": 50.94,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "exponent",
+  "start": 50.94,
+  "end": 51.34,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "i'll",
+  "start": 51.34,
+  "end": 52.0,
+  "conf": 0.96,
+  "src": "whisper"
+ },
+ {
+  "w": "give",
+  "start": 52.184,
+  "end": 52.364,
+  "conf": 0.545,
+  "src": "ctc"
+ },
+ {
+  "w": "you",
+  "start": 52.384,
+  "end": 52.484,
+  "conf": 0.677,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 52.44,
+  "end": 52.58,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "value",
+  "start": 52.58,
+  "end": 52.94,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "give",
+  "start": 53.244,
+  "end": 53.384,
+  "conf": 0.619,
+  "src": "ctc"
+ },
+ {
+  "w": "me",
+  "start": 53.404,
+  "end": 53.484,
+  "conf": 0.481,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 53.42,
+  "end": 53.6,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "value",
+  "start": 53.6,
+  "end": 53.98,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "find",
+  "start": 53.98,
+  "end": 54.36,
+  "conf": 0.43,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 54.36,
+  "end": 54.62,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "exponent",
+  "start": 54.62,
+  "end": 55.14,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "turn",
+  "start": 55.28,
+  "end": 55.44,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 55.44,
+  "end": 55.62,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "around",
+  "start": 55.62,
+  "end": 55.94,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "see",
+  "start": 56.24,
+  "end": 56.4,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "what",
+  "start": 56.4,
+  "end": 56.64,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "was",
+  "start": 56.64,
+  "end": 56.84,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "there",
+  "start": 56.84,
+  "end": 57.1,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "forward",
+  "start": 57.1,
+  "end": 57.68,
+  "conf": 0.976,
+  "src": "whisper"
+ },
+ {
+  "w": "and",
+  "start": 57.68,
+  "end": 57.92,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "backward",
+  "start": 57.92,
+  "end": 58.26,
+  "conf": 0.701,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 58.4,
+  "end": 58.62,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "idea",
+  "start": 58.62,
+  "end": 58.98,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "everywhere",
+  "start": 58.98,
+  "end": 59.7,
+  "conf": 0.076,
+  "src": "whisper"
+ },
+ {
+  "w": "backward",
+  "start": 60.2,
+  "end": 60.9,
+  "conf": 0.596,
+  "src": "whisper"
+ },
+ {
+  "w": "question",
+  "start": 60.9,
+  "end": 61.5,
+  "conf": 0.968,
+  "src": "whisper"
+ },
+ {
+  "w": "missing",
+  "start": 61.5,
+  "end": 62.26,
+  "conf": 0.536,
+  "src": "whisper"
+ },
+ {
+  "w": "exponent",
+  "start": 62.26,
+  "end": 62.6,
+  "conf": 0.853,
+  "src": "whisper"
+ },
+ {
+  "w": "now",
+  "start": 62.98,
+  "end": 63.14,
+  "conf": 0.969,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 63.14,
+  "end": 63.32,
+  "conf": 0.986,
+  "src": "whisper"
+ },
+ {
+  "w": "has",
+  "start": 63.32,
+  "end": 63.46,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "a",
+  "start": 63.46,
+  "end": 63.58,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "name",
+  "start": 63.58,
+  "end": 63.82,
+  "conf": 0.993,
+  "src": "whisper"
+ },
+ {
+  "w": "logarithm",
+  "start": 63.82,
+  "end": 64.32,
+  "conf": 0.728,
+  "src": "whisper"
+ },
+ {
+  "w": "money",
+  "start": 64.32,
+  "end": 65.06,
+  "conf": 0.679,
+  "src": "whisper"
+ },
+ {
+  "w": "in",
+  "start": 65.345,
+  "end": 65.385,
+  "conf": 0.476,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 65.405,
+  "end": 65.465,
+  "conf": 0.543,
+  "src": "ctc"
+ },
+ {
+  "w": "bank",
+  "start": 65.565,
+  "end": 65.745,
+  "conf": 0.71,
+  "src": "ctc"
+ },
+ {
+  "w": "10",
+  "start": 65.72,
+  "end": 65.8,
+  "conf": 0.676,
+  "src": "whisper"
+ },
+ {
+  "w": "%",
+  "start": 65.8,
+  "end": 66.04,
+  "conf": 0.833,
+  "src": "whisper"
+ },
+ {
+  "w": "every",
+  "start": 66.386,
+  "end": 66.546,
+  "conf": 0.836,
+  "src": "ctc"
+ },
+ {
+  "w": "month",
+  "start": 66.626,
+  "end": 66.826,
+  "conf": 0.811,
+  "src": "ctc"
+ },
+ {
+  "w": "one",
+  "start": 67.026,
+  "end": 67.106,
+  "conf": 0.607,
+  "src": "ctc"
+ },
+ {
+  "w": "little",
+  "start": 67.166,
+  "end": 67.366,
+  "conf": 0.638,
+  "src": "ctc"
+ },
+ {
+  "w": "multiply",
+  "start": 67.386,
+  "end": 67.846,
+  "conf": 0.842,
+  "src": "ctc"
+ },
+ {
+  "w": "again",
+  "start": 67.906,
+  "end": 68.126,
+  "conf": 0.708,
+  "src": "ctc"
+ },
+ {
+  "w": "and",
+  "start": 67.96,
+  "end": 68.14,
+  "conf": 0.99,
+  "src": "whisper"
+ },
+ {
+  "w": "again",
+  "start": 68.266,
+  "end": 68.606,
+  "conf": 0.937,
+  "src": "ctc"
+ },
+ {
+  "w": "it",
+  "start": 68.4,
+  "end": 68.64,
+  "conf": 0.608,
+  "src": "whisper"
+ },
+ {
+  "w": "comes",
+  "start": 68.746,
+  "end": 69.006,
+  "conf": 0.72,
+  "src": "ctc"
+ },
+ {
+  "w": "don't",
+  "start": 68.96,
+  "end": 69.2,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "ask",
+  "start": 69.2,
+  "end": 69.44,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "how",
+  "start": 69.5,
+  "end": 69.6,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "much",
+  "start": 69.686,
+  "end": 69.846,
+  "conf": 0.522,
+  "src": "ctc"
+ },
+ {
+  "w": "after",
+  "start": 69.76,
+  "end": 69.9,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "10",
+  "start": 69.9,
+  "end": 70.16,
+  "conf": 0.696,
+  "src": "whisper"
+ },
+ {
+  "w": "that's",
+  "start": 70.28,
+  "end": 70.44,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 70.44,
+  "end": 70.5,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "harder",
+  "start": 70.646,
+  "end": 70.846,
+  "conf": 0.48,
+  "src": "ctc"
+ },
+ {
+  "w": "question",
+  "start": 70.866,
+  "end": 71.306,
+  "conf": 0.584,
+  "src": "ctc"
+ },
+ {
+  "w": "when",
+  "start": 71.12,
+  "end": 71.76,
+  "conf": 0.936,
+  "src": "whisper"
+ },
+ {
+  "w": "will",
+  "start": 71.76,
+  "end": 71.96,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 71.96,
+  "end": 72.14,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "double",
+  "start": 72.14,
+  "end": 72.38,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "now",
+  "start": 72.46,
+  "end": 72.62,
+  "conf": 0.708,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 72.62,
+  "end": 73.18,
+  "conf": 0.987,
+  "src": "whisper"
+ },
+ {
+  "w": "unknown",
+  "start": 73.366,
+  "end": 73.846,
+  "conf": 0.57,
+  "src": "ctc"
+ },
+ {
+  "w": "isn't",
+  "start": 73.46,
+  "end": 74.04,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "sitting",
+  "start": 74.106,
+  "end": 74.386,
+  "conf": 0.536,
+  "src": "ctc"
+ },
+ {
+  "w": "in",
+  "start": 74.406,
+  "end": 74.486,
+  "conf": 0.791,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 74.44,
+  "end": 74.52,
+  "conf": 0.89,
+  "src": "whisper"
+ },
+ {
+  "w": "sum",
+  "start": 74.52,
+  "end": 74.74,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 75.106,
+  "end": 75.206,
+  "conf": 0.898,
+  "src": "ctc"
+ },
+ {
+  "w": "isn't",
+  "start": 75.06,
+  "end": 75.36,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "multiplying",
+  "start": 75.426,
+  "end": 75.946,
+  "conf": 0.659,
+  "src": "ctc"
+ },
+ {
+  "w": "so",
+  "start": 75.966,
+  "end": 76.046,
+  "conf": 0.748,
+  "src": "ctc"
+ },
+ {
+  "w": "division",
+  "start": 76.146,
+  "end": 76.466,
+  "conf": 0.851,
+  "src": "ctc"
+ },
+ {
+  "w": "cannot",
+  "start": 76.486,
+  "end": 76.746,
+  "conf": 0.749,
+  "src": "ctc"
+ },
+ {
+  "w": "run",
+  "start": 76.846,
+  "end": 76.986,
+  "conf": 0.596,
+  "src": "ctc"
+ },
+ {
+  "w": "it's",
+  "start": 76.88,
+  "end": 77.26,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "hiding",
+  "start": 77.326,
+  "end": 77.606,
+  "conf": 0.778,
+  "src": "ctc"
+ },
+ {
+  "w": "in",
+  "start": 77.666,
+  "end": 77.706,
+  "conf": 0.459,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 77.66,
+  "end": 77.74,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "exponent",
+  "start": 77.826,
+  "end": 78.387,
+  "conf": 0.691,
+  "src": "ctc"
+ },
+ {
+  "w": "out",
+  "start": 78.22,
+  "end": 78.46,
+  "conf": 0.972,
+  "src": "whisper"
+ },
+ {
+  "w": "of",
+  "start": 78.46,
+  "end": 78.56,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "reach",
+  "start": 78.56,
+  "end": 78.72,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "of",
+  "start": 78.72,
+  "end": 78.86,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "what",
+  "start": 78.967,
+  "end": 79.127,
+  "conf": 0.485,
+  "src": "ctc"
+ },
+ {
+  "w": "we",
+  "start": 79.207,
+  "end": 79.287,
+  "conf": 0.555,
+  "src": "ctc"
+ },
+ {
+  "w": "knew",
+  "start": 79.26,
+  "end": 79.58,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "what",
+  "start": 79.607,
+  "end": 79.967,
+  "conf": 0.566,
+  "src": "ctc"
+ },
+ {
+  "w": "exponent",
+  "start": 79.987,
+  "end": 80.447,
+  "conf": 0.634,
+  "src": "ctc"
+ },
+ {
+  "w": "turns",
+  "start": 80.527,
+  "end": 80.787,
+  "conf": 0.674,
+  "src": "ctc"
+ },
+ {
+  "w": "this",
+  "start": 80.807,
+  "end": 80.967,
+  "conf": 0.515,
+  "src": "ctc"
+ },
+ {
+  "w": "base",
+  "start": 81.087,
+  "end": 81.347,
+  "conf": 0.687,
+  "src": "ctc"
+ },
+ {
+  "w": "into",
+  "start": 81.2,
+  "end": 81.44,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "two",
+  "start": 81.44,
+  "end": 81.7,
+  "conf": 0.975,
+  "src": "whisper"
+ },
+ {
+  "w": "that's",
+  "start": 81.78,
+  "end": 81.96,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 81.96,
+  "end": 82.02,
+  "conf": 0.834,
+  "src": "whisper"
+ },
+ {
+  "w": "whole",
+  "start": 82.107,
+  "end": 82.367,
+  "conf": 0.578,
+  "src": "ctc"
+ },
+ {
+  "w": "question",
+  "start": 82.387,
+  "end": 82.867,
+  "conf": 0.561,
+  "src": "ctc"
+ },
+ {
+  "w": "nothing",
+  "start": 82.82,
+  "end": 83.02,
+  "conf": 0.988,
+  "src": "whisper"
+ },
+ {
+  "w": "strange",
+  "start": 83.187,
+  "end": 83.527,
+  "conf": 0.581,
+  "src": "ctc"
+ },
+ {
+  "w": "inside",
+  "start": 83.547,
+  "end": 84.027,
+  "conf": 0.749,
+  "src": "ctc"
+ },
+ {
+  "w": "we",
+  "start": 84.047,
+  "end": 84.107,
+  "conf": 0.739,
+  "src": "ctc"
+ },
+ {
+  "w": "could",
+  "start": 84.04,
+  "end": 84.16,
+  "conf": 0.906,
+  "src": "whisper"
+ },
+ {
+  "w": "say",
+  "start": 84.287,
+  "end": 84.427,
+  "conf": 0.682,
+  "src": "ctc"
+ },
+ {
+  "w": "it",
+  "start": 84.34,
+  "end": 84.52,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "in",
+  "start": 84.607,
+  "end": 84.667,
+  "conf": 0.484,
+  "src": "ctc"
+ },
+ {
+  "w": "a",
+  "start": 84.64,
+  "end": 84.68,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "sentence",
+  "start": 84.68,
+  "end": 84.96,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "we",
+  "start": 85.04,
+  "end": 85.16,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "just",
+  "start": 85.16,
+  "end": 85.26,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "couldn't",
+  "start": 85.26,
+  "end": 85.56,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "write",
+  "start": 85.56,
+  "end": 85.7,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 85.7,
+  "end": 85.82,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "right",
+  "start": 85.82,
+  "end": 85.98,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "so",
+  "start": 86.147,
+  "end": 86.247,
+  "conf": 0.513,
+  "src": "ctc"
+ },
+ {
+  "w": "give",
+  "start": 86.447,
+  "end": 86.567,
+  "conf": 0.569,
+  "src": "ctc"
+ },
+ {
+  "w": "that",
+  "start": 86.46,
+  "end": 86.62,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "exponent",
+  "start": 86.727,
+  "end": 87.107,
+  "conf": 0.623,
+  "src": "ctc"
+ },
+ {
+  "w": "a",
+  "start": 86.9,
+  "end": 87.14,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "symbol",
+  "start": 87.207,
+  "end": 87.507,
+  "conf": 0.523,
+  "src": "ctc"
+ },
+ {
+  "w": "and",
+  "start": 87.36,
+  "end": 87.56,
+  "conf": 0.772,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 87.56,
+  "end": 87.7,
+  "conf": 0.688,
+  "src": "whisper"
+ },
+ {
+  "w": "name",
+  "start": 87.787,
+  "end": 87.927,
+  "conf": 0.621,
+  "src": "ctc"
+ },
+ {
+  "w": "of",
+  "start": 87.84,
+  "end": 87.94,
+  "conf": 0.895,
+  "src": "whisper"
+ },
+ {
+  "w": "logarithm",
+  "start": 88.047,
+  "end": 88.467,
+  "conf": 0.517,
+  "src": "ctc"
+ },
+ {
+  "w": "is",
+  "start": 88.42,
+  "end": 88.64,
+  "conf": 0.147,
+  "src": "whisper"
+ },
+ {
+  "w": "a",
+  "start": 88.64,
+  "end": 88.74,
+  "conf": 0.615,
+  "src": "whisper"
+ },
+ {
+  "w": "magic",
+  "start": 88.74,
+  "end": 88.92,
+  "conf": 0.941,
+  "src": "whisper"
+ },
+ {
+  "w": "number",
+  "start": 88.92,
+  "end": 88.96,
+  "conf": 0.337,
+  "src": "whisper"
+ },
+ {
+  "w": "it's",
+  "start": 88.96,
+  "end": 88.96,
+  "conf": 0.391,
+  "src": "whisper"
+ },
+ {
+  "w": "a",
+  "start": 88.96,
+  "end": 88.96,
+  "conf": 0.395,
+  "src": "whisper"
+ },
+ {
+  "w": "magic",
+  "start": 88.96,
+  "end": 88.96,
+  "conf": 0.449,
+  "src": "whisper"
+ },
+ {
+  "w": "number",
+  "start": 88.96,
+  "end": 88.96,
+  "conf": 0.972,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 88.98,
+  "end": 89.08,
+  "conf": 0.251,
+  "src": "whisper"
+ },
+ {
+  "w": "was",
+  "start": 89.08,
+  "end": 89.28,
+  "conf": 0.991,
+  "src": "whisper"
+ },
+ {
+  "w": "already",
+  "start": 89.447,
+  "end": 89.847,
+  "conf": 0.905,
+  "src": "ctc"
+ },
+ {
+  "w": "in",
+  "start": 89.66,
+  "end": 89.98,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 89.98,
+  "end": 90.06,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "game",
+  "start": 90.06,
+  "end": 90.28,
+  "conf": 0.965,
+  "src": "whisper"
+ },
+ {
+  "w": "we",
+  "start": 90.468,
+  "end": 90.548,
+  "conf": 0.54,
+  "src": "ctc"
+ },
+ {
+  "w": "already",
+  "start": 90.568,
+  "end": 90.908,
+  "conf": 0.671,
+  "src": "ctc"
+ },
+ {
+  "w": "knew",
+  "start": 90.76,
+  "end": 91.04,
+  "conf": 0.977,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 91.04,
+  "end": 91.14,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "question",
+  "start": 91.14,
+  "end": 91.4,
+  "conf": 0.992,
+  "src": "whisper"
+ },
+ {
+  "w": "we",
+  "start": 91.46,
+  "end": 91.56,
+  "conf": 0.974,
+  "src": "whisper"
+ },
+ {
+  "w": "just",
+  "start": 91.56,
+  "end": 91.7,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "couldn't",
+  "start": 91.7,
+  "end": 92.0,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "write",
+  "start": 92.048,
+  "end": 92.268,
+  "conf": 0.472,
+  "src": "ctc"
+ },
+ {
+  "w": "it",
+  "start": 92.12,
+  "end": 92.26,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "down",
+  "start": 92.26,
+  "end": 92.54,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "turn",
+  "start": 92.868,
+  "end": 93.008,
+  "conf": 0.576,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 92.92,
+  "end": 93.04,
+  "conf": 0.906,
+  "src": "whisper"
+ },
+ {
+  "w": "language",
+  "start": 93.168,
+  "end": 93.388,
+  "conf": 0.747,
+  "src": "ctc"
+ },
+ {
+  "w": "backward",
+  "start": 93.408,
+  "end": 93.688,
+  "conf": 0.56,
+  "src": "ctc"
+ },
+ {
+  "w": "and",
+  "start": 93.5,
+  "end": 93.72,
+  "conf": 0.902,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 93.72,
+  "end": 93.82,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "answer",
+  "start": 93.988,
+  "end": 94.148,
+  "conf": 0.484,
+  "src": "ctc"
+ },
+ {
+  "w": "can",
+  "start": 94.208,
+  "end": 94.308,
+  "conf": 0.565,
+  "src": "ctc"
+ },
+ {
+  "w": "be",
+  "start": 94.328,
+  "end": 94.388,
+  "conf": 0.746,
+  "src": "ctc"
+ },
+ {
+  "w": "found",
+  "start": 94.488,
+  "end": 94.728,
+  "conf": 0.495,
+  "src": "ctc"
+ },
+ {
+  "w": "what",
+  "start": 94.62,
+  "end": 94.8,
+  "conf": 0.905,
+  "src": "whisper"
+ },
+ {
+  "w": "looked",
+  "start": 94.8,
+  "end": 95.16,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "unfamiliar",
+  "start": 95.308,
+  "end": 95.788,
+  "conf": 0.539,
+  "src": "ctc"
+ },
+ {
+  "w": "was",
+  "start": 95.808,
+  "end": 95.928,
+  "conf": 0.674,
+  "src": "ctc"
+ },
+ {
+  "w": "waiting",
+  "start": 95.86,
+  "end": 96.06,
+  "conf": 0.99,
+  "src": "whisper"
+ },
+ {
+  "w": "there",
+  "start": 96.228,
+  "end": 96.368,
+  "conf": 0.483,
+  "src": "ctc"
+ },
+ {
+  "w": "all",
+  "start": 96.28,
+  "end": 96.42,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "along",
+  "start": 96.42,
+  "end": 96.72,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 96.72,
+  "end": 97.02,
+  "conf": 0.992,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 97.02,
+  "end": 97.24,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "idea",
+  "start": 97.24,
+  "end": 97.68,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "heard",
+  "start": 97.68,
+  "end": 98.04,
+  "conf": 0.896,
+  "src": "whisper"
+ },
+ {
+  "w": "from",
+  "start": 98.04,
+  "end": 98.22,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 98.22,
+  "end": 98.38,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "other",
+  "start": 98.38,
+  "end": 98.58,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "side",
+  "start": 98.58,
+  "end": 98.88,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "run",
+  "start": 98.88,
+  "end": 99.1,
+  "conf": 0.926,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 99.1,
+  "end": 99.18,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "forward",
+  "start": 99.18,
+  "end": 99.46,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "run",
+  "start": 99.78,
+  "end": 100.34,
+  "conf": 0.986,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 100.34,
+  "end": 100.54,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "back",
+  "start": 100.54,
+  "end": 100.8,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "send",
+  "start": 100.86,
+  "end": 101.14,
+  "conf": 0.776,
+  "src": "whisper"
+ },
+ {
+  "w": "connection",
+  "start": 101.14,
+  "end": 101.58,
+  "conf": 0.969,
+  "src": "whisper"
+ },
+ {
+  "w": "different",
+  "start": 102.06,
+  "end": 102.5,
+  "conf": 0.993,
+  "src": "whisper"
+ },
+ {
+  "w": "track",
+  "start": 102.5,
+  "end": 102.9,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "give",
+  "start": 102.96,
+  "end": 103.12,
+  "conf": 0.992,
+  "src": "whisper"
+ },
+ {
+  "w": "me",
+  "start": 103.12,
+  "end": 103.26,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 103.26,
+  "end": 103.46,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "exponent",
+  "start": 103.46,
+  "end": 103.86,
+  "conf": 0.985,
+  "src": "whisper"
+ },
+ {
+  "w": "i'll",
+  "start": 103.86,
+  "end": 104.52,
+  "conf": 0.98,
+  "src": "whisper"
+ },
+ {
+  "w": "give",
+  "start": 104.52,
+  "end": 104.7,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "you",
+  "start": 104.7,
+  "end": 104.92,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 104.92,
+  "end": 105.06,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "value",
+  "start": 105.209,
+  "end": 105.649,
+  "conf": 0.489,
+  "src": "ctc"
+ },
+ {
+  "w": "give",
+  "start": 105.749,
+  "end": 105.889,
+  "conf": 0.624,
+  "src": "ctc"
+ },
+ {
+  "w": "me",
+  "start": 105.909,
+  "end": 105.989,
+  "conf": 0.495,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 105.94,
+  "end": 106.1,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "value",
+  "start": 106.1,
+  "end": 106.5,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "find",
+  "start": 106.5,
+  "end": 106.86,
+  "conf": 0.587,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 106.86,
+  "end": 107.1,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "exponent",
+  "start": 107.1,
+  "end": 107.64,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "turn",
+  "start": 107.82,
+  "end": 107.92,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 107.92,
+  "end": 108.12,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "around",
+  "start": 108.12,
+  "end": 108.48,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "see",
+  "start": 108.74,
+  "end": 108.9,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "what",
+  "start": 108.9,
+  "end": 109.14,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "was",
+  "start": 109.14,
+  "end": 109.36,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "there",
+  "start": 109.36,
+  "end": 109.62,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "forward",
+  "start": 109.62,
+  "end": 110.2,
+  "conf": 0.987,
+  "src": "whisper"
+ },
+ {
+  "w": "and",
+  "start": 110.2,
+  "end": 110.42,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "backward",
+  "start": 110.42,
+  "end": 110.78,
+  "conf": 0.808,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 110.92,
+  "end": 111.14,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "idea",
+  "start": 111.14,
+  "end": 111.58,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "everywhere",
+  "start": 111.58,
+  "end": 112.46,
+  "conf": 0.0,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 112.8,
+  "end": 113.26,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "old",
+  "start": 113.26,
+  "end": 113.6,
+  "conf": 0.993,
+  "src": "whisper"
+ },
+ {
+  "w": "laws",
+  "start": 113.6,
+  "end": 113.84,
+  "conf": 0.865,
+  "src": "whisper"
+ },
+ {
+  "w": "coming",
+  "start": 113.84,
+  "end": 114.1,
+  "conf": 0.759,
+  "src": "whisper"
+ },
+ {
+  "w": "through",
+  "start": 114.1,
+  "end": 114.28,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "again",
+  "start": 114.28,
+  "end": 114.6,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "multiply",
+  "start": 114.81,
+  "end": 115.21,
+  "conf": 0.634,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 115.16,
+  "end": 115.24,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "values",
+  "start": 115.37,
+  "end": 115.63,
+  "conf": 0.705,
+  "src": "ctc"
+ },
+ {
+  "w": "exponents",
+  "start": 115.65,
+  "end": 116.07,
+  "conf": 0.57,
+  "src": "ctc"
+ },
+ {
+  "w": "add",
+  "start": 115.94,
+  "end": 116.14,
+  "conf": 0.984,
+  "src": "whisper"
+ },
+ {
+  "w": "within",
+  "start": 116.29,
+  "end": 116.65,
+  "conf": 0.552,
+  "src": "ctc"
+ },
+ {
+  "w": "now",
+  "start": 116.99,
+  "end": 117.15,
+  "conf": 0.918,
+  "src": "ctc"
+ },
+ {
+  "w": "read",
+  "start": 117.27,
+  "end": 117.39,
+  "conf": 0.688,
+  "src": "ctc"
+ },
+ {
+  "w": "it",
+  "start": 117.41,
+  "end": 117.47,
+  "conf": 0.689,
+  "src": "ctc"
+ },
+ {
+  "w": "backward",
+  "start": 117.53,
+  "end": 117.97,
+  "conf": 0.665,
+  "src": "ctc"
+ },
+ {
+  "w": "watch",
+  "start": 118.05,
+  "end": 118.17,
+  "conf": 0.592,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 118.08,
+  "end": 118.18,
+  "conf": 1.0,
+  "src": "whisper"
+ },
+ {
+  "w": "language",
+  "start": 118.33,
+  "end": 118.57,
+  "conf": 0.702,
+  "src": "ctc"
+ },
+ {
+  "w": "shift",
+  "start": 118.59,
+  "end": 118.79,
+  "conf": 0.666,
+  "src": "ctc"
+ },
+ {
+  "w": "multiplication",
+  "start": 118.87,
+  "end": 119.47,
+  "conf": 0.898,
+  "src": "ctc"
+ },
+ {
+  "w": "turns",
+  "start": 119.53,
+  "end": 119.75,
+  "conf": 0.795,
+  "src": "ctc"
+ },
+ {
+  "w": "to",
+  "start": 119.77,
+  "end": 119.85,
+  "conf": 0.553,
+  "src": "ctc"
+ },
+ {
+  "w": "addition",
+  "start": 119.8,
+  "end": 120.1,
+  "conf": 0.91,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 120.47,
+  "end": 120.67,
+  "conf": 0.684,
+  "src": "ctc"
+ },
+ {
+  "w": "engine",
+  "start": 120.79,
+  "end": 121.19,
+  "conf": 0.655,
+  "src": "ctc"
+ },
+ {
+  "w": "different",
+  "start": 121.27,
+  "end": 121.47,
+  "conf": 0.645,
+  "src": "ctc"
+ },
+ {
+  "w": "script",
+  "start": 121.49,
+  "end": 121.73,
+  "conf": 0.879,
+  "src": "ctc"
+ },
+ {
+  "w": "not",
+  "start": 121.68,
+  "end": 121.82,
+  "conf": 0.981,
+  "src": "whisper"
+ },
+ {
+  "w": "a",
+  "start": 121.97,
+  "end": 121.99,
+  "conf": 0.871,
+  "src": "ctc"
+ },
+ {
+  "w": "bag",
+  "start": 122.07,
+  "end": 122.17,
+  "conf": 0.495,
+  "src": "ctc"
+ },
+ {
+  "w": "of",
+  "start": 122.12,
+  "end": 122.22,
+  "conf": 0.981,
+  "src": "whisper"
+ },
+ {
+  "w": "rules",
+  "start": 122.35,
+  "end": 122.57,
+  "conf": 0.818,
+  "src": "ctc"
+ },
+ {
+  "w": "not",
+  "start": 122.5,
+  "end": 122.62,
+  "conf": 0.984,
+  "src": "whisper"
+ },
+ {
+  "w": "a",
+  "start": 122.75,
+  "end": 122.77,
+  "conf": 0.75,
+  "src": "ctc"
+ },
+ {
+  "w": "trick",
+  "start": 122.85,
+  "end": 122.97,
+  "conf": 0.668,
+  "src": "ctc"
+ },
+ {
+  "w": "to",
+  "start": 122.9,
+  "end": 123.0,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "memorize",
+  "start": 123.15,
+  "end": 123.65,
+  "conf": 0.475,
+  "src": "ctc"
+ },
+ {
+  "w": "just",
+  "start": 123.67,
+  "end": 123.79,
+  "conf": 0.675,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 123.68,
+  "end": 123.82,
+  "conf": 0.663,
+  "src": "whisper"
+ },
+ {
+  "w": "old",
+  "start": 123.97,
+  "end": 124.07,
+  "conf": 0.865,
+  "src": "ctc"
+ },
+ {
+  "w": "exponent",
+  "start": 124.09,
+  "end": 124.43,
+  "conf": 0.711,
+  "src": "ctc"
+ },
+ {
+  "w": "law",
+  "start": 124.49,
+  "end": 124.63,
+  "conf": 0.544,
+  "src": "ctc"
+ },
+ {
+  "w": "seen",
+  "start": 124.5,
+  "end": 124.72,
+  "conf": 0.712,
+  "src": "whisper"
+ },
+ {
+  "w": "from",
+  "start": 124.99,
+  "end": 125.11,
+  "conf": 0.709,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 124.98,
+  "end": 125.14,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "other",
+  "start": 125.33,
+  "end": 125.47,
+  "conf": 0.562,
+  "src": "ctc"
+ },
+ {
+  "w": "side",
+  "start": 125.53,
+  "end": 125.851,
+  "conf": 0.675,
+  "src": "ctc"
+ },
+ {
+  "w": "put",
+  "start": 125.66,
+  "end": 126.56,
+  "conf": 0.958,
+  "src": "whisper"
+ },
+ {
+  "w": "them",
+  "start": 126.56,
+  "end": 126.76,
+  "conf": 0.977,
+  "src": "whisper"
+ },
+ {
+  "w": "on",
+  "start": 126.76,
+  "end": 126.92,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 126.92,
+  "end": 127.06,
+  "conf": 0.993,
+  "src": "whisper"
+ },
+ {
+  "w": "axis",
+  "start": 127.06,
+  "end": 127.38,
+  "conf": 0.955,
+  "src": "whisper"
+ },
+ {
+  "w": "exponential",
+  "start": 127.54,
+  "end": 128.0,
+  "conf": 0.987,
+  "src": "whisper"
+ },
+ {
+  "w": "rising",
+  "start": 128.0,
+  "end": 129.0,
+  "conf": 0.876,
+  "src": "whisper"
+ },
+ {
+  "w": "to",
+  "start": 129.0,
+  "end": 129.32,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 129.32,
+  "end": 129.58,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "right",
+  "start": 129.58,
+  "end": 130.04,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "logarithm",
+  "start": 130.04,
+  "end": 130.98,
+  "conf": 0.894,
+  "src": "whisper"
+ },
+ {
+  "w": "beside",
+  "start": 130.98,
+  "end": 131.42,
+  "conf": 0.988,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 131.42,
+  "end": 131.82,
+  "conf": 0.964,
+  "src": "whisper"
+ },
+ {
+  "w": "different",
+  "start": 131.84,
+  "end": 132.18,
+  "conf": 0.987,
+  "src": "whisper"
+ },
+ {
+  "w": "shape",
+  "start": 132.18,
+  "end": 132.56,
+  "conf": 0.991,
+  "src": "whisper"
+ },
+ {
+  "w": "inside",
+  "start": 132.56,
+  "end": 133.04,
+  "conf": 0.988,
+  "src": "whisper"
+ },
+ {
+  "w": "draw",
+  "start": 134.3,
+  "end": 134.78,
+  "conf": 0.984,
+  "src": "whisper"
+ },
+ {
+  "w": "one",
+  "start": 134.78,
+  "end": 135.26,
+  "conf": 0.706,
+  "src": "whisper"
+ },
+ {
+  "w": "line",
+  "start": 135.26,
+  "end": 136.02,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "y",
+  "start": 136.12,
+  "end": 136.28,
+  "conf": 0.637,
+  "src": "whisper"
+ },
+ {
+  "w": "equals",
+  "start": 136.28,
+  "end": 136.96,
+  "conf": 0.701,
+  "src": "whisper"
+ },
+ {
+  "w": "x",
+  "start": 136.96,
+  "end": 137.5,
+  "conf": 0.975,
+  "src": "whisper"
+ },
+ {
+  "w": "fold",
+  "start": 137.5,
+  "end": 137.92,
+  "conf": 0.981,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 137.92,
+  "end": 138.06,
+  "conf": 0.984,
+  "src": "whisper"
+ },
+ {
+  "w": "whole",
+  "start": 138.06,
+  "end": 138.2,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "picture",
+  "start": 138.2,
+  "end": 138.56,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "watch",
+  "start": 138.64,
+  "end": 138.8,
+  "conf": 0.993,
+  "src": "whisper"
+ },
+ {
+  "w": "what",
+  "start": 138.8,
+  "end": 138.98,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "happens",
+  "start": 139.132,
+  "end": 139.432,
+  "conf": 0.709,
+  "src": "ctc"
+ },
+ {
+  "w": "next",
+  "start": 139.532,
+  "end": 139.772,
+  "conf": 0.453,
+  "src": "ctc"
+ },
+ {
+  "w": "x",
+  "start": 140.092,
+  "end": 140.112,
+  "conf": 0.932,
+  "src": "ctc"
+ },
+ {
+  "w": "becomes",
+  "start": 140.232,
+  "end": 140.512,
+  "conf": 0.722,
+  "src": "ctc"
+ },
+ {
+  "w": "y",
+  "start": 140.36,
+  "end": 140.6,
+  "conf": 0.868,
+  "src": "whisper"
+ },
+ {
+  "w": "y",
+  "start": 141.192,
+  "end": 141.212,
+  "conf": 0.456,
+  "src": "ctc"
+ },
+ {
+  "w": "becomes",
+  "start": 141.272,
+  "end": 141.632,
+  "conf": 0.796,
+  "src": "ctc"
+ },
+ {
+  "w": "x",
+  "start": 141.812,
+  "end": 141.832,
+  "conf": 0.965,
+  "src": "ctc"
+ },
+ {
+  "w": "every",
+  "start": 142.212,
+  "end": 142.352,
+  "conf": 0.616,
+  "src": "ctc"
+ },
+ {
+  "w": "point",
+  "start": 142.432,
+  "end": 142.632,
+  "conf": 0.563,
+  "src": "ctc"
+ },
+ {
+  "w": "switches",
+  "start": 142.652,
+  "end": 142.932,
+  "conf": 0.606,
+  "src": "ctc"
+ },
+ {
+  "w": "when",
+  "start": 142.952,
+  "end": 143.072,
+  "conf": 0.582,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 143.092,
+  "end": 143.152,
+  "conf": 0.467,
+  "src": "ctc"
+ },
+ {
+  "w": "mirror",
+  "start": 143.12,
+  "end": 143.3,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "reflects",
+  "start": 143.512,
+  "end": 144.312,
+  "conf": 0.641,
+  "src": "ctc"
+ },
+ {
+  "w": "zero",
+  "start": 143.74,
+  "end": 144.36,
+  "conf": 0.781,
+  "src": "whisper"
+ },
+ {
+  "w": "ones",
+  "start": 144.652,
+  "end": 144.852,
+  "conf": 0.728,
+  "src": "ctc"
+ },
+ {
+  "w": "in",
+  "start": 144.72,
+  "end": 144.92,
+  "conf": 0.933,
+  "src": "whisper"
+ },
+ {
+  "w": "two",
+  "start": 145.0,
+  "end": 145.16,
+  "conf": 0.911,
+  "src": "whisper"
+ },
+ {
+  "w": "ones",
+  "start": 145.272,
+  "end": 145.592,
+  "conf": 0.471,
+  "src": "ctc"
+ },
+ {
+  "w": "zero",
+  "start": 145.612,
+  "end": 145.812,
+  "conf": 0.646,
+  "src": "ctc"
+ },
+ {
+  "w": "clean",
+  "start": 145.912,
+  "end": 146.172,
+  "conf": 0.736,
+  "src": "ctc"
+ },
+ {
+  "w": "input",
+  "start": 146.232,
+  "end": 146.412,
+  "conf": 0.667,
+  "src": "ctc"
+ },
+ {
+  "w": "becomes",
+  "start": 146.432,
+  "end": 146.712,
+  "conf": 0.829,
+  "src": "ctc"
+ },
+ {
+  "w": "output",
+  "start": 146.732,
+  "end": 146.992,
+  "conf": 0.502,
+  "src": "ctc"
+ },
+ {
+  "w": "on",
+  "start": 147.072,
+  "end": 147.112,
+  "conf": 0.479,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 147.132,
+  "end": 147.192,
+  "conf": 0.486,
+  "src": "ctc"
+ },
+ {
+  "w": "other",
+  "start": 147.312,
+  "end": 147.432,
+  "conf": 0.662,
+  "src": "ctc"
+ },
+ {
+  "w": "side",
+  "start": 147.512,
+  "end": 147.812,
+  "conf": 0.703,
+  "src": "ctc"
+ },
+ {
+  "w": "of",
+  "start": 147.62,
+  "end": 147.82,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 147.892,
+  "end": 147.952,
+  "conf": 0.57,
+  "src": "ctc"
+ },
+ {
+  "w": "screen",
+  "start": 147.972,
+  "end": 148.272,
+  "conf": 0.764,
+  "src": "ctc"
+ },
+ {
+  "w": "what",
+  "start": 148.1,
+  "end": 148.34,
+  "conf": 0.337,
+  "src": "whisper"
+ },
+ {
+  "w": "would",
+  "start": 148.34,
+  "end": 148.44,
+  "conf": 0.221,
+  "src": "whisper"
+ },
+ {
+  "w": "four",
+  "start": 148.44,
+  "end": 148.66,
+  "conf": 0.296,
+  "src": "whisper"
+ },
+ {
+  "w": "be",
+  "start": 148.66,
+  "end": 148.66,
+  "conf": 0.265,
+  "src": "whisper"
+ },
+ {
+  "w": "forward",
+  "start": 148.68,
+  "end": 148.96,
+  "conf": 0.004,
+  "src": "whisper"
+ },
+ {
+  "w": "now",
+  "start": 149.132,
+  "end": 149.312,
+  "conf": 0.919,
+  "src": "ctc"
+ },
+ {
+  "w": "comes",
+  "start": 149.392,
+  "end": 149.592,
+  "conf": 0.69,
+  "src": "ctc"
+ },
+ {
+  "w": "back",
+  "start": 149.672,
+  "end": 149.893,
+  "conf": 0.722,
+  "src": "ctc"
+ },
+ {
+  "w": "same",
+  "start": 150.193,
+  "end": 150.333,
+  "conf": 0.707,
+  "src": "ctc"
+ },
+ {
+  "w": "relationship",
+  "start": 150.353,
+  "end": 150.893,
+  "conf": 0.942,
+  "src": "ctc"
+ },
+ {
+  "w": "different",
+  "start": 151.293,
+  "end": 151.713,
+  "conf": 0.677,
+  "src": "ctc"
+ },
+ {
+  "w": "track",
+  "start": 151.773,
+  "end": 152.033,
+  "conf": 0.73,
+  "src": "ctc"
+ },
+ {
+  "w": "two",
+  "start": 151.88,
+  "end": 152.08,
+  "conf": 0.76,
+  "src": "whisper"
+ },
+ {
+  "w": "different",
+  "start": 152.353,
+  "end": 152.573,
+  "conf": 0.513,
+  "src": "ctc"
+ },
+ {
+  "w": "graphs",
+  "start": 152.593,
+  "end": 152.953,
+  "conf": 0.684,
+  "src": "ctc"
+ },
+ {
+  "w": "look",
+  "start": 153.173,
+  "end": 153.273,
+  "conf": 0.699,
+  "src": "ctc"
+ },
+ {
+  "w": "again",
+  "start": 153.333,
+  "end": 153.613,
+  "conf": 0.752,
+  "src": "ctc"
+ },
+ {
+  "w": "one",
+  "start": 153.46,
+  "end": 154.02,
+  "conf": 0.95,
+  "src": "whisper"
+ },
+ {
+  "w": "is",
+  "start": 154.273,
+  "end": 154.313,
+  "conf": 0.461,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 154.24,
+  "end": 154.36,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "other",
+  "start": 154.553,
+  "end": 154.713,
+  "conf": 0.525,
+  "src": "ctc"
+ },
+ {
+  "w": "seen",
+  "start": 155.013,
+  "end": 155.213,
+  "conf": 0.498,
+  "src": "ctc"
+ },
+ {
+  "w": "through",
+  "start": 155.233,
+  "end": 155.393,
+  "conf": 0.458,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 155.28,
+  "end": 155.42,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "mirror",
+  "start": 155.42,
+  "end": 155.7,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "what",
+  "start": 155.7,
+  "end": 156.12,
+  "conf": 0.973,
+  "src": "whisper"
+ },
+ {
+  "w": "does",
+  "start": 156.12,
+  "end": 156.32,
+  "conf": 0.959,
+  "src": "whisper"
+ },
+ {
+  "w": "this",
+  "start": 156.32,
+  "end": 156.54,
+  "conf": 0.98,
+  "src": "whisper"
+ },
+ {
+  "w": "exponent",
+  "start": 156.54,
+  "end": 156.9,
+  "conf": 0.989,
+  "src": "whisper"
+ },
+ {
+  "w": "produce",
+  "start": 156.9,
+  "end": 157.52,
+  "conf": 0.993,
+  "src": "whisper"
+ },
+ {
+  "w": "what",
+  "start": 157.96,
+  "end": 158.12,
+  "conf": 0.889,
+  "src": "whisper"
+ },
+ {
+  "w": "exponent",
+  "start": 158.12,
+  "end": 158.48,
+  "conf": 0.991,
+  "src": "whisper"
+ },
+ {
+  "w": "produced",
+  "start": 158.48,
+  "end": 159.04,
+  "conf": 0.524,
+  "src": "whisper"
+ },
+ {
+  "w": "this",
+  "start": 159.04,
+  "end": 159.94,
+  "conf": 0.937,
+  "src": "whisper"
+ },
+ {
+  "w": "two",
+  "start": 160.06,
+  "end": 160.44,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "questions",
+  "start": 160.44,
+  "end": 161.2,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "facing",
+  "start": 161.2,
+  "end": 161.5,
+  "conf": 0.596,
+  "src": "whisper"
+ },
+ {
+  "w": "one",
+  "start": 161.5,
+  "end": 161.72,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "another",
+  "start": 161.72,
+  "end": 162.04,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "one",
+  "start": 162.04,
+  "end": 162.52,
+  "conf": 0.979,
+  "src": "whisper"
+ },
+ {
+  "w": "moves",
+  "start": 162.52,
+  "end": 162.86,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "forward",
+  "start": 162.86,
+  "end": 163.26,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "one",
+  "start": 163.46,
+  "end": 163.62,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "comes",
+  "start": 163.62,
+  "end": 163.92,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "back",
+  "start": 163.92,
+  "end": 164.24,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "meet",
+  "start": 164.24,
+  "end": 164.7,
+  "conf": 0.967,
+  "src": "whisper"
+ },
+ {
+  "w": "them",
+  "start": 164.7,
+  "end": 164.82,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "at",
+  "start": 164.82,
+  "end": 164.94,
+  "conf": 0.985,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 164.94,
+  "end": 165.04,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "mirror",
+  "start": 165.04,
+  "end": 165.28,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "and",
+  "start": 165.28,
+  "end": 165.48,
+  "conf": 0.836,
+  "src": "whisper"
+ },
+ {
+  "w": "they",
+  "start": 165.48,
+  "end": 165.64,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "become",
+  "start": 165.64,
+  "end": 166.42,
+  "conf": 0.983,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 166.42,
+  "end": 167.34,
+  "conf": 0.911,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 167.34,
+  "end": 167.74,
+  "conf": 0.982,
+  "src": "whisper"
+ },
+ {
+  "w": "and",
+  "start": 168.58,
+  "end": 169.18,
+  "conf": 0.719,
+  "src": "whisper"
+ },
+ {
+  "w": "if",
+  "start": 169.18,
+  "end": 169.24,
+  "conf": 0.965,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 169.24,
+  "end": 169.32,
+  "conf": 0.977,
+  "src": "whisper"
+ },
+ {
+  "w": "curve",
+  "start": 169.32,
+  "end": 169.62,
+  "conf": 0.991,
+  "src": "whisper"
+ },
+ {
+  "w": "never",
+  "start": 169.62,
+  "end": 169.82,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "turns",
+  "start": 169.82,
+  "end": 170.18,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "around",
+  "start": 170.18,
+  "end": 170.48,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "every",
+  "start": 170.874,
+  "end": 171.014,
+  "conf": 0.651,
+  "src": "ctc"
+ },
+ {
+  "w": "positive",
+  "start": 171.094,
+  "end": 171.454,
+  "conf": 0.849,
+  "src": "ctc"
+ },
+ {
+  "w": "target",
+  "start": 171.474,
+  "end": 171.854,
+  "conf": 0.6,
+  "src": "ctc"
+ },
+ {
+  "w": "gets",
+  "start": 171.874,
+  "end": 172.034,
+  "conf": 0.949,
+  "src": "ctc"
+ },
+ {
+  "w": "exactly",
+  "start": 172.054,
+  "end": 172.374,
+  "conf": 0.967,
+  "src": "ctc"
+ },
+ {
+  "w": "one",
+  "start": 172.574,
+  "end": 172.654,
+  "conf": 0.643,
+  "src": "ctc"
+ },
+ {
+  "w": "way",
+  "start": 172.734,
+  "end": 172.834,
+  "conf": 0.546,
+  "src": "ctc"
+ },
+ {
+  "w": "found",
+  "start": 172.954,
+  "end": 173.234,
+  "conf": 0.691,
+  "src": "ctc"
+ },
+ {
+  "w": "one",
+  "start": 173.634,
+  "end": 173.714,
+  "conf": 0.627,
+  "src": "ctc"
+ },
+ {
+  "w": "height",
+  "start": 173.62,
+  "end": 173.84,
+  "conf": 0.966,
+  "src": "whisper"
+ },
+ {
+  "w": "one",
+  "start": 174.155,
+  "end": 174.235,
+  "conf": 0.631,
+  "src": "ctc"
+ },
+ {
+  "w": "crossing",
+  "start": 174.275,
+  "end": 174.575,
+  "conf": 0.724,
+  "src": "ctc"
+ },
+ {
+  "w": "one",
+  "start": 174.715,
+  "end": 174.795,
+  "conf": 0.608,
+  "src": "ctc"
+ },
+ {
+  "w": "exponent",
+  "start": 174.895,
+  "end": 175.355,
+  "conf": 0.924,
+  "src": "ctc"
+ },
+ {
+  "w": "there",
+  "start": 175.375,
+  "end": 175.595,
+  "conf": 0.594,
+  "src": "ctc"
+ },
+ {
+  "w": "no",
+  "start": 175.935,
+  "end": 175.995,
+  "conf": 0.463,
+  "src": "ctc"
+ },
+ {
+  "w": "second",
+  "start": 176.155,
+  "end": 176.415,
+  "conf": 0.677,
+  "src": "ctc"
+ },
+ {
+  "w": "answer",
+  "start": 176.28,
+  "end": 176.52,
+  "conf": 0.975,
+  "src": "whisper"
+ },
+ {
+  "w": "waiting",
+  "start": 176.52,
+  "end": 176.8,
+  "conf": 0.984,
+  "src": "whisper"
+ },
+ {
+  "w": "anywhere",
+  "start": 177.075,
+  "end": 177.755,
+  "conf": 0.543,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 178.235,
+  "end": 178.515,
+  "conf": 0.513,
+  "src": "ctc"
+ },
+ {
+  "w": "question",
+  "start": 178.535,
+  "end": 178.835,
+  "conf": 0.762,
+  "src": "ctc"
+ },
+ {
+  "w": "had",
+  "start": 178.84,
+  "end": 178.86,
+  "conf": 0.891,
+  "src": "whisper"
+ },
+ {
+  "w": "an",
+  "start": 179.015,
+  "end": 179.135,
+  "conf": 0.58,
+  "src": "ctc"
+ },
+ {
+  "w": "answer",
+  "start": 179.04,
+  "end": 179.22,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "from",
+  "start": 179.355,
+  "end": 179.475,
+  "conf": 0.902,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 179.495,
+  "end": 179.555,
+  "conf": 0.538,
+  "src": "ctc"
+ },
+ {
+  "w": "start",
+  "start": 179.5,
+  "end": 179.74,
+  "conf": 0.993,
+  "src": "whisper"
+ },
+ {
+  "w": "not",
+  "start": 180.195,
+  "end": 180.295,
+  "conf": 0.491,
+  "src": "ctc"
+ },
+ {
+  "w": "because",
+  "start": 180.315,
+  "end": 180.595,
+  "conf": 0.743,
+  "src": "ctc"
+ },
+ {
+  "w": "a",
+  "start": 180.635,
+  "end": 180.655,
+  "conf": 0.581,
+  "src": "ctc"
+ },
+ {
+  "w": "textbook",
+  "start": 180.715,
+  "end": 181.115,
+  "conf": 0.715,
+  "src": "ctc"
+ },
+ {
+  "w": "declared",
+  "start": 181.135,
+  "end": 181.495,
+  "conf": 0.86,
+  "src": "ctc"
+ },
+ {
+  "w": "that",
+  "start": 181.22,
+  "end": 181.54,
+  "conf": 0.983,
+  "src": "whisper"
+ },
+ {
+  "w": "part",
+  "start": 181.795,
+  "end": 182.015,
+  "conf": 0.583,
+  "src": "ctc"
+ },
+ {
+  "w": "follow",
+  "start": 182.335,
+  "end": 182.555,
+  "conf": 0.812,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 182.4,
+  "end": 182.58,
+  "conf": 0.921,
+  "src": "whisper"
+ },
+ {
+  "w": "curve",
+  "start": 182.58,
+  "end": 182.8,
+  "conf": 0.99,
+  "src": "whisper"
+ },
+ {
+  "w": "follow",
+  "start": 182.995,
+  "end": 183.235,
+  "conf": 0.944,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 183.08,
+  "end": 183.3,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "law",
+  "start": 183.435,
+  "end": 183.575,
+  "conf": 0.633,
+  "src": "ctc"
+ },
+ {
+  "w": "follow",
+  "start": 183.675,
+  "end": 183.895,
+  "conf": 0.811,
+  "src": "ctc"
+ },
+ {
+  "w": "the",
+  "start": 183.72,
+  "end": 183.94,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "reason",
+  "start": 184.095,
+  "end": 184.275,
+  "conf": 0.631,
+  "src": "ctc"
+ },
+ {
+  "w": "through",
+  "start": 184.295,
+  "end": 184.515,
+  "conf": 0.643,
+  "src": "ctc"
+ },
+ {
+  "w": "what",
+  "start": 184.38,
+  "end": 184.62,
+  "conf": 0.869,
+  "src": "whisper"
+ },
+ {
+  "w": "looked",
+  "start": 184.62,
+  "end": 184.78,
+  "conf": 0.582,
+  "src": "whisper"
+ },
+ {
+  "w": "like",
+  "start": 184.915,
+  "end": 184.995,
+  "conf": 0.705,
+  "src": "ctc"
+ },
+ {
+  "w": "two",
+  "start": 184.92,
+  "end": 185.02,
+  "conf": 0.856,
+  "src": "whisper"
+ },
+ {
+  "w": "ideas",
+  "start": 185.02,
+  "end": 185.22,
+  "conf": 0.903,
+  "src": "whisper"
+ },
+ {
+  "w": "was",
+  "start": 185.435,
+  "end": 185.535,
+  "conf": 0.941,
+  "src": "ctc"
+ },
+ {
+  "w": "one",
+  "start": 185.615,
+  "end": 185.695,
+  "conf": 0.608,
+  "src": "ctc"
+ },
+ {
+  "w": "idea",
+  "start": 185.796,
+  "end": 185.976,
+  "conf": 0.726,
+  "src": "ctc"
+ },
+ {
+  "w": "seen",
+  "start": 186.076,
+  "end": 186.196,
+  "conf": 0.594,
+  "src": "ctc"
+ },
+ {
+  "w": "from",
+  "start": 186.216,
+  "end": 186.316,
+  "conf": 0.757,
+  "src": "ctc"
+ },
+ {
+  "w": "two",
+  "start": 186.24,
+  "end": 186.4,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "views",
+  "start": 186.4,
+  "end": 186.74,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "run",
+  "start": 186.876,
+  "end": 186.976,
+  "conf": 0.631,
+  "src": "ctc"
+ },
+ {
+  "w": "it",
+  "start": 186.92,
+  "end": 187.02,
+  "conf": 0.969,
+  "src": "whisper"
+ },
+ {
+  "w": "forward",
+  "start": 187.02,
+  "end": 187.26,
+  "conf": 0.925,
+  "src": "whisper"
+ },
+ {
+  "w": "run",
+  "start": 187.52,
+  "end": 187.86,
+  "conf": 0.932,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 187.86,
+  "end": 188.38,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "back",
+  "start": 188.38,
+  "end": 188.62,
+  "conf": 0.989,
+  "src": "whisper"
+ },
+ {
+  "w": "fold",
+  "start": 188.62,
+  "end": 189.28,
+  "conf": 0.781,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 189.28,
+  "end": 189.46,
+  "conf": 0.666,
+  "src": "whisper"
+ },
+ {
+  "w": "graph",
+  "start": 189.46,
+  "end": 189.76,
+  "conf": 0.975,
+  "src": "whisper"
+ },
+ {
+  "w": "watch",
+  "start": 190.26,
+  "end": 190.38,
+  "conf": 0.992,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 190.38,
+  "end": 190.52,
+  "conf": 0.884,
+  "src": "whisper"
+ },
+ {
+  "w": "match",
+  "start": 190.52,
+  "end": 190.78,
+  "conf": 0.95,
+  "src": "whisper"
+ },
+ {
+  "w": "exponential",
+  "start": 191.34,
+  "end": 191.82,
+  "conf": 0.991,
+  "src": "whisper"
+ },
+ {
+  "w": "goes",
+  "start": 191.82,
+  "end": 192.3,
+  "conf": 0.985,
+  "src": "whisper"
+ },
+ {
+  "w": "forward",
+  "start": 192.3,
+  "end": 192.76,
+  "conf": 0.992,
+  "src": "whisper"
+ },
+ {
+  "w": "logarithm",
+  "start": 193.42,
+  "end": 193.9,
+  "conf": 0.894,
+  "src": "whisper"
+ },
+ {
+  "w": "comes",
+  "start": 193.9,
+  "end": 194.14,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "back",
+  "start": 194.14,
+  "end": 194.48,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "two",
+  "start": 194.48,
+  "end": 195.14,
+  "conf": 0.922,
+  "src": "whisper"
+ },
+ {
+  "w": "directions",
+  "start": 195.14,
+  "end": 195.9,
+  "conf": 0.758,
+  "src": "whisper"
+ },
+ {
+  "w": "one",
+  "start": 196.14,
+  "end": 196.3,
+  "conf": 0.987,
+  "src": "whisper"
+ },
+ {
+  "w": "connection",
+  "start": 196.3,
+  "end": 196.86,
+  "conf": 0.987,
+  "src": "whisper"
+ },
+ {
+  "w": "no",
+  "start": 196.86,
+  "end": 197.44,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "tricks",
+  "start": 197.44,
+  "end": 197.7,
+  "conf": 0.992,
+  "src": "whisper"
+ },
+ {
+  "w": "no",
+  "start": 197.8,
+  "end": 197.92,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "guessing",
+  "start": 197.92,
+  "end": 198.42,
+  "conf": 0.954,
+  "src": "whisper"
+ },
+ {
+  "w": "no",
+  "start": 198.44,
+  "end": 198.72,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "rules",
+  "start": 198.72,
+  "end": 199.06,
+  "conf": 0.994,
+  "src": "whisper"
+ },
+ {
+  "w": "falling",
+  "start": 199.06,
+  "end": 199.4,
+  "conf": 0.883,
+  "src": "whisper"
+ },
+ {
+  "w": "from",
+  "start": 199.4,
+  "end": 199.48,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 199.48,
+  "end": 199.74,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "sky",
+  "start": 199.74,
+  "end": 200.1,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "follow",
+  "start": 200.1,
+  "end": 200.64,
+  "conf": 0.605,
+  "src": "whisper"
+ },
+ {
+  "w": "what",
+  "start": 200.64,
+  "end": 200.88,
+  "conf": 0.637,
+  "src": "whisper"
+ },
+ {
+  "w": "must",
+  "start": 200.88,
+  "end": 201.18,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "stay",
+  "start": 201.18,
+  "end": 201.44,
+  "conf": 0.98,
+  "src": "whisper"
+ },
+ {
+  "w": "true",
+  "start": 201.44,
+  "end": 201.7,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "when",
+  "start": 201.7,
+  "end": 201.92,
+  "conf": 0.517,
+  "src": "whisper"
+ },
+ {
+  "w": "the",
+  "start": 201.92,
+  "end": 202.04,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "reason",
+  "start": 202.04,
+  "end": 202.3,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "comes",
+  "start": 202.3,
+  "end": 202.52,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "alive",
+  "start": 202.52,
+  "end": 202.96,
+  "conf": 0.895,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 203.48,
+  "end": 203.72,
+  "conf": 0.983,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 203.72,
+  "end": 204.08,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "law",
+  "start": 204.08,
+  "end": 204.34,
+  "conf": 0.98,
+  "src": "whisper"
+ },
+ {
+  "w": "different",
+  "start": 204.52,
+  "end": 204.88,
+  "conf": 0.99,
+  "src": "whisper"
+ },
+ {
+  "w": "direction",
+  "start": 204.88,
+  "end": 205.44,
+  "conf": 0.905,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 205.44,
+  "end": 205.7,
+  "conf": 0.988,
+  "src": "whisper"
+ },
+ {
+  "w": "curve",
+  "start": 205.7,
+  "end": 206.02,
+  "conf": 0.929,
+  "src": "whisper"
+ },
+ {
+  "w": "same",
+  "start": 206.08,
+  "end": 206.2,
+  "conf": 0.784,
+  "src": "whisper"
+ },
+ {
+  "w": "curve",
+  "start": 206.2,
+  "end": 206.54,
+  "conf": 0.845,
+  "src": "whisper"
+ },
+ {
+  "w": "different",
+  "start": 206.74,
+  "end": 207.06,
+  "conf": 0.996,
+  "src": "whisper"
+ },
+ {
+  "w": "reflection",
+  "start": 207.06,
+  "end": 207.44,
+  "conf": 0.997,
+  "src": "whisper"
+ },
+ {
+  "w": "why",
+  "start": 207.44,
+  "end": 208.1,
+  "conf": 0.987,
+  "src": "whisper"
+ },
+ {
+  "w": "does",
+  "start": 208.1,
+  "end": 208.28,
+  "conf": 0.995,
+  "src": "whisper"
+ },
+ {
+  "w": "it",
+  "start": 208.28,
+  "end": 208.44,
+  "conf": 0.999,
+  "src": "whisper"
+ },
+ {
+  "w": "work",
+  "start": 208.44,
+  "end": 208.6,
+  "conf": 0.982,
+  "src": "whisper"
+ },
+ {
+  "w": "from",
+  "start": 208.6,
+  "end": 208.82,
+  "conf": 0.499,
+  "src": "whisper"
+ },
+ {
+  "w": "scratch",
+  "start": 208.82,
+  "end": 209.46,
+  "conf": 0.944,
+  "src": "whisper"
+ },
+ {
+  "w": "from",
+  "start": 209.54,
+  "end": 209.92,
+  "conf": 0.86,
+  "src": "whisper"
+ },
+ {
+  "w": "scratch",
+  "start": 209.92,
+  "end": 210.44,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "from",
+  "start": 210.58,
+  "end": 210.96,
+  "conf": 0.913,
+  "src": "whisper"
+ },
+ {
+  "w": "scratch",
+  "start": 210.96,
+  "end": 211.48,
+  "conf": 0.998,
+  "src": "whisper"
+ },
+ {
+  "w": "forward",
+  "start": 211.48,
+  "end": 212.38,
+  "conf": 0.626,
+  "src": "whisper"
+ },
+ {
+  "w": "exponential",
+  "start": 212.68,
+  "end": 213.66,
+  "conf": 0.847,
+  "src": "whisper"
+ },
+ {
+  "w": "backward",
+  "start": 214.48,
+  "end": 215.4,
+  "conf": 0.826,
+  "src": "whisper"
+ },
+ {
+  "w": "logarithm",
+  "start": 215.46,
+  "end": 216.36,
+  "conf": 0.838,
+  "src": "whisper"
+ },
+ {
+  "w": "two",
+  "start": 216.36,
+  "end": 217.18,
+  "conf": 0.706,
+  "src": "whisper"
+ },
+ {
+  "w": "directions",
+  "start": 217.18,
+  "end": 217.9,
+  "conf": 0.96,
+  "src": "whisper"
+ },
+ {
+  "w": "one",
+  "start": 218.12,
+  "end": 218.28,
+  "conf": 0.974,
+  "src": "whisper"
+ },
+ {
+  "w": "story",
+  "start": 218.28,
+  "end": 218.74,
+  "conf": 0.993,
+  "src": "whisper"
+ },
+ {
+  "w": "99",
+  "start": 218.74,
+  "end": 219.56,
+  "conf": 0.752,
+  "src": "whisper"
+ },
+ {
+  "w": "%",
+  "start": 219.56,
+  "end": 220.14,
+  "conf": 0.739,
+  "src": "whisper"
+ },
+ {
+  "w": "loading",
+  "start": 220.14,
+  "end": 221.1,
+  "conf": 0.658,
+  "src": "whisper"
+ },
+ {
+  "w": "loading",
+  "start": 228.72,
+  "end": 229.76,
+  "conf": 0.906,
+  "src": "whisper"
+ },
+ {
+  "w": "backward",
+  "start": 238.6,
+  "end": 239.62,
+  "conf": 0.0,
+  "src": "whisper"
+ },
+ {
+  "w": "logarithm",
+  "start": 239.62,
+  "end": 239.62,
+  "conf": 0.082,
+  "src": "whisper"
+ }
+]

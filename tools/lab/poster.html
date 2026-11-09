@@ -1,0 +1,78 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — type poster</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử phương án C cho pemdas ("Type Poster" — áp phích chữ kiểu Thuỵ Sĩ). KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/poster.html --dur 2 --t 0.5,1.5 --outdir out/_lab/poster
+// Ý: chữ là nhân vật chính, cực to, màu phẳng không bóng; lưới cột rõ, đường kẻ mảnh; mỗi bước tính = một dòng mới;
+// màu theo cấp như phương án A. 0 = bài viral · 1 = 10 − 3 + 2
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { paper: '#F1EBDD', ink: '#16161A', rule: '#16161A', P: '#16161A', E: '#7A4FB0', MD: '#2E6CC0', AS: '#E0761E', red: '#D2402F', gold: '#E2A93A', dim: '#9A9488' };
+const LEVEL = { '(': 'P', ')': 'P', '^': 'E', '×': 'MD', '÷': 'MD', '+': 'AS', '−': 'AS' };
+const IM = {}; let PAPER, ready = false;
+const ARC = '"Archivo"', MONO = '"IBM Plex Mono"';
+
+function paper() { const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H), b = [0xF1, 0xEB, 0xDD];
+  for (let i = 0; i < W * H; i++) { const n = (hash(i * 0.517) - 0.5) * 10; for (let k = 0; k < 3; k++) d.data[i * 4 + k] = b[k] + n; d.data[i * 4 + 3] = 255; }
+  x.putImageData(d, 0, 0); return c; }
+function text(s, x, y, font, color, align = 'left') { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic'; g.fillText(s, x, y); return g.measureText(s).width; }
+function expr(tokens, x, y, size, { stretch = '75%', gap = 0.12, color = null } = {}) {   // biểu thức: số mực, phép tính tô màu cấp
+  g.save(); g.font = `900 ${size}px ${ARC}`; if ('fontStretch' in g) g.fontStretch = 'condensed';
+  for (const s of tokens) { const lv = LEVEL[s]; g.fillStyle = color ?? (lv && lv !== 'P' ? C[lv] : C.ink); g.textAlign = 'left'; g.fillText(s, x, y); x += g.measureText(s).width + size * gap; }
+  g.restore(); return x;
+}
+const rule = (x0, y, x1, w = 3) => { g.fillStyle = C.rule; g.fillRect(x0, y, x1 - x0, w); };
+const label = (s, x, y, color = C.ink, align = 'left') => text(s.toUpperCase(), x, y, `500 26px ${MONO}`, color, align);
+function hand(pts, color, w, seed = 1) { g.strokeStyle = color; g.lineWidth = w; g.lineCap = g.lineJoin = 'round'; g.beginPath();
+  pts.forEach(([px, py], i) => { const j = (hash(i * 3.1 + seed) - 0.5) * 3; i ? g.lineTo(px + j, py + j) : g.moveTo(px, py); }); g.stroke(); }
+const seg = (x0, y0, x1, y1, n = 16) => Array.from({ length: n + 1 }, (_, i) => [x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n]);
+function figure(pose, cx, foot, h, crop = 1) { const im = IM[pose], sh = im.height * crop, w = im.width * h / sh;
+  g.save(); g.globalAlpha = 0.18; g.filter = 'brightness(0)'; g.drawImage(im, 0, 0, im.width, sh, cx - w / 2 + 14, foot - h + 10, w, h);
+  g.filter = 'none'; g.globalAlpha = 1; g.drawImage(im, 0, 0, im.width, sh, cx - w / 2, foot - h, w, h); g.restore(); }
+const ev = s => Function(`return (${s.replace(/÷/g, '/').replace(/×/g, '*').replace(/−/g, '-')})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+
+const frames = [
+  () => {                                            // 0 · bài viral chiếm cả bề ngang; nửa dưới chia đôi: 9 | 1
+    label('The comment section', 96, 112); label('Fig. 1', 1824, 112, C.ink, 'right'); rule(96, 132, 1824);
+    expr(['6', '÷', '2', '(', '1', '+', '2', ')', '=', '?'], 96, 420, 280);
+    rule(96, 500, 1824); g.fillStyle = C.rule; g.fillRect(958, 500, 4, 520);
+    const nine = must('6 ÷ 2 × (1 + 2)', 9), one = must('6 ÷ (2 × (1 + 2))', 1);
+    text(String(nine), 96, 960, `900 420px ${ARC}`, C.ink); text(String(one), 1010, 960, `900 420px ${ARC}`, C.ink);
+    label('left to right', 420, 600); label('= 9', 420, 650, C.dim);
+    label('glued-on × first', 1330, 600); label('= 1', 1330, 650, C.dim);
+    figure('twoways', 1730, 1080, 430, 1);
+  },
+  () => {                                            // 1 · 10 − 3 + 2: mỗi bước một dòng, gạch chân màu ở phép đang làm; lề phải: đường sai
+    label('Same level, left to right', 96, 112); label('Fig. 2', 1824, 112, C.ink, 'right'); rule(96, 132, 1824);
+    const ok1 = must('10 − 3', 7), ok = must('10 − 3 + 2', 9), bad = must('10 − (3 + 2)', 5);
+    let e = expr(['10', '−', '3', '+', '2'], 96, 380, 220); g.fillStyle = C.AS; g.fillRect(96, 410, 470, 16);
+    label('step 1', 1300, 300, C.dim);
+    expr([String(ok1), '+', '2'], 96, 680, 220); g.fillStyle = C.AS; g.fillRect(96, 710, 430, 16); label('step 2', 1300, 600, C.dim);
+    rule(96, 780, 1824);
+    expr(['=', String(ok)], 96, 1000, 200); hand([...seg(470, 930, 510, 975, 5), ...seg(510, 975, 600, 860, 8)], C.gold, 14, 9);
+    label('add first?', 1300, 860, C.red); expr(['10', '−', String(must('3 + 2', 5)), '=', String(bad)], 1300, 980, 110, { color: C.red });
+    hand(seg(1290, 950, 1800, 950), C.red, 8, 4);
+  },
+];
+
+(async () => {
+  await Promise.all(['900 420px', '900 280px', '900 220px', '900 200px', '900 110px'].map(f => document.fonts.load(f + ' ' + ARC))
+    .concat([document.fonts.load('500 26px ' + MONO)]));
+  await new Promise((res, rej) => { const im = new Image(); im.onload = () => { IM.twoways = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img'));
+    im.src = '../../assets/character-v2/cut/pose-twoways.png'; });
+  PAPER = paper(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(PAPER, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

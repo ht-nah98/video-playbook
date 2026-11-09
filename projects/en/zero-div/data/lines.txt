@@ -1,0 +1,142 @@
+0 0.02 1.33 Imagine a world without zero.
+1 1.78 7.95 No zero key on your keyboard, no tens column, no hundreds, no thousands, and no bank account sitting at exactly nothing.
+2 8.34 12.66 It sounds strange, but that is the world most of humanity lived in, for thousands of years.
+3 13.69 21.22 In our last video, we walked through thirty thousand years of mathematics, and one stop went by in just a few seconds: the moment zero became a number.
+4 21.65 23.12 Today, we go back and stay there.
+5 23.51 30.0 Because zero was the last of the familiar numbers to arrive, and when it finally did, it brought something very strange along with it.
+6 30.43 34.94 A hole in division, that in almost fourteen hundred years, nobody has managed to patch completely.
+7 35.95 39.88 So in this video, we'll find out why zero was so hard to accept as a number at all.
+8 40.31 43.63 Why dividing by zero makes no sense, no matter which way you look at it.
+9 44.02 51.24 And why that one hole is the best proof we have that mathematics is not a pile of arbitrary rules, but a system, woven together very tightly.
+10 51.65 54.82 But first, we have to go back to a time when nobody needed zero at all.
+p2 0 0.0 Why zero came so late | Imagine you are a shepherd, thousands of years ago, counting your sheep.
+p2 1 4.0 Why zero came so late | What is the first number you need? One, of course. Then two, then three.
+p2 2 7.8 Why zero came so late | You never need to count zero sheep, because if there are no sheep, what exactly are you co
+p2 3 13.3 Why zero came so late | Zero is useless for counting, and that is why the Romans never needed it.
+p2 4 17.2 Why zero came so late | Roman numerals have I, V, X, L, C, D and M, but no sign at all for zero.
+p2 5 20.8 Why zero came so late | And with them, the Romans did their sums, built their bridges, and kept their accounts, pe
+p2 6 26.8 Why zero came so late | The trouble only begins when you write numbers by position.
+p2 7 30.1 Why zero came so late | Try writing three hundred and five in columns.
+p2 8 32.7 Why zero came so late | A three in the hundreds column, a five in the ones column, and in the tens column, somethi
+p2 9 38.4 Why zero came so late | Leave that something out, and your reader sees thirty-five.
+p2 10 42.1 Why zero came so late | The Babylonians, who counted in sixties rather than tens, lived with exactly this problem 
+p2 11 48.6 Why zero came so late | Then, a few centuries before our era, their scribes began pressing a small sign of two sla
+p2 12 55.0 Why zero came so late | But that sign did one job, and only one. It held a place.
+p2 13 57.9 Why zero came so late | It was never written at the end of a number, and nobody ever added, subtracted, or multipl
+p2 14 64.3 Why zero came so late | Other people came close, too.
+p2 15 66.3 Why zero came so late | Egyptian scribes had a word for a balance of nothing in their accounts, and the Maya, on t
+p2 16 73.9 Why zero came so late | But a sign for an empty place is still not a number.
+p2 17 77.1 Why zero came so late | The real leap came from India.
+p2 18 79.0 Why zero came so late | In the year six twenty-eight, the mathematician Brahmagupta wrote a book in which zero was
+p2 19 86.9 Why zero came so late | He wrote down its rules. Any number plus zero stays the same. A number minus itself is zer
+p2 20 93.5 Why zero came so late | For the first time in history, nothing had become a mathematical object.
+p2 21 98.0 Why zero came so late | From India, the idea travelled to the scholars of the Islamic world, among them al-Khwariz
+p2 22 103.9 Why zero came so late | And in twelve oh two, Fibonacci brought it to Europe, which took several more centuries to
+p2 23 110.8 The two jobs of zero | So when we talk about zero, we are really talking about two very different things.
+p2 24 115.6 The two jobs of zero | The first job is holding a place, and it is the easy one.
+p2 25 118.7 The two jobs of zero | In three hundred and five, the zero simply says that the tens column is empty.
+p2 26 122.8 The two jobs of zero | It is a piece of notation that lets you tell thirty-five from three hundred and five, and 
+p2 27 129.2 The two jobs of zero | Nothing more.
+p2 28 130.6 The two jobs of zero | The second job is the hard one. Zero is also a real number.
+p2 29 133.7 The two jobs of zero | It sits on the number line, right between the positive numbers and the negative ones.
+p2 30 138.3 The two jobs of zero | It is what you get from five minus five. It is how many apples are in an empty basket. It 
+p2 31 145.7 The two jobs of zero | Brahmagupta was the first to say it out loud: zero is not just a placeholder, it is a numb
+p2 32 152.4 The two jobs of zero | And from that very moment, he ran into the problem this whole video is about.
+p2 33 156.4 The two jobs of zero | Division.
+p2 34 159.2 Everything works, exce | Notice how well zero gets along with addition, subtraction and multiplication.
+p2 35 163.8 Everything works, exce | Add zero to any number, and nothing changes. Seven plus zero is still seven.
+p2 36 168.1 Everything works, exce | In addition, zero is the neutral element. It leaves its partner exactly as it found it.
+p2 37 173.3 Everything works, exce | Subtraction works too. Seven minus zero is seven, and seven minus seven is zero. Everythin
+p2 38 179.4 Everything works, exce | Multiplication is a little more dramatic, but just as consistent. Any number times zero is
+p2 39 184.6 Everything works, exce | You can picture it. Seven baskets with zero apples in each, and you have no apples at all.
+p2 40 189.3 Everything works, exce | Zero baskets with seven apples in each, and you still have none.
+p2 41 192.7 Everything works, exce | In multiplication, zero is a black hole. Everything that touches it gets pulled in.
+p2 42 197.7 Everything works, exce | But with division, the story falls apart.
+p2 43 200.2 Everything works, exce | Brahmagupta wrote that zero divided by zero is zero.
+p2 44 203.0 Everything works, exce | About five hundred years later, another Indian mathematician, Bhaskara, said that a number
+p2 45 213.1 Everything works, exce | In the modern sense, both of them were wrong.
+p2 46 215.3 Everything works, exce | Or, more precisely, neither definition fits with the rest of arithmetic.
+p2 47 219.4 Everything works, exce | So what went wrong?
+p2 48 221.8 What division really i | To see why dividing by zero breaks, you have to look again at what division actually is.
+p2 49 226.7 What division really i | Division is multiplication, run backwards.
+p2 50 229.8 What division really i | When you write twelve divided by three equals four, what you are really saying is this.
+p2 51 234.4 What division really i | There is exactly one number, four, such that four times three is twelve.
+p2 52 238.3 What division really i | Dividing is simply finding the missing factor in a multiplication.
+p2 53 242.2 What division really i | Now apply that same definition to zero.
+p2 54 245.0 What division really i | Say you want twelve divided by zero.
+p2 55 247.0 What division really i | You are looking for some number, call it x, such that x times zero is twelve.
+p2 56 251.1 What division really i | But you have just seen that every number times zero is zero.
+p2 57 254.1 What division really i | There is no x anywhere that you can multiply by zero and get twelve.
+p2 58 257.7 What division really i | So twelve divided by zero is not a hard question. It is a question with no answer to find.
+p2 59 263.0 What division really i | What about zero divided by zero?
+p2 60 264.9 What division really i | Now you want an x such that x times zero is zero, and this time, the trouble runs the othe
+p2 61 269.8 What division really i | Every x works. One times zero is zero. Two times zero is zero. A million times zero is sti
+p2 62 275.3 What division really i | There are infinitely many answers.
+p2 63 277.9 What division really i | But division, by its very definition, has to give one answer, and only one.
+p2 64 282.0 What division really i | So mathematicians say that twelve divided by zero is undefined, because there is no answer
+p2 65 287.0 What division really i | And zero divided by zero is undefined too, but because there are too many.
+p2 66 290.9 What division really i | Two different kinds of undefined, and both of them rob division of the one thing that make
+p2 67 298.6 Getting closer to zero | There is another way to feel why dividing by zero breaks.
+p2 68 301.7 Getting closer to zero | Instead of dividing by zero itself, divide by numbers that get closer and closer to it.
+p2 69 307.0 Getting closer to zero | One divided by one tenth is ten.
+p2 70 309.0 Getting closer to zero | One divided by one hundredth is a hundred.
+p2 71 311.2 Getting closer to zero | One divided by one thousandth is a thousand.
+p2 72 313.6 Getting closer to zero | The smaller the number you divide by, the bigger the result. It looks as if dividing by ze
+p2 73 320.3 Getting closer to zero | But now come at zero from the other side.
+p2 74 322.5 Getting closer to zero | One divided by minus one tenth is minus ten. By minus one hundredth, minus a hundred. By m
+p2 75 329.3 Getting closer to zero | From the negative side, the result races off towards minus infinity.
+p2 76 333.7 Getting closer to zero | So which is it? Should one divided by zero be plus infinity, or minus infinity?
+p2 77 337.9 Getting closer to zero | It depends on which side you come from.
+p2 78 339.7 Getting closer to zero | Two roads lead to two destinations with opposite signs, so there is no single place where 
+p2 79 345.4 Getting closer to zero | That is why, in calculus, the limit of one over x, as x goes to zero, does not exist.
+p2 80 349.8 Getting closer to zero | It isn't some strange, exotic number. It simply isn't there.
+p2 81 353.7 Getting closer to zero | And zero over zero is even more slippery.
+p2 82 356.1 Getting closer to zero | Take x over x. As x shrinks towards zero, the answer is always one.
+p2 83 359.7 Getting closer to zero | Take two x over x, and the answer is always two.
+p2 84 362.3 Getting closer to zero | Take x squared over x, and the answer slides down to zero.
+p2 85 365.4 Getting closer to zero | Every one of them looks like zero over zero at the end, yet the answer can be anything at 
+p2 86 371.6 Getting closer to zero | That is why zero over zero is called an indeterminate form.
+p2 87 376.8 Why not just call it i | By now, you might be thinking: why not just define one divided by zero as infinity, and be
+p2 88 383.3 Why not just call it i | The trouble is that the rest of arithmetic starts to crack.
+p2 89 386.3 Why not just call it i | Remember the rule that ties division to multiplication: if a divided by b is c, then c tim
+p2 90 391.8 Why not just call it i | So if one divided by zero is infinity, then infinity times zero must be one.
+p2 91 396.0 Why not just call it i | But by the same argument, two divided by zero is infinity too, so infinity times zero must
+p2 92 401.7 Why not just call it i | One expression, two different answers. One equals two.
+p2 93 405.2 Why not just call it i | Or try treating infinity as an ordinary number.
+p2 94 407.7 Why not just call it i | Add one to infinity, and you still have infinity. Add two to infinity, and you still have 
+p2 95 412.9 Why not just call it i | So one plus infinity equals two plus infinity.
+p2 96 415.7 Why not just call it i | Now take infinity away from both sides, the way you would with any number, and you are lef
+p2 97 422.3 Why not just call it i | And yet, mathematics does not actually forbid you from defining one divided by zero.
+p2 98 427.0 Why not just call it i | On a surface called the Riemann sphere, one divided by zero really is infinity, and it is 
+p2 99 432.7 Why not just call it i | But look at what it costs.
+p2 100 434.4 Why not just call it i | That infinity has no sign. It is not bigger than five, and not smaller than minus five.
+p2 101 438.8 Why not just call it i | Zero times infinity, infinity minus infinity, and zero over zero still have no answer.
+p2 102 443.7 Why not just call it i | So mathematics never says you can't. It says: if you do, you have to pay, by giving someth
+p2 103 450.2 What your computer doe | So what does your computer do, when you ask it to divide by zero?
+p2 104 454.0 What your computer doe | With whole numbers, most programming languages simply stop, with an error.
+p2 105 458.2 What your computer doe | It is the most honest answer there is. The machine tells you straight out: I can't compute
+p2 106 464.0 What your computer doe | But with decimal numbers, computers follow a standard called I triple E seven five four, a
+p2 107 471.0 What your computer doe | A positive number divided by zero gives Infinity. A negative number divided by zero gives 
+p2 108 476.9 What your computer doe | And zero divided by zero gives a special value called NaN, which stands for Not a Number.
+p2 109 482.1 What your computer doe | Here is a detail that echoes everything we have seen.
+p2 110 484.8 What your computer doe | The standard actually keeps two zeros, a plus zero and a minus zero, so that it can rememb
+p2 111 491.4 What your computer doe | One divided by plus zero is Infinity. One divided by minus zero is minus Infinity.
+p2 112 496.5 What your computer doe | And NaN has a very strange property. It is not equal to itself.
+p2 113 500.0 What your computer doe | Compare NaN with NaN, and the computer answers: false.
+p2 114 503.0 What your computer doe | Ask it for infinity times zero, or infinity minus infinity, and it answers NaN again.
+p2 115 507.6 What your computer doe | The machine has learned exactly the lesson we just worked out by hand.
+p2 116 511.7 What your computer doe | None of this means the standard has solved division by zero.
+p2 117 514.8 What your computer doe | It is a practical agreement, so that a program does not crash halfway through a calculatio
+p2 118 519.5 What your computer doe | The mathematical problem is still there. It has just been wrapped up in a special value, a
+p2 119 526.0 Looking back | Zero is one of the most important inventions in all of mathematics.
+p2 120 529.7 Looking back | Without it, there is no origin on a graph, no calculus, no computer.
+p2 121 533.1 Looking back | But it came with a boundary attached. You cannot divide by it.
+p2 122 537.1 Looking back | And mathematics has filled holes like this before.
+p2 123 539.9 Looking back | When subtraction ran out of answers, we invented negative numbers. When division ran out, 
+p2 124 546.0 Looking back | When square roots ran out, we invented i.
+p2 125 548.3 Looking back | Each time, a new kind of number filled the gap, and the old rules kept working.
+p2 126 553.1 Looking back | Dividing by zero is the one hole among the four operations that no new kind of number can 
+p2 127 558.8 Looking back | Every time someone has tried to step across it, the system has made them pay, by giving up
+p2 128 564.9 Looking back | So dividing by zero is not an arbitrary ban.
+p2 129 567.6 Looking back | It is a hole that cannot be filled, and that hole shows you just how tightly everything el
+p2 130 574.8 Outro | Thank you for watching all the way to the end, and see you in the next video.

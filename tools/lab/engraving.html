@@ -1,0 +1,100 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — engraving</title>
+<style>
+  @font-face{font-family:"Corm";src:url("../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"CormI";src:url("../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-weight:300 700;}
+  html,body{margin:0;background:#EFE3C6;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "engraving · thư 1654 và bản khắc đồng" (probability). Bàn thử. Chụp: node engine/render/shoot.js stills --page tools/lab/engraving.html --dur 2 --t 0.5,1.5 --outdir out/_lab/engraving
+// Ý: xác suất sinh ra trong một lá THƯ — Pascal viết cho Fermat, 29/7/1654. Cả bài là bàn viết thế kỷ 17: giấy dó
+//   vergé ngà, mực sắt nâu đen, hình minh hoạ là bản khắc đồng gạch nét (hatching), dấu sáp đỏ = kết luận đã đóng.
+//   Lời giải mỗi bài = một trang thư; số đúng được "đóng dấu sáp".
+// Vật xuyên suốt: LÁ THƯ 1654. (1) hai cược khắc trong hai ô khung · (2) lưới 36 = bảng kẻ mực trong thư · (3) phần bù =
+//   gạch nét chéo phủ phần "không muốn" · (4) cây = nét bút lông ngỗng rẽ nhánh · (5) 1000 người = hàng người khắc nhỏ.
+// Màu: giấy #EFE3C6 · mực sắt #2A2118 = chữ/nét · SÁP ĐỎ #9E2A22 = thua/sai · XANH ĐỒNG #2F6B5C = thắng/đúng ·
+//   VÀNG ÚA #D9A93A (multiply) = cái ta đếm · xúc xắc ngà #F4ECD8 chấm đỏ / chấm lam #2B4E8C (đỏ ↔ xanh của lời).
+// Chữ: Cormorant Garamond LN (số thẳng hàng) đậm 600–700, nghiêng cho lời thư; KHÔNG chữ hiện đại.
+// Tiếng: bút lông ngỗng cào giấy, gấp thư, ấn sáp (thud mềm), xúc xắc ngà trên bàn gỗ, chuông nhà thờ xa (chuyển hồi).
+import { run, W, H, mk, rr, txt, line, contact, wobble, PIPS, mix, hash, stick, P } from './prob-common.js';
+const C = { paper: '#EFE3C6', ink: '#2A2118', ink2: '#4A3B2A', win: '#2F6B5C', winInk: '#2A5F52', lose: '#9E2A22', loseInk: '#8E241D',
+  ochre: '#D9A93A', dieA: '#B5332A', dieB: '#2B4E8C', ivory: '#F6EEDB', card: '#F3E8CE', blueInk: '#2B4E8C' };
+const F = { big: '"Corm"', bigW: 700, small: '"CormI"', smallW: 600, mono: '"CormI"', monoW: 600 };
+function hatch(g, x, y, w, h, step, ang, col, lw, path) {   // gạch nét khắc trong một vùng
+  g.save(); if (path) g.clip(path); else { g.beginPath(); g.rect(x, y, w, h); g.clip(); }
+  g.strokeStyle = col; g.lineWidth = lw; const d = Math.hypot(w, h);
+  g.translate(x + w / 2, y + h / 2); g.rotate(ang);
+  for (let k = -d; k < d; k += step) { g.beginPath(); g.moveTo(-d, k); g.lineTo(d, k); g.stroke(); }
+  g.restore();
+}
+const T = {
+  C, F, dieDy: -4, dieScale: 0.84,
+  fonts: ['700 150px "Corm"', '700 108px "Corm"', '600 36px "CormI"', '600 38px "CormI"', '700 40px "Corm"'],
+  contrast: [['ink', C.ink, C.paper], ['ink2', C.ink2, C.card], ['win', C.winInk, C.card], ['lose', C.loseInk, C.card], ['inkOnOchre', C.ink, mix(C.ochre, 0.3)], ['blue', C.blueInk, C.paper]],
+  bg(k) {
+    const c = mk(), x = c.getContext('2d'); x.fillStyle = C.paper; x.fillRect(0, 0, W, H);
+    for (let gy = 0; gy < H; gy += 7) { x.fillStyle = `rgba(120,90,40,${0.035 + hash(gy) * 0.03})`; x.fillRect(0, gy, W, 1.4); }      // vân vergé
+    for (let gx = 60; gx < W; gx += 150) { x.fillStyle = 'rgba(120,90,40,0.06)'; x.fillRect(gx, 0, 2, H); }
+    for (let i = 0; i < 70; i++) { x.fillStyle = `rgba(140,100,40,${0.04 + hash(i * 3.3) * 0.06})`; x.beginPath(); x.arc(hash(i) * W, hash(i * 7.7) * H, 2 + hash(i * 5.1) * 9, 0, 7); x.fill(); }   // đốm ố
+    const v = x.createRadialGradient(W / 2, H / 2, 380, W / 2, H / 2, 1150); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(110,70,20,0.28)'); x.fillStyle = v; x.fillRect(0, 0, W, H);
+    x.strokeStyle = 'rgba(42,33,24,0.55)'; x.lineWidth = 3; x.strokeRect(40, 40, W - 80, H - 80); x.lineWidth = 1.2; x.strokeRect(52, 52, W - 104, H - 104);
+    if (k === 0) txt(x, 'Paris, 29 July 1654', W - 110, H - 80, '600 34px "CormI"', C.ink2, 'right');
+    return c;
+  },
+  panel(g, x, y, w, h, i) {                                    // khung khắc: viền đôi + góc hoa văn
+    g.fillStyle = C.card; g.fillRect(x, y, w, h);
+    g.strokeStyle = C.ink; g.lineWidth = 4; g.strokeRect(x, y, w, h); g.lineWidth = 1.5; g.strokeRect(x + 12, y + 12, w - 24, h - 24);
+    for (const [cx, cy] of [[x, y], [x + w, y], [x, y + h], [x + w, y + h]]) { g.fillStyle = C.ink; g.beginPath(); g.arc(cx, cy, 9, 0, 7); g.fill(); }
+    txt(g, i ? 'The second wager' : 'The first wager', x + 44, y + 64, '600 40px "CormI"', C.ink2, 'left');
+  },
+  die(g, cx, cy, s, n, col, rot, seed) {                       // xúc xắc ngà khắc: mặt + hông gạch nét, chấm màu
+    g.save(); g.translate(cx, cy); g.rotate(rot);
+    const d = s * 0.14, side = new Path2D(); side.moveTo(s / 2, -s / 2); side.lineTo(s / 2 + d, -s / 2 + d); side.lineTo(s / 2 + d, s / 2 + d); side.lineTo(-s / 2 + d, s / 2 + d); side.lineTo(-s / 2, s / 2); side.lineTo(s / 2, s / 2); side.closePath();
+    g.fillStyle = mix(C.ivory, -0.12); g.fill(side); hatch(g, -s / 2, -s / 2, s + d, s + d, 5, 0.8, 'rgba(42,33,24,0.55)', 1.3, side);
+    g.strokeStyle = C.ink; g.lineWidth = 2; g.stroke(side);
+    const p = rr(-s / 2, -s / 2, s, s, s * 0.12); g.fillStyle = C.ivory; g.fill(p); g.lineWidth = Math.max(2.5, s * 0.03); g.stroke(p);
+    g.fillStyle = col; for (const [px, py] of PIPS[n]) { g.beginPath(); g.arc(px * s * 0.26, py * s * 0.26, s * 0.075, 0, 7); g.fill(); }
+    g.restore();
+  },
+  strike(g, x, y, w, seed) { wobble(g, [[x, y + 3], [x + w, y - 5]], C.lose, 3.5, seed * 11, 0.8); },
+  mark(g, cx, cy, w, tag) {                                    // dấu sáp: thắng = sáp xanh đồng, thua = sáp đỏ
+    const sx = cx + w / 2 + 60, sy = cy - 40, col = tag === 'win' ? C.win : C.lose;
+    contact(g, sx + 6, sy + 30, 60, 14, 0.3, '60,30,10');
+    g.save(); g.fillStyle = col; g.beginPath(); for (let k = 0; k < 16; k++) { const a = k / 16 * Math.PI * 2, r = 50 + (hash(k + (tag === 'win' ? 3 : 9)) - 0.5) * 12; k ? g.lineTo(sx + Math.cos(a) * r, sy + Math.sin(a) * r) : g.moveTo(sx + r, sy); } g.closePath(); g.fill();
+    g.fillStyle = mix(col, -0.25); g.beginPath(); g.arc(sx, sy, 32, 0, 7); g.fill(); g.strokeStyle = mix(col, 0.3); g.lineWidth = 2.5; g.beginPath(); g.arc(sx, sy, 32, 0, 7); g.stroke();
+    txt(g, tag === 'win' ? 'P' : 'F', sx, sy + 2, '700 44px "Corm"', mix(col, 0.55), 'center', 'middle'); g.restore();
+  },
+  title(g, s, cx, y) {
+    txt(g, s, cx, y, '700 120px "Corm"', C.ink, 'center');
+    g.font = '700 120px "Corm"'; const w = g.measureText(s).width; line(g, cx - w / 2, y + 26, cx + w / 2, y + 26, C.ink, 2.5); line(g, cx - w / 2 + 60, y + 36, cx + w / 2 - 60, y + 36, C.ink, 1.2);
+  },
+  gambler(g, x, y, h) {
+    const J = stick(g, x, y, P.shrug, { h, color: C.ink, dir: 1, width: 8 });
+    const hx = J.head[0], hy = J.head[1] - J.headR * 0.55;
+    g.save(); g.fillStyle = C.ink; g.beginPath(); g.ellipse(hx, hy, h * 0.19, h * 0.03, -0.06, 0, 7); g.fill();
+    g.beginPath(); g.moveTo(hx - h * 0.08, hy); g.quadraticCurveTo(hx - h * 0.07, hy - h * 0.11, hx, hy - h * 0.11); g.quadraticCurveTo(hx + h * 0.07, hy - h * 0.11, hx + h * 0.08, hy); g.fill(); g.restore();
+    wobble(g, [[hx + h * 0.05, hy - h * 0.09], [hx + h * 0.15, hy - h * 0.2], [hx + h * 0.22, hy - h * 0.19]], C.lose, 6, 9, 1);   // lông chim
+    // cổ áo ren
+    g.save(); g.fillStyle = C.ivory; g.strokeStyle = C.ink; g.lineWidth = 2; g.beginPath(); g.ellipse(J.neck[0], J.neck[1] + 4, h * 0.07, h * 0.025, 0, 0, 7); g.fill(); g.stroke(); g.restore();
+  },
+  gridBack(g, x, y, c, n) { g.fillStyle = C.card; g.fillRect(x, y, c * n, c * n);
+    g.strokeStyle = C.ink; g.lineWidth = 3.5; g.strokeRect(x - 8, y - 8, c * n + 16, c * n + 16); g.lineWidth = 1.6;
+    for (let k = 0; k <= n; k++) { line(g, x + k * c, y, x + k * c, y + n * c, C.ink, 1.6); line(g, x, y + k * c, x + n * c, y + k * c, C.ink, 1.6); } },
+  cell(g, x, y, c, s, kind, seed) {
+    if (kind === 'seven') { g.save(); g.globalCompositeOperation = 'multiply'; g.fillStyle = mix(C.ochre, 0.3); g.fillRect(x + 3, y + 3, c - 6, c - 6); g.restore(); }
+    if (kind === 'twelve') hatch(g, x + 3, y + 3, c - 6, c - 6, 11, -0.8, 'rgba(43,78,140,0.30)', 1.6);
+    txt(g, String(s), x + c / 2, y + c / 2 + 4, `${kind ? 700 : 500} 46px "Corm"`, kind === 'twelve' ? C.blueInk : kind ? C.ink : C.ink2, 'center', 'middle');
+  },
+  key(g, x, y, s, frac, kind) {
+    if (kind === 'seven') { g.save(); g.globalCompositeOperation = 'multiply'; g.fillStyle = mix(C.ochre, 0.3); g.fillRect(x, y - 74, 100, 96); g.restore(); }
+    else hatch(g, x, y - 74, 100, 96, 11, -0.8, 'rgba(43,78,140,0.30)', 1.6);
+    g.strokeStyle = C.ink; g.lineWidth = 2; g.strokeRect(x, y - 74, 100, 96);
+    txt(g, s, x + 50, y + 2, '700 70px "Corm"', kind === 'seven' ? C.ink : C.blueInk, 'center');
+    txt(g, frac, x + 130, y, '700 70px "Corm"', kind === 'seven' ? C.ink : C.blueInk, 'left');
+  },
+  stickGrid(g, gx, gy, c) { stick(g, gx + 6 * c + 70, gy + 6 * c + 6, P.point, { h: 170, color: C.ink, dir: -1, width: 7 }); },
+};
+run(T);
+</script>

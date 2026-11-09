@@ -1,0 +1,10044 @@
+{
+ "sections": [
+  {
+   "name": "Part of the whole",
+   "act": "ACT ONE — A probability is a count",
+   "start": 0.02,
+   "end": 42.697
+  },
+  {
+   "name": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "start": 42.697,
+   "end": 122.527
+  },
+  {
+   "name": "The gambler's rule",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "start": 122.527,
+   "end": 146.211
+  },
+  {
+   "name": "Where the extra comes from",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "start": 146.211,
+   "end": 170.309
+  },
+  {
+   "name": "Count what you do not want",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "start": 170.309,
+   "end": 213.176
+  },
+  {
+   "name": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "start": 213.176,
+   "end": 264.493
+  },
+  {
+   "name": "Why our instinct does this",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "start": 264.493,
+   "end": 285.91
+  },
+  {
+   "name": "Move one: list equally likely outcomes",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "start": 285.91,
+   "end": 309.424
+  },
+  {
+   "name": "Move two: \"at least one\" means count the opposite",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "start": 309.424,
+   "end": 328.462
+  },
+  {
+   "name": "Move three: \"and\" multiplies, \"or\" adds",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "start": 328.462,
+   "end": 360.727
+  },
+  {
+   "name": "Move four: turn percentages into people",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "start": 360.727,
+   "end": 399.14
+  },
+  {
+   "name": "Move five: check the answer",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "start": 399.14,
+   "end": 418.588
+  },
+  {
+   "name": "Putting it together",
+   "act": "ACT FOUR — Putting it together",
+   "start": 418.588,
+   "end": 448.388
+  },
+  {
+   "name": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "start": 448.388,
+   "end": 472.611
+  }
+ ],
+ "lines": [
+  {
+   "section": "Part of the whole",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Roll one die. Before it lands, write down everything that could happen: one, two, three, four, five, six.",
+   "idea": false,
+   "start": 0.02,
+   "end": 4.829,
+   "words": [
+    {
+     "w": "roll",
+     "start": 0.02,
+     "end": 0.2,
+     "conf": 0.724
+    },
+    {
+     "w": "one",
+     "start": 0.26,
+     "end": 0.421,
+     "conf": 0.736
+    },
+    {
+     "w": "die",
+     "start": 0.521,
+     "end": 0.822,
+     "conf": 0.419
+    },
+    {
+     "w": "before",
+     "start": 1.162,
+     "end": 1.423,
+     "conf": 0.825
+    },
+    {
+     "w": "it",
+     "start": 1.443,
+     "end": 1.483,
+     "conf": 0.857
+    },
+    {
+     "w": "lands",
+     "start": 1.543,
+     "end": 1.803,
+     "conf": 0.773
+    },
+    {
+     "w": "write",
+     "start": 1.883,
+     "end": 2.064,
+     "conf": 0.618
+    },
+    {
+     "w": "down",
+     "start": 2.084,
+     "end": 2.184,
+     "conf": 0.992
+    },
+    {
+     "w": "everything",
+     "start": 2.204,
+     "end": 2.445,
+     "conf": 0.889
+    },
+    {
+     "w": "that",
+     "start": 2.465,
+     "end": 2.545,
+     "conf": 0.974
+    },
+    {
+     "w": "could",
+     "start": 2.565,
+     "end": 2.665,
+     "conf": 0.79
+    },
+    {
+     "w": "happen",
+     "start": 2.685,
+     "end": 2.986,
+     "conf": 0.863
+    },
+    {
+     "w": "one",
+     "start": 3.266,
+     "end": 3.406,
+     "conf": 0.292
+    },
+    {
+     "w": "two",
+     "start": 3.426,
+     "end": 3.627,
+     "conf": 0.058
+    },
+    {
+     "w": "three",
+     "start": 3.647,
+     "end": 3.907,
+     "conf": 0.007
+    },
+    {
+     "w": "four",
+     "start": 3.927,
+     "end": 4.168,
+     "conf": 0.005
+    },
+    {
+     "w": "five",
+     "start": 4.188,
+     "end": 4.528,
+     "conf": 0.006
+    },
+    {
+     "w": "six",
+     "start": 4.548,
+     "end": 4.829,
+     "conf": 0.068
+    }
+   ]
+  },
+  {
+   "section": "Part of the whole",
+   "act": "ACT ONE — A probability is a count",
+   "text": "That list is called the sample space, and the whole subject rests on it.",
+   "idea": true,
+   "start": 5.419,
+   "end": 8.737,
+   "words": [
+    {
+     "w": "that",
+     "start": 5.419,
+     "end": 5.52,
+     "conf": 0.255
+    },
+    {
+     "w": "list",
+     "start": 5.58,
+     "end": 5.741,
+     "conf": 0.734
+    },
+    {
+     "w": "is",
+     "start": 5.801,
+     "end": 5.841,
+     "conf": 0.5
+    },
+    {
+     "w": "called",
+     "start": 5.902,
+     "end": 6.123,
+     "conf": 0.803
+    },
+    {
+     "w": "the",
+     "start": 6.143,
+     "end": 6.203,
+     "conf": 0.986
+    },
+    {
+     "w": "sample",
+     "start": 6.324,
+     "end": 6.666,
+     "conf": 0.814
+    },
+    {
+     "w": "space",
+     "start": 6.686,
+     "end": 7.068,
+     "conf": 0.834
+    },
+    {
+     "w": "and",
+     "start": 7.088,
+     "end": 7.47,
+     "conf": 0.541
+    },
+    {
+     "w": "the",
+     "start": 7.49,
+     "end": 7.551,
+     "conf": 0.993
+    },
+    {
+     "w": "whole",
+     "start": 7.611,
+     "end": 7.832,
+     "conf": 0.976
+    },
+    {
+     "w": "subject",
+     "start": 7.913,
+     "end": 8.214,
+     "conf": 0.872
+    },
+    {
+     "w": "rests",
+     "start": 8.234,
+     "end": 8.556,
+     "conf": 0.977
+    },
+    {
+     "w": "on",
+     "start": 8.616,
+     "end": 8.657,
+     "conf": 0.5
+    },
+    {
+     "w": "it",
+     "start": 8.677,
+     "end": 8.737,
+     "conf": 0.336
+    }
+   ]
+  },
+  {
+   "section": "Part of the whole",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Now pick the thing you care about, say rolling a six. That is one item out of the list of six.",
+   "idea": false,
+   "start": 9.929,
+   "end": 14.281,
+   "words": [
+    {
+     "w": "now",
+     "start": 9.929,
+     "end": 10.069,
+     "conf": 0.876
+    },
+    {
+     "w": "pick",
+     "start": 10.149,
+     "end": 10.27,
+     "conf": 0.75
+    },
+    {
+     "w": "the",
+     "start": 10.29,
+     "end": 10.37,
+     "conf": 0.744
+    },
+    {
+     "w": "thing",
+     "start": 10.39,
+     "end": 10.53,
+     "conf": 0.769
+    },
+    {
+     "w": "you",
+     "start": 10.55,
+     "end": 10.631,
+     "conf": 0.773
+    },
+    {
+     "w": "care",
+     "start": 10.651,
+     "end": 10.871,
+     "conf": 0.772
+    },
+    {
+     "w": "about",
+     "start": 10.891,
+     "end": 11.132,
+     "conf": 0.999
+    },
+    {
+     "w": "say",
+     "start": 11.212,
+     "end": 11.333,
+     "conf": 0.666
+    },
+    {
+     "w": "rolling",
+     "start": 11.433,
+     "end": 11.714,
+     "conf": 0.819
+    },
+    {
+     "w": "a",
+     "start": 11.754,
+     "end": 11.774,
+     "conf": 0.001
+    },
+    {
+     "w": "six",
+     "start": 11.874,
+     "end": 12.055,
+     "conf": 0.665
+    },
+    {
+     "w": "that",
+     "start": 12.476,
+     "end": 12.576,
+     "conf": 0.592
+    },
+    {
+     "w": "is",
+     "start": 12.657,
+     "end": 12.717,
+     "conf": 0.499
+    },
+    {
+     "w": "one",
+     "start": 12.897,
+     "end": 13.018,
+     "conf": 0.666
+    },
+    {
+     "w": "item",
+     "start": 13.198,
+     "end": 13.379,
+     "conf": 0.635
+    },
+    {
+     "w": "out",
+     "start": 13.439,
+     "end": 13.519,
+     "conf": 0.662
+    },
+    {
+     "w": "of",
+     "start": 13.539,
+     "end": 13.599,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 13.619,
+     "end": 13.68,
+     "conf": 0.998
+    },
+    {
+     "w": "list",
+     "start": 13.7,
+     "end": 13.9,
+     "conf": 0.765
+    },
+    {
+     "w": "of",
+     "start": 13.96,
+     "end": 14.001,
+     "conf": 0.832
+    },
+    {
+     "w": "six",
+     "start": 14.121,
+     "end": 14.281,
+     "conf": 0.664
+    }
+   ]
+  },
+  {
+   "section": "Part of the whole",
+   "act": "ACT ONE — A probability is a count",
+   "text": "So the probability is one out of six. The part, divided by the whole.",
+   "idea": true,
+   "start": 14.831,
+   "end": 18.152,
+   "words": [
+    {
+     "w": "so",
+     "start": 14.831,
+     "end": 14.871,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 14.912,
+     "end": 14.972,
+     "conf": 0.997
+    },
+    {
+     "w": "probability",
+     "start": 14.992,
+     "end": 15.495,
+     "conf": 1.0
+    },
+    {
+     "w": "is",
+     "start": 15.576,
+     "end": 15.616,
+     "conf": 0.5
+    },
+    {
+     "w": "one",
+     "start": 15.717,
+     "end": 15.797,
+     "conf": 0.622
+    },
+    {
+     "w": "out",
+     "start": 15.817,
+     "end": 15.938,
+     "conf": 0.75
+    },
+    {
+     "w": "of",
+     "start": 15.958,
+     "end": 15.999,
+     "conf": 0.996
+    },
+    {
+     "w": "six",
+     "start": 16.119,
+     "end": 16.301,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 16.804,
+     "end": 16.864,
+     "conf": 0.016
+    },
+    {
+     "w": "part",
+     "start": 16.884,
+     "end": 17.186,
+     "conf": 0.976
+    },
+    {
+     "w": "divided",
+     "start": 17.327,
+     "end": 17.69,
+     "conf": 0.862
+    },
+    {
+     "w": "by",
+     "start": 17.71,
+     "end": 17.83,
+     "conf": 0.676
+    },
+    {
+     "w": "the",
+     "start": 17.851,
+     "end": 17.931,
+     "conf": 0.987
+    },
+    {
+     "w": "whole",
+     "start": 17.951,
+     "end": 18.152,
+     "conf": 0.47
+    }
+   ]
+  },
+  {
+   "section": "Part of the whole",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Rolling an even number is three items out of six, so one half.",
+   "idea": false,
+   "start": 19.143,
+   "end": 22.076,
+   "words": [
+    {
+     "w": "rolling",
+     "start": 19.143,
+     "end": 19.364,
+     "conf": 0.937
+    },
+    {
+     "w": "an",
+     "start": 19.384,
+     "end": 19.424,
+     "conf": 0.6
+    },
+    {
+     "w": "even",
+     "start": 19.465,
+     "end": 19.625,
+     "conf": 0.917
+    },
+    {
+     "w": "number",
+     "start": 19.686,
+     "end": 19.906,
+     "conf": 0.986
+    },
+    {
+     "w": "is",
+     "start": 19.927,
+     "end": 20.007,
+     "conf": 0.498
+    },
+    {
+     "w": "three",
+     "start": 20.087,
+     "end": 20.268,
+     "conf": 0.824
+    },
+    {
+     "w": "items",
+     "start": 20.389,
+     "end": 20.63,
+     "conf": 0.998
+    },
+    {
+     "w": "out",
+     "start": 20.69,
+     "end": 20.79,
+     "conf": 0.999
+    },
+    {
+     "w": "of",
+     "start": 20.811,
+     "end": 20.871,
+     "conf": 0.994
+    },
+    {
+     "w": "six",
+     "start": 20.951,
+     "end": 21.152,
+     "conf": 0.666
+    },
+    {
+     "w": "so",
+     "start": 21.453,
+     "end": 21.534,
+     "conf": 0.987
+    },
+    {
+     "w": "one",
+     "start": 21.694,
+     "end": 21.795,
+     "conf": 0.663
+    },
+    {
+     "w": "half",
+     "start": 21.815,
+     "end": 22.076,
+     "conf": 0.751
+    }
+   ]
+  },
+  {
+   "section": "Part of the whole",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Something that cannot happen, like rolling a seven, is none of the list, which is zero.",
+   "idea": false,
+   "start": 22.526,
+   "end": 26.675,
+   "words": [
+    {
+     "w": "something",
+     "start": 22.526,
+     "end": 22.767,
+     "conf": 0.999
+    },
+    {
+     "w": "that",
+     "start": 22.787,
+     "end": 22.887,
+     "conf": 0.999
+    },
+    {
+     "w": "cannot",
+     "start": 22.947,
+     "end": 23.227,
+     "conf": 0.833
+    },
+    {
+     "w": "happen",
+     "start": 23.288,
+     "end": 23.588,
+     "conf": 0.979
+    },
+    {
+     "w": "like",
+     "start": 23.929,
+     "end": 24.089,
+     "conf": 0.761
+    },
+    {
+     "w": "rolling",
+     "start": 24.169,
+     "end": 24.45,
+     "conf": 0.735
+    },
+    {
+     "w": "a",
+     "start": 24.49,
+     "end": 24.51,
+     "conf": 0.005
+    },
+    {
+     "w": "seven",
+     "start": 24.61,
+     "end": 24.851,
+     "conf": 0.766
+    },
+    {
+     "w": "is",
+     "start": 25.232,
+     "end": 25.272,
+     "conf": 0.498
+    },
+    {
+     "w": "none",
+     "start": 25.292,
+     "end": 25.432,
+     "conf": 0.68
+    },
+    {
+     "w": "of",
+     "start": 25.452,
+     "end": 25.512,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 25.532,
+     "end": 25.612,
+     "conf": 0.939
+    },
+    {
+     "w": "list",
+     "start": 25.673,
+     "end": 25.913,
+     "conf": 0.721
+    },
+    {
+     "w": "which",
+     "start": 26.154,
+     "end": 26.274,
+     "conf": 0.638
+    },
+    {
+     "w": "is",
+     "start": 26.334,
+     "end": 26.374,
+     "conf": 0.487
+    },
+    {
+     "w": "zero",
+     "start": 26.454,
+     "end": 26.675,
+     "conf": 0.451
+    }
+   ]
+  },
+  {
+   "section": "Part of the whole",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Something that must happen, like rolling a number from one to six, is the whole list, which is one.",
+   "idea": true,
+   "start": 27.105,
+   "end": 32.078,
+   "words": [
+    {
+     "w": "something",
+     "start": 27.105,
+     "end": 27.366,
+     "conf": 0.986
+    },
+    {
+     "w": "that",
+     "start": 27.386,
+     "end": 27.486,
+     "conf": 0.997
+    },
+    {
+     "w": "must",
+     "start": 27.526,
+     "end": 27.747,
+     "conf": 0.932
+    },
+    {
+     "w": "happen",
+     "start": 27.767,
+     "end": 28.067,
+     "conf": 0.882
+    },
+    {
+     "w": "like",
+     "start": 28.448,
+     "end": 28.609,
+     "conf": 0.825
+    },
+    {
+     "w": "rolling",
+     "start": 28.669,
+     "end": 28.91,
+     "conf": 0.783
+    },
+    {
+     "w": "a",
+     "start": 28.93,
+     "end": 28.95,
+     "conf": 0.995
+    },
+    {
+     "w": "number",
+     "start": 28.97,
+     "end": 29.23,
+     "conf": 0.867
+    },
+    {
+     "w": "from",
+     "start": 29.271,
+     "end": 29.391,
+     "conf": 0.774
+    },
+    {
+     "w": "one",
+     "start": 29.491,
+     "end": 29.591,
+     "conf": 0.603
+    },
+    {
+     "w": "to",
+     "start": 29.651,
+     "end": 29.712,
+     "conf": 0.466
+    },
+    {
+     "w": "six",
+     "start": 29.812,
+     "end": 30.012,
+     "conf": 0.461
+    },
+    {
+     "w": "is",
+     "start": 30.333,
+     "end": 30.373,
+     "conf": 0.493
+    },
+    {
+     "w": "the",
+     "start": 30.393,
+     "end": 30.754,
+     "conf": 0.663
+    },
+    {
+     "w": "whole",
+     "start": 30.814,
+     "end": 31.015,
+     "conf": 0.703
+    },
+    {
+     "w": "list",
+     "start": 31.095,
+     "end": 31.396,
+     "conf": 0.699
+    },
+    {
+     "w": "which",
+     "start": 31.616,
+     "end": 31.757,
+     "conf": 0.792
+    },
+    {
+     "w": "is",
+     "start": 31.797,
+     "end": 31.857,
+     "conf": 0.49
+    },
+    {
+     "w": "one",
+     "start": 31.977,
+     "end": 32.078,
+     "conf": 0.654
+    }
+   ]
+  },
+  {
+   "section": "Part of the whole",
+   "act": "ACT ONE — A probability is a count",
+   "text": "So every probability lives on a line from zero to one, and that is not a rule someone decided.",
+   "idea": false,
+   "start": 33.068,
+   "end": 37.563,
+   "words": [
+    {
+     "w": "so",
+     "start": 33.068,
+     "end": 33.108,
+     "conf": 0.998
+    },
+    {
+     "w": "every",
+     "start": 33.188,
+     "end": 33.329,
+     "conf": 0.958
+    },
+    {
+     "w": "probability",
+     "start": 33.369,
+     "end": 33.951,
+     "conf": 0.917
+    },
+    {
+     "w": "lives",
+     "start": 34.071,
+     "end": 34.252,
+     "conf": 0.795
+    },
+    {
+     "w": "on",
+     "start": 34.272,
+     "end": 34.352,
+     "conf": 0.888
+    },
+    {
+     "w": "a",
+     "start": 34.372,
+     "end": 34.393,
+     "conf": 0.982
+    },
+    {
+     "w": "line",
+     "start": 34.473,
+     "end": 34.673,
+     "conf": 0.657
+    },
+    {
+     "w": "from",
+     "start": 34.694,
+     "end": 34.814,
+     "conf": 0.978
+    },
+    {
+     "w": "zero",
+     "start": 34.834,
+     "end": 35.095,
+     "conf": 0.44
+    },
+    {
+     "w": "to",
+     "start": 35.215,
+     "end": 35.255,
+     "conf": 0.392
+    },
+    {
+     "w": "one",
+     "start": 35.476,
+     "end": 35.576,
+     "conf": 0.119
+    },
+    {
+     "w": "and",
+     "start": 35.817,
+     "end": 35.878,
+     "conf": 0.664
+    },
+    {
+     "w": "that",
+     "start": 35.898,
+     "end": 35.998,
+     "conf": 0.6
+    },
+    {
+     "w": "is",
+     "start": 36.018,
+     "end": 36.098,
+     "conf": 0.666
+    },
+    {
+     "w": "not",
+     "start": 36.158,
+     "end": 36.279,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 36.339,
+     "end": 36.359,
+     "conf": 0.007
+    },
+    {
+     "w": "rule",
+     "start": 36.48,
+     "end": 36.72,
+     "conf": 0.734
+    },
+    {
+     "w": "someone",
+     "start": 36.801,
+     "end": 37.102,
+     "conf": 0.835
+    },
+    {
+     "w": "decided",
+     "start": 37.162,
+     "end": 37.563,
+     "conf": 0.857
+    }
+   ]
+  },
+  {
+   "section": "Part of the whole",
+   "act": "ACT ONE — A probability is a count",
+   "text": "A part can never be bigger than the whole, or smaller than nothing.",
+   "idea": true,
+   "start": 37.973,
+   "end": 41.057,
+   "words": [
+    {
+     "w": "a",
+     "start": 37.973,
+     "end": 37.993,
+     "conf": 0.759
+    },
+    {
+     "w": "part",
+     "start": 38.013,
+     "end": 38.235,
+     "conf": 0.998
+    },
+    {
+     "w": "can",
+     "start": 38.296,
+     "end": 38.417,
+     "conf": 0.673
+    },
+    {
+     "w": "never",
+     "start": 38.477,
+     "end": 38.719,
+     "conf": 0.821
+    },
+    {
+     "w": "be",
+     "start": 38.779,
+     "end": 38.82,
+     "conf": 0.5
+    },
+    {
+     "w": "bigger",
+     "start": 38.92,
+     "end": 39.122,
+     "conf": 0.833
+    },
+    {
+     "w": "than",
+     "start": 39.142,
+     "end": 39.263,
+     "conf": 0.994
+    },
+    {
+     "w": "the",
+     "start": 39.283,
+     "end": 39.384,
+     "conf": 0.704
+    },
+    {
+     "w": "whole",
+     "start": 39.444,
+     "end": 39.727,
+     "conf": 0.635
+    },
+    {
+     "w": "or",
+     "start": 39.908,
+     "end": 40.009,
+     "conf": 0.981
+    },
+    {
+     "w": "smaller",
+     "start": 40.291,
+     "end": 40.613,
+     "conf": 0.855
+    },
+    {
+     "w": "than",
+     "start": 40.633,
+     "end": 40.754,
+     "conf": 0.908
+    },
+    {
+     "w": "nothing",
+     "start": 40.815,
+     "end": 41.057,
+     "conf": 0.466
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "There is one condition hiding in that division, and almost every mistake in probability breaks it.",
+   "idea": false,
+   "start": 42.697,
+   "end": 47.665,
+   "words": [
+    {
+     "w": "there",
+     "start": 42.697,
+     "end": 42.797,
+     "conf": 0.214
+    },
+    {
+     "w": "is",
+     "start": 42.817,
+     "end": 42.877,
+     "conf": 0.997
+    },
+    {
+     "w": "one",
+     "start": 43.018,
+     "end": 43.138,
+     "conf": 0.962
+    },
+    {
+     "w": "condition",
+     "start": 43.178,
+     "end": 43.578,
+     "conf": 0.888
+    },
+    {
+     "w": "hiding",
+     "start": 43.919,
+     "end": 44.32,
+     "conf": 0.943
+    },
+    {
+     "w": "in",
+     "start": 44.38,
+     "end": 44.44,
+     "conf": 0.5
+    },
+    {
+     "w": "that",
+     "start": 44.46,
+     "end": 44.6,
+     "conf": 0.996
+    },
+    {
+     "w": "division",
+     "start": 44.68,
+     "end": 45.021,
+     "conf": 0.881
+    },
+    {
+     "w": "and",
+     "start": 45.441,
+     "end": 45.521,
+     "conf": 0.666
+    },
+    {
+     "w": "almost",
+     "start": 45.581,
+     "end": 45.882,
+     "conf": 0.858
+    },
+    {
+     "w": "every",
+     "start": 46.002,
+     "end": 46.162,
+     "conf": 0.831
+    },
+    {
+     "w": "mistake",
+     "start": 46.182,
+     "end": 46.603,
+     "conf": 0.842
+    },
+    {
+     "w": "in",
+     "start": 46.643,
+     "end": 46.683,
+     "conf": 0.499
+    },
+    {
+     "w": "probability",
+     "start": 46.763,
+     "end": 47.304,
+     "conf": 0.907
+    },
+    {
+     "w": "breaks",
+     "start": 47.384,
+     "end": 47.605,
+     "conf": 0.813
+    },
+    {
+     "w": "it",
+     "start": 47.625,
+     "end": 47.665,
+     "conf": 0.524
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "The items in the list have to be equally likely.",
+   "idea": true,
+   "start": 48.055,
+   "end": 50.214,
+   "words": [
+    {
+     "w": "the",
+     "start": 48.055,
+     "end": 48.116,
+     "conf": 0.006
+    },
+    {
+     "w": "items",
+     "start": 48.217,
+     "end": 48.479,
+     "conf": 0.992
+    },
+    {
+     "w": "in",
+     "start": 48.499,
+     "end": 48.559,
+     "conf": 0.993
+    },
+    {
+     "w": "the",
+     "start": 48.58,
+     "end": 48.64,
+     "conf": 0.987
+    },
+    {
+     "w": "list",
+     "start": 48.66,
+     "end": 48.902,
+     "conf": 0.795
+    },
+    {
+     "w": "have",
+     "start": 48.983,
+     "end": 49.124,
+     "conf": 0.583
+    },
+    {
+     "w": "to",
+     "start": 49.205,
+     "end": 49.245,
+     "conf": 0.567
+    },
+    {
+     "w": "be",
+     "start": 49.306,
+     "end": 49.346,
+     "conf": 0.487
+    },
+    {
+     "w": "equally",
+     "start": 49.508,
+     "end": 49.83,
+     "conf": 0.768
+    },
+    {
+     "w": "likely",
+     "start": 49.911,
+     "end": 50.214,
+     "conf": 0.742
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Roll two dice and add them. The totals run from two to twelve, which is eleven different answers.",
+   "idea": false,
+   "start": 51.224,
+   "end": 55.976,
+   "words": [
+    {
+     "w": "roll",
+     "start": 51.224,
+     "end": 51.384,
+     "conf": 0.821
+    },
+    {
+     "w": "two",
+     "start": 51.445,
+     "end": 51.605,
+     "conf": 0.985
+    },
+    {
+     "w": "dice",
+     "start": 51.645,
+     "end": 51.966,
+     "conf": 0.963
+    },
+    {
+     "w": "and",
+     "start": 52.106,
+     "end": 52.206,
+     "conf": 0.995
+    },
+    {
+     "w": "add",
+     "start": 52.227,
+     "end": 52.307,
+     "conf": 0.0
+    },
+    {
+     "w": "them",
+     "start": 52.407,
+     "end": 52.587,
+     "conf": 0.901
+    },
+    {
+     "w": "the",
+     "start": 52.607,
+     "end": 53.008,
+     "conf": 0.666
+    },
+    {
+     "w": "totals",
+     "start": 53.069,
+     "end": 53.389,
+     "conf": 0.83
+    },
+    {
+     "w": "run",
+     "start": 53.47,
+     "end": 53.57,
+     "conf": 0.665
+    },
+    {
+     "w": "from",
+     "start": 53.65,
+     "end": 53.75,
+     "conf": 0.751
+    },
+    {
+     "w": "two",
+     "start": 53.851,
+     "end": 53.971,
+     "conf": 0.422
+    },
+    {
+     "w": "to",
+     "start": 53.991,
+     "end": 54.071,
+     "conf": 0.789
+    },
+    {
+     "w": "twelve",
+     "start": 54.131,
+     "end": 54.472,
+     "conf": 0.519
+    },
+    {
+     "w": "which",
+     "start": 54.492,
+     "end": 54.733,
+     "conf": 0.798
+    },
+    {
+     "w": "is",
+     "start": 54.753,
+     "end": 54.833,
+     "conf": 0.964
+    },
+    {
+     "w": "eleven",
+     "start": 54.893,
+     "end": 55.214,
+     "conf": 0.832
+    },
+    {
+     "w": "different",
+     "start": 55.314,
+     "end": 55.575,
+     "conf": 0.893
+    },
+    {
+     "w": "answers",
+     "start": 55.695,
+     "end": 55.976,
+     "conf": 0.531
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "So is a total of seven one chance in eleven?",
+   "idea": true,
+   "start": 56.406,
+   "end": 58.192,
+   "words": [
+    {
+     "w": "so",
+     "start": 56.406,
+     "end": 56.446,
+     "conf": 0.988
+    },
+    {
+     "w": "is",
+     "start": 56.486,
+     "end": 56.547,
+     "conf": 0.594
+    },
+    {
+     "w": "a",
+     "start": 56.607,
+     "end": 56.627,
+     "conf": 0.003
+    },
+    {
+     "w": "total",
+     "start": 56.647,
+     "end": 56.908,
+     "conf": 0.993
+    },
+    {
+     "w": "of",
+     "start": 56.928,
+     "end": 56.988,
+     "conf": 0.992
+    },
+    {
+     "w": "seven",
+     "start": 57.088,
+     "end": 57.269,
+     "conf": 0.783
+    },
+    {
+     "w": "one",
+     "start": 57.369,
+     "end": 57.47,
+     "conf": 0.653
+    },
+    {
+     "w": "chance",
+     "start": 57.53,
+     "end": 57.811,
+     "conf": 0.785
+    },
+    {
+     "w": "in",
+     "start": 57.831,
+     "end": 57.891,
+     "conf": 0.834
+    },
+    {
+     "w": "eleven",
+     "start": 57.931,
+     "end": 58.192,
+     "conf": 0.758
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "It is tempting, and it is wrong. Eleven is a list of answers, not a list of equally likely outcomes.",
+   "idea": true,
+   "start": 59.242,
+   "end": 64.156,
+   "words": [
+    {
+     "w": "it",
+     "start": 59.242,
+     "end": 59.302,
+     "conf": 0.811
+    },
+    {
+     "w": "is",
+     "start": 59.362,
+     "end": 59.403,
+     "conf": 0.498
+    },
+    {
+     "w": "tempting",
+     "start": 59.463,
+     "end": 59.844,
+     "conf": 0.939
+    },
+    {
+     "w": "and",
+     "start": 60.085,
+     "end": 60.145,
+     "conf": 0.661
+    },
+    {
+     "w": "it",
+     "start": 60.205,
+     "end": 60.265,
+     "conf": 0.491
+    },
+    {
+     "w": "is",
+     "start": 60.305,
+     "end": 60.365,
+     "conf": 0.996
+    },
+    {
+     "w": "wrong",
+     "start": 60.385,
+     "end": 60.646,
+     "conf": 0.834
+    },
+    {
+     "w": "eleven",
+     "start": 61.188,
+     "end": 61.428,
+     "conf": 0.833
+    },
+    {
+     "w": "is",
+     "start": 61.489,
+     "end": 61.549,
+     "conf": 0.497
+    },
+    {
+     "w": "a",
+     "start": 61.609,
+     "end": 61.629,
+     "conf": 0.071
+    },
+    {
+     "w": "list",
+     "start": 61.649,
+     "end": 61.81,
+     "conf": 0.985
+    },
+    {
+     "w": "of",
+     "start": 61.87,
+     "end": 61.91,
+     "conf": 0.499
+    },
+    {
+     "w": "answers",
+     "start": 61.97,
+     "end": 62.291,
+     "conf": 0.655
+    },
+    {
+     "w": "not",
+     "start": 62.552,
+     "end": 62.692,
+     "conf": 0.755
+    },
+    {
+     "w": "a",
+     "start": 62.752,
+     "end": 62.772,
+     "conf": 0.002
+    },
+    {
+     "w": "list",
+     "start": 62.792,
+     "end": 62.973,
+     "conf": 0.95
+    },
+    {
+     "w": "of",
+     "start": 63.033,
+     "end": 63.073,
+     "conf": 0.499
+    },
+    {
+     "w": "equally",
+     "start": 63.153,
+     "end": 63.394,
+     "conf": 0.827
+    },
+    {
+     "w": "likely",
+     "start": 63.454,
+     "end": 63.695,
+     "conf": 0.956
+    },
+    {
+     "w": "outcomes",
+     "start": 63.775,
+     "end": 64.156,
+     "conf": 0.873
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Paint one die red and the other blue. The red die can land six ways, and for each of those the blue die can land six ways.",
+   "idea": false,
+   "start": 65.167,
+   "end": 70.999,
+   "words": [
+    {
+     "w": "paint",
+     "start": 65.167,
+     "end": 65.327,
+     "conf": 0.978
+    },
+    {
+     "w": "one",
+     "start": 65.408,
+     "end": 65.548,
+     "conf": 0.882
+    },
+    {
+     "w": "die",
+     "start": 65.588,
+     "end": 65.768,
+     "conf": 0.492
+    },
+    {
+     "w": "red",
+     "start": 65.828,
+     "end": 65.969,
+     "conf": 0.997
+    },
+    {
+     "w": "and",
+     "start": 65.989,
+     "end": 66.049,
+     "conf": 0.431
+    },
+    {
+     "w": "the",
+     "start": 66.069,
+     "end": 66.129,
+     "conf": 0.993
+    },
+    {
+     "w": "other",
+     "start": 66.209,
+     "end": 66.329,
+     "conf": 0.797
+    },
+    {
+     "w": "blue",
+     "start": 66.349,
+     "end": 66.57,
+     "conf": 0.749
+    },
+    {
+     "w": "the",
+     "start": 66.59,
+     "end": 67.071,
+     "conf": 0.664
+    },
+    {
+     "w": "red",
+     "start": 67.131,
+     "end": 67.251,
+     "conf": 0.711
+    },
+    {
+     "w": "die",
+     "start": 67.311,
+     "end": 67.492,
+     "conf": 0.484
+    },
+    {
+     "w": "can",
+     "start": 67.512,
+     "end": 67.632,
+     "conf": 0.98
+    },
+    {
+     "w": "land",
+     "start": 67.692,
+     "end": 67.853,
+     "conf": 0.749
+    },
+    {
+     "w": "six",
+     "start": 67.993,
+     "end": 68.133,
+     "conf": 0.666
+    },
+    {
+     "w": "ways",
+     "start": 68.273,
+     "end": 68.574,
+     "conf": 0.749
+    },
+    {
+     "w": "and",
+     "start": 68.594,
+     "end": 68.895,
+     "conf": 0.661
+    },
+    {
+     "w": "for",
+     "start": 68.915,
+     "end": 68.995,
+     "conf": 0.981
+    },
+    {
+     "w": "each",
+     "start": 69.015,
+     "end": 69.175,
+     "conf": 0.833
+    },
+    {
+     "w": "of",
+     "start": 69.195,
+     "end": 69.255,
+     "conf": 0.666
+    },
+    {
+     "w": "those",
+     "start": 69.275,
+     "end": 69.476,
+     "conf": 0.892
+    },
+    {
+     "w": "the",
+     "start": 69.496,
+     "end": 69.556,
+     "conf": 0.955
+    },
+    {
+     "w": "blue",
+     "start": 69.576,
+     "end": 69.736,
+     "conf": 0.697
+    },
+    {
+     "w": "die",
+     "start": 69.756,
+     "end": 69.937,
+     "conf": 0.814
+    },
+    {
+     "w": "can",
+     "start": 69.957,
+     "end": 70.057,
+     "conf": 0.924
+    },
+    {
+     "w": "land",
+     "start": 70.097,
+     "end": 70.277,
+     "conf": 0.78
+    },
+    {
+     "w": "six",
+     "start": 70.398,
+     "end": 70.538,
+     "conf": 0.667
+    },
+    {
+     "w": "ways",
+     "start": 70.698,
+     "end": 70.999,
+     "conf": 0.749
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "That is a grid of thirty-six squares, and every square is exactly as likely as every other one.",
+   "idea": true,
+   "start": 71.449,
+   "end": 76.174,
+   "words": [
+    {
+     "w": "that",
+     "start": 71.449,
+     "end": 71.549,
+     "conf": 0.59
+    },
+    {
+     "w": "is",
+     "start": 71.629,
+     "end": 71.669,
+     "conf": 0.497
+    },
+    {
+     "w": "a",
+     "start": 71.729,
+     "end": 71.749,
+     "conf": 0.004
+    },
+    {
+     "w": "grid",
+     "start": 71.769,
+     "end": 71.93,
+     "conf": 0.842
+    },
+    {
+     "w": "of",
+     "start": 71.95,
+     "end": 72.01,
+     "conf": 0.994
+    },
+    {
+     "w": "thirty-six",
+     "start": 72.11,
+     "end": 72.69,
+     "conf": 0.025
+    },
+    {
+     "w": "squares",
+     "start": 72.851,
+     "end": 73.311,
+     "conf": 0.713
+    },
+    {
+     "w": "and",
+     "start": 73.411,
+     "end": 73.491,
+     "conf": 0.709
+    },
+    {
+     "w": "every",
+     "start": 73.571,
+     "end": 73.732,
+     "conf": 0.799
+    },
+    {
+     "w": "square",
+     "start": 73.832,
+     "end": 74.092,
+     "conf": 0.736
+    },
+    {
+     "w": "is",
+     "start": 74.152,
+     "end": 74.192,
+     "conf": 0.5
+    },
+    {
+     "w": "exactly",
+     "start": 74.292,
+     "end": 74.873,
+     "conf": 0.835
+    },
+    {
+     "w": "as",
+     "start": 74.933,
+     "end": 74.973,
+     "conf": 0.5
+    },
+    {
+     "w": "likely",
+     "start": 75.033,
+     "end": 75.313,
+     "conf": 0.934
+    },
+    {
+     "w": "as",
+     "start": 75.414,
+     "end": 75.494,
+     "conf": 0.5
+    },
+    {
+     "w": "every",
+     "start": 75.574,
+     "end": 75.754,
+     "conf": 0.759
+    },
+    {
+     "w": "other",
+     "start": 75.874,
+     "end": 76.014,
+     "conf": 0.822
+    },
+    {
+     "w": "one",
+     "start": 76.114,
+     "end": 76.174,
+     "conf": 0.661
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Now look for the sevens. One and six, two and five, three and four, and each of those the other way round.",
+   "idea": false,
+   "start": 77.184,
+   "end": 82.406,
+   "words": [
+    {
+     "w": "now",
+     "start": 77.184,
+     "end": 77.264,
+     "conf": 0.981
+    },
+    {
+     "w": "look",
+     "start": 77.305,
+     "end": 77.425,
+     "conf": 0.997
+    },
+    {
+     "w": "for",
+     "start": 77.445,
+     "end": 77.526,
+     "conf": 0.674
+    },
+    {
+     "w": "the",
+     "start": 77.546,
+     "end": 77.626,
+     "conf": 0.803
+    },
+    {
+     "w": "sevens",
+     "start": 77.666,
+     "end": 78.108,
+     "conf": 0.805
+    },
+    {
+     "w": "one",
+     "start": 78.65,
+     "end": 78.731,
+     "conf": 0.611
+    },
+    {
+     "w": "and",
+     "start": 78.751,
+     "end": 78.851,
+     "conf": 0.862
+    },
+    {
+     "w": "six",
+     "start": 78.931,
+     "end": 79.132,
+     "conf": 0.325
+    },
+    {
+     "w": "two",
+     "start": 79.293,
+     "end": 79.875,
+     "conf": 0.033
+    },
+    {
+     "w": "and",
+     "start": 79.915,
+     "end": 79.996,
+     "conf": 0.235
+    },
+    {
+     "w": "five",
+     "start": 80.016,
+     "end": 80.377,
+     "conf": 0.051
+    },
+    {
+     "w": "three",
+     "start": 80.397,
+     "end": 80.578,
+     "conf": 0.263
+    },
+    {
+     "w": "and",
+     "start": 80.598,
+     "end": 80.659,
+     "conf": 0.524
+    },
+    {
+     "w": "four",
+     "start": 80.679,
+     "end": 80.92,
+     "conf": 0.184
+    },
+    {
+     "w": "and",
+     "start": 81.0,
+     "end": 81.06,
+     "conf": 0.645
+    },
+    {
+     "w": "each",
+     "start": 81.08,
+     "end": 81.241,
+     "conf": 0.797
+    },
+    {
+     "w": "of",
+     "start": 81.261,
+     "end": 81.321,
+     "conf": 0.995
+    },
+    {
+     "w": "those",
+     "start": 81.341,
+     "end": 81.562,
+     "conf": 0.961
+    },
+    {
+     "w": "the",
+     "start": 81.582,
+     "end": 81.683,
+     "conf": 0.786
+    },
+    {
+     "w": "other",
+     "start": 81.803,
+     "end": 81.904,
+     "conf": 0.795
+    },
+    {
+     "w": "way",
+     "start": 81.924,
+     "end": 82.044,
+     "conf": 0.998
+    },
+    {
+     "w": "round",
+     "start": 82.125,
+     "end": 82.406,
+     "conf": 0.92
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Six squares out of thirty-six, so one in six.",
+   "idea": true,
+   "start": 82.857,
+   "end": 84.977,
+   "words": [
+    {
+     "w": "six",
+     "start": 82.857,
+     "end": 82.998,
+     "conf": 0.558
+    },
+    {
+     "w": "squares",
+     "start": 83.099,
+     "end": 83.402,
+     "conf": 0.779
+    },
+    {
+     "w": "out",
+     "start": 83.503,
+     "end": 83.564,
+     "conf": 0.394
+    },
+    {
+     "w": "of",
+     "start": 83.584,
+     "end": 83.624,
+     "conf": 0.002
+    },
+    {
+     "w": "thirty-six",
+     "start": 83.644,
+     "end": 84.129,
+     "conf": 0.119
+    },
+    {
+     "w": "so",
+     "start": 84.371,
+     "end": 84.432,
+     "conf": 0.346
+    },
+    {
+     "w": "one",
+     "start": 84.553,
+     "end": 84.614,
+     "conf": 0.407
+    },
+    {
+     "w": "in",
+     "start": 84.634,
+     "end": 84.715,
+     "conf": 0.723
+    },
+    {
+     "w": "six",
+     "start": 84.795,
+     "end": 84.977,
+     "conf": 0.374
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "And a total of twelve? Only one square, six and six. One in thirty-six.",
+   "idea": false,
+   "start": 86.028,
+   "end": 89.119,
+   "words": [
+    {
+     "w": "and",
+     "start": 86.028,
+     "end": 86.108,
+     "conf": 0.992
+    },
+    {
+     "w": "a",
+     "start": 86.128,
+     "end": 86.148,
+     "conf": 0.996
+    },
+    {
+     "w": "total",
+     "start": 86.189,
+     "end": 86.429,
+     "conf": 0.999
+    },
+    {
+     "w": "of",
+     "start": 86.45,
+     "end": 86.51,
+     "conf": 0.995
+    },
+    {
+     "w": "twelve",
+     "start": 86.57,
+     "end": 86.891,
+     "conf": 0.762
+    },
+    {
+     "w": "only",
+     "start": 87.112,
+     "end": 87.212,
+     "conf": 0.65
+    },
+    {
+     "w": "one",
+     "start": 87.312,
+     "end": 87.413,
+     "conf": 0.663
+    },
+    {
+     "w": "square",
+     "start": 87.433,
+     "end": 87.674,
+     "conf": 0.827
+    },
+    {
+     "w": "six",
+     "start": 87.694,
+     "end": 87.854,
+     "conf": 0.48
+    },
+    {
+     "w": "and",
+     "start": 87.975,
+     "end": 88.035,
+     "conf": 0.099
+    },
+    {
+     "w": "six",
+     "start": 88.055,
+     "end": 88.195,
+     "conf": 0.54
+    },
+    {
+     "w": "one",
+     "start": 88.376,
+     "end": 88.456,
+     "conf": 0.577
+    },
+    {
+     "w": "in",
+     "start": 88.476,
+     "end": 88.517,
+     "conf": 0.537
+    },
+    {
+     "w": "thirty-six",
+     "start": 88.537,
+     "end": 89.119,
+     "conf": 0.179
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Seven is six times as likely as twelve, even though both were just one item on the list of totals.",
+   "idea": true,
+   "start": 89.669,
+   "end": 94.389,
+   "words": [
+    {
+     "w": "seven",
+     "start": 89.669,
+     "end": 89.89,
+     "conf": 0.791
+    },
+    {
+     "w": "is",
+     "start": 89.95,
+     "end": 90.011,
+     "conf": 0.49
+    },
+    {
+     "w": "six",
+     "start": 90.151,
+     "end": 90.292,
+     "conf": 0.664
+    },
+    {
+     "w": "times",
+     "start": 90.412,
+     "end": 90.633,
+     "conf": 0.821
+    },
+    {
+     "w": "as",
+     "start": 90.653,
+     "end": 90.734,
+     "conf": 0.664
+    },
+    {
+     "w": "likely",
+     "start": 90.794,
+     "end": 91.015,
+     "conf": 0.996
+    },
+    {
+     "w": "as",
+     "start": 91.075,
+     "end": 91.135,
+     "conf": 0.996
+    },
+    {
+     "w": "twelve",
+     "start": 91.216,
+     "end": 91.557,
+     "conf": 0.815
+    },
+    {
+     "w": "even",
+     "start": 91.778,
+     "end": 91.898,
+     "conf": 0.749
+    },
+    {
+     "w": "though",
+     "start": 91.919,
+     "end": 92.059,
+     "conf": 0.925
+    },
+    {
+     "w": "both",
+     "start": 92.079,
+     "end": 92.32,
+     "conf": 0.813
+    },
+    {
+     "w": "were",
+     "start": 92.4,
+     "end": 92.541,
+     "conf": 0.748
+    },
+    {
+     "w": "just",
+     "start": 92.621,
+     "end": 92.782,
+     "conf": 0.732
+    },
+    {
+     "w": "one",
+     "start": 92.983,
+     "end": 93.103,
+     "conf": 0.665
+    },
+    {
+     "w": "item",
+     "start": 93.264,
+     "end": 93.465,
+     "conf": 0.703
+    },
+    {
+     "w": "on",
+     "start": 93.505,
+     "end": 93.545,
+     "conf": 0.501
+    },
+    {
+     "w": "the",
+     "start": 93.565,
+     "end": 93.646,
+     "conf": 0.932
+    },
+    {
+     "w": "list",
+     "start": 93.666,
+     "end": 93.826,
+     "conf": 0.96
+    },
+    {
+     "w": "of",
+     "start": 93.887,
+     "end": 93.927,
+     "conf": 0.499
+    },
+    {
+     "w": "totals",
+     "start": 93.987,
+     "end": 94.389,
+     "conf": 0.825
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "Researchers who study how people learn probability have a name for this: the equiprobability bias, treating every answer as if it were equally likely.",
+   "idea": false,
+   "start": 95.399,
+   "end": 102.844,
+   "words": [
+    {
+     "w": "researchers",
+     "start": 95.399,
+     "end": 95.839,
+     "conf": 0.907
+    },
+    {
+     "w": "who",
+     "start": 95.859,
+     "end": 95.919,
+     "conf": 0.999
+    },
+    {
+     "w": "study",
+     "start": 96.019,
+     "end": 96.22,
+     "conf": 0.822
+    },
+    {
+     "w": "how",
+     "start": 96.32,
+     "end": 96.42,
+     "conf": 0.999
+    },
+    {
+     "w": "people",
+     "start": 96.48,
+     "end": 96.72,
+     "conf": 0.882
+    },
+    {
+     "w": "learn",
+     "start": 96.84,
+     "end": 97.04,
+     "conf": 0.806
+    },
+    {
+     "w": "probability",
+     "start": 97.12,
+     "end": 97.681,
+     "conf": 0.993
+    },
+    {
+     "w": "have",
+     "start": 97.821,
+     "end": 97.941,
+     "conf": 0.998
+    },
+    {
+     "w": "a",
+     "start": 97.961,
+     "end": 97.981,
+     "conf": 0.998
+    },
+    {
+     "w": "name",
+     "start": 98.041,
+     "end": 98.241,
+     "conf": 0.974
+    },
+    {
+     "w": "for",
+     "start": 98.261,
+     "end": 98.341,
+     "conf": 0.998
+    },
+    {
+     "w": "this",
+     "start": 98.361,
+     "end": 98.541,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 98.801,
+     "end": 98.861,
+     "conf": 0.995
+    },
+    {
+     "w": "equiprobability",
+     "start": 98.982,
+     "end": 99.782,
+     "conf": 0.87
+    },
+    {
+     "w": "bias",
+     "start": 99.862,
+     "end": 100.222,
+     "conf": 0.267
+    },
+    {
+     "w": "treating",
+     "start": 100.663,
+     "end": 100.983,
+     "conf": 0.867
+    },
+    {
+     "w": "every",
+     "start": 101.063,
+     "end": 101.223,
+     "conf": 0.8
+    },
+    {
+     "w": "answer",
+     "start": 101.343,
+     "end": 101.623,
+     "conf": 0.758
+    },
+    {
+     "w": "as",
+     "start": 101.643,
+     "end": 101.723,
+     "conf": 0.99
+    },
+    {
+     "w": "if",
+     "start": 101.763,
+     "end": 101.844,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 101.904,
+     "end": 101.944,
+     "conf": 0.499
+    },
+    {
+     "w": "were",
+     "start": 101.964,
+     "end": 102.104,
+     "conf": 0.869
+    },
+    {
+     "w": "equally",
+     "start": 102.204,
+     "end": 102.504,
+     "conf": 0.826
+    },
+    {
+     "w": "likely",
+     "start": 102.584,
+     "end": 102.844,
+     "conf": 0.882
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "It is the most common mistake students make, and one study found that more statistics classes did not cure it. It got stronger.",
+   "idea": true,
+   "start": 103.254,
+   "end": 109.527,
+   "words": [
+    {
+     "w": "it",
+     "start": 103.254,
+     "end": 103.314,
+     "conf": 0.986
+    },
+    {
+     "w": "is",
+     "start": 103.334,
+     "end": 103.374,
+     "conf": 0.533
+    },
+    {
+     "w": "the",
+     "start": 103.394,
+     "end": 103.475,
+     "conf": 0.872
+    },
+    {
+     "w": "most",
+     "start": 103.495,
+     "end": 103.655,
+     "conf": 0.93
+    },
+    {
+     "w": "common",
+     "start": 103.695,
+     "end": 103.976,
+     "conf": 0.996
+    },
+    {
+     "w": "mistake",
+     "start": 104.036,
+     "end": 104.416,
+     "conf": 0.798
+    },
+    {
+     "w": "students",
+     "start": 104.497,
+     "end": 104.897,
+     "conf": 0.963
+    },
+    {
+     "w": "make",
+     "start": 104.918,
+     "end": 105.178,
+     "conf": 0.8
+    },
+    {
+     "w": "and",
+     "start": 105.419,
+     "end": 105.479,
+     "conf": 0.441
+    },
+    {
+     "w": "one",
+     "start": 105.619,
+     "end": 105.699,
+     "conf": 0.666
+    },
+    {
+     "w": "study",
+     "start": 105.759,
+     "end": 105.96,
+     "conf": 0.985
+    },
+    {
+     "w": "found",
+     "start": 106.06,
+     "end": 106.24,
+     "conf": 0.798
+    },
+    {
+     "w": "that",
+     "start": 106.26,
+     "end": 106.34,
+     "conf": 0.267
+    },
+    {
+     "w": "more",
+     "start": 106.421,
+     "end": 106.581,
+     "conf": 0.32
+    },
+    {
+     "w": "statistics",
+     "start": 106.641,
+     "end": 107.142,
+     "conf": 0.974
+    },
+    {
+     "w": "classes",
+     "start": 107.202,
+     "end": 107.563,
+     "conf": 0.873
+    },
+    {
+     "w": "did",
+     "start": 107.623,
+     "end": 107.743,
+     "conf": 0.661
+    },
+    {
+     "w": "not",
+     "start": 107.824,
+     "end": 107.924,
+     "conf": 0.662
+    },
+    {
+     "w": "cure",
+     "start": 108.004,
+     "end": 108.224,
+     "conf": 0.722
+    },
+    {
+     "w": "it",
+     "start": 108.265,
+     "end": 108.325,
+     "conf": 0.482
+    },
+    {
+     "w": "it",
+     "start": 108.345,
+     "end": 108.746,
+     "conf": 0.0
+    },
+    {
+     "w": "got",
+     "start": 108.766,
+     "end": 109.086,
+     "conf": 0.161
+    },
+    {
+     "w": "stronger",
+     "start": 109.106,
+     "end": 109.527,
+     "conf": 0.163
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "So here is the first answer, in one line.",
+   "idea": false,
+   "start": 110.537,
+   "end": 112.236,
+   "words": [
+    {
+     "w": "so",
+     "start": 110.537,
+     "end": 110.578,
+     "conf": 0.981
+    },
+    {
+     "w": "here",
+     "start": 110.679,
+     "end": 110.82,
+     "conf": 0.807
+    },
+    {
+     "w": "is",
+     "start": 110.841,
+     "end": 110.901,
+     "conf": 0.935
+    },
+    {
+     "w": "the",
+     "start": 110.921,
+     "end": 110.982,
+     "conf": 0.986
+    },
+    {
+     "w": "first",
+     "start": 111.063,
+     "end": 111.326,
+     "conf": 0.919
+    },
+    {
+     "w": "answer",
+     "start": 111.447,
+     "end": 111.649,
+     "conf": 0.584
+    },
+    {
+     "w": "in",
+     "start": 111.75,
+     "end": 111.791,
+     "conf": 0.494
+    },
+    {
+     "w": "one",
+     "start": 111.912,
+     "end": 111.993,
+     "conf": 0.614
+    },
+    {
+     "w": "line",
+     "start": 112.033,
+     "end": 112.236,
+     "conf": 0.278
+    }
+   ]
+  },
+  {
+   "section": "The condition everyone forgets",
+   "act": "ACT ONE — A probability is a count",
+   "text": "A probability is a count of what you want, divided by a count of everything that could happen, and both counts have to be made of equally likely pieces.",
+   "idea": true,
+   "start": 112.626,
+   "end": 120.047,
+   "words": [
+    {
+     "w": "a",
+     "start": 112.626,
+     "end": 112.646,
+     "conf": 0.988
+    },
+    {
+     "w": "probability",
+     "start": 112.666,
+     "end": 113.168,
+     "conf": 0.926
+    },
+    {
+     "w": "is",
+     "start": 113.208,
+     "end": 113.268,
+     "conf": 0.951
+    },
+    {
+     "w": "a",
+     "start": 113.308,
+     "end": 113.328,
+     "conf": 0.001
+    },
+    {
+     "w": "count",
+     "start": 113.388,
+     "end": 113.649,
+     "conf": 0.975
+    },
+    {
+     "w": "of",
+     "start": 113.709,
+     "end": 113.749,
+     "conf": 0.499
+    },
+    {
+     "w": "what",
+     "start": 113.769,
+     "end": 113.89,
+     "conf": 0.984
+    },
+    {
+     "w": "you",
+     "start": 113.97,
+     "end": 114.05,
+     "conf": 0.739
+    },
+    {
+     "w": "want",
+     "start": 114.13,
+     "end": 114.391,
+     "conf": 0.793
+    },
+    {
+     "w": "divided",
+     "start": 114.732,
+     "end": 115.053,
+     "conf": 0.992
+    },
+    {
+     "w": "by",
+     "start": 115.073,
+     "end": 115.173,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 115.233,
+     "end": 115.253,
+     "conf": 0.005
+    },
+    {
+     "w": "count",
+     "start": 115.314,
+     "end": 115.534,
+     "conf": 0.941
+    },
+    {
+     "w": "of",
+     "start": 115.554,
+     "end": 115.614,
+     "conf": 0.665
+    },
+    {
+     "w": "everything",
+     "start": 115.695,
+     "end": 115.955,
+     "conf": 0.886
+    },
+    {
+     "w": "that",
+     "start": 115.975,
+     "end": 116.076,
+     "conf": 0.948
+    },
+    {
+     "w": "could",
+     "start": 116.156,
+     "end": 116.356,
+     "conf": 0.858
+    },
+    {
+     "w": "happen",
+     "start": 116.457,
+     "end": 116.778,
+     "conf": 0.958
+    },
+    {
+     "w": "and",
+     "start": 117.119,
+     "end": 117.199,
+     "conf": 0.666
+    },
+    {
+     "w": "both",
+     "start": 117.259,
+     "end": 117.439,
+     "conf": 0.75
+    },
+    {
+     "w": "counts",
+     "start": 117.52,
+     "end": 117.8,
+     "conf": 0.755
+    },
+    {
+     "w": "have",
+     "start": 117.821,
+     "end": 117.961,
+     "conf": 0.799
+    },
+    {
+     "w": "to",
+     "start": 117.981,
+     "end": 118.041,
+     "conf": 0.861
+    },
+    {
+     "w": "be",
+     "start": 118.061,
+     "end": 118.121,
+     "conf": 0.999
+    },
+    {
+     "w": "made",
+     "start": 118.202,
+     "end": 118.442,
+     "conf": 0.75
+    },
+    {
+     "w": "of",
+     "start": 118.563,
+     "end": 118.623,
+     "conf": 0.499
+    },
+    {
+     "w": "equally",
+     "start": 118.803,
+     "end": 119.064,
+     "conf": 0.854
+    },
+    {
+     "w": "likely",
+     "start": 119.184,
+     "end": 119.545,
+     "conf": 0.814
+    },
+    {
+     "w": "pieces",
+     "start": 119.646,
+     "end": 120.047,
+     "conf": 0.555
+    }
+   ]
+  },
+  {
+   "section": "The gambler's rule",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Now we can look at the gambler's rule with fresh eyes.",
+   "idea": false,
+   "start": 122.527,
+   "end": 124.685,
+   "words": [
+    {
+     "w": "now",
+     "start": 122.527,
+     "end": 122.668,
+     "conf": 0.911
+    },
+    {
+     "w": "we",
+     "start": 122.689,
+     "end": 122.749,
+     "conf": 0.992
+    },
+    {
+     "w": "can",
+     "start": 122.769,
+     "end": 122.89,
+     "conf": 0.749
+    },
+    {
+     "w": "look",
+     "start": 122.91,
+     "end": 123.011,
+     "conf": 0.999
+    },
+    {
+     "w": "at",
+     "start": 123.031,
+     "end": 123.092,
+     "conf": 0.994
+    },
+    {
+     "w": "the",
+     "start": 123.112,
+     "end": 123.173,
+     "conf": 0.976
+    },
+    {
+     "w": "gambler's",
+     "start": 123.193,
+     "end": 123.556,
+     "conf": 0.817
+    },
+    {
+     "w": "rule",
+     "start": 123.636,
+     "end": 123.858,
+     "conf": 0.778
+    },
+    {
+     "w": "with",
+     "start": 123.878,
+     "end": 124.02,
+     "conf": 0.797
+    },
+    {
+     "w": "fresh",
+     "start": 124.121,
+     "end": 124.342,
+     "conf": 0.781
+    },
+    {
+     "w": "eyes",
+     "start": 124.423,
+     "end": 124.685,
+     "conf": 0.56
+    }
+   ]
+  },
+  {
+   "section": "The gambler's rule",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "One roll gives a six with probability one sixth. He said four rolls give four times that, four sixths.",
+   "idea": true,
+   "start": 125.196,
+   "end": 129.96,
+   "words": [
+    {
+     "w": "one",
+     "start": 125.196,
+     "end": 125.296,
+     "conf": 0.665
+    },
+    {
+     "w": "roll",
+     "start": 125.316,
+     "end": 125.497,
+     "conf": 0.759
+    },
+    {
+     "w": "gives",
+     "start": 125.577,
+     "end": 125.718,
+     "conf": 0.797
+    },
+    {
+     "w": "a",
+     "start": 125.738,
+     "end": 125.778,
+     "conf": 0.493
+    },
+    {
+     "w": "six",
+     "start": 125.899,
+     "end": 126.08,
+     "conf": 0.664
+    },
+    {
+     "w": "with",
+     "start": 126.241,
+     "end": 126.341,
+     "conf": 0.994
+    },
+    {
+     "w": "probability",
+     "start": 126.361,
+     "end": 126.844,
+     "conf": 0.999
+    },
+    {
+     "w": "one",
+     "start": 126.964,
+     "end": 127.045,
+     "conf": 0.665
+    },
+    {
+     "w": "sixth",
+     "start": 127.145,
+     "end": 127.467,
+     "conf": 0.652
+    },
+    {
+     "w": "he",
+     "start": 127.708,
+     "end": 127.748,
+     "conf": 0.487
+    },
+    {
+     "w": "said",
+     "start": 127.769,
+     "end": 127.949,
+     "conf": 0.669
+    },
+    {
+     "w": "four",
+     "start": 128.01,
+     "end": 128.171,
+     "conf": 0.725
+    },
+    {
+     "w": "rolls",
+     "start": 128.231,
+     "end": 128.432,
+     "conf": 0.602
+    },
+    {
+     "w": "give",
+     "start": 128.452,
+     "end": 128.593,
+     "conf": 0.787
+    },
+    {
+     "w": "four",
+     "start": 128.613,
+     "end": 128.774,
+     "conf": 0.576
+    },
+    {
+     "w": "times",
+     "start": 128.834,
+     "end": 129.075,
+     "conf": 0.739
+    },
+    {
+     "w": "that",
+     "start": 129.095,
+     "end": 129.256,
+     "conf": 0.483
+    },
+    {
+     "w": "four",
+     "start": 129.276,
+     "end": 129.538,
+     "conf": 0.065
+    },
+    {
+     "w": "sixths",
+     "start": 129.558,
+     "end": 129.96,
+     "conf": 0.051
+    }
+   ]
+  },
+  {
+   "section": "The gambler's rule",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Let us test the rule where it cannot hide. What about seven rolls?",
+   "idea": false,
+   "start": 130.95,
+   "end": 134.122,
+   "words": [
+    {
+     "w": "let",
+     "start": 130.95,
+     "end": 131.03,
+     "conf": 0.862
+    },
+    {
+     "w": "us",
+     "start": 131.091,
+     "end": 131.151,
+     "conf": 0.501
+    },
+    {
+     "w": "test",
+     "start": 131.191,
+     "end": 131.412,
+     "conf": 0.989
+    },
+    {
+     "w": "the",
+     "start": 131.432,
+     "end": 131.492,
+     "conf": 0.998
+    },
+    {
+     "w": "rule",
+     "start": 131.572,
+     "end": 131.813,
+     "conf": 0.759
+    },
+    {
+     "w": "where",
+     "start": 131.894,
+     "end": 132.054,
+     "conf": 0.811
+    },
+    {
+     "w": "it",
+     "start": 132.094,
+     "end": 132.134,
+     "conf": 0.496
+    },
+    {
+     "w": "cannot",
+     "start": 132.155,
+     "end": 132.436,
+     "conf": 0.986
+    },
+    {
+     "w": "hide",
+     "start": 132.516,
+     "end": 132.797,
+     "conf": 0.791
+    },
+    {
+     "w": "what",
+     "start": 132.817,
+     "end": 133.138,
+     "conf": 0.288
+    },
+    {
+     "w": "about",
+     "start": 133.158,
+     "end": 133.339,
+     "conf": 0.825
+    },
+    {
+     "w": "seven",
+     "start": 133.48,
+     "end": 133.72,
+     "conf": 0.799
+    },
+    {
+     "w": "rolls",
+     "start": 133.801,
+     "end": 134.122,
+     "conf": 0.597
+    }
+   ]
+  },
+  {
+   "section": "The gambler's rule",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Seven times one sixth is seven sixths, more than one. A probability bigger than certain.",
+   "idea": true,
+   "start": 134.632,
+   "end": 139.169,
+   "words": [
+    {
+     "w": "seven",
+     "start": 134.632,
+     "end": 134.853,
+     "conf": 0.798
+    },
+    {
+     "w": "times",
+     "start": 134.934,
+     "end": 135.255,
+     "conf": 0.904
+    },
+    {
+     "w": "one",
+     "start": 135.355,
+     "end": 135.455,
+     "conf": 0.664
+    },
+    {
+     "w": "sixth",
+     "start": 135.516,
+     "end": 135.797,
+     "conf": 0.817
+    },
+    {
+     "w": "is",
+     "start": 135.917,
+     "end": 135.957,
+     "conf": 0.496
+    },
+    {
+     "w": "seven",
+     "start": 136.058,
+     "end": 136.258,
+     "conf": 0.794
+    },
+    {
+     "w": "sixths",
+     "start": 136.379,
+     "end": 136.72,
+     "conf": 0.604
+    },
+    {
+     "w": "more",
+     "start": 137.001,
+     "end": 137.142,
+     "conf": 0.712
+    },
+    {
+     "w": "than",
+     "start": 137.162,
+     "end": 137.282,
+     "conf": 0.997
+    },
+    {
+     "w": "one",
+     "start": 137.402,
+     "end": 137.503,
+     "conf": 0.664
+    },
+    {
+     "w": "a",
+     "start": 137.704,
+     "end": 137.724,
+     "conf": 0.0
+    },
+    {
+     "w": "probability",
+     "start": 137.744,
+     "end": 138.306,
+     "conf": 1.0
+    },
+    {
+     "w": "bigger",
+     "start": 138.426,
+     "end": 138.627,
+     "conf": 0.787
+    },
+    {
+     "w": "than",
+     "start": 138.647,
+     "end": 138.767,
+     "conf": 0.927
+    },
+    {
+     "w": "certain",
+     "start": 138.888,
+     "end": 139.169,
+     "conf": 0.813
+    }
+   ]
+  },
+  {
+   "section": "The gambler's rule",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "The rule breaks the line from zero to one, so it was never right, even when it happened to sound close.",
+   "idea": true,
+   "start": 140.159,
+   "end": 144.531,
+   "words": [
+    {
+     "w": "the",
+     "start": 140.159,
+     "end": 140.219,
+     "conf": 0.481
+    },
+    {
+     "w": "rule",
+     "start": 140.239,
+     "end": 140.42,
+     "conf": 0.989
+    },
+    {
+     "w": "breaks",
+     "start": 140.44,
+     "end": 140.66,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 140.68,
+     "end": 140.741,
+     "conf": 0.983
+    },
+    {
+     "w": "line",
+     "start": 140.801,
+     "end": 140.981,
+     "conf": 0.516
+    },
+    {
+     "w": "from",
+     "start": 141.001,
+     "end": 141.122,
+     "conf": 0.984
+    },
+    {
+     "w": "zero",
+     "start": 141.182,
+     "end": 141.362,
+     "conf": 0.683
+    },
+    {
+     "w": "to",
+     "start": 141.422,
+     "end": 141.483,
+     "conf": 0.518
+    },
+    {
+     "w": "one",
+     "start": 141.623,
+     "end": 141.683,
+     "conf": 0.657
+    },
+    {
+     "w": "so",
+     "start": 142.104,
+     "end": 142.144,
+     "conf": 0.499
+    },
+    {
+     "w": "it",
+     "start": 142.164,
+     "end": 142.265,
+     "conf": 0.498
+    },
+    {
+     "w": "was",
+     "start": 142.285,
+     "end": 142.385,
+     "conf": 0.998
+    },
+    {
+     "w": "never",
+     "start": 142.465,
+     "end": 142.646,
+     "conf": 0.982
+    },
+    {
+     "w": "right",
+     "start": 142.706,
+     "end": 142.926,
+     "conf": 0.905
+    },
+    {
+     "w": "even",
+     "start": 143.187,
+     "end": 143.328,
+     "conf": 0.75
+    },
+    {
+     "w": "when",
+     "start": 143.348,
+     "end": 143.428,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 143.448,
+     "end": 143.508,
+     "conf": 0.665
+    },
+    {
+     "w": "happened",
+     "start": 143.568,
+     "end": 143.809,
+     "conf": 0.873
+    },
+    {
+     "w": "to",
+     "start": 143.829,
+     "end": 143.869,
+     "conf": 0.997
+    },
+    {
+     "w": "sound",
+     "start": 143.949,
+     "end": 144.13,
+     "conf": 0.778
+    },
+    {
+     "w": "close",
+     "start": 144.19,
+     "end": 144.531,
+     "conf": 0.827
+    }
+   ]
+  },
+  {
+   "section": "Where the extra comes from",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Here is what adding does wrong. Adding one sixth for each roll counts every roll where a six appears.",
+   "idea": false,
+   "start": 146.211,
+   "end": 151.152,
+   "words": [
+    {
+     "w": "here",
+     "start": 146.211,
+     "end": 146.372,
+     "conf": 0.962
+    },
+    {
+     "w": "is",
+     "start": 146.392,
+     "end": 146.452,
+     "conf": 0.998
+    },
+    {
+     "w": "what",
+     "start": 146.472,
+     "end": 146.593,
+     "conf": 0.984
+    },
+    {
+     "w": "adding",
+     "start": 146.673,
+     "end": 146.914,
+     "conf": 0.974
+    },
+    {
+     "w": "does",
+     "start": 146.954,
+     "end": 147.115,
+     "conf": 0.746
+    },
+    {
+     "w": "wrong",
+     "start": 147.155,
+     "end": 147.416,
+     "conf": 0.924
+    },
+    {
+     "w": "adding",
+     "start": 147.838,
+     "end": 148.039,
+     "conf": 0.951
+    },
+    {
+     "w": "one",
+     "start": 148.099,
+     "end": 148.22,
+     "conf": 0.884
+    },
+    {
+     "w": "sixth",
+     "start": 148.28,
+     "end": 148.481,
+     "conf": 0.447
+    },
+    {
+     "w": "for",
+     "start": 148.501,
+     "end": 148.601,
+     "conf": 0.993
+    },
+    {
+     "w": "each",
+     "start": 148.762,
+     "end": 148.903,
+     "conf": 0.608
+    },
+    {
+     "w": "roll",
+     "start": 149.063,
+     "end": 149.284,
+     "conf": 0.5
+    },
+    {
+     "w": "counts",
+     "start": 149.425,
+     "end": 149.686,
+     "conf": 0.991
+    },
+    {
+     "w": "every",
+     "start": 149.786,
+     "end": 149.927,
+     "conf": 0.798
+    },
+    {
+     "w": "roll",
+     "start": 150.007,
+     "end": 150.188,
+     "conf": 0.731
+    },
+    {
+     "w": "where",
+     "start": 150.248,
+     "end": 150.389,
+     "conf": 0.995
+    },
+    {
+     "w": "a",
+     "start": 150.409,
+     "end": 150.449,
+     "conf": 0.896
+    },
+    {
+     "w": "six",
+     "start": 150.55,
+     "end": 150.69,
+     "conf": 0.666
+    },
+    {
+     "w": "appears",
+     "start": 150.811,
+     "end": 151.152,
+     "conf": 0.869
+    }
+   ]
+  },
+  {
+   "section": "Where the extra comes from",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "But a game with a six on the first roll and another six on the third roll gets counted twice.",
+   "idea": false,
+   "start": 151.562,
+   "end": 155.815,
+   "words": [
+    {
+     "w": "but",
+     "start": 151.562,
+     "end": 151.622,
+     "conf": 0.332
+    },
+    {
+     "w": "a",
+     "start": 151.642,
+     "end": 151.662,
+     "conf": 0.988
+    },
+    {
+     "w": "game",
+     "start": 151.723,
+     "end": 151.903,
+     "conf": 0.739
+    },
+    {
+     "w": "with",
+     "start": 151.923,
+     "end": 152.023,
+     "conf": 0.853
+    },
+    {
+     "w": "a",
+     "start": 152.064,
+     "end": 152.084,
+     "conf": 0.229
+    },
+    {
+     "w": "six",
+     "start": 152.204,
+     "end": 152.344,
+     "conf": 0.987
+    },
+    {
+     "w": "on",
+     "start": 152.485,
+     "end": 152.525,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 152.545,
+     "end": 152.605,
+     "conf": 0.989
+    },
+    {
+     "w": "first",
+     "start": 152.685,
+     "end": 152.926,
+     "conf": 0.829
+    },
+    {
+     "w": "roll",
+     "start": 152.986,
+     "end": 153.187,
+     "conf": 0.704
+    },
+    {
+     "w": "and",
+     "start": 153.347,
+     "end": 153.448,
+     "conf": 0.997
+    },
+    {
+     "w": "another",
+     "start": 153.468,
+     "end": 153.749,
+     "conf": 0.964
+    },
+    {
+     "w": "six",
+     "start": 153.829,
+     "end": 153.949,
+     "conf": 0.666
+    },
+    {
+     "w": "on",
+     "start": 154.09,
+     "end": 154.13,
+     "conf": 0.495
+    },
+    {
+     "w": "the",
+     "start": 154.15,
+     "end": 154.21,
+     "conf": 0.779
+    },
+    {
+     "w": "third",
+     "start": 154.29,
+     "end": 154.471,
+     "conf": 0.701
+    },
+    {
+     "w": "roll",
+     "start": 154.551,
+     "end": 154.711,
+     "conf": 0.628
+    },
+    {
+     "w": "gets",
+     "start": 154.832,
+     "end": 155.032,
+     "conf": 0.999
+    },
+    {
+     "w": "counted",
+     "start": 155.052,
+     "end": 155.393,
+     "conf": 0.852
+    },
+    {
+     "w": "twice",
+     "start": 155.413,
+     "end": 155.815,
+     "conf": 0.772
+    }
+   ]
+  },
+  {
+   "section": "Where the extra comes from",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Adding works only when the cases cannot happen together, and sixes on different rolls can.",
+   "idea": true,
+   "start": 156.225,
+   "end": 160.67,
+   "words": [
+    {
+     "w": "adding",
+     "start": 156.225,
+     "end": 156.445,
+     "conf": 0.878
+    },
+    {
+     "w": "works",
+     "start": 156.485,
+     "end": 156.806,
+     "conf": 0.968
+    },
+    {
+     "w": "only",
+     "start": 156.926,
+     "end": 157.106,
+     "conf": 0.999
+    },
+    {
+     "w": "when",
+     "start": 157.166,
+     "end": 157.286,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 157.306,
+     "end": 157.386,
+     "conf": 0.998
+    },
+    {
+     "w": "cases",
+     "start": 157.446,
+     "end": 157.787,
+     "conf": 0.799
+    },
+    {
+     "w": "cannot",
+     "start": 157.847,
+     "end": 158.087,
+     "conf": 0.832
+    },
+    {
+     "w": "happen",
+     "start": 158.107,
+     "end": 158.368,
+     "conf": 0.99
+    },
+    {
+     "w": "together",
+     "start": 158.428,
+     "end": 158.768,
+     "conf": 0.874
+    },
+    {
+     "w": "and",
+     "start": 159.048,
+     "end": 159.148,
+     "conf": 0.993
+    },
+    {
+     "w": "sixes",
+     "start": 159.249,
+     "end": 159.589,
+     "conf": 0.78
+    },
+    {
+     "w": "on",
+     "start": 159.669,
+     "end": 159.729,
+     "conf": 0.48
+    },
+    {
+     "w": "different",
+     "start": 159.789,
+     "end": 160.069,
+     "conf": 0.884
+    },
+    {
+     "w": "rolls",
+     "start": 160.09,
+     "end": 160.41,
+     "conf": 0.612
+    },
+    {
+     "w": "can",
+     "start": 160.49,
+     "end": 160.67,
+     "conf": 0.546
+    }
+   ]
+  },
+  {
+   "section": "Where the extra comes from",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "So counting what we want directly is messy. A six on the first roll, or the second, or both, or three of them.",
+   "idea": false,
+   "start": 161.7,
+   "end": 167.032,
+   "words": [
+    {
+     "w": "so",
+     "start": 161.7,
+     "end": 161.76,
+     "conf": 0.997
+    },
+    {
+     "w": "counting",
+     "start": 161.84,
+     "end": 162.181,
+     "conf": 0.982
+    },
+    {
+     "w": "what",
+     "start": 162.201,
+     "end": 162.301,
+     "conf": 0.998
+    },
+    {
+     "w": "we",
+     "start": 162.342,
+     "end": 162.402,
+     "conf": 0.998
+    },
+    {
+     "w": "want",
+     "start": 162.502,
+     "end": 162.642,
+     "conf": 0.74
+    },
+    {
+     "w": "directly",
+     "start": 162.662,
+     "end": 163.083,
+     "conf": 0.888
+    },
+    {
+     "w": "is",
+     "start": 163.123,
+     "end": 163.204,
+     "conf": 0.987
+    },
+    {
+     "w": "messy",
+     "start": 163.284,
+     "end": 163.564,
+     "conf": 0.627
+    },
+    {
+     "w": "a",
+     "start": 163.945,
+     "end": 163.965,
+     "conf": 0.986
+    },
+    {
+     "w": "six",
+     "start": 164.126,
+     "end": 164.286,
+     "conf": 0.666
+    },
+    {
+     "w": "on",
+     "start": 164.406,
+     "end": 164.446,
+     "conf": 0.98
+    },
+    {
+     "w": "the",
+     "start": 164.466,
+     "end": 164.527,
+     "conf": 0.987
+    },
+    {
+     "w": "first",
+     "start": 164.547,
+     "end": 164.827,
+     "conf": 0.832
+    },
+    {
+     "w": "roll",
+     "start": 164.928,
+     "end": 165.168,
+     "conf": 0.497
+    },
+    {
+     "w": "or",
+     "start": 165.248,
+     "end": 165.288,
+     "conf": 0.505
+    },
+    {
+     "w": "the",
+     "start": 165.308,
+     "end": 165.389,
+     "conf": 0.862
+    },
+    {
+     "w": "second",
+     "start": 165.589,
+     "end": 165.93,
+     "conf": 0.83
+    },
+    {
+     "w": "or",
+     "start": 166.01,
+     "end": 166.05,
+     "conf": 0.466
+    },
+    {
+     "w": "both",
+     "start": 166.11,
+     "end": 166.391,
+     "conf": 0.775
+    },
+    {
+     "w": "or",
+     "start": 166.511,
+     "end": 166.551,
+     "conf": 0.443
+    },
+    {
+     "w": "three",
+     "start": 166.631,
+     "end": 166.812,
+     "conf": 0.791
+    },
+    {
+     "w": "of",
+     "start": 166.852,
+     "end": 166.892,
+     "conf": 0.837
+    },
+    {
+     "w": "them",
+     "start": 166.912,
+     "end": 167.032,
+     "conf": 0.99
+    }
+   ]
+  },
+  {
+   "section": "Where the extra comes from",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Let us count the opposite instead.",
+   "idea": true,
+   "start": 167.423,
+   "end": 168.649,
+   "words": [
+    {
+     "w": "let",
+     "start": 167.423,
+     "end": 167.483,
+     "conf": 0.394
+    },
+    {
+     "w": "us",
+     "start": 167.504,
+     "end": 167.564,
+     "conf": 0.572
+    },
+    {
+     "w": "count",
+     "start": 167.584,
+     "end": 167.765,
+     "conf": 0.656
+    },
+    {
+     "w": "the",
+     "start": 167.785,
+     "end": 167.845,
+     "conf": 0.977
+    },
+    {
+     "w": "opposite",
+     "start": 167.926,
+     "end": 168.227,
+     "conf": 0.673
+    },
+    {
+     "w": "instead",
+     "start": 168.247,
+     "end": 168.649,
+     "conf": 0.927
+    }
+   ]
+  },
+  {
+   "section": "Count what you do not want",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "The opposite of \"at least one six\" is \"no six at all\", and that is one single, clean case.",
+   "idea": false,
+   "start": 170.309,
+   "end": 174.626,
+   "words": [
+    {
+     "w": "the",
+     "start": 170.309,
+     "end": 170.369,
+     "conf": 0.0
+    },
+    {
+     "w": "opposite",
+     "start": 170.389,
+     "end": 170.711,
+     "conf": 0.503
+    },
+    {
+     "w": "of",
+     "start": 170.771,
+     "end": 170.871,
+     "conf": 0.499
+    },
+    {
+     "w": "at",
+     "start": 170.972,
+     "end": 171.012,
+     "conf": 0.5
+    },
+    {
+     "w": "least",
+     "start": 171.032,
+     "end": 171.233,
+     "conf": 0.833
+    },
+    {
+     "w": "one",
+     "start": 171.353,
+     "end": 171.454,
+     "conf": 0.666
+    },
+    {
+     "w": "six",
+     "start": 171.554,
+     "end": 171.715,
+     "conf": 0.666
+    },
+    {
+     "w": "is",
+     "start": 171.875,
+     "end": 171.976,
+     "conf": 0.666
+    },
+    {
+     "w": "no",
+     "start": 172.056,
+     "end": 172.116,
+     "conf": 0.93
+    },
+    {
+     "w": "six",
+     "start": 172.257,
+     "end": 172.397,
+     "conf": 0.666
+    },
+    {
+     "w": "at",
+     "start": 172.498,
+     "end": 172.538,
+     "conf": 0.5
+    },
+    {
+     "w": "all",
+     "start": 172.638,
+     "end": 172.759,
+     "conf": 0.655
+    },
+    {
+     "w": "and",
+     "start": 172.779,
+     "end": 173.14,
+     "conf": 0.012
+    },
+    {
+     "w": "that",
+     "start": 173.16,
+     "end": 173.261,
+     "conf": 0.999
+    },
+    {
+     "w": "is",
+     "start": 173.281,
+     "end": 173.361,
+     "conf": 0.999
+    },
+    {
+     "w": "one",
+     "start": 173.482,
+     "end": 173.582,
+     "conf": 0.666
+    },
+    {
+     "w": "single",
+     "start": 173.662,
+     "end": 173.923,
+     "conf": 0.851
+    },
+    {
+     "w": "clean",
+     "start": 173.984,
+     "end": 174.225,
+     "conf": 0.8
+    },
+    {
+     "w": "case",
+     "start": 174.305,
+     "end": 174.626,
+     "conf": 0.75
+    }
+   ]
+  },
+  {
+   "section": "Count what you do not want",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "One roll misses the six with probability five sixths.",
+   "idea": true,
+   "start": 175.117,
+   "end": 177.51,
+   "words": [
+    {
+     "w": "one",
+     "start": 175.117,
+     "end": 175.238,
+     "conf": 0.983
+    },
+    {
+     "w": "roll",
+     "start": 175.258,
+     "end": 175.439,
+     "conf": 0.691
+    },
+    {
+     "w": "misses",
+     "start": 175.459,
+     "end": 175.721,
+     "conf": 0.836
+    },
+    {
+     "w": "the",
+     "start": 175.741,
+     "end": 175.821,
+     "conf": 0.931
+    },
+    {
+     "w": "six",
+     "start": 175.922,
+     "end": 176.062,
+     "conf": 0.588
+    },
+    {
+     "w": "with",
+     "start": 176.183,
+     "end": 176.304,
+     "conf": 0.858
+    },
+    {
+     "w": "probability",
+     "start": 176.364,
+     "end": 176.827,
+     "conf": 0.848
+    },
+    {
+     "w": "five",
+     "start": 176.847,
+     "end": 177.168,
+     "conf": 0.258
+    },
+    {
+     "w": "sixths",
+     "start": 177.209,
+     "end": 177.51,
+     "conf": 0.281
+    }
+   ]
+  },
+  {
+   "section": "Count what you do not want",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Four rolls all miss when the first misses, and the second, and the third, and the fourth.",
+   "idea": false,
+   "start": 178.5,
+   "end": 182.711,
+   "words": [
+    {
+     "w": "four",
+     "start": 178.5,
+     "end": 178.681,
+     "conf": 0.725
+    },
+    {
+     "w": "rolls",
+     "start": 178.761,
+     "end": 179.021,
+     "conf": 0.596
+    },
+    {
+     "w": "all",
+     "start": 179.162,
+     "end": 179.242,
+     "conf": 0.635
+    },
+    {
+     "w": "miss",
+     "start": 179.322,
+     "end": 179.583,
+     "conf": 0.72
+    },
+    {
+     "w": "when",
+     "start": 179.743,
+     "end": 179.823,
+     "conf": 0.964
+    },
+    {
+     "w": "the",
+     "start": 179.844,
+     "end": 179.924,
+     "conf": 0.747
+    },
+    {
+     "w": "first",
+     "start": 179.944,
+     "end": 180.204,
+     "conf": 0.832
+    },
+    {
+     "w": "misses",
+     "start": 180.225,
+     "end": 180.606,
+     "conf": 0.894
+    },
+    {
+     "w": "and",
+     "start": 180.946,
+     "end": 181.007,
+     "conf": 0.4
+    },
+    {
+     "w": "the",
+     "start": 181.027,
+     "end": 181.087,
+     "conf": 0.642
+    },
+    {
+     "w": "second",
+     "start": 181.167,
+     "end": 181.488,
+     "conf": 0.802
+    },
+    {
+     "w": "and",
+     "start": 181.508,
+     "end": 181.628,
+     "conf": 0.648
+    },
+    {
+     "w": "the",
+     "start": 181.648,
+     "end": 181.728,
+     "conf": 0.973
+    },
+    {
+     "w": "third",
+     "start": 181.809,
+     "end": 182.109,
+     "conf": 0.783
+    },
+    {
+     "w": "and",
+     "start": 182.13,
+     "end": 182.25,
+     "conf": 0.658
+    },
+    {
+     "w": "the",
+     "start": 182.27,
+     "end": 182.35,
+     "conf": 0.904
+    },
+    {
+     "w": "fourth",
+     "start": 182.41,
+     "end": 182.711,
+     "conf": 0.638
+    }
+   ]
+  },
+  {
+   "section": "Count what you do not want",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Each roll does not care about the others, so the chances multiply: five sixths, four times over.",
+   "idea": true,
+   "start": 183.121,
+   "end": 187.945,
+   "words": [
+    {
+     "w": "each",
+     "start": 183.121,
+     "end": 183.302,
+     "conf": 0.823
+    },
+    {
+     "w": "roll",
+     "start": 183.342,
+     "end": 183.543,
+     "conf": 0.751
+    },
+    {
+     "w": "does",
+     "start": 183.583,
+     "end": 183.724,
+     "conf": 0.963
+    },
+    {
+     "w": "not",
+     "start": 183.784,
+     "end": 183.885,
+     "conf": 0.668
+    },
+    {
+     "w": "care",
+     "start": 183.945,
+     "end": 184.106,
+     "conf": 0.732
+    },
+    {
+     "w": "about",
+     "start": 184.126,
+     "end": 184.287,
+     "conf": 0.797
+    },
+    {
+     "w": "the",
+     "start": 184.307,
+     "end": 184.387,
+     "conf": 0.992
+    },
+    {
+     "w": "others",
+     "start": 184.468,
+     "end": 184.709,
+     "conf": 0.852
+    },
+    {
+     "w": "so",
+     "start": 184.93,
+     "end": 184.99,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 185.051,
+     "end": 185.111,
+     "conf": 0.434
+    },
+    {
+     "w": "chances",
+     "start": 185.131,
+     "end": 185.553,
+     "conf": 0.946
+    },
+    {
+     "w": "multiply",
+     "start": 185.613,
+     "end": 186.076,
+     "conf": 0.885
+    },
+    {
+     "w": "five",
+     "start": 186.417,
+     "end": 186.638,
+     "conf": 0.139
+    },
+    {
+     "w": "sixths",
+     "start": 186.658,
+     "end": 187.04,
+     "conf": 0.149
+    },
+    {
+     "w": "four",
+     "start": 187.221,
+     "end": 187.402,
+     "conf": 0.305
+    },
+    {
+     "w": "times",
+     "start": 187.462,
+     "end": 187.704,
+     "conf": 0.751
+    },
+    {
+     "w": "over",
+     "start": 187.784,
+     "end": 187.945,
+     "conf": 0.632
+    }
+   ]
+  },
+  {
+   "section": "Count what you do not want",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "That is six hundred twenty-five out of one thousand two hundred ninety-six.",
+   "idea": false,
+   "start": 188.955,
+   "end": 192.395,
+   "words": [
+    {
+     "w": "that",
+     "start": 188.955,
+     "end": 189.036,
+     "conf": 0.243
+    },
+    {
+     "w": "is",
+     "start": 189.076,
+     "end": 189.176,
+     "conf": 0.971
+    },
+    {
+     "w": "six",
+     "start": 189.196,
+     "end": 189.378,
+     "conf": 0.032
+    },
+    {
+     "w": "hundred",
+     "start": 189.398,
+     "end": 189.78,
+     "conf": 0.009
+    },
+    {
+     "w": "twenty-five",
+     "start": 189.8,
+     "end": 190.524,
+     "conf": 0.134
+    },
+    {
+     "w": "out",
+     "start": 190.625,
+     "end": 190.745,
+     "conf": 0.665
+    },
+    {
+     "w": "of",
+     "start": 190.806,
+     "end": 190.866,
+     "conf": 0.48
+    },
+    {
+     "w": "one",
+     "start": 190.886,
+     "end": 191.107,
+     "conf": 0.001
+    },
+    {
+     "w": "thousand",
+     "start": 191.127,
+     "end": 191.55,
+     "conf": 0.001
+    },
+    {
+     "w": "two",
+     "start": 191.57,
+     "end": 191.711,
+     "conf": 0.0
+    },
+    {
+     "w": "hundred",
+     "start": 191.731,
+     "end": 191.932,
+     "conf": 0.0
+    },
+    {
+     "w": "ninety-six",
+     "start": 191.952,
+     "end": 192.395,
+     "conf": 0.016
+    }
+   ]
+  },
+  {
+   "section": "Count what you do not want",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "So at least one six is everything else: six hundred seventy-one out of one thousand two hundred ninety-six, fifty-one point eight percent.",
+   "idea": true,
+   "start": 192.885,
+   "end": 199.842,
+   "words": [
+    {
+     "w": "so",
+     "start": 192.885,
+     "end": 192.985,
+     "conf": 0.668
+    },
+    {
+     "w": "at",
+     "start": 193.045,
+     "end": 193.126,
+     "conf": 1.0
+    },
+    {
+     "w": "least",
+     "start": 193.186,
+     "end": 193.406,
+     "conf": 0.987
+    },
+    {
+     "w": "one",
+     "start": 193.567,
+     "end": 193.687,
+     "conf": 0.665
+    },
+    {
+     "w": "six",
+     "start": 193.767,
+     "end": 193.968,
+     "conf": 0.986
+    },
+    {
+     "w": "is",
+     "start": 194.108,
+     "end": 194.168,
+     "conf": 0.499
+    },
+    {
+     "w": "everything",
+     "start": 194.228,
+     "end": 194.549,
+     "conf": 0.902
+    },
+    {
+     "w": "else",
+     "start": 194.629,
+     "end": 194.87,
+     "conf": 0.75
+    },
+    {
+     "w": "six",
+     "start": 194.89,
+     "end": 195.371,
+     "conf": 0.021
+    },
+    {
+     "w": "hundred",
+     "start": 195.391,
+     "end": 195.692,
+     "conf": 0.001
+    },
+    {
+     "w": "seventy-one",
+     "start": 195.712,
+     "end": 196.333,
+     "conf": 0.184
+    },
+    {
+     "w": "out",
+     "start": 196.434,
+     "end": 196.534,
+     "conf": 0.75
+    },
+    {
+     "w": "of",
+     "start": 196.554,
+     "end": 196.594,
+     "conf": 0.855
+    },
+    {
+     "w": "one",
+     "start": 196.614,
+     "end": 196.775,
+     "conf": 0.0
+    },
+    {
+     "w": "thousand",
+     "start": 196.795,
+     "end": 197.135,
+     "conf": 0.001
+    },
+    {
+     "w": "two",
+     "start": 197.155,
+     "end": 197.296,
+     "conf": 0.0
+    },
+    {
+     "w": "hundred",
+     "start": 197.316,
+     "end": 197.536,
+     "conf": 0.0
+    },
+    {
+     "w": "ninety-six",
+     "start": 197.556,
+     "end": 198.118,
+     "conf": 0.002
+    },
+    {
+     "w": "fifty-one",
+     "start": 198.138,
+     "end": 199.02,
+     "conf": 0.0
+    },
+    {
+     "w": "point",
+     "start": 199.04,
+     "end": 199.261,
+     "conf": 0.0
+    },
+    {
+     "w": "eight",
+     "start": 199.281,
+     "end": 199.441,
+     "conf": 0.0
+    },
+    {
+     "w": "percent",
+     "start": 199.461,
+     "end": 199.842,
+     "conf": 0.91
+    }
+   ]
+  },
+  {
+   "section": "Count what you do not want",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Those two numbers, six hundred seventy-one and six hundred twenty-five, are written in Pascal's own letter to Fermat, dated the twenty-ninth of July, sixteen fifty-four.",
+   "idea": false,
+   "start": 200.913,
+   "end": 209.635,
+   "words": [
+    {
+     "w": "those",
+     "start": 200.913,
+     "end": 201.053,
+     "conf": 0.401
+    },
+    {
+     "w": "two",
+     "start": 201.073,
+     "end": 201.214,
+     "conf": 0.782
+    },
+    {
+     "w": "numbers",
+     "start": 201.234,
+     "end": 201.555,
+     "conf": 0.768
+    },
+    {
+     "w": "six",
+     "start": 201.575,
+     "end": 201.835,
+     "conf": 0.28
+    },
+    {
+     "w": "hundred",
+     "start": 201.855,
+     "end": 202.156,
+     "conf": 0.0
+    },
+    {
+     "w": "seventy-one",
+     "start": 202.176,
+     "end": 202.738,
+     "conf": 0.001
+    },
+    {
+     "w": "and",
+     "start": 202.838,
+     "end": 202.918,
+     "conf": 0.632
+    },
+    {
+     "w": "six",
+     "start": 202.938,
+     "end": 203.259,
+     "conf": 0.001
+    },
+    {
+     "w": "hundred",
+     "start": 203.279,
+     "end": 203.58,
+     "conf": 0.0
+    },
+    {
+     "w": "twenty-five",
+     "start": 203.6,
+     "end": 204.602,
+     "conf": 0.0
+    },
+    {
+     "w": "are",
+     "start": 204.622,
+     "end": 204.683,
+     "conf": 0.663
+    },
+    {
+     "w": "written",
+     "start": 204.703,
+     "end": 204.983,
+     "conf": 0.977
+    },
+    {
+     "w": "in",
+     "start": 205.244,
+     "end": 205.304,
+     "conf": 0.497
+    },
+    {
+     "w": "pascal's",
+     "start": 205.364,
+     "end": 205.845,
+     "conf": 0.695
+    },
+    {
+     "w": "own",
+     "start": 206.126,
+     "end": 206.226,
+     "conf": 0.655
+    },
+    {
+     "w": "letter",
+     "start": 206.287,
+     "end": 206.487,
+     "conf": 0.707
+    },
+    {
+     "w": "to",
+     "start": 206.507,
+     "end": 206.567,
+     "conf": 0.669
+    },
+    {
+     "w": "fermat",
+     "start": 206.647,
+     "end": 206.988,
+     "conf": 0.48
+    },
+    {
+     "w": "dated",
+     "start": 207.209,
+     "end": 207.45,
+     "conf": 0.799
+    },
+    {
+     "w": "the",
+     "start": 207.47,
+     "end": 207.55,
+     "conf": 0.741
+    },
+    {
+     "w": "twenty-ninth",
+     "start": 207.57,
+     "end": 208.111,
+     "conf": 0.007
+    },
+    {
+     "w": "of",
+     "start": 208.131,
+     "end": 208.171,
+     "conf": 0.979
+    },
+    {
+     "w": "july",
+     "start": 208.231,
+     "end": 208.532,
+     "conf": 0.514
+    },
+    {
+     "w": "sixteen",
+     "start": 208.552,
+     "end": 209.174,
+     "conf": 0.0
+    },
+    {
+     "w": "fifty-four",
+     "start": 209.194,
+     "end": 209.635,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "Count what you do not want",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "The first bet really was a good bet.",
+   "idea": true,
+   "start": 210.045,
+   "end": 211.496,
+   "words": [
+    {
+     "w": "the",
+     "start": 210.045,
+     "end": 210.106,
+     "conf": 0.173
+    },
+    {
+     "w": "first",
+     "start": 210.126,
+     "end": 210.347,
+     "conf": 0.981
+    },
+    {
+     "w": "bet",
+     "start": 210.368,
+     "end": 210.509,
+     "conf": 0.986
+    },
+    {
+     "w": "really",
+     "start": 210.589,
+     "end": 210.791,
+     "conf": 0.806
+    },
+    {
+     "w": "was",
+     "start": 210.831,
+     "end": 211.012,
+     "conf": 0.974
+    },
+    {
+     "w": "a",
+     "start": 211.073,
+     "end": 211.093,
+     "conf": 0.004
+    },
+    {
+     "w": "good",
+     "start": 211.113,
+     "end": 211.254,
+     "conf": 0.998
+    },
+    {
+     "w": "bet",
+     "start": 211.315,
+     "end": 211.496,
+     "conf": 0.66
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Now the double six, with exactly the same move.",
+   "idea": false,
+   "start": 213.176,
+   "end": 215.267,
+   "words": [
+    {
+     "w": "now",
+     "start": 213.176,
+     "end": 213.317,
+     "conf": 0.893
+    },
+    {
+     "w": "the",
+     "start": 213.337,
+     "end": 213.397,
+     "conf": 0.986
+    },
+    {
+     "w": "double",
+     "start": 213.458,
+     "end": 213.659,
+     "conf": 0.723
+    },
+    {
+     "w": "six",
+     "start": 213.739,
+     "end": 213.9,
+     "conf": 0.621
+    },
+    {
+     "w": "with",
+     "start": 214.041,
+     "end": 214.161,
+     "conf": 0.162
+    },
+    {
+     "w": "exactly",
+     "start": 214.182,
+     "end": 214.604,
+     "conf": 0.956
+    },
+    {
+     "w": "the",
+     "start": 214.624,
+     "end": 214.724,
+     "conf": 0.745
+    },
+    {
+     "w": "same",
+     "start": 214.785,
+     "end": 214.986,
+     "conf": 0.987
+    },
+    {
+     "w": "move",
+     "start": 215.006,
+     "end": 215.267,
+     "conf": 0.934
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "One roll of two dice misses the double six in thirty-five squares out of thirty-six.",
+   "idea": true,
+   "start": 215.697,
+   "end": 219.597,
+   "words": [
+    {
+     "w": "one",
+     "start": 215.697,
+     "end": 215.798,
+     "conf": 0.985
+    },
+    {
+     "w": "roll",
+     "start": 215.818,
+     "end": 215.979,
+     "conf": 0.795
+    },
+    {
+     "w": "of",
+     "start": 216.039,
+     "end": 216.099,
+     "conf": 0.997
+    },
+    {
+     "w": "two",
+     "start": 216.16,
+     "end": 216.28,
+     "conf": 0.551
+    },
+    {
+     "w": "dice",
+     "start": 216.341,
+     "end": 216.622,
+     "conf": 0.649
+    },
+    {
+     "w": "misses",
+     "start": 216.682,
+     "end": 216.924,
+     "conf": 0.811
+    },
+    {
+     "w": "the",
+     "start": 216.944,
+     "end": 217.044,
+     "conf": 0.731
+    },
+    {
+     "w": "double",
+     "start": 217.104,
+     "end": 217.326,
+     "conf": 0.625
+    },
+    {
+     "w": "six",
+     "start": 217.346,
+     "end": 217.567,
+     "conf": 0.544
+    },
+    {
+     "w": "in",
+     "start": 217.708,
+     "end": 217.748,
+     "conf": 0.494
+    },
+    {
+     "w": "thirty-five",
+     "start": 217.768,
+     "end": 218.351,
+     "conf": 0.005
+    },
+    {
+     "w": "squares",
+     "start": 218.371,
+     "end": 218.753,
+     "conf": 0.756
+    },
+    {
+     "w": "out",
+     "start": 218.873,
+     "end": 218.974,
+     "conf": 0.666
+    },
+    {
+     "w": "of",
+     "start": 218.994,
+     "end": 219.074,
+     "conf": 0.663
+    },
+    {
+     "w": "thirty-six",
+     "start": 219.095,
+     "end": 219.597,
+     "conf": 0.003
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Twenty-four rolls all miss with probability thirty-five thirty-sixths, multiplied by itself twenty-four times.",
+   "idea": false,
+   "start": 220.688,
+   "end": 226.381,
+   "words": [
+    {
+     "w": "twenty-four",
+     "start": 220.688,
+     "end": 221.209,
+     "conf": 0.138
+    },
+    {
+     "w": "rolls",
+     "start": 221.229,
+     "end": 221.41,
+     "conf": 0.572
+    },
+    {
+     "w": "all",
+     "start": 221.47,
+     "end": 221.55,
+     "conf": 0.611
+    },
+    {
+     "w": "miss",
+     "start": 221.57,
+     "end": 221.791,
+     "conf": 0.746
+    },
+    {
+     "w": "with",
+     "start": 221.811,
+     "end": 221.971,
+     "conf": 0.744
+    },
+    {
+     "w": "probability",
+     "start": 221.991,
+     "end": 222.512,
+     "conf": 0.999
+    },
+    {
+     "w": "thirty-five",
+     "start": 222.532,
+     "end": 223.254,
+     "conf": 0.019
+    },
+    {
+     "w": "thirty-sixths",
+     "start": 223.274,
+     "end": 224.016,
+     "conf": 0.139
+    },
+    {
+     "w": "multiplied",
+     "start": 224.337,
+     "end": 224.818,
+     "conf": 0.87
+    },
+    {
+     "w": "by",
+     "start": 224.838,
+     "end": 224.958,
+     "conf": 0.999
+    },
+    {
+     "w": "itself",
+     "start": 225.018,
+     "end": 225.359,
+     "conf": 0.829
+    },
+    {
+     "w": "twenty-four",
+     "start": 225.459,
+     "end": 225.96,
+     "conf": 0.516
+    },
+    {
+     "w": "times",
+     "start": 226.041,
+     "end": 226.381,
+     "conf": 0.748
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "That comes out just over a half, fifty point nine percent.",
+   "idea": true,
+   "start": 226.812,
+   "end": 229.442,
+   "words": [
+    {
+     "w": "that",
+     "start": 226.812,
+     "end": 226.912,
+     "conf": 0.251
+    },
+    {
+     "w": "comes",
+     "start": 226.973,
+     "end": 227.173,
+     "conf": 0.791
+    },
+    {
+     "w": "out",
+     "start": 227.234,
+     "end": 227.354,
+     "conf": 0.997
+    },
+    {
+     "w": "just",
+     "start": 227.414,
+     "end": 227.575,
+     "conf": 0.729
+    },
+    {
+     "w": "over",
+     "start": 227.635,
+     "end": 227.796,
+     "conf": 0.706
+    },
+    {
+     "w": "a",
+     "start": 227.856,
+     "end": 227.876,
+     "conf": 0.02
+    },
+    {
+     "w": "half",
+     "start": 227.896,
+     "end": 228.097,
+     "conf": 0.489
+    },
+    {
+     "w": "fifty",
+     "start": 228.117,
+     "end": 228.458,
+     "conf": 0.086
+    },
+    {
+     "w": "point",
+     "start": 228.478,
+     "end": 228.759,
+     "conf": 0.051
+    },
+    {
+     "w": "nine",
+     "start": 228.779,
+     "end": 229.04,
+     "conf": 0.025
+    },
+    {
+     "w": "percent",
+     "start": 229.06,
+     "end": 229.442,
+     "conf": 0.663
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "So at least one double six is forty-nine point one percent. Just under even. A bet that loses, slowly.",
+   "idea": false,
+   "start": 230.532,
+   "end": 235.75,
+   "words": [
+    {
+     "w": "so",
+     "start": 230.532,
+     "end": 230.592,
+     "conf": 0.5
+    },
+    {
+     "w": "at",
+     "start": 230.733,
+     "end": 230.793,
+     "conf": 0.5
+    },
+    {
+     "w": "least",
+     "start": 230.853,
+     "end": 231.034,
+     "conf": 0.799
+    },
+    {
+     "w": "one",
+     "start": 231.194,
+     "end": 231.275,
+     "conf": 0.654
+    },
+    {
+     "w": "double",
+     "start": 231.335,
+     "end": 231.576,
+     "conf": 0.77
+    },
+    {
+     "w": "six",
+     "start": 231.656,
+     "end": 231.817,
+     "conf": 0.62
+    },
+    {
+     "w": "is",
+     "start": 231.977,
+     "end": 232.037,
+     "conf": 0.968
+    },
+    {
+     "w": "forty-nine",
+     "start": 232.057,
+     "end": 232.659,
+     "conf": 0.004
+    },
+    {
+     "w": "point",
+     "start": 232.679,
+     "end": 232.92,
+     "conf": 0.003
+    },
+    {
+     "w": "one",
+     "start": 232.94,
+     "end": 233.081,
+     "conf": 0.002
+    },
+    {
+     "w": "percent",
+     "start": 233.141,
+     "end": 233.422,
+     "conf": 0.795
+    },
+    {
+     "w": "just",
+     "start": 233.502,
+     "end": 233.663,
+     "conf": 0.742
+    },
+    {
+     "w": "under",
+     "start": 233.743,
+     "end": 233.924,
+     "conf": 0.798
+    },
+    {
+     "w": "even",
+     "start": 234.024,
+     "end": 234.164,
+     "conf": 0.75
+    },
+    {
+     "w": "a",
+     "start": 234.445,
+     "end": 234.466,
+     "conf": 0.002
+    },
+    {
+     "w": "bet",
+     "start": 234.486,
+     "end": 234.626,
+     "conf": 0.965
+    },
+    {
+     "w": "that",
+     "start": 234.646,
+     "end": 234.767,
+     "conf": 0.799
+    },
+    {
+     "w": "loses",
+     "start": 234.827,
+     "end": 235.208,
+     "conf": 0.8
+    },
+    {
+     "w": "slowly",
+     "start": 235.449,
+     "end": 235.75,
+     "conf": 0.982
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Add one more roll, twenty-five instead of twenty-four, and it crosses to fifty point six.",
+   "idea": true,
+   "start": 236.16,
+   "end": 240.32,
+   "words": [
+    {
+     "w": "add",
+     "start": 236.16,
+     "end": 236.281,
+     "conf": 0.471
+    },
+    {
+     "w": "one",
+     "start": 236.381,
+     "end": 236.482,
+     "conf": 0.992
+    },
+    {
+     "w": "more",
+     "start": 236.502,
+     "end": 236.663,
+     "conf": 0.6
+    },
+    {
+     "w": "roll",
+     "start": 236.723,
+     "end": 236.964,
+     "conf": 0.582
+    },
+    {
+     "w": "twenty-five",
+     "start": 236.984,
+     "end": 237.708,
+     "conf": 0.199
+    },
+    {
+     "w": "instead",
+     "start": 237.768,
+     "end": 237.969,
+     "conf": 0.693
+    },
+    {
+     "w": "of",
+     "start": 237.989,
+     "end": 238.029,
+     "conf": 0.99
+    },
+    {
+     "w": "twenty-four",
+     "start": 238.049,
+     "end": 238.592,
+     "conf": 0.203
+    },
+    {
+     "w": "and",
+     "start": 238.612,
+     "end": 238.974,
+     "conf": 0.577
+    },
+    {
+     "w": "it",
+     "start": 238.994,
+     "end": 239.054,
+     "conf": 0.99
+    },
+    {
+     "w": "crosses",
+     "start": 239.115,
+     "end": 239.416,
+     "conf": 0.868
+    },
+    {
+     "w": "to",
+     "start": 239.436,
+     "end": 239.496,
+     "conf": 0.983
+    },
+    {
+     "w": "fifty",
+     "start": 239.516,
+     "end": 239.778,
+     "conf": 0.072
+    },
+    {
+     "w": "point",
+     "start": 239.798,
+     "end": 240.019,
+     "conf": 0.408
+    },
+    {
+     "w": "six",
+     "start": 240.039,
+     "end": 240.32,
+     "conf": 0.125
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "According to Pascal's letter, the gambler was so upset that he declared arithmetic had contradicted itself.",
+   "idea": false,
+   "start": 241.41,
+   "end": 246.635,
+   "words": [
+    {
+     "w": "according",
+     "start": 241.41,
+     "end": 241.69,
+     "conf": 0.992
+    },
+    {
+     "w": "to",
+     "start": 241.71,
+     "end": 241.75,
+     "conf": 0.997
+    },
+    {
+     "w": "pascal's",
+     "start": 241.81,
+     "end": 242.231,
+     "conf": 0.761
+    },
+    {
+     "w": "letter",
+     "start": 242.251,
+     "end": 242.531,
+     "conf": 0.837
+    },
+    {
+     "w": "the",
+     "start": 242.831,
+     "end": 242.892,
+     "conf": 0.598
+    },
+    {
+     "w": "gambler",
+     "start": 242.952,
+     "end": 243.232,
+     "conf": 0.772
+    },
+    {
+     "w": "was",
+     "start": 243.252,
+     "end": 243.352,
+     "conf": 0.931
+    },
+    {
+     "w": "so",
+     "start": 243.432,
+     "end": 243.492,
+     "conf": 0.5
+    },
+    {
+     "w": "upset",
+     "start": 243.592,
+     "end": 243.873,
+     "conf": 0.609
+    },
+    {
+     "w": "that",
+     "start": 243.933,
+     "end": 244.233,
+     "conf": 0.757
+    },
+    {
+     "w": "he",
+     "start": 244.253,
+     "end": 244.313,
+     "conf": 0.988
+    },
+    {
+     "w": "declared",
+     "start": 244.393,
+     "end": 244.733,
+     "conf": 0.873
+    },
+    {
+     "w": "arithmetic",
+     "start": 244.834,
+     "end": 245.394,
+     "conf": 0.806
+    },
+    {
+     "w": "had",
+     "start": 245.474,
+     "end": 245.574,
+     "conf": 0.998
+    },
+    {
+     "w": "contradicted",
+     "start": 245.634,
+     "end": 246.255,
+     "conf": 0.914
+    },
+    {
+     "w": "itself",
+     "start": 246.315,
+     "end": 246.635,
+     "conf": 0.847
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "It had not. His adding rule had.",
+   "idea": true,
+   "start": 247.127,
+   "end": 248.708,
+   "words": [
+    {
+     "w": "it",
+     "start": 247.127,
+     "end": 247.167,
+     "conf": 0.497
+    },
+    {
+     "w": "had",
+     "start": 247.188,
+     "end": 247.309,
+     "conf": 0.997
+    },
+    {
+     "w": "not",
+     "start": 247.37,
+     "end": 247.553,
+     "conf": 0.999
+    },
+    {
+     "w": "his",
+     "start": 247.796,
+     "end": 247.897,
+     "conf": 0.989
+    },
+    {
+     "w": "adding",
+     "start": 248.019,
+     "end": 248.222,
+     "conf": 0.836
+    },
+    {
+     "w": "rule",
+     "start": 248.242,
+     "end": 248.445,
+     "conf": 0.73
+    },
+    {
+     "w": "had",
+     "start": 248.506,
+     "end": 248.708,
+     "conf": 0.912
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "One honest note. Historians doubt he could have felt the difference just by playing.",
+   "idea": false,
+   "start": 249.699,
+   "end": 253.519,
+   "words": [
+    {
+     "w": "one",
+     "start": 249.699,
+     "end": 249.8,
+     "conf": 0.667
+    },
+    {
+     "w": "honest",
+     "start": 249.82,
+     "end": 250.061,
+     "conf": 0.917
+    },
+    {
+     "w": "note",
+     "start": 250.141,
+     "end": 250.363,
+     "conf": 0.676
+    },
+    {
+     "w": "historians",
+     "start": 250.624,
+     "end": 251.167,
+     "conf": 0.882
+    },
+    {
+     "w": "doubt",
+     "start": 251.227,
+     "end": 251.468,
+     "conf": 0.563
+    },
+    {
+     "w": "he",
+     "start": 251.549,
+     "end": 251.589,
+     "conf": 0.812
+    },
+    {
+     "w": "could",
+     "start": 251.69,
+     "end": 251.83,
+     "conf": 0.829
+    },
+    {
+     "w": "have",
+     "start": 251.85,
+     "end": 251.951,
+     "conf": 0.996
+    },
+    {
+     "w": "felt",
+     "start": 251.971,
+     "end": 252.172,
+     "conf": 0.797
+    },
+    {
+     "w": "the",
+     "start": 252.192,
+     "end": 252.273,
+     "conf": 0.988
+    },
+    {
+     "w": "difference",
+     "start": 252.293,
+     "end": 252.735,
+     "conf": 0.96
+    },
+    {
+     "w": "just",
+     "start": 252.755,
+     "end": 252.936,
+     "conf": 0.784
+    },
+    {
+     "w": "by",
+     "start": 252.956,
+     "end": 253.097,
+     "conf": 0.979
+    },
+    {
+     "w": "playing",
+     "start": 253.177,
+     "end": 253.519,
+     "conf": 0.813
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "To be fairly sure that forty-nine point one is not fifty, you would need around thirteen thousand games.",
+   "idea": false,
+   "start": 253.909,
+   "end": 258.864,
+   "words": [
+    {
+     "w": "to",
+     "start": 253.909,
+     "end": 253.949,
+     "conf": 0.978
+    },
+    {
+     "w": "be",
+     "start": 253.969,
+     "end": 254.029,
+     "conf": 0.666
+    },
+    {
+     "w": "fairly",
+     "start": 254.17,
+     "end": 254.391,
+     "conf": 0.787
+    },
+    {
+     "w": "sure",
+     "start": 254.471,
+     "end": 254.651,
+     "conf": 0.72
+    },
+    {
+     "w": "that",
+     "start": 254.671,
+     "end": 254.772,
+     "conf": 0.996
+    },
+    {
+     "w": "forty-nine",
+     "start": 254.792,
+     "end": 255.313,
+     "conf": 0.03
+    },
+    {
+     "w": "point",
+     "start": 255.333,
+     "end": 255.534,
+     "conf": 0.312
+    },
+    {
+     "w": "one",
+     "start": 255.554,
+     "end": 255.735,
+     "conf": 0.077
+    },
+    {
+     "w": "is",
+     "start": 255.815,
+     "end": 255.855,
+     "conf": 0.483
+    },
+    {
+     "w": "not",
+     "start": 255.935,
+     "end": 256.036,
+     "conf": 0.664
+    },
+    {
+     "w": "fifty",
+     "start": 256.216,
+     "end": 256.477,
+     "conf": 0.672
+    },
+    {
+     "w": "you",
+     "start": 256.938,
+     "end": 256.998,
+     "conf": 0.659
+    },
+    {
+     "w": "would",
+     "start": 257.018,
+     "end": 257.119,
+     "conf": 0.756
+    },
+    {
+     "w": "need",
+     "start": 257.139,
+     "end": 257.299,
+     "conf": 0.88
+    },
+    {
+     "w": "around",
+     "start": 257.36,
+     "end": 257.6,
+     "conf": 0.829
+    },
+    {
+     "w": "thirteen",
+     "start": 257.62,
+     "end": 258.082,
+     "conf": 0.301
+    },
+    {
+     "w": "thousand",
+     "start": 258.102,
+     "end": 258.463,
+     "conf": 0.502
+    },
+    {
+     "w": "games",
+     "start": 258.523,
+     "end": 258.864,
+     "conf": 0.782
+    }
+   ]
+  },
+  {
+   "section": "The second bet",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "What we know for certain is the reasoning, because Pascal wrote it down.",
+   "idea": true,
+   "start": 259.334,
+   "end": 262.833,
+   "words": [
+    {
+     "w": "what",
+     "start": 259.334,
+     "end": 259.435,
+     "conf": 0.819
+    },
+    {
+     "w": "we",
+     "start": 259.455,
+     "end": 259.515,
+     "conf": 0.997
+    },
+    {
+     "w": "know",
+     "start": 259.555,
+     "end": 259.696,
+     "conf": 0.953
+    },
+    {
+     "w": "for",
+     "start": 259.776,
+     "end": 259.837,
+     "conf": 0.642
+    },
+    {
+     "w": "certain",
+     "start": 259.897,
+     "end": 260.259,
+     "conf": 0.998
+    },
+    {
+     "w": "is",
+     "start": 260.4,
+     "end": 260.52,
+     "conf": 0.995
+    },
+    {
+     "w": "the",
+     "start": 260.541,
+     "end": 260.681,
+     "conf": 0.663
+    },
+    {
+     "w": "reasoning",
+     "start": 260.701,
+     "end": 261.063,
+     "conf": 0.869
+    },
+    {
+     "w": "because",
+     "start": 261.083,
+     "end": 261.445,
+     "conf": 0.855
+    },
+    {
+     "w": "pascal",
+     "start": 261.546,
+     "end": 262.049,
+     "conf": 0.662
+    },
+    {
+     "w": "wrote",
+     "start": 262.189,
+     "end": 262.39,
+     "conf": 0.604
+    },
+    {
+     "w": "it",
+     "start": 262.41,
+     "end": 262.491,
+     "conf": 0.992
+    },
+    {
+     "w": "down",
+     "start": 262.551,
+     "end": 262.833,
+     "conf": 0.934
+    }
+   ]
+  },
+  {
+   "section": "Why our instinct does this",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "So that is the second answer.",
+   "idea": false,
+   "start": 264.493,
+   "end": 265.892,
+   "words": [
+    {
+     "w": "so",
+     "start": 264.493,
+     "end": 264.574,
+     "conf": 0.678
+    },
+    {
+     "w": "that",
+     "start": 264.635,
+     "end": 264.818,
+     "conf": 0.772
+    },
+    {
+     "w": "is",
+     "start": 264.939,
+     "end": 264.98,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 265.0,
+     "end": 265.102,
+     "conf": 0.747
+    },
+    {
+     "w": "second",
+     "start": 265.223,
+     "end": 265.507,
+     "conf": 0.835
+    },
+    {
+     "w": "answer",
+     "start": 265.588,
+     "end": 265.892,
+     "conf": 0.762
+    }
+   ]
+  },
+  {
+   "section": "Why our instinct does this",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Our instinct counts answers instead of equally likely outcomes, and it adds chances that can happen together.",
+   "idea": true,
+   "start": 266.323,
+   "end": 271.596,
+   "words": [
+    {
+     "w": "our",
+     "start": 266.323,
+     "end": 266.403,
+     "conf": 0.665
+    },
+    {
+     "w": "instinct",
+     "start": 266.463,
+     "end": 266.844,
+     "conf": 0.951
+    },
+    {
+     "w": "counts",
+     "start": 266.945,
+     "end": 267.185,
+     "conf": 0.694
+    },
+    {
+     "w": "answers",
+     "start": 267.326,
+     "end": 267.626,
+     "conf": 0.448
+    },
+    {
+     "w": "instead",
+     "start": 267.967,
+     "end": 268.228,
+     "conf": 0.753
+    },
+    {
+     "w": "of",
+     "start": 268.248,
+     "end": 268.308,
+     "conf": 0.999
+    },
+    {
+     "w": "equally",
+     "start": 268.408,
+     "end": 268.649,
+     "conf": 0.852
+    },
+    {
+     "w": "likely",
+     "start": 268.729,
+     "end": 268.969,
+     "conf": 0.817
+    },
+    {
+     "w": "outcomes",
+     "start": 269.07,
+     "end": 269.471,
+     "conf": 0.874
+    },
+    {
+     "w": "and",
+     "start": 269.811,
+     "end": 269.952,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 270.012,
+     "end": 270.072,
+     "conf": 0.5
+    },
+    {
+     "w": "adds",
+     "start": 270.152,
+     "end": 270.293,
+     "conf": 0.678
+    },
+    {
+     "w": "chances",
+     "start": 270.353,
+     "end": 270.713,
+     "conf": 0.856
+    },
+    {
+     "w": "that",
+     "start": 270.734,
+     "end": 270.834,
+     "conf": 0.939
+    },
+    {
+     "w": "can",
+     "start": 270.854,
+     "end": 270.974,
+     "conf": 1.0
+    },
+    {
+     "w": "happen",
+     "start": 271.014,
+     "end": 271.235,
+     "conf": 0.987
+    },
+    {
+     "w": "together",
+     "start": 271.295,
+     "end": 271.596,
+     "conf": 0.86
+    }
+   ]
+  },
+  {
+   "section": "Why our instinct does this",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Both mistakes feel natural because the wrong number is often close to the right one.",
+   "idea": false,
+   "start": 272.585,
+   "end": 276.801,
+   "words": [
+    {
+     "w": "both",
+     "start": 272.585,
+     "end": 272.746,
+     "conf": 0.997
+    },
+    {
+     "w": "mistakes",
+     "start": 272.766,
+     "end": 273.288,
+     "conf": 0.746
+    },
+    {
+     "w": "feel",
+     "start": 273.368,
+     "end": 273.549,
+     "conf": 0.749
+    },
+    {
+     "w": "natural",
+     "start": 273.629,
+     "end": 274.071,
+     "conf": 0.87
+    },
+    {
+     "w": "because",
+     "start": 274.191,
+     "end": 274.552,
+     "conf": 0.973
+    },
+    {
+     "w": "the",
+     "start": 274.573,
+     "end": 274.673,
+     "conf": 0.743
+    },
+    {
+     "w": "wrong",
+     "start": 274.773,
+     "end": 275.034,
+     "conf": 0.804
+    },
+    {
+     "w": "number",
+     "start": 275.115,
+     "end": 275.456,
+     "conf": 0.851
+    },
+    {
+     "w": "is",
+     "start": 275.556,
+     "end": 275.637,
+     "conf": 0.996
+    },
+    {
+     "w": "often",
+     "start": 275.757,
+     "end": 275.958,
+     "conf": 0.798
+    },
+    {
+     "w": "close",
+     "start": 276.018,
+     "end": 276.239,
+     "conf": 0.797
+    },
+    {
+     "w": "to",
+     "start": 276.259,
+     "end": 276.319,
+     "conf": 0.983
+    },
+    {
+     "w": "the",
+     "start": 276.339,
+     "end": 276.399,
+     "conf": 0.906
+    },
+    {
+     "w": "right",
+     "start": 276.46,
+     "end": 276.64,
+     "conf": 0.811
+    },
+    {
+     "w": "one",
+     "start": 276.741,
+     "end": 276.801,
+     "conf": 0.599
+    }
+   ]
+  },
+  {
+   "section": "Why our instinct does this",
+   "act": "ACT TWO — Why instinct counts the wrong thing",
+   "text": "Four sixths is sixty-seven percent, the truth is fifty-two. Close enough to believe, wrong enough to lose money.",
+   "idea": true,
+   "start": 277.331,
+   "end": 283.026,
+   "words": [
+    {
+     "w": "four",
+     "start": 277.331,
+     "end": 277.492,
+     "conf": 0.604
+    },
+    {
+     "w": "sixths",
+     "start": 277.572,
+     "end": 277.953,
+     "conf": 0.595
+    },
+    {
+     "w": "is",
+     "start": 278.033,
+     "end": 278.113,
+     "conf": 0.496
+    },
+    {
+     "w": "sixty-seven",
+     "start": 278.134,
+     "end": 278.855,
+     "conf": 0.028
+    },
+    {
+     "w": "percent",
+     "start": 278.875,
+     "end": 279.236,
+     "conf": 0.859
+    },
+    {
+     "w": "the",
+     "start": 279.317,
+     "end": 279.377,
+     "conf": 0.662
+    },
+    {
+     "w": "truth",
+     "start": 279.437,
+     "end": 279.658,
+     "conf": 0.799
+    },
+    {
+     "w": "is",
+     "start": 279.718,
+     "end": 279.778,
+     "conf": 0.498
+    },
+    {
+     "w": "fifty-two",
+     "start": 279.858,
+     "end": 280.379,
+     "conf": 0.776
+    },
+    {
+     "w": "close",
+     "start": 280.861,
+     "end": 281.121,
+     "conf": 0.788
+    },
+    {
+     "w": "enough",
+     "start": 281.141,
+     "end": 281.342,
+     "conf": 0.846
+    },
+    {
+     "w": "to",
+     "start": 281.382,
+     "end": 281.422,
+     "conf": 0.506
+    },
+    {
+     "w": "believe",
+     "start": 281.442,
+     "end": 281.763,
+     "conf": 0.885
+    },
+    {
+     "w": "wrong",
+     "start": 281.923,
+     "end": 282.144,
+     "conf": 0.926
+    },
+    {
+     "w": "enough",
+     "start": 282.164,
+     "end": 282.445,
+     "conf": 0.732
+    },
+    {
+     "w": "to",
+     "start": 282.505,
+     "end": 282.565,
+     "conf": 0.5
+    },
+    {
+     "w": "lose",
+     "start": 282.625,
+     "end": 282.826,
+     "conf": 0.768
+    },
+    {
+     "w": "money",
+     "start": 282.866,
+     "end": 283.026,
+     "conf": 0.798
+    }
+   ]
+  },
+  {
+   "section": "Move one: list equally likely outcomes",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "So how do you solve a probability problem without guessing?",
+   "idea": false,
+   "start": 285.91,
+   "end": 288.247,
+   "words": [
+    {
+     "w": "so",
+     "start": 285.91,
+     "end": 285.971,
+     "conf": 0.997
+    },
+    {
+     "w": "how",
+     "start": 286.051,
+     "end": 286.233,
+     "conf": 0.998
+    },
+    {
+     "w": "do",
+     "start": 286.293,
+     "end": 286.333,
+     "conf": 0.5
+    },
+    {
+     "w": "you",
+     "start": 286.394,
+     "end": 286.474,
+     "conf": 0.726
+    },
+    {
+     "w": "solve",
+     "start": 286.555,
+     "end": 286.736,
+     "conf": 0.797
+    },
+    {
+     "w": "a",
+     "start": 286.756,
+     "end": 286.776,
+     "conf": 0.989
+    },
+    {
+     "w": "probability",
+     "start": 286.797,
+     "end": 287.26,
+     "conf": 0.898
+    },
+    {
+     "w": "problem",
+     "start": 287.341,
+     "end": 287.582,
+     "conf": 0.857
+    },
+    {
+     "w": "without",
+     "start": 287.602,
+     "end": 287.884,
+     "conf": 0.847
+    },
+    {
+     "w": "guessing",
+     "start": 287.945,
+     "end": 288.247,
+     "conf": 0.653
+    }
+   ]
+  },
+  {
+   "section": "Move one: list equally likely outcomes",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Pascal and Fermat had no formulas to look up. They had counting, and five moves cover almost everything you will meet.",
+   "idea": true,
+   "start": 288.637,
+   "end": 294.536,
+   "words": [
+    {
+     "w": "pascal",
+     "start": 288.637,
+     "end": 289.038,
+     "conf": 0.913
+    },
+    {
+     "w": "and",
+     "start": 289.099,
+     "end": 289.159,
+     "conf": 0.589
+    },
+    {
+     "w": "fermat",
+     "start": 289.179,
+     "end": 289.56,
+     "conf": 0.527
+    },
+    {
+     "w": "had",
+     "start": 289.68,
+     "end": 289.801,
+     "conf": 0.686
+    },
+    {
+     "w": "no",
+     "start": 289.881,
+     "end": 289.941,
+     "conf": 0.999
+    },
+    {
+     "w": "formulas",
+     "start": 290.102,
+     "end": 290.543,
+     "conf": 0.869
+    },
+    {
+     "w": "to",
+     "start": 290.603,
+     "end": 290.664,
+     "conf": 0.646
+    },
+    {
+     "w": "look",
+     "start": 290.724,
+     "end": 290.844,
+     "conf": 0.787
+    },
+    {
+     "w": "up",
+     "start": 290.945,
+     "end": 291.045,
+     "conf": 0.502
+    },
+    {
+     "w": "they",
+     "start": 291.346,
+     "end": 291.426,
+     "conf": 0.744
+    },
+    {
+     "w": "had",
+     "start": 291.446,
+     "end": 291.546,
+     "conf": 0.999
+    },
+    {
+     "w": "counting",
+     "start": 291.607,
+     "end": 292.008,
+     "conf": 0.863
+    },
+    {
+     "w": "and",
+     "start": 292.309,
+     "end": 292.409,
+     "conf": 0.8
+    },
+    {
+     "w": "five",
+     "start": 292.57,
+     "end": 292.831,
+     "conf": 0.75
+    },
+    {
+     "w": "moves",
+     "start": 292.851,
+     "end": 293.091,
+     "conf": 0.833
+    },
+    {
+     "w": "cover",
+     "start": 293.112,
+     "end": 293.352,
+     "conf": 1.0
+    },
+    {
+     "w": "almost",
+     "start": 293.453,
+     "end": 293.713,
+     "conf": 0.833
+    },
+    {
+     "w": "everything",
+     "start": 293.794,
+     "end": 294.075,
+     "conf": 0.902
+    },
+    {
+     "w": "you",
+     "start": 294.095,
+     "end": 294.175,
+     "conf": 0.997
+    },
+    {
+     "w": "will",
+     "start": 294.195,
+     "end": 294.315,
+     "conf": 0.986
+    },
+    {
+     "w": "meet",
+     "start": 294.335,
+     "end": 294.536,
+     "conf": 0.767
+    }
+   ]
+  },
+  {
+   "section": "Move one: list equally likely outcomes",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Move one. Before you calculate anything, draw the list.",
+   "idea": false,
+   "start": 295.586,
+   "end": 298.156,
+   "words": [
+    {
+     "w": "move",
+     "start": 295.586,
+     "end": 295.767,
+     "conf": 0.999
+    },
+    {
+     "w": "one",
+     "start": 295.847,
+     "end": 295.968,
+     "conf": 0.664
+    },
+    {
+     "w": "before",
+     "start": 296.309,
+     "end": 296.53,
+     "conf": 0.852
+    },
+    {
+     "w": "you",
+     "start": 296.55,
+     "end": 296.61,
+     "conf": 0.998
+    },
+    {
+     "w": "calculate",
+     "start": 296.63,
+     "end": 297.032,
+     "conf": 0.995
+    },
+    {
+     "w": "anything",
+     "start": 297.052,
+     "end": 297.393,
+     "conf": 0.843
+    },
+    {
+     "w": "draw",
+     "start": 297.574,
+     "end": 297.734,
+     "conf": 0.747
+    },
+    {
+     "w": "the",
+     "start": 297.774,
+     "end": 297.835,
+     "conf": 0.997
+    },
+    {
+     "w": "list",
+     "start": 297.915,
+     "end": 298.156,
+     "conf": 0.721
+    }
+   ]
+  },
+  {
+   "section": "Move one: list equally likely outcomes",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "A grid when there are two things at once, like two dice. A tree when things happen one after another.",
+   "idea": false,
+   "start": 298.566,
+   "end": 303.524,
+   "words": [
+    {
+     "w": "a",
+     "start": 298.566,
+     "end": 298.586,
+     "conf": 0.975
+    },
+    {
+     "w": "grid",
+     "start": 298.646,
+     "end": 298.927,
+     "conf": 0.982
+    },
+    {
+     "w": "when",
+     "start": 298.947,
+     "end": 299.068,
+     "conf": 0.745
+    },
+    {
+     "w": "there",
+     "start": 299.088,
+     "end": 299.188,
+     "conf": 0.974
+    },
+    {
+     "w": "are",
+     "start": 299.208,
+     "end": 299.269,
+     "conf": 0.909
+    },
+    {
+     "w": "two",
+     "start": 299.289,
+     "end": 299.449,
+     "conf": 0.944
+    },
+    {
+     "w": "things",
+     "start": 299.509,
+     "end": 299.71,
+     "conf": 0.853
+    },
+    {
+     "w": "at",
+     "start": 299.73,
+     "end": 299.811,
+     "conf": 0.666
+    },
+    {
+     "w": "once",
+     "start": 299.971,
+     "end": 300.172,
+     "conf": 0.74
+    },
+    {
+     "w": "like",
+     "start": 300.332,
+     "end": 300.493,
+     "conf": 0.752
+    },
+    {
+     "w": "two",
+     "start": 300.553,
+     "end": 300.734,
+     "conf": 0.992
+    },
+    {
+     "w": "dice",
+     "start": 300.814,
+     "end": 301.175,
+     "conf": 0.693
+    },
+    {
+     "w": "a",
+     "start": 301.557,
+     "end": 301.577,
+     "conf": 0.001
+    },
+    {
+     "w": "tree",
+     "start": 301.677,
+     "end": 301.918,
+     "conf": 0.771
+    },
+    {
+     "w": "when",
+     "start": 301.938,
+     "end": 302.179,
+     "conf": 0.741
+    },
+    {
+     "w": "things",
+     "start": 302.199,
+     "end": 302.42,
+     "conf": 0.838
+    },
+    {
+     "w": "happen",
+     "start": 302.48,
+     "end": 302.681,
+     "conf": 0.844
+    },
+    {
+     "w": "one",
+     "start": 302.841,
+     "end": 302.942,
+     "conf": 0.665
+    },
+    {
+     "w": "after",
+     "start": 303.002,
+     "end": 303.223,
+     "conf": 0.782
+    },
+    {
+     "w": "another",
+     "start": 303.283,
+     "end": 303.524,
+     "conf": 0.653
+    }
+   ]
+  },
+  {
+   "section": "Move one: list equally likely outcomes",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Then ask the question the gambler never asked: are these outcomes equally likely?",
+   "idea": true,
+   "start": 303.934,
+   "end": 307.724,
+   "words": [
+    {
+     "w": "then",
+     "start": 303.934,
+     "end": 304.014,
+     "conf": 0.632
+    },
+    {
+     "w": "ask",
+     "start": 304.074,
+     "end": 304.175,
+     "conf": 0.364
+    },
+    {
+     "w": "the",
+     "start": 304.195,
+     "end": 304.255,
+     "conf": 0.979
+    },
+    {
+     "w": "question",
+     "start": 304.275,
+     "end": 304.616,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 304.636,
+     "end": 304.736,
+     "conf": 0.786
+    },
+    {
+     "w": "gambler",
+     "start": 304.776,
+     "end": 305.137,
+     "conf": 0.825
+    },
+    {
+     "w": "never",
+     "start": 305.237,
+     "end": 305.458,
+     "conf": 0.749
+    },
+    {
+     "w": "asked",
+     "start": 305.598,
+     "end": 305.939,
+     "conf": 0.8
+    },
+    {
+     "w": "are",
+     "start": 306.34,
+     "end": 306.4,
+     "conf": 0.665
+    },
+    {
+     "w": "these",
+     "start": 306.42,
+     "end": 306.561,
+     "conf": 0.924
+    },
+    {
+     "w": "outcomes",
+     "start": 306.621,
+     "end": 306.962,
+     "conf": 0.878
+    },
+    {
+     "w": "equally",
+     "start": 307.102,
+     "end": 307.383,
+     "conf": 0.827
+    },
+    {
+     "w": "likely",
+     "start": 307.443,
+     "end": 307.724,
+     "conf": 0.965
+    }
+   ]
+  },
+  {
+   "section": "Move two: \"at least one\" means count the opposite",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Move two. Whenever a question says \"at least one\", count \"none\" instead and subtract from one.",
+   "idea": false,
+   "start": 309.424,
+   "end": 313.914,
+   "words": [
+    {
+     "w": "move",
+     "start": 309.424,
+     "end": 309.645,
+     "conf": 0.902
+    },
+    {
+     "w": "two",
+     "start": 309.705,
+     "end": 309.905,
+     "conf": 0.669
+    },
+    {
+     "w": "whenever",
+     "start": 310.206,
+     "end": 310.446,
+     "conf": 0.927
+    },
+    {
+     "w": "a",
+     "start": 310.486,
+     "end": 310.506,
+     "conf": 0.986
+    },
+    {
+     "w": "question",
+     "start": 310.527,
+     "end": 310.847,
+     "conf": 0.948
+    },
+    {
+     "w": "says",
+     "start": 310.867,
+     "end": 311.088,
+     "conf": 0.671
+    },
+    {
+     "w": "at",
+     "start": 311.208,
+     "end": 311.268,
+     "conf": 0.5
+    },
+    {
+     "w": "least",
+     "start": 311.368,
+     "end": 311.569,
+     "conf": 0.818
+    },
+    {
+     "w": "one",
+     "start": 311.729,
+     "end": 311.849,
+     "conf": 0.665
+    },
+    {
+     "w": "count",
+     "start": 311.97,
+     "end": 312.21,
+     "conf": 0.998
+    },
+    {
+     "w": "none",
+     "start": 312.29,
+     "end": 312.471,
+     "conf": 0.989
+    },
+    {
+     "w": "instead",
+     "start": 312.531,
+     "end": 312.912,
+     "conf": 0.857
+    },
+    {
+     "w": "and",
+     "start": 312.992,
+     "end": 313.052,
+     "conf": 0.661
+    },
+    {
+     "w": "subtract",
+     "start": 313.132,
+     "end": 313.533,
+     "conf": 0.874
+    },
+    {
+     "w": "from",
+     "start": 313.593,
+     "end": 313.734,
+     "conf": 0.787
+    },
+    {
+     "w": "one",
+     "start": 313.834,
+     "end": 313.914,
+     "conf": 0.182
+    }
+   ]
+  },
+  {
+   "section": "Move two: \"at least one\" means count the opposite",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "\"At least one\" spreads over many cases. \"None\" is one case.",
+   "idea": true,
+   "start": 314.304,
+   "end": 316.845,
+   "words": [
+    {
+     "w": "at",
+     "start": 314.304,
+     "end": 314.365,
+     "conf": 0.999
+    },
+    {
+     "w": "least",
+     "start": 314.385,
+     "end": 314.546,
+     "conf": 0.999
+    },
+    {
+     "w": "one",
+     "start": 314.627,
+     "end": 314.768,
+     "conf": 0.995
+    },
+    {
+     "w": "spreads",
+     "start": 314.829,
+     "end": 315.111,
+     "conf": 0.903
+    },
+    {
+     "w": "over",
+     "start": 315.131,
+     "end": 315.272,
+     "conf": 0.934
+    },
+    {
+     "w": "many",
+     "start": 315.292,
+     "end": 315.454,
+     "conf": 0.806
+    },
+    {
+     "w": "cases",
+     "start": 315.514,
+     "end": 315.857,
+     "conf": 0.801
+    },
+    {
+     "w": "none",
+     "start": 316.099,
+     "end": 316.22,
+     "conf": 0.578
+    },
+    {
+     "w": "is",
+     "start": 316.24,
+     "end": 316.321,
+     "conf": 0.852
+    },
+    {
+     "w": "one",
+     "start": 316.422,
+     "end": 316.523,
+     "conf": 0.664
+    },
+    {
+     "w": "case",
+     "start": 316.543,
+     "end": 316.845,
+     "conf": 0.867
+    }
+   ]
+  },
+  {
+   "section": "Move two: \"at least one\" means count the opposite",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Three coins, at least one head? There is exactly one way to get no heads, tails three times, one in eight.",
+   "idea": false,
+   "start": 317.915,
+   "end": 323.156,
+   "words": [
+    {
+     "w": "three",
+     "start": 317.915,
+     "end": 318.116,
+     "conf": 0.855
+    },
+    {
+     "w": "coins",
+     "start": 318.176,
+     "end": 318.538,
+     "conf": 0.797
+    },
+    {
+     "w": "at",
+     "start": 318.658,
+     "end": 318.718,
+     "conf": 0.995
+    },
+    {
+     "w": "least",
+     "start": 318.738,
+     "end": 318.939,
+     "conf": 0.832
+    },
+    {
+     "w": "one",
+     "start": 319.08,
+     "end": 319.18,
+     "conf": 0.665
+    },
+    {
+     "w": "head",
+     "start": 319.24,
+     "end": 319.401,
+     "conf": 0.756
+    },
+    {
+     "w": "there",
+     "start": 319.863,
+     "end": 320.003,
+     "conf": 0.939
+    },
+    {
+     "w": "is",
+     "start": 320.023,
+     "end": 320.064,
+     "conf": 0.994
+    },
+    {
+     "w": "exactly",
+     "start": 320.084,
+     "end": 320.445,
+     "conf": 0.842
+    },
+    {
+     "w": "one",
+     "start": 320.545,
+     "end": 320.646,
+     "conf": 0.666
+    },
+    {
+     "w": "way",
+     "start": 320.666,
+     "end": 320.847,
+     "conf": 0.79
+    },
+    {
+     "w": "to",
+     "start": 320.947,
+     "end": 320.987,
+     "conf": 0.5
+    },
+    {
+     "w": "get",
+     "start": 321.007,
+     "end": 321.128,
+     "conf": 0.75
+    },
+    {
+     "w": "no",
+     "start": 321.208,
+     "end": 321.268,
+     "conf": 0.506
+    },
+    {
+     "w": "heads",
+     "start": 321.389,
+     "end": 321.61,
+     "conf": 0.785
+    },
+    {
+     "w": "tails",
+     "start": 321.71,
+     "end": 321.971,
+     "conf": 0.657
+    },
+    {
+     "w": "three",
+     "start": 322.031,
+     "end": 322.192,
+     "conf": 0.915
+    },
+    {
+     "w": "times",
+     "start": 322.212,
+     "end": 322.513,
+     "conf": 0.83
+    },
+    {
+     "w": "one",
+     "start": 322.754,
+     "end": 322.834,
+     "conf": 0.637
+    },
+    {
+     "w": "in",
+     "start": 322.874,
+     "end": 322.915,
+     "conf": 0.45
+    },
+    {
+     "w": "eight",
+     "start": 322.935,
+     "end": 323.156,
+     "conf": 0.38
+    }
+   ]
+  },
+  {
+   "section": "Move two: \"at least one\" means count the opposite",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "So the answer is seven in eight, without listing the other seven.",
+   "idea": true,
+   "start": 323.606,
+   "end": 326.802,
+   "words": [
+    {
+     "w": "so",
+     "start": 323.606,
+     "end": 323.666,
+     "conf": 0.995
+    },
+    {
+     "w": "the",
+     "start": 323.707,
+     "end": 323.787,
+     "conf": 0.941
+    },
+    {
+     "w": "answer",
+     "start": 323.867,
+     "end": 324.129,
+     "conf": 0.822
+    },
+    {
+     "w": "is",
+     "start": 324.189,
+     "end": 324.33,
+     "conf": 0.659
+    },
+    {
+     "w": "seven",
+     "start": 324.571,
+     "end": 324.792,
+     "conf": 0.841
+    },
+    {
+     "w": "in",
+     "start": 324.852,
+     "end": 324.892,
+     "conf": 0.422
+    },
+    {
+     "w": "eight",
+     "start": 324.973,
+     "end": 325.134,
+     "conf": 0.379
+    },
+    {
+     "w": "without",
+     "start": 325.154,
+     "end": 325.716,
+     "conf": 0.826
+    },
+    {
+     "w": "listing",
+     "start": 325.817,
+     "end": 326.159,
+     "conf": 0.829
+    },
+    {
+     "w": "the",
+     "start": 326.179,
+     "end": 326.279,
+     "conf": 0.739
+    },
+    {
+     "w": "other",
+     "start": 326.36,
+     "end": 326.48,
+     "conf": 0.772
+    },
+    {
+     "w": "seven",
+     "start": 326.5,
+     "end": 326.802,
+     "conf": 0.658
+    }
+   ]
+  },
+  {
+   "section": "Move three: \"and\" multiplies, \"or\" adds",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Move three. Walk down the tree. \"And\" means multiply along a path. \"Or\" means add separate paths, but only if they cannot both happen.",
+   "idea": true,
+   "start": 328.462,
+   "end": 335.167,
+   "words": [
+    {
+     "w": "move",
+     "start": 328.462,
+     "end": 328.662,
+     "conf": 0.991
+    },
+    {
+     "w": "three",
+     "start": 328.742,
+     "end": 328.942,
+     "conf": 0.529
+    },
+    {
+     "w": "walk",
+     "start": 329.363,
+     "end": 329.523,
+     "conf": 0.998
+    },
+    {
+     "w": "down",
+     "start": 329.583,
+     "end": 329.743,
+     "conf": 0.915
+    },
+    {
+     "w": "the",
+     "start": 329.763,
+     "end": 329.843,
+     "conf": 0.978
+    },
+    {
+     "w": "tree",
+     "start": 329.903,
+     "end": 330.083,
+     "conf": 0.713
+    },
+    {
+     "w": "and",
+     "start": 330.464,
+     "end": 330.604,
+     "conf": 0.666
+    },
+    {
+     "w": "means",
+     "start": 330.664,
+     "end": 330.864,
+     "conf": 0.798
+    },
+    {
+     "w": "multiply",
+     "start": 330.944,
+     "end": 331.364,
+     "conf": 0.873
+    },
+    {
+     "w": "along",
+     "start": 331.404,
+     "end": 331.584,
+     "conf": 0.998
+    },
+    {
+     "w": "a",
+     "start": 331.604,
+     "end": 331.624,
+     "conf": 0.995
+    },
+    {
+     "w": "path",
+     "start": 331.705,
+     "end": 332.005,
+     "conf": 0.755
+    },
+    {
+     "w": "or",
+     "start": 332.345,
+     "end": 332.465,
+     "conf": 0.498
+    },
+    {
+     "w": "means",
+     "start": 332.565,
+     "end": 332.785,
+     "conf": 0.792
+    },
+    {
+     "w": "add",
+     "start": 332.905,
+     "end": 333.006,
+     "conf": 0.352
+    },
+    {
+     "w": "separate",
+     "start": 333.106,
+     "end": 333.406,
+     "conf": 0.852
+    },
+    {
+     "w": "paths",
+     "start": 333.426,
+     "end": 333.786,
+     "conf": 0.981
+    },
+    {
+     "w": "but",
+     "start": 333.906,
+     "end": 333.986,
+     "conf": 0.666
+    },
+    {
+     "w": "only",
+     "start": 334.046,
+     "end": 334.186,
+     "conf": 0.51
+    },
+    {
+     "w": "if",
+     "start": 334.206,
+     "end": 334.287,
+     "conf": 0.666
+    },
+    {
+     "w": "they",
+     "start": 334.307,
+     "end": 334.407,
+     "conf": 0.905
+    },
+    {
+     "w": "cannot",
+     "start": 334.467,
+     "end": 334.667,
+     "conf": 0.832
+    },
+    {
+     "w": "both",
+     "start": 334.687,
+     "end": 334.887,
+     "conf": 0.8
+    },
+    {
+     "w": "happen",
+     "start": 334.907,
+     "end": 335.167,
+     "conf": 0.857
+    }
+   ]
+  },
+  {
+   "section": "Move three: \"and\" multiplies, \"or\" adds",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "A bag holds three red marbles and two blue. Draw two without putting the first back. What is the chance both are red?",
+   "idea": false,
+   "start": 336.177,
+   "end": 341.909,
+   "words": [
+    {
+     "w": "a",
+     "start": 336.177,
+     "end": 336.197,
+     "conf": 0.999
+    },
+    {
+     "w": "bag",
+     "start": 336.257,
+     "end": 336.438,
+     "conf": 0.667
+    },
+    {
+     "w": "holds",
+     "start": 336.518,
+     "end": 336.718,
+     "conf": 0.832
+    },
+    {
+     "w": "three",
+     "start": 336.818,
+     "end": 337.059,
+     "conf": 0.824
+    },
+    {
+     "w": "red",
+     "start": 337.139,
+     "end": 337.259,
+     "conf": 0.698
+    },
+    {
+     "w": "marbles",
+     "start": 337.319,
+     "end": 337.64,
+     "conf": 0.738
+    },
+    {
+     "w": "and",
+     "start": 337.7,
+     "end": 337.78,
+     "conf": 0.661
+    },
+    {
+     "w": "two",
+     "start": 337.84,
+     "end": 338.001,
+     "conf": 0.63
+    },
+    {
+     "w": "blue",
+     "start": 338.081,
+     "end": 338.301,
+     "conf": 0.867
+    },
+    {
+     "w": "draw",
+     "start": 338.742,
+     "end": 338.883,
+     "conf": 0.792
+    },
+    {
+     "w": "two",
+     "start": 338.963,
+     "end": 339.103,
+     "conf": 0.608
+    },
+    {
+     "w": "without",
+     "start": 339.123,
+     "end": 339.384,
+     "conf": 0.777
+    },
+    {
+     "w": "putting",
+     "start": 339.404,
+     "end": 339.604,
+     "conf": 0.984
+    },
+    {
+     "w": "the",
+     "start": 339.624,
+     "end": 339.684,
+     "conf": 0.985
+    },
+    {
+     "w": "first",
+     "start": 339.704,
+     "end": 339.945,
+     "conf": 0.825
+    },
+    {
+     "w": "back",
+     "start": 339.965,
+     "end": 340.225,
+     "conf": 1.0
+    },
+    {
+     "w": "what",
+     "start": 340.726,
+     "end": 340.847,
+     "conf": 0.994
+    },
+    {
+     "w": "is",
+     "start": 340.907,
+     "end": 340.967,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 340.987,
+     "end": 341.047,
+     "conf": 0.995
+    },
+    {
+     "w": "chance",
+     "start": 341.067,
+     "end": 341.368,
+     "conf": 0.835
+    },
+    {
+     "w": "both",
+     "start": 341.388,
+     "end": 341.588,
+     "conf": 0.999
+    },
+    {
+     "w": "are",
+     "start": 341.648,
+     "end": 341.708,
+     "conf": 0.22
+    },
+    {
+     "w": "red",
+     "start": 341.728,
+     "end": 341.909,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "Move three: \"and\" multiplies, \"or\" adds",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "The first is red three times in five. Now the bag holds two red out of four, so the second is red two times in four.",
+   "idea": false,
+   "start": 342.54,
+   "end": 347.879,
+   "words": [
+    {
+     "w": "the",
+     "start": 342.54,
+     "end": 342.6,
+     "conf": 0.996
+    },
+    {
+     "w": "first",
+     "start": 342.62,
+     "end": 342.901,
+     "conf": 0.83
+    },
+    {
+     "w": "is",
+     "start": 342.961,
+     "end": 343.021,
+     "conf": 0.997
+    },
+    {
+     "w": "red",
+     "start": 343.122,
+     "end": 343.302,
+     "conf": 0.69
+    },
+    {
+     "w": "three",
+     "start": 343.423,
+     "end": 343.563,
+     "conf": 0.649
+    },
+    {
+     "w": "times",
+     "start": 343.584,
+     "end": 343.804,
+     "conf": 0.913
+    },
+    {
+     "w": "in",
+     "start": 343.824,
+     "end": 343.885,
+     "conf": 0.903
+    },
+    {
+     "w": "five",
+     "start": 343.985,
+     "end": 344.346,
+     "conf": 0.187
+    },
+    {
+     "w": "now",
+     "start": 344.467,
+     "end": 344.547,
+     "conf": 0.99
+    },
+    {
+     "w": "the",
+     "start": 344.567,
+     "end": 344.627,
+     "conf": 0.985
+    },
+    {
+     "w": "bag",
+     "start": 344.647,
+     "end": 344.888,
+     "conf": 0.994
+    },
+    {
+     "w": "holds",
+     "start": 344.949,
+     "end": 345.169,
+     "conf": 0.978
+    },
+    {
+     "w": "two",
+     "start": 345.27,
+     "end": 345.41,
+     "conf": 0.645
+    },
+    {
+     "w": "red",
+     "start": 345.491,
+     "end": 345.631,
+     "conf": 0.715
+    },
+    {
+     "w": "out",
+     "start": 345.691,
+     "end": 345.792,
+     "conf": 0.992
+    },
+    {
+     "w": "of",
+     "start": 345.812,
+     "end": 345.872,
+     "conf": 0.901
+    },
+    {
+     "w": "four",
+     "start": 345.952,
+     "end": 346.153,
+     "conf": 0.571
+    },
+    {
+     "w": "so",
+     "start": 346.253,
+     "end": 346.293,
+     "conf": 0.683
+    },
+    {
+     "w": "the",
+     "start": 346.354,
+     "end": 346.414,
+     "conf": 0.969
+    },
+    {
+     "w": "second",
+     "start": 346.434,
+     "end": 346.735,
+     "conf": 0.854
+    },
+    {
+     "w": "is",
+     "start": 346.795,
+     "end": 346.835,
+     "conf": 0.498
+    },
+    {
+     "w": "red",
+     "start": 346.916,
+     "end": 347.036,
+     "conf": 0.673
+    },
+    {
+     "w": "two",
+     "start": 347.137,
+     "end": 347.257,
+     "conf": 0.549
+    },
+    {
+     "w": "times",
+     "start": 347.277,
+     "end": 347.518,
+     "conf": 0.838
+    },
+    {
+     "w": "in",
+     "start": 347.578,
+     "end": 347.618,
+     "conf": 0.467
+    },
+    {
+     "w": "four",
+     "start": 347.638,
+     "end": 347.879,
+     "conf": 0.1
+    }
+   ]
+  },
+  {
+   "section": "Move three: \"and\" multiplies, \"or\" adds",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Red and then red: three fifths times two quarters, three tenths.",
+   "idea": true,
+   "start": 348.27,
+   "end": 351.345,
+   "words": [
+    {
+     "w": "red",
+     "start": 348.27,
+     "end": 348.511,
+     "conf": 0.764
+    },
+    {
+     "w": "and",
+     "start": 348.531,
+     "end": 348.612,
+     "conf": 0.739
+    },
+    {
+     "w": "then",
+     "start": 348.632,
+     "end": 348.773,
+     "conf": 0.997
+    },
+    {
+     "w": "red",
+     "start": 348.853,
+     "end": 349.034,
+     "conf": 0.998
+    },
+    {
+     "w": "three",
+     "start": 349.154,
+     "end": 349.355,
+     "conf": 0.724
+    },
+    {
+     "w": "fifths",
+     "start": 349.436,
+     "end": 349.737,
+     "conf": 0.663
+    },
+    {
+     "w": "times",
+     "start": 349.797,
+     "end": 350.018,
+     "conf": 0.75
+    },
+    {
+     "w": "two",
+     "start": 350.039,
+     "end": 350.199,
+     "conf": 0.728
+    },
+    {
+     "w": "quarters",
+     "start": 350.219,
+     "end": 350.601,
+     "conf": 0.962
+    },
+    {
+     "w": "three",
+     "start": 350.682,
+     "end": 350.863,
+     "conf": 0.742
+    },
+    {
+     "w": "tenths",
+     "start": 350.943,
+     "end": 351.345,
+     "conf": 0.649
+    }
+   ]
+  },
+  {
+   "section": "Move three: \"and\" multiplies, \"or\" adds",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Notice the second branch changed, because the first marble left the bag. The tree shows that. A formula you half-remember does not.",
+   "idea": true,
+   "start": 352.355,
+   "end": 359.027,
+   "words": [
+    {
+     "w": "notice",
+     "start": 352.355,
+     "end": 352.575,
+     "conf": 0.887
+    },
+    {
+     "w": "the",
+     "start": 352.595,
+     "end": 352.676,
+     "conf": 0.964
+    },
+    {
+     "w": "second",
+     "start": 352.696,
+     "end": 352.996,
+     "conf": 0.771
+    },
+    {
+     "w": "branch",
+     "start": 353.016,
+     "end": 353.277,
+     "conf": 0.999
+    },
+    {
+     "w": "changed",
+     "start": 353.377,
+     "end": 353.738,
+     "conf": 0.997
+    },
+    {
+     "w": "because",
+     "start": 353.758,
+     "end": 354.038,
+     "conf": 0.657
+    },
+    {
+     "w": "the",
+     "start": 354.118,
+     "end": 354.198,
+     "conf": 0.673
+    },
+    {
+     "w": "first",
+     "start": 354.238,
+     "end": 354.479,
+     "conf": 0.974
+    },
+    {
+     "w": "marble",
+     "start": 354.519,
+     "end": 354.779,
+     "conf": 0.683
+    },
+    {
+     "w": "left",
+     "start": 354.8,
+     "end": 355.0,
+     "conf": 0.798
+    },
+    {
+     "w": "the",
+     "start": 355.02,
+     "end": 355.08,
+     "conf": 0.526
+    },
+    {
+     "w": "bag",
+     "start": 355.1,
+     "end": 355.401,
+     "conf": 0.996
+    },
+    {
+     "w": "the",
+     "start": 355.421,
+     "end": 356.002,
+     "conf": 0.664
+    },
+    {
+     "w": "tree",
+     "start": 356.062,
+     "end": 356.262,
+     "conf": 0.813
+    },
+    {
+     "w": "shows",
+     "start": 356.282,
+     "end": 356.563,
+     "conf": 0.654
+    },
+    {
+     "w": "that",
+     "start": 356.583,
+     "end": 356.863,
+     "conf": 0.832
+    },
+    {
+     "w": "a",
+     "start": 357.464,
+     "end": 357.484,
+     "conf": 0.0
+    },
+    {
+     "w": "formula",
+     "start": 357.504,
+     "end": 357.865,
+     "conf": 0.874
+    },
+    {
+     "w": "you",
+     "start": 357.885,
+     "end": 358.005,
+     "conf": 0.742
+    },
+    {
+     "w": "half-remember",
+     "start": 358.066,
+     "end": 358.607,
+     "conf": 0.753
+    },
+    {
+     "w": "does",
+     "start": 358.667,
+     "end": 358.807,
+     "conf": 0.715
+    },
+    {
+     "w": "not",
+     "start": 358.867,
+     "end": 359.027,
+     "conf": 0.99
+    }
+   ]
+  },
+  {
+   "section": "Move four: turn percentages into people",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Move four. When the numbers are percentages, turn them into people.",
+   "idea": true,
+   "start": 360.727,
+   "end": 363.74,
+   "words": [
+    {
+     "w": "move",
+     "start": 360.727,
+     "end": 360.908,
+     "conf": 0.999
+    },
+    {
+     "w": "four",
+     "start": 360.968,
+     "end": 361.209,
+     "conf": 0.708
+    },
+    {
+     "w": "when",
+     "start": 361.651,
+     "end": 361.771,
+     "conf": 0.954
+    },
+    {
+     "w": "the",
+     "start": 361.792,
+     "end": 361.872,
+     "conf": 0.979
+    },
+    {
+     "w": "numbers",
+     "start": 361.912,
+     "end": 362.153,
+     "conf": 0.967
+    },
+    {
+     "w": "are",
+     "start": 362.213,
+     "end": 362.294,
+     "conf": 0.543
+    },
+    {
+     "w": "percentages",
+     "start": 362.314,
+     "end": 362.916,
+     "conf": 0.918
+    },
+    {
+     "w": "turn",
+     "start": 363.017,
+     "end": 363.137,
+     "conf": 0.744
+    },
+    {
+     "w": "them",
+     "start": 363.157,
+     "end": 363.238,
+     "conf": 0.998
+    },
+    {
+     "w": "into",
+     "start": 363.258,
+     "end": 363.398,
+     "conf": 0.799
+    },
+    {
+     "w": "people",
+     "start": 363.458,
+     "end": 363.74,
+     "conf": 0.839
+    }
+   ]
+  },
+  {
+   "section": "Move four: turn percentages into people",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "A test for a rare disease is ninety-nine percent accurate, and one person in a thousand has the disease. You test positive. How worried should you be?",
+   "idea": false,
+   "start": 364.79,
+   "end": 372.289,
+   "words": [
+    {
+     "w": "a",
+     "start": 364.79,
+     "end": 364.81,
+     "conf": 0.002
+    },
+    {
+     "w": "test",
+     "start": 364.87,
+     "end": 365.091,
+     "conf": 0.999
+    },
+    {
+     "w": "for",
+     "start": 365.111,
+     "end": 365.211,
+     "conf": 0.989
+    },
+    {
+     "w": "a",
+     "start": 365.231,
+     "end": 365.251,
+     "conf": 0.394
+    },
+    {
+     "w": "rare",
+     "start": 365.311,
+     "end": 365.492,
+     "conf": 0.321
+    },
+    {
+     "w": "disease",
+     "start": 365.512,
+     "end": 365.853,
+     "conf": 0.99
+    },
+    {
+     "w": "is",
+     "start": 365.913,
+     "end": 365.953,
+     "conf": 0.499
+    },
+    {
+     "w": "ninety-nine",
+     "start": 365.973,
+     "end": 366.595,
+     "conf": 0.003
+    },
+    {
+     "w": "percent",
+     "start": 366.615,
+     "end": 366.896,
+     "conf": 0.835
+    },
+    {
+     "w": "accurate",
+     "start": 367.016,
+     "end": 367.377,
+     "conf": 0.847
+    },
+    {
+     "w": "and",
+     "start": 367.698,
+     "end": 367.898,
+     "conf": 0.7
+    },
+    {
+     "w": "one",
+     "start": 368.079,
+     "end": 368.179,
+     "conf": 0.666
+    },
+    {
+     "w": "person",
+     "start": 368.199,
+     "end": 368.5,
+     "conf": 0.857
+    },
+    {
+     "w": "in",
+     "start": 368.56,
+     "end": 368.6,
+     "conf": 0.497
+    },
+    {
+     "w": "a",
+     "start": 368.62,
+     "end": 368.64,
+     "conf": 0.988
+    },
+    {
+     "w": "thousand",
+     "start": 368.72,
+     "end": 369.121,
+     "conf": 0.874
+    },
+    {
+     "w": "has",
+     "start": 369.181,
+     "end": 369.302,
+     "conf": 0.664
+    },
+    {
+     "w": "the",
+     "start": 369.322,
+     "end": 369.422,
+     "conf": 0.712
+    },
+    {
+     "w": "disease",
+     "start": 369.442,
+     "end": 369.763,
+     "conf": 0.852
+    },
+    {
+     "w": "you",
+     "start": 369.883,
+     "end": 369.963,
+     "conf": 0.656
+    },
+    {
+     "w": "test",
+     "start": 370.003,
+     "end": 370.224,
+     "conf": 0.775
+    },
+    {
+     "w": "positive",
+     "start": 370.505,
+     "end": 371.026,
+     "conf": 0.874
+    },
+    {
+     "w": "how",
+     "start": 371.407,
+     "end": 371.527,
+     "conf": 0.998
+    },
+    {
+     "w": "worried",
+     "start": 371.628,
+     "end": 371.888,
+     "conf": 0.796
+    },
+    {
+     "w": "should",
+     "start": 371.908,
+     "end": 372.089,
+     "conf": 0.772
+    },
+    {
+     "w": "you",
+     "start": 372.109,
+     "end": 372.189,
+     "conf": 0.998
+    },
+    {
+     "w": "be",
+     "start": 372.209,
+     "end": 372.289,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "Move four: turn percentages into people",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Most people say ninety-nine percent.",
+   "idea": true,
+   "start": 372.759,
+   "end": 374.213,
+   "words": [
+    {
+     "w": "most",
+     "start": 372.759,
+     "end": 372.901,
+     "conf": 0.856
+    },
+    {
+     "w": "people",
+     "start": 372.921,
+     "end": 373.143,
+     "conf": 0.905
+    },
+    {
+     "w": "say",
+     "start": 373.163,
+     "end": 373.264,
+     "conf": 0.7
+    },
+    {
+     "w": "ninety-nine",
+     "start": 373.284,
+     "end": 373.85,
+     "conf": 0.026
+    },
+    {
+     "w": "percent",
+     "start": 373.87,
+     "end": 374.213,
+     "conf": 0.773
+    }
+   ]
+  },
+  {
+   "section": "Move four: turn percentages into people",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Imagine a thousand people. One of them is sick, and the test catches them.",
+   "idea": false,
+   "start": 375.264,
+   "end": 378.683,
+   "words": [
+    {
+     "w": "imagine",
+     "start": 375.264,
+     "end": 375.586,
+     "conf": 0.8
+    },
+    {
+     "w": "a",
+     "start": 375.606,
+     "end": 375.626,
+     "conf": 0.978
+    },
+    {
+     "w": "thousand",
+     "start": 375.686,
+     "end": 376.028,
+     "conf": 0.996
+    },
+    {
+     "w": "people",
+     "start": 376.048,
+     "end": 376.33,
+     "conf": 0.999
+    },
+    {
+     "w": "one",
+     "start": 376.632,
+     "end": 376.732,
+     "conf": 0.877
+    },
+    {
+     "w": "of",
+     "start": 376.752,
+     "end": 376.792,
+     "conf": 0.999
+    },
+    {
+     "w": "them",
+     "start": 376.813,
+     "end": 376.913,
+     "conf": 0.999
+    },
+    {
+     "w": "is",
+     "start": 376.973,
+     "end": 377.034,
+     "conf": 0.5
+    },
+    {
+     "w": "sick",
+     "start": 377.114,
+     "end": 377.315,
+     "conf": 0.994
+    },
+    {
+     "w": "and",
+     "start": 377.597,
+     "end": 377.657,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 377.677,
+     "end": 377.758,
+     "conf": 0.994
+    },
+    {
+     "w": "test",
+     "start": 377.838,
+     "end": 378.12,
+     "conf": 0.759
+    },
+    {
+     "w": "catches",
+     "start": 378.22,
+     "end": 378.542,
+     "conf": 0.855
+    },
+    {
+     "w": "them",
+     "start": 378.562,
+     "end": 378.683,
+     "conf": 0.933
+    }
+   ]
+  },
+  {
+   "section": "Move four: turn percentages into people",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Of the nine hundred ninety-nine who are healthy, one percent still test positive. That is about ten people.",
+   "idea": false,
+   "start": 379.073,
+   "end": 384.49,
+   "words": [
+    {
+     "w": "of",
+     "start": 379.073,
+     "end": 379.133,
+     "conf": 0.983
+    },
+    {
+     "w": "the",
+     "start": 379.153,
+     "end": 379.234,
+     "conf": 0.993
+    },
+    {
+     "w": "nine",
+     "start": 379.274,
+     "end": 379.494,
+     "conf": 0.001
+    },
+    {
+     "w": "hundred",
+     "start": 379.514,
+     "end": 379.755,
+     "conf": 0.001
+    },
+    {
+     "w": "ninety-nine",
+     "start": 379.775,
+     "end": 380.437,
+     "conf": 0.001
+    },
+    {
+     "w": "who",
+     "start": 380.457,
+     "end": 380.538,
+     "conf": 0.989
+    },
+    {
+     "w": "are",
+     "start": 380.598,
+     "end": 380.678,
+     "conf": 0.662
+    },
+    {
+     "w": "healthy",
+     "start": 380.698,
+     "end": 380.999,
+     "conf": 0.948
+    },
+    {
+     "w": "one",
+     "start": 381.36,
+     "end": 381.481,
+     "conf": 0.975
+    },
+    {
+     "w": "percent",
+     "start": 381.501,
+     "end": 381.822,
+     "conf": 0.915
+    },
+    {
+     "w": "still",
+     "start": 381.942,
+     "end": 382.143,
+     "conf": 0.817
+    },
+    {
+     "w": "test",
+     "start": 382.243,
+     "end": 382.464,
+     "conf": 0.74
+    },
+    {
+     "w": "positive",
+     "start": 382.484,
+     "end": 382.965,
+     "conf": 0.889
+    },
+    {
+     "w": "that",
+     "start": 383.166,
+     "end": 383.266,
+     "conf": 0.541
+    },
+    {
+     "w": "is",
+     "start": 383.367,
+     "end": 383.407,
+     "conf": 0.499
+    },
+    {
+     "w": "about",
+     "start": 383.427,
+     "end": 383.648,
+     "conf": 0.94
+    },
+    {
+     "w": "ten",
+     "start": 383.949,
+     "end": 384.149,
+     "conf": 0.641
+    },
+    {
+     "w": "people",
+     "start": 384.229,
+     "end": 384.49,
+     "conf": 0.831
+    }
+   ]
+  },
+  {
+   "section": "Move four: turn percentages into people",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "So eleven people test positive, and only one of them is sick. About nine percent, not ninety-nine.",
+   "idea": true,
+   "start": 384.88,
+   "end": 389.969,
+   "words": [
+    {
+     "w": "so",
+     "start": 384.88,
+     "end": 384.98,
+     "conf": 0.666
+    },
+    {
+     "w": "eleven",
+     "start": 385.06,
+     "end": 385.381,
+     "conf": 0.969
+    },
+    {
+     "w": "people",
+     "start": 385.441,
+     "end": 385.721,
+     "conf": 0.949
+    },
+    {
+     "w": "test",
+     "start": 385.782,
+     "end": 386.022,
+     "conf": 0.993
+    },
+    {
+     "w": "positive",
+     "start": 386.082,
+     "end": 386.663,
+     "conf": 0.999
+    },
+    {
+     "w": "and",
+     "start": 386.903,
+     "end": 386.964,
+     "conf": 0.654
+    },
+    {
+     "w": "only",
+     "start": 386.984,
+     "end": 387.124,
+     "conf": 0.975
+    },
+    {
+     "w": "one",
+     "start": 387.244,
+     "end": 387.304,
+     "conf": 0.652
+    },
+    {
+     "w": "of",
+     "start": 387.324,
+     "end": 387.364,
+     "conf": 0.995
+    },
+    {
+     "w": "them",
+     "start": 387.384,
+     "end": 387.504,
+     "conf": 0.987
+    },
+    {
+     "w": "is",
+     "start": 387.524,
+     "end": 387.605,
+     "conf": 0.998
+    },
+    {
+     "w": "sick",
+     "start": 387.745,
+     "end": 387.925,
+     "conf": 0.75
+    },
+    {
+     "w": "about",
+     "start": 388.226,
+     "end": 388.466,
+     "conf": 0.987
+    },
+    {
+     "w": "nine",
+     "start": 388.486,
+     "end": 388.727,
+     "conf": 0.01
+    },
+    {
+     "w": "percent",
+     "start": 388.747,
+     "end": 389.107,
+     "conf": 0.221
+    },
+    {
+     "w": "not",
+     "start": 389.207,
+     "end": 389.328,
+     "conf": 0.657
+    },
+    {
+     "w": "ninety-nine",
+     "start": 389.348,
+     "end": 389.969,
+     "conf": 0.012
+    }
+   ]
+  },
+  {
+   "section": "Move four: turn percentages into people",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Psychologists have measured this. The same question, asked in people instead of percentages, gets the right answer far more often.",
+   "idea": true,
+   "start": 391.461,
+   "end": 397.5,
+   "words": [
+    {
+     "w": "psychologists",
+     "start": 391.461,
+     "end": 392.083,
+     "conf": 0.806
+    },
+    {
+     "w": "have",
+     "start": 392.103,
+     "end": 392.203,
+     "conf": 0.995
+    },
+    {
+     "w": "measured",
+     "start": 392.223,
+     "end": 392.504,
+     "conf": 0.987
+    },
+    {
+     "w": "this",
+     "start": 392.524,
+     "end": 392.685,
+     "conf": 0.935
+    },
+    {
+     "w": "the",
+     "start": 393.006,
+     "end": 393.066,
+     "conf": 0.998
+    },
+    {
+     "w": "same",
+     "start": 393.126,
+     "end": 393.327,
+     "conf": 1.0
+    },
+    {
+     "w": "question",
+     "start": 393.387,
+     "end": 393.808,
+     "conf": 0.888
+    },
+    {
+     "w": "asked",
+     "start": 393.969,
+     "end": 394.189,
+     "conf": 0.794
+    },
+    {
+     "w": "in",
+     "start": 394.209,
+     "end": 394.29,
+     "conf": 0.994
+    },
+    {
+     "w": "people",
+     "start": 394.37,
+     "end": 394.671,
+     "conf": 0.833
+    },
+    {
+     "w": "instead",
+     "start": 394.771,
+     "end": 394.992,
+     "conf": 0.713
+    },
+    {
+     "w": "of",
+     "start": 395.012,
+     "end": 395.052,
+     "conf": 0.969
+    },
+    {
+     "w": "percentages",
+     "start": 395.072,
+     "end": 395.714,
+     "conf": 0.991
+    },
+    {
+     "w": "gets",
+     "start": 395.815,
+     "end": 395.995,
+     "conf": 0.748
+    },
+    {
+     "w": "the",
+     "start": 396.015,
+     "end": 396.116,
+     "conf": 0.783
+    },
+    {
+     "w": "right",
+     "start": 396.156,
+     "end": 396.356,
+     "conf": 0.853
+    },
+    {
+     "w": "answer",
+     "start": 396.457,
+     "end": 396.697,
+     "conf": 0.608
+    },
+    {
+     "w": "far",
+     "start": 396.818,
+     "end": 396.978,
+     "conf": 0.666
+    },
+    {
+     "w": "more",
+     "start": 397.038,
+     "end": 397.199,
+     "conf": 0.917
+    },
+    {
+     "w": "often",
+     "start": 397.259,
+     "end": 397.5,
+     "conf": 0.763
+    }
+   ]
+  },
+  {
+   "section": "Move five: check the answer",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "Move five. Check before you trust it.",
+   "idea": false,
+   "start": 399.14,
+   "end": 400.746,
+   "words": [
+    {
+     "w": "move",
+     "start": 399.14,
+     "end": 399.301,
+     "conf": 0.985
+    },
+    {
+     "w": "five",
+     "start": 399.321,
+     "end": 399.642,
+     "conf": 0.701
+    },
+    {
+     "w": "check",
+     "start": 399.843,
+     "end": 400.003,
+     "conf": 0.967
+    },
+    {
+     "w": "before",
+     "start": 400.043,
+     "end": 400.284,
+     "conf": 0.914
+    },
+    {
+     "w": "you",
+     "start": 400.304,
+     "end": 400.384,
+     "conf": 0.981
+    },
+    {
+     "w": "trust",
+     "start": 400.425,
+     "end": 400.665,
+     "conf": 0.78
+    },
+    {
+     "w": "it",
+     "start": 400.686,
+     "end": 400.746,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "Move five: check the answer",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "The answer has to sit between zero and one. All the branches leaving one point of a tree must add up to one.",
+   "idea": false,
+   "start": 401.156,
+   "end": 406.426,
+   "words": [
+    {
+     "w": "the",
+     "start": 401.156,
+     "end": 401.236,
+     "conf": 0.009
+    },
+    {
+     "w": "answer",
+     "start": 401.276,
+     "end": 401.497,
+     "conf": 0.326
+    },
+    {
+     "w": "has",
+     "start": 401.517,
+     "end": 401.637,
+     "conf": 0.991
+    },
+    {
+     "w": "to",
+     "start": 401.697,
+     "end": 401.737,
+     "conf": 0.501
+    },
+    {
+     "w": "sit",
+     "start": 401.797,
+     "end": 401.918,
+     "conf": 0.667
+    },
+    {
+     "w": "between",
+     "start": 401.958,
+     "end": 402.258,
+     "conf": 0.983
+    },
+    {
+     "w": "zero",
+     "start": 402.278,
+     "end": 402.539,
+     "conf": 0.43
+    },
+    {
+     "w": "and",
+     "start": 402.639,
+     "end": 402.699,
+     "conf": 0.616
+    },
+    {
+     "w": "one",
+     "start": 402.719,
+     "end": 403.0,
+     "conf": 0.265
+    },
+    {
+     "w": "all",
+     "start": 403.42,
+     "end": 403.501,
+     "conf": 0.539
+    },
+    {
+     "w": "the",
+     "start": 403.521,
+     "end": 403.581,
+     "conf": 0.991
+    },
+    {
+     "w": "branches",
+     "start": 403.601,
+     "end": 404.062,
+     "conf": 0.863
+    },
+    {
+     "w": "leaving",
+     "start": 404.162,
+     "end": 404.382,
+     "conf": 0.835
+    },
+    {
+     "w": "one",
+     "start": 404.523,
+     "end": 404.623,
+     "conf": 0.666
+    },
+    {
+     "w": "point",
+     "start": 404.683,
+     "end": 404.863,
+     "conf": 0.81
+    },
+    {
+     "w": "of",
+     "start": 404.883,
+     "end": 404.943,
+     "conf": 0.996
+    },
+    {
+     "w": "a",
+     "start": 404.963,
+     "end": 404.983,
+     "conf": 0.99
+    },
+    {
+     "w": "tree",
+     "start": 405.084,
+     "end": 405.344,
+     "conf": 0.741
+    },
+    {
+     "w": "must",
+     "start": 405.444,
+     "end": 405.665,
+     "conf": 0.94
+    },
+    {
+     "w": "add",
+     "start": 405.785,
+     "end": 405.885,
+     "conf": 0.479
+    },
+    {
+     "w": "up",
+     "start": 405.945,
+     "end": 406.005,
+     "conf": 0.5
+    },
+    {
+     "w": "to",
+     "start": 406.086,
+     "end": 406.126,
+     "conf": 0.468
+    },
+    {
+     "w": "one",
+     "start": 406.286,
+     "end": 406.426,
+     "conf": 0.524
+    }
+   ]
+  },
+  {
+   "section": "Move five: check the answer",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "And make a rough guess first. If the calculation lands far from your guess, one of them is telling you something.",
+   "idea": true,
+   "start": 406.836,
+   "end": 412.153,
+   "words": [
+    {
+     "w": "and",
+     "start": 406.836,
+     "end": 406.936,
+     "conf": 0.996
+    },
+    {
+     "w": "make",
+     "start": 406.956,
+     "end": 407.117,
+     "conf": 1.0
+    },
+    {
+     "w": "a",
+     "start": 407.137,
+     "end": 407.177,
+     "conf": 0.534
+    },
+    {
+     "w": "rough",
+     "start": 407.278,
+     "end": 407.458,
+     "conf": 0.553
+    },
+    {
+     "w": "guess",
+     "start": 407.558,
+     "end": 407.759,
+     "conf": 0.458
+    },
+    {
+     "w": "first",
+     "start": 407.859,
+     "end": 408.201,
+     "conf": 0.8
+    },
+    {
+     "w": "if",
+     "start": 408.602,
+     "end": 408.662,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 408.682,
+     "end": 408.742,
+     "conf": 0.998
+    },
+    {
+     "w": "calculation",
+     "start": 408.782,
+     "end": 409.344,
+     "conf": 0.924
+    },
+    {
+     "w": "lands",
+     "start": 409.404,
+     "end": 409.625,
+     "conf": 0.822
+    },
+    {
+     "w": "far",
+     "start": 409.746,
+     "end": 409.946,
+     "conf": 0.667
+    },
+    {
+     "w": "from",
+     "start": 410.026,
+     "end": 410.127,
+     "conf": 0.75
+    },
+    {
+     "w": "your",
+     "start": 410.147,
+     "end": 410.287,
+     "conf": 0.727
+    },
+    {
+     "w": "guess",
+     "start": 410.348,
+     "end": 410.628,
+     "conf": 0.529
+    },
+    {
+     "w": "one",
+     "start": 411.01,
+     "end": 411.09,
+     "conf": 0.999
+    },
+    {
+     "w": "of",
+     "start": 411.11,
+     "end": 411.17,
+     "conf": 0.685
+    },
+    {
+     "w": "them",
+     "start": 411.19,
+     "end": 411.291,
+     "conf": 0.989
+    },
+    {
+     "w": "is",
+     "start": 411.351,
+     "end": 411.411,
+     "conf": 0.5
+    },
+    {
+     "w": "telling",
+     "start": 411.491,
+     "end": 411.732,
+     "conf": 0.964
+    },
+    {
+     "w": "you",
+     "start": 411.752,
+     "end": 411.812,
+     "conf": 0.999
+    },
+    {
+     "w": "something",
+     "start": 411.873,
+     "end": 412.153,
+     "conf": 0.905
+    }
+   ]
+  },
+  {
+   "section": "Move five: check the answer",
+   "act": "ACT THREE — Five moves for any probability problem",
+   "text": "The seven-sixths answer would have failed this check in one second.",
+   "idea": true,
+   "start": 413.143,
+   "end": 416.127,
+   "words": [
+    {
+     "w": "the",
+     "start": 413.143,
+     "end": 413.204,
+     "conf": 0.001
+    },
+    {
+     "w": "seven-sixths",
+     "start": 413.224,
+     "end": 413.748,
+     "conf": 0.656
+    },
+    {
+     "w": "answer",
+     "start": 413.829,
+     "end": 414.091,
+     "conf": 0.561
+    },
+    {
+     "w": "would",
+     "start": 414.192,
+     "end": 414.313,
+     "conf": 0.811
+    },
+    {
+     "w": "have",
+     "start": 414.333,
+     "end": 414.474,
+     "conf": 0.816
+    },
+    {
+     "w": "failed",
+     "start": 414.575,
+     "end": 414.857,
+     "conf": 0.813
+    },
+    {
+     "w": "this",
+     "start": 414.877,
+     "end": 415.018,
+     "conf": 0.994
+    },
+    {
+     "w": "check",
+     "start": 415.099,
+     "end": 415.281,
+     "conf": 0.794
+    },
+    {
+     "w": "in",
+     "start": 415.361,
+     "end": 415.402,
+     "conf": 0.497
+    },
+    {
+     "w": "one",
+     "start": 415.563,
+     "end": 415.684,
+     "conf": 0.659
+    },
+    {
+     "w": "second",
+     "start": 415.785,
+     "end": 416.127,
+     "conf": 0.811
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT FOUR — Putting it together",
+   "text": "A probability is a count of what you want over a count of everything that could happen, made of equally likely pieces.",
+   "idea": false,
+   "start": 418.588,
+   "end": 424.383,
+   "words": [
+    {
+     "w": "a",
+     "start": 418.588,
+     "end": 418.608,
+     "conf": 0.736
+    },
+    {
+     "w": "probability",
+     "start": 418.688,
+     "end": 419.27,
+     "conf": 0.909
+    },
+    {
+     "w": "is",
+     "start": 419.41,
+     "end": 419.45,
+     "conf": 0.5
+    },
+    {
+     "w": "a",
+     "start": 419.51,
+     "end": 419.53,
+     "conf": 0.01
+    },
+    {
+     "w": "count",
+     "start": 419.611,
+     "end": 419.932,
+     "conf": 0.954
+    },
+    {
+     "w": "of",
+     "start": 420.052,
+     "end": 420.092,
+     "conf": 0.499
+    },
+    {
+     "w": "what",
+     "start": 420.152,
+     "end": 420.272,
+     "conf": 0.753
+    },
+    {
+     "w": "you",
+     "start": 420.292,
+     "end": 420.413,
+     "conf": 0.797
+    },
+    {
+     "w": "want",
+     "start": 420.473,
+     "end": 420.694,
+     "conf": 0.748
+    },
+    {
+     "w": "over",
+     "start": 420.814,
+     "end": 420.954,
+     "conf": 0.748
+    },
+    {
+     "w": "a",
+     "start": 421.014,
+     "end": 421.034,
+     "conf": 0.029
+    },
+    {
+     "w": "count",
+     "start": 421.095,
+     "end": 421.395,
+     "conf": 0.976
+    },
+    {
+     "w": "of",
+     "start": 421.556,
+     "end": 421.616,
+     "conf": 0.5
+    },
+    {
+     "w": "everything",
+     "start": 421.776,
+     "end": 422.097,
+     "conf": 0.89
+    },
+    {
+     "w": "that",
+     "start": 422.117,
+     "end": 422.217,
+     "conf": 0.999
+    },
+    {
+     "w": "could",
+     "start": 422.237,
+     "end": 422.378,
+     "conf": 0.839
+    },
+    {
+     "w": "happen",
+     "start": 422.438,
+     "end": 422.699,
+     "conf": 0.977
+    },
+    {
+     "w": "made",
+     "start": 423.02,
+     "end": 423.16,
+     "conf": 0.749
+    },
+    {
+     "w": "of",
+     "start": 423.18,
+     "end": 423.22,
+     "conf": 0.998
+    },
+    {
+     "w": "equally",
+     "start": 423.34,
+     "end": 423.601,
+     "conf": 0.871
+    },
+    {
+     "w": "likely",
+     "start": 423.681,
+     "end": 423.922,
+     "conf": 0.829
+    },
+    {
+     "w": "pieces",
+     "start": 424.002,
+     "end": 424.383,
+     "conf": 0.552
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT FOUR — Putting it together",
+   "text": "Our instinct goes wrong by counting answers instead of outcomes, and by adding chances that overlap.",
+   "idea": false,
+   "start": 424.853,
+   "end": 429.625,
+   "words": [
+    {
+     "w": "our",
+     "start": 424.853,
+     "end": 424.973,
+     "conf": 0.726
+    },
+    {
+     "w": "instinct",
+     "start": 425.054,
+     "end": 425.394,
+     "conf": 0.768
+    },
+    {
+     "w": "goes",
+     "start": 425.414,
+     "end": 425.555,
+     "conf": 0.767
+    },
+    {
+     "w": "wrong",
+     "start": 425.575,
+     "end": 425.795,
+     "conf": 0.793
+    },
+    {
+     "w": "by",
+     "start": 425.835,
+     "end": 425.916,
+     "conf": 0.5
+    },
+    {
+     "w": "counting",
+     "start": 425.976,
+     "end": 426.277,
+     "conf": 0.875
+    },
+    {
+     "w": "answers",
+     "start": 426.397,
+     "end": 426.637,
+     "conf": 0.458
+    },
+    {
+     "w": "instead",
+     "start": 426.657,
+     "end": 426.898,
+     "conf": 0.847
+    },
+    {
+     "w": "of",
+     "start": 426.918,
+     "end": 426.978,
+     "conf": 0.998
+    },
+    {
+     "w": "outcomes",
+     "start": 427.078,
+     "end": 427.54,
+     "conf": 0.873
+    },
+    {
+     "w": "and",
+     "start": 428.061,
+     "end": 428.121,
+     "conf": 0.406
+    },
+    {
+     "w": "by",
+     "start": 428.141,
+     "end": 428.241,
+     "conf": 0.998
+    },
+    {
+     "w": "adding",
+     "start": 428.342,
+     "end": 428.562,
+     "conf": 0.829
+    },
+    {
+     "w": "chances",
+     "start": 428.622,
+     "end": 429.003,
+     "conf": 0.856
+    },
+    {
+     "w": "that",
+     "start": 429.023,
+     "end": 429.164,
+     "conf": 0.8
+    },
+    {
+     "w": "overlap",
+     "start": 429.264,
+     "end": 429.625,
+     "conf": 0.853
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT FOUR — Putting it together",
+   "text": "And five moves fix that: list, flip \"at least one\", multiply along \"and\", turn percentages into people, and check.",
+   "idea": true,
+   "start": 430.055,
+   "end": 435.739,
+   "words": [
+    {
+     "w": "and",
+     "start": 430.055,
+     "end": 430.115,
+     "conf": 0.728
+    },
+    {
+     "w": "five",
+     "start": 430.135,
+     "end": 430.376,
+     "conf": 0.762
+    },
+    {
+     "w": "moves",
+     "start": 430.397,
+     "end": 430.678,
+     "conf": 0.996
+    },
+    {
+     "w": "fix",
+     "start": 430.758,
+     "end": 430.879,
+     "conf": 0.666
+    },
+    {
+     "w": "that",
+     "start": 430.959,
+     "end": 431.1,
+     "conf": 0.598
+    },
+    {
+     "w": "list",
+     "start": 431.401,
+     "end": 431.622,
+     "conf": 0.74
+    },
+    {
+     "w": "flip",
+     "start": 431.802,
+     "end": 431.923,
+     "conf": 0.654
+    },
+    {
+     "w": "at",
+     "start": 432.003,
+     "end": 432.064,
+     "conf": 0.999
+    },
+    {
+     "w": "least",
+     "start": 432.084,
+     "end": 432.305,
+     "conf": 0.732
+    },
+    {
+     "w": "one",
+     "start": 432.445,
+     "end": 432.566,
+     "conf": 0.665
+    },
+    {
+     "w": "multiply",
+     "start": 432.847,
+     "end": 433.188,
+     "conf": 0.873
+    },
+    {
+     "w": "along",
+     "start": 433.229,
+     "end": 433.429,
+     "conf": 0.985
+    },
+    {
+     "w": "and",
+     "start": 433.51,
+     "end": 433.731,
+     "conf": 0.922
+    },
+    {
+     "w": "turn",
+     "start": 433.911,
+     "end": 434.092,
+     "conf": 0.758
+    },
+    {
+     "w": "percentages",
+     "start": 434.173,
+     "end": 434.675,
+     "conf": 0.812
+    },
+    {
+     "w": "into",
+     "start": 434.695,
+     "end": 434.835,
+     "conf": 0.799
+    },
+    {
+     "w": "people",
+     "start": 434.855,
+     "end": 435.177,
+     "conf": 0.951
+    },
+    {
+     "w": "and",
+     "start": 435.458,
+     "end": 435.518,
+     "conf": 0.343
+    },
+    {
+     "w": "check",
+     "start": 435.538,
+     "end": 435.739,
+     "conf": 0.828
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT FOUR — Putting it together",
+   "text": "With those, the gambler's two bets take one line each.",
+   "idea": false,
+   "start": 436.749,
+   "end": 439.132,
+   "words": [
+    {
+     "w": "with",
+     "start": 436.749,
+     "end": 436.87,
+     "conf": 0.993
+    },
+    {
+     "w": "those",
+     "start": 436.891,
+     "end": 437.234,
+     "conf": 0.826
+    },
+    {
+     "w": "the",
+     "start": 437.254,
+     "end": 437.355,
+     "conf": 0.741
+    },
+    {
+     "w": "gambler's",
+     "start": 437.375,
+     "end": 437.759,
+     "conf": 0.838
+    },
+    {
+     "w": "two",
+     "start": 437.819,
+     "end": 437.961,
+     "conf": 0.971
+    },
+    {
+     "w": "bets",
+     "start": 438.021,
+     "end": 438.264,
+     "conf": 0.743
+    },
+    {
+     "w": "take",
+     "start": 438.284,
+     "end": 438.506,
+     "conf": 0.831
+    },
+    {
+     "w": "one",
+     "start": 438.587,
+     "end": 438.688,
+     "conf": 0.705
+    },
+    {
+     "w": "line",
+     "start": 438.708,
+     "end": 438.89,
+     "conf": 0.979
+    },
+    {
+     "w": "each",
+     "start": 438.97,
+     "end": 439.132,
+     "conf": 0.744
+    }
+   ]
+  },
+  {
+   "section": "Putting it together",
+   "act": "ACT FOUR — Putting it together",
+   "text": "One minus five sixths to the fourth: fifty-one point eight. One minus thirty-five thirty-sixths to the twenty-fourth: forty-nine point one.",
+   "idea": true,
+   "start": 439.623,
+   "end": 446.728,
+   "words": [
+    {
+     "w": "one",
+     "start": 439.623,
+     "end": 439.683,
+     "conf": 0.448
+    },
+    {
+     "w": "minus",
+     "start": 439.703,
+     "end": 439.963,
+     "conf": 0.946
+    },
+    {
+     "w": "five",
+     "start": 440.023,
+     "end": 440.264,
+     "conf": 0.086
+    },
+    {
+     "w": "sixths",
+     "start": 440.364,
+     "end": 440.664,
+     "conf": 0.109
+    },
+    {
+     "w": "to",
+     "start": 440.764,
+     "end": 440.804,
+     "conf": 0.265
+    },
+    {
+     "w": "the",
+     "start": 440.824,
+     "end": 440.904,
+     "conf": 0.391
+    },
+    {
+     "w": "fourth",
+     "start": 441.004,
+     "end": 441.284,
+     "conf": 0.381
+    },
+    {
+     "w": "fifty-one",
+     "start": 441.304,
+     "end": 442.025,
+     "conf": 0.007
+    },
+    {
+     "w": "point",
+     "start": 442.045,
+     "end": 442.285,
+     "conf": 0.017
+    },
+    {
+     "w": "eight",
+     "start": 442.305,
+     "end": 442.565,
+     "conf": 0.006
+    },
+    {
+     "w": "one",
+     "start": 442.945,
+     "end": 443.025,
+     "conf": 0.574
+    },
+    {
+     "w": "minus",
+     "start": 443.045,
+     "end": 443.306,
+     "conf": 0.968
+    },
+    {
+     "w": "thirty-five",
+     "start": 443.326,
+     "end": 443.926,
+     "conf": 0.024
+    },
+    {
+     "w": "thirty-sixths",
+     "start": 443.966,
+     "end": 444.466,
+     "conf": 0.152
+    },
+    {
+     "w": "to",
+     "start": 444.647,
+     "end": 444.707,
+     "conf": 0.404
+    },
+    {
+     "w": "the",
+     "start": 444.727,
+     "end": 444.807,
+     "conf": 0.557
+    },
+    {
+     "w": "twenty-fourth",
+     "start": 444.867,
+     "end": 445.447,
+     "conf": 0.534
+    },
+    {
+     "w": "forty-nine",
+     "start": 445.467,
+     "end": 446.128,
+     "conf": 0.149
+    },
+    {
+     "w": "point",
+     "start": 446.208,
+     "end": 446.408,
+     "conf": 0.575
+    },
+    {
+     "w": "one",
+     "start": 446.428,
+     "end": 446.728,
+     "conf": 0.165
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "Here is one to try on your own. In a room of twenty-three people, what is the chance that two of them share a birthday?",
+   "idea": false,
+   "start": 448.388,
+   "end": 453.453,
+   "words": [
+    {
+     "w": "here",
+     "start": 448.388,
+     "end": 448.508,
+     "conf": 0.997
+    },
+    {
+     "w": "is",
+     "start": 448.528,
+     "end": 448.588,
+     "conf": 0.999
+    },
+    {
+     "w": "one",
+     "start": 448.668,
+     "end": 448.788,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 448.808,
+     "end": 448.869,
+     "conf": 0.999
+    },
+    {
+     "w": "try",
+     "start": 448.929,
+     "end": 449.089,
+     "conf": 0.749
+    },
+    {
+     "w": "on",
+     "start": 449.109,
+     "end": 449.189,
+     "conf": 0.666
+    },
+    {
+     "w": "your",
+     "start": 449.209,
+     "end": 449.329,
+     "conf": 0.985
+    },
+    {
+     "w": "own",
+     "start": 449.409,
+     "end": 449.529,
+     "conf": 0.666
+    },
+    {
+     "w": "in",
+     "start": 449.709,
+     "end": 449.749,
+     "conf": 0.996
+    },
+    {
+     "w": "a",
+     "start": 449.769,
+     "end": 449.81,
+     "conf": 0.94
+    },
+    {
+     "w": "room",
+     "start": 449.87,
+     "end": 449.99,
+     "conf": 0.759
+    },
+    {
+     "w": "of",
+     "start": 450.01,
+     "end": 450.07,
+     "conf": 0.842
+    },
+    {
+     "w": "twenty-three",
+     "start": 450.09,
+     "end": 450.59,
+     "conf": 0.333
+    },
+    {
+     "w": "people",
+     "start": 450.65,
+     "end": 450.971,
+     "conf": 0.856
+    },
+    {
+     "w": "what",
+     "start": 451.411,
+     "end": 451.511,
+     "conf": 0.778
+    },
+    {
+     "w": "is",
+     "start": 451.531,
+     "end": 451.591,
+     "conf": 0.994
+    },
+    {
+     "w": "the",
+     "start": 451.611,
+     "end": 451.672,
+     "conf": 0.987
+    },
+    {
+     "w": "chance",
+     "start": 451.692,
+     "end": 451.972,
+     "conf": 0.825
+    },
+    {
+     "w": "that",
+     "start": 451.992,
+     "end": 452.092,
+     "conf": 0.997
+    },
+    {
+     "w": "two",
+     "start": 452.172,
+     "end": 452.312,
+     "conf": 0.707
+    },
+    {
+     "w": "of",
+     "start": 452.332,
+     "end": 452.392,
+     "conf": 0.999
+    },
+    {
+     "w": "them",
+     "start": 452.412,
+     "end": 452.532,
+     "conf": 0.999
+    },
+    {
+     "w": "share",
+     "start": 452.633,
+     "end": 452.873,
+     "conf": 0.722
+    },
+    {
+     "w": "a",
+     "start": 452.973,
+     "end": 452.993,
+     "conf": 0.001
+    },
+    {
+     "w": "birthday",
+     "start": 453.053,
+     "end": 453.453,
+     "conf": 0.805
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "Use move two. The answer is just over half.",
+   "idea": true,
+   "start": 453.883,
+   "end": 455.741,
+   "words": [
+    {
+     "w": "use",
+     "start": 453.883,
+     "end": 454.005,
+     "conf": 0.753
+    },
+    {
+     "w": "move",
+     "start": 454.025,
+     "end": 454.186,
+     "conf": 0.968
+    },
+    {
+     "w": "two",
+     "start": 454.227,
+     "end": 454.368,
+     "conf": 0.673
+    },
+    {
+     "w": "the",
+     "start": 454.711,
+     "end": 454.772,
+     "conf": 0.996
+    },
+    {
+     "w": "answer",
+     "start": 454.812,
+     "end": 455.014,
+     "conf": 0.898
+    },
+    {
+     "w": "is",
+     "start": 455.034,
+     "end": 455.095,
+     "conf": 0.965
+    },
+    {
+     "w": "just",
+     "start": 455.155,
+     "end": 455.276,
+     "conf": 0.744
+    },
+    {
+     "w": "over",
+     "start": 455.317,
+     "end": 455.478,
+     "conf": 0.891
+    },
+    {
+     "w": "half",
+     "start": 455.498,
+     "end": 455.741,
+     "conf": 0.912
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "But Pascal and Fermat left one question open, and it is stranger than it sounds.",
+   "idea": false,
+   "start": 456.792,
+   "end": 460.758,
+   "words": [
+    {
+     "w": "but",
+     "start": 456.792,
+     "end": 456.852,
+     "conf": 0.745
+    },
+    {
+     "w": "pascal",
+     "start": 456.872,
+     "end": 457.253,
+     "conf": 0.92
+    },
+    {
+     "w": "and",
+     "start": 457.273,
+     "end": 457.373,
+     "conf": 0.795
+    },
+    {
+     "w": "fermat",
+     "start": 457.393,
+     "end": 457.793,
+     "conf": 0.736
+    },
+    {
+     "w": "left",
+     "start": 457.894,
+     "end": 458.074,
+     "conf": 0.812
+    },
+    {
+     "w": "one",
+     "start": 458.234,
+     "end": 458.314,
+     "conf": 0.666
+    },
+    {
+     "w": "question",
+     "start": 458.334,
+     "end": 458.655,
+     "conf": 0.991
+    },
+    {
+     "w": "open",
+     "start": 458.735,
+     "end": 458.975,
+     "conf": 0.708
+    },
+    {
+     "w": "and",
+     "start": 459.396,
+     "end": 459.456,
+     "conf": 0.658
+    },
+    {
+     "w": "it",
+     "start": 459.476,
+     "end": 459.556,
+     "conf": 0.658
+    },
+    {
+     "w": "is",
+     "start": 459.576,
+     "end": 459.676,
+     "conf": 0.998
+    },
+    {
+     "w": "stranger",
+     "start": 459.756,
+     "end": 460.117,
+     "conf": 0.843
+    },
+    {
+     "w": "than",
+     "start": 460.137,
+     "end": 460.257,
+     "conf": 0.817
+    },
+    {
+     "w": "it",
+     "start": 460.297,
+     "end": 460.357,
+     "conf": 0.498
+    },
+    {
+     "w": "sounds",
+     "start": 460.377,
+     "end": 460.758,
+     "conf": 0.774
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "When we say a coin is fifty percent heads, what is that fifty percent actually describing? The coin, or you?",
+   "idea": false,
+   "start": 461.167,
+   "end": 466.451,
+   "words": [
+    {
+     "w": "when",
+     "start": 461.167,
+     "end": 461.247,
+     "conf": 0.008
+    },
+    {
+     "w": "we",
+     "start": 461.268,
+     "end": 461.308,
+     "conf": 0.499
+    },
+    {
+     "w": "say",
+     "start": 461.388,
+     "end": 461.489,
+     "conf": 0.66
+    },
+    {
+     "w": "a",
+     "start": 461.509,
+     "end": 461.529,
+     "conf": 0.02
+    },
+    {
+     "w": "coin",
+     "start": 461.609,
+     "end": 461.931,
+     "conf": 0.937
+    },
+    {
+     "w": "is",
+     "start": 462.091,
+     "end": 462.131,
+     "conf": 0.498
+    },
+    {
+     "w": "fifty",
+     "start": 462.151,
+     "end": 462.593,
+     "conf": 0.282
+    },
+    {
+     "w": "percent",
+     "start": 462.654,
+     "end": 462.935,
+     "conf": 0.822
+    },
+    {
+     "w": "heads",
+     "start": 462.995,
+     "end": 463.256,
+     "conf": 0.953
+    },
+    {
+     "w": "what",
+     "start": 463.277,
+     "end": 463.578,
+     "conf": 0.748
+    },
+    {
+     "w": "is",
+     "start": 463.598,
+     "end": 463.658,
+     "conf": 0.993
+    },
+    {
+     "w": "that",
+     "start": 463.678,
+     "end": 463.799,
+     "conf": 0.99
+    },
+    {
+     "w": "fifty",
+     "start": 463.899,
+     "end": 464.08,
+     "conf": 0.366
+    },
+    {
+     "w": "percent",
+     "start": 464.1,
+     "end": 464.381,
+     "conf": 0.82
+    },
+    {
+     "w": "actually",
+     "start": 464.442,
+     "end": 464.663,
+     "conf": 0.87
+    },
+    {
+     "w": "describing",
+     "start": 464.683,
+     "end": 465.225,
+     "conf": 0.989
+    },
+    {
+     "w": "the",
+     "start": 465.245,
+     "end": 465.788,
+     "conf": 0.633
+    },
+    {
+     "w": "coin",
+     "start": 465.808,
+     "end": 466.089,
+     "conf": 0.77
+    },
+    {
+     "w": "or",
+     "start": 466.23,
+     "end": 466.31,
+     "conf": 0.968
+    },
+    {
+     "w": "you",
+     "start": 466.37,
+     "end": 466.451,
+     "conf": 0.658
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "That is the next video, and it is waiting for you right here.",
+   "idea": true,
+   "start": 466.861,
+   "end": 469.394,
+   "words": [
+    {
+     "w": "that",
+     "start": 466.861,
+     "end": 466.962,
+     "conf": 0.395
+    },
+    {
+     "w": "is",
+     "start": 467.022,
+     "end": 467.082,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 467.102,
+     "end": 467.163,
+     "conf": 0.999
+    },
+    {
+     "w": "next",
+     "start": 467.183,
+     "end": 467.384,
+     "conf": 0.986
+    },
+    {
+     "w": "video",
+     "start": 467.404,
+     "end": 467.645,
+     "conf": 1.0
+    },
+    {
+     "w": "and",
+     "start": 467.806,
+     "end": 467.926,
+     "conf": 0.998
+    },
+    {
+     "w": "it",
+     "start": 468.248,
+     "end": 468.308,
+     "conf": 0.99
+    },
+    {
+     "w": "is",
+     "start": 468.369,
+     "end": 468.429,
+     "conf": 0.501
+    },
+    {
+     "w": "waiting",
+     "start": 468.489,
+     "end": 468.751,
+     "conf": 0.773
+    },
+    {
+     "w": "for",
+     "start": 468.771,
+     "end": 468.871,
+     "conf": 0.618
+    },
+    {
+     "w": "you",
+     "start": 468.891,
+     "end": 468.972,
+     "conf": 0.968
+    },
+    {
+     "w": "right",
+     "start": 469.032,
+     "end": 469.193,
+     "conf": 0.796
+    },
+    {
+     "w": "here",
+     "start": 469.253,
+     "end": 469.394,
+     "conf": 0.76
+    }
+   ]
+  },
+  {
+   "section": "Next time",
+   "act": "ACT FOUR — Putting it together",
+   "text": "Thanks for watching, and I will see you there.",
+   "idea": false,
+   "start": 470.384,
+   "end": 472.2,
+   "words": [
+    {
+     "w": "thanks",
+     "start": 470.384,
+     "end": 470.546,
+     "conf": 0.493
+    },
+    {
+     "w": "for",
+     "start": 470.566,
+     "end": 470.647,
+     "conf": 0.681
+    },
+    {
+     "w": "watching",
+     "start": 470.707,
+     "end": 471.05,
+     "conf": 0.834
+    },
+    {
+     "w": "and",
+     "start": 471.393,
+     "end": 471.454,
+     "conf": 0.665
+    },
+    {
+     "w": "i",
+     "start": 471.474,
+     "end": 471.494,
+     "conf": 0.0
+    },
+    {
+     "w": "will",
+     "start": 471.555,
+     "end": 471.676,
+     "conf": 0.918
+    },
+    {
+     "w": "see",
+     "start": 471.756,
+     "end": 471.877,
+     "conf": 0.666
+    },
+    {
+     "w": "you",
+     "start": 471.898,
+     "end": 471.958,
+     "conf": 1.0
+    },
+    {
+     "w": "there",
+     "start": 471.978,
+     "end": 472.2,
+     "conf": 0.831
+    }
+   ]
+  }
+ ]
+}

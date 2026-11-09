@@ -1,0 +1,10670 @@
+{
+ "sections": [
+  {
+   "name": "The letters",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "start": 0.02,
+   "end": 14.786
+  },
+  {
+   "name": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "start": 14.786,
+   "end": 93.968
+  },
+  {
+   "name": "Left to right",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "start": 93.968,
+   "end": 133.939
+  },
+  {
+   "name": "Brackets beat everything",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "start": 133.939,
+   "end": 165.131
+  },
+  {
+   "name": "Many names, one agreement",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "start": 165.131,
+   "end": 185.879
+  },
+  {
+   "name": "When it was agreed",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "start": 185.879,
+   "end": 235.389
+  },
+  {
+   "name": "Why multiply before you add",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "start": 235.389,
+   "end": 276.815
+  },
+  {
+   "name": "The ladder",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "start": 276.815,
+   "end": 308.229
+  },
+  {
+   "name": "Convenient, not inevitable",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "start": 308.229,
+   "end": 329.473
+  },
+  {
+   "name": "Back to the viral sum",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "start": 329.473,
+   "end": 372.884
+  },
+  {
+   "name": "Even the calculators disagree",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "start": 372.884,
+   "end": 391.821
+  },
+  {
+   "name": "The honest answer",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "start": 391.821,
+   "end": 437.438
+  },
+  {
+   "name": "Minus two squared",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "start": 437.438,
+   "end": 481.397
+  },
+  {
+   "name": "The answer",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "start": 481.397,
+   "end": 510.693
+  }
+ ],
+ "lines": [
+  {
+   "section": "The letters",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "PEMDAS is just a string of initials.",
+   "idea": false,
+   "start": 0.02,
+   "end": 1.703,
+   "words": [
+    {
+     "w": "pemdas",
+     "start": 0.02,
+     "end": 0.426,
+     "conf": 0.759
+    },
+    {
+     "w": "is",
+     "start": 0.547,
+     "end": 0.588,
+     "conf": 0.494
+    },
+    {
+     "w": "just",
+     "start": 0.649,
+     "end": 0.791,
+     "conf": 0.719
+    },
+    {
+     "w": "a",
+     "start": 0.872,
+     "end": 0.892,
+     "conf": 0.002
+    },
+    {
+     "w": "string",
+     "start": 0.953,
+     "end": 1.176,
+     "conf": 0.978
+    },
+    {
+     "w": "of",
+     "start": 1.196,
+     "end": 1.257,
+     "conf": 0.991
+    },
+    {
+     "w": "initials",
+     "start": 1.277,
+     "end": 1.703,
+     "conf": 0.884
+    }
+   ]
+  },
+  {
+   "section": "The letters",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "Parentheses, Exponents, Multiplication, Division, Addition, Subtraction.",
+   "idea": false,
+   "start": 2.134,
+   "end": 6.009,
+   "words": [
+    {
+     "w": "parentheses",
+     "start": 2.134,
+     "end": 2.676,
+     "conf": 0.791
+    },
+    {
+     "w": "exponents",
+     "start": 2.797,
+     "end": 3.379,
+     "conf": 0.97
+    },
+    {
+     "w": "multiplication",
+     "start": 3.6,
+     "end": 4.343,
+     "conf": 0.938
+    },
+    {
+     "w": "division",
+     "start": 4.403,
+     "end": 4.784,
+     "conf": 0.86
+    },
+    {
+     "w": "addition",
+     "start": 4.925,
+     "end": 5.307,
+     "conf": 0.852
+    },
+    {
+     "w": "subtraction",
+     "start": 5.427,
+     "end": 6.009,
+     "conf": 0.906
+    }
+   ]
+  },
+  {
+   "section": "The letters",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "In Britain they call it BODMAS, in Canada BEDMAS. The letters change a little from country to country, but the idea stays the same.",
+   "idea": true,
+   "start": 6.439,
+   "end": 13.145,
+   "words": [
+    {
+     "w": "in",
+     "start": 6.439,
+     "end": 6.519,
+     "conf": 0.999
+    },
+    {
+     "w": "britain",
+     "start": 6.539,
+     "end": 6.819,
+     "conf": 0.906
+    },
+    {
+     "w": "they",
+     "start": 6.839,
+     "end": 6.96,
+     "conf": 0.798
+    },
+    {
+     "w": "call",
+     "start": 6.98,
+     "end": 7.16,
+     "conf": 0.8
+    },
+    {
+     "w": "it",
+     "start": 7.22,
+     "end": 7.26,
+     "conf": 0.499
+    },
+    {
+     "w": "bodmas",
+     "start": 7.34,
+     "end": 7.76,
+     "conf": 0.711
+    },
+    {
+     "w": "in",
+     "start": 8.121,
+     "end": 8.181,
+     "conf": 0.499
+    },
+    {
+     "w": "canada",
+     "start": 8.281,
+     "end": 8.561,
+     "conf": 0.828
+    },
+    {
+     "w": "bedmas",
+     "start": 8.641,
+     "end": 9.061,
+     "conf": 0.71
+    },
+    {
+     "w": "the",
+     "start": 9.082,
+     "end": 9.582,
+     "conf": 0.664
+    },
+    {
+     "w": "letters",
+     "start": 9.642,
+     "end": 9.962,
+     "conf": 0.8
+    },
+    {
+     "w": "change",
+     "start": 10.143,
+     "end": 10.343,
+     "conf": 0.745
+    },
+    {
+     "w": "a",
+     "start": 10.363,
+     "end": 10.383,
+     "conf": 0.981
+    },
+    {
+     "w": "little",
+     "start": 10.463,
+     "end": 10.663,
+     "conf": 0.855
+    },
+    {
+     "w": "from",
+     "start": 10.723,
+     "end": 10.843,
+     "conf": 0.729
+    },
+    {
+     "w": "country",
+     "start": 10.923,
+     "end": 11.204,
+     "conf": 0.872
+    },
+    {
+     "w": "to",
+     "start": 11.224,
+     "end": 11.304,
+     "conf": 0.5
+    },
+    {
+     "w": "country",
+     "start": 11.384,
+     "end": 11.684,
+     "conf": 0.834
+    },
+    {
+     "w": "but",
+     "start": 12.024,
+     "end": 12.104,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 12.124,
+     "end": 12.184,
+     "conf": 0.995
+    },
+    {
+     "w": "idea",
+     "start": 12.305,
+     "end": 12.465,
+     "conf": 0.796
+    },
+    {
+     "w": "stays",
+     "start": 12.545,
+     "end": 12.745,
+     "conf": 0.803
+    },
+    {
+     "w": "the",
+     "start": 12.765,
+     "end": 12.845,
+     "conf": 0.971
+    },
+    {
+     "w": "same",
+     "start": 12.925,
+     "end": 13.145,
+     "conf": 0.587
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "Here is where many people go astray.",
+   "idea": false,
+   "start": 14.786,
+   "end": 16.236,
+   "words": [
+    {
+     "w": "here",
+     "start": 14.786,
+     "end": 14.947,
+     "conf": 0.878
+    },
+    {
+     "w": "is",
+     "start": 14.967,
+     "end": 15.008,
+     "conf": 0.853
+    },
+    {
+     "w": "where",
+     "start": 15.028,
+     "end": 15.169,
+     "conf": 0.779
+    },
+    {
+     "w": "many",
+     "start": 15.189,
+     "end": 15.33,
+     "conf": 0.999
+    },
+    {
+     "w": "people",
+     "start": 15.41,
+     "end": 15.652,
+     "conf": 0.847
+    },
+    {
+     "w": "go",
+     "start": 15.692,
+     "end": 15.753,
+     "conf": 0.558
+    },
+    {
+     "w": "astray",
+     "start": 15.853,
+     "end": 16.236,
+     "conf": 0.835
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "You see the M before the D, and it is easy to think that multiplication always comes before division.",
+   "idea": false,
+   "start": 16.666,
+   "end": 21.508,
+   "words": [
+    {
+     "w": "you",
+     "start": 16.666,
+     "end": 16.726,
+     "conf": 0.332
+    },
+    {
+     "w": "see",
+     "start": 16.746,
+     "end": 16.867,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 16.887,
+     "end": 16.967,
+     "conf": 0.998
+    },
+    {
+     "w": "m",
+     "start": 17.128,
+     "end": 17.148,
+     "conf": 0.473
+    },
+    {
+     "w": "before",
+     "start": 17.209,
+     "end": 17.43,
+     "conf": 0.834
+    },
+    {
+     "w": "the",
+     "start": 17.45,
+     "end": 17.53,
+     "conf": 0.969
+    },
+    {
+     "w": "d",
+     "start": 17.55,
+     "end": 17.57,
+     "conf": 0.999
+    },
+    {
+     "w": "and",
+     "start": 18.093,
+     "end": 18.293,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 18.394,
+     "end": 18.454,
+     "conf": 0.5
+    },
+    {
+     "w": "is",
+     "start": 18.474,
+     "end": 18.555,
+     "conf": 0.999
+    },
+    {
+     "w": "easy",
+     "start": 18.655,
+     "end": 18.816,
+     "conf": 0.959
+    },
+    {
+     "w": "to",
+     "start": 18.896,
+     "end": 18.936,
+     "conf": 0.5
+    },
+    {
+     "w": "think",
+     "start": 18.997,
+     "end": 19.157,
+     "conf": 0.832
+    },
+    {
+     "w": "that",
+     "start": 19.177,
+     "end": 19.278,
+     "conf": 0.998
+    },
+    {
+     "w": "multiplication",
+     "start": 19.298,
+     "end": 19.961,
+     "conf": 0.883
+    },
+    {
+     "w": "always",
+     "start": 20.282,
+     "end": 20.544,
+     "conf": 0.832
+    },
+    {
+     "w": "comes",
+     "start": 20.604,
+     "end": 20.805,
+     "conf": 0.799
+    },
+    {
+     "w": "before",
+     "start": 20.865,
+     "end": 21.126,
+     "conf": 0.824
+    },
+    {
+     "w": "division",
+     "start": 21.186,
+     "end": 21.508,
+     "conf": 0.966
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "You see the A before the S, and it is easy to think that addition always comes before subtraction.",
+   "idea": true,
+   "start": 21.898,
+   "end": 26.865,
+   "words": [
+    {
+     "w": "you",
+     "start": 21.898,
+     "end": 21.958,
+     "conf": 0.333
+    },
+    {
+     "w": "see",
+     "start": 21.978,
+     "end": 22.098,
+     "conf": 0.753
+    },
+    {
+     "w": "the",
+     "start": 22.118,
+     "end": 22.198,
+     "conf": 0.985
+    },
+    {
+     "w": "a",
+     "start": 22.299,
+     "end": 22.319,
+     "conf": 0.156
+    },
+    {
+     "w": "before",
+     "start": 22.479,
+     "end": 22.719,
+     "conf": 0.938
+    },
+    {
+     "w": "the",
+     "start": 22.739,
+     "end": 22.799,
+     "conf": 0.984
+    },
+    {
+     "w": "s",
+     "start": 23.08,
+     "end": 23.1,
+     "conf": 0.981
+    },
+    {
+     "w": "and",
+     "start": 23.52,
+     "end": 23.741,
+     "conf": 0.96
+    },
+    {
+     "w": "it",
+     "start": 23.781,
+     "end": 23.861,
+     "conf": 0.977
+    },
+    {
+     "w": "is",
+     "start": 23.921,
+     "end": 24.001,
+     "conf": 0.499
+    },
+    {
+     "w": "easy",
+     "start": 24.121,
+     "end": 24.261,
+     "conf": 0.632
+    },
+    {
+     "w": "to",
+     "start": 24.341,
+     "end": 24.402,
+     "conf": 0.505
+    },
+    {
+     "w": "think",
+     "start": 24.462,
+     "end": 24.662,
+     "conf": 0.8
+    },
+    {
+     "w": "that",
+     "start": 24.722,
+     "end": 24.822,
+     "conf": 0.753
+    },
+    {
+     "w": "addition",
+     "start": 24.882,
+     "end": 25.263,
+     "conf": 0.879
+    },
+    {
+     "w": "always",
+     "start": 25.383,
+     "end": 25.623,
+     "conf": 0.848
+    },
+    {
+     "w": "comes",
+     "start": 25.703,
+     "end": 25.904,
+     "conf": 0.799
+    },
+    {
+     "w": "before",
+     "start": 25.984,
+     "end": 26.244,
+     "conf": 0.662
+    },
+    {
+     "w": "subtraction",
+     "start": 26.324,
+     "end": 26.865,
+     "conf": 0.899
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "But that is not the rule.",
+   "idea": false,
+   "start": 27.875,
+   "end": 29.151,
+   "words": [
+    {
+     "w": "but",
+     "start": 27.875,
+     "end": 28.078,
+     "conf": 0.0
+    },
+    {
+     "w": "that",
+     "start": 28.098,
+     "end": 28.28,
+     "conf": 0.799
+    },
+    {
+     "w": "is",
+     "start": 28.381,
+     "end": 28.422,
+     "conf": 0.5
+    },
+    {
+     "w": "not",
+     "start": 28.503,
+     "end": 28.645,
+     "conf": 0.813
+    },
+    {
+     "w": "the",
+     "start": 28.726,
+     "end": 28.786,
+     "conf": 0.653
+    },
+    {
+     "w": "rule",
+     "start": 28.888,
+     "end": 29.151,
+     "conf": 0.727
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "Multiplication and division sit on the same level, and you work through them from left to right, whichever comes first.",
+   "idea": false,
+   "start": 29.561,
+   "end": 35.538,
+   "words": [
+    {
+     "w": "multiplication",
+     "start": 29.561,
+     "end": 30.343,
+     "conf": 1.0
+    },
+    {
+     "w": "and",
+     "start": 30.484,
+     "end": 30.584,
+     "conf": 0.999
+    },
+    {
+     "w": "division",
+     "start": 30.624,
+     "end": 30.985,
+     "conf": 0.987
+    },
+    {
+     "w": "sit",
+     "start": 31.145,
+     "end": 31.306,
+     "conf": 1.0
+    },
+    {
+     "w": "on",
+     "start": 31.386,
+     "end": 31.426,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 31.446,
+     "end": 31.526,
+     "conf": 0.928
+    },
+    {
+     "w": "same",
+     "start": 31.587,
+     "end": 31.807,
+     "conf": 1.0
+    },
+    {
+     "w": "level",
+     "start": 31.867,
+     "end": 32.088,
+     "conf": 0.8
+    },
+    {
+     "w": "and",
+     "start": 32.469,
+     "end": 32.549,
+     "conf": 0.666
+    },
+    {
+     "w": "you",
+     "start": 32.569,
+     "end": 32.65,
+     "conf": 0.996
+    },
+    {
+     "w": "work",
+     "start": 32.71,
+     "end": 32.87,
+     "conf": 0.75
+    },
+    {
+     "w": "through",
+     "start": 32.95,
+     "end": 33.131,
+     "conf": 0.739
+    },
+    {
+     "w": "them",
+     "start": 33.151,
+     "end": 33.271,
+     "conf": 0.936
+    },
+    {
+     "w": "from",
+     "start": 33.372,
+     "end": 33.492,
+     "conf": 0.75
+    },
+    {
+     "w": "left",
+     "start": 33.572,
+     "end": 33.733,
+     "conf": 0.749
+    },
+    {
+     "w": "to",
+     "start": 33.753,
+     "end": 33.833,
+     "conf": 0.664
+    },
+    {
+     "w": "right",
+     "start": 33.933,
+     "end": 34.174,
+     "conf": 0.843
+    },
+    {
+     "w": "whichever",
+     "start": 34.495,
+     "end": 34.856,
+     "conf": 0.977
+    },
+    {
+     "w": "comes",
+     "start": 34.916,
+     "end": 35.136,
+     "conf": 0.808
+    },
+    {
+     "w": "first",
+     "start": 35.197,
+     "end": 35.538,
+     "conf": 1.0
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "Addition and subtraction share a level too, and they also go from left to right.",
+   "idea": true,
+   "start": 35.948,
+   "end": 39.308,
+   "words": [
+    {
+     "w": "addition",
+     "start": 35.948,
+     "end": 36.23,
+     "conf": 0.953
+    },
+    {
+     "w": "and",
+     "start": 36.25,
+     "end": 36.33,
+     "conf": 0.263
+    },
+    {
+     "w": "subtraction",
+     "start": 36.35,
+     "end": 36.793,
+     "conf": 0.825
+    },
+    {
+     "w": "share",
+     "start": 36.813,
+     "end": 37.014,
+     "conf": 0.707
+    },
+    {
+     "w": "a",
+     "start": 37.035,
+     "end": 37.055,
+     "conf": 0.348
+    },
+    {
+     "w": "level",
+     "start": 37.075,
+     "end": 37.276,
+     "conf": 0.999
+    },
+    {
+     "w": "too",
+     "start": 37.356,
+     "end": 37.517,
+     "conf": 0.535
+    },
+    {
+     "w": "and",
+     "start": 37.96,
+     "end": 38.02,
+     "conf": 0.666
+    },
+    {
+     "w": "they",
+     "start": 38.04,
+     "end": 38.121,
+     "conf": 0.838
+    },
+    {
+     "w": "also",
+     "start": 38.181,
+     "end": 38.342,
+     "conf": 0.75
+    },
+    {
+     "w": "go",
+     "start": 38.443,
+     "end": 38.483,
+     "conf": 0.499
+    },
+    {
+     "w": "from",
+     "start": 38.604,
+     "end": 38.704,
+     "conf": 0.749
+    },
+    {
+     "w": "left",
+     "start": 38.785,
+     "end": 38.926,
+     "conf": 0.75
+    },
+    {
+     "w": "to",
+     "start": 38.946,
+     "end": 39.026,
+     "conf": 0.662
+    },
+    {
+     "w": "right",
+     "start": 39.107,
+     "end": 39.308,
+     "conf": 0.827
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "Take ten minus three plus two.",
+   "idea": false,
+   "start": 40.338,
+   "end": 41.86,
+   "words": [
+    {
+     "w": "take",
+     "start": 40.338,
+     "end": 40.521,
+     "conf": 0.995
+    },
+    {
+     "w": "ten",
+     "start": 40.622,
+     "end": 40.764,
+     "conf": 0.115
+    },
+    {
+     "w": "minus",
+     "start": 40.805,
+     "end": 41.049,
+     "conf": 0.567
+    },
+    {
+     "w": "three",
+     "start": 41.069,
+     "end": 41.272,
+     "conf": 0.009
+    },
+    {
+     "w": "plus",
+     "start": 41.292,
+     "end": 41.556,
+     "conf": 0.072
+    },
+    {
+     "w": "two",
+     "start": 41.576,
+     "end": 41.86,
+     "conf": 0.001
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "If you believe addition has to come first, you work out three plus two, which is five, and then ten minus five, which is five.",
+   "idea": false,
+   "start": 42.271,
+   "end": 48.438,
+   "words": [
+    {
+     "w": "if",
+     "start": 42.271,
+     "end": 42.351,
+     "conf": 0.977
+    },
+    {
+     "w": "you",
+     "start": 42.371,
+     "end": 42.431,
+     "conf": 0.997
+    },
+    {
+     "w": "believe",
+     "start": 42.451,
+     "end": 42.671,
+     "conf": 0.984
+    },
+    {
+     "w": "addition",
+     "start": 42.692,
+     "end": 43.012,
+     "conf": 0.792
+    },
+    {
+     "w": "has",
+     "start": 43.072,
+     "end": 43.192,
+     "conf": 0.694
+    },
+    {
+     "w": "to",
+     "start": 43.212,
+     "end": 43.272,
+     "conf": 0.996
+    },
+    {
+     "w": "come",
+     "start": 43.292,
+     "end": 43.472,
+     "conf": 0.799
+    },
+    {
+     "w": "first",
+     "start": 43.512,
+     "end": 43.893,
+     "conf": 0.833
+    },
+    {
+     "w": "you",
+     "start": 44.153,
+     "end": 44.233,
+     "conf": 0.747
+    },
+    {
+     "w": "work",
+     "start": 44.293,
+     "end": 44.454,
+     "conf": 0.75
+    },
+    {
+     "w": "out",
+     "start": 44.554,
+     "end": 44.654,
+     "conf": 0.665
+    },
+    {
+     "w": "three",
+     "start": 44.674,
+     "end": 44.934,
+     "conf": 0.001
+    },
+    {
+     "w": "plus",
+     "start": 45.014,
+     "end": 45.214,
+     "conf": 0.01
+    },
+    {
+     "w": "two",
+     "start": 45.234,
+     "end": 45.515,
+     "conf": 0.0
+    },
+    {
+     "w": "which",
+     "start": 45.635,
+     "end": 45.755,
+     "conf": 0.546
+    },
+    {
+     "w": "is",
+     "start": 45.775,
+     "end": 45.875,
+     "conf": 0.599
+    },
+    {
+     "w": "five",
+     "start": 45.895,
+     "end": 46.256,
+     "conf": 0.011
+    },
+    {
+     "w": "and",
+     "start": 46.276,
+     "end": 46.436,
+     "conf": 0.575
+    },
+    {
+     "w": "then",
+     "start": 46.456,
+     "end": 46.576,
+     "conf": 0.978
+    },
+    {
+     "w": "ten",
+     "start": 46.856,
+     "end": 47.117,
+     "conf": 0.066
+    },
+    {
+     "w": "minus",
+     "start": 47.277,
+     "end": 47.537,
+     "conf": 0.736
+    },
+    {
+     "w": "five",
+     "start": 47.557,
+     "end": 47.857,
+     "conf": 0.018
+    },
+    {
+     "w": "which",
+     "start": 47.878,
+     "end": 48.018,
+     "conf": 0.509
+    },
+    {
+     "w": "is",
+     "start": 48.078,
+     "end": 48.138,
+     "conf": 0.184
+    },
+    {
+     "w": "five",
+     "start": 48.158,
+     "end": 48.438,
+     "conf": 0.028
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "But read it from left to right, the way the rule really says. Ten minus three is seven, and seven plus two is nine.",
+   "idea": false,
+   "start": 48.828,
+   "end": 54.558,
+   "words": [
+    {
+     "w": "but",
+     "start": 48.828,
+     "end": 48.888,
+     "conf": 0.385
+    },
+    {
+     "w": "read",
+     "start": 48.908,
+     "end": 49.048,
+     "conf": 0.77
+    },
+    {
+     "w": "it",
+     "start": 49.068,
+     "end": 49.129,
+     "conf": 0.836
+    },
+    {
+     "w": "from",
+     "start": 49.149,
+     "end": 49.269,
+     "conf": 0.778
+    },
+    {
+     "w": "left",
+     "start": 49.309,
+     "end": 49.429,
+     "conf": 0.742
+    },
+    {
+     "w": "to",
+     "start": 49.449,
+     "end": 49.489,
+     "conf": 0.973
+    },
+    {
+     "w": "right",
+     "start": 49.569,
+     "end": 49.71,
+     "conf": 0.618
+    },
+    {
+     "w": "the",
+     "start": 49.73,
+     "end": 49.79,
+     "conf": 0.987
+    },
+    {
+     "w": "way",
+     "start": 49.81,
+     "end": 49.91,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 49.93,
+     "end": 50.01,
+     "conf": 0.746
+    },
+    {
+     "w": "rule",
+     "start": 50.07,
+     "end": 50.251,
+     "conf": 0.797
+    },
+    {
+     "w": "really",
+     "start": 50.311,
+     "end": 50.511,
+     "conf": 0.694
+    },
+    {
+     "w": "says",
+     "start": 50.611,
+     "end": 50.872,
+     "conf": 0.748
+    },
+    {
+     "w": "ten",
+     "start": 50.892,
+     "end": 51.352,
+     "conf": 0.149
+    },
+    {
+     "w": "minus",
+     "start": 51.453,
+     "end": 51.733,
+     "conf": 0.779
+    },
+    {
+     "w": "three",
+     "start": 51.753,
+     "end": 51.954,
+     "conf": 0.027
+    },
+    {
+     "w": "is",
+     "start": 51.974,
+     "end": 52.054,
+     "conf": 0.0
+    },
+    {
+     "w": "seven",
+     "start": 52.074,
+     "end": 52.494,
+     "conf": 0.112
+    },
+    {
+     "w": "and",
+     "start": 52.515,
+     "end": 52.775,
+     "conf": 0.389
+    },
+    {
+     "w": "seven",
+     "start": 52.795,
+     "end": 53.156,
+     "conf": 0.004
+    },
+    {
+     "w": "plus",
+     "start": 53.176,
+     "end": 53.496,
+     "conf": 0.007
+    },
+    {
+     "w": "two",
+     "start": 53.516,
+     "end": 53.877,
+     "conf": 0.0
+    },
+    {
+     "w": "is",
+     "start": 53.897,
+     "end": 54.037,
+     "conf": 0.212
+    },
+    {
+     "w": "nine",
+     "start": 54.057,
+     "end": 54.558,
+     "conf": 0.009
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "The answer is nine.",
+   "idea": true,
+   "start": 54.948,
+   "end": 55.894,
+   "words": [
+    {
+     "w": "the",
+     "start": 54.948,
+     "end": 55.008,
+     "conf": 0.006
+    },
+    {
+     "w": "answer",
+     "start": 55.029,
+     "end": 55.31,
+     "conf": 0.9
+    },
+    {
+     "w": "is",
+     "start": 55.371,
+     "end": 55.471,
+     "conf": 0.891
+    },
+    {
+     "w": "nine",
+     "start": 55.572,
+     "end": 55.894,
+     "conf": 0.376
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "Or take eight divided by four, times two.",
+   "idea": false,
+   "start": 56.884,
+   "end": 58.718,
+   "words": [
+    {
+     "w": "or",
+     "start": 56.884,
+     "end": 56.924,
+     "conf": 0.497
+    },
+    {
+     "w": "take",
+     "start": 56.945,
+     "end": 57.126,
+     "conf": 0.794
+    },
+    {
+     "w": "eight",
+     "start": 57.227,
+     "end": 57.348,
+     "conf": 0.436
+    },
+    {
+     "w": "divided",
+     "start": 57.408,
+     "end": 57.67,
+     "conf": 0.684
+    },
+    {
+     "w": "by",
+     "start": 57.69,
+     "end": 57.791,
+     "conf": 0.981
+    },
+    {
+     "w": "four",
+     "start": 57.811,
+     "end": 58.073,
+     "conf": 0.221
+    },
+    {
+     "w": "times",
+     "start": 58.254,
+     "end": 58.496,
+     "conf": 0.964
+    },
+    {
+     "w": "two",
+     "start": 58.576,
+     "end": 58.718,
+     "conf": 0.293
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "Left to right, eight divided by four is two, and two times two is four.",
+   "idea": false,
+   "start": 59.128,
+   "end": 62.383,
+   "words": [
+    {
+     "w": "left",
+     "start": 59.128,
+     "end": 59.309,
+     "conf": 0.988
+    },
+    {
+     "w": "to",
+     "start": 59.329,
+     "end": 59.389,
+     "conf": 0.889
+    },
+    {
+     "w": "right",
+     "start": 59.47,
+     "end": 59.671,
+     "conf": 0.96
+    },
+    {
+     "w": "eight",
+     "start": 59.791,
+     "end": 59.912,
+     "conf": 0.526
+    },
+    {
+     "w": "divided",
+     "start": 59.952,
+     "end": 60.233,
+     "conf": 0.954
+    },
+    {
+     "w": "by",
+     "start": 60.253,
+     "end": 60.354,
+     "conf": 0.997
+    },
+    {
+     "w": "four",
+     "start": 60.434,
+     "end": 60.615,
+     "conf": 0.522
+    },
+    {
+     "w": "is",
+     "start": 60.635,
+     "end": 60.716,
+     "conf": 0.569
+    },
+    {
+     "w": "two",
+     "start": 60.776,
+     "end": 60.977,
+     "conf": 0.442
+    },
+    {
+     "w": "and",
+     "start": 61.318,
+     "end": 61.379,
+     "conf": 0.657
+    },
+    {
+     "w": "two",
+     "start": 61.399,
+     "end": 61.519,
+     "conf": 0.7
+    },
+    {
+     "w": "times",
+     "start": 61.539,
+     "end": 61.76,
+     "conf": 0.996
+    },
+    {
+     "w": "two",
+     "start": 61.821,
+     "end": 61.941,
+     "conf": 0.356
+    },
+    {
+     "w": "is",
+     "start": 62.022,
+     "end": 62.102,
+     "conf": 0.468
+    },
+    {
+     "w": "four",
+     "start": 62.203,
+     "end": 62.383,
+     "conf": 0.485
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "Do the multiplication first, because the M comes before the D, and you get four times two is eight, then eight divided by eight is one. Wrong again.",
+   "idea": true,
+   "start": 62.793,
+   "end": 70.055,
+   "words": [
+    {
+     "w": "do",
+     "start": 62.793,
+     "end": 62.833,
+     "conf": 0.994
+    },
+    {
+     "w": "the",
+     "start": 62.853,
+     "end": 62.954,
+     "conf": 0.662
+    },
+    {
+     "w": "multiplication",
+     "start": 62.974,
+     "end": 63.595,
+     "conf": 0.985
+    },
+    {
+     "w": "first",
+     "start": 63.656,
+     "end": 63.957,
+     "conf": 0.807
+    },
+    {
+     "w": "because",
+     "start": 64.097,
+     "end": 64.318,
+     "conf": 0.993
+    },
+    {
+     "w": "the",
+     "start": 64.338,
+     "end": 64.418,
+     "conf": 0.995
+    },
+    {
+     "w": "m",
+     "start": 64.619,
+     "end": 64.639,
+     "conf": 0.993
+    },
+    {
+     "w": "comes",
+     "start": 64.759,
+     "end": 64.96,
+     "conf": 0.8
+    },
+    {
+     "w": "before",
+     "start": 64.98,
+     "end": 65.261,
+     "conf": 0.842
+    },
+    {
+     "w": "the",
+     "start": 65.281,
+     "end": 65.361,
+     "conf": 0.987
+    },
+    {
+     "w": "d",
+     "start": 65.381,
+     "end": 65.421,
+     "conf": 0.496
+    },
+    {
+     "w": "and",
+     "start": 65.702,
+     "end": 65.782,
+     "conf": 0.99
+    },
+    {
+     "w": "you",
+     "start": 65.802,
+     "end": 65.862,
+     "conf": 0.396
+    },
+    {
+     "w": "get",
+     "start": 65.882,
+     "end": 65.983,
+     "conf": 1.0
+    },
+    {
+     "w": "four",
+     "start": 66.083,
+     "end": 66.243,
+     "conf": 0.695
+    },
+    {
+     "w": "times",
+     "start": 66.304,
+     "end": 66.544,
+     "conf": 0.799
+    },
+    {
+     "w": "two",
+     "start": 66.564,
+     "end": 66.705,
+     "conf": 0.223
+    },
+    {
+     "w": "is",
+     "start": 66.765,
+     "end": 66.825,
+     "conf": 0.329
+    },
+    {
+     "w": "eight",
+     "start": 66.845,
+     "end": 67.066,
+     "conf": 0.316
+    },
+    {
+     "w": "then",
+     "start": 67.527,
+     "end": 67.648,
+     "conf": 0.994
+    },
+    {
+     "w": "eight",
+     "start": 67.788,
+     "end": 67.909,
+     "conf": 0.413
+    },
+    {
+     "w": "divided",
+     "start": 67.969,
+     "end": 68.25,
+     "conf": 0.759
+    },
+    {
+     "w": "by",
+     "start": 68.27,
+     "end": 68.37,
+     "conf": 0.97
+    },
+    {
+     "w": "eight",
+     "start": 68.39,
+     "end": 68.51,
+     "conf": 0.046
+    },
+    {
+     "w": "is",
+     "start": 68.53,
+     "end": 68.611,
+     "conf": 0.936
+    },
+    {
+     "w": "one",
+     "start": 68.731,
+     "end": 68.871,
+     "conf": 0.507
+    },
+    {
+     "w": "wrong",
+     "start": 68.891,
+     "end": 69.774,
+     "conf": 0.825
+    },
+    {
+     "w": "again",
+     "start": 69.794,
+     "end": 70.055,
+     "conf": 0.995
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "I start here because it matters.",
+   "idea": false,
+   "start": 71.308,
+   "end": 72.701,
+   "words": [
+    {
+     "w": "i",
+     "start": 71.308,
+     "end": 71.329,
+     "conf": 0.999
+    },
+    {
+     "w": "start",
+     "start": 71.369,
+     "end": 71.611,
+     "conf": 0.992
+    },
+    {
+     "w": "here",
+     "start": 71.672,
+     "end": 71.833,
+     "conf": 0.966
+    },
+    {
+     "w": "because",
+     "start": 71.853,
+     "end": 72.156,
+     "conf": 0.905
+    },
+    {
+     "w": "it",
+     "start": 72.277,
+     "end": 72.317,
+     "conf": 0.499
+    },
+    {
+     "w": "matters",
+     "start": 72.338,
+     "end": 72.701,
+     "conf": 0.872
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "A large share of those online fights happen simply because people misremember the levels.",
+   "idea": false,
+   "start": 73.171,
+   "end": 77.516,
+   "words": [
+    {
+     "w": "a",
+     "start": 73.171,
+     "end": 73.191,
+     "conf": 0.001
+    },
+    {
+     "w": "large",
+     "start": 73.211,
+     "end": 73.471,
+     "conf": 0.996
+    },
+    {
+     "w": "share",
+     "start": 73.491,
+     "end": 73.732,
+     "conf": 0.835
+    },
+    {
+     "w": "of",
+     "start": 73.752,
+     "end": 73.792,
+     "conf": 0.998
+    },
+    {
+     "w": "those",
+     "start": 73.812,
+     "end": 74.012,
+     "conf": 0.809
+    },
+    {
+     "w": "online",
+     "start": 74.072,
+     "end": 74.413,
+     "conf": 0.834
+    },
+    {
+     "w": "fights",
+     "start": 74.473,
+     "end": 74.793,
+     "conf": 0.845
+    },
+    {
+     "w": "happen",
+     "start": 74.973,
+     "end": 75.213,
+     "conf": 0.861
+    },
+    {
+     "w": "simply",
+     "start": 75.314,
+     "end": 75.594,
+     "conf": 1.0
+    },
+    {
+     "w": "because",
+     "start": 75.674,
+     "end": 75.934,
+     "conf": 0.857
+    },
+    {
+     "w": "people",
+     "start": 75.994,
+     "end": 76.235,
+     "conf": 0.851
+    },
+    {
+     "w": "misremember",
+     "start": 76.335,
+     "end": 76.955,
+     "conf": 0.901
+    },
+    {
+     "w": "the",
+     "start": 77.016,
+     "end": 77.116,
+     "conf": 0.784
+    },
+    {
+     "w": "levels",
+     "start": 77.196,
+     "end": 77.516,
+     "conf": 0.819
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "text": "Once you know that multiplication and division are equals, and addition and subtraction are equals, a lot of the famous arguments quietly disappear.",
+   "idea": true,
+   "start": 77.966,
+   "end": 85.616,
+   "words": [
+    {
+     "w": "once",
+     "start": 77.966,
+     "end": 78.106,
+     "conf": 0.787
+    },
+    {
+     "w": "you",
+     "start": 78.126,
+     "end": 78.206,
+     "conf": 0.999
+    },
+    {
+     "w": "know",
+     "start": 78.226,
+     "end": 78.387,
+     "conf": 0.953
+    },
+    {
+     "w": "that",
+     "start": 78.407,
+     "end": 78.627,
+     "conf": 0.795
+    },
+    {
+     "w": "multiplication",
+     "start": 78.667,
+     "end": 79.408,
+     "conf": 0.998
+    },
+    {
+     "w": "and",
+     "start": 79.568,
+     "end": 79.648,
+     "conf": 0.662
+    },
+    {
+     "w": "division",
+     "start": 79.708,
+     "end": 80.109,
+     "conf": 0.867
+    },
+    {
+     "w": "are",
+     "start": 80.189,
+     "end": 80.249,
+     "conf": 0.664
+    },
+    {
+     "w": "equals",
+     "start": 80.329,
+     "end": 80.73,
+     "conf": 0.857
+    },
+    {
+     "w": "and",
+     "start": 81.17,
+     "end": 81.23,
+     "conf": 0.66
+    },
+    {
+     "w": "addition",
+     "start": 81.25,
+     "end": 81.591,
+     "conf": 0.981
+    },
+    {
+     "w": "and",
+     "start": 81.611,
+     "end": 81.691,
+     "conf": 0.523
+    },
+    {
+     "w": "subtraction",
+     "start": 81.711,
+     "end": 82.272,
+     "conf": 0.917
+    },
+    {
+     "w": "are",
+     "start": 82.312,
+     "end": 82.392,
+     "conf": 0.61
+    },
+    {
+     "w": "equals",
+     "start": 82.452,
+     "end": 82.792,
+     "conf": 0.801
+    },
+    {
+     "w": "a",
+     "start": 83.413,
+     "end": 83.433,
+     "conf": 0.001
+    },
+    {
+     "w": "lot",
+     "start": 83.493,
+     "end": 83.613,
+     "conf": 0.665
+    },
+    {
+     "w": "of",
+     "start": 83.633,
+     "end": 83.674,
+     "conf": 0.964
+    },
+    {
+     "w": "the",
+     "start": 83.694,
+     "end": 83.774,
+     "conf": 0.806
+    },
+    {
+     "w": "famous",
+     "start": 83.854,
+     "end": 84.134,
+     "conf": 0.847
+    },
+    {
+     "w": "arguments",
+     "start": 84.254,
+     "end": 84.595,
+     "conf": 0.894
+    },
+    {
+     "w": "quietly",
+     "start": 84.655,
+     "end": 85.095,
+     "conf": 0.831
+    },
+    {
+     "w": "disappear",
+     "start": 85.175,
+     "end": 85.616,
+     "conf": 0.887
+    }
+   ]
+  },
+  {
+   "section": "The part almost everyone gets wrong",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "So which parts of PEMDAS did people simply decide, with nothing in nature forcing them?",
+   "idea": true,
+   "start": 88.076,
+   "end": 92.288,
+   "words": [
+    {
+     "w": "so",
+     "start": 88.076,
+     "end": 88.136,
+     "conf": 0.999
+    },
+    {
+     "w": "which",
+     "start": 88.176,
+     "end": 88.337,
+     "conf": 0.835
+    },
+    {
+     "w": "parts",
+     "start": 88.357,
+     "end": 88.577,
+     "conf": 0.833
+    },
+    {
+     "w": "of",
+     "start": 88.597,
+     "end": 88.658,
+     "conf": 0.999
+    },
+    {
+     "w": "pemdas",
+     "start": 88.698,
+     "end": 89.079,
+     "conf": 0.834
+    },
+    {
+     "w": "did",
+     "start": 89.139,
+     "end": 89.259,
+     "conf": 0.68
+    },
+    {
+     "w": "people",
+     "start": 89.319,
+     "end": 89.56,
+     "conf": 0.856
+    },
+    {
+     "w": "simply",
+     "start": 89.64,
+     "end": 89.881,
+     "conf": 0.832
+    },
+    {
+     "w": "decide",
+     "start": 89.901,
+     "end": 90.402,
+     "conf": 0.853
+    },
+    {
+     "w": "with",
+     "start": 90.422,
+     "end": 91.084,
+     "conf": 0.749
+    },
+    {
+     "w": "nothing",
+     "start": 91.205,
+     "end": 91.505,
+     "conf": 0.875
+    },
+    {
+     "w": "in",
+     "start": 91.546,
+     "end": 91.586,
+     "conf": 0.498
+    },
+    {
+     "w": "nature",
+     "start": 91.606,
+     "end": 91.886,
+     "conf": 0.86
+    },
+    {
+     "w": "forcing",
+     "start": 91.907,
+     "end": 92.167,
+     "conf": 0.849
+    },
+    {
+     "w": "them",
+     "start": 92.187,
+     "end": 92.288,
+     "conf": 0.969
+    }
+   ]
+  },
+  {
+   "section": "Left to right",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "The first is reading from left to right.",
+   "idea": false,
+   "start": 93.968,
+   "end": 95.727,
+   "words": [
+    {
+     "w": "the",
+     "start": 93.968,
+     "end": 94.029,
+     "conf": 0.006
+    },
+    {
+     "w": "first",
+     "start": 94.049,
+     "end": 94.372,
+     "conf": 0.982
+    },
+    {
+     "w": "is",
+     "start": 94.474,
+     "end": 94.514,
+     "conf": 0.497
+    },
+    {
+     "w": "reading",
+     "start": 94.595,
+     "end": 94.878,
+     "conf": 0.821
+    },
+    {
+     "w": "from",
+     "start": 94.918,
+     "end": 95.08,
+     "conf": 0.995
+    },
+    {
+     "w": "left",
+     "start": 95.141,
+     "end": 95.323,
+     "conf": 0.729
+    },
+    {
+     "w": "to",
+     "start": 95.343,
+     "end": 95.424,
+     "conf": 0.659
+    },
+    {
+     "w": "right",
+     "start": 95.504,
+     "end": 95.727,
+     "conf": 0.729
+    }
+   ]
+  },
+  {
+   "section": "Left to right",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "When two operations sit on the same level, like addition and subtraction, we agree to do the left one first. But that is purely a choice.",
+   "idea": false,
+   "start": 96.137,
+   "end": 102.774,
+   "words": [
+    {
+     "w": "when",
+     "start": 96.137,
+     "end": 96.237,
+     "conf": 0.747
+    },
+    {
+     "w": "two",
+     "start": 96.318,
+     "end": 96.458,
+     "conf": 0.999
+    },
+    {
+     "w": "operations",
+     "start": 96.478,
+     "end": 96.919,
+     "conf": 0.881
+    },
+    {
+     "w": "sit",
+     "start": 96.979,
+     "end": 97.08,
+     "conf": 0.667
+    },
+    {
+     "w": "on",
+     "start": 97.12,
+     "end": 97.18,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 97.2,
+     "end": 97.26,
+     "conf": 0.998
+    },
+    {
+     "w": "same",
+     "start": 97.36,
+     "end": 97.601,
+     "conf": 0.799
+    },
+    {
+     "w": "level",
+     "start": 97.641,
+     "end": 97.862,
+     "conf": 0.8
+    },
+    {
+     "w": "like",
+     "start": 98.102,
+     "end": 98.263,
+     "conf": 0.75
+    },
+    {
+     "w": "addition",
+     "start": 98.283,
+     "end": 98.583,
+     "conf": 0.844
+    },
+    {
+     "w": "and",
+     "start": 98.604,
+     "end": 98.704,
+     "conf": 0.545
+    },
+    {
+     "w": "subtraction",
+     "start": 98.724,
+     "end": 99.265,
+     "conf": 0.998
+    },
+    {
+     "w": "we",
+     "start": 99.526,
+     "end": 99.586,
+     "conf": 0.521
+    },
+    {
+     "w": "agree",
+     "start": 99.646,
+     "end": 99.827,
+     "conf": 0.8
+    },
+    {
+     "w": "to",
+     "start": 99.887,
+     "end": 99.927,
+     "conf": 0.503
+    },
+    {
+     "w": "do",
+     "start": 99.987,
+     "end": 100.027,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 100.047,
+     "end": 100.148,
+     "conf": 0.665
+    },
+    {
+     "w": "left",
+     "start": 100.228,
+     "end": 100.388,
+     "conf": 0.75
+    },
+    {
+     "w": "one",
+     "start": 100.468,
+     "end": 100.569,
+     "conf": 0.667
+    },
+    {
+     "w": "first",
+     "start": 100.589,
+     "end": 100.97,
+     "conf": 0.833
+    },
+    {
+     "w": "but",
+     "start": 101.471,
+     "end": 101.551,
+     "conf": 0.666
+    },
+    {
+     "w": "that",
+     "start": 101.571,
+     "end": 101.712,
+     "conf": 0.998
+    },
+    {
+     "w": "is",
+     "start": 101.772,
+     "end": 101.832,
+     "conf": 0.5
+    },
+    {
+     "w": "purely",
+     "start": 101.912,
+     "end": 102.213,
+     "conf": 0.828
+    },
+    {
+     "w": "a",
+     "start": 102.293,
+     "end": 102.313,
+     "conf": 0.001
+    },
+    {
+     "w": "choice",
+     "start": 102.434,
+     "end": 102.774,
+     "conf": 0.842
+    }
+   ]
+  },
+  {
+   "section": "Left to right",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "Arabic is written from right to left, and in principle we could just as well have agreed to read our sums in that direction.",
+   "idea": false,
+   "start": 103.185,
+   "end": 109.315,
+   "words": [
+    {
+     "w": "arabic",
+     "start": 103.185,
+     "end": 103.526,
+     "conf": 0.67
+    },
+    {
+     "w": "is",
+     "start": 103.586,
+     "end": 103.626,
+     "conf": 0.499
+    },
+    {
+     "w": "written",
+     "start": 103.646,
+     "end": 103.866,
+     "conf": 0.912
+    },
+    {
+     "w": "from",
+     "start": 103.926,
+     "end": 104.046,
+     "conf": 0.758
+    },
+    {
+     "w": "right",
+     "start": 104.126,
+     "end": 104.307,
+     "conf": 0.973
+    },
+    {
+     "w": "to",
+     "start": 104.327,
+     "end": 104.387,
+     "conf": 0.988
+    },
+    {
+     "w": "left",
+     "start": 104.467,
+     "end": 104.767,
+     "conf": 0.999
+    },
+    {
+     "w": "and",
+     "start": 105.128,
+     "end": 105.308,
+     "conf": 0.666
+    },
+    {
+     "w": "in",
+     "start": 105.408,
+     "end": 105.469,
+     "conf": 0.498
+    },
+    {
+     "w": "principle",
+     "start": 105.549,
+     "end": 106.009,
+     "conf": 0.888
+    },
+    {
+     "w": "we",
+     "start": 106.029,
+     "end": 106.11,
+     "conf": 0.667
+    },
+    {
+     "w": "could",
+     "start": 106.19,
+     "end": 106.35,
+     "conf": 0.765
+    },
+    {
+     "w": "just",
+     "start": 106.45,
+     "end": 106.69,
+     "conf": 1.0
+    },
+    {
+     "w": "as",
+     "start": 106.771,
+     "end": 106.831,
+     "conf": 0.499
+    },
+    {
+     "w": "well",
+     "start": 106.911,
+     "end": 107.111,
+     "conf": 0.802
+    },
+    {
+     "w": "have",
+     "start": 107.211,
+     "end": 107.311,
+     "conf": 0.502
+    },
+    {
+     "w": "agreed",
+     "start": 107.331,
+     "end": 107.712,
+     "conf": 0.948
+    },
+    {
+     "w": "to",
+     "start": 107.772,
+     "end": 107.832,
+     "conf": 0.5
+    },
+    {
+     "w": "read",
+     "start": 107.912,
+     "end": 108.053,
+     "conf": 0.749
+    },
+    {
+     "w": "our",
+     "start": 108.133,
+     "end": 108.213,
+     "conf": 0.665
+    },
+    {
+     "w": "sums",
+     "start": 108.313,
+     "end": 108.573,
+     "conf": 0.548
+    },
+    {
+     "w": "in",
+     "start": 108.593,
+     "end": 108.654,
+     "conf": 0.665
+    },
+    {
+     "w": "that",
+     "start": 108.674,
+     "end": 108.834,
+     "conf": 0.784
+    },
+    {
+     "w": "direction",
+     "start": 108.894,
+     "end": 109.315,
+     "conf": 0.884
+    }
+   ]
+  },
+  {
+   "section": "Left to right",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "In fact, someone did. In the nineteen sixties, a programming language called APL was built to read every expression from right to left, with no ladder of priorities at all.",
+   "idea": false,
+   "start": 109.724,
+   "end": 118.669,
+   "words": [
+    {
+     "w": "in",
+     "start": 109.724,
+     "end": 109.784,
+     "conf": 0.995
+    },
+    {
+     "w": "fact",
+     "start": 109.804,
+     "end": 110.064,
+     "conf": 0.799
+    },
+    {
+     "w": "someone",
+     "start": 110.204,
+     "end": 110.484,
+     "conf": 0.783
+    },
+    {
+     "w": "did",
+     "start": 110.504,
+     "end": 110.685,
+     "conf": 0.999
+    },
+    {
+     "w": "in",
+     "start": 111.345,
+     "end": 111.405,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 111.425,
+     "end": 111.505,
+     "conf": 0.889
+    },
+    {
+     "w": "nineteen",
+     "start": 111.525,
+     "end": 111.825,
+     "conf": 0.024
+    },
+    {
+     "w": "sixties",
+     "start": 111.845,
+     "end": 112.306,
+     "conf": 0.065
+    },
+    {
+     "w": "a",
+     "start": 112.366,
+     "end": 112.386,
+     "conf": 0.001
+    },
+    {
+     "w": "programming",
+     "start": 112.406,
+     "end": 112.866,
+     "conf": 0.915
+    },
+    {
+     "w": "language",
+     "start": 112.886,
+     "end": 113.186,
+     "conf": 0.998
+    },
+    {
+     "w": "called",
+     "start": 113.206,
+     "end": 113.426,
+     "conf": 0.999
+    },
+    {
+     "w": "apl",
+     "start": 113.546,
+     "end": 113.967,
+     "conf": 0.665
+    },
+    {
+     "w": "was",
+     "start": 114.107,
+     "end": 114.227,
+     "conf": 0.999
+    },
+    {
+     "w": "built",
+     "start": 114.307,
+     "end": 114.467,
+     "conf": 0.734
+    },
+    {
+     "w": "to",
+     "start": 114.487,
+     "end": 114.567,
+     "conf": 0.666
+    },
+    {
+     "w": "read",
+     "start": 114.647,
+     "end": 114.767,
+     "conf": 0.748
+    },
+    {
+     "w": "every",
+     "start": 114.867,
+     "end": 115.027,
+     "conf": 0.81
+    },
+    {
+     "w": "expression",
+     "start": 115.127,
+     "end": 115.628,
+     "conf": 0.882
+    },
+    {
+     "w": "from",
+     "start": 115.708,
+     "end": 115.828,
+     "conf": 0.782
+    },
+    {
+     "w": "right",
+     "start": 115.908,
+     "end": 116.088,
+     "conf": 0.826
+    },
+    {
+     "w": "to",
+     "start": 116.148,
+     "end": 116.188,
+     "conf": 0.497
+    },
+    {
+     "w": "left",
+     "start": 116.288,
+     "end": 116.528,
+     "conf": 0.795
+    },
+    {
+     "w": "with",
+     "start": 116.968,
+     "end": 117.088,
+     "conf": 0.734
+    },
+    {
+     "w": "no",
+     "start": 117.188,
+     "end": 117.249,
+     "conf": 0.5
+    },
+    {
+     "w": "ladder",
+     "start": 117.409,
+     "end": 117.649,
+     "conf": 0.707
+    },
+    {
+     "w": "of",
+     "start": 117.709,
+     "end": 117.749,
+     "conf": 0.488
+    },
+    {
+     "w": "priorities",
+     "start": 117.829,
+     "end": 118.349,
+     "conf": 0.862
+    },
+    {
+     "w": "at",
+     "start": 118.369,
+     "end": 118.469,
+     "conf": 0.666
+    },
+    {
+     "w": "all",
+     "start": 118.569,
+     "end": 118.669,
+     "conf": 0.625
+    }
+   ]
+  },
+  {
+   "section": "Left to right",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "And even in ordinary maths, we already break our own habit. Two to the three to the two, a tower of powers, is worked out from the top down. It comes to five hundred and twelve, not sixty-four.",
+   "idea": false,
+   "start": 119.079,
+   "end": 128.541,
+   "words": [
+    {
+     "w": "and",
+     "start": 119.079,
+     "end": 119.139,
+     "conf": 0.332
+    },
+    {
+     "w": "even",
+     "start": 119.159,
+     "end": 119.3,
+     "conf": 1.0
+    },
+    {
+     "w": "in",
+     "start": 119.36,
+     "end": 119.4,
+     "conf": 0.5
+    },
+    {
+     "w": "ordinary",
+     "start": 119.52,
+     "end": 119.821,
+     "conf": 0.874
+    },
+    {
+     "w": "maths",
+     "start": 119.881,
+     "end": 120.182,
+     "conf": 0.791
+    },
+    {
+     "w": "we",
+     "start": 120.282,
+     "end": 120.322,
+     "conf": 0.5
+    },
+    {
+     "w": "already",
+     "start": 120.402,
+     "end": 120.623,
+     "conf": 0.853
+    },
+    {
+     "w": "break",
+     "start": 120.703,
+     "end": 120.843,
+     "conf": 0.804
+    },
+    {
+     "w": "our",
+     "start": 120.923,
+     "end": 121.003,
+     "conf": 0.667
+    },
+    {
+     "w": "own",
+     "start": 121.024,
+     "end": 121.144,
+     "conf": 0.749
+    },
+    {
+     "w": "habit",
+     "start": 121.204,
+     "end": 121.445,
+     "conf": 0.799
+    },
+    {
+     "w": "two",
+     "start": 121.465,
+     "end": 122.166,
+     "conf": 0.466
+    },
+    {
+     "w": "to",
+     "start": 122.186,
+     "end": 122.246,
+     "conf": 0.181
+    },
+    {
+     "w": "the",
+     "start": 122.266,
+     "end": 122.327,
+     "conf": 0.14
+    },
+    {
+     "w": "three",
+     "start": 122.347,
+     "end": 122.487,
+     "conf": 0.208
+    },
+    {
+     "w": "to",
+     "start": 122.507,
+     "end": 122.547,
+     "conf": 0.36
+    },
+    {
+     "w": "the",
+     "start": 122.567,
+     "end": 122.647,
+     "conf": 0.379
+    },
+    {
+     "w": "two",
+     "start": 122.667,
+     "end": 122.868,
+     "conf": 0.305
+    },
+    {
+     "w": "a",
+     "start": 123.309,
+     "end": 123.329,
+     "conf": 0.993
+    },
+    {
+     "w": "tower",
+     "start": 123.409,
+     "end": 123.69,
+     "conf": 0.708
+    },
+    {
+     "w": "of",
+     "start": 123.75,
+     "end": 123.79,
+     "conf": 0.497
+    },
+    {
+     "w": "powers",
+     "start": 123.85,
+     "end": 124.211,
+     "conf": 0.806
+    },
+    {
+     "w": "is",
+     "start": 124.532,
+     "end": 124.612,
+     "conf": 0.997
+    },
+    {
+     "w": "worked",
+     "start": 124.692,
+     "end": 124.892,
+     "conf": 0.832
+    },
+    {
+     "w": "out",
+     "start": 124.973,
+     "end": 125.093,
+     "conf": 0.623
+    },
+    {
+     "w": "from",
+     "start": 125.113,
+     "end": 125.253,
+     "conf": 0.805
+    },
+    {
+     "w": "the",
+     "start": 125.273,
+     "end": 125.354,
+     "conf": 0.979
+    },
+    {
+     "w": "top",
+     "start": 125.534,
+     "end": 125.674,
+     "conf": 0.673
+    },
+    {
+     "w": "down",
+     "start": 125.734,
+     "end": 125.935,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 126.576,
+     "end": 126.616,
+     "conf": 0.498
+    },
+    {
+     "w": "comes",
+     "start": 126.637,
+     "end": 126.817,
+     "conf": 0.997
+    },
+    {
+     "w": "to",
+     "start": 126.837,
+     "end": 126.897,
+     "conf": 0.713
+    },
+    {
+     "w": "five",
+     "start": 126.917,
+     "end": 127.118,
+     "conf": 0.0
+    },
+    {
+     "w": "hundred",
+     "start": 127.138,
+     "end": 127.338,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 127.358,
+     "end": 127.438,
+     "conf": 0.0
+    },
+    {
+     "w": "twelve",
+     "start": 127.458,
+     "end": 127.859,
+     "conf": 0.0
+    },
+    {
+     "w": "not",
+     "start": 127.879,
+     "end": 127.96,
+     "conf": 0.659
+    },
+    {
+     "w": "sixty-four",
+     "start": 127.98,
+     "end": 128.541,
+     "conf": 0.003
+    }
+   ]
+  },
+  {
+   "section": "Left to right",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "No law of nature says an expression must be read from left to right.",
+   "idea": true,
+   "start": 128.992,
+   "end": 132.26,
+   "words": [
+    {
+     "w": "no",
+     "start": 128.992,
+     "end": 129.052,
+     "conf": 0.997
+    },
+    {
+     "w": "law",
+     "start": 129.152,
+     "end": 129.253,
+     "conf": 0.602
+    },
+    {
+     "w": "of",
+     "start": 129.293,
+     "end": 129.353,
+     "conf": 0.998
+    },
+    {
+     "w": "nature",
+     "start": 129.413,
+     "end": 129.734,
+     "conf": 0.815
+    },
+    {
+     "w": "says",
+     "start": 129.774,
+     "end": 129.994,
+     "conf": 0.982
+    },
+    {
+     "w": "an",
+     "start": 130.014,
+     "end": 130.075,
+     "conf": 0.996
+    },
+    {
+     "w": "expression",
+     "start": 130.095,
+     "end": 130.556,
+     "conf": 0.966
+    },
+    {
+     "w": "must",
+     "start": 130.576,
+     "end": 130.756,
+     "conf": 0.756
+    },
+    {
+     "w": "be",
+     "start": 130.776,
+     "end": 130.836,
+     "conf": 0.998
+    },
+    {
+     "w": "read",
+     "start": 130.957,
+     "end": 131.177,
+     "conf": 0.942
+    },
+    {
+     "w": "from",
+     "start": 131.338,
+     "end": 131.438,
+     "conf": 0.53
+    },
+    {
+     "w": "left",
+     "start": 131.538,
+     "end": 131.718,
+     "conf": 0.749
+    },
+    {
+     "w": "to",
+     "start": 131.879,
+     "end": 131.939,
+     "conf": 0.497
+    },
+    {
+     "w": "right",
+     "start": 132.019,
+     "end": 132.26,
+     "conf": 0.853
+    }
+   ]
+  },
+  {
+   "section": "Brackets beat everything",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "The second point, and I think the most important one, is the role of brackets.",
+   "idea": false,
+   "start": 133.939,
+   "end": 137.45,
+   "words": [
+    {
+     "w": "the",
+     "start": 133.939,
+     "end": 133.999,
+     "conf": 0.483
+    },
+    {
+     "w": "second",
+     "start": 134.059,
+     "end": 134.36,
+     "conf": 0.991
+    },
+    {
+     "w": "point",
+     "start": 134.421,
+     "end": 134.681,
+     "conf": 0.828
+    },
+    {
+     "w": "and",
+     "start": 135.002,
+     "end": 135.083,
+     "conf": 0.992
+    },
+    {
+     "w": "i",
+     "start": 135.163,
+     "end": 135.183,
+     "conf": 0.0
+    },
+    {
+     "w": "think",
+     "start": 135.203,
+     "end": 135.343,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 135.364,
+     "end": 135.444,
+     "conf": 0.972
+    },
+    {
+     "w": "most",
+     "start": 135.464,
+     "end": 135.664,
+     "conf": 0.994
+    },
+    {
+     "w": "important",
+     "start": 135.725,
+     "end": 136.086,
+     "conf": 0.897
+    },
+    {
+     "w": "one",
+     "start": 136.166,
+     "end": 136.307,
+     "conf": 0.998
+    },
+    {
+     "w": "is",
+     "start": 136.527,
+     "end": 136.567,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 136.587,
+     "end": 136.668,
+     "conf": 0.998
+    },
+    {
+     "w": "role",
+     "start": 136.688,
+     "end": 136.868,
+     "conf": 0.774
+    },
+    {
+     "w": "of",
+     "start": 136.888,
+     "end": 136.928,
+     "conf": 0.993
+    },
+    {
+     "w": "brackets",
+     "start": 137.009,
+     "end": 137.45,
+     "conf": 0.847
+    }
+   ]
+  },
+  {
+   "section": "Brackets beat everything",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "Brackets always win.",
+   "idea": false,
+   "start": 137.901,
+   "end": 138.819,
+   "words": [
+    {
+     "w": "brackets",
+     "start": 137.901,
+     "end": 138.289,
+     "conf": 0.489
+    },
+    {
+     "w": "always",
+     "start": 138.391,
+     "end": 138.595,
+     "conf": 0.637
+    },
+    {
+     "w": "win",
+     "start": 138.656,
+     "end": 138.819,
+     "conf": 0.522
+    }
+   ]
+  },
+  {
+   "section": "Brackets beat everything",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "Want to add before you multiply? Just put the addition in brackets, and you're done.",
+   "idea": false,
+   "start": 139.23,
+   "end": 143.201,
+   "words": [
+    {
+     "w": "want",
+     "start": 139.23,
+     "end": 139.33,
+     "conf": 0.499
+    },
+    {
+     "w": "to",
+     "start": 139.35,
+     "end": 139.411,
+     "conf": 0.991
+    },
+    {
+     "w": "add",
+     "start": 139.491,
+     "end": 139.591,
+     "conf": 0.333
+    },
+    {
+     "w": "before",
+     "start": 139.611,
+     "end": 139.832,
+     "conf": 0.774
+    },
+    {
+     "w": "you",
+     "start": 139.852,
+     "end": 139.932,
+     "conf": 0.97
+    },
+    {
+     "w": "multiply",
+     "start": 139.972,
+     "end": 140.454,
+     "conf": 0.977
+    },
+    {
+     "w": "just",
+     "start": 141.055,
+     "end": 141.196,
+     "conf": 0.681
+    },
+    {
+     "w": "put",
+     "start": 141.216,
+     "end": 141.356,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 141.376,
+     "end": 141.436,
+     "conf": 0.998
+    },
+    {
+     "w": "addition",
+     "start": 141.456,
+     "end": 141.797,
+     "conf": 0.852
+    },
+    {
+     "w": "in",
+     "start": 141.878,
+     "end": 141.918,
+     "conf": 0.499
+    },
+    {
+     "w": "brackets",
+     "start": 141.978,
+     "end": 142.419,
+     "conf": 0.865
+    },
+    {
+     "w": "and",
+     "start": 142.74,
+     "end": 142.82,
+     "conf": 0.92
+    },
+    {
+     "w": "you're",
+     "start": 142.84,
+     "end": 142.981,
+     "conf": 0.737
+    },
+    {
+     "w": "done",
+     "start": 143.001,
+     "end": 143.201,
+     "conf": 0.701
+    }
+   ]
+  },
+  {
+   "section": "Brackets beat everything",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "Which means PEMDAS is really the rule for when we get lazy, for when we leave the brackets out to keep things short.",
+   "idea": false,
+   "start": 143.611,
+   "end": 149.378,
+   "words": [
+    {
+     "w": "which",
+     "start": 143.611,
+     "end": 143.731,
+     "conf": 0.41
+    },
+    {
+     "w": "means",
+     "start": 143.791,
+     "end": 144.032,
+     "conf": 0.802
+    },
+    {
+     "w": "pemdas",
+     "start": 144.232,
+     "end": 144.572,
+     "conf": 0.652
+    },
+    {
+     "w": "is",
+     "start": 144.652,
+     "end": 144.692,
+     "conf": 0.499
+    },
+    {
+     "w": "really",
+     "start": 144.813,
+     "end": 145.033,
+     "conf": 0.719
+    },
+    {
+     "w": "the",
+     "start": 145.053,
+     "end": 145.173,
+     "conf": 0.666
+    },
+    {
+     "w": "rule",
+     "start": 145.293,
+     "end": 145.553,
+     "conf": 0.701
+    },
+    {
+     "w": "for",
+     "start": 145.614,
+     "end": 145.714,
+     "conf": 0.575
+    },
+    {
+     "w": "when",
+     "start": 145.754,
+     "end": 145.854,
+     "conf": 0.753
+    },
+    {
+     "w": "we",
+     "start": 145.914,
+     "end": 145.954,
+     "conf": 0.501
+    },
+    {
+     "w": "get",
+     "start": 146.034,
+     "end": 146.174,
+     "conf": 0.667
+    },
+    {
+     "w": "lazy",
+     "start": 146.455,
+     "end": 146.815,
+     "conf": 0.497
+    },
+    {
+     "w": "for",
+     "start": 147.175,
+     "end": 147.256,
+     "conf": 0.663
+    },
+    {
+     "w": "when",
+     "start": 147.276,
+     "end": 147.416,
+     "conf": 0.822
+    },
+    {
+     "w": "we",
+     "start": 147.456,
+     "end": 147.496,
+     "conf": 0.5
+    },
+    {
+     "w": "leave",
+     "start": 147.596,
+     "end": 147.756,
+     "conf": 0.794
+    },
+    {
+     "w": "the",
+     "start": 147.776,
+     "end": 147.836,
+     "conf": 0.996
+    },
+    {
+     "w": "brackets",
+     "start": 147.896,
+     "end": 148.257,
+     "conf": 0.854
+    },
+    {
+     "w": "out",
+     "start": 148.337,
+     "end": 148.457,
+     "conf": 0.666
+    },
+    {
+     "w": "to",
+     "start": 148.477,
+     "end": 148.537,
+     "conf": 0.999
+    },
+    {
+     "w": "keep",
+     "start": 148.597,
+     "end": 148.757,
+     "conf": 0.75
+    },
+    {
+     "w": "things",
+     "start": 148.838,
+     "end": 149.018,
+     "conf": 0.667
+    },
+    {
+     "w": "short",
+     "start": 149.118,
+     "end": 149.378,
+     "conf": 0.83
+    }
+   ]
+  },
+  {
+   "section": "Brackets beat everything",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "If you always wrote every bracket, PEMDAS would be almost useless, because the brackets would already tell you what to do first.",
+   "idea": true,
+   "start": 150.049,
+   "end": 156.684,
+   "words": [
+    {
+     "w": "if",
+     "start": 150.049,
+     "end": 150.129,
+     "conf": 1.0
+    },
+    {
+     "w": "you",
+     "start": 150.149,
+     "end": 150.209,
+     "conf": 0.992
+    },
+    {
+     "w": "always",
+     "start": 150.249,
+     "end": 150.45,
+     "conf": 0.997
+    },
+    {
+     "w": "wrote",
+     "start": 150.47,
+     "end": 150.65,
+     "conf": 0.882
+    },
+    {
+     "w": "every",
+     "start": 150.71,
+     "end": 150.85,
+     "conf": 0.767
+    },
+    {
+     "w": "bracket",
+     "start": 150.931,
+     "end": 151.332,
+     "conf": 0.965
+    },
+    {
+     "w": "pemdas",
+     "start": 151.692,
+     "end": 152.113,
+     "conf": 0.647
+    },
+    {
+     "w": "would",
+     "start": 152.174,
+     "end": 152.294,
+     "conf": 0.794
+    },
+    {
+     "w": "be",
+     "start": 152.314,
+     "end": 152.354,
+     "conf": 0.999
+    },
+    {
+     "w": "almost",
+     "start": 152.514,
+     "end": 152.835,
+     "conf": 0.833
+    },
+    {
+     "w": "useless",
+     "start": 152.975,
+     "end": 153.416,
+     "conf": 0.905
+    },
+    {
+     "w": "because",
+     "start": 153.877,
+     "end": 154.138,
+     "conf": 0.846
+    },
+    {
+     "w": "the",
+     "start": 154.158,
+     "end": 154.258,
+     "conf": 0.749
+    },
+    {
+     "w": "brackets",
+     "start": 154.278,
+     "end": 154.739,
+     "conf": 0.867
+    },
+    {
+     "w": "would",
+     "start": 154.759,
+     "end": 154.9,
+     "conf": 0.942
+    },
+    {
+     "w": "already",
+     "start": 155.0,
+     "end": 155.361,
+     "conf": 0.891
+    },
+    {
+     "w": "tell",
+     "start": 155.501,
+     "end": 155.682,
+     "conf": 0.75
+    },
+    {
+     "w": "you",
+     "start": 155.702,
+     "end": 155.822,
+     "conf": 0.747
+    },
+    {
+     "w": "what",
+     "start": 155.862,
+     "end": 155.982,
+     "conf": 0.998
+    },
+    {
+     "w": "to",
+     "start": 156.002,
+     "end": 156.082,
+     "conf": 0.711
+    },
+    {
+     "w": "do",
+     "start": 156.143,
+     "end": 156.183,
+     "conf": 0.5
+    },
+    {
+     "w": "first",
+     "start": 156.343,
+     "end": 156.684,
+     "conf": 0.745
+    }
+   ]
+  },
+  {
+   "section": "Brackets beat everything",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "In other words, PEMDAS is a rule about how we write and read. It is not a property of the numbers themselves.",
+   "idea": true,
+   "start": 157.694,
+   "end": 163.189,
+   "words": [
+    {
+     "w": "in",
+     "start": 157.694,
+     "end": 157.734,
+     "conf": 0.99
+    },
+    {
+     "w": "other",
+     "start": 157.774,
+     "end": 157.915,
+     "conf": 0.99
+    },
+    {
+     "w": "words",
+     "start": 157.935,
+     "end": 158.195,
+     "conf": 0.903
+    },
+    {
+     "w": "pemdas",
+     "start": 158.536,
+     "end": 158.958,
+     "conf": 0.675
+    },
+    {
+     "w": "is",
+     "start": 159.038,
+     "end": 159.098,
+     "conf": 0.5
+    },
+    {
+     "w": "a",
+     "start": 159.118,
+     "end": 159.138,
+     "conf": 0.998
+    },
+    {
+     "w": "rule",
+     "start": 159.218,
+     "end": 159.459,
+     "conf": 0.972
+    },
+    {
+     "w": "about",
+     "start": 159.479,
+     "end": 159.7,
+     "conf": 0.998
+    },
+    {
+     "w": "how",
+     "start": 159.72,
+     "end": 159.82,
+     "conf": 0.999
+    },
+    {
+     "w": "we",
+     "start": 159.84,
+     "end": 159.9,
+     "conf": 0.661
+    },
+    {
+     "w": "write",
+     "start": 159.92,
+     "end": 160.201,
+     "conf": 0.81
+    },
+    {
+     "w": "and",
+     "start": 160.221,
+     "end": 160.301,
+     "conf": 0.892
+    },
+    {
+     "w": "read",
+     "start": 160.321,
+     "end": 160.582,
+     "conf": 0.798
+    },
+    {
+     "w": "it",
+     "start": 161.063,
+     "end": 161.103,
+     "conf": 0.5
+    },
+    {
+     "w": "is",
+     "start": 161.164,
+     "end": 161.224,
+     "conf": 0.5
+    },
+    {
+     "w": "not",
+     "start": 161.344,
+     "end": 161.485,
+     "conf": 0.807
+    },
+    {
+     "w": "a",
+     "start": 161.605,
+     "end": 161.625,
+     "conf": 0.001
+    },
+    {
+     "w": "property",
+     "start": 161.705,
+     "end": 162.106,
+     "conf": 0.87
+    },
+    {
+     "w": "of",
+     "start": 162.207,
+     "end": 162.247,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 162.267,
+     "end": 162.347,
+     "conf": 0.962
+    },
+    {
+     "w": "numbers",
+     "start": 162.387,
+     "end": 162.668,
+     "conf": 0.977
+    },
+    {
+     "w": "themselves",
+     "start": 162.688,
+     "end": 163.189,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "Many names, one agreement",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "The third clue is the name itself.",
+   "idea": false,
+   "start": 165.131,
+   "end": 166.436,
+   "words": [
+    {
+     "w": "the",
+     "start": 165.131,
+     "end": 165.191,
+     "conf": 0.999
+    },
+    {
+     "w": "third",
+     "start": 165.251,
+     "end": 165.432,
+     "conf": 0.832
+    },
+    {
+     "w": "clue",
+     "start": 165.492,
+     "end": 165.673,
+     "conf": 0.354
+    },
+    {
+     "w": "is",
+     "start": 165.753,
+     "end": 165.813,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 165.834,
+     "end": 165.894,
+     "conf": 0.999
+    },
+    {
+     "w": "name",
+     "start": 165.914,
+     "end": 166.074,
+     "conf": 0.993
+    },
+    {
+     "w": "itself",
+     "start": 166.094,
+     "end": 166.436,
+     "conf": 0.998
+    }
+   ]
+  },
+  {
+   "section": "Many names, one agreement",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "PEMDAS, BODMAS, BEDMAS, a different one in every country.",
+   "idea": false,
+   "start": 166.906,
+   "end": 169.777,
+   "words": [
+    {
+     "w": "pemdas",
+     "start": 166.906,
+     "end": 167.308,
+     "conf": 0.779
+    },
+    {
+     "w": "bodmas",
+     "start": 167.448,
+     "end": 167.83,
+     "conf": 0.694
+    },
+    {
+     "w": "bedmas",
+     "start": 167.99,
+     "end": 168.352,
+     "conf": 0.658
+    },
+    {
+     "w": "a",
+     "start": 168.372,
+     "end": 168.392,
+     "conf": 0.0
+    },
+    {
+     "w": "different",
+     "start": 168.532,
+     "end": 168.793,
+     "conf": 0.829
+    },
+    {
+     "w": "one",
+     "start": 168.894,
+     "end": 169.014,
+     "conf": 0.662
+    },
+    {
+     "w": "in",
+     "start": 169.135,
+     "end": 169.175,
+     "conf": 0.498
+    },
+    {
+     "w": "every",
+     "start": 169.235,
+     "end": 169.416,
+     "conf": 0.998
+    },
+    {
+     "w": "country",
+     "start": 169.476,
+     "end": 169.777,
+     "conf": 0.872
+    }
+   ]
+  },
+  {
+   "section": "Many names, one agreement",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "The very fact that one rule goes by so many names tells you it is the product of an agreement.",
+   "idea": false,
+   "start": 170.227,
+   "end": 174.746,
+   "words": [
+    {
+     "w": "the",
+     "start": 170.227,
+     "end": 170.287,
+     "conf": 0.003
+    },
+    {
+     "w": "very",
+     "start": 170.307,
+     "end": 170.448,
+     "conf": 0.75
+    },
+    {
+     "w": "fact",
+     "start": 170.568,
+     "end": 170.789,
+     "conf": 0.508
+    },
+    {
+     "w": "that",
+     "start": 170.809,
+     "end": 170.93,
+     "conf": 0.871
+    },
+    {
+     "w": "one",
+     "start": 171.05,
+     "end": 171.171,
+     "conf": 0.712
+    },
+    {
+     "w": "rule",
+     "start": 171.231,
+     "end": 171.392,
+     "conf": 0.749
+    },
+    {
+     "w": "goes",
+     "start": 171.412,
+     "end": 171.593,
+     "conf": 0.972
+    },
+    {
+     "w": "by",
+     "start": 171.613,
+     "end": 171.733,
+     "conf": 0.999
+    },
+    {
+     "w": "so",
+     "start": 171.854,
+     "end": 171.914,
+     "conf": 0.5
+    },
+    {
+     "w": "many",
+     "start": 172.014,
+     "end": 172.155,
+     "conf": 0.75
+    },
+    {
+     "w": "names",
+     "start": 172.255,
+     "end": 172.617,
+     "conf": 0.825
+    },
+    {
+     "w": "tells",
+     "start": 172.717,
+     "end": 172.938,
+     "conf": 0.799
+    },
+    {
+     "w": "you",
+     "start": 172.958,
+     "end": 173.079,
+     "conf": 0.769
+    },
+    {
+     "w": "it",
+     "start": 173.199,
+     "end": 173.259,
+     "conf": 0.995
+    },
+    {
+     "w": "is",
+     "start": 173.34,
+     "end": 173.4,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 173.42,
+     "end": 173.521,
+     "conf": 0.765
+    },
+    {
+     "w": "product",
+     "start": 173.601,
+     "end": 174.002,
+     "conf": 0.84
+    },
+    {
+     "w": "of",
+     "start": 174.103,
+     "end": 174.163,
+     "conf": 0.5
+    },
+    {
+     "w": "an",
+     "start": 174.183,
+     "end": 174.243,
+     "conf": 0.666
+    },
+    {
+     "w": "agreement",
+     "start": 174.264,
+     "end": 174.746,
+     "conf": 0.985
+    }
+   ]
+  },
+  {
+   "section": "Many names, one agreement",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "It's like choosing which side of the road to drive on.",
+   "idea": false,
+   "start": 175.66,
+   "end": 177.855,
+   "words": [
+    {
+     "w": "it's",
+     "start": 175.66,
+     "end": 175.76,
+     "conf": 0.754
+    },
+    {
+     "w": "like",
+     "start": 175.801,
+     "end": 175.982,
+     "conf": 0.995
+    },
+    {
+     "w": "choosing",
+     "start": 176.083,
+     "end": 176.405,
+     "conf": 0.682
+    },
+    {
+     "w": "which",
+     "start": 176.445,
+     "end": 176.586,
+     "conf": 0.711
+    },
+    {
+     "w": "side",
+     "start": 176.647,
+     "end": 176.788,
+     "conf": 0.701
+    },
+    {
+     "w": "of",
+     "start": 176.808,
+     "end": 176.848,
+     "conf": 0.986
+    },
+    {
+     "w": "the",
+     "start": 176.868,
+     "end": 176.929,
+     "conf": 0.994
+    },
+    {
+     "w": "road",
+     "start": 176.989,
+     "end": 177.191,
+     "conf": 0.761
+    },
+    {
+     "w": "to",
+     "start": 177.211,
+     "end": 177.291,
+     "conf": 0.664
+    },
+    {
+     "w": "drive",
+     "start": 177.372,
+     "end": 177.694,
+     "conf": 0.797
+    },
+    {
+     "w": "on",
+     "start": 177.815,
+     "end": 177.855,
+     "conf": 0.496
+    }
+   ]
+  },
+  {
+   "section": "Many names, one agreement",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "Everyone needs a shared rule, but the particular rule could have been different, and the world would still work.",
+   "idea": true,
+   "start": 178.265,
+   "end": 183.817,
+   "words": [
+    {
+     "w": "everyone",
+     "start": 178.265,
+     "end": 178.566,
+     "conf": 0.876
+    },
+    {
+     "w": "needs",
+     "start": 178.586,
+     "end": 178.766,
+     "conf": 0.879
+    },
+    {
+     "w": "a",
+     "start": 178.806,
+     "end": 178.826,
+     "conf": 0.002
+    },
+    {
+     "w": "shared",
+     "start": 178.886,
+     "end": 179.187,
+     "conf": 0.879
+    },
+    {
+     "w": "rule",
+     "start": 179.347,
+     "end": 179.668,
+     "conf": 0.75
+    },
+    {
+     "w": "but",
+     "start": 180.209,
+     "end": 180.289,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 180.309,
+     "end": 180.39,
+     "conf": 0.996
+    },
+    {
+     "w": "particular",
+     "start": 180.43,
+     "end": 180.971,
+     "conf": 1.0
+    },
+    {
+     "w": "rule",
+     "start": 181.051,
+     "end": 181.231,
+     "conf": 0.745
+    },
+    {
+     "w": "could",
+     "start": 181.311,
+     "end": 181.472,
+     "conf": 0.828
+    },
+    {
+     "w": "have",
+     "start": 181.492,
+     "end": 181.592,
+     "conf": 0.994
+    },
+    {
+     "w": "been",
+     "start": 181.612,
+     "end": 181.772,
+     "conf": 0.999
+    },
+    {
+     "w": "different",
+     "start": 181.933,
+     "end": 182.414,
+     "conf": 0.888
+    },
+    {
+     "w": "and",
+     "start": 182.714,
+     "end": 182.775,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 182.795,
+     "end": 182.875,
+     "conf": 0.954
+    },
+    {
+     "w": "world",
+     "start": 182.895,
+     "end": 183.155,
+     "conf": 0.79
+    },
+    {
+     "w": "would",
+     "start": 183.175,
+     "end": 183.296,
+     "conf": 0.906
+    },
+    {
+     "w": "still",
+     "start": 183.316,
+     "end": 183.516,
+     "conf": 0.833
+    },
+    {
+     "w": "work",
+     "start": 183.576,
+     "end": 183.817,
+     "conf": 0.751
+    }
+   ]
+  },
+  {
+   "section": "When it was agreed",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "As for when it happened, the history is less tidy than you might expect.",
+   "idea": false,
+   "start": 185.879,
+   "end": 189.012,
+   "words": [
+    {
+     "w": "as",
+     "start": 185.879,
+     "end": 185.979,
+     "conf": 1.0
+    },
+    {
+     "w": "for",
+     "start": 185.999,
+     "end": 186.1,
+     "conf": 0.999
+    },
+    {
+     "w": "when",
+     "start": 186.12,
+     "end": 186.22,
+     "conf": 0.996
+    },
+    {
+     "w": "it",
+     "start": 186.26,
+     "end": 186.3,
+     "conf": 0.5
+    },
+    {
+     "w": "happened",
+     "start": 186.341,
+     "end": 186.722,
+     "conf": 0.947
+    },
+    {
+     "w": "the",
+     "start": 187.024,
+     "end": 187.084,
+     "conf": 0.352
+    },
+    {
+     "w": "history",
+     "start": 187.104,
+     "end": 187.445,
+     "conf": 0.972
+    },
+    {
+     "w": "is",
+     "start": 187.465,
+     "end": 187.546,
+     "conf": 0.601
+    },
+    {
+     "w": "less",
+     "start": 187.626,
+     "end": 187.747,
+     "conf": 0.749
+    },
+    {
+     "w": "tidy",
+     "start": 187.827,
+     "end": 188.088,
+     "conf": 0.697
+    },
+    {
+     "w": "than",
+     "start": 188.108,
+     "end": 188.249,
+     "conf": 0.667
+    },
+    {
+     "w": "you",
+     "start": 188.269,
+     "end": 188.349,
+     "conf": 0.75
+    },
+    {
+     "w": "might",
+     "start": 188.369,
+     "end": 188.53,
+     "conf": 0.942
+    },
+    {
+     "w": "expect",
+     "start": 188.55,
+     "end": 189.012,
+     "conf": 0.995
+    }
+   ]
+  },
+  {
+   "section": "When it was agreed",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "Putting multiplication before addition grew up with algebra itself, in the sixteen hundreds, as mathematicians started writing equations in symbols.",
+   "idea": false,
+   "start": 189.664,
+   "end": 197.49,
+   "words": [
+    {
+     "w": "putting",
+     "start": 189.664,
+     "end": 189.864,
+     "conf": 0.82
+    },
+    {
+     "w": "multiplication",
+     "start": 189.884,
+     "end": 190.565,
+     "conf": 0.933
+    },
+    {
+     "w": "before",
+     "start": 190.685,
+     "end": 190.965,
+     "conf": 0.831
+    },
+    {
+     "w": "addition",
+     "start": 190.985,
+     "end": 191.385,
+     "conf": 0.881
+    },
+    {
+     "w": "grew",
+     "start": 191.465,
+     "end": 191.585,
+     "conf": 0.75
+    },
+    {
+     "w": "up",
+     "start": 191.626,
+     "end": 191.686,
+     "conf": 1.0
+    },
+    {
+     "w": "with",
+     "start": 191.706,
+     "end": 191.866,
+     "conf": 0.754
+    },
+    {
+     "w": "algebra",
+     "start": 191.946,
+     "end": 192.346,
+     "conf": 0.713
+    },
+    {
+     "w": "itself",
+     "start": 192.366,
+     "end": 192.746,
+     "conf": 0.994
+    },
+    {
+     "w": "in",
+     "start": 192.886,
+     "end": 192.927,
+     "conf": 0.989
+    },
+    {
+     "w": "the",
+     "start": 192.947,
+     "end": 193.007,
+     "conf": 0.935
+    },
+    {
+     "w": "sixteen",
+     "start": 193.027,
+     "end": 193.427,
+     "conf": 0.101
+    },
+    {
+     "w": "hundreds",
+     "start": 193.447,
+     "end": 193.867,
+     "conf": 0.262
+    },
+    {
+     "w": "as",
+     "start": 194.368,
+     "end": 194.588,
+     "conf": 0.498
+    },
+    {
+     "w": "mathematicians",
+     "start": 195.048,
+     "end": 195.709,
+     "conf": 0.916
+    },
+    {
+     "w": "started",
+     "start": 195.769,
+     "end": 196.109,
+     "conf": 0.949
+    },
+    {
+     "w": "writing",
+     "start": 196.129,
+     "end": 196.469,
+     "conf": 0.95
+    },
+    {
+     "w": "equations",
+     "start": 196.489,
+     "end": 196.95,
+     "conf": 0.869
+    },
+    {
+     "w": "in",
+     "start": 197.01,
+     "end": 197.05,
+     "conf": 0.495
+    },
+    {
+     "w": "symbols",
+     "start": 197.13,
+     "end": 197.49,
+     "conf": 0.865
+    }
+   ]
+  },
+  {
+   "section": "When it was agreed",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "But the full rule, spelled out in schoolbooks, only settled in around the late eighteen hundreds and early nineteen hundreds, as algebra and printed textbooks spread.",
+   "idea": false,
+   "start": 197.94,
+   "end": 206.76,
+   "words": [
+    {
+     "w": "but",
+     "start": 197.94,
+     "end": 198.02,
+     "conf": 0.766
+    },
+    {
+     "w": "the",
+     "start": 198.04,
+     "end": 198.1,
+     "conf": 0.997
+    },
+    {
+     "w": "full",
+     "start": 198.161,
+     "end": 198.341,
+     "conf": 0.999
+    },
+    {
+     "w": "rule",
+     "start": 198.401,
+     "end": 198.642,
+     "conf": 0.993
+    },
+    {
+     "w": "spelled",
+     "start": 199.002,
+     "end": 199.263,
+     "conf": 0.993
+    },
+    {
+     "w": "out",
+     "start": 199.323,
+     "end": 199.423,
+     "conf": 0.666
+    },
+    {
+     "w": "in",
+     "start": 199.484,
+     "end": 199.544,
+     "conf": 0.499
+    },
+    {
+     "w": "schoolbooks",
+     "start": 199.624,
+     "end": 200.105,
+     "conf": 0.906
+    },
+    {
+     "w": "only",
+     "start": 200.366,
+     "end": 200.526,
+     "conf": 0.75
+    },
+    {
+     "w": "settled",
+     "start": 200.626,
+     "end": 200.907,
+     "conf": 0.856
+    },
+    {
+     "w": "in",
+     "start": 200.987,
+     "end": 201.067,
+     "conf": 0.499
+    },
+    {
+     "w": "around",
+     "start": 201.208,
+     "end": 201.448,
+     "conf": 0.831
+    },
+    {
+     "w": "the",
+     "start": 201.468,
+     "end": 201.548,
+     "conf": 0.978
+    },
+    {
+     "w": "late",
+     "start": 201.608,
+     "end": 201.789,
+     "conf": 0.648
+    },
+    {
+     "w": "eighteen",
+     "start": 201.809,
+     "end": 202.23,
+     "conf": 0.039
+    },
+    {
+     "w": "hundreds",
+     "start": 202.25,
+     "end": 202.671,
+     "conf": 0.066
+    },
+    {
+     "w": "and",
+     "start": 202.691,
+     "end": 202.791,
+     "conf": 0.977
+    },
+    {
+     "w": "early",
+     "start": 202.871,
+     "end": 203.092,
+     "conf": 0.991
+    },
+    {
+     "w": "nineteen",
+     "start": 203.112,
+     "end": 203.653,
+     "conf": 0.067
+    },
+    {
+     "w": "hundreds",
+     "start": 203.673,
+     "end": 204.154,
+     "conf": 0.128
+    },
+    {
+     "w": "as",
+     "start": 204.635,
+     "end": 204.756,
+     "conf": 0.778
+    },
+    {
+     "w": "algebra",
+     "start": 204.916,
+     "end": 205.317,
+     "conf": 0.754
+    },
+    {
+     "w": "and",
+     "start": 205.437,
+     "end": 205.497,
+     "conf": 0.663
+    },
+    {
+     "w": "printed",
+     "start": 205.557,
+     "end": 205.858,
+     "conf": 0.857
+    },
+    {
+     "w": "textbooks",
+     "start": 205.938,
+     "end": 206.419,
+     "conf": 0.84
+    },
+    {
+     "w": "spread",
+     "start": 206.5,
+     "end": 206.76,
+     "conf": 0.796
+    }
+   ]
+  },
+  {
+   "section": "When it was agreed",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "And it did not settle quietly. In nineteen seventeen, an American maths journal was already debating whether multiplication should go before division.",
+   "idea": false,
+   "start": 207.15,
+   "end": 214.824,
+   "words": [
+    {
+     "w": "and",
+     "start": 207.15,
+     "end": 207.23,
+     "conf": 0.988
+    },
+    {
+     "w": "it",
+     "start": 207.25,
+     "end": 207.33,
+     "conf": 0.997
+    },
+    {
+     "w": "did",
+     "start": 207.37,
+     "end": 207.511,
+     "conf": 0.999
+    },
+    {
+     "w": "not",
+     "start": 207.591,
+     "end": 207.711,
+     "conf": 0.999
+    },
+    {
+     "w": "settle",
+     "start": 207.831,
+     "end": 208.072,
+     "conf": 0.777
+    },
+    {
+     "w": "quietly",
+     "start": 208.092,
+     "end": 208.412,
+     "conf": 0.855
+    },
+    {
+     "w": "in",
+     "start": 208.432,
+     "end": 208.513,
+     "conf": 0.0
+    },
+    {
+     "w": "nineteen",
+     "start": 208.533,
+     "end": 209.895,
+     "conf": 0.25
+    },
+    {
+     "w": "seventeen",
+     "start": 209.915,
+     "end": 210.536,
+     "conf": 0.0
+    },
+    {
+     "w": "an",
+     "start": 210.556,
+     "end": 210.597,
+     "conf": 0.708
+    },
+    {
+     "w": "american",
+     "start": 210.617,
+     "end": 210.937,
+     "conf": 0.963
+    },
+    {
+     "w": "maths",
+     "start": 210.977,
+     "end": 211.218,
+     "conf": 0.769
+    },
+    {
+     "w": "journal",
+     "start": 211.278,
+     "end": 211.518,
+     "conf": 0.873
+    },
+    {
+     "w": "was",
+     "start": 211.578,
+     "end": 211.679,
+     "conf": 0.666
+    },
+    {
+     "w": "already",
+     "start": 211.819,
+     "end": 212.139,
+     "conf": 0.888
+    },
+    {
+     "w": "debating",
+     "start": 212.22,
+     "end": 212.64,
+     "conf": 0.872
+    },
+    {
+     "w": "whether",
+     "start": 212.7,
+     "end": 212.881,
+     "conf": 0.8
+    },
+    {
+     "w": "multiplication",
+     "start": 212.941,
+     "end": 213.642,
+     "conf": 0.924
+    },
+    {
+     "w": "should",
+     "start": 213.702,
+     "end": 213.843,
+     "conf": 0.988
+    },
+    {
+     "w": "go",
+     "start": 213.863,
+     "end": 213.943,
+     "conf": 0.667
+    },
+    {
+     "w": "before",
+     "start": 214.063,
+     "end": 214.364,
+     "conf": 0.823
+    },
+    {
+     "w": "division",
+     "start": 214.484,
+     "end": 214.824,
+     "conf": 0.867
+    }
+   ]
+  },
+  {
+   "section": "When it was agreed",
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "text": "The catchy names, like PEMDAS, came later still. The rule grew up with our need to write mathematics briefly, and all in the same way.",
+   "idea": true,
+   "start": 215.214,
+   "end": 221.931,
+   "words": [
+    {
+     "w": "the",
+     "start": 215.214,
+     "end": 215.274,
+     "conf": 0.0
+    },
+    {
+     "w": "catchy",
+     "start": 215.294,
+     "end": 215.555,
+     "conf": 0.648
+    },
+    {
+     "w": "names",
+     "start": 215.635,
+     "end": 215.936,
+     "conf": 0.997
+    },
+    {
+     "w": "like",
+     "start": 215.956,
+     "end": 216.136,
+     "conf": 0.798
+    },
+    {
+     "w": "pemdas",
+     "start": 216.156,
+     "end": 216.618,
+     "conf": 0.851
+    },
+    {
+     "w": "came",
+     "start": 216.798,
+     "end": 216.939,
+     "conf": 0.728
+    },
+    {
+     "w": "later",
+     "start": 216.959,
+     "end": 217.239,
+     "conf": 0.843
+    },
+    {
+     "w": "still",
+     "start": 217.32,
+     "end": 217.52,
+     "conf": 0.796
+    },
+    {
+     "w": "the",
+     "start": 218.442,
+     "end": 218.503,
+     "conf": 0.664
+    },
+    {
+     "w": "rule",
+     "start": 218.563,
+     "end": 218.743,
+     "conf": 0.779
+    },
+    {
+     "w": "grew",
+     "start": 218.763,
+     "end": 218.904,
+     "conf": 0.936
+    },
+    {
+     "w": "up",
+     "start": 218.944,
+     "end": 219.024,
+     "conf": 0.921
+    },
+    {
+     "w": "with",
+     "start": 219.084,
+     "end": 219.184,
+     "conf": 0.789
+    },
+    {
+     "w": "our",
+     "start": 219.224,
+     "end": 219.305,
+     "conf": 0.404
+    },
+    {
+     "w": "need",
+     "start": 219.325,
+     "end": 219.465,
+     "conf": 0.95
+    },
+    {
+     "w": "to",
+     "start": 219.485,
+     "end": 219.545,
+     "conf": 0.665
+    },
+    {
+     "w": "write",
+     "start": 219.565,
+     "end": 219.746,
+     "conf": 0.721
+    },
+    {
+     "w": "mathematics",
+     "start": 219.766,
+     "end": 220.187,
+     "conf": 0.922
+    },
+    {
+     "w": "briefly",
+     "start": 220.227,
+     "end": 220.588,
+     "conf": 0.981
+    },
+    {
+     "w": "and",
+     "start": 220.909,
+     "end": 221.089,
+     "conf": 0.664
+    },
+    {
+     "w": "all",
+     "start": 221.23,
+     "end": 221.33,
+     "conf": 0.663
+    },
+    {
+     "w": "in",
+     "start": 221.35,
+     "end": 221.41,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 221.43,
+     "end": 221.51,
+     "conf": 0.977
+    },
+    {
+     "w": "same",
+     "start": 221.571,
+     "end": 221.731,
+     "conf": 0.642
+    },
+    {
+     "w": "way",
+     "start": 221.751,
+     "end": 221.931,
+     "conf": 0.75
+    }
+   ]
+  },
+  {
+   "section": "When it was agreed",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "If we stopped at \"it's just a convention\", we would be a little unfair to PEMDAS.",
+   "idea": false,
+   "start": 224.412,
+   "end": 228.175,
+   "words": [
+    {
+     "w": "if",
+     "start": 224.412,
+     "end": 224.513,
+     "conf": 0.673
+    },
+    {
+     "w": "we",
+     "start": 224.573,
+     "end": 224.613,
+     "conf": 0.499
+    },
+    {
+     "w": "stopped",
+     "start": 224.694,
+     "end": 224.895,
+     "conf": 0.606
+    },
+    {
+     "w": "at",
+     "start": 224.935,
+     "end": 225.056,
+     "conf": 0.48
+    },
+    {
+     "w": "it's",
+     "start": 225.136,
+     "end": 225.237,
+     "conf": 0.486
+    },
+    {
+     "w": "just",
+     "start": 225.318,
+     "end": 225.499,
+     "conf": 0.708
+    },
+    {
+     "w": "a",
+     "start": 225.559,
+     "end": 225.579,
+     "conf": 0.025
+    },
+    {
+     "w": "convention",
+     "start": 225.64,
+     "end": 226.203,
+     "conf": 0.875
+    },
+    {
+     "w": "we",
+     "start": 226.444,
+     "end": 226.485,
+     "conf": 0.499
+    },
+    {
+     "w": "would",
+     "start": 226.545,
+     "end": 226.666,
+     "conf": 0.926
+    },
+    {
+     "w": "be",
+     "start": 226.686,
+     "end": 226.726,
+     "conf": 0.487
+    },
+    {
+     "w": "a",
+     "start": 226.786,
+     "end": 226.807,
+     "conf": 0.001
+    },
+    {
+     "w": "little",
+     "start": 226.827,
+     "end": 227.028,
+     "conf": 0.933
+    },
+    {
+     "w": "unfair",
+     "start": 227.088,
+     "end": 227.511,
+     "conf": 0.818
+    },
+    {
+     "w": "to",
+     "start": 227.591,
+     "end": 227.631,
+     "conf": 0.499
+    },
+    {
+     "w": "pemdas",
+     "start": 227.712,
+     "end": 228.175,
+     "conf": 0.736
+    }
+   ]
+  },
+  {
+   "section": "When it was agreed",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "Because out of all the rules we could have picked, the one humanity settled on is a very clever one.",
+   "idea": true,
+   "start": 228.806,
+   "end": 233.749,
+   "words": [
+    {
+     "w": "because",
+     "start": 228.806,
+     "end": 229.067,
+     "conf": 0.998
+    },
+    {
+     "w": "out",
+     "start": 229.188,
+     "end": 229.308,
+     "conf": 0.997
+    },
+    {
+     "w": "of",
+     "start": 229.328,
+     "end": 229.389,
+     "conf": 0.999
+    },
+    {
+     "w": "all",
+     "start": 229.529,
+     "end": 229.63,
+     "conf": 0.667
+    },
+    {
+     "w": "the",
+     "start": 229.65,
+     "end": 229.73,
+     "conf": 0.999
+    },
+    {
+     "w": "rules",
+     "start": 229.811,
+     "end": 230.052,
+     "conf": 0.828
+    },
+    {
+     "w": "we",
+     "start": 230.092,
+     "end": 230.132,
+     "conf": 0.501
+    },
+    {
+     "w": "could",
+     "start": 230.213,
+     "end": 230.333,
+     "conf": 0.82
+    },
+    {
+     "w": "have",
+     "start": 230.353,
+     "end": 230.474,
+     "conf": 0.979
+    },
+    {
+     "w": "picked",
+     "start": 230.514,
+     "end": 230.755,
+     "conf": 0.853
+    },
+    {
+     "w": "the",
+     "start": 231.077,
+     "end": 231.137,
+     "conf": 0.661
+    },
+    {
+     "w": "one",
+     "start": 231.318,
+     "end": 231.398,
+     "conf": 0.665
+    },
+    {
+     "w": "humanity",
+     "start": 231.478,
+     "end": 231.9,
+     "conf": 0.875
+    },
+    {
+     "w": "settled",
+     "start": 232.041,
+     "end": 232.302,
+     "conf": 0.836
+    },
+    {
+     "w": "on",
+     "start": 232.423,
+     "end": 232.463,
+     "conf": 0.5
+    },
+    {
+     "w": "is",
+     "start": 232.785,
+     "end": 232.845,
+     "conf": 0.503
+    },
+    {
+     "w": "a",
+     "start": 232.905,
+     "end": 232.925,
+     "conf": 0.0
+    },
+    {
+     "w": "very",
+     "start": 232.945,
+     "end": 233.166,
+     "conf": 1.0
+    },
+    {
+     "w": "clever",
+     "start": 233.287,
+     "end": 233.588,
+     "conf": 0.833
+    },
+    {
+     "w": "one",
+     "start": 233.689,
+     "end": 233.749,
+     "conf": 0.011
+    }
+   ]
+  },
+  {
+   "section": "Why multiply before you add",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "Think about why multiplication outranks addition.",
+   "idea": false,
+   "start": 235.389,
+   "end": 237.868,
+   "words": [
+    {
+     "w": "think",
+     "start": 235.389,
+     "end": 235.53,
+     "conf": 0.488
+    },
+    {
+     "w": "about",
+     "start": 235.55,
+     "end": 235.792,
+     "conf": 0.825
+    },
+    {
+     "w": "why",
+     "start": 235.812,
+     "end": 235.954,
+     "conf": 0.979
+    },
+    {
+     "w": "multiplication",
+     "start": 236.034,
+     "end": 236.82,
+     "conf": 0.967
+    },
+    {
+     "w": "outranks",
+     "start": 236.941,
+     "end": 237.405,
+     "conf": 0.827
+    },
+    {
+     "w": "addition",
+     "start": 237.526,
+     "end": 237.868,
+     "conf": 0.776
+    }
+   ]
+  },
+  {
+   "section": "Why multiply before you add",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "The reason is polynomials, the things you write all the time in algebra. Take three x squared, plus two x, plus one.",
+   "idea": false,
+   "start": 238.279,
+   "end": 244.022,
+   "words": [
+    {
+     "w": "the",
+     "start": 238.279,
+     "end": 238.339,
+     "conf": 0.0
+    },
+    {
+     "w": "reason",
+     "start": 238.359,
+     "end": 238.6,
+     "conf": 0.805
+    },
+    {
+     "w": "is",
+     "start": 238.641,
+     "end": 238.701,
+     "conf": 0.499
+    },
+    {
+     "w": "polynomials",
+     "start": 238.761,
+     "end": 239.464,
+     "conf": 0.693
+    },
+    {
+     "w": "the",
+     "start": 239.484,
+     "end": 239.705,
+     "conf": 0.663
+    },
+    {
+     "w": "things",
+     "start": 239.725,
+     "end": 239.926,
+     "conf": 0.86
+    },
+    {
+     "w": "you",
+     "start": 239.946,
+     "end": 240.006,
+     "conf": 0.981
+    },
+    {
+     "w": "write",
+     "start": 240.026,
+     "end": 240.227,
+     "conf": 0.93
+    },
+    {
+     "w": "all",
+     "start": 240.247,
+     "end": 240.327,
+     "conf": 0.333
+    },
+    {
+     "w": "the",
+     "start": 240.347,
+     "end": 240.408,
+     "conf": 0.998
+    },
+    {
+     "w": "time",
+     "start": 240.428,
+     "end": 240.588,
+     "conf": 0.801
+    },
+    {
+     "w": "in",
+     "start": 240.609,
+     "end": 240.669,
+     "conf": 0.996
+    },
+    {
+     "w": "algebra",
+     "start": 240.729,
+     "end": 241.01,
+     "conf": 0.77
+    },
+    {
+     "w": "take",
+     "start": 241.613,
+     "end": 241.793,
+     "conf": 0.743
+    },
+    {
+     "w": "three",
+     "start": 241.813,
+     "end": 242.135,
+     "conf": 0.085
+    },
+    {
+     "w": "x",
+     "start": 242.215,
+     "end": 242.235,
+     "conf": 0.001
+    },
+    {
+     "w": "squared",
+     "start": 242.255,
+     "end": 242.597,
+     "conf": 0.191
+    },
+    {
+     "w": "plus",
+     "start": 242.617,
+     "end": 243.119,
+     "conf": 0.016
+    },
+    {
+     "w": "two",
+     "start": 243.139,
+     "end": 243.34,
+     "conf": 0.0
+    },
+    {
+     "w": "x",
+     "start": 243.36,
+     "end": 243.38,
+     "conf": 0.0
+    },
+    {
+     "w": "plus",
+     "start": 243.4,
+     "end": 243.822,
+     "conf": 0.003
+    },
+    {
+     "w": "one",
+     "start": 243.842,
+     "end": 244.022,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "Why multiply before you add",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "With multiplication before addition, you can write that with no brackets at all. It is clean, and easy to read.",
+   "idea": false,
+   "start": 244.412,
+   "end": 249.908,
+   "words": [
+    {
+     "w": "with",
+     "start": 244.412,
+     "end": 244.492,
+     "conf": 0.483
+    },
+    {
+     "w": "multiplication",
+     "start": 244.512,
+     "end": 245.134,
+     "conf": 1.0
+    },
+    {
+     "w": "before",
+     "start": 245.154,
+     "end": 245.395,
+     "conf": 0.817
+    },
+    {
+     "w": "addition",
+     "start": 245.415,
+     "end": 245.756,
+     "conf": 0.891
+    },
+    {
+     "w": "you",
+     "start": 245.776,
+     "end": 246.077,
+     "conf": 0.665
+    },
+    {
+     "w": "can",
+     "start": 246.097,
+     "end": 246.197,
+     "conf": 0.999
+    },
+    {
+     "w": "write",
+     "start": 246.217,
+     "end": 246.418,
+     "conf": 0.852
+    },
+    {
+     "w": "that",
+     "start": 246.438,
+     "end": 246.599,
+     "conf": 0.998
+    },
+    {
+     "w": "with",
+     "start": 246.839,
+     "end": 246.94,
+     "conf": 0.75
+    },
+    {
+     "w": "no",
+     "start": 246.96,
+     "end": 247.04,
+     "conf": 0.667
+    },
+    {
+     "w": "brackets",
+     "start": 247.16,
+     "end": 247.581,
+     "conf": 0.846
+    },
+    {
+     "w": "at",
+     "start": 247.702,
+     "end": 247.762,
+     "conf": 0.5
+    },
+    {
+     "w": "all",
+     "start": 247.862,
+     "end": 248.023,
+     "conf": 0.697
+    },
+    {
+     "w": "it",
+     "start": 248.504,
+     "end": 248.544,
+     "conf": 0.5
+    },
+    {
+     "w": "is",
+     "start": 248.625,
+     "end": 248.665,
+     "conf": 0.499
+    },
+    {
+     "w": "clean",
+     "start": 248.745,
+     "end": 249.066,
+     "conf": 0.8
+    },
+    {
+     "w": "and",
+     "start": 249.206,
+     "end": 249.266,
+     "conf": 0.666
+    },
+    {
+     "w": "easy",
+     "start": 249.347,
+     "end": 249.487,
+     "conf": 0.736
+    },
+    {
+     "w": "to",
+     "start": 249.567,
+     "end": 249.607,
+     "conf": 0.504
+    },
+    {
+     "w": "read",
+     "start": 249.708,
+     "end": 249.908,
+     "conf": 0.744
+    }
+   ]
+  },
+  {
+   "section": "Why multiply before you add",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "If addition outranked multiplication, you would need brackets everywhere just to say the same thing.",
+   "idea": false,
+   "start": 250.299,
+   "end": 255.23,
+   "words": [
+    {
+     "w": "if",
+     "start": 250.299,
+     "end": 250.379,
+     "conf": 1.0
+    },
+    {
+     "w": "addition",
+     "start": 250.399,
+     "end": 250.74,
+     "conf": 0.818
+    },
+    {
+     "w": "outranked",
+     "start": 250.8,
+     "end": 251.141,
+     "conf": 0.796
+    },
+    {
+     "w": "multiplication",
+     "start": 251.221,
+     "end": 252.023,
+     "conf": 0.907
+    },
+    {
+     "w": "you",
+     "start": 252.143,
+     "end": 252.223,
+     "conf": 0.999
+    },
+    {
+     "w": "would",
+     "start": 252.244,
+     "end": 252.384,
+     "conf": 0.986
+    },
+    {
+     "w": "need",
+     "start": 252.424,
+     "end": 252.544,
+     "conf": 0.907
+    },
+    {
+     "w": "brackets",
+     "start": 252.624,
+     "end": 253.005,
+     "conf": 0.856
+    },
+    {
+     "w": "everywhere",
+     "start": 253.146,
+     "end": 253.546,
+     "conf": 0.893
+    },
+    {
+     "w": "just",
+     "start": 254.008,
+     "end": 254.188,
+     "conf": 0.709
+    },
+    {
+     "w": "to",
+     "start": 254.208,
+     "end": 254.288,
+     "conf": 0.666
+    },
+    {
+     "w": "say",
+     "start": 254.469,
+     "end": 254.609,
+     "conf": 0.664
+    },
+    {
+     "w": "the",
+     "start": 254.629,
+     "end": 254.729,
+     "conf": 0.749
+    },
+    {
+     "w": "same",
+     "start": 254.809,
+     "end": 254.99,
+     "conf": 0.75
+    },
+    {
+     "w": "thing",
+     "start": 255.01,
+     "end": 255.23,
+     "conf": 0.849
+    }
+   ]
+  },
+  {
+   "section": "Why multiply before you add",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "Three x squared in brackets, plus two x in brackets, plus one. Tiring just to look at.",
+   "idea": true,
+   "start": 255.64,
+   "end": 259.971,
+   "words": [
+    {
+     "w": "three",
+     "start": 255.64,
+     "end": 255.961,
+     "conf": 0.148
+    },
+    {
+     "w": "x",
+     "start": 256.041,
+     "end": 256.061,
+     "conf": 0.0
+    },
+    {
+     "w": "squared",
+     "start": 256.081,
+     "end": 256.362,
+     "conf": 0.561
+    },
+    {
+     "w": "in",
+     "start": 256.382,
+     "end": 256.442,
+     "conf": 0.7
+    },
+    {
+     "w": "brackets",
+     "start": 256.462,
+     "end": 256.903,
+     "conf": 0.857
+    },
+    {
+     "w": "plus",
+     "start": 256.923,
+     "end": 257.364,
+     "conf": 0.034
+    },
+    {
+     "w": "two",
+     "start": 257.384,
+     "end": 257.545,
+     "conf": 0.003
+    },
+    {
+     "w": "x",
+     "start": 257.685,
+     "end": 257.705,
+     "conf": 0.001
+    },
+    {
+     "w": "in",
+     "start": 257.725,
+     "end": 257.805,
+     "conf": 0.22
+    },
+    {
+     "w": "brackets",
+     "start": 257.825,
+     "end": 258.226,
+     "conf": 0.804
+    },
+    {
+     "w": "plus",
+     "start": 258.246,
+     "end": 258.527,
+     "conf": 0.027
+    },
+    {
+     "w": "one",
+     "start": 258.547,
+     "end": 258.808,
+     "conf": 0.008
+    },
+    {
+     "w": "tiring",
+     "start": 259.028,
+     "end": 259.389,
+     "conf": 0.801
+    },
+    {
+     "w": "just",
+     "start": 259.449,
+     "end": 259.57,
+     "conf": 0.671
+    },
+    {
+     "w": "to",
+     "start": 259.59,
+     "end": 259.67,
+     "conf": 0.669
+    },
+    {
+     "w": "look",
+     "start": 259.73,
+     "end": 259.83,
+     "conf": 0.749
+    },
+    {
+     "w": "at",
+     "start": 259.91,
+     "end": 259.971,
+     "conf": 0.501
+    }
+   ]
+  },
+  {
+   "section": "Why multiply before you add",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "There is a deeper reason too, called the distributive law.",
+   "idea": false,
+   "start": 260.961,
+   "end": 263.565,
+   "words": [
+    {
+     "w": "there",
+     "start": 260.961,
+     "end": 261.062,
+     "conf": 0.003
+    },
+    {
+     "w": "is",
+     "start": 261.082,
+     "end": 261.123,
+     "conf": 0.516
+    },
+    {
+     "w": "a",
+     "start": 261.183,
+     "end": 261.203,
+     "conf": 0.003
+    },
+    {
+     "w": "deeper",
+     "start": 261.244,
+     "end": 261.506,
+     "conf": 0.908
+    },
+    {
+     "w": "reason",
+     "start": 261.587,
+     "end": 261.829,
+     "conf": 0.836
+    },
+    {
+     "w": "too",
+     "start": 261.93,
+     "end": 262.092,
+     "conf": 0.575
+    },
+    {
+     "w": "called",
+     "start": 262.515,
+     "end": 262.677,
+     "conf": 0.802
+    },
+    {
+     "w": "the",
+     "start": 262.697,
+     "end": 262.758,
+     "conf": 0.979
+    },
+    {
+     "w": "distributive",
+     "start": 262.778,
+     "end": 263.383,
+     "conf": 0.893
+    },
+    {
+     "w": "law",
+     "start": 263.424,
+     "end": 263.565,
+     "conf": 0.679
+    }
+   ]
+  },
+  {
+   "section": "Why multiply before you add",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "When you write a times the bracket b plus c, it equals a b plus a c.",
+   "idea": false,
+   "start": 264.015,
+   "end": 267.027,
+   "words": [
+    {
+     "w": "when",
+     "start": 264.015,
+     "end": 264.095,
+     "conf": 0.011
+    },
+    {
+     "w": "you",
+     "start": 264.115,
+     "end": 264.176,
+     "conf": 0.052
+    },
+    {
+     "w": "write",
+     "start": 264.196,
+     "end": 264.356,
+     "conf": 0.586
+    },
+    {
+     "w": "a",
+     "start": 264.437,
+     "end": 264.457,
+     "conf": 0.072
+    },
+    {
+     "w": "times",
+     "start": 264.577,
+     "end": 264.798,
+     "conf": 0.826
+    },
+    {
+     "w": "the",
+     "start": 264.818,
+     "end": 264.879,
+     "conf": 0.748
+    },
+    {
+     "w": "bracket",
+     "start": 264.899,
+     "end": 265.18,
+     "conf": 0.864
+    },
+    {
+     "w": "b",
+     "start": 265.24,
+     "end": 265.26,
+     "conf": 0.0
+    },
+    {
+     "w": "plus",
+     "start": 265.401,
+     "end": 265.561,
+     "conf": 0.429
+    },
+    {
+     "w": "c",
+     "start": 265.662,
+     "end": 265.682,
+     "conf": 0.0
+    },
+    {
+     "w": "it",
+     "start": 265.702,
+     "end": 265.883,
+     "conf": 0.241
+    },
+    {
+     "w": "equals",
+     "start": 265.983,
+     "end": 266.184,
+     "conf": 0.774
+    },
+    {
+     "w": "a",
+     "start": 266.284,
+     "end": 266.304,
+     "conf": 0.003
+    },
+    {
+     "w": "b",
+     "start": 266.385,
+     "end": 266.405,
+     "conf": 0.038
+    },
+    {
+     "w": "plus",
+     "start": 266.565,
+     "end": 266.726,
+     "conf": 0.384
+    },
+    {
+     "w": "a",
+     "start": 266.847,
+     "end": 266.867,
+     "conf": 0.012
+    },
+    {
+     "w": "c",
+     "start": 267.007,
+     "end": 267.027,
+     "conf": 0.01
+    }
+   ]
+  },
+  {
+   "section": "Why multiply before you add",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "Giving multiplication the higher priority fits that law perfectly. The way we write things down mirrors the way the operations actually behave.",
+   "idea": true,
+   "start": 267.518,
+   "end": 275.175,
+   "words": [
+    {
+     "w": "giving",
+     "start": 267.518,
+     "end": 267.698,
+     "conf": 0.833
+    },
+    {
+     "w": "multiplication",
+     "start": 267.718,
+     "end": 268.44,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 268.52,
+     "end": 268.6,
+     "conf": 0.998
+    },
+    {
+     "w": "higher",
+     "start": 268.64,
+     "end": 268.941,
+     "conf": 0.904
+    },
+    {
+     "w": "priority",
+     "start": 269.001,
+     "end": 269.542,
+     "conf": 0.875
+    },
+    {
+     "w": "fits",
+     "start": 269.643,
+     "end": 269.843,
+     "conf": 0.75
+    },
+    {
+     "w": "that",
+     "start": 269.863,
+     "end": 270.023,
+     "conf": 0.826
+    },
+    {
+     "w": "law",
+     "start": 270.104,
+     "end": 270.204,
+     "conf": 0.665
+    },
+    {
+     "w": "perfectly",
+     "start": 270.324,
+     "end": 270.745,
+     "conf": 0.888
+    },
+    {
+     "w": "the",
+     "start": 270.765,
+     "end": 271.607,
+     "conf": 0.666
+    },
+    {
+     "w": "way",
+     "start": 271.667,
+     "end": 271.787,
+     "conf": 0.667
+    },
+    {
+     "w": "we",
+     "start": 271.847,
+     "end": 271.908,
+     "conf": 0.5
+    },
+    {
+     "w": "write",
+     "start": 271.928,
+     "end": 272.188,
+     "conf": 0.872
+    },
+    {
+     "w": "things",
+     "start": 272.208,
+     "end": 272.469,
+     "conf": 0.873
+    },
+    {
+     "w": "down",
+     "start": 272.529,
+     "end": 272.769,
+     "conf": 0.75
+    },
+    {
+     "w": "mirrors",
+     "start": 272.87,
+     "end": 273.21,
+     "conf": 0.6
+    },
+    {
+     "w": "the",
+     "start": 273.311,
+     "end": 273.371,
+     "conf": 0.665
+    },
+    {
+     "w": "way",
+     "start": 273.391,
+     "end": 273.531,
+     "conf": 0.749
+    },
+    {
+     "w": "the",
+     "start": 273.551,
+     "end": 273.651,
+     "conf": 0.748
+    },
+    {
+     "w": "operations",
+     "start": 273.731,
+     "end": 274.273,
+     "conf": 0.905
+    },
+    {
+     "w": "actually",
+     "start": 274.413,
+     "end": 274.734,
+     "conf": 0.875
+    },
+    {
+     "w": "behave",
+     "start": 274.794,
+     "end": 275.175,
+     "conf": 0.797
+    }
+   ]
+  },
+  {
+   "section": "The ladder",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "And why do powers sit above multiplication? Picture a ladder.",
+   "idea": false,
+   "start": 276.815,
+   "end": 279.837,
+   "words": [
+    {
+     "w": "and",
+     "start": 276.815,
+     "end": 276.896,
+     "conf": 0.754
+    },
+    {
+     "w": "why",
+     "start": 276.916,
+     "end": 277.097,
+     "conf": 0.987
+    },
+    {
+     "w": "do",
+     "start": 277.117,
+     "end": 277.178,
+     "conf": 0.772
+    },
+    {
+     "w": "powers",
+     "start": 277.258,
+     "end": 277.621,
+     "conf": 0.719
+    },
+    {
+     "w": "sit",
+     "start": 277.722,
+     "end": 277.843,
+     "conf": 0.666
+    },
+    {
+     "w": "above",
+     "start": 277.903,
+     "end": 278.125,
+     "conf": 0.789
+    },
+    {
+     "w": "multiplication",
+     "start": 278.145,
+     "end": 278.85,
+     "conf": 0.915
+    },
+    {
+     "w": "picture",
+     "start": 279.212,
+     "end": 279.494,
+     "conf": 0.985
+    },
+    {
+     "w": "a",
+     "start": 279.515,
+     "end": 279.535,
+     "conf": 0.963
+    },
+    {
+     "w": "ladder",
+     "start": 279.595,
+     "end": 279.837,
+     "conf": 0.508
+    }
+   ]
+  },
+  {
+   "section": "The ladder",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "Multiplication is, at heart, repeated addition. Three times four is four, added three times.",
+   "idea": false,
+   "start": 280.247,
+   "end": 284.886,
+   "words": [
+    {
+     "w": "multiplication",
+     "start": 280.247,
+     "end": 280.93,
+     "conf": 0.985
+    },
+    {
+     "w": "is",
+     "start": 281.01,
+     "end": 281.111,
+     "conf": 0.499
+    },
+    {
+     "w": "at",
+     "start": 281.191,
+     "end": 281.271,
+     "conf": 0.991
+    },
+    {
+     "w": "heart",
+     "start": 281.352,
+     "end": 281.593,
+     "conf": 0.635
+    },
+    {
+     "w": "repeated",
+     "start": 281.713,
+     "end": 282.095,
+     "conf": 0.875
+    },
+    {
+     "w": "addition",
+     "start": 282.155,
+     "end": 282.496,
+     "conf": 0.885
+    },
+    {
+     "w": "three",
+     "start": 282.517,
+     "end": 283.059,
+     "conf": 0.815
+    },
+    {
+     "w": "times",
+     "start": 283.079,
+     "end": 283.3,
+     "conf": 0.994
+    },
+    {
+     "w": "four",
+     "start": 283.38,
+     "end": 283.521,
+     "conf": 0.493
+    },
+    {
+     "w": "is",
+     "start": 283.581,
+     "end": 283.661,
+     "conf": 0.479
+    },
+    {
+     "w": "four",
+     "start": 283.742,
+     "end": 283.902,
+     "conf": 0.61
+    },
+    {
+     "w": "added",
+     "start": 284.043,
+     "end": 284.224,
+     "conf": 0.795
+    },
+    {
+     "w": "three",
+     "start": 284.384,
+     "end": 284.565,
+     "conf": 0.789
+    },
+    {
+     "w": "times",
+     "start": 284.625,
+     "end": 284.886,
+     "conf": 0.821
+    }
+   ]
+  },
+  {
+   "section": "The ladder",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "A power is repeated multiplication. Four cubed is four, multiplied by itself three times.",
+   "idea": false,
+   "start": 285.337,
+   "end": 289.882,
+   "words": [
+    {
+     "w": "a",
+     "start": 285.337,
+     "end": 285.357,
+     "conf": 0.094
+    },
+    {
+     "w": "power",
+     "start": 285.377,
+     "end": 285.718,
+     "conf": 0.994
+    },
+    {
+     "w": "is",
+     "start": 285.778,
+     "end": 285.818,
+     "conf": 0.469
+    },
+    {
+     "w": "repeated",
+     "start": 285.838,
+     "end": 286.278,
+     "conf": 0.808
+    },
+    {
+     "w": "multiplication",
+     "start": 286.338,
+     "end": 286.999,
+     "conf": 0.973
+    },
+    {
+     "w": "four",
+     "start": 287.379,
+     "end": 287.5,
+     "conf": 0.443
+    },
+    {
+     "w": "cubed",
+     "start": 287.54,
+     "end": 287.78,
+     "conf": 0.695
+    },
+    {
+     "w": "is",
+     "start": 287.8,
+     "end": 287.88,
+     "conf": 0.632
+    },
+    {
+     "w": "four",
+     "start": 287.96,
+     "end": 288.16,
+     "conf": 0.559
+    },
+    {
+     "w": "multiplied",
+     "start": 288.361,
+     "end": 288.781,
+     "conf": 0.895
+    },
+    {
+     "w": "by",
+     "start": 288.801,
+     "end": 288.901,
+     "conf": 0.998
+    },
+    {
+     "w": "itself",
+     "start": 288.961,
+     "end": 289.262,
+     "conf": 0.829
+    },
+    {
+     "w": "three",
+     "start": 289.282,
+     "end": 289.482,
+     "conf": 0.852
+    },
+    {
+     "w": "times",
+     "start": 289.502,
+     "end": 289.882,
+     "conf": 0.984
+    }
+   ]
+  },
+  {
+   "section": "The ladder",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "On that ladder, the stronger the operation, the higher it sits, and the earlier it is done. It binds more tightly to the numbers around it.",
+   "idea": false,
+   "start": 290.312,
+   "end": 297.266,
+   "words": [
+    {
+     "w": "on",
+     "start": 290.312,
+     "end": 290.372,
+     "conf": 0.997
+    },
+    {
+     "w": "that",
+     "start": 290.392,
+     "end": 290.532,
+     "conf": 0.999
+    },
+    {
+     "w": "ladder",
+     "start": 290.573,
+     "end": 290.833,
+     "conf": 0.901
+    },
+    {
+     "w": "the",
+     "start": 291.174,
+     "end": 291.254,
+     "conf": 0.908
+    },
+    {
+     "w": "stronger",
+     "start": 291.374,
+     "end": 291.715,
+     "conf": 0.858
+    },
+    {
+     "w": "the",
+     "start": 291.735,
+     "end": 291.815,
+     "conf": 0.791
+    },
+    {
+     "w": "operation",
+     "start": 291.915,
+     "end": 292.336,
+     "conf": 0.891
+    },
+    {
+     "w": "the",
+     "start": 292.356,
+     "end": 292.456,
+     "conf": 0.716
+    },
+    {
+     "w": "higher",
+     "start": 292.497,
+     "end": 292.717,
+     "conf": 0.807
+    },
+    {
+     "w": "it",
+     "start": 292.757,
+     "end": 292.797,
+     "conf": 0.447
+    },
+    {
+     "w": "sits",
+     "start": 292.897,
+     "end": 293.158,
+     "conf": 0.749
+    },
+    {
+     "w": "and",
+     "start": 293.378,
+     "end": 293.438,
+     "conf": 0.667
+    },
+    {
+     "w": "the",
+     "start": 293.459,
+     "end": 293.519,
+     "conf": 0.997
+    },
+    {
+     "w": "earlier",
+     "start": 293.639,
+     "end": 293.919,
+     "conf": 0.833
+    },
+    {
+     "w": "it",
+     "start": 293.98,
+     "end": 294.02,
+     "conf": 0.464
+    },
+    {
+     "w": "is",
+     "start": 294.04,
+     "end": 294.14,
+     "conf": 0.993
+    },
+    {
+     "w": "done",
+     "start": 294.22,
+     "end": 294.461,
+     "conf": 0.75
+    },
+    {
+     "w": "it",
+     "start": 294.841,
+     "end": 294.901,
+     "conf": 0.5
+    },
+    {
+     "w": "binds",
+     "start": 295.042,
+     "end": 295.382,
+     "conf": 0.831
+    },
+    {
+     "w": "more",
+     "start": 295.483,
+     "end": 295.623,
+     "conf": 0.747
+    },
+    {
+     "w": "tightly",
+     "start": 295.743,
+     "end": 296.104,
+     "conf": 0.831
+    },
+    {
+     "w": "to",
+     "start": 296.184,
+     "end": 296.224,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 296.244,
+     "end": 296.324,
+     "conf": 0.749
+    },
+    {
+     "w": "numbers",
+     "start": 296.385,
+     "end": 296.685,
+     "conf": 0.925
+    },
+    {
+     "w": "around",
+     "start": 296.745,
+     "end": 297.106,
+     "conf": 0.849
+    },
+    {
+     "w": "it",
+     "start": 297.226,
+     "end": 297.266,
+     "conf": 0.5
+    }
+   ]
+  },
+  {
+   "section": "The ladder",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "Powers above multiplication, multiplication above addition.",
+   "idea": true,
+   "start": 297.716,
+   "end": 300.746,
+   "words": [
+    {
+     "w": "powers",
+     "start": 297.716,
+     "end": 297.997,
+     "conf": 0.844
+    },
+    {
+     "w": "above",
+     "start": 298.077,
+     "end": 298.278,
+     "conf": 0.795
+    },
+    {
+     "w": "multiplication",
+     "start": 298.358,
+     "end": 299.08,
+     "conf": 0.915
+    },
+    {
+     "w": "multiplication",
+     "start": 299.441,
+     "end": 300.124,
+     "conf": 0.997
+    },
+    {
+     "w": "above",
+     "start": 300.184,
+     "end": 300.364,
+     "conf": 0.798
+    },
+    {
+     "w": "addition",
+     "start": 300.384,
+     "end": 300.746,
+     "conf": 0.87
+    }
+   ]
+  },
+  {
+   "section": "The ladder",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "The ladder is one way to see why the convention we chose feels so natural, and holds together so well.",
+   "idea": true,
+   "start": 301.736,
+   "end": 306.569,
+   "words": [
+    {
+     "w": "the",
+     "start": 301.736,
+     "end": 301.796,
+     "conf": 0.659
+    },
+    {
+     "w": "ladder",
+     "start": 301.816,
+     "end": 302.057,
+     "conf": 0.662
+    },
+    {
+     "w": "is",
+     "start": 302.117,
+     "end": 302.157,
+     "conf": 0.499
+    },
+    {
+     "w": "one",
+     "start": 302.277,
+     "end": 302.378,
+     "conf": 0.667
+    },
+    {
+     "w": "way",
+     "start": 302.418,
+     "end": 302.558,
+     "conf": 1.0
+    },
+    {
+     "w": "to",
+     "start": 302.638,
+     "end": 302.699,
+     "conf": 0.501
+    },
+    {
+     "w": "see",
+     "start": 302.799,
+     "end": 302.939,
+     "conf": 0.739
+    },
+    {
+     "w": "why",
+     "start": 302.979,
+     "end": 303.1,
+     "conf": 0.67
+    },
+    {
+     "w": "the",
+     "start": 303.12,
+     "end": 303.18,
+     "conf": 0.998
+    },
+    {
+     "w": "convention",
+     "start": 303.2,
+     "end": 303.621,
+     "conf": 0.961
+    },
+    {
+     "w": "we",
+     "start": 303.661,
+     "end": 303.721,
+     "conf": 0.489
+    },
+    {
+     "w": "chose",
+     "start": 303.782,
+     "end": 304.042,
+     "conf": 0.8
+    },
+    {
+     "w": "feels",
+     "start": 304.303,
+     "end": 304.523,
+     "conf": 0.797
+    },
+    {
+     "w": "so",
+     "start": 304.604,
+     "end": 304.664,
+     "conf": 0.5
+    },
+    {
+     "w": "natural",
+     "start": 304.784,
+     "end": 305.145,
+     "conf": 0.978
+    },
+    {
+     "w": "and",
+     "start": 305.426,
+     "end": 305.486,
+     "conf": 0.424
+    },
+    {
+     "w": "holds",
+     "start": 305.546,
+     "end": 305.727,
+     "conf": 0.873
+    },
+    {
+     "w": "together",
+     "start": 305.787,
+     "end": 306.088,
+     "conf": 0.904
+    },
+    {
+     "w": "so",
+     "start": 306.188,
+     "end": 306.268,
+     "conf": 0.556
+    },
+    {
+     "w": "well",
+     "start": 306.388,
+     "end": 306.569,
+     "conf": 0.738
+    }
+   ]
+  },
+  {
+   "section": "Convenient, not inevitable",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "So I think the fairest way to put it is this.",
+   "idea": false,
+   "start": 308.229,
+   "end": 310.05,
+   "words": [
+    {
+     "w": "so",
+     "start": 308.229,
+     "end": 308.27,
+     "conf": 0.999
+    },
+    {
+     "w": "i",
+     "start": 308.351,
+     "end": 308.371,
+     "conf": 0.998
+    },
+    {
+     "w": "think",
+     "start": 308.391,
+     "end": 308.512,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 308.533,
+     "end": 308.614,
+     "conf": 0.924
+    },
+    {
+     "w": "fairest",
+     "start": 308.674,
+     "end": 308.978,
+     "conf": 0.825
+    },
+    {
+     "w": "way",
+     "start": 308.998,
+     "end": 309.119,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 309.18,
+     "end": 309.221,
+     "conf": 0.513
+    },
+    {
+     "w": "put",
+     "start": 309.261,
+     "end": 309.403,
+     "conf": 1.0
+    },
+    {
+     "w": "it",
+     "start": 309.423,
+     "end": 309.504,
+     "conf": 0.998
+    },
+    {
+     "w": "is",
+     "start": 309.625,
+     "end": 309.686,
+     "conf": 0.499
+    },
+    {
+     "w": "this",
+     "start": 309.787,
+     "end": 310.05,
+     "conf": 0.69
+    }
+   ]
+  },
+  {
+   "section": "Convenient, not inevitable",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "Out of all the conventions we could have invented, PEMDAS is close to the one that lets us write the most common expressions with the fewest brackets.",
+   "idea": false,
+   "start": 310.501,
+   "end": 317.482,
+   "words": [
+    {
+     "w": "out",
+     "start": 310.501,
+     "end": 310.621,
+     "conf": 0.998
+    },
+    {
+     "w": "of",
+     "start": 310.641,
+     "end": 310.702,
+     "conf": 0.998
+    },
+    {
+     "w": "all",
+     "start": 310.722,
+     "end": 310.822,
+     "conf": 0.964
+    },
+    {
+     "w": "the",
+     "start": 310.842,
+     "end": 310.902,
+     "conf": 0.998
+    },
+    {
+     "w": "conventions",
+     "start": 310.922,
+     "end": 311.444,
+     "conf": 0.982
+    },
+    {
+     "w": "we",
+     "start": 311.464,
+     "end": 311.544,
+     "conf": 0.666
+    },
+    {
+     "w": "could",
+     "start": 311.624,
+     "end": 311.745,
+     "conf": 0.773
+    },
+    {
+     "w": "have",
+     "start": 311.765,
+     "end": 311.945,
+     "conf": 0.769
+    },
+    {
+     "w": "invented",
+     "start": 311.986,
+     "end": 312.447,
+     "conf": 0.874
+    },
+    {
+     "w": "pemdas",
+     "start": 312.828,
+     "end": 313.169,
+     "conf": 0.641
+    },
+    {
+     "w": "is",
+     "start": 313.269,
+     "end": 313.35,
+     "conf": 0.999
+    },
+    {
+     "w": "close",
+     "start": 313.41,
+     "end": 313.671,
+     "conf": 0.794
+    },
+    {
+     "w": "to",
+     "start": 313.691,
+     "end": 313.751,
+     "conf": 0.997
+    },
+    {
+     "w": "the",
+     "start": 313.771,
+     "end": 313.851,
+     "conf": 0.744
+    },
+    {
+     "w": "one",
+     "start": 313.951,
+     "end": 314.052,
+     "conf": 0.686
+    },
+    {
+     "w": "that",
+     "start": 314.072,
+     "end": 314.172,
+     "conf": 0.999
+    },
+    {
+     "w": "lets",
+     "start": 314.232,
+     "end": 314.433,
+     "conf": 0.992
+    },
+    {
+     "w": "us",
+     "start": 314.493,
+     "end": 314.553,
+     "conf": 0.501
+    },
+    {
+     "w": "write",
+     "start": 314.633,
+     "end": 314.914,
+     "conf": 0.922
+    },
+    {
+     "w": "the",
+     "start": 315.075,
+     "end": 315.135,
+     "conf": 0.634
+    },
+    {
+     "w": "most",
+     "start": 315.155,
+     "end": 315.356,
+     "conf": 0.996
+    },
+    {
+     "w": "common",
+     "start": 315.456,
+     "end": 315.697,
+     "conf": 0.833
+    },
+    {
+     "w": "expressions",
+     "start": 315.717,
+     "end": 316.318,
+     "conf": 0.916
+    },
+    {
+     "w": "with",
+     "start": 316.339,
+     "end": 316.459,
+     "conf": 0.798
+    },
+    {
+     "w": "the",
+     "start": 316.479,
+     "end": 316.539,
+     "conf": 0.995
+    },
+    {
+     "w": "fewest",
+     "start": 316.639,
+     "end": 316.98,
+     "conf": 0.817
+    },
+    {
+     "w": "brackets",
+     "start": 317.041,
+     "end": 317.482,
+     "conf": 0.872
+    }
+   ]
+  },
+  {
+   "section": "Convenient, not inevitable",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "It is tuned for the things people write most, and that is why it feels natural.",
+   "idea": false,
+   "start": 317.912,
+   "end": 321.718,
+   "words": [
+    {
+     "w": "it",
+     "start": 317.912,
+     "end": 317.972,
+     "conf": 0.999
+    },
+    {
+     "w": "is",
+     "start": 317.992,
+     "end": 318.092,
+     "conf": 0.999
+    },
+    {
+     "w": "tuned",
+     "start": 318.213,
+     "end": 318.533,
+     "conf": 0.741
+    },
+    {
+     "w": "for",
+     "start": 318.553,
+     "end": 318.653,
+     "conf": 0.746
+    },
+    {
+     "w": "the",
+     "start": 318.673,
+     "end": 318.753,
+     "conf": 0.979
+    },
+    {
+     "w": "things",
+     "start": 318.794,
+     "end": 319.054,
+     "conf": 0.989
+    },
+    {
+     "w": "people",
+     "start": 319.114,
+     "end": 319.354,
+     "conf": 0.852
+    },
+    {
+     "w": "write",
+     "start": 319.375,
+     "end": 319.615,
+     "conf": 0.919
+    },
+    {
+     "w": "most",
+     "start": 319.695,
+     "end": 320.016,
+     "conf": 0.801
+    },
+    {
+     "w": "and",
+     "start": 320.416,
+     "end": 320.476,
+     "conf": 0.666
+    },
+    {
+     "w": "that",
+     "start": 320.496,
+     "end": 320.637,
+     "conf": 0.978
+    },
+    {
+     "w": "is",
+     "start": 320.657,
+     "end": 320.757,
+     "conf": 0.666
+    },
+    {
+     "w": "why",
+     "start": 320.777,
+     "end": 320.937,
+     "conf": 0.892
+    },
+    {
+     "w": "it",
+     "start": 320.997,
+     "end": 321.037,
+     "conf": 0.5
+    },
+    {
+     "w": "feels",
+     "start": 321.057,
+     "end": 321.278,
+     "conf": 0.854
+    },
+    {
+     "w": "natural",
+     "start": 321.338,
+     "end": 321.718,
+     "conf": 0.908
+    }
+   ]
+  },
+  {
+   "section": "Convenient, not inevitable",
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "text": "But that natural feeling comes from convenience. Not from an unbreakable truth of mathematics.",
+   "idea": true,
+   "start": 322.109,
+   "end": 326.994,
+   "words": [
+    {
+     "w": "but",
+     "start": 322.109,
+     "end": 322.169,
+     "conf": 0.14
+    },
+    {
+     "w": "that",
+     "start": 322.19,
+     "end": 322.31,
+     "conf": 0.666
+    },
+    {
+     "w": "natural",
+     "start": 322.431,
+     "end": 322.793,
+     "conf": 0.868
+    },
+    {
+     "w": "feeling",
+     "start": 322.813,
+     "end": 323.174,
+     "conf": 0.998
+    },
+    {
+     "w": "comes",
+     "start": 323.255,
+     "end": 323.476,
+     "conf": 0.799
+    },
+    {
+     "w": "from",
+     "start": 323.536,
+     "end": 323.657,
+     "conf": 0.8
+    },
+    {
+     "w": "convenience",
+     "start": 323.737,
+     "end": 324.36,
+     "conf": 0.901
+    },
+    {
+     "w": "not",
+     "start": 324.722,
+     "end": 324.843,
+     "conf": 0.755
+    },
+    {
+     "w": "from",
+     "start": 324.863,
+     "end": 325.004,
+     "conf": 0.867
+    },
+    {
+     "w": "an",
+     "start": 325.064,
+     "end": 325.124,
+     "conf": 0.497
+    },
+    {
+     "w": "unbreakable",
+     "start": 325.245,
+     "end": 325.788,
+     "conf": 0.825
+    },
+    {
+     "w": "truth",
+     "start": 325.848,
+     "end": 326.089,
+     "conf": 0.8
+    },
+    {
+     "w": "of",
+     "start": 326.169,
+     "end": 326.21,
+     "conf": 0.499
+    },
+    {
+     "w": "mathematics",
+     "start": 326.31,
+     "end": 326.994,
+     "conf": 0.894
+    }
+   ]
+  },
+  {
+   "section": "Back to the viral sum",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "Now let's go back to the sum from the start. Six divided by two, times the bracket one plus two.",
+   "idea": true,
+   "start": 329.473,
+   "end": 334.094,
+   "words": [
+    {
+     "w": "now",
+     "start": 329.473,
+     "end": 329.553,
+     "conf": 0.918
+    },
+    {
+     "w": "let's",
+     "start": 329.594,
+     "end": 329.734,
+     "conf": 0.8
+    },
+    {
+     "w": "go",
+     "start": 329.774,
+     "end": 329.815,
+     "conf": 0.999
+    },
+    {
+     "w": "back",
+     "start": 329.915,
+     "end": 330.016,
+     "conf": 0.793
+    },
+    {
+     "w": "to",
+     "start": 330.036,
+     "end": 330.096,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 330.116,
+     "end": 330.196,
+     "conf": 0.921
+    },
+    {
+     "w": "sum",
+     "start": 330.277,
+     "end": 330.438,
+     "conf": 0.61
+    },
+    {
+     "w": "from",
+     "start": 330.518,
+     "end": 330.638,
+     "conf": 0.995
+    },
+    {
+     "w": "the",
+     "start": 330.659,
+     "end": 330.739,
+     "conf": 0.81
+    },
+    {
+     "w": "start",
+     "start": 330.799,
+     "end": 331.121,
+     "conf": 0.837
+    },
+    {
+     "w": "six",
+     "start": 331.502,
+     "end": 331.643,
+     "conf": 0.665
+    },
+    {
+     "w": "divided",
+     "start": 331.764,
+     "end": 332.085,
+     "conf": 0.869
+    },
+    {
+     "w": "by",
+     "start": 332.145,
+     "end": 332.266,
+     "conf": 0.5
+    },
+    {
+     "w": "two",
+     "start": 332.407,
+     "end": 332.567,
+     "conf": 0.957
+    },
+    {
+     "w": "times",
+     "start": 332.668,
+     "end": 332.869,
+     "conf": 0.778
+    },
+    {
+     "w": "the",
+     "start": 332.889,
+     "end": 332.949,
+     "conf": 0.962
+    },
+    {
+     "w": "bracket",
+     "start": 332.969,
+     "end": 333.271,
+     "conf": 0.779
+    },
+    {
+     "w": "one",
+     "start": 333.291,
+     "end": 333.572,
+     "conf": 0.0
+    },
+    {
+     "w": "plus",
+     "start": 333.592,
+     "end": 333.833,
+     "conf": 0.004
+    },
+    {
+     "w": "two",
+     "start": 333.853,
+     "end": 334.094,
+     "conf": 0.0
+    }
+   ]
+  },
+  {
+   "section": "Back to the viral sum",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "Do the bracket first. One plus two is three, which leaves six divided by two, times three.",
+   "idea": false,
+   "start": 335.085,
+   "end": 339.521,
+   "words": [
+    {
+     "w": "do",
+     "start": 335.085,
+     "end": 335.125,
+     "conf": 0.936
+    },
+    {
+     "w": "the",
+     "start": 335.145,
+     "end": 335.246,
+     "conf": 0.774
+    },
+    {
+     "w": "bracket",
+     "start": 335.266,
+     "end": 335.567,
+     "conf": 0.881
+    },
+    {
+     "w": "first",
+     "start": 335.587,
+     "end": 335.948,
+     "conf": 0.832
+    },
+    {
+     "w": "one",
+     "start": 335.968,
+     "end": 336.37,
+     "conf": 0.008
+    },
+    {
+     "w": "plus",
+     "start": 336.39,
+     "end": 336.571,
+     "conf": 0.063
+    },
+    {
+     "w": "two",
+     "start": 336.591,
+     "end": 336.771,
+     "conf": 0.002
+    },
+    {
+     "w": "is",
+     "start": 336.872,
+     "end": 336.912,
+     "conf": 0.444
+    },
+    {
+     "w": "three",
+     "start": 336.932,
+     "end": 337.193,
+     "conf": 0.018
+    },
+    {
+     "w": "which",
+     "start": 337.213,
+     "end": 337.554,
+     "conf": 0.799
+    },
+    {
+     "w": "leaves",
+     "start": 337.614,
+     "end": 337.775,
+     "conf": 0.716
+    },
+    {
+     "w": "six",
+     "start": 337.855,
+     "end": 337.976,
+     "conf": 0.659
+    },
+    {
+     "w": "divided",
+     "start": 337.996,
+     "end": 338.377,
+     "conf": 0.855
+    },
+    {
+     "w": "by",
+     "start": 338.397,
+     "end": 338.498,
+     "conf": 0.994
+    },
+    {
+     "w": "two",
+     "start": 338.578,
+     "end": 338.718,
+     "conf": 0.436
+    },
+    {
+     "w": "times",
+     "start": 338.999,
+     "end": 339.28,
+     "conf": 0.778
+    },
+    {
+     "w": "three",
+     "start": 339.301,
+     "end": 339.521,
+     "conf": 0.117
+    }
+   ]
+  },
+  {
+   "section": "Back to the viral sum",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "Multiplication and division are on the same level, so go from left to right.",
+   "idea": false,
+   "start": 339.931,
+   "end": 343.6,
+   "words": [
+    {
+     "w": "multiplication",
+     "start": 339.931,
+     "end": 340.693,
+     "conf": 0.99
+    },
+    {
+     "w": "and",
+     "start": 340.773,
+     "end": 340.833,
+     "conf": 0.622
+    },
+    {
+     "w": "division",
+     "start": 340.853,
+     "end": 341.174,
+     "conf": 0.89
+    },
+    {
+     "w": "are",
+     "start": 341.194,
+     "end": 341.274,
+     "conf": 0.704
+    },
+    {
+     "w": "on",
+     "start": 341.294,
+     "end": 341.355,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 341.375,
+     "end": 341.455,
+     "conf": 0.947
+    },
+    {
+     "w": "same",
+     "start": 341.515,
+     "end": 341.715,
+     "conf": 0.796
+    },
+    {
+     "w": "level",
+     "start": 341.756,
+     "end": 341.976,
+     "conf": 1.0
+    },
+    {
+     "w": "so",
+     "start": 342.257,
+     "end": 342.317,
+     "conf": 0.499
+    },
+    {
+     "w": "go",
+     "start": 342.457,
+     "end": 342.517,
+     "conf": 0.499
+    },
+    {
+     "w": "from",
+     "start": 342.698,
+     "end": 342.838,
+     "conf": 0.75
+    },
+    {
+     "w": "left",
+     "start": 342.959,
+     "end": 343.159,
+     "conf": 0.752
+    },
+    {
+     "w": "to",
+     "start": 343.179,
+     "end": 343.279,
+     "conf": 0.662
+    },
+    {
+     "w": "right",
+     "start": 343.38,
+     "end": 343.6,
+     "conf": 0.545
+    }
+   ]
+  },
+  {
+   "section": "Back to the viral sum",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "Six divided by two is three, and three times three is nine. Nine.",
+   "idea": true,
+   "start": 344.091,
+   "end": 347.307,
+   "words": [
+    {
+     "w": "six",
+     "start": 344.091,
+     "end": 344.232,
+     "conf": 0.649
+    },
+    {
+     "w": "divided",
+     "start": 344.333,
+     "end": 344.614,
+     "conf": 0.849
+    },
+    {
+     "w": "by",
+     "start": 344.634,
+     "end": 344.735,
+     "conf": 0.882
+    },
+    {
+     "w": "two",
+     "start": 344.815,
+     "end": 344.915,
+     "conf": 0.237
+    },
+    {
+     "w": "is",
+     "start": 344.956,
+     "end": 345.036,
+     "conf": 0.688
+    },
+    {
+     "w": "three",
+     "start": 345.096,
+     "end": 345.297,
+     "conf": 0.486
+    },
+    {
+     "w": "and",
+     "start": 345.679,
+     "end": 345.739,
+     "conf": 0.653
+    },
+    {
+     "w": "three",
+     "start": 345.759,
+     "end": 345.94,
+     "conf": 0.796
+    },
+    {
+     "w": "times",
+     "start": 346.001,
+     "end": 346.202,
+     "conf": 0.819
+    },
+    {
+     "w": "three",
+     "start": 346.222,
+     "end": 346.362,
+     "conf": 0.475
+    },
+    {
+     "w": "is",
+     "start": 346.403,
+     "end": 346.463,
+     "conf": 0.747
+    },
+    {
+     "w": "nine",
+     "start": 346.483,
+     "end": 346.804,
+     "conf": 0.216
+    },
+    {
+     "w": "nine",
+     "start": 346.825,
+     "end": 347.307,
+     "conf": 0.157
+    }
+   ]
+  },
+  {
+   "section": "Back to the viral sum",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "But the people who say one have a point as well.",
+   "idea": false,
+   "start": 348.297,
+   "end": 350.284,
+   "words": [
+    {
+     "w": "but",
+     "start": 348.297,
+     "end": 348.357,
+     "conf": 0.438
+    },
+    {
+     "w": "the",
+     "start": 348.377,
+     "end": 348.438,
+     "conf": 0.002
+    },
+    {
+     "w": "people",
+     "start": 348.458,
+     "end": 348.678,
+     "conf": 0.832
+    },
+    {
+     "w": "who",
+     "start": 348.698,
+     "end": 348.759,
+     "conf": 0.992
+    },
+    {
+     "w": "say",
+     "start": 348.879,
+     "end": 349.0,
+     "conf": 0.615
+    },
+    {
+     "w": "one",
+     "start": 349.18,
+     "end": 349.361,
+     "conf": 0.976
+    },
+    {
+     "w": "have",
+     "start": 349.401,
+     "end": 349.541,
+     "conf": 0.79
+    },
+    {
+     "w": "a",
+     "start": 349.562,
+     "end": 349.582,
+     "conf": 0.977
+    },
+    {
+     "w": "point",
+     "start": 349.662,
+     "end": 349.903,
+     "conf": 0.827
+    },
+    {
+     "w": "as",
+     "start": 349.983,
+     "end": 350.023,
+     "conf": 0.499
+    },
+    {
+     "w": "well",
+     "start": 350.043,
+     "end": 350.284,
+     "conf": 0.737
+    }
+   ]
+  },
+  {
+   "section": "Back to the viral sum",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "They look at that two pressed right up against the bracket, a multiplication with no sign, just a number touching a bracket.",
+   "idea": false,
+   "start": 350.694,
+   "end": 356.94,
+   "words": [
+    {
+     "w": "they",
+     "start": 350.694,
+     "end": 350.774,
+     "conf": 0.0
+    },
+    {
+     "w": "look",
+     "start": 350.794,
+     "end": 350.894,
+     "conf": 0.761
+    },
+    {
+     "w": "at",
+     "start": 350.914,
+     "end": 350.954,
+     "conf": 0.983
+    },
+    {
+     "w": "that",
+     "start": 350.974,
+     "end": 351.114,
+     "conf": 0.949
+    },
+    {
+     "w": "two",
+     "start": 351.215,
+     "end": 351.375,
+     "conf": 0.536
+    },
+    {
+     "w": "pressed",
+     "start": 351.475,
+     "end": 351.735,
+     "conf": 0.862
+    },
+    {
+     "w": "right",
+     "start": 351.875,
+     "end": 352.095,
+     "conf": 0.871
+    },
+    {
+     "w": "up",
+     "start": 352.155,
+     "end": 352.216,
+     "conf": 0.5
+    },
+    {
+     "w": "against",
+     "start": 352.276,
+     "end": 352.576,
+     "conf": 0.856
+    },
+    {
+     "w": "the",
+     "start": 352.676,
+     "end": 352.736,
+     "conf": 0.612
+    },
+    {
+     "w": "bracket",
+     "start": 352.796,
+     "end": 353.217,
+     "conf": 0.855
+    },
+    {
+     "w": "a",
+     "start": 353.437,
+     "end": 353.457,
+     "conf": 0.001
+    },
+    {
+     "w": "multiplication",
+     "start": 353.477,
+     "end": 354.258,
+     "conf": 0.929
+    },
+    {
+     "w": "with",
+     "start": 354.338,
+     "end": 354.458,
+     "conf": 0.729
+    },
+    {
+     "w": "no",
+     "start": 354.558,
+     "end": 354.638,
+     "conf": 0.58
+    },
+    {
+     "w": "sign",
+     "start": 354.858,
+     "end": 355.179,
+     "conf": 0.607
+    },
+    {
+     "w": "just",
+     "start": 355.419,
+     "end": 355.599,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 355.659,
+     "end": 355.679,
+     "conf": 0.009
+    },
+    {
+     "w": "number",
+     "start": 355.779,
+     "end": 356.059,
+     "conf": 0.975
+    },
+    {
+     "w": "touching",
+     "start": 356.18,
+     "end": 356.5,
+     "conf": 0.915
+    },
+    {
+     "w": "a",
+     "start": 356.52,
+     "end": 356.54,
+     "conf": 0.994
+    },
+    {
+     "w": "bracket",
+     "start": 356.56,
+     "end": 356.94,
+     "conf": 0.871
+    }
+   ]
+  },
+  {
+   "section": "Back to the viral sum",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "In a lot of handwritten maths, especially in physics and engineering, this kind of glued-on multiplication is quietly treated as stronger than an ordinary division sign.",
+   "idea": false,
+   "start": 357.37,
+   "end": 366.364,
+   "words": [
+    {
+     "w": "in",
+     "start": 357.37,
+     "end": 357.45,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 357.47,
+     "end": 357.49,
+     "conf": 0.997
+    },
+    {
+     "w": "lot",
+     "start": 357.55,
+     "end": 357.711,
+     "conf": 0.953
+    },
+    {
+     "w": "of",
+     "start": 357.751,
+     "end": 357.811,
+     "conf": 0.998
+    },
+    {
+     "w": "handwritten",
+     "start": 357.891,
+     "end": 358.412,
+     "conf": 0.63
+    },
+    {
+     "w": "maths",
+     "start": 358.492,
+     "end": 358.912,
+     "conf": 0.924
+    },
+    {
+     "w": "especially",
+     "start": 359.253,
+     "end": 359.674,
+     "conf": 0.95
+    },
+    {
+     "w": "in",
+     "start": 359.694,
+     "end": 359.754,
+     "conf": 0.998
+    },
+    {
+     "w": "physics",
+     "start": 359.834,
+     "end": 360.154,
+     "conf": 0.746
+    },
+    {
+     "w": "and",
+     "start": 360.215,
+     "end": 360.275,
+     "conf": 0.666
+    },
+    {
+     "w": "engineering",
+     "start": 360.335,
+     "end": 360.856,
+     "conf": 0.906
+    },
+    {
+     "w": "this",
+     "start": 361.196,
+     "end": 361.316,
+     "conf": 0.742
+    },
+    {
+     "w": "kind",
+     "start": 361.537,
+     "end": 361.757,
+     "conf": 0.797
+    },
+    {
+     "w": "of",
+     "start": 361.777,
+     "end": 361.857,
+     "conf": 0.998
+    },
+    {
+     "w": "glued-on",
+     "start": 361.937,
+     "end": 362.398,
+     "conf": 0.656
+    },
+    {
+     "w": "multiplication",
+     "start": 362.498,
+     "end": 363.239,
+     "conf": 0.928
+    },
+    {
+     "w": "is",
+     "start": 363.319,
+     "end": 363.42,
+     "conf": 0.499
+    },
+    {
+     "w": "quietly",
+     "start": 363.64,
+     "end": 364.001,
+     "conf": 0.849
+    },
+    {
+     "w": "treated",
+     "start": 364.081,
+     "end": 364.341,
+     "conf": 0.873
+    },
+    {
+     "w": "as",
+     "start": 364.361,
+     "end": 364.461,
+     "conf": 0.662
+    },
+    {
+     "w": "stronger",
+     "start": 364.521,
+     "end": 364.902,
+     "conf": 0.95
+    },
+    {
+     "w": "than",
+     "start": 364.962,
+     "end": 365.062,
+     "conf": 0.75
+    },
+    {
+     "w": "an",
+     "start": 365.122,
+     "end": 365.182,
+     "conf": 0.499
+    },
+    {
+     "w": "ordinary",
+     "start": 365.323,
+     "end": 365.643,
+     "conf": 0.872
+    },
+    {
+     "w": "division",
+     "start": 365.663,
+     "end": 366.044,
+     "conf": 0.798
+    },
+    {
+     "w": "sign",
+     "start": 366.144,
+     "end": 366.364,
+     "conf": 0.792
+    }
+   ]
+  },
+  {
+   "section": "Back to the viral sum",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "Read that way, two times three comes first, which is six, and six divided by six is one. One.",
+   "idea": true,
+   "start": 366.754,
+   "end": 371.244,
+   "words": [
+    {
+     "w": "read",
+     "start": 366.754,
+     "end": 366.854,
+     "conf": 0.993
+    },
+    {
+     "w": "that",
+     "start": 366.874,
+     "end": 366.975,
+     "conf": 0.992
+    },
+    {
+     "w": "way",
+     "start": 367.015,
+     "end": 367.115,
+     "conf": 0.999
+    },
+    {
+     "w": "two",
+     "start": 367.375,
+     "end": 367.496,
+     "conf": 0.697
+    },
+    {
+     "w": "times",
+     "start": 367.516,
+     "end": 367.776,
+     "conf": 0.999
+    },
+    {
+     "w": "three",
+     "start": 367.796,
+     "end": 367.957,
+     "conf": 0.99
+    },
+    {
+     "w": "comes",
+     "start": 367.977,
+     "end": 368.197,
+     "conf": 0.849
+    },
+    {
+     "w": "first",
+     "start": 368.217,
+     "end": 368.478,
+     "conf": 0.832
+    },
+    {
+     "w": "which",
+     "start": 368.498,
+     "end": 368.638,
+     "conf": 0.895
+    },
+    {
+     "w": "is",
+     "start": 368.658,
+     "end": 368.718,
+     "conf": 0.996
+    },
+    {
+     "w": "six",
+     "start": 368.799,
+     "end": 368.979,
+     "conf": 0.968
+    },
+    {
+     "w": "and",
+     "start": 369.34,
+     "end": 369.42,
+     "conf": 0.695
+    },
+    {
+     "w": "six",
+     "start": 369.56,
+     "end": 369.66,
+     "conf": 0.665
+    },
+    {
+     "w": "divided",
+     "start": 369.761,
+     "end": 370.001,
+     "conf": 0.856
+    },
+    {
+     "w": "by",
+     "start": 370.021,
+     "end": 370.101,
+     "conf": 0.996
+    },
+    {
+     "w": "six",
+     "start": 370.202,
+     "end": 370.322,
+     "conf": 0.627
+    },
+    {
+     "w": "is",
+     "start": 370.422,
+     "end": 370.462,
+     "conf": 0.482
+    },
+    {
+     "w": "one",
+     "start": 370.582,
+     "end": 370.683,
+     "conf": 0.646
+    },
+    {
+     "w": "one",
+     "start": 371.184,
+     "end": 371.244,
+     "conf": 0.127
+    }
+   ]
+  },
+  {
+   "section": "Even the calculators disagree",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "Even calculators can't agree.",
+   "idea": false,
+   "start": 372.884,
+   "end": 374.205,
+   "words": [
+    {
+     "w": "even",
+     "start": 372.884,
+     "end": 373.047,
+     "conf": 0.871
+    },
+    {
+     "w": "calculators",
+     "start": 373.108,
+     "end": 373.718,
+     "conf": 0.642
+    },
+    {
+     "w": "can't",
+     "start": 373.778,
+     "end": 373.961,
+     "conf": 0.373
+    },
+    {
+     "w": "agree",
+     "start": 374.002,
+     "end": 374.205,
+     "conf": 0.663
+    }
+   ]
+  },
+  {
+   "section": "Even the calculators disagree",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "Older Texas Instruments models gave that glued-on multiplication the higher priority. Later models treat it like any other multiplication.",
+   "idea": false,
+   "start": 374.596,
+   "end": 381.632,
+   "words": [
+    {
+     "w": "older",
+     "start": 374.596,
+     "end": 374.796,
+     "conf": 0.803
+    },
+    {
+     "w": "texas",
+     "start": 374.857,
+     "end": 375.217,
+     "conf": 0.736
+    },
+    {
+     "w": "instruments",
+     "start": 375.318,
+     "end": 375.819,
+     "conf": 0.996
+    },
+    {
+     "w": "models",
+     "start": 375.899,
+     "end": 376.2,
+     "conf": 0.833
+    },
+    {
+     "w": "gave",
+     "start": 376.26,
+     "end": 376.44,
+     "conf": 1.0
+    },
+    {
+     "w": "that",
+     "start": 376.46,
+     "end": 376.581,
+     "conf": 0.997
+    },
+    {
+     "w": "glued-on",
+     "start": 376.681,
+     "end": 377.082,
+     "conf": 0.686
+    },
+    {
+     "w": "multiplication",
+     "start": 377.102,
+     "end": 377.823,
+     "conf": 0.903
+    },
+    {
+     "w": "the",
+     "start": 377.843,
+     "end": 377.944,
+     "conf": 0.745
+    },
+    {
+     "w": "higher",
+     "start": 378.024,
+     "end": 378.304,
+     "conf": 0.981
+    },
+    {
+     "w": "priority",
+     "start": 378.365,
+     "end": 378.846,
+     "conf": 0.875
+    },
+    {
+     "w": "later",
+     "start": 379.427,
+     "end": 379.647,
+     "conf": 0.828
+    },
+    {
+     "w": "models",
+     "start": 379.668,
+     "end": 379.968,
+     "conf": 0.985
+    },
+    {
+     "w": "treat",
+     "start": 380.068,
+     "end": 380.249,
+     "conf": 0.8
+    },
+    {
+     "w": "it",
+     "start": 380.289,
+     "end": 380.329,
+     "conf": 0.003
+    },
+    {
+     "w": "like",
+     "start": 380.349,
+     "end": 380.529,
+     "conf": 0.894
+    },
+    {
+     "w": "any",
+     "start": 380.63,
+     "end": 380.75,
+     "conf": 1.0
+    },
+    {
+     "w": "other",
+     "start": 380.85,
+     "end": 380.97,
+     "conf": 0.799
+    },
+    {
+     "w": "multiplication",
+     "start": 380.991,
+     "end": 381.632,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "Even the calculators disagree",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "Same company, same keys, different answers.",
+   "idea": false,
+   "start": 382.042,
+   "end": 383.99,
+   "words": [
+    {
+     "w": "same",
+     "start": 382.042,
+     "end": 382.283,
+     "conf": 0.706
+    },
+    {
+     "w": "company",
+     "start": 382.323,
+     "end": 382.625,
+     "conf": 0.853
+    },
+    {
+     "w": "same",
+     "start": 382.765,
+     "end": 382.946,
+     "conf": 0.743
+    },
+    {
+     "w": "keys",
+     "start": 382.966,
+     "end": 383.227,
+     "conf": 0.45
+    },
+    {
+     "w": "different",
+     "start": 383.287,
+     "end": 383.569,
+     "conf": 0.852
+    },
+    {
+     "w": "answers",
+     "start": 383.689,
+     "end": 383.99,
+     "conf": 0.489
+    }
+   ]
+  },
+  {
+   "section": "Even the calculators disagree",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "When the people who build calculators can't agree with each other, you know the problem is not about who is smarter.",
+   "idea": true,
+   "start": 384.421,
+   "end": 390.181,
+   "words": [
+    {
+     "w": "when",
+     "start": 384.421,
+     "end": 384.521,
+     "conf": 0.987
+    },
+    {
+     "w": "the",
+     "start": 384.541,
+     "end": 384.622,
+     "conf": 0.953
+    },
+    {
+     "w": "people",
+     "start": 384.642,
+     "end": 384.923,
+     "conf": 1.0
+    },
+    {
+     "w": "who",
+     "start": 384.943,
+     "end": 385.043,
+     "conf": 0.797
+    },
+    {
+     "w": "build",
+     "start": 385.144,
+     "end": 385.324,
+     "conf": 0.842
+    },
+    {
+     "w": "calculators",
+     "start": 385.384,
+     "end": 386.027,
+     "conf": 0.854
+    },
+    {
+     "w": "can't",
+     "start": 386.127,
+     "end": 386.448,
+     "conf": 0.705
+    },
+    {
+     "w": "agree",
+     "start": 386.529,
+     "end": 386.789,
+     "conf": 0.8
+    },
+    {
+     "w": "with",
+     "start": 386.81,
+     "end": 386.93,
+     "conf": 1.0
+    },
+    {
+     "w": "each",
+     "start": 386.95,
+     "end": 387.131,
+     "conf": 0.828
+    },
+    {
+     "w": "other",
+     "start": 387.191,
+     "end": 387.331,
+     "conf": 0.636
+    },
+    {
+     "w": "you",
+     "start": 387.773,
+     "end": 387.833,
+     "conf": 0.666
+    },
+    {
+     "w": "know",
+     "start": 387.853,
+     "end": 387.994,
+     "conf": 0.995
+    },
+    {
+     "w": "the",
+     "start": 388.014,
+     "end": 388.114,
+     "conf": 0.549
+    },
+    {
+     "w": "problem",
+     "start": 388.194,
+     "end": 388.455,
+     "conf": 0.857
+    },
+    {
+     "w": "is",
+     "start": 388.516,
+     "end": 388.576,
+     "conf": 0.504
+    },
+    {
+     "w": "not",
+     "start": 388.656,
+     "end": 388.777,
+     "conf": 0.667
+    },
+    {
+     "w": "about",
+     "start": 388.797,
+     "end": 389.058,
+     "conf": 0.833
+    },
+    {
+     "w": "who",
+     "start": 389.138,
+     "end": 389.218,
+     "conf": 0.655
+    },
+    {
+     "w": "is",
+     "start": 389.559,
+     "end": 389.64,
+     "conf": 0.499
+    },
+    {
+     "w": "smarter",
+     "start": 389.76,
+     "end": 390.181,
+     "conf": 0.792
+    }
+   ]
+  },
+  {
+   "section": "The honest answer",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "The most honest answer to this sum is that it is badly written. It is ambiguous.",
+   "idea": false,
+   "start": 391.821,
+   "end": 395.58,
+   "words": [
+    {
+     "w": "the",
+     "start": 391.821,
+     "end": 391.881,
+     "conf": 0.011
+    },
+    {
+     "w": "most",
+     "start": 391.902,
+     "end": 392.082,
+     "conf": 0.753
+    },
+    {
+     "w": "honest",
+     "start": 392.163,
+     "end": 392.464,
+     "conf": 0.994
+    },
+    {
+     "w": "answer",
+     "start": 392.545,
+     "end": 392.806,
+     "conf": 0.962
+    },
+    {
+     "w": "to",
+     "start": 392.826,
+     "end": 392.886,
+     "conf": 0.664
+    },
+    {
+     "w": "this",
+     "start": 392.907,
+     "end": 393.027,
+     "conf": 0.761
+    },
+    {
+     "w": "sum",
+     "start": 393.087,
+     "end": 393.208,
+     "conf": 0.491
+    },
+    {
+     "w": "is",
+     "start": 393.228,
+     "end": 393.309,
+     "conf": 0.575
+    },
+    {
+     "w": "that",
+     "start": 393.329,
+     "end": 393.449,
+     "conf": 0.8
+    },
+    {
+     "w": "it",
+     "start": 393.51,
+     "end": 393.55,
+     "conf": 0.422
+    },
+    {
+     "w": "is",
+     "start": 393.65,
+     "end": 393.69,
+     "conf": 0.497
+    },
+    {
+     "w": "badly",
+     "start": 393.791,
+     "end": 394.133,
+     "conf": 0.799
+    },
+    {
+     "w": "written",
+     "start": 394.213,
+     "end": 394.555,
+     "conf": 0.968
+    },
+    {
+     "w": "it",
+     "start": 394.836,
+     "end": 394.897,
+     "conf": 0.499
+    },
+    {
+     "w": "is",
+     "start": 394.957,
+     "end": 395.017,
+     "conf": 0.499
+    },
+    {
+     "w": "ambiguous",
+     "start": 395.098,
+     "end": 395.58,
+     "conf": 0.894
+    }
+   ]
+  },
+  {
+   "section": "The honest answer",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "A good expression should never make its reader guess.",
+   "idea": false,
+   "start": 396.01,
+   "end": 398.487,
+   "words": [
+    {
+     "w": "a",
+     "start": 396.01,
+     "end": 396.03,
+     "conf": 0.993
+    },
+    {
+     "w": "good",
+     "start": 396.111,
+     "end": 396.252,
+     "conf": 1.0
+    },
+    {
+     "w": "expression",
+     "start": 396.292,
+     "end": 396.876,
+     "conf": 0.898
+    },
+    {
+     "w": "should",
+     "start": 396.916,
+     "end": 397.138,
+     "conf": 0.828
+    },
+    {
+     "w": "never",
+     "start": 397.198,
+     "end": 397.379,
+     "conf": 0.794
+    },
+    {
+     "w": "make",
+     "start": 397.46,
+     "end": 397.641,
+     "conf": 0.749
+    },
+    {
+     "w": "its",
+     "start": 397.661,
+     "end": 397.762,
+     "conf": 0.674
+    },
+    {
+     "w": "reader",
+     "start": 397.842,
+     "end": 398.124,
+     "conf": 0.815
+    },
+    {
+     "w": "guess",
+     "start": 398.225,
+     "end": 398.487,
+     "conf": 0.402
+    }
+   ]
+  },
+  {
+   "section": "The honest answer",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "In practice, mathematicians almost never write it this way. They use a fraction bar.",
+   "idea": false,
+   "start": 398.958,
+   "end": 402.931,
+   "words": [
+    {
+     "w": "in",
+     "start": 398.958,
+     "end": 399.018,
+     "conf": 0.998
+    },
+    {
+     "w": "practice",
+     "start": 399.099,
+     "end": 399.52,
+     "conf": 0.874
+    },
+    {
+     "w": "mathematicians",
+     "start": 399.781,
+     "end": 400.322,
+     "conf": 0.915
+    },
+    {
+     "w": "almost",
+     "start": 400.383,
+     "end": 400.603,
+     "conf": 0.819
+    },
+    {
+     "w": "never",
+     "start": 400.664,
+     "end": 400.824,
+     "conf": 0.792
+    },
+    {
+     "w": "write",
+     "start": 400.844,
+     "end": 401.025,
+     "conf": 0.61
+    },
+    {
+     "w": "it",
+     "start": 401.045,
+     "end": 401.085,
+     "conf": 0.347
+    },
+    {
+     "w": "this",
+     "start": 401.105,
+     "end": 401.245,
+     "conf": 0.994
+    },
+    {
+     "w": "way",
+     "start": 401.326,
+     "end": 401.446,
+     "conf": 0.666
+    },
+    {
+     "w": "they",
+     "start": 401.888,
+     "end": 402.008,
+     "conf": 0.799
+    },
+    {
+     "w": "use",
+     "start": 402.108,
+     "end": 402.209,
+     "conf": 0.665
+    },
+    {
+     "w": "a",
+     "start": 402.229,
+     "end": 402.249,
+     "conf": 0.977
+    },
+    {
+     "w": "fraction",
+     "start": 402.329,
+     "end": 402.69,
+     "conf": 0.868
+    },
+    {
+     "w": "bar",
+     "start": 402.77,
+     "end": 402.931,
+     "conf": 0.549
+    }
+   ]
+  },
+  {
+   "section": "The honest answer",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "Six on top and two times three underneath, or six over two, then times three, whichever they mean, and the argument is over.",
+   "idea": true,
+   "start": 403.441,
+   "end": 409.547,
+   "words": [
+    {
+     "w": "six",
+     "start": 403.441,
+     "end": 403.581,
+     "conf": 0.943
+    },
+    {
+     "w": "on",
+     "start": 403.681,
+     "end": 403.761,
+     "conf": 0.998
+    },
+    {
+     "w": "top",
+     "start": 403.841,
+     "end": 404.062,
+     "conf": 0.667
+    },
+    {
+     "w": "and",
+     "start": 404.202,
+     "end": 404.302,
+     "conf": 0.992
+    },
+    {
+     "w": "two",
+     "start": 404.382,
+     "end": 404.522,
+     "conf": 0.626
+    },
+    {
+     "w": "times",
+     "start": 404.602,
+     "end": 404.862,
+     "conf": 0.796
+    },
+    {
+     "w": "three",
+     "start": 404.942,
+     "end": 405.183,
+     "conf": 0.864
+    },
+    {
+     "w": "underneath",
+     "start": 405.363,
+     "end": 405.823,
+     "conf": 0.868
+    },
+    {
+     "w": "or",
+     "start": 406.083,
+     "end": 406.164,
+     "conf": 0.984
+    },
+    {
+     "w": "six",
+     "start": 406.284,
+     "end": 406.404,
+     "conf": 0.66
+    },
+    {
+     "w": "over",
+     "start": 406.524,
+     "end": 406.684,
+     "conf": 0.9
+    },
+    {
+     "w": "two",
+     "start": 406.744,
+     "end": 406.924,
+     "conf": 0.468
+    },
+    {
+     "w": "then",
+     "start": 407.004,
+     "end": 407.124,
+     "conf": 0.507
+    },
+    {
+     "w": "times",
+     "start": 407.204,
+     "end": 407.465,
+     "conf": 0.793
+    },
+    {
+     "w": "three",
+     "start": 407.545,
+     "end": 407.725,
+     "conf": 0.762
+    },
+    {
+     "w": "whichever",
+     "start": 407.785,
+     "end": 408.085,
+     "conf": 0.951
+    },
+    {
+     "w": "they",
+     "start": 408.105,
+     "end": 408.205,
+     "conf": 0.999
+    },
+    {
+     "w": "mean",
+     "start": 408.285,
+     "end": 408.486,
+     "conf": 0.749
+    },
+    {
+     "w": "and",
+     "start": 408.626,
+     "end": 408.686,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 408.706,
+     "end": 408.766,
+     "conf": 0.997
+    },
+    {
+     "w": "argument",
+     "start": 408.846,
+     "end": 409.126,
+     "conf": 0.887
+    },
+    {
+     "w": "is",
+     "start": 409.186,
+     "end": 409.246,
+     "conf": 0.499
+    },
+    {
+     "w": "over",
+     "start": 409.346,
+     "end": 409.547,
+     "conf": 0.744
+    }
+   ]
+  },
+  {
+   "section": "The honest answer",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "That little division sign, a dot above and a dot below a line, has been fading out of serious mathematics for a long time. International standards for scientific writing even advise against using it.",
+   "idea": false,
+   "start": 410.556,
+   "end": 420.945,
+   "words": [
+    {
+     "w": "that",
+     "start": 410.556,
+     "end": 410.696,
+     "conf": 0.979
+    },
+    {
+     "w": "little",
+     "start": 410.736,
+     "end": 410.976,
+     "conf": 0.873
+    },
+    {
+     "w": "division",
+     "start": 411.076,
+     "end": 411.497,
+     "conf": 0.986
+    },
+    {
+     "w": "sign",
+     "start": 411.577,
+     "end": 411.857,
+     "conf": 0.954
+    },
+    {
+     "w": "a",
+     "start": 412.037,
+     "end": 412.057,
+     "conf": 0.992
+    },
+    {
+     "w": "dot",
+     "start": 412.137,
+     "end": 412.298,
+     "conf": 0.59
+    },
+    {
+     "w": "above",
+     "start": 412.318,
+     "end": 412.698,
+     "conf": 0.752
+    },
+    {
+     "w": "and",
+     "start": 412.778,
+     "end": 412.838,
+     "conf": 0.368
+    },
+    {
+     "w": "a",
+     "start": 412.858,
+     "end": 412.878,
+     "conf": 0.055
+    },
+    {
+     "w": "dot",
+     "start": 412.958,
+     "end": 413.098,
+     "conf": 0.473
+    },
+    {
+     "w": "below",
+     "start": 413.118,
+     "end": 413.318,
+     "conf": 0.832
+    },
+    {
+     "w": "a",
+     "start": 413.399,
+     "end": 413.419,
+     "conf": 0.003
+    },
+    {
+     "w": "line",
+     "start": 413.439,
+     "end": 413.719,
+     "conf": 0.812
+    },
+    {
+     "w": "has",
+     "start": 413.999,
+     "end": 414.079,
+     "conf": 0.579
+    },
+    {
+     "w": "been",
+     "start": 414.099,
+     "end": 414.239,
+     "conf": 0.799
+    },
+    {
+     "w": "fading",
+     "start": 414.319,
+     "end": 414.58,
+     "conf": 0.816
+    },
+    {
+     "w": "out",
+     "start": 414.64,
+     "end": 414.72,
+     "conf": 0.666
+    },
+    {
+     "w": "of",
+     "start": 414.74,
+     "end": 414.82,
+     "conf": 0.664
+    },
+    {
+     "w": "serious",
+     "start": 415.02,
+     "end": 415.34,
+     "conf": 0.857
+    },
+    {
+     "w": "mathematics",
+     "start": 415.42,
+     "end": 416.081,
+     "conf": 0.914
+    },
+    {
+     "w": "for",
+     "start": 416.301,
+     "end": 416.401,
+     "conf": 0.665
+    },
+    {
+     "w": "a",
+     "start": 416.421,
+     "end": 416.441,
+     "conf": 0.991
+    },
+    {
+     "w": "long",
+     "start": 416.541,
+     "end": 416.761,
+     "conf": 0.988
+    },
+    {
+     "w": "time",
+     "start": 416.842,
+     "end": 417.182,
+     "conf": 0.805
+    },
+    {
+     "w": "international",
+     "start": 417.662,
+     "end": 418.063,
+     "conf": 0.902
+    },
+    {
+     "w": "standards",
+     "start": 418.083,
+     "end": 418.523,
+     "conf": 0.87
+    },
+    {
+     "w": "for",
+     "start": 418.543,
+     "end": 418.643,
+     "conf": 0.913
+    },
+    {
+     "w": "scientific",
+     "start": 418.763,
+     "end": 419.204,
+     "conf": 0.897
+    },
+    {
+     "w": "writing",
+     "start": 419.224,
+     "end": 419.584,
+     "conf": 0.889
+    },
+    {
+     "w": "even",
+     "start": 419.704,
+     "end": 419.864,
+     "conf": 0.732
+    },
+    {
+     "w": "advise",
+     "start": 419.904,
+     "end": 420.285,
+     "conf": 0.76
+    },
+    {
+     "w": "against",
+     "start": 420.305,
+     "end": 420.565,
+     "conf": 0.98
+    },
+    {
+     "w": "using",
+     "start": 420.685,
+     "end": 420.885,
+     "conf": 0.799
+    },
+    {
+     "w": "it",
+     "start": 420.905,
+     "end": 420.945,
+     "conf": 0.499
+    }
+   ]
+  },
+  {
+   "section": "The honest answer",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "And this is the point I want to underline.",
+   "idea": false,
+   "start": 421.375,
+   "end": 423.101,
+   "words": [
+    {
+     "w": "and",
+     "start": 421.375,
+     "end": 421.476,
+     "conf": 0.64
+    },
+    {
+     "w": "this",
+     "start": 421.496,
+     "end": 421.676,
+     "conf": 0.749
+    },
+    {
+     "w": "is",
+     "start": 421.737,
+     "end": 421.797,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 421.817,
+     "end": 421.917,
+     "conf": 0.731
+    },
+    {
+     "w": "point",
+     "start": 421.957,
+     "end": 422.198,
+     "conf": 0.792
+    },
+    {
+     "w": "i",
+     "start": 422.218,
+     "end": 422.238,
+     "conf": 0.0
+    },
+    {
+     "w": "want",
+     "start": 422.319,
+     "end": 422.439,
+     "conf": 0.959
+    },
+    {
+     "w": "to",
+     "start": 422.459,
+     "end": 422.519,
+     "conf": 0.73
+    },
+    {
+     "w": "underline",
+     "start": 422.6,
+     "end": 423.101,
+     "conf": 0.822
+    }
+   ]
+  },
+  {
+   "section": "The honest answer",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "If PEMDAS were an unbreakable truth of mathematics, there could be no expression where two people follow the rule correctly and get two different answers.",
+   "idea": false,
+   "start": 423.512,
+   "end": 431.392,
+   "words": [
+    {
+     "w": "if",
+     "start": 423.512,
+     "end": 423.592,
+     "conf": 1.0
+    },
+    {
+     "w": "pemdas",
+     "start": 423.652,
+     "end": 424.073,
+     "conf": 0.774
+    },
+    {
+     "w": "were",
+     "start": 424.154,
+     "end": 424.274,
+     "conf": 0.75
+    },
+    {
+     "w": "an",
+     "start": 424.294,
+     "end": 424.354,
+     "conf": 0.998
+    },
+    {
+     "w": "unbreakable",
+     "start": 424.454,
+     "end": 425.016,
+     "conf": 0.869
+    },
+    {
+     "w": "truth",
+     "start": 425.076,
+     "end": 425.317,
+     "conf": 0.804
+    },
+    {
+     "w": "of",
+     "start": 425.377,
+     "end": 425.437,
+     "conf": 0.999
+    },
+    {
+     "w": "mathematics",
+     "start": 425.517,
+     "end": 426.199,
+     "conf": 0.954
+    },
+    {
+     "w": "there",
+     "start": 426.499,
+     "end": 426.62,
+     "conf": 0.991
+    },
+    {
+     "w": "could",
+     "start": 426.64,
+     "end": 426.74,
+     "conf": 0.718
+    },
+    {
+     "w": "be",
+     "start": 426.76,
+     "end": 426.8,
+     "conf": 0.999
+    },
+    {
+     "w": "no",
+     "start": 426.921,
+     "end": 426.981,
+     "conf": 0.5
+    },
+    {
+     "w": "expression",
+     "start": 427.101,
+     "end": 427.622,
+     "conf": 0.9
+    },
+    {
+     "w": "where",
+     "start": 427.803,
+     "end": 427.923,
+     "conf": 0.611
+    },
+    {
+     "w": "two",
+     "start": 428.003,
+     "end": 428.144,
+     "conf": 0.666
+    },
+    {
+     "w": "people",
+     "start": 428.204,
+     "end": 428.464,
+     "conf": 0.842
+    },
+    {
+     "w": "follow",
+     "start": 428.545,
+     "end": 428.765,
+     "conf": 0.832
+    },
+    {
+     "w": "the",
+     "start": 428.845,
+     "end": 428.905,
+     "conf": 0.661
+    },
+    {
+     "w": "rule",
+     "start": 429.006,
+     "end": 429.286,
+     "conf": 0.804
+    },
+    {
+     "w": "correctly",
+     "start": 429.387,
+     "end": 429.788,
+     "conf": 0.899
+    },
+    {
+     "w": "and",
+     "start": 430.309,
+     "end": 430.389,
+     "conf": 0.637
+    },
+    {
+     "w": "get",
+     "start": 430.449,
+     "end": 430.55,
+     "conf": 0.667
+    },
+    {
+     "w": "two",
+     "start": 430.63,
+     "end": 430.73,
+     "conf": 0.663
+    },
+    {
+     "w": "different",
+     "start": 430.75,
+     "end": 431.011,
+     "conf": 0.894
+    },
+    {
+     "w": "answers",
+     "start": 431.091,
+     "end": 431.392,
+     "conf": 0.566
+    }
+   ]
+  },
+  {
+   "section": "The honest answer",
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "text": "The fact that such expressions exist shows that the rule has gaps.",
+   "idea": true,
+   "start": 431.822,
+   "end": 434.918,
+   "words": [
+    {
+     "w": "the",
+     "start": 431.822,
+     "end": 431.882,
+     "conf": 0.046
+    },
+    {
+     "w": "fact",
+     "start": 431.903,
+     "end": 432.083,
+     "conf": 0.997
+    },
+    {
+     "w": "that",
+     "start": 432.104,
+     "end": 432.184,
+     "conf": 0.63
+    },
+    {
+     "w": "such",
+     "start": 432.224,
+     "end": 432.385,
+     "conf": 1.0
+    },
+    {
+     "w": "expressions",
+     "start": 432.445,
+     "end": 432.928,
+     "conf": 0.905
+    },
+    {
+     "w": "exist",
+     "start": 432.948,
+     "end": 433.37,
+     "conf": 0.998
+    },
+    {
+     "w": "shows",
+     "start": 433.531,
+     "end": 433.752,
+     "conf": 0.795
+    },
+    {
+     "w": "that",
+     "start": 433.772,
+     "end": 433.893,
+     "conf": 0.82
+    },
+    {
+     "w": "the",
+     "start": 433.913,
+     "end": 433.993,
+     "conf": 0.991
+    },
+    {
+     "w": "rule",
+     "start": 434.053,
+     "end": 434.275,
+     "conf": 0.777
+    },
+    {
+     "w": "has",
+     "start": 434.355,
+     "end": 434.496,
+     "conf": 0.872
+    },
+    {
+     "w": "gaps",
+     "start": 434.596,
+     "end": 434.918,
+     "conf": 0.994
+    }
+   ]
+  },
+  {
+   "section": "Minus two squared",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "There is one small example I love, because it says everything.",
+   "idea": false,
+   "start": 437.438,
+   "end": 439.948,
+   "words": [
+    {
+     "w": "there",
+     "start": 437.438,
+     "end": 437.538,
+     "conf": 0.376
+    },
+    {
+     "w": "is",
+     "start": 437.559,
+     "end": 437.599,
+     "conf": 0.989
+    },
+    {
+     "w": "one",
+     "start": 437.719,
+     "end": 437.84,
+     "conf": 0.641
+    },
+    {
+     "w": "small",
+     "start": 437.92,
+     "end": 438.121,
+     "conf": 0.803
+    },
+    {
+     "w": "example",
+     "start": 438.181,
+     "end": 438.542,
+     "conf": 0.833
+    },
+    {
+     "w": "i",
+     "start": 438.643,
+     "end": 438.663,
+     "conf": 0.0
+    },
+    {
+     "w": "love",
+     "start": 438.683,
+     "end": 438.904,
+     "conf": 0.982
+    },
+    {
+     "w": "because",
+     "start": 438.984,
+     "end": 439.225,
+     "conf": 0.958
+    },
+    {
+     "w": "it",
+     "start": 439.245,
+     "end": 439.325,
+     "conf": 0.995
+    },
+    {
+     "w": "says",
+     "start": 439.346,
+     "end": 439.526,
+     "conf": 0.487
+    },
+    {
+     "w": "everything",
+     "start": 439.607,
+     "end": 439.948,
+     "conf": 0.891
+    }
+   ]
+  },
+  {
+   "section": "Minus two squared",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "In the usual mathematical convention, minus two squared means: square the two first, then attach the minus sign. So the answer is minus four.",
+   "idea": false,
+   "start": 440.338,
+   "end": 447.629,
+   "words": [
+    {
+     "w": "in",
+     "start": 440.338,
+     "end": 440.378,
+     "conf": 0.989
+    },
+    {
+     "w": "the",
+     "start": 440.398,
+     "end": 440.478,
+     "conf": 0.889
+    },
+    {
+     "w": "usual",
+     "start": 440.558,
+     "end": 440.799,
+     "conf": 1.0
+    },
+    {
+     "w": "mathematical",
+     "start": 440.819,
+     "end": 441.3,
+     "conf": 0.988
+    },
+    {
+     "w": "convention",
+     "start": 441.32,
+     "end": 441.78,
+     "conf": 0.956
+    },
+    {
+     "w": "minus",
+     "start": 442.081,
+     "end": 442.381,
+     "conf": 0.891
+    },
+    {
+     "w": "two",
+     "start": 442.481,
+     "end": 442.622,
+     "conf": 0.648
+    },
+    {
+     "w": "squared",
+     "start": 442.722,
+     "end": 443.062,
+     "conf": 0.779
+    },
+    {
+     "w": "means",
+     "start": 443.122,
+     "end": 443.443,
+     "conf": 0.997
+    },
+    {
+     "w": "square",
+     "start": 443.783,
+     "end": 444.024,
+     "conf": 0.723
+    },
+    {
+     "w": "the",
+     "start": 444.044,
+     "end": 444.104,
+     "conf": 0.957
+    },
+    {
+     "w": "two",
+     "start": 444.164,
+     "end": 444.284,
+     "conf": 0.631
+    },
+    {
+     "w": "first",
+     "start": 444.384,
+     "end": 444.705,
+     "conf": 0.798
+    },
+    {
+     "w": "then",
+     "start": 444.725,
+     "end": 445.085,
+     "conf": 0.755
+    },
+    {
+     "w": "attach",
+     "start": 445.105,
+     "end": 445.426,
+     "conf": 0.99
+    },
+    {
+     "w": "the",
+     "start": 445.486,
+     "end": 445.546,
+     "conf": 0.638
+    },
+    {
+     "w": "minus",
+     "start": 445.566,
+     "end": 445.887,
+     "conf": 0.928
+    },
+    {
+     "w": "sign",
+     "start": 445.947,
+     "end": 446.147,
+     "conf": 0.276
+    },
+    {
+     "w": "so",
+     "start": 446.427,
+     "end": 446.487,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 446.548,
+     "end": 446.608,
+     "conf": 0.708
+    },
+    {
+     "w": "answer",
+     "start": 446.668,
+     "end": 446.908,
+     "conf": 0.812
+    },
+    {
+     "w": "is",
+     "start": 446.968,
+     "end": 447.008,
+     "conf": 0.497
+    },
+    {
+     "w": "minus",
+     "start": 447.088,
+     "end": 447.329,
+     "conf": 0.739
+    },
+    {
+     "w": "four",
+     "start": 447.349,
+     "end": 447.629,
+     "conf": 0.331
+    }
+   ]
+  },
+  {
+   "section": "Minus two squared",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "But type exactly the same thing into Excel, and Excel gives you plus four.",
+   "idea": false,
+   "start": 448.079,
+   "end": 451.567,
+   "words": [
+    {
+     "w": "but",
+     "start": 448.079,
+     "end": 448.139,
+     "conf": 0.18
+    },
+    {
+     "w": "type",
+     "start": 448.159,
+     "end": 448.34,
+     "conf": 0.949
+    },
+    {
+     "w": "exactly",
+     "start": 448.36,
+     "end": 448.721,
+     "conf": 0.952
+    },
+    {
+     "w": "the",
+     "start": 448.741,
+     "end": 448.821,
+     "conf": 0.749
+    },
+    {
+     "w": "same",
+     "start": 448.901,
+     "end": 449.081,
+     "conf": 0.75
+    },
+    {
+     "w": "thing",
+     "start": 449.101,
+     "end": 449.322,
+     "conf": 0.792
+    },
+    {
+     "w": "into",
+     "start": 449.422,
+     "end": 449.562,
+     "conf": 0.748
+    },
+    {
+     "w": "excel",
+     "start": 449.623,
+     "end": 449.883,
+     "conf": 0.771
+    },
+    {
+     "w": "and",
+     "start": 450.264,
+     "end": 450.344,
+     "conf": 0.724
+    },
+    {
+     "w": "excel",
+     "start": 450.364,
+     "end": 450.685,
+     "conf": 0.734
+    },
+    {
+     "w": "gives",
+     "start": 450.805,
+     "end": 450.986,
+     "conf": 0.998
+    },
+    {
+     "w": "you",
+     "start": 451.006,
+     "end": 451.086,
+     "conf": 0.935
+    },
+    {
+     "w": "plus",
+     "start": 451.126,
+     "end": 451.286,
+     "conf": 0.139
+    },
+    {
+     "w": "four",
+     "start": 451.306,
+     "end": 451.567,
+     "conf": 0.001
+    }
+   ]
+  },
+  {
+   "section": "Minus two squared",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "Because Excel was built so that the minus sign holds on tighter than the power. It takes minus two first, and then squares it.",
+   "idea": false,
+   "start": 451.997,
+   "end": 458.494,
+   "words": [
+    {
+     "w": "because",
+     "start": 451.997,
+     "end": 452.157,
+     "conf": 0.714
+    },
+    {
+     "w": "excel",
+     "start": 452.178,
+     "end": 452.458,
+     "conf": 0.828
+    },
+    {
+     "w": "was",
+     "start": 452.538,
+     "end": 452.659,
+     "conf": 0.992
+    },
+    {
+     "w": "built",
+     "start": 452.719,
+     "end": 452.919,
+     "conf": 0.789
+    },
+    {
+     "w": "so",
+     "start": 453.06,
+     "end": 453.12,
+     "conf": 1.0
+    },
+    {
+     "w": "that",
+     "start": 453.14,
+     "end": 453.28,
+     "conf": 0.749
+    },
+    {
+     "w": "the",
+     "start": 453.301,
+     "end": 453.361,
+     "conf": 0.997
+    },
+    {
+     "w": "minus",
+     "start": 453.441,
+     "end": 453.762,
+     "conf": 0.639
+    },
+    {
+     "w": "sign",
+     "start": 453.842,
+     "end": 454.103,
+     "conf": 0.729
+    },
+    {
+     "w": "holds",
+     "start": 454.383,
+     "end": 454.624,
+     "conf": 0.938
+    },
+    {
+     "w": "on",
+     "start": 454.704,
+     "end": 454.744,
+     "conf": 0.499
+    },
+    {
+     "w": "tighter",
+     "start": 454.845,
+     "end": 455.186,
+     "conf": 0.807
+    },
+    {
+     "w": "than",
+     "start": 455.206,
+     "end": 455.326,
+     "conf": 0.799
+    },
+    {
+     "w": "the",
+     "start": 455.346,
+     "end": 455.406,
+     "conf": 0.998
+    },
+    {
+     "w": "power",
+     "start": 455.426,
+     "end": 455.747,
+     "conf": 0.802
+    },
+    {
+     "w": "it",
+     "start": 456.188,
+     "end": 456.248,
+     "conf": 0.998
+    },
+    {
+     "w": "takes",
+     "start": 456.268,
+     "end": 456.489,
+     "conf": 1.0
+    },
+    {
+     "w": "minus",
+     "start": 456.549,
+     "end": 456.79,
+     "conf": 0.604
+    },
+    {
+     "w": "two",
+     "start": 456.87,
+     "end": 456.99,
+     "conf": 0.626
+    },
+    {
+     "w": "first",
+     "start": 457.071,
+     "end": 457.452,
+     "conf": 0.833
+    },
+    {
+     "w": "and",
+     "start": 457.652,
+     "end": 457.712,
+     "conf": 0.664
+    },
+    {
+     "w": "then",
+     "start": 457.732,
+     "end": 457.853,
+     "conf": 0.999
+    },
+    {
+     "w": "squares",
+     "start": 457.993,
+     "end": 458.354,
+     "conf": 0.776
+    },
+    {
+     "w": "it",
+     "start": 458.434,
+     "end": 458.494,
+     "conf": 0.5
+    }
+   ]
+  },
+  {
+   "section": "Minus two squared",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "Python, on the other hand, says minus four.",
+   "idea": false,
+   "start": 458.925,
+   "end": 460.673,
+   "words": [
+    {
+     "w": "python",
+     "start": 458.925,
+     "end": 459.287,
+     "conf": 0.685
+    },
+    {
+     "w": "on",
+     "start": 459.307,
+     "end": 459.367,
+     "conf": 0.001
+    },
+    {
+     "w": "the",
+     "start": 459.407,
+     "end": 459.488,
+     "conf": 0.86
+    },
+    {
+     "w": "other",
+     "start": 459.528,
+     "end": 459.648,
+     "conf": 0.528
+    },
+    {
+     "w": "hand",
+     "start": 459.668,
+     "end": 459.849,
+     "conf": 0.923
+    },
+    {
+     "w": "says",
+     "start": 459.889,
+     "end": 460.03,
+     "conf": 0.505
+    },
+    {
+     "w": "minus",
+     "start": 460.09,
+     "end": 460.331,
+     "conf": 0.499
+    },
+    {
+     "w": "four",
+     "start": 460.351,
+     "end": 460.673,
+     "conf": 0.293
+    }
+   ]
+  },
+  {
+   "section": "Minus two squared",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "And JavaScript refuses to answer at all. It stops with an error, and asks you to add brackets.",
+   "idea": false,
+   "start": 461.103,
+   "end": 465.438,
+   "words": [
+    {
+     "w": "and",
+     "start": 461.103,
+     "end": 461.183,
+     "conf": 0.974
+    },
+    {
+     "w": "javascript",
+     "start": 461.203,
+     "end": 461.625,
+     "conf": 0.656
+    },
+    {
+     "w": "refuses",
+     "start": 461.645,
+     "end": 462.086,
+     "conf": 0.998
+    },
+    {
+     "w": "to",
+     "start": 462.106,
+     "end": 462.167,
+     "conf": 0.999
+    },
+    {
+     "w": "answer",
+     "start": 462.287,
+     "end": 462.468,
+     "conf": 0.829
+    },
+    {
+     "w": "at",
+     "start": 462.488,
+     "end": 462.568,
+     "conf": 0.888
+    },
+    {
+     "w": "all",
+     "start": 462.648,
+     "end": 462.749,
+     "conf": 0.885
+    },
+    {
+     "w": "it",
+     "start": 463.09,
+     "end": 463.15,
+     "conf": 0.996
+    },
+    {
+     "w": "stops",
+     "start": 463.17,
+     "end": 463.391,
+     "conf": 0.847
+    },
+    {
+     "w": "with",
+     "start": 463.411,
+     "end": 463.511,
+     "conf": 0.8
+    },
+    {
+     "w": "an",
+     "start": 463.531,
+     "end": 463.592,
+     "conf": 0.996
+    },
+    {
+     "w": "error",
+     "start": 463.652,
+     "end": 463.812,
+     "conf": 0.358
+    },
+    {
+     "w": "and",
+     "start": 464.173,
+     "end": 464.234,
+     "conf": 0.47
+    },
+    {
+     "w": "asks",
+     "start": 464.314,
+     "end": 464.475,
+     "conf": 0.65
+    },
+    {
+     "w": "you",
+     "start": 464.495,
+     "end": 464.595,
+     "conf": 0.708
+    },
+    {
+     "w": "to",
+     "start": 464.655,
+     "end": 464.695,
+     "conf": 0.502
+    },
+    {
+     "w": "add",
+     "start": 464.816,
+     "end": 464.916,
+     "conf": 0.414
+    },
+    {
+     "w": "brackets",
+     "start": 465.016,
+     "end": 465.438,
+     "conf": 0.775
+    }
+   ]
+  },
+  {
+   "section": "Minus two squared",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "Same expression, different systems, different answers, all because each one ranks the operations its own way.",
+   "idea": true,
+   "start": 465.948,
+   "end": 471.539,
+   "words": [
+    {
+     "w": "same",
+     "start": 465.948,
+     "end": 466.128,
+     "conf": 0.783
+    },
+    {
+     "w": "expression",
+     "start": 466.148,
+     "end": 466.649,
+     "conf": 0.964
+    },
+    {
+     "w": "different",
+     "start": 466.77,
+     "end": 467.07,
+     "conf": 0.967
+    },
+    {
+     "w": "systems",
+     "start": 467.09,
+     "end": 467.551,
+     "conf": 0.875
+    },
+    {
+     "w": "different",
+     "start": 467.651,
+     "end": 467.932,
+     "conf": 0.888
+    },
+    {
+     "w": "answers",
+     "start": 468.012,
+     "end": 468.393,
+     "conf": 0.573
+    },
+    {
+     "w": "all",
+     "start": 468.713,
+     "end": 468.794,
+     "conf": 0.108
+    },
+    {
+     "w": "because",
+     "start": 468.874,
+     "end": 469.214,
+     "conf": 0.857
+    },
+    {
+     "w": "each",
+     "start": 469.355,
+     "end": 469.515,
+     "conf": 0.75
+    },
+    {
+     "w": "one",
+     "start": 469.675,
+     "end": 469.795,
+     "conf": 0.678
+    },
+    {
+     "w": "ranks",
+     "start": 469.876,
+     "end": 470.116,
+     "conf": 0.795
+    },
+    {
+     "w": "the",
+     "start": 470.136,
+     "end": 470.216,
+     "conf": 0.976
+    },
+    {
+     "w": "operations",
+     "start": 470.236,
+     "end": 470.878,
+     "conf": 0.907
+    },
+    {
+     "w": "its",
+     "start": 470.978,
+     "end": 471.058,
+     "conf": 0.663
+    },
+    {
+     "w": "own",
+     "start": 471.158,
+     "end": 471.278,
+     "conf": 0.666
+    },
+    {
+     "w": "way",
+     "start": 471.358,
+     "end": 471.539,
+     "conf": 0.667
+    }
+   ]
+  },
+  {
+   "section": "Minus two squared",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "If the order of operations were an unbreakable truth of mathematics, the people who built these programs could not have chosen differently.",
+   "idea": true,
+   "start": 472.549,
+   "end": 479.656,
+   "words": [
+    {
+     "w": "if",
+     "start": 472.549,
+     "end": 472.609,
+     "conf": 1.0
+    },
+    {
+     "w": "the",
+     "start": 472.649,
+     "end": 472.729,
+     "conf": 0.999
+    },
+    {
+     "w": "order",
+     "start": 472.809,
+     "end": 473.05,
+     "conf": 0.997
+    },
+    {
+     "w": "of",
+     "start": 473.11,
+     "end": 473.19,
+     "conf": 0.999
+    },
+    {
+     "w": "operations",
+     "start": 473.35,
+     "end": 474.01,
+     "conf": 0.899
+    },
+    {
+     "w": "were",
+     "start": 474.03,
+     "end": 474.151,
+     "conf": 0.91
+    },
+    {
+     "w": "an",
+     "start": 474.171,
+     "end": 474.211,
+     "conf": 0.681
+    },
+    {
+     "w": "unbreakable",
+     "start": 474.231,
+     "end": 474.851,
+     "conf": 0.99
+    },
+    {
+     "w": "truth",
+     "start": 474.931,
+     "end": 475.272,
+     "conf": 0.844
+    },
+    {
+     "w": "of",
+     "start": 475.372,
+     "end": 475.412,
+     "conf": 0.5
+    },
+    {
+     "w": "mathematics",
+     "start": 475.492,
+     "end": 476.133,
+     "conf": 0.915
+    },
+    {
+     "w": "the",
+     "start": 476.153,
+     "end": 476.733,
+     "conf": 0.666
+    },
+    {
+     "w": "people",
+     "start": 476.793,
+     "end": 477.053,
+     "conf": 0.833
+    },
+    {
+     "w": "who",
+     "start": 477.074,
+     "end": 477.154,
+     "conf": 0.973
+    },
+    {
+     "w": "built",
+     "start": 477.234,
+     "end": 477.394,
+     "conf": 0.73
+    },
+    {
+     "w": "these",
+     "start": 477.414,
+     "end": 477.594,
+     "conf": 0.997
+    },
+    {
+     "w": "programs",
+     "start": 477.614,
+     "end": 478.095,
+     "conf": 1.0
+    },
+    {
+     "w": "could",
+     "start": 478.215,
+     "end": 478.375,
+     "conf": 0.796
+    },
+    {
+     "w": "not",
+     "start": 478.455,
+     "end": 478.615,
+     "conf": 0.745
+    },
+    {
+     "w": "have",
+     "start": 478.715,
+     "end": 478.815,
+     "conf": 0.57
+    },
+    {
+     "w": "chosen",
+     "start": 478.875,
+     "end": 479.196,
+     "conf": 0.833
+    },
+    {
+     "w": "differently",
+     "start": 479.296,
+     "end": 479.656,
+     "conf": 0.921
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "So here is my answer to the question in the title.",
+   "idea": false,
+   "start": 481.397,
+   "end": 483.493,
+   "words": [
+    {
+     "w": "so",
+     "start": 481.397,
+     "end": 481.457,
+     "conf": 0.499
+    },
+    {
+     "w": "here",
+     "start": 481.639,
+     "end": 481.8,
+     "conf": 0.878
+    },
+    {
+     "w": "is",
+     "start": 481.82,
+     "end": 481.901,
+     "conf": 0.966
+    },
+    {
+     "w": "my",
+     "start": 481.921,
+     "end": 482.062,
+     "conf": 0.764
+    },
+    {
+     "w": "answer",
+     "start": 482.143,
+     "end": 482.405,
+     "conf": 0.752
+    },
+    {
+     "w": "to",
+     "start": 482.425,
+     "end": 482.485,
+     "conf": 0.654
+    },
+    {
+     "w": "the",
+     "start": 482.505,
+     "end": 482.586,
+     "conf": 0.966
+    },
+    {
+     "w": "question",
+     "start": 482.606,
+     "end": 482.949,
+     "conf": 0.896
+    },
+    {
+     "w": "in",
+     "start": 482.969,
+     "end": 483.03,
+     "conf": 0.655
+    },
+    {
+     "w": "the",
+     "start": 483.05,
+     "end": 483.13,
+     "conf": 0.963
+    },
+    {
+     "w": "title",
+     "start": 483.151,
+     "end": 483.493,
+     "conf": 0.601
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "PEMDAS is simply how we agreed to read and write mathematics briefly.",
+   "idea": false,
+   "start": 483.883,
+   "end": 487.189,
+   "words": [
+    {
+     "w": "pemdas",
+     "start": 483.883,
+     "end": 484.284,
+     "conf": 0.661
+    },
+    {
+     "w": "is",
+     "start": 484.324,
+     "end": 484.424,
+     "conf": 0.961
+    },
+    {
+     "w": "simply",
+     "start": 484.444,
+     "end": 484.724,
+     "conf": 0.826
+    },
+    {
+     "w": "how",
+     "start": 484.825,
+     "end": 484.965,
+     "conf": 0.996
+    },
+    {
+     "w": "we",
+     "start": 485.045,
+     "end": 485.105,
+     "conf": 0.497
+    },
+    {
+     "w": "agreed",
+     "start": 485.185,
+     "end": 485.546,
+     "conf": 0.821
+    },
+    {
+     "w": "to",
+     "start": 485.566,
+     "end": 485.666,
+     "conf": 0.663
+    },
+    {
+     "w": "read",
+     "start": 485.746,
+     "end": 485.946,
+     "conf": 0.804
+    },
+    {
+     "w": "and",
+     "start": 485.967,
+     "end": 486.047,
+     "conf": 0.902
+    },
+    {
+     "w": "write",
+     "start": 486.067,
+     "end": 486.307,
+     "conf": 0.852
+    },
+    {
+     "w": "mathematics",
+     "start": 486.327,
+     "end": 486.868,
+     "conf": 0.964
+    },
+    {
+     "w": "briefly",
+     "start": 486.888,
+     "end": 487.189,
+     "conf": 0.789
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "It is a shortcut. Brackets are the real tool.",
+   "idea": true,
+   "start": 487.599,
+   "end": 489.667,
+   "words": [
+    {
+     "w": "it",
+     "start": 487.599,
+     "end": 487.659,
+     "conf": 0.992
+    },
+    {
+     "w": "is",
+     "start": 487.679,
+     "end": 487.74,
+     "conf": 0.996
+    },
+    {
+     "w": "a",
+     "start": 487.78,
+     "end": 487.8,
+     "conf": 0.994
+    },
+    {
+     "w": "shortcut",
+     "start": 487.86,
+     "end": 488.302,
+     "conf": 0.887
+    },
+    {
+     "w": "brackets",
+     "start": 488.583,
+     "end": 488.964,
+     "conf": 0.904
+    },
+    {
+     "w": "are",
+     "start": 488.985,
+     "end": 489.045,
+     "conf": 0.001
+    },
+    {
+     "w": "the",
+     "start": 489.065,
+     "end": 489.125,
+     "conf": 0.866
+    },
+    {
+     "w": "real",
+     "start": 489.185,
+     "end": 489.366,
+     "conf": 0.754
+    },
+    {
+     "w": "tool",
+     "start": 489.446,
+     "end": 489.667,
+     "conf": 0.653
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "And the lesson is a simple one.",
+   "idea": false,
+   "start": 490.697,
+   "end": 491.82,
+   "words": [
+    {
+     "w": "and",
+     "start": 490.697,
+     "end": 490.759,
+     "conf": 0.585
+    },
+    {
+     "w": "the",
+     "start": 490.779,
+     "end": 490.84,
+     "conf": 0.991
+    },
+    {
+     "w": "lesson",
+     "start": 490.861,
+     "end": 491.126,
+     "conf": 0.93
+    },
+    {
+     "w": "is",
+     "start": 491.187,
+     "end": 491.249,
+     "conf": 0.497
+    },
+    {
+     "w": "a",
+     "start": 491.31,
+     "end": 491.33,
+     "conf": 0.002
+    },
+    {
+     "w": "simple",
+     "start": 491.351,
+     "end": 491.637,
+     "conf": 0.843
+    },
+    {
+     "w": "one",
+     "start": 491.759,
+     "end": 491.82,
+     "conf": 0.618
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "When you write an expression that someone could misread, don't trust that everybody remembers PEMDAS the same way. Just add the brackets.",
+   "idea": false,
+   "start": 492.211,
+   "end": 498.911,
+   "words": [
+    {
+     "w": "when",
+     "start": 492.211,
+     "end": 492.291,
+     "conf": 0.758
+    },
+    {
+     "w": "you",
+     "start": 492.311,
+     "end": 492.392,
+     "conf": 0.998
+    },
+    {
+     "w": "write",
+     "start": 492.412,
+     "end": 492.612,
+     "conf": 0.787
+    },
+    {
+     "w": "an",
+     "start": 492.652,
+     "end": 492.692,
+     "conf": 0.993
+    },
+    {
+     "w": "expression",
+     "start": 492.713,
+     "end": 493.174,
+     "conf": 0.993
+    },
+    {
+     "w": "that",
+     "start": 493.194,
+     "end": 493.314,
+     "conf": 0.799
+    },
+    {
+     "w": "someone",
+     "start": 493.475,
+     "end": 493.736,
+     "conf": 0.852
+    },
+    {
+     "w": "could",
+     "start": 493.756,
+     "end": 493.896,
+     "conf": 0.803
+    },
+    {
+     "w": "misread",
+     "start": 493.916,
+     "end": 494.337,
+     "conf": 0.957
+    },
+    {
+     "w": "don't",
+     "start": 494.598,
+     "end": 494.759,
+     "conf": 0.803
+    },
+    {
+     "w": "trust",
+     "start": 494.839,
+     "end": 495.12,
+     "conf": 0.784
+    },
+    {
+     "w": "that",
+     "start": 495.14,
+     "end": 495.26,
+     "conf": 0.996
+    },
+    {
+     "w": "everybody",
+     "start": 495.42,
+     "end": 495.822,
+     "conf": 0.884
+    },
+    {
+     "w": "remembers",
+     "start": 495.842,
+     "end": 496.243,
+     "conf": 0.874
+    },
+    {
+     "w": "pemdas",
+     "start": 496.303,
+     "end": 496.644,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 496.664,
+     "end": 496.764,
+     "conf": 0.748
+    },
+    {
+     "w": "same",
+     "start": 496.784,
+     "end": 497.005,
+     "conf": 0.8
+    },
+    {
+     "w": "way",
+     "start": 497.025,
+     "end": 497.206,
+     "conf": 0.757
+    },
+    {
+     "w": "just",
+     "start": 497.667,
+     "end": 497.868,
+     "conf": 0.733
+    },
+    {
+     "w": "add",
+     "start": 498.209,
+     "end": 498.289,
+     "conf": 0.405
+    },
+    {
+     "w": "the",
+     "start": 498.309,
+     "end": 498.389,
+     "conf": 0.744
+    },
+    {
+     "w": "brackets",
+     "start": 498.409,
+     "end": 498.911,
+     "conf": 0.925
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "A good expression is one its reader never has to argue about.",
+   "idea": true,
+   "start": 499.361,
+   "end": 502.149,
+   "words": [
+    {
+     "w": "a",
+     "start": 499.361,
+     "end": 499.381,
+     "conf": 0.926
+    },
+    {
+     "w": "good",
+     "start": 499.441,
+     "end": 499.542,
+     "conf": 0.733
+    },
+    {
+     "w": "expression",
+     "start": 499.582,
+     "end": 500.023,
+     "conf": 0.994
+    },
+    {
+     "w": "is",
+     "start": 500.143,
+     "end": 500.183,
+     "conf": 0.495
+    },
+    {
+     "w": "one",
+     "start": 500.344,
+     "end": 500.444,
+     "conf": 0.517
+    },
+    {
+     "w": "its",
+     "start": 500.484,
+     "end": 500.585,
+     "conf": 0.636
+    },
+    {
+     "w": "reader",
+     "start": 500.705,
+     "end": 500.946,
+     "conf": 0.801
+    },
+    {
+     "w": "never",
+     "start": 501.026,
+     "end": 501.186,
+     "conf": 0.494
+    },
+    {
+     "w": "has",
+     "start": 501.206,
+     "end": 501.347,
+     "conf": 0.991
+    },
+    {
+     "w": "to",
+     "start": 501.407,
+     "end": 501.447,
+     "conf": 0.503
+    },
+    {
+     "w": "argue",
+     "start": 501.568,
+     "end": 501.848,
+     "conf": 0.713
+    },
+    {
+     "w": "about",
+     "start": 501.868,
+     "end": 502.149,
+     "conf": 0.993
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "Thank you for watching all the way to the end.",
+   "idea": false,
+   "start": 503.239,
+   "end": 504.844,
+   "words": [
+    {
+     "w": "thank",
+     "start": 503.239,
+     "end": 503.42,
+     "conf": 0.799
+    },
+    {
+     "w": "you",
+     "start": 503.48,
+     "end": 503.56,
+     "conf": 0.933
+    },
+    {
+     "w": "for",
+     "start": 503.62,
+     "end": 503.681,
+     "conf": 0.529
+    },
+    {
+     "w": "watching",
+     "start": 503.701,
+     "end": 504.022,
+     "conf": 0.862
+    },
+    {
+     "w": "all",
+     "start": 504.062,
+     "end": 504.142,
+     "conf": 0.667
+    },
+    {
+     "w": "the",
+     "start": 504.162,
+     "end": 504.222,
+     "conf": 0.585
+    },
+    {
+     "w": "way",
+     "start": 504.242,
+     "end": 504.363,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 504.383,
+     "end": 504.463,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 504.483,
+     "end": 504.563,
+     "conf": 0.95
+    },
+    {
+     "w": "end",
+     "start": 504.664,
+     "end": 504.844,
+     "conf": 0.666
+    }
+   ]
+  },
+  {
+   "section": "The answer",
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "text": "If you enjoyed this video, subscribe to the channel so you don't miss the next one. See you soon.",
+   "idea": false,
+   "start": 505.596,
+   "end": 510.304,
+   "words": [
+    {
+     "w": "if",
+     "start": 505.596,
+     "end": 505.676,
+     "conf": 0.999
+    },
+    {
+     "w": "you",
+     "start": 505.696,
+     "end": 505.776,
+     "conf": 0.997
+    },
+    {
+     "w": "enjoyed",
+     "start": 505.816,
+     "end": 506.016,
+     "conf": 0.382
+    },
+    {
+     "w": "this",
+     "start": 506.036,
+     "end": 506.157,
+     "conf": 0.998
+    },
+    {
+     "w": "video",
+     "start": 506.177,
+     "end": 506.417,
+     "conf": 0.833
+    },
+    {
+     "w": "subscribe",
+     "start": 506.577,
+     "end": 506.998,
+     "conf": 0.888
+    },
+    {
+     "w": "to",
+     "start": 507.018,
+     "end": 507.078,
+     "conf": 0.994
+    },
+    {
+     "w": "the",
+     "start": 507.098,
+     "end": 507.178,
+     "conf": 0.921
+    },
+    {
+     "w": "channel",
+     "start": 507.198,
+     "end": 507.519,
+     "conf": 0.866
+    },
+    {
+     "w": "so",
+     "start": 507.86,
+     "end": 507.9,
+     "conf": 0.497
+    },
+    {
+     "w": "you",
+     "start": 507.92,
+     "end": 508.02,
+     "conf": 0.606
+    },
+    {
+     "w": "don't",
+     "start": 508.04,
+     "end": 508.18,
+     "conf": 0.888
+    },
+    {
+     "w": "miss",
+     "start": 508.2,
+     "end": 508.36,
+     "conf": 0.778
+    },
+    {
+     "w": "the",
+     "start": 508.381,
+     "end": 508.501,
+     "conf": 0.659
+    },
+    {
+     "w": "next",
+     "start": 508.521,
+     "end": 508.741,
+     "conf": 0.976
+    },
+    {
+     "w": "one",
+     "start": 508.921,
+     "end": 509.002,
+     "conf": 0.65
+    },
+    {
+     "w": "see",
+     "start": 509.903,
+     "end": 509.983,
+     "conf": 0.333
+    },
+    {
+     "w": "you",
+     "start": 510.003,
+     "end": 510.064,
+     "conf": 0.846
+    },
+    {
+     "w": "soon",
+     "start": 510.144,
+     "end": 510.304,
+     "conf": 0.569
+    }
+   ]
+  }
+ ]
+}

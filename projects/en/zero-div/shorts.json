@@ -1,0 +1,176 @@
+{
+ "cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {
+   "name": "twelve-over-zero",
+   "hook": [
+    "12 ÷ 0: NO ANSWER.",
+    "0 ÷ 0: {TOO MANY}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:54",
+     "to": "p2:62",
+     "crop": [
+      1300,
+      140,
+      140,
+      0
+     ]
+    },
+    {
+     "from": "p2:64",
+     "to": "p2:66",
+     "crop": [
+      1500,
+      150,
+      150,
+      0
+     ],
+     "tail": 0
+    }
+   ]
+  },
+  {
+   "name": "one-equals-two",
+   "hook": [
+    "IF 1 ÷ 0 = ∞,",
+    "THEN {1 = 2}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:87",
+     "to": "p2:96",
+     "crop": [
+      1500,
+      150,
+      150,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "computer-nan",
+   "hook": [
+    "ASK A COMPUTER",
+    "FOR {1 ÷ 0}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:103",
+     "to": "p2:108",
+     "crop": [
+      1640,
+      140,
+      140,
+      0
+     ]
+    },
+    {
+     "from": "p2:112",
+     "to": "p2:113",
+     "crop": [
+      1640,
+      140,
+      140,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "romans-no-zero",
+   "hook": [
+    "WHY THE ROMANS",
+    "NEVER NEEDED {ZERO}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:0",
+     "to": "p2:3",
+     "crop": [
+      1300,
+      150,
+      150,
+      0
+     ]
+    },
+    {
+     "from": "p2:4",
+     "to": "p2:6",
+     "crop": [
+      1500,
+      150,
+      150,
+      0
+     ]
+    },
+    {
+     "from": "p2:7",
+     "to": "p2:9",
+     "crop": [
+      1215,
+      150,
+      150,
+      0
+     ],
+     "tail": -0.2,
+     "video": 115.739
+    }
+   ]
+  },
+  {
+   "name": "plus-or-minus-infinity",
+   "hook": [
+    "1 ÷ 0: PLUS OR",
+    "{MINUS} INFINITY?"
+   ],
+   "pieces": [
+    {
+     "from": "p2:69",
+     "to": "p2:78",
+     "crop": [
+      1400,
+      140,
+      140,
+      0
+     ]
+    },
+    {
+     "from": "p2:79",
+     "to": "p2:80",
+     "crop": [
+      1720,
+      140,
+      140,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "riemann-sphere",
+   "hook": [
+    "WHERE 1 ÷ 0 = ∞",
+    "IS {ALLOWED}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:98",
+     "to": "p2:102",
+     "crop": [
+      1700,
+      120,
+      120,
+      0
+     ],
+     "tail": -0.3
+    }
+   ]
+  }
+ ]
+}

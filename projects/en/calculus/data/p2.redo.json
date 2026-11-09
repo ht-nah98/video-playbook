@@ -1,0 +1,11 @@
+{
+ "texts": [
+  "It's shaped like a bowl, sitting the right way up. It comes down, flattens out at the bottom, and climbs again.",
+  "It's the average steepness of the whole stretch from one to two, and along that stretch the curve keeps getting steeper.",
+  "Do the same at any point x, and the secant's slope comes out as two x plus h. Let h shrink, and you're left with two x.",
+  "A single point has a steepness because we never measure at the point. We watch the slopes of shorter and shorter secants, and see where they're heading.",
+  "Where they're heading is a limit. It doesn't care about the hole at zero over zero, only about what happens around it.",
+  "And derivatives and integrals are two sides of one idea. One cuts a change into instants. The other adds the instants back into a whole.",
+  "Next time you're walking up a hill and it starts to feel harder, that's a derivative you're feeling, in your legs."
+ ]
+}

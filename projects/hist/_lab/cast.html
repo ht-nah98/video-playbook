@@ -1,0 +1,63 @@
+<!doctype html><meta charset="utf-8">
+<title>hist lab — dàn nhân vật + phông vẽ (bàn thử cho wrong-turn)</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử 4 kit mới (người dùng duyệt 2026-10-28 TREATMENT wrong-turn): t 0.5 quần chúng + mắt + trang phục · t 1.5 phông vẽ
+// · t 2.5 đầu ảnh thật trên thân vẽ · t 3.5 ghép thử một cảnh (bờ sông Appel, đám đông vẫy cờ, xe, người dẫn lẫn trong đám đông).
+// node engine/render/shoot.js stills --page projects/hist/_lab/cast.html --t 0.5,1.5,2.5,3.5 --outdir out/hist/_lab/cast
+import { INK } from '../_kit/mapkit.js';
+import * as S from '../_kit/stage.js';
+import * as C from '../_kit/cast.js';
+import * as B from '../_kit/backdrop.js';
+import { bindNarrator, narrator } from '../_kit/narrator.js';
+const g = document.getElementById('cv').getContext('2d');
+const { W, H } = S;
+const IM = {}, HEADS = {}; let ready = false;
+const img = (src) => { const im = new Image(); im.src = src; return im.decode().then(() => im); };
+const KEYS = ['ff', 'sophie', 'potiorek', 'wilhelm', 'franzjoseph'];
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  img('../sarajevo/assets/cut/car.png').then(im => { IM.car = im; }), img('../wrong-turn/assets/photos/incar.jpg').then(im => { IM.incar = im; }),
+  ...KEYS.map(k => Promise.all([img(`../_kit/heads/${k}.png`), fetch(`../_kit/heads/${k}.json`).then(r => r.json())]).then(([im, j]) => { HEADS[k] = { im, chin: j.chin, unit: j.unit, jaw: j.jaw }; }))])
+  .then(() => { S.bindStage(g, { IM }); C.bindCast(g, { HEADS }); B.bindBackdrop(g); bindNarrator(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+const cap = (txt, x, y, size = 30) => S.label(txt, x, y, size, 1, INK, { free: true });
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  if (!ready) { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); return; }
+  if (t < 1) { S.paper('#F7F3EA'); cap('Quần chúng — mắt (hàng trên) · trang phục (hàng dưới)', 960, 70, 44);
+    ['dot', 'bored', 'shock', 'angry', 'cry', 'happy'].forEach((e, i) => { C.folk(200 + i * 300, 470, 330, { eyes: e }); cap(e, 200 + i * 300, 510); });
+    [['bowler', 'suit'], ['fez', 'plain'], ['cap', 'worker'], ['top', 'suit'], ['plume', 'austro'], ['police', 'police'], ['helmet', 'soldier'], ['scarf', 'gown']]
+      .forEach(([w, c], i) => { C.folk(140 + i * 235, 960, 330, { wear: w, coat: c, eyes: i === 4 ? 'angry' : 'dot', flag: i === 1 ? ['#B3262C', '#FFFFFF', '#2E5DA8'] : null }); cap(`${w} + ${c}`, 140 + i * 235, 1010, 24); });
+    return; }
+  if (t < 2) { const tiles = ['quay', 'cityhall', 'latin', 'palace'];
+    tiles.forEach((k, i) => { g.save(); g.translate((i % 2) * 960, Math.floor(i / 2) * 540); g.scale(0.5, 0.5); B.place(k); g.restore();
+      S.label(k, (i % 2) * 960 + 30, Math.floor(i / 2) * 540 + 60, 40, 1, '#FFF', { align: 'left', stroke: INK, free: true }); });
+    g.strokeStyle = '#111'; g.lineWidth = 6; g.beginPath(); g.moveTo(960, 0); g.lineTo(960, H); g.moveTo(0, 540); g.lineTo(W, 540); g.stroke(); return; }
+  if (t < 3) { S.paper('#F7F3EA'); cap('Ba kiểu nhân vật lịch sử — cùng nét mềm với quần chúng', 960, 64, 42);
+    cap('A · đầu ảnh thật trên thân viên thuốc', 330, 150, 30); cap('B · vẽ đầu tròn + nét nhận dạng (râu, mũ)', 960, 150, 30); cap('C · đầu ảnh trên người que (gag)', 1600, 150, 30);
+    C.figure('ff', 210, 900, 520, { coat: 'austro' }); C.figure('sophie', 450, 900, 480, { coat: 'gown' });
+    C.folk(820, 900, 480, { coat: 'austro', feat: 'ff', wear: 'plume', skin: '#FCEBD5' }); C.folk(1100, 900, 450, { coat: 'gown', feat: 'sophie', skin: '#FCEBD5' });
+    C.figure('wilhelm', 1480, 900, 560, { style: 'stick' }); C.figure('franzjoseph', 1720, 900, 560, { style: 'stick' });
+    [[210, 'Franz Ferdinand'], [450, 'Sophie'], [820, 'Franz Ferdinand'], [1100, 'Sophie'], [1480, 'Kaiser Wilhelm'], [1720, 'Franz Joseph']].forEach(([x, n]) => cap(n, x, 960, 26));
+    g.strokeStyle = '#CFC6B4'; g.lineWidth = 3; for (const x of [640, 1290]) { g.beginPath(); g.moveTo(x, 120); g.lineTo(x, 1000); g.stroke(); }
+    return; }
+  if (t >= 4) { S.paper('#F7F3EA'); cap('Kiểu B — dàn nhân vật chính tập wrong-turn (vẽ đầu tròn + nét nhận dạng)', 960, 64, 40); const SK = '#FCEBD5';
+    [['Franz Ferdinand', { coat: 'austro', feat: 'ff', wear: 'plume' }], ['Sophie', { coat: 'gown', feat: 'sophie', wear: 'sophiehat' }], ['Potiorek', { coat: 'austro', feat: 'potiorek', wear: 'kepi', eyes: 'angry' }],
+     ['Princip', { coat: 'suit', feat: 'princip', eyes: 'angry' }], ['Čabrinović', { coat: 'suit', feat: 'cabri', wear: 'bowler' }], ['tài xế Lojka', { coat: 'driver', wear: 'driver', eyes: 'shock', sweat: true }],
+     ['thị trưởng', { coat: 'suit', feat: 'mayor', wear: 'fez' }], ['Franz Joseph', { coat: 'austro', feat: 'fj' }], ['Kaiser Wilhelm', { coat: 'german', feat: 'wilhelm', wear: 'pickel' }], ['Sa hoàng Nicholas', { coat: 'tsarcoat', feat: 'tsar', wear: 'cap' }]]
+      .forEach(([n, o], i) => { const x = 130 + (i % 5) * 380, y = i < 5 ? 520 : 960; C.folk(x + 60, y, 330, { skin: SK, ...o }); cap(n, x + 60, y + 44, 26); });
+    return; }
+  if (t >= 3.9) { S.paper('#F7F3EA'); cap('Biểu cảm của Thái tử — mắt + miệng đổi bằng code', 960, 64, 40);
+    [['dot', null, 'bình thường'], ['shock', 'o', 'hoảng'], ['angry', 'flat', 'giận'], ['cry', 'frown', 'khóc'], ['happy', 'grin', 'vui'], ['bored', 'flat', 'chán']]
+      .forEach(([e, m, n], i) => { C.folk(200 + i * 305, 820, 520, { skin: '#FCEBD5', coat: 'austro', feat: 'ff', wear: 'plume', eyes: e, mouth: m, sweat: e === 'shock' }); cap(n, 200 + i * 305, 870, 30); });
+    return; }
+  // cảnh ghép thử: bờ sông Appel, đám đông vẫy cờ Áo-Hung, xe Thái tử, người dẫn đội quả dưa lẫn trong hàng trước
+  B.place('quay');
+  C.crowd(-60, 1980, 830, 240, t, { rows: 2, cheer: true, skip: [1560], flagCols: ['#151515', '#F3C61B'], seed: 3 });
+  C.car1914(820, 1040, 1080, { flags: true, seats: ([fx, fy], [bx, by]) => { const SK = '#FCEBD5';   // xe VẼ, người vẽ kiểu B ngồi trong (người dùng 10-28: ảnh thật dán vào "kì")
+    C.folk(fx, fy + 80, 330, { skin: SK, coat: 'driver', wear: 'driver' });
+    C.folk(bx - 60, by + 70, 360, { skin: SK, coat: 'austro', feat: 'ff', wear: 'plume', arm: 'up' }); C.folk(bx + 130, by + 70, 340, { skin: SK, coat: 'gown', feat: 'sophie', wear: 'sophiehat' }); } });
+  narrator(1560, 835 - Math.max(0, Math.sin(t * 7)) * 10, 240, { outfit: 'bowler', arms: 'flag', mouth: 'grin', t });
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 5, LEAD: 0, error: null };
+</script>

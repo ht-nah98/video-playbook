@@ -1,0 +1,119 @@
+{
+ "duration": 44.463,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "lang": "en",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Fill a pyramid with water, and pour it into a box with the same base and the same height.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Fill a pyramid with water, and pour it into a box with the same base and the same height.",
+   "start": 0.0,
+   "end": 4.137,
+   "wav": "audio/voice/54efd545406a1b30.wav"
+  },
+  {
+   "text": "It doesn't fill the box. You need exactly three.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "It doesn't fill the box. You need exactly three.",
+   "start": 4.487,
+   "end": 6.779,
+   "wav": "audio/voice/2838b50147c71f68.wav"
+  },
+  {
+   "text": "Any pyramid, any matching box. It's always one third.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Any pyramid, any matching box. It's always one third.",
+   "start": 7.129,
+   "end": 9.648,
+   "wav": "audio/voice/3450e92b67111fa6.wav"
+  },
+  {
+   "text": "And a ball that fits snugly inside a cylinder? It fills exactly two thirds of it.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "And a ball that fits snugly inside a cylinder? It fills exactly two thirds of it.",
+   "start": 9.998,
+   "end": 13.866,
+   "wav": "audio/voice/cd84c03217532996.wav"
+  },
+  {
+   "text": "Why those numbers? To see it, we need geometry in three dimensions, and it's simpler than it looks.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Why those numbers? To see it, we need geometry in three dimensions, and it's simpler than it looks.",
+   "start": 14.216,
+   "end": 19.116,
+   "wav": "audio/voice/b64966805d34d3ed.wav"
+  },
+  {
+   "text": "By the end of this video, I want to answer three questions with you.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "By the end of this video, I want to answer three questions with you.",
+   "start": 20.066,
+   "end": 23.562,
+   "wav": "audio/voice/44c80039cbf6d753.wav"
+  },
+  {
+   "text": "One. What are the few simple rules that the whole subject is built on?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "One. What are the few simple rules that the whole subject is built on?",
+   "start": 23.912,
+   "end": 27.205,
+   "wav": "audio/voice/63cf18a6bbebe18f.wav"
+  },
+  {
+   "text": "Two. How do you measure an angle, or a distance, between things that never even touch?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Two. How do you measure an angle, or a distance, between things that never even touch?",
+   "start": 27.555,
+   "end": 32.041,
+   "wav": "audio/voice/99484a36bd0f509a.wav"
+  },
+  {
+   "text": "And three. Where do the volume formulas come from, including that strange one third that keeps showing up?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "And three. Where do the volume formulas come from, including that strange one third that keeps showing up?",
+   "start": 32.391,
+   "end": 37.838,
+   "wav": "audio/voice/33c7356851aeabab.wav"
+  },
+  {
+   "text": "And it all starts with three ideas so simple that mathematics doesn't even try to define them.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "And it all starts with three ideas so simple that mathematics doesn't even try to define them.",
+   "start": 38.788,
+   "end": 43.513,
+   "wav": "audio/voice/fd118d7f4df413cc.wav"
+  }
+ ]
+}

@@ -1,0 +1,139 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — felt</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA "felt" cho fifty-percent — xác suất là một BÀN CHƠI. KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/felt.html --dur 2 --t 0.5,1.5 --outdir out/_lab/felt
+// Ý: xác suất sinh ra từ sòng bạc (Pascal–Fermat); niềm tin = cái giá dám đặt. Bàn nỉ nhìn từ trên, đèn treo ấm, hơi noir.
+// Màu: nỉ #1F5A43 (hạt + quầng đèn), gỗ viền #5A3A22, ngà #F3ECDA, đồng #E2B65A, chữ in trên nỉ #E8D7A2, phỉnh đen #1E1E22, đỏ #D2402F CHỈ cho dương tính nhầm.
+// Chữ: Cormorant Garamond nghiêng (lời dẫn), Archivo 800 (số in trên phỉnh/bài), IBM Plex Mono (chữ in trên mặt bàn, chú giải).
+// Tiếng: chip (đặt phỉnh), coin (đồng xu), tick (đếm), snap (lật bài), whoosh (đẩy phỉnh), impact (con số chốt), error (báo động nhầm).
+// Phần khác: tần suất = máy tung xu đổ phỉnh thành cột ngửa/sấp, vạch 50% in trên nỉ; cá cược (Dutch book) = phỉnh bị đẩy qua bàn,
+// nhà cái gom hết; cán cân Bayes = hai chồng phỉnh trên cân đồng; 3 tiên đề = ba ô cược in trên nỉ (≥ 0, tổng = 1, cộng dồn);
+// người = phỉnh (1 phỉnh = N người, ghi rõ). 0 = mở bài: đồng xu dưới lá bài úp, 50% nằm ở ô "YOU" · 1 = Act Four đếm người
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { felt: '#1F5A43', wood: '#5A3A22', ivory: '#F3ECDA', brass: '#E2B65A', brassD: '#9C7428', black: '#1E1E22',
+            red: '#D2402F', print: '#E8D7A2', back: '#173A50' };
+const IM = {}; let FELT, ready = false;
+const ARC = '"Archivo"', MONO = '"IBM Plex Mono"', CG = '"Cormorant Garamond"';
+const fmt = n => n.toLocaleString('en-US');
+
+function felt() {                                     // nỉ: hạt + sợi ngang + quầng đèn ấm; viền gỗ bọc da quanh bàn
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H), b = [0x1F, 0x5A, 0x43];
+  for (let i = 0; i < W * H; i++) {
+    const px = i % W, py = (i / W) | 0, n = (hash(i * 0.731) - 0.5) * 12 + (hash(((px >> 2) * 17 + py) * 0.37) - 0.5) * 5;
+    const r = Math.hypot((px - W * 0.55) / 1.35, py - H * 0.45) / 900, lit = 1.12 - 0.62 * Math.min(1, r * r), warm = Math.max(0, 1 - r * 1.4);
+    d.data[i * 4] = b[0] * lit + n + warm * 14; d.data[i * 4 + 1] = b[1] * lit + n + warm * 6; d.data[i * 4 + 2] = b[2] * lit + n - warm * 4; d.data[i * 4 + 3] = 255;
+  }
+  x.putImageData(d, 0, 0);
+  const rail = 40; x.save(); x.lineWidth = rail; x.strokeStyle = C.wood; x.strokeRect(rail / 2, rail / 2, W - rail, H - rail);
+  x.lineWidth = 2; x.strokeStyle = 'rgba(255,220,160,.25)'; x.strokeRect(rail - 6, rail - 6, W - 2 * rail + 12, H - 2 * rail + 12);
+  x.lineWidth = 10; x.strokeStyle = 'rgba(0,0,0,.35)'; x.strokeRect(rail + 5, rail + 5, W - 2 * rail - 10, H - 2 * rail - 10); x.restore();
+  return c;
+}
+function text(s, x, y, font, color, align = 'left') { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic'; g.fillText(s, x, y); return g.measureText(s).width; }
+function shadow(blur, dy, a = 0.5) { g.shadowColor = `rgba(0,0,0,${a})`; g.shadowBlur = blur; g.shadowOffsetY = dy; }
+function chip(x, y, r, body, { label = null, ink = C.black, spots = C.ivory, size = null } = {}) {   // phỉnh nhìn từ trên: vành có vạch, lõi in số
+  g.save(); shadow(r * 0.35, r * 0.18, 0.55); g.fillStyle = body; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); g.restore();
+  g.save(); g.strokeStyle = spots; g.lineWidth = r * 0.16; g.setLineDash([r * 0.34, r * 0.45]); g.beginPath(); g.arc(x, y, r * 0.88, 0, 7); g.stroke(); g.restore();
+  if (r > 16) { g.strokeStyle = 'rgba(0,0,0,.25)'; g.lineWidth = r * 0.04; g.beginPath(); g.arc(x, y, r * 0.66, 0, 7); g.stroke(); }
+  if (label) { g.fillStyle = C.ivory; g.beginPath(); g.arc(x, y, r * 0.62, 0, 7); g.fill();
+    g.fillStyle = ink; g.font = `800 ${size ?? r * 0.5}px ${ARC}`; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(label, x, y + r * 0.03); }
+}
+function coin(x, y, r) {                              // đồng xu đồng: vành khía + mặt hơi lõm, ánh đèn từ trên trái
+  g.save(); shadow(r * 0.3, r * 0.12, 0.6); g.fillStyle = C.brassD; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); g.restore();
+  const gr = g.createRadialGradient(x - r * 0.35, y - r * 0.4, r * 0.1, x, y, r);
+  gr.addColorStop(0, '#F7DE9A'); gr.addColorStop(0.6, C.brass); gr.addColorStop(1, '#A67C2E');
+  g.fillStyle = gr; g.beginPath(); g.arc(x, y, r * 0.93, 0, 7); g.fill();
+  g.strokeStyle = 'rgba(90,60,20,.55)'; g.lineWidth = 2; for (let k = 0; k < 90; k++) { const a = k / 90 * Math.PI * 2;
+    g.beginPath(); g.moveTo(x + Math.cos(a) * r * 0.94, y + Math.sin(a) * r * 0.94); g.lineTo(x + Math.cos(a) * r, y + Math.sin(a) * r); g.stroke(); }
+  g.strokeStyle = 'rgba(120,85,30,.6)'; g.lineWidth = 3; g.beginPath(); g.arc(x, y, r * 0.8, 0, 7); g.stroke();
+}
+function card(x, y, w, h, rot) {                      // lá bài úp: viền ngà, lưng xanh than hoa văn lưới đồng
+  g.save(); g.translate(x, y); g.rotate(rot); shadow(26, 14, 0.55); g.fillStyle = C.ivory; g.beginPath(); g.roundRect(-w / 2, -h / 2, w, h, 14); g.fill(); g.restore();
+  g.save(); g.translate(x, y); g.rotate(rot); g.fillStyle = C.back; g.beginPath(); g.roundRect(-w / 2 + 12, -h / 2 + 12, w - 24, h - 24, 8); g.fill(); g.clip();
+  g.strokeStyle = 'rgba(226,182,90,.45)'; g.lineWidth = 2;
+  for (let k = -h; k < w + h; k += 22) { g.beginPath(); g.moveTo(-w / 2 + k, -h / 2); g.lineTo(-w / 2 + k - h, h / 2); g.stroke();
+    g.beginPath(); g.moveTo(-w / 2 + k - h, -h / 2); g.lineTo(-w / 2 + k, h / 2); g.stroke(); }
+  g.strokeStyle = C.brass; g.lineWidth = 3; g.beginPath(); g.roundRect(-w / 2 + 22, -h / 2 + 22, w - 44, h - 44, 6); g.stroke(); g.restore();
+}
+function spot(x, y, r, name) {                        // ô cược in trên nỉ: hai vòng mảnh + tên chạy theo cung trên
+  g.save(); g.strokeStyle = C.print; g.globalAlpha = 0.9; g.lineWidth = 4; g.beginPath(); g.arc(x, y, r, 0, 7); g.stroke();
+  g.lineWidth = 1.5; g.beginPath(); g.arc(x, y, r - 12, 0, 7); g.stroke(); g.globalAlpha = 1;
+  g.font = `500 30px ${MONO}`; g.fillStyle = C.print; g.textAlign = 'center'; g.textBaseline = 'middle';
+  const rr = r - 38, chars = [...name], step = 0.105, a0 = -Math.PI / 2 - step * (chars.length - 1) / 2;
+  chars.forEach((ch, i) => { const a = a0 + i * step; g.save(); g.translate(x + Math.cos(a) * rr, y + Math.sin(a) * rr); g.rotate(a + Math.PI / 2); g.fillText(ch, 0, 0); g.restore(); });
+  g.restore();
+}
+function figure(pose, cx, foot, h) {                  // mascot nửa thân (ảnh đã cắt ở đùi), bóng đổ lên nỉ
+  const im = IM[pose], w = im.width * h / im.height;
+  g.save(); g.globalAlpha = 0.4; g.filter = 'brightness(0) blur(6px)'; g.drawImage(im, cx - w / 2 + 22, foot - h + 14, w, h);
+  g.filter = 'none'; g.globalAlpha = 1; g.drawImage(im, cx - w / 2, foot - h, w, h); g.restore();
+}
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+
+const frames = [
+  () => {                                            // 0 · đồng xu đã nằm yên dưới lá bài úp; 50% là phỉnh đặt ở ô "YOU"
+    [[150, 190, 34, C.black], [196, 214, 34, C.brass], [168, 248, 34, C.black], [262, 160, 30, C.ivory], [300, 196, 30, C.black]]
+      .forEach(([x, y, r, c]) => chip(x, y, r, c, { spots: c === C.ivory ? C.black : C.ivory }));     // phỉnh rải trên bàn: đạo cụ
+    figure('coin-cover', 215, 1080, 700);
+    text('The coin has already landed.', 1150, 190, `italic 600 76px ${CG}`, C.ivory, 'center');
+    spot(830, 560, 220, 'THE COIN'); spot(1470, 560, 220, 'YOU');
+    coin(800, 600, 92); card(862, 586, 170, 240, 0.16);
+    text('already heads, or already tails', 830, 850, `italic 600 42px ${CG}`, C.ivory, 'center');
+    const half = must('1 / 2 * 100', 50);
+    chip(1470, 590, 128, C.black, { label: `${half}%`, size: 64 });
+    text('the only thing still undecided', 1470, 850, `italic 600 42px ${CG}`, C.ivory, 'center');
+    text(`${half}% DESCRIBES YOU, NOT THE COIN`, 1150, 960, `500 32px ${MONO}`, C.brass, 'center');
+  },
+  () => {                                            // 1 · 100 000 người = 1 000 phỉnh; dương tính nhầm rải trong đám đông → gom sang khay
+    const N = must('100000', 100000), per = 100, chips = must('100000 / 100', 1000);
+    const sick = must('100000 / 1000', 100), caught = must('100 * 99 / 100', 99), healthy = must('100000 - 100', 99900);
+    const fa = must('99900 * 5 / 100', 4995), clear = must('99900 - 4995', 94905), pos = must('99 + 4995', 5094);
+    const pct = must('Math.round(99 / 5094 * 100)', 2), redN = must('Math.round(4995 / 100)', 50), goldN = must('Math.round(100 / 100)', 1);
+    const cols = 40, rows = must('1000 / 40', 25), P = 27, x0 = 134, y0 = 236;
+    const order = Array.from({ length: chips }, (_, i) => i).sort((a, b) => hash(a * 1.913 + 7) - hash(b * 1.913 + 7));
+    const kind = new Array(chips).fill(0); kind[order[0]] = 2; for (let k = 1; k <= redN; k++) kind[order[k]] = 1;
+    for (let i = 0; i < chips; i++) { const cx = x0 + (i % cols) * P, cy = y0 + ((i / cols) | 0) * P;
+      chip(cx, cy, 11.5, ['#CFC6B0', C.red, C.brass][kind[i]], { spots: kind[i] ? C.ivory : '#8E8775' }); }
+    text(`${fmt(N)} people take the test`, 120, 168, `italic 600 60px ${CG}`, C.ivory);
+    g.font = `500 28px ${MONO}`; const lw = g.measureText(`≈ ${per} people`).width;
+    chip(1188 - lw - 30, 152, 15, '#CFC6B0', { spots: '#8E8775' }); text(`≈ ${per} people`, 1188, 162, `500 28px ${MONO}`, C.ivory, 'right');
+    const lg = [[C.brass, `${sick} sick, ${caught} caught`], [C.red, `${fmt(fa)} false alarms`], ['#CFC6B0', `${fmt(clear)} clear`]];
+    let lx = 134; lg.forEach(([c, s]) => { chip(lx, 958, 14, c, { spots: c === C.red || c === C.brass ? C.ivory : '#8E8775' }); lx += 30 + text(s, lx + 26, 968, `500 28px ${MONO}`, C.ivory) + 44; });
+    // khay bên phải: chỉ những ai cầm kết quả dương tính
+    g.save(); shadow(30, 14, 0.5); g.fillStyle = 'rgba(10,30,22,.55)'; g.beginPath(); g.roundRect(1290, 110, 540, 870, 26); g.fill(); g.restore();
+    g.strokeStyle = C.print; g.lineWidth = 2; g.beginPath(); g.roundRect(1306, 126, 508, 838, 18); g.stroke();
+    text('HOLDING A POSITIVE', 1560, 184, `500 30px ${MONO}`, C.print, 'center');
+    chip(1373, 262, 26, C.brass); text(`${caught} really sick`, 1416, 274, `500 30px ${MONO}`, C.ivory);
+    for (let k = 0; k < redN; k++) chip(1353 + (k % 10) * 46, 344 + ((k / 10) | 0) * 46, 19, C.red);
+    chip(1373, 600, 19, C.red); text(`${fmt(fa)} healthy`, 1416, 610, `500 30px ${MONO}`, C.ivory);
+    g.fillStyle = C.print; g.fillRect(1350, 650, 420, 2);
+    text(`${caught} / ${fmt(pos)}`, 1560, 768, `800 80px ${ARC}`, C.ivory, 'center');
+    text(`≈ ${pct}%`, 1560, 918, `800 150px ${ARC}`, C.brass, 'center');
+  },
+];
+
+(async () => {
+  await Promise.all(['800 150px', '800 80px', '800 64px', '800 32px'].map(f => document.fonts.load(f + ' "Archivo"'))
+    .concat(['500 32px', '500 30px', '500 28px'].map(f => document.fonts.load(f + ' "IBM Plex Mono"')))
+    .concat(['italic 600 76px', 'italic 600 60px', 'italic 600 42px'].map(f => document.fonts.load(f + ' "Cormorant Garamond"'))));
+  await new Promise((res, rej) => { const im = new Image(); im.onload = () => { IM['coin-cover'] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img'));
+    im.src = '../../assets/character-v2/cut/pose-coin-cover.png'; });
+  FELT = felt(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(FELT, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

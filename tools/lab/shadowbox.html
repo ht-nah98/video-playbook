@@ -1,0 +1,292 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — shadowbox</title>
+<style>
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#F2EADB;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Shadowbox: giấy và đèn" (solid-geometry). Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/shadowbox.html --dur 2 --t 0.5,1.5 --outdir out/_lab/shadowbox
+// Ý trung tâm: không gian là đồ thủ công bằng giấy trên bàn, có MỘT ngọn đèn treo cố định trên cao. Đèn đổ bóng thật xuống
+//   mặt giấy — mà bóng chính là hình chiếu: bài toán không gian nào cũng kết thúc thành một hình phẳng trên tờ giấy.
+//   "Cái bóng" = vệt cam đất mềm (bóng đèn tính từ toạ độ thật); "tam giác cần tìm" cũng tô cam đất. "Căn phòng" = hộp
+//   bìa gấp mở nắp (shadowbox) nhìn chéo từ trên, đèn treo giữa trần, trần 3 m là chiều cao hộp, đường chéo = sợi chỉ mực.
+// Màu: giấy kem #F2EADB (vân sợi) · bìa trắng ngà #FBF6EC (mặt gấp sáng/tối theo pháp tuyến) · mực xanh đậm #1D3557 (nét,
+//   chữ) · cam đất #C0643A (bóng/tam giác; chữ #9A4320 = 5.5:1) · chì #55606E (chữ phụ, 5.4:1) · đèn #FFE7B0 · giấy màu
+//   #2E7F7A cho khối 20 mặt (hô ứng khối mascot cầm). Đỏ không dùng — cái sai = nếp gấp rách, đánh dấu bằng xé giấy.
+// Chữ: Cormorant Garamond LN nghiêng (tên điểm, đường, lời dẫn) · IBM Plex Mono (nhãn nhỏ, đếm). ⊥ ⇔ vẽ tay (font thiếu).
+// Tiếng: page (lật tờ/đặt mặt phẳng) · pen (kẻ nét mực) · flap (gấp mặt) · door (mở nắp hộp/phòng) · shimmer (bật đèn,
+//   bóng hiện) · tear (cái sai) · tick (đếm mặt) · snap (khối gấp khít) · correct.
+// Phần khác: ghế ba chân = 3 que giấy cuộn đứng vững trên tờ giấy, 4 que thì cập kênh · cầu vượt = hai dải bìa chéo nhau,
+//   bóng chúng cắt nhau mà chúng không chạm · cuốn sách mở = hai tấm bìa gập, góc nhị diện là nếp gấp · thang dựa tường =
+//   que tựa vách hộp, bóng thang trên sàn tạo tam giác cam · xếp khối đơn vị = khối giấy gấp bỏ vào hộp-phòng · lăng trụ cắt
+//   3 chóp = lăng trụ giấy mở ra 3 chóp tô ba sắc giấy · bóc nhãn lon = trụ bìa, nhãn giấy bóc trải phẳng thành hình chữ nhật
+//   · Archimedes = quả cầu giấy trong ống bìa, bóng hai cái trùng nhau · tóm tắt = các mô hình xếp trên kệ dưới cùng ngọn đèn.
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { paper: '#F2EADB', card: [251, 246, 236], ink: '#1D3557', inkA: a => `rgba(29,53,87,${a})`, terra: '#C0643A', terraT: '#9A4320',
+  lead: '#55606E', lamp: '#FFE7B0', teal: [46, 127, 122] };
+const CG = '"Cormorant Garamond"', MONO = '"IBM Plex Mono"';
+const IM = {}, SIL = {}; let DESK, GRAIN, ready = false;
+const must = (name, v, want, eps = 0) => { if (!(Math.abs(v - want) <= eps)) throw new Error(`sai: ${name} = ${v} ≠ ${want}`); return v; };
+
+// ── vec3 + camera (yaw quanh z, pitch, khoảng cách, FOV ~32°) ──
+const add = (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]], sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]];
+const mul = (a, s) => [a[0] * s, a[1] * s, a[2] * s], dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+const norm = a => mul(a, 1 / Math.hypot(...a));
+function camera({ yaw, pitch, dist, target, fov = 32, cx = W / 2, cy = H / 2 }) {
+  const y = yaw * Math.PI / 180, p = pitch * Math.PI / 180, F = (H / 2) / Math.tan(fov * Math.PI / 360);
+  const pos = add(target, mul([Math.cos(p) * Math.sin(y), -Math.cos(p) * Math.cos(y), Math.sin(p)], dist));
+  const f = norm(sub(target, pos)), r = norm(cross(f, [0, 0, 1])), u = cross(r, f);
+  const P = q => { const d = sub(q, pos), z = dot(d, f); return [cx + F * dot(d, r) / z, cy - F * dot(d, u) / z, z]; };
+  return { P, pos };
+}
+
+// ── giấy bàn: kem, vân sợi, tối nhẹ ở mép (dựng một lần lúc nạp) ──
+function desk() {
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H);
+  for (let i = 0; i < W * H; i++) {
+    const px = i % W, py = (i / W) | 0, r = Math.hypot((px - W * 0.52) / W, (py - H * 0.42) / H);
+    const v = 1.02 - 0.22 * r * r, n = (hash(i * 0.731) - 0.5) * 7 + (hash(((px >> 3) + (py >> 1) * 977) * 0.13) - 0.5) * 4;
+    d.data[i * 4] = 242 * v + n; d.data[i * 4 + 1] = 234 * v + n; d.data[i * 4 + 2] = 219 * v + n * 0.8; d.data[i * 4 + 3] = 255;
+  }
+  x.putImageData(d, 0, 0);
+  for (let k = 0; k < 900; k++) {                       // sợi giấy: nét cong ngắn rất mờ
+    const sx = hash(k * 1.37) * W, sy = hash(k * 2.71) * H, a = hash(k * 3.9) * Math.PI, l = 8 + hash(k * 5.3) * 22;
+    x.strokeStyle = hash(k * 7.7) > 0.5 ? 'rgba(150,130,100,0.10)' : 'rgba(255,255,255,0.35)'; x.lineWidth = 0.8;
+    x.beginPath(); x.moveTo(sx, sy); x.quadraticCurveTo(sx + l * 0.5 * Math.cos(a + 0.4), sy + l * 0.5 * Math.sin(a + 0.4), sx + l * Math.cos(a), sy + l * Math.sin(a)); x.stroke();
+  }
+  return c;
+}
+function grain() { const c = mk(256, 256), x = c.getContext('2d'), d = x.createImageData(256, 256);
+  for (let i = 0; i < 256 * 256; i++) { const v = 128 + (hash(i * 0.917 + 3) - 0.5) * 120; d.data[i * 4] = d.data[i * 4 + 1] = d.data[i * 4 + 2] = v; d.data[i * 4 + 3] = 255; }
+  x.putImageData(d, 0, 0); return c; }
+const poly = (pts) => { g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath(); };
+const rgb = (c, k = 1, a = 1) => `rgba(${c.map(v => Math.round(Math.min(255, v * k))).join(',')},${a})`;
+function text(s, x, y, font, color, align = 'left', ls = 0) { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.letterSpacing = ls + 'px'; g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; return w; }
+const label = (s, x, y, color = C.lead, align = 'left', size = 26) => text(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 3);
+const it = (s, x, y, size, color = C.ink, align = 'left', wt = 600) => text(s, x, y, `italic ${wt} ${size}px ${CG}`, color, align);
+function line(a, b, color, w, dash = []) { g.save(); g.strokeStyle = color; g.lineWidth = w; g.lineCap = 'round'; g.setLineDash(dash);
+  g.beginPath(); g.moveTo(a[0], a[1]); g.lineTo(b[0], b[1]); g.stroke(); g.restore(); }
+function hull(pts) {                                    // bao lồi 2D (monotone chain) — bóng của khối lồi
+  const p = pts.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1]), cr = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
+  const lo = [], up = [];
+  for (const q of p) { while (lo.length > 1 && cr(lo[lo.length - 2], lo[lo.length - 1], q) <= 0) lo.pop(); lo.push(q); }
+  for (const q of p.reverse()) { while (up.length > 1 && cr(up[up.length - 2], up[up.length - 1], q) <= 0) up.pop(); up.push(q); }
+  return lo.slice(0, -1).concat(up.slice(0, -1));
+}
+function inPoly(pt, P) { let c = false; for (let i = 0, j = P.length - 1; i < P.length; j = i++)
+  if ((P[i][1] > pt[1]) !== (P[j][1] > pt[1]) && pt[0] < (P[j][0] - P[i][0]) * (pt[1] - P[i][1]) / (P[j][1] - P[i][1]) + P[i][0]) c = !c; return c; }
+
+// ── đèn treo: dây từ mép trên, chao giấy xếp nếp, bóng đèn sáng ──
+function lamp(x, y, s = 1) {
+  const pool = g.createRadialGradient(x, y + 60 * s, 10, x, y + 60 * s, 300 * s);
+  pool.addColorStop(0, 'rgba(255,231,176,0.85)'); pool.addColorStop(1, 'rgba(255,231,176,0)');
+  g.fillStyle = pool; g.fillRect(x - 320 * s, y - 260 * s, 640 * s, 640 * s);
+  line([x, 0], [x, y - 52 * s], C.ink, 3);
+  g.save(); g.translate(x, y); g.scale(s, s);
+  g.fillStyle = '#FFF6DA'; g.beginPath(); g.ellipse(0, 40, 34, 16, 0, 0, 7); g.fill();          // bóng đèn lộ dưới chao
+  const n = 7, top = 18, bot = 78, h0 = -52, h1 = 34;                                            // chao giấy xếp nếp
+  for (let i = 0; i < n; i++) {
+    const u0 = i / n, u1 = (i + 1) / n, xa = -top + 2 * top * u0, xb = -top + 2 * top * u1, xc = -bot + 2 * bot * u1, xd = -bot + 2 * bot * u0;
+    const k = 0.80 + 0.2 * Math.sin((u0 + 0.5 / n) * Math.PI) + (i % 2 ? -0.06 : 0.04);
+    g.fillStyle = rgb(C.card, k); poly([[xa, h0], [xb, h0], [xc, h1], [xd, h1]]); g.fill();
+  }
+  g.strokeStyle = C.ink; g.lineWidth = 3; g.lineJoin = 'round'; poly([[-top, h0], [top, h0], [bot, h1], [-bot, h1]]); g.stroke();
+  g.restore();
+}
+// ── nhân vật: ảnh cắt + bóng đổ mềm (silhouette làm mờ một lần lúc nạp) ──
+function figure(name, x, foot, h, crop) {
+  const im = IM[name], sh0 = im.height * crop, s = h / sh0, w = im.width * s;
+  g.save(); g.globalAlpha = 0.20; g.drawImage(SIL[name], 0, 0, im.width, sh0, x + 18, foot - h + 12, w, h); g.restore();
+  g.drawImage(im, 0, 0, im.width, sh0, x, foot - h, w, h);
+  return { x, y: foot - h, w, h, s };
+}
+// ── ký hiệu vẽ tay (Cormorant/Plex không có ⊥ ⇔) ──
+function perpSym(x, y, s, color) { line([x - s * 0.42, y], [x + s * 0.42, y], color, s * 0.09); line([x, y], [x, y - s * 0.72], color, s * 0.09); return s * 0.84; }
+function iffSym(x, y, s, color) { const w = s * 1.1, m = y - s * 0.3, d = s * 0.11, hd = s * 0.22;
+  g.save(); g.strokeStyle = color; g.lineWidth = s * 0.06; g.lineCap = g.lineJoin = 'round';
+  g.beginPath(); g.moveTo(x + hd, m - d); g.lineTo(x + w - hd, m - d); g.moveTo(x + hd, m + d); g.lineTo(x + w - hd, m + d); g.stroke();
+  g.beginPath(); g.moveTo(x + hd * 1.6, m - hd * 1.3); g.lineTo(x, m); g.lineTo(x + hd * 1.6, m + hd * 1.3);
+  g.moveTo(x + w - hd * 1.6, m - hd * 1.3); g.lineTo(x + w, m); g.lineTo(x + w - hd * 1.6, m + hd * 1.3); g.stroke(); g.restore(); return w; }
+function rightAngle(P, O, u, v, s, color) {             // dấu góc vuông 3D: hình vuông cạnh s trong mặt (u, v), chiếu ra màn hình
+  const a = P(add(O, mul(u, s))), b = P(add(add(O, mul(u, s)), mul(v, s))), c = P(add(O, mul(v, s)));
+  g.save(); g.strokeStyle = color; g.lineWidth = 3; g.lineJoin = 'round'; g.beginPath(); g.moveTo(a[0], a[1]); g.lineTo(b[0], b[1]); g.lineTo(c[0], c[1]); g.stroke(); g.restore();
+}
+
+// ── khối Platon: đỉnh chuẩn → mặt = mặt phẳng tựa (mọi đỉnh một phía) → đếm V, E, F từ chính lưới ──
+const PHI = (1 + Math.sqrt(5)) / 2;
+const pm = (...a) => a.reduce((acc, v) => acc.flatMap(p => (v === 0 ? [[...p, 0]] : [[...p, v], [...p, -v]])), [[]]);
+const SOLIDS = [
+  { name: 'tetrahedron', V: [[1, 1, 1], [1, -1, -1], [-1, 1, -1], [-1, -1, 1]], want: [4, 6, 4] },
+  { name: 'cube', V: pm(1, 1, 1), want: [8, 12, 6] },
+  { name: 'octahedron', V: [...pm(1, 0, 0), ...pm(0, 1, 0), ...pm(0, 0, 1)], want: [6, 12, 8] },
+  { name: 'dodecahedron', V: [...pm(1, 1, 1), ...pm(0, 1 / PHI, PHI), ...pm(1 / PHI, PHI, 0), ...pm(PHI, 0, 1 / PHI)], want: [20, 30, 12] },
+  { name: 'icosahedron', V: [...pm(0, 1, PHI), ...pm(1, PHI, 0), ...pm(PHI, 0, 1)], want: [12, 30, 20] },
+];
+function mesh(V) {
+  const faces = [], seen = new Set(), n = V.length;
+  for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) for (let k = j + 1; k < n; k++) {
+    let N = cross(sub(V[j], V[i]), sub(V[k], V[i])); if (Math.hypot(...N) < 1e-9) continue; N = norm(N);
+    const d = dot(N, V[i]), s = V.map(v => dot(N, v) - d);
+    if (s.every(x => x < 1e-9)) {} else if (s.every(x => x > -1e-9)) { N = mul(N, -1); } else continue;
+    const on = V.map((_, q) => q).filter(q => Math.abs(dot(N, V[q]) - dot(N, V[i])) < 1e-9), key = on.join(',');
+    if (seen.has(key)) continue; seen.add(key);
+    const c = on.reduce((a, q) => add(a, mul(V[q], 1 / on.length)), [0, 0, 0]), e1 = norm(sub(V[on[0]], c)), e2 = cross(N, e1);
+    on.sort((p, q) => Math.atan2(dot(sub(V[p], c), e2), dot(sub(V[p], c), e1)) - Math.atan2(dot(sub(V[q], c), e2), dot(sub(V[q], c), e1)));
+    faces.push(on);
+  }
+  const E = new Map(); faces.forEach((f, fi) => f.forEach((a, t) => { const b = f[(t + 1) % f.length], key = Math.min(a, b) + '-' + Math.max(a, b);
+    (E.get(key) ?? E.set(key, { a: Math.min(a, b), b: Math.max(a, b), f: [] }).get(key)).f.push(fi); }));
+  return { faces, edges: [...E.values()] };
+}
+SOLIDS.forEach(S => {
+  const { faces, edges } = mesh(S.V); S.faces = faces; S.edges = edges;
+  const [V, E, F] = [S.V.length, edges.length, faces.length];
+  must(`${S.name} V`, V, S.want[0]); must(`${S.name} E`, E, S.want[1]); must(`${S.name} F`, F, S.want[2]);
+  must(`${S.name} V−E+F`, V - E + F, 2);
+  const L = edges.map(e => Math.hypot(...sub(S.V[e.a], S.V[e.b]))); L.forEach(l => must(`${S.name} cạnh`, l, L[0], 1e-9));
+  S.counts = { V, E, F, euler: V - E + F };
+});
+
+// đặt khối nằm trên một mặt (mặt 0 úp xuống bàn), xoay quanh trục đứng, kích thước theo bán kính ngoại tiếp
+function place(S, at, R, spin, rest = 0) {
+  const R0 = Math.hypot(...S.V[0]), f = S.faces[rest], c = f.reduce((a, q) => add(a, mul(S.V[q], 1 / f.length)), [0, 0, 0]), n = norm(c);
+  const t = [0, 0, -1], ax = cross(n, t), sn = Math.hypot(...ax), cs = dot(n, t);
+  const rot = v => { if (sn < 1e-12) return cs > 0 ? v : [v[0], -v[1], -v[2]]; const k = mul(ax, 1 / sn);   // Rodrigues
+    return add(add(mul(v, cs), mul(cross(k, v), sn)), mul(k, dot(k, v) * (1 - cs))); };
+  const sp = spin * Math.PI / 180, spinZ = v => [v[0] * Math.cos(sp) - v[1] * Math.sin(sp), v[0] * Math.sin(sp) + v[1] * Math.cos(sp), v[2]];
+  let P = S.V.map(v => spinZ(rot(mul(v, R / R0))));
+  const zmin = Math.min(...P.map(p => p[2])); P = P.map(p => add(p, [at[0], at[1], -zmin]));
+  return P;
+}
+// vẽ khối giấy: bóng (đèn diện rộng = nhiều mẫu điểm) → mặt sau-trước theo painter → cạnh khuất nét đứt → cạnh thấy liền
+function shadowOf(P3, cam, Ls, a) {
+  g.save(); g.fillStyle = `rgba(150,74,38,${a / Ls.length})`;
+  Ls.forEach(L => { const pts = P3.map(p => { const k = L[2] / (L[2] - p[2]); return cam.P(add(L, mul(sub(p, L), k))); }); poly(hull(pts.map(q => [q[0], q[1]]))); g.fill(); });
+  g.restore();
+}
+function solid(S, P3, cam, L, base) {
+  const scr = P3.map(cam.P), ctr = P3.reduce((a, p) => add(a, mul(p, 1 / P3.length)), [0, 0, 0]);
+  const F = S.faces.map(f => { const c = f.reduce((a, q) => add(a, mul(P3[q], 1 / f.length)), [0, 0, 0]);
+    const n = norm(sub(c, ctr)), nn = norm(cross(sub(P3[f[1]], P3[f[0]]), sub(P3[f[2]], P3[f[0]])));
+    const N = dot(nn, n) > 0 ? nn : mul(nn, -1);
+    return { f, c, N, front: dot(N, sub(cam.pos, c)) > 0, z: cam.P(c)[2] }; });
+  F.filter(o => o.front).sort((a, b) => b.z - a.z).forEach(o => {
+    const lit = Math.max(0, dot(o.N, norm(sub(L, o.c)))), k = 0.84 + 0.22 * lit;
+    const pts = o.f.map(q => scr[q]); g.fillStyle = `rgb(${Math.min(255, base[0] * k)},${Math.min(255, base[1] * k ** 1.25)},${Math.min(255, base[2] * k ** 1.7)})`; poly(pts); g.fill();
+    g.save(); g.globalAlpha = 0.07; g.globalCompositeOperation = 'multiply'; g.fillStyle = g.createPattern(GRAIN, 'repeat'); poly(pts); g.fill(); g.restore();
+  });
+  S.edges.forEach(e => { const vis = F[e.f[0]].front || F[e.f[1]].front; if (!vis) line(scr[e.a], scr[e.b], base === C.teal ? 'rgba(232,242,236,0.6)' : C.inkA(0.5), 2.2, [9, 9]); });
+  S.edges.forEach(e => { const vis = F[e.f[0]].front || F[e.f[1]].front; if (vis) line(scr[e.a], scr[e.b], C.ink, 3); });
+  return scr;
+}
+
+const frames = [
+  () => {                                               // 0 · Hồi 4 — định lý ba đường vuông góc
+    const al = 40 * Math.PI / 180, O = [0, 0, 0], A = [1, 0, 0], Bd = [0, Math.cos(al), Math.sin(al)];
+    const Bp = [Bd[0], Bd[1], 0];                                                             // bóng b′ = chiếu b lên z = 0
+    must('a·b′', dot(A, Bp), 0, 1e-12); must('a·b', dot(A, Bd), 0, 1e-12);
+    const cam = camera({ yaw: -40, pitch: 27, dist: 10.2, target: [0.1, 0.75, 0.5], cx: 1260, cy: 560 }), P = cam.P;
+    const card = [[-2.25, -1.0, 0], [2.25, -1.0, 0], [2.25, 2.7, 0], [-2.25, 2.7, 0]], cs = card.map(P);
+    lamp(P(mul(Bd, 2.5))[0], 150, 1.0);
+    // bóng của tấm bìa trên mặt bàn (bìa nhấc cao 0.9 trên bàn; đèn rất xa phía trên)
+    g.save(); for (let i = 0; i < 6; i++) { g.fillStyle = 'rgba(120,80,50,0.035)'; poly(card.map(p => P([p[0] + 0.05 * i - 0.12, p[1] + 0.04 * i - 0.1, -0.9]))); g.fill(); } g.restore();
+    g.fillStyle = rgb(C.card); poly(cs); g.fill();                                            // tấm bìa P
+    g.save(); g.globalAlpha = 0.08; g.globalCompositeOperation = 'multiply'; g.fillStyle = g.createPattern(GRAIN, 'repeat'); poly(cs); g.fill(); g.restore();
+    const edge = card.map(p => P([p[0], p[1], -0.06]));                                       // mép dày của bìa (phía trước)
+    g.fillStyle = rgb(C.card, 0.80); poly([cs[0], cs[1], edge[1], edge[0]]); g.fill(); poly([cs[1], cs[2], edge[2], edge[1]]); g.fill();
+    g.strokeStyle = C.ink; g.lineWidth = 3; g.lineJoin = 'round'; poly(cs); g.stroke();
+    // vũng sáng của đèn trên bìa quanh chân bóng
+    const Ls = 2.5, B = mul(Bd, Ls), Bsh = [B[0], B[1], 0], pB = P(B), pBs = P(Bsh), pO = P(O);
+    const pool = g.createRadialGradient(pBs[0], pBs[1], 10, pBs[0], pBs[1], 330); pool.addColorStop(0, 'rgba(255,236,190,0.75)'); pool.addColorStop(1, 'rgba(255,236,190,0)');
+    g.save(); poly(cs); g.clip(); g.fillStyle = pool; g.fillRect(pBs[0] - 340, pBs[1] - 340, 680, 680); g.restore();
+    // bóng b′: vệt cam đất mềm (mẫu đèn rộng), rồi đường b′ kéo dài mảnh trên bìa
+    for (let i = 0; i < 7; i++) { const w = 26 - i * 3.2; line(pO, pBs, `rgba(192,100,58,${0.10})`, w); }
+    line(pO, pBs, C.terra, 6);
+    const bpFar = P(mul(Bp, Ls * Math.cos(al) + 0.55)), bpNear = P(mul(Bp, -0.85));
+    line(pBs, bpFar, C.terra, 3, [2, 10]); line(pO, bpNear, C.terra, 3, [2, 10]);
+    // đường a trong P (nét mực)
+    const a0 = P([-2.1, 0, 0]), a1 = P([2.1, 0, 0]); line(a0, a1, C.ink, 5);
+    // tia đèn thẳng đứng: từ đèn qua B xuống B′, và vài tia song song dọc b
+    const lampY = 150, lampX = pB[0];
+    [0.35, 0.65].forEach(u => { const q = P(mul(Bd, Ls * u)), qs = P([0, Bd[1] * Ls * u, 0]); line(q, qs, C.inkA(0.45), 2, [3, 9]); });
+    line(pB, pBs, C.ink, 2.5, [3, 9]);
+    const ah = (x, y) => { g.save(); g.fillStyle = C.ink; g.beginPath(); g.moveTo(x, y); g.lineTo(x - 9, y - 18); g.lineTo(x + 9, y - 18); g.closePath(); g.fill(); g.restore(); };
+    ah(pBs[0], pBs[1] - 12);
+    // đường b: phần dưới bìa khuất (nét đứt), phần trên là que giấy cuộn
+    const lowL = [0.85, 0.7, 0.55, 0.4].find(l => inPoly(P(mul(Bd, -l)), cs)); if (!lowL) throw new Error('đầu dưới b lòi ra ngoài bìa');
+    const bLow = P(mul(Bd, -lowL));
+    line(pO, bLow, C.inkA(0.55), 3, [10, 10]);
+    line(pO, pB, C.ink, 7);
+    // dấu góc vuông: a ⊥ b′ (trong P, phía +x) và a ⊥ b (phía −x)
+    rightAngle(P, O, A, norm(Bp), 0.34, C.terra);
+    rightAngle(P, O, [-1, 0, 0], Bd, 0.26, C.ink);
+    g.fillStyle = C.ink; g.beginPath(); g.arc(pO[0], pO[1], 7, 0, 7); g.fill();
+    g.fillStyle = C.ink; g.beginPath(); g.arc(pB[0], pB[1], 6, 0, 7); g.fill();
+    g.fillStyle = C.terra; g.beginPath(); g.arc(pBs[0], pBs[1], 6, 0, 7); g.fill();
+    // nhãn (phẳng, thẳng màn hình)
+    { const q = P([-1.75, -0.55, 0]); it('P', q[0] - 20, q[1] + 20, 64); }
+    it('a', a1[0] - 8, a1[1] + 52, 60);
+    it('b', pB[0] + 20, pB[1] + 6, 60);
+    it('b′', pBs[0] - 40, pBs[1] + 62, 60, C.terraT);
+    it('O', pO[0] - 60, pO[1] + 60, 48);
+    label('light, straight down', lampX + 100, lampY + 30, C.lead, 'left', 24);
+    // mascot chỉ tay sang phải → đặt bên trái
+    figure('pose-point', -70, H, 560, 0.45);
+    // tiêu đề + định lý
+    label('Act IV · three perpendiculars', 96, 120, C.lead);
+    let x = 96; const y = 250, S = 92;
+    x += it('a', x, y, S); x += 18; x += perpSym(x + S * 0.42, y - 2, S, C.ink) + 18; x += it('b′', x, y, S, C.terraT);
+    x += 40; x += iffSym(x, y, S, C.ink) + 40;
+    x += it('a', x, y, S); x += 18; x += perpSym(x + S * 0.42, y - 2, S, C.ink) + 18; it('b', x, y, S);
+    it('the shadow decides it', 96, 340, 46, C.lead, 'left', 500);
+  },
+  () => {                                               // 1 · Hồi 7 — only five
+    const cam = camera({ yaw: 0, pitch: 24, dist: 13.5, target: [0, 0, 0.7], cx: 790, cy: 470 });
+    const LAMP = [0, 1.8, 4.6], Ls = [-0.12, -0.04, 0.04, 0.12].flatMap(dx => [-0.12, -0.04, 0.04, 0.12].map(dy => add(LAMP, [dx, dy, 0])));
+    const row = [[-4.0, 0.3, 0.92, 18], [-2.0, 0.0, 0.74, 24], [0, 0.0, 0.84, 14], [2.0, 0.0, 0.8, 8], [4.0, 0.3, 0.76, 21]];
+    const bases = [C.card, C.card, C.card, C.card, C.teal];
+    const placed = SOLIDS.map((S, i) => place(S, [row[i][0], row[i][1]], row[i][2], row[i][3]));
+    const pl = cam.P(LAMP), lx = pl[0];
+    // vũng sáng trên bàn dưới đèn
+    const pc = cam.P([0, 0.3, 0]), pool = g.createRadialGradient(pc[0], pc[1], 20, pc[0], pc[1], 760);
+    pool.addColorStop(0, 'rgba(255,238,198,0.65)'); pool.addColorStop(1, 'rgba(255,238,198,0)'); g.fillStyle = pool; g.fillRect(0, 0, W, H);
+    placed.forEach(P3 => shadowOf(P3, cam, Ls, 0.5));
+    const scr = SOLIDS.map((S, i) => solid(S, placed[i], cam, LAMP, bases[i]));
+    lamp(lx, 150, 1.0);
+    SOLIDS.forEach((S, i) => {
+      const xs = scr[i].map(p => p[0]), cx = (Math.min(...xs) + Math.max(...xs)) / 2, by = 742;
+      it(S.name, cx, by, 44, C.ink, 'center');
+      label(`${S.counts.F} faces`, cx, by + 46, S.name === 'icosahedron' ? '#1F6F6C' : C.lead, 'center', 26);
+    });
+    label('Act VII · regular polyhedra', 96, 120, C.lead);
+    it('Only five.', 96, 230, 104);
+    const ok = SOLIDS.every(S => S.counts.euler === 2) ? 2 : NaN;
+    label(`every one: V − E + F = ${must('Euler', ok, 2)}`, 96, 930, C.lead, 'left', 26);
+    figure('pose-icosa', 1455, H, 740, 1);
+  },
+];
+
+(async () => {
+  await Promise.all(['italic 600 104px', 'italic 600 92px', 'italic 600 60px', 'italic 600 44px', 'italic 500 46px'].map(f => document.fonts.load(`${f} ${CG}`))
+    .concat(['500 26px', '500 24px'].map(f => document.fonts.load(`${f} ${MONO}`))));
+  await Promise.all(['pose-point', 'pose-icosa'].map(n => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[n] = toCanvas(im); const s = mk(im.width, im.height), x = s.getContext('2d');
+      x.filter = 'blur(10px)'; x.drawImage(im, 0, 0); x.filter = 'none'; x.globalCompositeOperation = 'source-in'; x.fillStyle = '#5A3820'; x.fillRect(0, 0, im.width, im.height);
+      SIL[n] = s; res(); };
+    im.onerror = () => rej(new Error('img ' + n)); im.src = `../../assets/character-v2/cut/${n}.png`; })));
+  DESK = desk(); GRAIN = grain(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.drawImage(DESK, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

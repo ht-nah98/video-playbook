@@ -1,0 +1,1192 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 52.261
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "I have just flipped a coin, caught it, and slapped it down on the back of my hand.",
+   "idea": false,
+   "start": 0.02,
+   "end": 3.886,
+   "words": [
+    {
+     "w": "i",
+     "start": 0.02,
+     "end": 0.04,
+     "conf": 0.0
+    },
+    {
+     "w": "have",
+     "start": 0.1,
+     "end": 0.18,
+     "conf": 0.997
+    },
+    {
+     "w": "just",
+     "start": 0.2,
+     "end": 0.361,
+     "conf": 0.996
+    },
+    {
+     "w": "flipped",
+     "start": 0.561,
+     "end": 0.861,
+     "conf": 0.995
+    },
+    {
+     "w": "a",
+     "start": 0.961,
+     "end": 0.981,
+     "conf": 0.003
+    },
+    {
+     "w": "coin",
+     "start": 1.062,
+     "end": 1.342,
+     "conf": 0.747
+    },
+    {
+     "w": "caught",
+     "start": 1.462,
+     "end": 1.702,
+     "conf": 0.626
+    },
+    {
+     "w": "it",
+     "start": 1.783,
+     "end": 1.863,
+     "conf": 0.5
+    },
+    {
+     "w": "and",
+     "start": 2.163,
+     "end": 2.243,
+     "conf": 0.986
+    },
+    {
+     "w": "slapped",
+     "start": 2.303,
+     "end": 2.564,
+     "conf": 0.959
+    },
+    {
+     "w": "it",
+     "start": 2.584,
+     "end": 2.644,
+     "conf": 0.993
+    },
+    {
+     "w": "down",
+     "start": 2.664,
+     "end": 2.904,
+     "conf": 0.8
+    },
+    {
+     "w": "on",
+     "start": 2.924,
+     "end": 2.984,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 3.004,
+     "end": 3.064,
+     "conf": 0.998
+    },
+    {
+     "w": "back",
+     "start": 3.084,
+     "end": 3.285,
+     "conf": 0.935
+    },
+    {
+     "w": "of",
+     "start": 3.305,
+     "end": 3.365,
+     "conf": 0.998
+    },
+    {
+     "w": "my",
+     "start": 3.425,
+     "end": 3.525,
+     "conf": 0.5
+    },
+    {
+     "w": "hand",
+     "start": 3.585,
+     "end": 3.886,
+     "conf": 0.599
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "I haven't looked at it yet. So let me ask you a simple question. What is the probability that it landed heads?",
+   "idea": true,
+   "start": 4.316,
+   "end": 9.656,
+   "words": [
+    {
+     "w": "i",
+     "start": 4.316,
+     "end": 4.336,
+     "conf": 0.0
+    },
+    {
+     "w": "haven't",
+     "start": 4.396,
+     "end": 4.577,
+     "conf": 0.959
+    },
+    {
+     "w": "looked",
+     "start": 4.597,
+     "end": 4.798,
+     "conf": 0.98
+    },
+    {
+     "w": "at",
+     "start": 4.818,
+     "end": 4.878,
+     "conf": 0.995
+    },
+    {
+     "w": "it",
+     "start": 4.898,
+     "end": 4.979,
+     "conf": 0.664
+    },
+    {
+     "w": "yet",
+     "start": 5.039,
+     "end": 5.26,
+     "conf": 1.0
+    },
+    {
+     "w": "so",
+     "start": 5.741,
+     "end": 5.782,
+     "conf": 0.5
+    },
+    {
+     "w": "let",
+     "start": 5.802,
+     "end": 5.922,
+     "conf": 0.601
+    },
+    {
+     "w": "me",
+     "start": 5.962,
+     "end": 6.002,
+     "conf": 0.984
+    },
+    {
+     "w": "ask",
+     "start": 6.103,
+     "end": 6.243,
+     "conf": 0.666
+    },
+    {
+     "w": "you",
+     "start": 6.263,
+     "end": 6.344,
+     "conf": 0.984
+    },
+    {
+     "w": "a",
+     "start": 6.384,
+     "end": 6.404,
+     "conf": 0.009
+    },
+    {
+     "w": "simple",
+     "start": 6.424,
+     "end": 6.725,
+     "conf": 0.85
+    },
+    {
+     "w": "question",
+     "start": 6.785,
+     "end": 7.207,
+     "conf": 0.891
+    },
+    {
+     "w": "what",
+     "start": 7.548,
+     "end": 7.669,
+     "conf": 0.759
+    },
+    {
+     "w": "is",
+     "start": 7.689,
+     "end": 7.789,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 7.809,
+     "end": 7.889,
+     "conf": 0.999
+    },
+    {
+     "w": "probability",
+     "start": 7.909,
+     "end": 8.472,
+     "conf": 1.0
+    },
+    {
+     "w": "that",
+     "start": 8.572,
+     "end": 8.672,
+     "conf": 0.748
+    },
+    {
+     "w": "it",
+     "start": 8.733,
+     "end": 8.793,
+     "conf": 0.499
+    },
+    {
+     "w": "landed",
+     "start": 8.873,
+     "end": 9.214,
+     "conf": 0.835
+    },
+    {
+     "w": "heads",
+     "start": 9.335,
+     "end": 9.656,
+     "conf": 0.805
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "The familiar answer is fifty percent. But wait a moment, doesn't something feel a little strange here?",
+   "idea": false,
+   "start": 10.706,
+   "end": 15.443,
+   "words": [
+    {
+     "w": "the",
+     "start": 10.706,
+     "end": 10.766,
+     "conf": 0.195
+    },
+    {
+     "w": "familiar",
+     "start": 10.786,
+     "end": 11.087,
+     "conf": 0.838
+    },
+    {
+     "w": "answer",
+     "start": 11.168,
+     "end": 11.429,
+     "conf": 0.824
+    },
+    {
+     "w": "is",
+     "start": 11.469,
+     "end": 11.529,
+     "conf": 0.988
+    },
+    {
+     "w": "fifty",
+     "start": 11.609,
+     "end": 11.83,
+     "conf": 0.427
+    },
+    {
+     "w": "percent",
+     "start": 11.89,
+     "end": 12.272,
+     "conf": 0.766
+    },
+    {
+     "w": "but",
+     "start": 13.195,
+     "end": 13.275,
+     "conf": 0.855
+    },
+    {
+     "w": "wait",
+     "start": 13.295,
+     "end": 13.436,
+     "conf": 0.486
+    },
+    {
+     "w": "a",
+     "start": 13.456,
+     "end": 13.476,
+     "conf": 0.881
+    },
+    {
+     "w": "moment",
+     "start": 13.496,
+     "end": 13.777,
+     "conf": 0.865
+    },
+    {
+     "w": "doesn't",
+     "start": 13.898,
+     "end": 14.078,
+     "conf": 0.656
+    },
+    {
+     "w": "something",
+     "start": 14.098,
+     "end": 14.379,
+     "conf": 0.918
+    },
+    {
+     "w": "feel",
+     "start": 14.399,
+     "end": 14.54,
+     "conf": 0.753
+    },
+    {
+     "w": "a",
+     "start": 14.56,
+     "end": 14.58,
+     "conf": 0.14
+    },
+    {
+     "w": "little",
+     "start": 14.6,
+     "end": 14.781,
+     "conf": 0.878
+    },
+    {
+     "w": "strange",
+     "start": 14.881,
+     "end": 15.262,
+     "conf": 0.872
+    },
+    {
+     "w": "here",
+     "start": 15.323,
+     "end": 15.443,
+     "conf": 0.636
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "The coin has already landed. It is lying still under my hand, one face pointing up, and nothing can change that now.",
+   "idea": false,
+   "start": 15.833,
+   "end": 21.366,
+   "words": [
+    {
+     "w": "the",
+     "start": 15.833,
+     "end": 15.893,
+     "conf": 0.674
+    },
+    {
+     "w": "coin",
+     "start": 15.953,
+     "end": 16.274,
+     "conf": 0.724
+    },
+    {
+     "w": "has",
+     "start": 16.294,
+     "end": 16.414,
+     "conf": 0.747
+    },
+    {
+     "w": "already",
+     "start": 16.474,
+     "end": 16.715,
+     "conf": 0.857
+    },
+    {
+     "w": "landed",
+     "start": 16.795,
+     "end": 17.196,
+     "conf": 0.996
+    },
+    {
+     "w": "it",
+     "start": 17.597,
+     "end": 17.657,
+     "conf": 0.5
+    },
+    {
+     "w": "is",
+     "start": 17.677,
+     "end": 17.757,
+     "conf": 0.999
+    },
+    {
+     "w": "lying",
+     "start": 17.838,
+     "end": 18.078,
+     "conf": 0.884
+    },
+    {
+     "w": "still",
+     "start": 18.178,
+     "end": 18.399,
+     "conf": 0.953
+    },
+    {
+     "w": "under",
+     "start": 18.459,
+     "end": 18.599,
+     "conf": 0.715
+    },
+    {
+     "w": "my",
+     "start": 18.619,
+     "end": 18.72,
+     "conf": 1.0
+    },
+    {
+     "w": "hand",
+     "start": 18.8,
+     "end": 18.98,
+     "conf": 0.799
+    },
+    {
+     "w": "one",
+     "start": 19.08,
+     "end": 19.181,
+     "conf": 0.667
+    },
+    {
+     "w": "face",
+     "start": 19.241,
+     "end": 19.461,
+     "conf": 0.748
+    },
+    {
+     "w": "pointing",
+     "start": 19.582,
+     "end": 19.922,
+     "conf": 0.945
+    },
+    {
+     "w": "up",
+     "start": 19.962,
+     "end": 20.063,
+     "conf": 0.51
+    },
+    {
+     "w": "and",
+     "start": 20.263,
+     "end": 20.323,
+     "conf": 0.643
+    },
+    {
+     "w": "nothing",
+     "start": 20.383,
+     "end": 20.624,
+     "conf": 0.877
+    },
+    {
+     "w": "can",
+     "start": 20.644,
+     "end": 20.764,
+     "conf": 0.764
+    },
+    {
+     "w": "change",
+     "start": 20.824,
+     "end": 21.025,
+     "conf": 0.69
+    },
+    {
+     "w": "that",
+     "start": 21.045,
+     "end": 21.185,
+     "conf": 0.8
+    },
+    {
+     "w": "now",
+     "start": 21.245,
+     "end": 21.366,
+     "conf": 0.833
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It isn't hesitating between two possibilities. It is already heads, or it is already tails.",
+   "idea": true,
+   "start": 21.776,
+   "end": 26.398,
+   "words": [
+    {
+     "w": "it",
+     "start": 21.776,
+     "end": 21.836,
+     "conf": 0.999
+    },
+    {
+     "w": "isn't",
+     "start": 21.897,
+     "end": 22.078,
+     "conf": 0.909
+    },
+    {
+     "w": "hesitating",
+     "start": 22.098,
+     "end": 22.64,
+     "conf": 0.99
+    },
+    {
+     "w": "between",
+     "start": 22.66,
+     "end": 22.942,
+     "conf": 0.976
+    },
+    {
+     "w": "two",
+     "start": 22.982,
+     "end": 23.122,
+     "conf": 0.959
+    },
+    {
+     "w": "possibilities",
+     "start": 23.163,
+     "end": 23.886,
+     "conf": 0.927
+    },
+    {
+     "w": "it",
+     "start": 24.268,
+     "end": 24.328,
+     "conf": 0.975
+    },
+    {
+     "w": "is",
+     "start": 24.348,
+     "end": 24.429,
+     "conf": 0.664
+    },
+    {
+     "w": "already",
+     "start": 24.489,
+     "end": 24.69,
+     "conf": 0.869
+    },
+    {
+     "w": "heads",
+     "start": 24.79,
+     "end": 25.092,
+     "conf": 0.914
+    },
+    {
+     "w": "or",
+     "start": 25.393,
+     "end": 25.494,
+     "conf": 0.964
+    },
+    {
+     "w": "it",
+     "start": 25.534,
+     "end": 25.574,
+     "conf": 0.415
+    },
+    {
+     "w": "is",
+     "start": 25.594,
+     "end": 25.675,
+     "conf": 0.933
+    },
+    {
+     "w": "already",
+     "start": 25.715,
+     "end": 25.916,
+     "conf": 0.868
+    },
+    {
+     "w": "tails",
+     "start": 26.036,
+     "end": 26.398,
+     "conf": 0.713
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So that fifty percent is not describing the coin. The only thing still undecided in this whole situation, is you.",
+   "idea": false,
+   "start": 27.428,
+   "end": 33.167,
+   "words": [
+    {
+     "w": "so",
+     "start": 27.428,
+     "end": 27.488,
+     "conf": 0.999
+    },
+    {
+     "w": "that",
+     "start": 27.548,
+     "end": 27.649,
+     "conf": 0.744
+    },
+    {
+     "w": "fifty",
+     "start": 27.709,
+     "end": 27.93,
+     "conf": 0.555
+    },
+    {
+     "w": "percent",
+     "start": 27.95,
+     "end": 28.271,
+     "conf": 0.769
+    },
+    {
+     "w": "is",
+     "start": 28.331,
+     "end": 28.391,
+     "conf": 0.498
+    },
+    {
+     "w": "not",
+     "start": 28.452,
+     "end": 28.552,
+     "conf": 0.684
+    },
+    {
+     "w": "describing",
+     "start": 28.612,
+     "end": 29.074,
+     "conf": 0.881
+    },
+    {
+     "w": "the",
+     "start": 29.094,
+     "end": 29.174,
+     "conf": 0.995
+    },
+    {
+     "w": "coin",
+     "start": 29.194,
+     "end": 29.495,
+     "conf": 0.78
+    },
+    {
+     "w": "the",
+     "start": 29.515,
+     "end": 29.957,
+     "conf": 0.777
+    },
+    {
+     "w": "only",
+     "start": 30.097,
+     "end": 30.278,
+     "conf": 0.778
+    },
+    {
+     "w": "thing",
+     "start": 30.378,
+     "end": 30.559,
+     "conf": 0.787
+    },
+    {
+     "w": "still",
+     "start": 30.679,
+     "end": 30.86,
+     "conf": 0.795
+    },
+    {
+     "w": "undecided",
+     "start": 30.94,
+     "end": 31.522,
+     "conf": 0.889
+    },
+    {
+     "w": "in",
+     "start": 31.542,
+     "end": 31.602,
+     "conf": 0.666
+    },
+    {
+     "w": "this",
+     "start": 31.622,
+     "end": 31.743,
+     "conf": 0.901
+    },
+    {
+     "w": "whole",
+     "start": 31.763,
+     "end": 31.963,
+     "conf": 0.828
+    },
+    {
+     "w": "situation",
+     "start": 31.983,
+     "end": 32.585,
+     "conf": 0.894
+    },
+    {
+     "w": "is",
+     "start": 32.886,
+     "end": 32.967,
+     "conf": 0.5
+    },
+    {
+     "w": "you",
+     "start": 33.067,
+     "end": 33.167,
+     "conf": 0.747
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Then what does that number actually mean?",
+   "idea": true,
+   "start": 33.617,
+   "end": 35.572,
+   "words": [
+    {
+     "w": "then",
+     "start": 33.617,
+     "end": 33.698,
+     "conf": 0.222
+    },
+    {
+     "w": "what",
+     "start": 33.96,
+     "end": 34.061,
+     "conf": 0.756
+    },
+    {
+     "w": "does",
+     "start": 34.081,
+     "end": 34.202,
+     "conf": 0.866
+    },
+    {
+     "w": "that",
+     "start": 34.222,
+     "end": 34.383,
+     "conf": 0.922
+    },
+    {
+     "w": "number",
+     "start": 34.443,
+     "end": 34.766,
+     "conf": 0.999
+    },
+    {
+     "w": "actually",
+     "start": 34.907,
+     "end": 35.25,
+     "conf": 0.879
+    },
+    {
+     "w": "mean",
+     "start": 35.33,
+     "end": 35.572,
+     "conf": 0.811
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It is a much harder question than it looks, and in this video I want to dig into it with you.",
+   "idea": false,
+   "start": 36.583,
+   "end": 40.948,
+   "words": [
+    {
+     "w": "it",
+     "start": 36.583,
+     "end": 36.643,
+     "conf": 0.696
+    },
+    {
+     "w": "is",
+     "start": 36.664,
+     "end": 36.724,
+     "conf": 0.995
+    },
+    {
+     "w": "a",
+     "start": 36.784,
+     "end": 36.804,
+     "conf": 0.001
+    },
+    {
+     "w": "much",
+     "start": 36.945,
+     "end": 37.187,
+     "conf": 0.997
+    },
+    {
+     "w": "harder",
+     "start": 37.267,
+     "end": 37.488,
+     "conf": 0.855
+    },
+    {
+     "w": "question",
+     "start": 37.549,
+     "end": 37.911,
+     "conf": 0.862
+    },
+    {
+     "w": "than",
+     "start": 37.991,
+     "end": 38.112,
+     "conf": 0.8
+    },
+    {
+     "w": "it",
+     "start": 38.172,
+     "end": 38.232,
+     "conf": 0.499
+    },
+    {
+     "w": "looks",
+     "start": 38.252,
+     "end": 38.514,
+     "conf": 0.834
+    },
+    {
+     "w": "and",
+     "start": 38.836,
+     "end": 38.896,
+     "conf": 0.581
+    },
+    {
+     "w": "in",
+     "start": 38.916,
+     "end": 38.977,
+     "conf": 0.999
+    },
+    {
+     "w": "this",
+     "start": 38.997,
+     "end": 39.158,
+     "conf": 0.925
+    },
+    {
+     "w": "video",
+     "start": 39.218,
+     "end": 39.439,
+     "conf": 0.8
+    },
+    {
+     "w": "i",
+     "start": 39.459,
+     "end": 39.479,
+     "conf": 0.0
+    },
+    {
+     "w": "want",
+     "start": 39.801,
+     "end": 39.942,
+     "conf": 0.998
+    },
+    {
+     "w": "to",
+     "start": 40.002,
+     "end": 40.043,
+     "conf": 0.506
+    },
+    {
+     "w": "dig",
+     "start": 40.143,
+     "end": 40.244,
+     "conf": 0.637
+    },
+    {
+     "w": "into",
+     "start": 40.344,
+     "end": 40.525,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 40.606,
+     "end": 40.646,
+     "conf": 0.498
+    },
+    {
+     "w": "with",
+     "start": 40.666,
+     "end": 40.827,
+     "conf": 0.798
+    },
+    {
+     "w": "you",
+     "start": 40.847,
+     "end": 40.948,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "To me, this is the most fascinating part of probability, and also the part that almost everyone skips.",
+   "idea": false,
+   "start": 41.358,
+   "end": 46.334,
+   "words": [
+    {
+     "w": "to",
+     "start": 41.358,
+     "end": 41.398,
+     "conf": 0.999
+    },
+    {
+     "w": "me",
+     "start": 41.458,
+     "end": 41.499,
+     "conf": 0.5
+    },
+    {
+     "w": "this",
+     "start": 41.639,
+     "end": 41.779,
+     "conf": 0.998
+    },
+    {
+     "w": "is",
+     "start": 41.84,
+     "end": 41.9,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 41.92,
+     "end": 41.98,
+     "conf": 0.999
+    },
+    {
+     "w": "most",
+     "start": 42.0,
+     "end": 42.181,
+     "conf": 0.999
+    },
+    {
+     "w": "fascinating",
+     "start": 42.281,
+     "end": 42.823,
+     "conf": 0.87
+    },
+    {
+     "w": "part",
+     "start": 42.883,
+     "end": 43.063,
+     "conf": 0.75
+    },
+    {
+     "w": "of",
+     "start": 43.084,
+     "end": 43.144,
+     "conf": 0.979
+    },
+    {
+     "w": "probability",
+     "start": 43.204,
+     "end": 43.706,
+     "conf": 0.909
+    },
+    {
+     "w": "and",
+     "start": 44.107,
+     "end": 44.187,
+     "conf": 0.925
+    },
+    {
+     "w": "also",
+     "start": 44.307,
+     "end": 44.468,
+     "conf": 0.75
+    },
+    {
+     "w": "the",
+     "start": 44.488,
+     "end": 44.608,
+     "conf": 0.665
+    },
+    {
+     "w": "part",
+     "start": 44.669,
+     "end": 44.929,
+     "conf": 0.751
+    },
+    {
+     "w": "that",
+     "start": 44.949,
+     "end": 45.23,
+     "conf": 0.747
+    },
+    {
+     "w": "almost",
+     "start": 45.291,
+     "end": 45.511,
+     "conf": 0.784
+    },
+    {
+     "w": "everyone",
+     "start": 45.571,
+     "end": 45.913,
+     "conf": 0.874
+    },
+    {
+     "w": "skips",
+     "start": 46.013,
+     "end": 46.334,
+     "conf": 0.802
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And to answer it, we have to start with the way most of us first learned what a probability is.",
+   "idea": true,
+   "start": 46.784,
+   "end": 51.251,
+   "words": [
+    {
+     "w": "and",
+     "start": 46.784,
+     "end": 46.844,
+     "conf": 0.874
+    },
+    {
+     "w": "to",
+     "start": 46.864,
+     "end": 46.924,
+     "conf": 0.668
+    },
+    {
+     "w": "answer",
+     "start": 47.024,
+     "end": 47.285,
+     "conf": 0.83
+    },
+    {
+     "w": "it",
+     "start": 47.325,
+     "end": 47.425,
+     "conf": 0.999
+    },
+    {
+     "w": "we",
+     "start": 47.746,
+     "end": 47.786,
+     "conf": 0.503
+    },
+    {
+     "w": "have",
+     "start": 47.866,
+     "end": 47.986,
+     "conf": 0.791
+    },
+    {
+     "w": "to",
+     "start": 48.026,
+     "end": 48.066,
+     "conf": 0.51
+    },
+    {
+     "w": "start",
+     "start": 48.146,
+     "end": 48.347,
+     "conf": 0.796
+    },
+    {
+     "w": "with",
+     "start": 48.367,
+     "end": 48.447,
+     "conf": 0.502
+    },
+    {
+     "w": "the",
+     "start": 48.467,
+     "end": 48.527,
+     "conf": 0.106
+    },
+    {
+     "w": "way",
+     "start": 48.547,
+     "end": 48.667,
+     "conf": 0.997
+    },
+    {
+     "w": "most",
+     "start": 48.807,
+     "end": 49.048,
+     "conf": 0.837
+    },
+    {
+     "w": "of",
+     "start": 49.108,
+     "end": 49.148,
+     "conf": 0.5
+    },
+    {
+     "w": "us",
+     "start": 49.208,
+     "end": 49.328,
+     "conf": 0.502
+    },
+    {
+     "w": "first",
+     "start": 49.669,
+     "end": 49.949,
+     "conf": 0.772
+    },
+    {
+     "w": "learned",
+     "start": 50.029,
+     "end": 50.23,
+     "conf": 0.846
+    },
+    {
+     "w": "what",
+     "start": 50.25,
+     "end": 50.37,
+     "conf": 0.991
+    },
+    {
+     "w": "a",
+     "start": 50.39,
+     "end": 50.41,
+     "conf": 0.998
+    },
+    {
+     "w": "probability",
+     "start": 50.47,
+     "end": 51.031,
+     "conf": 0.893
+    },
+    {
+     "w": "is",
+     "start": 51.131,
+     "end": 51.251,
+     "conf": 0.5
+    }
+   ]
+  }
+ ]
+}

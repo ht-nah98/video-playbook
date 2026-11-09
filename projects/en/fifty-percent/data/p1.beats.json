@@ -1,0 +1,108 @@
+{
+ "duration": 52.261,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "I have just flipped a coin, caught it, and slapped it down on the back of my hand.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 0.0,
+   "end": 3.946,
+   "wav": "audio/voice/68f7e46b38136baa.wav"
+  },
+  {
+   "text": "I haven't looked at it yet. So let me ask you a simple question. What is the probability that it landed heads?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 4.296,
+   "end": 9.736,
+   "wav": "audio/voice/49b6d2e0b7048cf2.wav"
+  },
+  {
+   "text": "The familiar answer is fifty percent. But wait a moment, doesn't something feel a little strange here?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 10.686,
+   "end": 15.463,
+   "wav": "audio/voice/55184f540b2b7e33.wav"
+  },
+  {
+   "text": "The coin has already landed. It is lying still under my hand, one face pointing up, and nothing can change that now.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 15.813,
+   "end": 21.406,
+   "wav": "audio/voice/c6f8b4bbf6938a25.wav"
+  },
+  {
+   "text": "It isn't hesitating between two possibilities. It is already heads, or it is already tails.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 21.756,
+   "end": 26.458,
+   "wav": "audio/voice/0a36a43ef0f5ab61.wav"
+  },
+  {
+   "text": "So that fifty percent is not describing the coin. The only thing still undecided in this whole situation, is you.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 27.408,
+   "end": 33.247,
+   "wav": "audio/voice/9e1589c8d91c43db.wav"
+  },
+  {
+   "text": "Then what does that number actually mean?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 33.597,
+   "end": 35.613,
+   "wav": "audio/voice/86abd18119fa6fb2.wav"
+  },
+  {
+   "text": "It is a much harder question than it looks, and in this video I want to dig into it with you.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 36.563,
+   "end": 40.988,
+   "wav": "audio/voice/09e7bf51a7f05802.wav"
+  },
+  {
+   "text": "To me, this is the most fascinating part of probability, and also the part that almost everyone skips.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 41.338,
+   "end": 46.414,
+   "wav": "audio/voice/97726162c56a1bab.wav"
+  },
+  {
+   "text": "And to answer it, we have to start with the way most of us first learned what a probability is.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 46.764,
+   "end": 51.311,
+   "wav": "audio/voice/5931135cd472ed4f.wav"
+  }
+ ]
+}

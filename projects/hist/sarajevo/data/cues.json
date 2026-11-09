@@ -1,0 +1,277 @@
+[
+{
+"t": 0.0,
+"kind": "tex-crackle-78rpm-loop",
+"db": -27,
+"end": 236.45000000000002
+},
+{
+"t": 0.0,
+"kind": "_music",
+"file": "projects/hist/_kit/music/m-opening-slippery-place.ogg"
+},
+{
+"t": 0.35,
+"kind": "whoosh-soft",
+"db": -2
+},
+{
+"t": 2.823,
+"kind": "honk",
+"db": -3
+},
+{
+"t": 3.444,
+"kind": "thud",
+"db": -3
+},
+{
+"t": 5.285,
+"kind": "pop",
+"db": 1
+},
+{
+"t": 6.286,
+"kind": "boom-deep",
+"db": 2
+},
+{
+"t": 12.227,
+"kind": "fuse-soft",
+"db": -2
+},
+{
+"t": 29.093,
+"kind": "bonk",
+"db": 2
+},
+{
+"t": 30.275,
+"kind": "bonk",
+"db": 4
+},
+{
+"t": 33.223,
+"kind": "boom",
+"db": 4
+},
+{
+"t": 37.186,
+"kind": "typewriter-soft",
+"db": -2
+},
+{
+"t": 39.01,
+"kind": "hush",
+"end": 39.971
+},
+{
+"t": 40.011,
+"kind": "boom-deep",
+"db": 9
+},
+{
+"t": 42.352,
+"kind": "whoosh-soft",
+"db": -2
+},
+{
+"t": 42.602,
+"kind": "amb-wind-drone-loop",
+"db": -24,
+"end": 83.436
+},
+{
+"t": 54.772,
+"kind": "stamp",
+"db": 7
+},
+{
+"t": 56.736,
+"kind": "pop",
+"db": 1
+},
+{
+"t": 59.812,
+"kind": "stamp",
+"db": 3
+},
+{
+"t": 72.688,
+"kind": "thud",
+"db": 4
+},
+{
+"t": 83.136,
+"kind": "_music",
+"file": "projects/hist/_kit/music/m-march-fall-in-line.ogg"
+},
+{
+"t": 91.785,
+"kind": "pop",
+"db": 1
+},
+{
+"t": 103.248,
+"kind": "hush",
+"end": 103.629
+},
+{
+"t": 103.629,
+"kind": "pop",
+"db": 0
+},
+{
+"t": 115.383,
+"kind": "bonk",
+"db": 0
+},
+{
+"t": 123.482,
+"kind": "stamp",
+"db": 6
+},
+{
+"t": 135.267,
+"kind": "engine",
+"db": -3
+},
+{
+"t": 140.43,
+"kind": "stamp",
+"db": 4
+},
+{
+"t": 145.975,
+"kind": "amb-crowd-murmur-loop",
+"db": -20,
+"end": 174.112
+},
+{
+"t": 152.157,
+"kind": "pop",
+"db": 0
+},
+{
+"t": 152.659,
+"kind": "pop",
+"db": 0
+},
+{
+"t": 159.322,
+"kind": "boing",
+"db": 0
+},
+{
+"t": 161.464,
+"kind": "boom",
+"db": 5,
+"end": 162.264
+},
+{
+"t": 173.03,
+"kind": "hush",
+"end": 175.63
+},
+{
+"t": 173.03,
+"kind": "stamp",
+"db": 4
+},
+{
+"t": 188.857,
+"kind": "amb-crowd-murmur-loop",
+"db": -20,
+"end": 206.639
+},
+{
+"t": 189.357,
+"kind": "engine",
+"db": -6
+},
+{
+"t": 192.013,
+"kind": "honk",
+"db": 3
+},
+{
+"t": 194.729,
+"kind": "thud",
+"db": 0
+},
+{
+"t": 204.997,
+"kind": "hush",
+"end": 205.739
+},
+{
+"t": 205.739,
+"kind": "stamp",
+"db": 7
+},
+{
+"t": 206.329,
+"kind": "_quiet",
+"end": 213.768
+},
+{
+"t": 206.879,
+"kind": "gun",
+"db": 6
+},
+{
+"t": 207.329,
+"kind": "gun",
+"db": 6
+},
+{
+"t": 213.268,
+"kind": "_music",
+"file": "projects/hist/_kit/music/m-sombre-chopin-funeral.ogg"
+},
+{
+"t": 219.069,
+"kind": "boom",
+"db": 6
+},
+{
+"t": 221.768,
+"kind": "cricket",
+"db": -4
+},
+{
+"t": 223.766,
+"kind": "_music",
+"file": "projects/hist/_kit/music/m-opening-alt-trombone-johnsen.ogg"
+},
+{
+"t": 223.966,
+"kind": "whoosh-soft",
+"db": -2
+},
+{
+"t": 225.211,
+"kind": "stamp",
+"db": 3
+},
+{
+"t": 226.436,
+"kind": "stamp",
+"db": 3
+},
+{
+"t": 227.219,
+"kind": "stamp",
+"db": 3
+},
+{
+"t": 230.281,
+"kind": "pop",
+"db": 1
+},
+{
+"t": 232.35,
+"kind": "_music",
+"file": "projects/hist/_kit/music/m-sting-end-card.ogg"
+}
+]

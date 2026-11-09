@@ -1,0 +1,116 @@
+<!doctype html><meta charset="utf-8">
+<title>berlin — thumbnail A/B/C</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Thumbnail tập 2 (2026-10-29) — 3 thế giới khác hẳn nhau và khác bộ wrong-turn (tách đôi / tia Thanh Pahm / domino):
+// t 0.5 = A phòng họp báo (bối cảnh video) · t 1.5 = B tờ thông cáo bị xé, đám đông thật PD lộ qua vết rách · t 2.5 = C phòng
+// khách đêm 1989, TV đưa tin, người dẫn phun bỏng ngô. Schabowski VẼ đầu tròn kiểu B (không có ảnh PD buổi họp báo).
+import { INK } from '../_kit/mapkit.js';
+import * as S from '../_kit/stage.js';
+import { bindNarrator, narrator } from '../_kit/narrator.js';
+import { bindCast, folk } from '../_kit/cast.js';
+const g = document.getElementById('cv').getContext('2d');
+const { W, H, hash } = S;
+const SK = '#FCEBD5', IM = {}; let ready = false;
+const img = (k, src) => { const im = new Image(); im.src = src; return im.decode().then(() => { IM[k] = im; }); };
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  ...['potsdamer', 'brandenburg89'].map(k => img(k, `assets/photos/${k}.jpg`))])
+  .then(() => { S.bindStage(g, { IM }); bindNarrator(g); bindCast(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+/** chữ thumbnail: đậm 900, viền đen dày, bóng cứng */
+function big(txt, x, y, size, col = '#FFF', o = {}) { g.save(); g.font = `900 ${size}px Archivo, sans-serif`; g.textAlign = o.align ?? 'center'; g.lineJoin = 'round';
+  if (o.rot) { g.translate(x, y); g.rotate(o.rot); x = 0; y = 0; }
+  g.fillStyle = 'rgba(0,0,0,0.5)'; g.fillText(txt, x + size * 0.04, y + size * 0.05);
+  g.strokeStyle = o.stroke ?? INK; g.lineWidth = size * 0.14; g.strokeText(txt, x, y); g.fillStyle = col; g.fillText(txt, x, y); g.restore(); }
+/** ảnh phủ kín khung (x, y, w, h), điểm nhìn fx fy */
+function cover(im, x, y, w, h, fx = 0.5, fy = 0.5, z = 1) { const s = Math.max(w / im.width, h / im.height) * z, iw = im.width * s, ih = im.height * s;
+  g.drawImage(im, x + (w - iw) * fx, y + (h - ih) * fy, iw, ih); }
+/** Schabowski kiểu B: thân viên thuốc com-lê + đầu tròn, tóc bạc chải ngược, kính gọng to. Trả { head, r } */
+function schab(x, y, h, o = {}) { const R = folk(x, y, h, { skin: SK, coat: 'suit', eyes: o.eyes ?? 'dot', mouth: o.mouth, sweat: o.sweat, look: o.look ?? 0, arm: o.arm });
+  const [hx, hy] = R.head, r = R.r, lw = Math.max(3, h * 0.026);
+  g.save(); g.strokeStyle = INK; g.lineWidth = lw;
+  g.fillStyle = '#D6D5CF'; g.beginPath(); g.arc(hx, hy - r * 0.08, r * 1.0, Math.PI * 1.06, Math.PI * 1.94); g.quadraticCurveTo(hx + r * 0.3, hy - r * 0.62, hx - r * 0.2, hy - r * 0.55);
+  g.quadraticCurveTo(hx - r * 0.7, hy - r * 0.5, hx - r * 0.94, hy - r * 0.3); g.closePath(); g.fill(); g.stroke();
+  g.strokeStyle = '#A9A8A2'; g.lineWidth = lw * 0.6; g.save(); g.beginPath(); g.arc(hx, hy, r * 0.97, 0, 7); g.clip(); for (let i = 0; i < 4; i++) { g.beginPath(); g.moveTo(hx - r * 0.6 + i * r * 0.32, hy - r * 0.62); g.quadraticCurveTo(hx - r * 0.35 + i * r * 0.3, hy - r * 0.85, hx + r * 0.05 + i * r * 0.22, hy - r * 0.86); g.stroke(); } g.restore();
+  g.strokeStyle = INK; g.lineWidth = lw * 0.75; const ey = hy + r * 0.05 + (o.squint ? r * 0.02 : 0);
+  for (const s of [-1, 1]) { g.fillStyle = 'rgba(190,220,235,0.22)'; g.beginPath(); g.roundRect(hx + s * r * 0.3 - r * 0.22, ey - r * 0.15, r * 0.44, r * 0.3, r * 0.08); g.fill(); g.stroke(); }
+  g.beginPath(); g.moveTo(hx - r * 0.05, ey - r * 0.04); g.lineTo(hx + r * 0.05, ey - r * 0.04); g.moveTo(hx - r * 0.55, ey - r * 0.05); g.lineTo(hx - r * 0.97, ey - r * 0.12); g.moveTo(hx + r * 0.55, ey - r * 0.05); g.lineTo(hx + r * 0.97, ey - r * 0.12); g.stroke();
+  if (o.squint) { g.lineWidth = lw * 1.1; for (const s of [-1, 1]) { g.beginPath(); g.moveTo(hx + s * r * 0.18, ey - r * 0.3); g.lineTo(hx + s * r * 0.44, ey - r * 0.24); g.stroke(); } }
+  g.restore(); return R; }
+/** tờ giấy đánh máy (cầm tay): góc xoay a */
+function memo(x, y, w, a = 0, o = {}) { const h = w * 1.35; g.save(); g.translate(x, y); g.rotate(a); g.fillStyle = '#FBF8EE'; g.strokeStyle = INK; g.lineWidth = Math.max(3, w * 0.02);
+  g.fillRect(-w / 2, -h / 2, w, h); g.strokeRect(-w / 2, -h / 2, w, h); g.fillStyle = '#9A978C';
+  for (let i = 0; i < 11; i++) g.fillRect(-w * 0.38, -h * 0.36 + i * h * 0.065, w * (0.5 + 0.26 * hash(i + (o.seed ?? 0))), w * 0.022);
+  g.restore(); }
+/** micro kiểu 1989: thân đen + đầu xốp, cắm trên bàn */
+function mic(x, y, len, a, col = '#1C1C1F') { g.save(); g.translate(x, y); g.rotate(a); g.strokeStyle = INK; g.lineWidth = 4; g.fillStyle = col;
+  g.fillRect(-9, -len, 18, len); g.strokeRect(-9, -len, 18, len); g.beginPath(); g.ellipse(0, -len - 22, 26, 34, 0, 0, 7); g.fill(); g.stroke(); g.restore(); }
+
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  if (!ready) { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); return; }
+  if (t < 1) return A();
+  if (t < 2) return B();
+  return C(t);
+}
+
+// A — phòng họp báo Đông Berlin 18:53: tường ốp gỗ, rừng micro, Schabowski nheo mắt dí sát tờ giấy chưa từng đọc; người dẫn
+//     làm phóng viên hàng đầu giơ tay hỏi. Chữ = câu trả lời định mệnh.
+function A() {
+  g.fillStyle = '#6E5638'; g.fillRect(0, 0, W, H);
+  for (let i = 0; i < 9; i++) { g.fillStyle = i % 2 ? '#79603F' : '#654E32'; g.fillRect(i * 230 - 40, 0, 226, H); }
+  g.fillStyle = 'rgba(255,236,190,0.16)'; g.beginPath(); g.ellipse(760, 420, 720, 520, 0, 0, 7); g.fill();       // đèn sân khấu
+  g.fillStyle = '#C9C2B0'; g.fillRect(0, 0, W, 70);                                                               // diềm trần
+  schab(760, 1290, 1150, { squint: true, sweat: true, mouth: 'flat', look: 0.4 });
+  memo(1080, 560, 250, -0.18);
+  g.save(); g.fillStyle = SK; g.strokeStyle = INK; g.lineWidth = 6; for (const [hx, hy] of [[975, 655], [1185, 600]]) { g.beginPath(); g.arc(hx, hy, 34, 0, 7); g.fill(); g.stroke(); } g.restore();
+  g.fillStyle = '#2F3A2E'; g.fillRect(0, 860, W, 220); g.fillStyle = '#3E4B3C'; g.fillRect(0, 860, W, 26); g.strokeStyle = INK; g.lineWidth = 6; g.strokeRect(-10, 860, W + 20, 260);
+  [[420, 0.42, '#1C1C1F'], [530, 0.25, '#B3262C'], [640, 0.1, '#1C1C1F'], [760, -0.04, '#2B4C7E'], [880, -0.16, '#1C1C1F'], [990, -0.3, '#5B5A55']].forEach(([x, a, c]) => mic(x, 875, 150, a, c));
+  narrator(1560, H + 260, 960, { outfit: 'plain', arms: 'wave', mood: 'shock', mouth: 'o', look: -1, t: 0.4 });
+  big('IMMEDIATELY?', 700, 190, 168, '#FFE04A');
+}
+
+// B — cả khung là tờ thông cáo đánh máy; một vết rách lớn lộ đám đông thật trên Tường (ảnh PD Potsdamer Platz 11/1989).
+//     "10 NOV" bị gạch → "NOW?!" bút đỏ: cái sai đúng nghĩa đen (quy định có hiệu lực ngày 10/11, ông ta nói "ngay lập tức").
+function B() {
+  g.fillStyle = '#F3EEDD'; g.fillRect(0, 0, W, H);
+  g.fillStyle = '#C7C1AE'; for (let i = 0; i < 15; i++) g.fillRect(110, 340 + i * 52, 380 + 520 * hash(i + 40), 12);
+  g.font = '700 46px Archivo, sans-serif'; g.fillStyle = '#5E5A50'; g.textAlign = 'left'; g.fillText('TRAVEL REGULATION · GDR · 09.11.1989', 110, 110);
+  const tear = []; for (let i = 0; i <= 26; i++) { const u = i / 26, a = u * Math.PI * 2; const rr = 1 + 0.12 * (hash(i * 3 + 1) - 0.5) + (i % 2 ? 0.07 : -0.05);
+    tear.push([1320 + Math.cos(a) * 560 * rr, 560 + Math.sin(a) * 470 * rr]); }
+  const P = new Path2D(); tear.forEach(([x, y], i) => i ? P.lineTo(x, y) : P.moveTo(x, y)); P.closePath();
+  g.save(); g.clip(P); cover(IM.potsdamer, 700, 60, 1260, 1020, 0.62, 0.6, 1.05); g.restore();
+  g.save(); g.strokeStyle = '#FFFFFF'; g.lineWidth = 30; g.lineJoin = 'round'; g.stroke(P); g.strokeStyle = 'rgba(70,60,40,0.55)'; g.lineWidth = 6; g.stroke(P); g.restore();
+  g.save(); g.font = '900 120px Archivo, sans-serif'; g.fillStyle = INK; g.textAlign = 'left'; g.fillText('10 NOV', 110, 260);
+  g.strokeStyle = '#D11A1A'; g.lineWidth = 22; g.lineCap = 'round'; g.beginPath(); g.moveTo(90, 230); g.lineTo(560, 190); g.stroke(); g.restore();
+  narrator(300, H + 330, 760, { outfit: 'plain', arms: 'cover', mood: 'shock', mouth: 'o', look: 1 });
+  big('NOW?!', 430, 500, 250, '#E3141B', { rot: -0.1, stroke: '#FFF' });
+}
+
+// C — phòng khách tối 9/11/1989: TV gỗ phát tin (ảnh PD đám đông Brandenburg), ánh TV xanh hắt lên người dẫn trên sofa
+//     đang phun bỏng ngô. Chữ = dải tin trên màn hình.
+function C(t) {
+  g.fillStyle = '#121A2E'; g.fillRect(0, 0, W, H);
+  for (let i = 0; i < 14; i++) { g.fillStyle = i % 2 ? '#16203A' : '#121A2E'; g.fillRect(i * 140, 0, 70, 760); }       // giấy dán tường sọc
+  g.fillStyle = '#2A1E17'; g.fillRect(0, 760, W, 320);
+  const glow = g.createRadialGradient(700, 520, 80, 700, 520, 1100); glow.addColorStop(0, 'rgba(150,200,255,0.42)'); glow.addColorStop(1, 'rgba(150,200,255,0)');
+  g.fillStyle = glow; g.fillRect(0, 0, W, H);
+  g.fillStyle = '#6B4426'; g.strokeStyle = INK; g.lineWidth = 8; g.beginPath(); g.roundRect(120, 170, 1130, 760, 40); g.fill(); g.stroke();   // vỏ TV gỗ
+  g.fillStyle = '#4E3018'; g.fillRect(170, 900, 60, 120); g.fillRect(1140, 900, 60, 120);
+  const scr = new Path2D(); scr.roundRect(170, 215, 900, 670, 70);
+  g.save(); g.clip(scr); cover(IM.brandenburg89, 170, 215, 900, 670, 0.55, 0.5, 1.15);
+  g.fillStyle = 'rgba(40,90,140,0.18)'; g.fillRect(170, 215, 900, 670); g.fillStyle = 'rgba(0,0,0,0.16)'; for (let y = 215; y < 885; y += 7) g.fillRect(170, y, 900, 3);
+  g.fillStyle = '#C8161D'; g.fillRect(170, 700, 900, 150); g.restore();
+  g.save(); g.lineWidth = 10; g.strokeStyle = INK; g.stroke(scr); g.restore();
+  for (let i = 0; i < 3; i++) { g.fillStyle = '#C9A15A'; g.beginPath(); g.arc(1160, 330 + i * 120, 28, 0, 7); g.fill(); g.stroke(); }               // núm vặn
+  big('WALL OPEN?!', 620, 815, 128, '#FFF');
+  g.fillStyle = '#7A2E2E'; g.beginPath(); g.roundRect(1250, 640, 760, 520, 60); g.fill(); g.stroke();                                              // sofa
+  narrator(1610, H + 120, 880, { outfit: 'plain', arms: 'shrug', mood: 'shock', mouth: 'o', look: -1 });
+  { g.save(); g.translate(1330, 1010); g.rotate(-0.5); const P2 = new Path2D(); P2.moveTo(-90, -150); P2.lineTo(90, -150); P2.lineTo(65, 60); P2.lineTo(-65, 60); P2.closePath();   // xô bỏng ngô tuột tay
+    g.fillStyle = '#FFF'; g.fill(P2); g.save(); g.clip(P2); g.fillStyle = '#D8302F'; for (let i = -3; i < 3; i++) g.fillRect(i * 40 + 5, -160, 20, 230); g.restore(); g.lineWidth = 6; g.strokeStyle = INK; g.stroke(P2); g.restore(); }
+  for (let i = 0; i < 24; i++) { const u = i / 23, x = 1380 - 300 * u + 90 * (hash(i + 7) - 0.5), y = 780 - 470 * u * (1.3 - u) - 120 * u + 80 * (hash(i + 77) - 0.5), r = 15 + 11 * hash(i + 3);   // phun ra thành vòng cung về phía TV
+    g.fillStyle = i % 4 ? '#FFF6D8' : '#F4C64A'; g.strokeStyle = INK; g.beginPath(); g.arc(x, y, r, 0, 7); g.arc(x + r * 0.7, y + r * 0.3, r * 0.75, 0, 7); g.fill(); g.lineWidth = 4; g.stroke(); }
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 3, LEAD: 0, error: null };
+</script>

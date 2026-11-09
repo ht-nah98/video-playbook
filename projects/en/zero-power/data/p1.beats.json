@@ -1,0 +1,178 @@
+{
+ "duration": 68.876,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Two to the power of three means three twos multiplied together. Two times two times two, which is eight. That makes sense.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 0.0,
+   "end": 6.398,
+   "wav": "audio/voice/ec1984698b6f5ae4.wav"
+  },
+  {
+   "text": "Two to the power of one is just two, on its own. That makes sense too.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 6.748,
+   "end": 9.974,
+   "wav": "audio/voice/56da6f87e85eb690.wav"
+  },
+  {
+   "text": "But then comes two to the power of zero. Your textbook says it equals one, and every calculator agrees.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 10.324,
+   "end": 15.465,
+   "wav": "audio/voice/ad00cc557a4f943a.wav"
+  },
+  {
+   "text": "Why one?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 16.415,
+   "end": 16.878,
+   "wav": "audio/voice/60aa67d4c4757862.wav"
+  },
+  {
+   "text": "If a power counts how many times you multiply, then a power of zero means multiplying zero times.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 17.228,
+   "end": 21.92,
+   "wav": "audio/voice/ce8d0c455e16a431.wav"
+  },
+  {
+   "text": "And multiplying zero times sounds like it should mean nothing at all.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 22.27,
+   "end": 25.63,
+   "wav": "audio/voice/80ce898357f2349c.wav"
+  },
+  {
+   "text": "It gets stranger. Try zero to the power of zero.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 26.58,
+   "end": 28.796,
+   "wav": "audio/voice/89af9beb69aa94cd.wav"
+  },
+  {
+   "text": "Python says one. So does JavaScript, and so does Google.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 29.146,
+   "end": 31.828,
+   "wav": "audio/voice/45313acdcf4ef013.wav"
+  },
+  {
+   "text": "A TI eighty-four calculator says domain error. Excel gives you an error, too.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 32.178,
+   "end": 36.123,
+   "wav": "audio/voice/2326f4d99d1e90ab.wav"
+  },
+  {
+   "text": "Same question, same symbols, and the machines can't agree.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 36.473,
+   "end": 39.375,
+   "wav": "audio/voice/978e454e7116300f.wav"
+  },
+  {
+   "text": "So in this video, I want to answer three questions with you.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 40.325,
+   "end": 43.145,
+   "wav": "audio/voice/931985eaafd74de5.wav"
+  },
+  {
+   "text": "One. Why is anything to the power of zero equal to one?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 43.495,
+   "end": 45.973,
+   "wav": "audio/voice/d60b18283e1668c5.wav"
+  },
+  {
+   "text": "Two. Is that a rule somebody chose, or is it forced on us?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 46.323,
+   "end": 49.092,
+   "wav": "audio/voice/f6f786e2f05d0484.wav"
+  },
+  {
+   "text": "And three. What is zero to the zero, and why do the machines disagree?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 49.442,
+   "end": 52.897,
+   "wav": "audio/voice/41a651db1e51e4ff.wav"
+  },
+  {
+   "text": "Here is where we are going. That one isn't a trick, and it isn't nothing.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 53.847,
+   "end": 57.079,
+   "wav": "audio/voice/f89c4cd94ff18340.wav"
+  },
+  {
+   "text": "Multiplying zero times means you haven't multiplied yet, and a multiplication that hasn't started stands at one.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 57.429,
+   "end": 62.995,
+   "wav": "audio/voice/39fe7e171deb565e.wav"
+  },
+  {
+   "text": "But zero to the zero is where two good ideas collide. To see why, we start with a staircase.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 63.345,
+   "end": 67.926,
+   "wav": "audio/voice/7ccb17543c4c788a.wav"
+  }
+ ]
+}

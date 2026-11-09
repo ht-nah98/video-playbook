@@ -1,0 +1,6968 @@
+{
+ "sections": [
+  {
+   "name": "Intro — Soft Digital Voice",
+   "start": 1.18,
+   "end": 10.16
+  },
+  {
+   "name": "Verse 1 — Melodic Rap",
+   "start": 13.76,
+   "end": 42.28
+  },
+  {
+   "name": "Pre-Chorus — Sung",
+   "start": 42.98,
+   "end": 53.5
+  },
+  {
+   "name": "Chorus — Melodic",
+   "start": 53.5,
+   "end": 71.94
+  },
+  {
+   "name": "Verse 2 — Rap / Sung Phrases",
+   "start": 71.94,
+   "end": 98.0
+  },
+  {
+   "name": "Pre-Chorus — Sung",
+   "start": 98.0,
+   "end": 111.04
+  },
+  {
+   "name": "Chorus — Melodic",
+   "start": 112.86,
+   "end": 130.18
+  },
+  {
+   "name": "Break — Spoken / Minimal Beat",
+   "start": 131.26,
+   "end": 141.06
+  },
+  {
+   "name": "Short Pause",
+   "start": 141.32,
+   "end": 143.16
+  },
+  {
+   "name": "Beat Switch — Melodic Rap",
+   "start": 143.12,
+   "end": 172.84
+  },
+  {
+   "name": "Bridge — Fully Sung",
+   "start": 173.053,
+   "end": 190.04
+  },
+  {
+   "name": "Final Chorus — Bigger, Warm",
+   "start": 191.92,
+   "end": 211.06
+  },
+  {
+   "name": "Break",
+   "start": 211.06,
+   "end": 212.16
+  },
+  {
+   "name": "Group Chant",
+   "start": 213.332,
+   "end": 217.048
+  },
+  {
+   "name": "Final Hook — Half Sung / Half Spoken",
+   "start": 218.02,
+   "end": 230.4
+  }
+ ],
+ "lines": [
+  {
+   "section": "Intro — Soft Digital Voice",
+   "text": "Ninety-nine percent...",
+   "start": 1.18,
+   "end": 2.03,
+   "words": [
+    {
+     "w": "ninety",
+     "start": 1.18,
+     "end": 1.43,
+     "interp": true,
+     "ctc": {
+      "start": 1.38,
+      "end": 1.66,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "nine",
+     "start": 1.48,
+     "end": 1.73,
+     "interp": true,
+     "ctc": {
+      "start": 1.68,
+      "end": 1.78,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "percent",
+     "start": 1.78,
+     "end": 2.03,
+     "interp": true,
+     "ctc": {
+      "start": 1.88,
+      "end": 2.58,
+      "conf": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "section": "Intro — Soft Digital Voice",
+   "text": "Loading.",
+   "start": 2.08,
+   "end": 3.9,
+   "words": [
+    {
+     "w": "loading",
+     "start": 2.08,
+     "end": 3.9,
+     "ctc": {
+      "start": 2.6,
+      "end": 4.26,
+      "conf": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "section": "Intro — Soft Digital Voice",
+   "text": "Same speed.",
+   "start": 3.9,
+   "end": 5.2,
+   "words": [
+    {
+     "w": "same",
+     "start": 3.9,
+     "end": 4.76,
+     "ctc": {
+      "start": 4.28,
+      "end": 4.98,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "speed",
+     "start": 4.76,
+     "end": 5.2,
+     "ctc": {
+      "start": 5.0,
+      "end": 6.021,
+      "conf": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "section": "Intro — Soft Digital Voice",
+   "text": "Different place.",
+   "start": 5.36,
+   "end": 6.54,
+   "words": [
+    {
+     "w": "different",
+     "start": 5.36,
+     "end": 6.08,
+     "ctc": {
+      "start": 6.041,
+      "end": 8.761,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "place",
+     "start": 6.08,
+     "end": 6.54,
+     "ctc": {
+      "start": 8.781,
+      "end": 9.661,
+      "conf": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "section": "Intro — Soft Digital Voice",
+   "text": "Same change.",
+   "start": 6.54,
+   "end": 7.62,
+   "words": [
+    {
+     "w": "same",
+     "start": 6.54,
+     "end": 7.28,
+     "ctc": {
+      "start": 9.681,
+      "end": 13.261,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "change",
+     "start": 7.28,
+     "end": 7.62,
+     "ctc": {
+      "start": 13.281,
+      "end": 13.781,
+      "conf": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "section": "Intro — Soft Digital Voice",
+   "text": "Different past.",
+   "start": 8.14,
+   "end": 9.0,
+   "words": [
+    {
+     "w": "different",
+     "start": 8.14,
+     "end": 8.6,
+     "ctc": {
+      "start": 13.801,
+      "end": 14.081,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "past",
+     "start": 8.8,
+     "end": 9.0,
+     "interp": true,
+     "ctc": {
+      "start": 14.101,
+      "end": 14.201,
+      "conf": 0.007
+     }
+    }
+   ]
+  },
+  {
+   "section": "Intro — Soft Digital Voice",
+   "text": "What did we lose?",
+   "start": 9.0,
+   "end": 10.16,
+   "words": [
+    {
+     "w": "what",
+     "start": 9.0,
+     "end": 9.48,
+     "ctc": {
+      "start": 14.221,
+      "end": 14.381,
+      "conf": 0.024
+     }
+    },
+    {
+     "w": "did",
+     "start": 9.55,
+     "end": 9.75,
+     "interp": true,
+     "ctc": {
+      "start": 14.401,
+      "end": 14.541,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "we",
+     "start": 9.62,
+     "end": 9.82,
+     "ctc": {
+      "start": 14.561,
+      "end": 14.601,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "lose",
+     "start": 9.82,
+     "end": 10.16,
+     "ctc": {
+      "start": 14.641,
+      "end": 14.721,
+      "conf": 0.003
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "Two cars moving down the same straight line,",
+   "start": 13.76,
+   "end": 16.64,
+   "words": [
+    {
+     "w": "two",
+     "start": 13.76,
+     "end": 14.44,
+     "ctc": {
+      "start": 14.741,
+      "end": 14.861,
+      "conf": 0.32
+     }
+    },
+    {
+     "w": "cars",
+     "start": 15.001,
+     "end": 15.281,
+     "ctc": {
+      "start": 14.881,
+      "end": 15.301,
+      "conf": 0.588
+     }
+    },
+    {
+     "w": "moving",
+     "start": 15.08,
+     "end": 15.38,
+     "ctc": {
+      "start": 15.361,
+      "end": 15.581,
+      "conf": 0.607
+     }
+    },
+    {
+     "w": "down",
+     "start": 15.38,
+     "end": 15.68,
+     "ctc": {
+      "start": 15.641,
+      "end": 15.761,
+      "conf": 0.493
+     }
+    },
+    {
+     "w": "the",
+     "start": 15.68,
+     "end": 15.8,
+     "ctc": {
+      "start": 15.781,
+      "end": 15.841,
+      "conf": 0.02
+     }
+    },
+    {
+     "w": "same",
+     "start": 15.8,
+     "end": 16.0,
+     "ctc": {
+      "start": 15.921,
+      "end": 16.121,
+      "conf": 0.633
+     }
+    },
+    {
+     "w": "straight",
+     "start": 16.0,
+     "end": 16.3,
+     "ctc": {
+      "start": 16.181,
+      "end": 16.461,
+      "conf": 0.438
+     }
+    },
+    {
+     "w": "line",
+     "start": 16.3,
+     "end": 16.64,
+     "ctc": {
+      "start": 16.481,
+      "end": 16.901,
+      "conf": 0.054
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "same speed every second,",
+   "start": 16.64,
+   "end": 18.24,
+   "words": [
+    {
+     "w": "same",
+     "start": 16.64,
+     "end": 17.18,
+     "ctc": {
+      "start": 16.921,
+      "end": 17.361,
+      "conf": 0.503
+     }
+    },
+    {
+     "w": "speed",
+     "start": 17.18,
+     "end": 17.56,
+     "ctc": {
+      "start": 17.381,
+      "end": 17.802,
+      "conf": 0.776
+     }
+    },
+    {
+     "w": "every",
+     "start": 17.62,
+     "end": 17.92,
+     "ctc": {
+      "start": 17.822,
+      "end": 17.982,
+      "conf": 0.395
+     }
+    },
+    {
+     "w": "second",
+     "start": 17.92,
+     "end": 18.24,
+     "ctc": {
+      "start": 18.002,
+      "end": 18.342,
+      "conf": 0.225
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "same every time.",
+   "start": 18.28,
+   "end": 19.14,
+   "words": [
+    {
+     "w": "same",
+     "start": 18.28,
+     "end": 18.44,
+     "ctc": {
+      "start": 18.362,
+      "end": 18.722,
+      "conf": 0.535
+     }
+    },
+    {
+     "w": "every",
+     "start": 18.44,
+     "end": 18.82,
+     "ctc": {
+      "start": 18.742,
+      "end": 18.922,
+      "conf": 0.43
+     }
+    },
+    {
+     "w": "time",
+     "start": 18.82,
+     "end": 19.14,
+     "ctc": {
+      "start": 19.022,
+      "end": 19.342,
+      "conf": 0.522
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "One reads twelve,",
+   "start": 19.14,
+   "end": 20.16,
+   "words": [
+    {
+     "w": "one",
+     "start": 19.14,
+     "end": 19.48,
+     "ctc": {
+      "start": 19.502,
+      "end": 19.582,
+      "conf": 0.525
+     }
+    },
+    {
+     "w": "reads",
+     "start": 19.48,
+     "end": 19.74,
+     "ctc": {
+      "start": 19.662,
+      "end": 19.862,
+      "conf": 0.284
+     }
+    },
+    {
+     "w": "twelve",
+     "start": 19.96,
+     "end": 20.16,
+     "interp": true,
+     "ctc": {
+      "start": 19.942,
+      "end": 20.222,
+      "conf": 0.147
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "one reads one-twelve.",
+   "start": 20.18,
+   "end": 21.461,
+   "words": [
+    {
+     "w": "one",
+     "start": 20.18,
+     "end": 20.4,
+     "ctc": {
+      "start": 20.242,
+      "end": 20.522,
+      "conf": 0.446
+     }
+    },
+    {
+     "w": "reads",
+     "start": 20.4,
+     "end": 20.7,
+     "ctc": {
+      "start": 20.602,
+      "end": 20.862,
+      "conf": 0.184
+     }
+    },
+    {
+     "w": "one",
+     "start": 20.98,
+     "end": 21.18,
+     "interp": true,
+     "ctc": {
+      "start": 20.882,
+      "end": 21.102,
+      "conf": 0.48
+     }
+    },
+    {
+     "w": "twelve",
+     "start": 21.261,
+     "end": 21.461,
+     "interp": true,
+     "ctc": {
+      "start": 21.162,
+      "end": 21.462,
+      "conf": 0.174
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "Same motion on the meter—",
+   "start": 21.541,
+   "end": 22.56,
+   "words": [
+    {
+     "w": "same",
+     "start": 21.541,
+     "end": 21.781,
+     "ctc": {
+      "start": 21.542,
+      "end": 21.762,
+      "conf": 0.694
+     }
+    },
+    {
+     "w": "motion",
+     "start": 21.821,
+     "end": 22.101,
+     "ctc": {
+      "start": 21.822,
+      "end": 22.082,
+      "conf": 0.553
+     }
+    },
+    {
+     "w": "on",
+     "start": 21.94,
+     "end": 22.2,
+     "ctc": {
+      "start": 22.102,
+      "end": 22.262,
+      "conf": 0.156
+     }
+    },
+    {
+     "w": "the",
+     "start": 22.2,
+     "end": 22.32,
+     "ctc": {
+      "start": 22.282,
+      "end": 22.342,
+      "conf": 0.039
+     }
+    },
+    {
+     "w": "meter",
+     "start": 22.32,
+     "end": 22.56,
+     "ctc": {
+      "start": 22.442,
+      "end": 22.682,
+      "conf": 0.277
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "something disappeared.",
+   "start": 22.741,
+   "end": 23.981,
+   "words": [
+    {
+     "w": "something",
+     "start": 22.741,
+     "end": 23.001,
+     "ctc": {
+      "start": 22.742,
+      "end": 23.002,
+      "conf": 0.646
+     }
+    },
+    {
+     "w": "disappeared",
+     "start": 23.081,
+     "end": 23.981,
+     "ctc": {
+      "start": 23.062,
+      "end": 24.142,
+      "conf": 0.674
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "Take the position,",
+   "start": 23.38,
+   "end": 25.161,
+   "words": [
+    {
+     "w": "take",
+     "start": 23.38,
+     "end": 24.12,
+     "ctc": {
+      "start": 24.482,
+      "end": 24.622,
+      "conf": 0.702
+     }
+    },
+    {
+     "w": "the",
+     "start": 24.12,
+     "end": 24.64,
+     "ctc": {
+      "start": 24.642,
+      "end": 24.722,
+      "conf": 0.063
+     }
+    },
+    {
+     "w": "position",
+     "start": 24.761,
+     "end": 25.161,
+     "ctc": {
+      "start": 24.742,
+      "end": 25.162,
+      "conf": 0.629
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "differentiate.",
+   "start": 25.12,
+   "end": 25.48,
+   "words": [
+    {
+     "w": "differentiate",
+     "start": 25.12,
+     "end": 25.48,
+     "ctc": {
+      "start": 25.242,
+      "end": 25.922,
+      "conf": 0.488
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "Anything constant",
+   "start": 25.48,
+   "end": 27.56,
+   "words": [
+    {
+     "w": "anything",
+     "start": 25.48,
+     "end": 26.84,
+     "ctc": {
+      "start": 25.942,
+      "end": 27.262,
+      "conf": 0.519
+     }
+    },
+    {
+     "w": "constant",
+     "start": 26.84,
+     "end": 27.56,
+     "ctc": {
+      "start": 27.362,
+      "end": 27.942,
+      "conf": 0.352
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "gets erased.",
+   "start": 27.853,
+   "end": 28.347,
+   "words": [
+    {
+     "w": "gets",
+     "start": 27.853,
+     "end": 28.053,
+     "interp": true,
+     "ctc": {
+      "start": 27.962,
+      "end": 28.142,
+      "conf": 0.136
+     }
+    },
+    {
+     "w": "erased",
+     "start": 28.147,
+     "end": 28.347,
+     "interp": true,
+     "ctc": {
+      "start": 28.162,
+      "end": 29.002,
+      "conf": 0.289
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "Run it backward,",
+   "start": 28.44,
+   "end": 29.52,
+   "words": [
+    {
+     "w": "run",
+     "start": 28.44,
+     "end": 28.96,
+     "ctc": {
+      "start": 29.022,
+      "end": 29.082,
+      "conf": 0.075
+     }
+    },
+    {
+     "w": "it",
+     "start": 28.96,
+     "end": 29.1,
+     "ctc": {
+      "start": 29.102,
+      "end": 29.183,
+      "conf": 0.085
+     }
+    },
+    {
+     "w": "backward",
+     "start": 29.1,
+     "end": 29.52,
+     "ctc": {
+      "start": 29.263,
+      "end": 29.843,
+      "conf": 0.315
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "what comes through?",
+   "start": 29.62,
+   "end": 30.56,
+   "words": [
+    {
+     "w": "what",
+     "start": 29.62,
+     "end": 29.86,
+     "ctc": {
+      "start": 29.863,
+      "end": 30.023,
+      "conf": 0.174
+     }
+    },
+    {
+     "w": "comes",
+     "start": 29.86,
+     "end": 30.24,
+     "ctc": {
+      "start": 30.163,
+      "end": 30.403,
+      "conf": 0.418
+     }
+    },
+    {
+     "w": "through",
+     "start": 30.24,
+     "end": 30.56,
+     "ctc": {
+      "start": 30.423,
+      "end": 30.743,
+      "conf": 0.031
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "Not just one curve—",
+   "start": 30.72,
+   "end": 31.84,
+   "words": [
+    {
+     "w": "not",
+     "start": 30.72,
+     "end": 30.96,
+     "ctc": {
+      "start": 30.943,
+      "end": 31.043,
+      "conf": 0.102
+     }
+    },
+    {
+     "w": "just",
+     "start": 30.96,
+     "end": 31.18,
+     "ctc": {
+      "start": 31.103,
+      "end": 31.323,
+      "conf": 0.342
+     }
+    },
+    {
+     "w": "one",
+     "start": 31.18,
+     "end": 31.44,
+     "ctc": {
+      "start": 31.343,
+      "end": 31.583,
+      "conf": 0.39
+     }
+    },
+    {
+     "w": "curve",
+     "start": 31.44,
+     "end": 31.84,
+     "ctc": {
+      "start": 31.703,
+      "end": 32.043,
+      "conf": 0.382
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "a family of you.",
+   "start": 31.96,
+   "end": 33.04,
+   "words": [
+    {
+     "w": "a",
+     "start": 31.96,
+     "end": 32.08,
+     "ctc": {
+      "start": 32.063,
+      "end": 32.083,
+      "conf": 0.039
+     }
+    },
+    {
+     "w": "family",
+     "start": 32.08,
+     "end": 32.46,
+     "ctc": {
+      "start": 32.183,
+      "end": 32.603,
+      "conf": 0.368
+     }
+    },
+    {
+     "w": "of",
+     "start": 32.46,
+     "end": 32.72,
+     "ctc": {
+      "start": 32.623,
+      "end": 32.663,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "you",
+     "start": 32.72,
+     "end": 33.04,
+     "ctc": {
+      "start": 32.683,
+      "end": 33.083,
+      "conf": 0.086
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "F of x plus C,",
+   "start": 33.474,
+   "end": 34.96,
+   "words": [
+    {
+     "w": "f",
+     "start": 33.474,
+     "end": 33.674,
+     "interp": true,
+     "ctc": {
+      "start": 33.943,
+      "end": 33.963,
+      "conf": 0.342
+     }
+    },
+    {
+     "w": "of",
+     "start": 33.908,
+     "end": 34.108,
+     "interp": true,
+     "ctc": {
+      "start": 33.983,
+      "end": 34.023,
+      "conf": 0.252
+     }
+    },
+    {
+     "w": "x",
+     "start": 34.342,
+     "end": 34.362,
+     "ctc": {
+      "start": 34.343,
+      "end": 34.363,
+      "conf": 0.878
+     }
+    },
+    {
+     "w": "plus",
+     "start": 34.28,
+     "end": 34.56,
+     "ctc": {
+      "start": 34.483,
+      "end": 34.783,
+      "conf": 0.282
+     }
+    },
+    {
+     "w": "c",
+     "start": 34.76,
+     "end": 34.96,
+     "interp": true,
+     "ctc": {
+      "start": 34.803,
+      "end": 34.823,
+      "conf": 0.003
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "that's the missing memory.",
+   "start": 34.96,
+   "end": 36.142,
+   "words": [
+    {
+     "w": "that's",
+     "start": 34.96,
+     "end": 35.22,
+     "ctc": {
+      "start": 35.103,
+      "end": 35.243,
+      "conf": 0.244
+     }
+    },
+    {
+     "w": "the",
+     "start": 35.3,
+     "end": 35.4,
+     "ctc": {
+      "start": 35.263,
+      "end": 35.323,
+      "conf": 0.214
+     }
+    },
+    {
+     "w": "missing",
+     "start": 35.561,
+     "end": 35.761,
+     "interp": true,
+     "ctc": {
+      "start": 35.343,
+      "end": 35.683,
+      "conf": 0.236
+     }
+    },
+    {
+     "w": "memory",
+     "start": 35.722,
+     "end": 36.142,
+     "ctc": {
+      "start": 35.703,
+      "end": 36.143,
+      "conf": 0.504
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "Same slope,",
+   "start": 35.98,
+   "end": 37.28,
+   "words": [
+    {
+     "w": "same",
+     "start": 35.98,
+     "end": 36.96,
+     "ctc": {
+      "start": 36.163,
+      "end": 37.143,
+      "conf": 0.509
+     }
+    },
+    {
+     "w": "slope",
+     "start": 36.96,
+     "end": 37.28,
+     "ctc": {
+      "start": 37.223,
+      "end": 37.483,
+      "conf": 0.145
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "different history.",
+   "start": 37.42,
+   "end": 38.1,
+   "words": [
+    {
+     "w": "different",
+     "start": 37.42,
+     "end": 37.7,
+     "ctc": {
+      "start": 37.503,
+      "end": 37.943,
+      "conf": 0.37
+     }
+    },
+    {
+     "w": "history",
+     "start": 37.7,
+     "end": 38.1,
+     "ctc": {
+      "start": 37.963,
+      "end": 38.603,
+      "conf": 0.111
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "Move it higher,",
+   "start": 38.337,
+   "end": 39.01,
+   "words": [
+    {
+     "w": "move",
+     "start": 38.337,
+     "end": 38.537,
+     "interp": true,
+     "ctc": {
+      "start": 38.823,
+      "end": 39.003,
+      "conf": 0.141
+     }
+    },
+    {
+     "w": "it",
+     "start": 38.573,
+     "end": 38.773,
+     "interp": true,
+     "ctc": {
+      "start": 39.023,
+      "end": 39.143,
+      "conf": 0.047
+     }
+    },
+    {
+     "w": "higher",
+     "start": 38.81,
+     "end": 39.01,
+     "interp": true,
+     "ctc": {
+      "start": 39.163,
+      "end": 39.403,
+      "conf": 0.054
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "move it low.",
+   "start": 39.047,
+   "end": 39.8,
+   "words": [
+    {
+     "w": "move",
+     "start": 39.047,
+     "end": 39.247,
+     "interp": true,
+     "ctc": {
+      "start": 39.423,
+      "end": 39.623,
+      "conf": 0.041
+     }
+    },
+    {
+     "w": "it",
+     "start": 39.283,
+     "end": 39.483,
+     "interp": true,
+     "ctc": {
+      "start": 39.643,
+      "end": 39.683,
+      "conf": 0.018
+     }
+    },
+    {
+     "w": "low",
+     "start": 39.52,
+     "end": 39.8,
+     "ctc": {
+      "start": 39.703,
+      "end": 40.904,
+      "conf": 0.005
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "The derivative",
+   "start": 40.42,
+   "end": 41.46,
+   "words": [
+    {
+     "w": "the",
+     "start": 40.42,
+     "end": 40.94,
+     "ctc": {
+      "start": 40.924,
+      "end": 41.064,
+      "conf": 0.033
+     }
+    },
+    {
+     "w": "derivative",
+     "start": 40.94,
+     "end": 41.46,
+     "ctc": {
+      "start": 41.084,
+      "end": 41.784,
+      "conf": 0.431
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 1 — Melodic Rap",
+   "text": "will never know.",
+   "start": 41.65,
+   "end": 42.28,
+   "words": [
+    {
+     "w": "will",
+     "start": 41.65,
+     "end": 41.85,
+     "interp": true,
+     "ctc": {
+      "start": 41.804,
+      "end": 41.904,
+      "conf": 0.01
+     }
+    },
+    {
+     "w": "never",
+     "start": 41.84,
+     "end": 42.02,
+     "ctc": {
+      "start": 41.924,
+      "end": 42.144,
+      "conf": 0.342
+     }
+    },
+    {
+     "w": "know",
+     "start": 42.02,
+     "end": 42.28,
+     "ctc": {
+      "start": 42.164,
+      "end": 42.444,
+      "conf": 0.196
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "If the rate forgot",
+   "start": 42.98,
+   "end": 44.64,
+   "words": [
+    {
+     "w": "if",
+     "start": 42.98,
+     "end": 43.5,
+     "ctc": {
+      "start": 43.824,
+      "end": 43.864,
+      "conf": 0.322
+     }
+    },
+    {
+     "w": "the",
+     "start": 43.5,
+     "end": 43.94,
+     "ctc": {
+      "start": 43.884,
+      "end": 43.984,
+      "conf": 0.179
+     }
+    },
+    {
+     "w": "rate",
+     "start": 43.94,
+     "end": 44.18,
+     "ctc": {
+      "start": 44.104,
+      "end": 44.324,
+      "conf": 0.336
+     }
+    },
+    {
+     "w": "forgot",
+     "start": 44.44,
+     "end": 44.64,
+     "interp": true,
+     "ctc": {
+      "start": 44.344,
+      "end": 44.684,
+      "conf": 0.533
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "where the journey began,",
+   "start": 44.7,
+   "end": 45.7,
+   "words": [
+    {
+     "w": "where",
+     "start": 44.7,
+     "end": 44.9,
+     "interp": true,
+     "ctc": {
+      "start": 44.704,
+      "end": 44.964,
+      "conf": 0.094
+     }
+    },
+    {
+     "w": "the",
+     "start": 44.96,
+     "end": 45.06,
+     "ctc": {
+      "start": 44.984,
+      "end": 45.084,
+      "conf": 0.475
+     }
+    },
+    {
+     "w": "journey",
+     "start": 45.06,
+     "end": 45.32,
+     "ctc": {
+      "start": 45.164,
+      "end": 45.444,
+      "conf": 0.475
+     }
+    },
+    {
+     "w": "began",
+     "start": 45.32,
+     "end": 45.7,
+     "ctc": {
+      "start": 45.464,
+      "end": 46.064,
+      "conf": 0.578
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "maybe going backward",
+   "start": 46.263,
+   "end": 47.0,
+   "words": [
+    {
+     "w": "maybe",
+     "start": 46.263,
+     "end": 46.463,
+     "ctc": {
+      "start": 46.264,
+      "end": 46.464,
+      "conf": 0.606
+     }
+    },
+    {
+     "w": "going",
+     "start": 46.32,
+     "end": 46.6,
+     "ctc": {
+      "start": 46.564,
+      "end": 46.824,
+      "conf": 0.5
+     }
+    },
+    {
+     "w": "backward",
+     "start": 46.6,
+     "end": 47.0,
+     "ctc": {
+      "start": 46.844,
+      "end": 47.144,
+      "conf": 0.574
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "can't give one answer again.",
+   "start": 47.0,
+   "end": 48.483,
+   "words": [
+    {
+     "w": "can't",
+     "start": 47.0,
+     "end": 47.3,
+     "ctc": {
+      "start": 47.164,
+      "end": 47.344,
+      "conf": 0.278
+     }
+    },
+    {
+     "w": "give",
+     "start": 47.3,
+     "end": 47.36,
+     "ctc": {
+      "start": 47.364,
+      "end": 47.484,
+      "conf": 0.159
+     }
+    },
+    {
+     "w": "one",
+     "start": 47.36,
+     "end": 47.54,
+     "ctc": {
+      "start": 47.604,
+      "end": 47.664,
+      "conf": 0.443
+     }
+    },
+    {
+     "w": "answer",
+     "start": 47.54,
+     "end": 47.82,
+     "ctc": {
+      "start": 47.784,
+      "end": 48.104,
+      "conf": 0.352
+     }
+    },
+    {
+     "w": "again",
+     "start": 48.223,
+     "end": 48.483,
+     "ctc": {
+      "start": 48.184,
+      "end": 48.504,
+      "conf": 0.729
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "But maybe we don't need",
+   "start": 48.32,
+   "end": 49.62,
+   "words": [
+    {
+     "w": "but",
+     "start": 48.32,
+     "end": 48.62,
+     "ctc": {
+      "start": 48.584,
+      "end": 48.684,
+      "conf": 0.485
+     }
+    },
+    {
+     "w": "maybe",
+     "start": 48.62,
+     "end": 48.88,
+     "ctc": {
+      "start": 48.744,
+      "end": 48.944,
+      "conf": 0.277
+     }
+    },
+    {
+     "w": "we",
+     "start": 48.88,
+     "end": 49.04,
+     "ctc": {
+      "start": 48.964,
+      "end": 49.124,
+      "conf": 0.179
+     }
+    },
+    {
+     "w": "don't",
+     "start": 49.04,
+     "end": 49.36,
+     "ctc": {
+      "start": 49.144,
+      "end": 49.524,
+      "conf": 0.073
+     }
+    },
+    {
+     "w": "need",
+     "start": 49.36,
+     "end": 49.62,
+     "ctc": {
+      "start": 49.544,
+      "end": 49.944,
+      "conf": 0.003
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "where we started to be.",
+   "start": 49.81,
+   "end": 50.82,
+   "words": [
+    {
+     "w": "where",
+     "start": 49.81,
+     "end": 50.01,
+     "interp": true,
+     "ctc": {
+      "start": 49.964,
+      "end": 50.084,
+      "conf": 0.227
+     }
+    },
+    {
+     "w": "we",
+     "start": 50.0,
+     "end": 50.1,
+     "ctc": {
+      "start": 50.104,
+      "end": 50.164,
+      "conf": 0.534
+     }
+    },
+    {
+     "w": "started",
+     "start": 50.1,
+     "end": 50.46,
+     "ctc": {
+      "start": 50.244,
+      "end": 50.544,
+      "conf": 0.548
+     }
+    },
+    {
+     "w": "to",
+     "start": 50.46,
+     "end": 50.62,
+     "ctc": {
+      "start": 50.624,
+      "end": 50.664,
+      "conf": 0.149
+     }
+    },
+    {
+     "w": "be",
+     "start": 50.62,
+     "end": 50.82,
+     "ctc": {
+      "start": 50.684,
+      "end": 50.824,
+      "conf": 0.04
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "Maybe all we need",
+   "start": 50.82,
+   "end": 52.1,
+   "words": [
+    {
+     "w": "maybe",
+     "start": 50.82,
+     "end": 51.32,
+     "ctc": {
+      "start": 50.844,
+      "end": 51.424,
+      "conf": 0.076
+     }
+    },
+    {
+     "w": "all",
+     "start": 51.32,
+     "end": 51.56,
+     "ctc": {
+      "start": 51.444,
+      "end": 51.604,
+      "conf": 0.002
+     }
+    },
+    {
+     "w": "we",
+     "start": 51.56,
+     "end": 51.7,
+     "ctc": {
+      "start": 51.624,
+      "end": 51.764,
+      "conf": 0.102
+     }
+    },
+    {
+     "w": "need",
+     "start": 51.7,
+     "end": 52.1,
+     "ctc": {
+      "start": 51.784,
+      "end": 52.424,
+      "conf": 0.351
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "is the change we can see.",
+   "start": 52.1,
+   "end": 53.5,
+   "words": [
+    {
+     "w": "is",
+     "start": 52.1,
+     "end": 52.48,
+     "ctc": {
+      "start": 52.444,
+      "end": 52.545,
+      "conf": 0.108
+     }
+    },
+    {
+     "w": "the",
+     "start": 52.48,
+     "end": 52.58,
+     "ctc": {
+      "start": 52.565,
+      "end": 52.625,
+      "conf": 0.019
+     }
+    },
+    {
+     "w": "change",
+     "start": 52.58,
+     "end": 52.88,
+     "ctc": {
+      "start": 52.645,
+      "end": 53.045,
+      "conf": 0.124
+     }
+    },
+    {
+     "w": "we",
+     "start": 52.88,
+     "end": 53.1,
+     "ctc": {
+      "start": 53.065,
+      "end": 53.125,
+      "conf": 0.084
+     }
+    },
+    {
+     "w": "can",
+     "start": 53.15,
+     "end": 53.35,
+     "interp": true,
+     "ctc": {
+      "start": 53.145,
+      "end": 53.265,
+      "conf": 0.213
+     }
+    },
+    {
+     "w": "see",
+     "start": 53.2,
+     "end": 53.5,
+     "ctc": {
+      "start": 53.285,
+      "end": 53.565,
+      "conf": 0.038
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Add it up,",
+   "start": 53.5,
+   "end": 54.42,
+   "words": [
+    {
+     "w": "add",
+     "start": 53.5,
+     "end": 54.06,
+     "ctc": {
+      "start": 53.585,
+      "end": 54.165,
+      "conf": 0.068
+     }
+    },
+    {
+     "w": "it",
+     "start": 54.06,
+     "end": 54.2,
+     "ctc": {
+      "start": 54.185,
+      "end": 54.305,
+      "conf": 0.091
+     }
+    },
+    {
+     "w": "up",
+     "start": 54.2,
+     "end": 54.42,
+     "ctc": {
+      "start": 54.325,
+      "end": 54.545,
+      "conf": 0.12
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "piece by piece.",
+   "start": 54.42,
+   "end": 55.34,
+   "words": [
+    {
+     "w": "piece",
+     "start": 54.42,
+     "end": 54.68,
+     "ctc": {
+      "start": 54.565,
+      "end": 55.125,
+      "conf": 0.099
+     }
+    },
+    {
+     "w": "by",
+     "start": 54.68,
+     "end": 54.92,
+     "ctc": {
+      "start": 55.145,
+      "end": 55.205,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "piece",
+     "start": 54.92,
+     "end": 55.34,
+     "ctc": {
+      "start": 55.225,
+      "end": 55.545,
+      "conf": 0.05
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Let the changing",
+   "start": 55.34,
+   "end": 56.82,
+   "words": [
+    {
+     "w": "let",
+     "start": 55.34,
+     "end": 56.16,
+     "ctc": {
+      "start": 55.565,
+      "end": 56.265,
+      "conf": 0.011
+     }
+    },
+    {
+     "w": "the",
+     "start": 56.16,
+     "end": 56.28,
+     "ctc": {
+      "start": 56.285,
+      "end": 56.345,
+      "conf": 0.022
+     }
+    },
+    {
+     "w": "changing",
+     "start": 56.62,
+     "end": 56.82,
+     "interp": true,
+     "ctc": {
+      "start": 56.365,
+      "end": 56.985,
+      "conf": 0.042
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "find its shape.",
+   "start": 56.96,
+   "end": 57.84,
+   "words": [
+    {
+     "w": "find",
+     "start": 56.96,
+     "end": 57.2,
+     "ctc": {
+      "start": 57.005,
+      "end": 57.425,
+      "conf": 0.068
+     }
+    },
+    {
+     "w": "its",
+     "start": 57.2,
+     "end": 57.48,
+     "ctc": {
+      "start": 57.445,
+      "end": 57.565,
+      "conf": 0.037
+     }
+    },
+    {
+     "w": "shape",
+     "start": 57.48,
+     "end": 57.84,
+     "ctc": {
+      "start": 57.585,
+      "end": 58.525,
+      "conf": 0.006
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Start to end,",
+   "start": 58.22,
+   "end": 59.06,
+   "words": [
+    {
+     "w": "start",
+     "start": 58.22,
+     "end": 58.42,
+     "interp": true,
+     "ctc": {
+      "start": 58.545,
+      "end": 58.745,
+      "conf": 0.005
+     }
+    },
+    {
+     "w": "to",
+     "start": 58.6,
+     "end": 58.8,
+     "ctc": {
+      "start": 58.765,
+      "end": 58.805,
+      "conf": 0.003
+     }
+    },
+    {
+     "w": "end",
+     "start": 58.8,
+     "end": 59.06,
+     "ctc": {
+      "start": 58.825,
+      "end": 59.185,
+      "conf": 0.026
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "take the difference,",
+   "start": 59.12,
+   "end": 59.88,
+   "words": [
+    {
+     "w": "take",
+     "start": 59.12,
+     "end": 59.24,
+     "ctc": {
+      "start": 59.205,
+      "end": 59.365,
+      "conf": 0.029
+     }
+    },
+    {
+     "w": "the",
+     "start": 59.24,
+     "end": 59.42,
+     "ctc": {
+      "start": 59.385,
+      "end": 59.445,
+      "conf": 0.032
+     }
+    },
+    {
+     "w": "difference",
+     "start": 59.42,
+     "end": 59.88,
+     "ctc": {
+      "start": 59.465,
+      "end": 60.665,
+      "conf": 0.023
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "let the constant fade away.",
+   "start": 60.54,
+   "end": 62.96,
+   "words": [
+    {
+     "w": "let",
+     "start": 60.54,
+     "end": 61.06,
+     "ctc": {
+      "start": 60.685,
+      "end": 61.205,
+      "conf": 0.006
+     }
+    },
+    {
+     "w": "the",
+     "start": 61.06,
+     "end": 61.26,
+     "ctc": {
+      "start": 61.225,
+      "end": 61.285,
+      "conf": 0.002
+     }
+    },
+    {
+     "w": "constant",
+     "start": 61.26,
+     "end": 61.64,
+     "ctc": {
+      "start": 61.305,
+      "end": 61.905,
+      "conf": 0.005
+     }
+    },
+    {
+     "w": "fade",
+     "start": 61.64,
+     "end": 62.14,
+     "ctc": {
+      "start": 61.925,
+      "end": 63.925,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "away",
+     "start": 62.14,
+     "end": 62.96,
+     "ctc": {
+      "start": 63.945,
+      "end": 64.085,
+      "conf": 0.004
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Rate to amount.",
+   "start": 62.96,
+   "end": 64.14,
+   "words": [
+    {
+     "w": "rate",
+     "start": 62.96,
+     "end": 63.74,
+     "ctc": {
+      "start": 64.105,
+      "end": 64.186,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "to",
+     "start": 63.74,
+     "end": 63.88,
+     "ctc": {
+      "start": 64.206,
+      "end": 64.246,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "amount",
+     "start": 63.88,
+     "end": 64.14,
+     "ctc": {
+      "start": 64.266,
+      "end": 64.426,
+      "conf": 0.007
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Height to area.",
+   "start": 64.34,
+   "end": 65.26,
+   "words": [
+    {
+     "w": "height",
+     "start": 64.34,
+     "end": 64.6,
+     "ctc": {
+      "start": 64.446,
+      "end": 64.746,
+      "conf": 0.004
+     }
+    },
+    {
+     "w": "to",
+     "start": 64.6,
+     "end": 64.82,
+     "ctc": {
+      "start": 64.766,
+      "end": 64.866,
+      "conf": 0.002
+     }
+    },
+    {
+     "w": "area",
+     "start": 64.82,
+     "end": 65.26,
+     "ctc": {
+      "start": 64.886,
+      "end": 65.486,
+      "conf": 0.047
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Different things,",
+   "start": 65.26,
+   "end": 66.26,
+   "words": [
+    {
+     "w": "different",
+     "start": 65.26,
+     "end": 65.82,
+     "ctc": {
+      "start": 65.506,
+      "end": 65.986,
+      "conf": 0.038
+     }
+    },
+    {
+     "w": "things",
+     "start": 65.82,
+     "end": 66.26,
+     "ctc": {
+      "start": 66.006,
+      "end": 66.306,
+      "conf": 0.035
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "same melody.",
+   "start": 66.26,
+   "end": 66.98,
+   "words": [
+    {
+     "w": "same",
+     "start": 66.26,
+     "end": 66.48,
+     "ctc": {
+      "start": 66.326,
+      "end": 66.426,
+      "conf": 0.027
+     }
+    },
+    {
+     "w": "melody",
+     "start": 66.48,
+     "end": 66.98,
+     "ctc": {
+      "start": 66.446,
+      "end": 66.626,
+      "conf": 0.003
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Same machine.",
+   "start": 67.38,
+   "end": 67.96,
+   "words": [
+    {
+     "w": "same",
+     "start": 67.38,
+     "end": 67.56,
+     "ctc": {
+      "start": 66.646,
+      "end": 66.906,
+      "conf": 0.037
+     }
+    },
+    {
+     "w": "machine",
+     "start": 67.56,
+     "end": 67.96,
+     "ctc": {
+      "start": 66.926,
+      "end": 68.766,
+      "conf": 0.003
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Different input.",
+   "start": 67.96,
+   "end": 69.66,
+   "words": [
+    {
+     "w": "different",
+     "start": 67.96,
+     "end": 68.62,
+     "ctc": {
+      "start": 68.786,
+      "end": 69.466,
+      "conf": 0.028
+     }
+    },
+    {
+     "w": "input",
+     "start": 68.62,
+     "end": 69.66,
+     "ctc": {
+      "start": 69.486,
+      "end": 69.966,
+      "conf": 0.011
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Add up",
+   "start": 69.66,
+   "end": 70.8,
+   "words": [
+    {
+     "w": "add",
+     "start": 69.66,
+     "end": 70.52,
+     "ctc": {
+      "start": 69.986,
+      "end": 71.166,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "up",
+     "start": 70.52,
+     "end": 70.8,
+     "ctc": {
+      "start": 71.186,
+      "end": 71.406,
+      "conf": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "what you need.",
+   "start": 71.26,
+   "end": 71.94,
+   "words": [
+    {
+     "w": "what",
+     "start": 71.26,
+     "end": 71.44,
+     "ctc": {
+      "start": 71.426,
+      "end": 71.586,
+      "conf": 0.013
+     }
+    },
+    {
+     "w": "you",
+     "start": 71.44,
+     "end": 71.62,
+     "ctc": {
+      "start": 71.606,
+      "end": 71.706,
+      "conf": 0.009
+     }
+    },
+    {
+     "w": "need",
+     "start": 71.62,
+     "end": 71.94,
+     "ctc": {
+      "start": 71.726,
+      "end": 73.486,
+      "conf": 0.006
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "Now the tank fills up,",
+   "start": 71.94,
+   "end": 74.62,
+   "words": [
+    {
+     "w": "now",
+     "start": 71.94,
+     "end": 72.88,
+     "ctc": {
+      "start": 73.506,
+      "end": 73.586,
+      "conf": 0.13
+     }
+    },
+    {
+     "w": "the",
+     "start": 72.88,
+     "end": 73.62,
+     "ctc": {
+      "start": 73.606,
+      "end": 73.666,
+      "conf": 0.098
+     }
+    },
+    {
+     "w": "tank",
+     "start": 73.784,
+     "end": 74.004,
+     "ctc": {
+      "start": 73.786,
+      "end": 74.006,
+      "conf": 0.383
+     }
+    },
+    {
+     "w": "fills",
+     "start": 73.9,
+     "end": 74.14,
+     "ctc": {
+      "start": 74.106,
+      "end": 74.426,
+      "conf": 0.404
+     }
+    },
+    {
+     "w": "up",
+     "start": 74.14,
+     "end": 74.62,
+     "ctc": {
+      "start": 74.566,
+      "end": 74.686,
+      "conf": 0.403
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "but the flow keeps changing.",
+   "start": 74.62,
+   "end": 75.94,
+   "words": [
+    {
+     "w": "but",
+     "start": 74.62,
+     "end": 74.76,
+     "ctc": {
+      "start": 74.706,
+      "end": 74.826,
+      "conf": 0.461
+     }
+    },
+    {
+     "w": "the",
+     "start": 74.76,
+     "end": 74.86,
+     "ctc": {
+      "start": 74.846,
+      "end": 74.926,
+      "conf": 0.326
+     }
+    },
+    {
+     "w": "flow",
+     "start": 74.944,
+     "end": 75.224,
+     "ctc": {
+      "start": 74.946,
+      "end": 75.226,
+      "conf": 0.678
+     }
+    },
+    {
+     "w": "keeps",
+     "start": 75.324,
+     "end": 75.564,
+     "ctc": {
+      "start": 75.326,
+      "end": 75.566,
+      "conf": 0.735
+     }
+    },
+    {
+     "w": "changing",
+     "start": 75.38,
+     "end": 75.94,
+     "ctc": {
+      "start": 75.646,
+      "end": 76.287,
+      "conf": 0.477
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "Three t squared,",
+   "start": 76.215,
+   "end": 77.204,
+   "words": [
+    {
+     "w": "three",
+     "start": 76.215,
+     "end": 76.415,
+     "interp": true,
+     "ctc": {
+      "start": 76.547,
+      "end": 76.707,
+      "conf": 0.329
+     }
+    },
+    {
+     "w": "t",
+     "start": 76.489,
+     "end": 76.689,
+     "interp": true,
+     "ctc": {
+      "start": 76.727,
+      "end": 76.747,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "squared",
+     "start": 76.764,
+     "end": 77.204,
+     "ctc": {
+      "start": 76.767,
+      "end": 77.207,
+      "conf": 0.709
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "every second rearranging.",
+   "start": 77.12,
+   "end": 78.545,
+   "words": [
+    {
+     "w": "every",
+     "start": 77.12,
+     "end": 77.32,
+     "ctc": {
+      "start": 77.227,
+      "end": 77.387,
+      "conf": 0.551
+     }
+    },
+    {
+     "w": "second",
+     "start": 77.32,
+     "end": 77.62,
+     "ctc": {
+      "start": 77.527,
+      "end": 77.767,
+      "conf": 0.589
+     }
+    },
+    {
+     "w": "rearranging",
+     "start": 77.805,
+     "end": 78.545,
+     "ctc": {
+      "start": 77.827,
+      "end": 78.547,
+      "conf": 0.544
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "One rate times time",
+   "start": 78.885,
+   "end": 79.76,
+   "words": [
+    {
+     "w": "one",
+     "start": 78.885,
+     "end": 78.945,
+     "ctc": {
+      "start": 78.887,
+      "end": 78.967,
+      "conf": 0.505
+     }
+    },
+    {
+     "w": "rate",
+     "start": 78.88,
+     "end": 79.12,
+     "ctc": {
+      "start": 79.067,
+      "end": 79.267,
+      "conf": 0.453
+     }
+    },
+    {
+     "w": "times",
+     "start": 79.325,
+     "end": 79.625,
+     "ctc": {
+      "start": 79.327,
+      "end": 79.627,
+      "conf": 0.652
+     }
+    },
+    {
+     "w": "time",
+     "start": 79.42,
+     "end": 79.76,
+     "ctc": {
+      "start": 79.687,
+      "end": 79.987,
+      "conf": 0.482
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "won't get it right.",
+   "start": 79.88,
+   "end": 80.865,
+   "words": [
+    {
+     "w": "won't",
+     "start": 79.88,
+     "end": 80.1,
+     "ctc": {
+      "start": 80.007,
+      "end": 80.207,
+      "conf": 0.114
+     }
+    },
+    {
+     "w": "get",
+     "start": 80.1,
+     "end": 80.32,
+     "ctc": {
+      "start": 80.307,
+      "end": 80.427,
+      "conf": 0.546
+     }
+    },
+    {
+     "w": "it",
+     "start": 80.32,
+     "end": 80.5,
+     "ctc": {
+      "start": 80.487,
+      "end": 80.547,
+      "conf": 0.025
+     }
+    },
+    {
+     "w": "right",
+     "start": 80.625,
+     "end": 80.865,
+     "ctc": {
+      "start": 80.627,
+      "end": 80.867,
+      "conf": 0.757
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "One big rectangle",
+   "start": 80.885,
+   "end": 82.085,
+   "words": [
+    {
+     "w": "one",
+     "start": 80.885,
+     "end": 81.105,
+     "ctc": {
+      "start": 81.027,
+      "end": 81.107,
+      "conf": 0.57
+     }
+    },
+    {
+     "w": "big",
+     "start": 81.205,
+     "end": 81.405,
+     "ctc": {
+      "start": 81.227,
+      "end": 81.407,
+      "conf": 0.645
+     }
+    },
+    {
+     "w": "rectangle",
+     "start": 81.545,
+     "end": 82.085,
+     "ctc": {
+      "start": 81.547,
+      "end": 82.087,
+      "conf": 0.791
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "doesn't fit the line.",
+   "start": 81.78,
+   "end": 83.12,
+   "words": [
+    {
+     "w": "doesn't",
+     "start": 81.78,
+     "end": 82.42,
+     "ctc": {
+      "start": 82.147,
+      "end": 82.447,
+      "conf": 0.406
+     }
+    },
+    {
+     "w": "fit",
+     "start": 82.42,
+     "end": 82.74,
+     "ctc": {
+      "start": 82.747,
+      "end": 82.867,
+      "conf": 0.301
+     }
+    },
+    {
+     "w": "the",
+     "start": 82.74,
+     "end": 82.92,
+     "ctc": {
+      "start": 82.887,
+      "end": 82.947,
+      "conf": 0.342
+     }
+    },
+    {
+     "w": "line",
+     "start": 82.92,
+     "end": 83.12,
+     "ctc": {
+      "start": 83.067,
+      "end": 83.227,
+      "conf": 0.101
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "So break it down.",
+   "start": 83.12,
+   "end": 83.925,
+   "words": [
+    {
+     "w": "so",
+     "start": 83.12,
+     "end": 83.36,
+     "ctc": {
+      "start": 83.247,
+      "end": 83.307,
+      "conf": 0.05
+     }
+    },
+    {
+     "w": "break",
+     "start": 83.36,
+     "end": 83.44,
+     "ctc": {
+      "start": 83.327,
+      "end": 83.527,
+      "conf": 0.244
+     }
+    },
+    {
+     "w": "it",
+     "start": 83.44,
+     "end": 83.54,
+     "ctc": {
+      "start": 83.547,
+      "end": 83.627,
+      "conf": 0.085
+     }
+    },
+    {
+     "w": "down",
+     "start": 83.685,
+     "end": 83.925,
+     "ctc": {
+      "start": 83.687,
+      "end": 83.927,
+      "conf": 0.591
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "Two strips.",
+   "start": 83.9,
+   "end": 84.36,
+   "words": [
+    {
+     "w": "two",
+     "start": 83.9,
+     "end": 84.0,
+     "ctc": {
+      "start": 83.947,
+      "end": 84.047,
+      "conf": 0.378
+     }
+    },
+    {
+     "w": "strips",
+     "start": 84.0,
+     "end": 84.36,
+     "ctc": {
+      "start": 84.207,
+      "end": 84.527,
+      "conf": 0.758
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "Four strips.",
+   "start": 84.48,
+   "end": 85.145,
+   "words": [
+    {
+     "w": "four",
+     "start": 84.48,
+     "end": 84.6,
+     "ctc": {
+      "start": 84.607,
+      "end": 84.727,
+      "conf": 0.179
+     }
+    },
+    {
+     "w": "strips",
+     "start": 84.825,
+     "end": 85.145,
+     "ctc": {
+      "start": 84.827,
+      "end": 85.147,
+      "conf": 0.798
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "Eight, then more.",
+   "start": 85.14,
+   "end": 85.9,
+   "words": [
+    {
+     "w": "eight",
+     "start": 85.14,
+     "end": 85.32,
+     "ctc": {
+      "start": 85.167,
+      "end": 85.427,
+      "conf": 0.307
+     }
+    },
+    {
+     "w": "then",
+     "start": 85.32,
+     "end": 85.56,
+     "ctc": {
+      "start": 85.447,
+      "end": 85.687,
+      "conf": 0.206
+     }
+    },
+    {
+     "w": "more",
+     "start": 85.56,
+     "end": 85.9,
+     "ctc": {
+      "start": 85.827,
+      "end": 86.087,
+      "conf": 0.286
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "Smaller and smaller,",
+   "start": 86.125,
+   "end": 87.465,
+   "words": [
+    {
+     "w": "smaller",
+     "start": 86.125,
+     "end": 87.025,
+     "ctc": {
+      "start": 86.107,
+      "end": 87.027,
+      "conf": 0.732
+     }
+    },
+    {
+     "w": "and",
+     "start": 87.0,
+     "end": 87.04,
+     "ctc": {
+      "start": 87.047,
+      "end": 87.147,
+      "conf": 0.576
+     }
+    },
+    {
+     "w": "smaller",
+     "start": 87.165,
+     "end": 87.465,
+     "ctc": {
+      "start": 87.167,
+      "end": 87.488,
+      "conf": 0.778
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "closer than before.",
+   "start": 87.485,
+   "end": 88.565,
+   "words": [
+    {
+     "w": "closer",
+     "start": 87.485,
+     "end": 87.765,
+     "ctc": {
+      "start": 87.508,
+      "end": 87.748,
+      "conf": 0.535
+     }
+    },
+    {
+     "w": "than",
+     "start": 87.6,
+     "end": 87.88,
+     "ctc": {
+      "start": 87.868,
+      "end": 88.048,
+      "conf": 0.028
+     }
+    },
+    {
+     "w": "before",
+     "start": 88.145,
+     "end": 88.565,
+     "ctc": {
+      "start": 88.148,
+      "end": 88.708,
+      "conf": 0.757
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "Every little width,",
+   "start": 88.32,
+   "end": 89.38,
+   "words": [
+    {
+     "w": "every",
+     "start": 88.32,
+     "end": 88.72,
+     "ctc": {
+      "start": 88.728,
+      "end": 88.848,
+      "conf": 0.568
+     }
+    },
+    {
+     "w": "little",
+     "start": 88.965,
+     "end": 89.165,
+     "ctc": {
+      "start": 88.948,
+      "end": 89.188,
+      "conf": 0.583
+     }
+    },
+    {
+     "w": "width",
+     "start": 89.04,
+     "end": 89.38,
+     "ctc": {
+      "start": 89.268,
+      "end": 89.448,
+      "conf": 0.432
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "every changing height,",
+   "start": 89.625,
+   "end": 90.56,
+   "words": [
+    {
+     "w": "every",
+     "start": 89.625,
+     "end": 89.765,
+     "ctc": {
+      "start": 89.628,
+      "end": 89.768,
+      "conf": 0.524
+     }
+    },
+    {
+     "w": "changing",
+     "start": 90.002,
+     "end": 90.203,
+     "interp": true,
+     "ctc": {
+      "start": 89.848,
+      "end": 90.368,
+      "conf": 0.594
+     }
+    },
+    {
+     "w": "height",
+     "start": 90.24,
+     "end": 90.56,
+     "ctc": {
+      "start": 90.488,
+      "end": 90.768,
+      "conf": 0.264
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "add them together",
+   "start": 90.56,
+   "end": 91.76,
+   "words": [
+    {
+     "w": "add",
+     "start": 90.56,
+     "end": 91.18,
+     "ctc": {
+      "start": 91.188,
+      "end": 91.288,
+      "conf": 0.179
+     }
+    },
+    {
+     "w": "them",
+     "start": 91.18,
+     "end": 91.36,
+     "ctc": {
+      "start": 91.308,
+      "end": 91.468,
+      "conf": 0.379
+     }
+    },
+    {
+     "w": "together",
+     "start": 91.36,
+     "end": 91.76,
+     "ctc": {
+      "start": 91.568,
+      "end": 91.948,
+      "conf": 0.501
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "from left to right.",
+   "start": 91.76,
+   "end": 93.08,
+   "words": [
+    {
+     "w": "from",
+     "start": 91.76,
+     "end": 92.08,
+     "ctc": {
+      "start": 92.028,
+      "end": 92.228,
+      "conf": 0.405
+     }
+    },
+    {
+     "w": "left",
+     "start": 92.08,
+     "end": 92.4,
+     "ctc": {
+      "start": 92.368,
+      "end": 92.548,
+      "conf": 0.279
+     }
+    },
+    {
+     "w": "to",
+     "start": 92.4,
+     "end": 92.66,
+     "ctc": {
+      "start": 92.648,
+      "end": 92.748,
+      "conf": 0.22
+     }
+    },
+    {
+     "w": "right",
+     "start": 92.66,
+     "end": 93.08,
+     "ctc": {
+      "start": 92.968,
+      "end": 93.308,
+      "conf": 0.413
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "And as the pieces",
+   "start": 93.08,
+   "end": 94.42,
+   "words": [
+    {
+     "w": "and",
+     "start": 93.08,
+     "end": 93.34,
+     "ctc": {
+      "start": 93.328,
+      "end": 93.548,
+      "conf": 0.058
+     }
+    },
+    {
+     "w": "as",
+     "start": 93.34,
+     "end": 93.72,
+     "ctc": {
+      "start": 93.568,
+      "end": 93.808,
+      "conf": 0.075
+     }
+    },
+    {
+     "w": "the",
+     "start": 93.72,
+     "end": 93.94,
+     "ctc": {
+      "start": 93.828,
+      "end": 93.968,
+      "conf": 0.028
+     }
+    },
+    {
+     "w": "pieces",
+     "start": 93.94,
+     "end": 94.42,
+     "ctc": {
+      "start": 93.988,
+      "end": 94.688,
+      "conf": 0.009
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "fade away,",
+   "start": 94.42,
+   "end": 95.42,
+   "words": [
+    {
+     "w": "fade",
+     "start": 94.42,
+     "end": 94.96,
+     "ctc": {
+      "start": 94.708,
+      "end": 95.548,
+      "conf": 0.005
+     }
+    },
+    {
+     "w": "away",
+     "start": 94.96,
+     "end": 95.42,
+     "ctc": {
+      "start": 95.568,
+      "end": 95.668,
+      "conf": 0.027
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "the staircase and the curve",
+   "start": 95.42,
+   "end": 96.863,
+   "words": [
+    {
+     "w": "the",
+     "start": 95.42,
+     "end": 95.6,
+     "ctc": {
+      "start": 95.688,
+      "end": 95.828,
+      "conf": 0.114
+     }
+    },
+    {
+     "w": "staircase",
+     "start": 95.6,
+     "end": 95.9,
+     "ctc": {
+      "start": 95.848,
+      "end": 96.348,
+      "conf": 0.239
+     }
+    },
+    {
+     "w": "and",
+     "start": 95.9,
+     "end": 96.4,
+     "ctc": {
+      "start": 96.368,
+      "end": 96.468,
+      "conf": 0.122
+     }
+    },
+    {
+     "w": "the",
+     "start": 96.4,
+     "end": 96.5,
+     "ctc": {
+      "start": 96.488,
+      "end": 96.548,
+      "conf": 0.062
+     }
+    },
+    {
+     "w": "curve",
+     "start": 96.663,
+     "end": 96.863,
+     "interp": true,
+     "ctc": {
+      "start": 96.568,
+      "end": 96.808,
+      "conf": 0.097
+     }
+    }
+   ]
+  },
+  {
+   "section": "Verse 2 — Rap / Sung Phrases",
+   "text": "begin to look the same.",
+   "start": 96.826,
+   "end": 98.0,
+   "words": [
+    {
+     "w": "begin",
+     "start": 96.826,
+     "end": 97.086,
+     "ctc": {
+      "start": 96.828,
+      "end": 97.108,
+      "conf": 0.761
+     }
+    },
+    {
+     "w": "to",
+     "start": 96.96,
+     "end": 97.14,
+     "ctc": {
+      "start": 97.128,
+      "end": 97.188,
+      "conf": 0.058
+     }
+    },
+    {
+     "w": "look",
+     "start": 97.14,
+     "end": 97.36,
+     "ctc": {
+      "start": 97.308,
+      "end": 97.468,
+      "conf": 0.416
+     }
+    },
+    {
+     "w": "the",
+     "start": 97.36,
+     "end": 97.6,
+     "ctc": {
+      "start": 97.488,
+      "end": 97.668,
+      "conf": 0.052
+     }
+    },
+    {
+     "w": "same",
+     "start": 97.6,
+     "end": 98.0,
+     "ctc": {
+      "start": 97.688,
+      "end": 98.188,
+      "conf": 0.215
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "No single moment",
+   "start": 98.0,
+   "end": 99.58,
+   "words": [
+    {
+     "w": "no",
+     "start": 98.0,
+     "end": 98.3,
+     "ctc": {
+      "start": 98.208,
+      "end": 98.288,
+      "conf": 0.395
+     }
+    },
+    {
+     "w": "single",
+     "start": 98.486,
+     "end": 98.966,
+     "ctc": {
+      "start": 98.568,
+      "end": 98.988,
+      "conf": 0.485
+     }
+    },
+    {
+     "w": "moment",
+     "start": 98.84,
+     "end": 99.58,
+     "ctc": {
+      "start": 99.108,
+      "end": 99.989,
+      "conf": 0.246
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "can tell us the whole.",
+   "start": 99.58,
+   "end": 101.12,
+   "words": [
+    {
+     "w": "can",
+     "start": 99.58,
+     "end": 100.1,
+     "ctc": {
+      "start": 100.229,
+      "end": 100.329,
+      "conf": 0.571
+     }
+    },
+    {
+     "w": "tell",
+     "start": 100.386,
+     "end": 100.586,
+     "ctc": {
+      "start": 100.389,
+      "end": 100.589,
+      "conf": 0.719
+     }
+    },
+    {
+     "w": "us",
+     "start": 100.42,
+     "end": 100.74,
+     "ctc": {
+      "start": 100.669,
+      "end": 100.769,
+      "conf": 0.431
+     }
+    },
+    {
+     "w": "the",
+     "start": 100.74,
+     "end": 100.88,
+     "ctc": {
+      "start": 100.789,
+      "end": 100.889,
+      "conf": 0.199
+     }
+    },
+    {
+     "w": "whole",
+     "start": 100.88,
+     "end": 101.12,
+     "ctc": {
+      "start": 100.909,
+      "end": 101.389,
+      "conf": 0.428
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "So gather every change",
+   "start": 101.12,
+   "end": 102.446,
+   "words": [
+    {
+     "w": "so",
+     "start": 101.12,
+     "end": 101.46,
+     "ctc": {
+      "start": 101.469,
+      "end": 101.509,
+      "conf": 0.181
+     }
+    },
+    {
+     "w": "gather",
+     "start": 101.626,
+     "end": 101.946,
+     "ctc": {
+      "start": 101.629,
+      "end": 101.869,
+      "conf": 0.609
+     }
+    },
+    {
+     "w": "every",
+     "start": 101.966,
+     "end": 102.146,
+     "ctc": {
+      "start": 102.009,
+      "end": 102.149,
+      "conf": 0.406
+     }
+    },
+    {
+     "w": "change",
+     "start": 102.206,
+     "end": 102.446,
+     "ctc": {
+      "start": 102.229,
+      "end": 102.449,
+      "conf": 0.677
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "and let the pieces form the total.",
+   "start": 102.32,
+   "end": 103.6,
+   "words": [
+    {
+     "w": "and",
+     "start": 102.32,
+     "end": 102.44,
+     "ctc": {
+      "start": 102.469,
+      "end": 102.529,
+      "conf": 0.07
+     }
+    },
+    {
+     "w": "let",
+     "start": 102.44,
+     "end": 102.58,
+     "ctc": {
+      "start": 102.549,
+      "end": 102.629,
+      "conf": 0.633
+     }
+    },
+    {
+     "w": "the",
+     "start": 102.646,
+     "end": 102.766,
+     "ctc": {
+      "start": 102.649,
+      "end": 102.769,
+      "conf": 0.604
+     }
+    },
+    {
+     "w": "pieces",
+     "start": 102.7,
+     "end": 102.96,
+     "ctc": {
+      "start": 102.849,
+      "end": 103.089,
+      "conf": 0.449
+     }
+    },
+    {
+     "w": "form",
+     "start": 102.96,
+     "end": 103.2,
+     "ctc": {
+      "start": 103.169,
+      "end": 103.289,
+      "conf": 0.465
+     }
+    },
+    {
+     "w": "the",
+     "start": 103.2,
+     "end": 103.34,
+     "ctc": {
+      "start": 103.309,
+      "end": 103.369,
+      "conf": 0.167
+     }
+    },
+    {
+     "w": "total",
+     "start": 103.34,
+     "end": 103.6,
+     "ctc": {
+      "start": 103.469,
+      "end": 103.729,
+      "conf": 0.338
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "What looked like motion",
+   "start": 103.6,
+   "end": 105.246,
+   "words": [
+    {
+     "w": "what",
+     "start": 103.6,
+     "end": 103.82,
+     "ctc": {
+      "start": 103.789,
+      "end": 103.969,
+      "conf": 0.306
+     }
+    },
+    {
+     "w": "looked",
+     "start": 103.82,
+     "end": 104.12,
+     "ctc": {
+      "start": 104.109,
+      "end": 104.289,
+      "conf": 0.468
+     }
+    },
+    {
+     "w": "like",
+     "start": 104.386,
+     "end": 104.606,
+     "ctc": {
+      "start": 104.389,
+      "end": 104.589,
+      "conf": 0.705
+     }
+    },
+    {
+     "w": "motion",
+     "start": 104.686,
+     "end": 105.246,
+     "ctc": {
+      "start": 104.709,
+      "end": 105.209,
+      "conf": 0.545
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "becomes something we can see.",
+   "start": 104.84,
+   "end": 107.22,
+   "words": [
+    {
+     "w": "becomes",
+     "start": 104.84,
+     "end": 105.78,
+     "ctc": {
+      "start": 105.489,
+      "end": 105.869,
+      "conf": 0.5
+     }
+    },
+    {
+     "w": "something",
+     "start": 105.78,
+     "end": 106.2,
+     "ctc": {
+      "start": 105.949,
+      "end": 106.469,
+      "conf": 0.398
+     }
+    },
+    {
+     "w": "we",
+     "start": 106.2,
+     "end": 106.56,
+     "ctc": {
+      "start": 106.489,
+      "end": 106.669,
+      "conf": 0.212
+     }
+    },
+    {
+     "w": "can",
+     "start": 106.56,
+     "end": 106.88,
+     "ctc": {
+      "start": 106.689,
+      "end": 106.989,
+      "conf": 0.319
+     }
+    },
+    {
+     "w": "see",
+     "start": 106.88,
+     "end": 107.22,
+     "ctc": {
+      "start": 107.009,
+      "end": 107.389,
+      "conf": 0.072
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "Piece by piece—",
+   "start": 107.22,
+   "end": 108.52,
+   "words": [
+    {
+     "w": "piece",
+     "start": 107.22,
+     "end": 107.88,
+     "ctc": {
+      "start": 107.409,
+      "end": 108.049,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "by",
+     "start": 107.88,
+     "end": 108.1,
+     "ctc": {
+      "start": 108.069,
+      "end": 108.289,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "piece",
+     "start": 108.1,
+     "end": 108.52,
+     "ctc": {
+      "start": 108.309,
+      "end": 108.789,
+      "conf": 0.005
+     }
+    }
+   ]
+  },
+  {
+   "section": "Pre-Chorus — Sung",
+   "text": "accumulation is the key.",
+   "start": 108.52,
+   "end": 111.04,
+   "words": [
+    {
+     "w": "accumulation",
+     "start": 108.52,
+     "end": 109.62,
+     "ctc": {
+      "start": 108.809,
+      "end": 110.229,
+      "conf": 0.223
+     }
+    },
+    {
+     "w": "is",
+     "start": 109.62,
+     "end": 110.38,
+     "ctc": {
+      "start": 110.249,
+      "end": 110.529,
+      "conf": 0.04
+     }
+    },
+    {
+     "w": "the",
+     "start": 110.38,
+     "end": 110.58,
+     "ctc": {
+      "start": 110.549,
+      "end": 110.689,
+      "conf": 0.016
+     }
+    },
+    {
+     "w": "key",
+     "start": 110.58,
+     "end": 111.04,
+     "ctc": {
+      "start": 110.709,
+      "end": 113.39,
+      "conf": 0.001
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Add it up,",
+   "start": 112.86,
+   "end": 113.78,
+   "words": [
+    {
+     "w": "add",
+     "start": 112.86,
+     "end": 113.46,
+     "ctc": {
+      "start": 113.41,
+      "end": 113.55,
+      "conf": 0.06
+     }
+    },
+    {
+     "w": "it",
+     "start": 113.46,
+     "end": 113.6,
+     "ctc": {
+      "start": 113.57,
+      "end": 113.71,
+      "conf": 0.01
+     }
+    },
+    {
+     "w": "up",
+     "start": 113.6,
+     "end": 113.78,
+     "ctc": {
+      "start": 113.73,
+      "end": 113.85,
+      "conf": 0.001
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "piece by piece.",
+   "start": 113.78,
+   "end": 114.76,
+   "words": [
+    {
+     "w": "piece",
+     "start": 113.78,
+     "end": 114.08,
+     "ctc": {
+      "start": 113.87,
+      "end": 114.23,
+      "conf": 0.009
+     }
+    },
+    {
+     "w": "by",
+     "start": 114.08,
+     "end": 114.36,
+     "ctc": {
+      "start": 114.25,
+      "end": 114.49,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "piece",
+     "start": 114.36,
+     "end": 114.76,
+     "ctc": {
+      "start": 114.51,
+      "end": 114.77,
+      "conf": 0.002
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Let the changing",
+   "start": 115.14,
+   "end": 115.97,
+   "words": [
+    {
+     "w": "let",
+     "start": 115.14,
+     "end": 115.34,
+     "interp": true,
+     "ctc": {
+      "start": 114.79,
+      "end": 115.65,
+      "conf": 0.007
+     }
+    },
+    {
+     "w": "the",
+     "start": 115.52,
+     "end": 115.66,
+     "ctc": {
+      "start": 115.67,
+      "end": 115.73,
+      "conf": 0.01
+     }
+    },
+    {
+     "w": "changing",
+     "start": 115.77,
+     "end": 115.97,
+     "interp": true,
+     "ctc": {
+      "start": 115.75,
+      "end": 116.37,
+      "conf": 0.016
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "find its shape.",
+   "start": 115.88,
+   "end": 117.1,
+   "words": [
+    {
+     "w": "find",
+     "start": 115.88,
+     "end": 116.44,
+     "ctc": {
+      "start": 116.39,
+      "end": 116.79,
+      "conf": 0.007
+     }
+    },
+    {
+     "w": "its",
+     "start": 116.61,
+     "end": 116.81,
+     "interp": true,
+     "ctc": {
+      "start": 116.81,
+      "end": 116.93,
+      "conf": 0.004
+     }
+    },
+    {
+     "w": "shape",
+     "start": 116.78,
+     "end": 117.1,
+     "ctc": {
+      "start": 116.95,
+      "end": 117.61,
+      "conf": 0.001
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Start to end,",
+   "start": 117.62,
+   "end": 118.48,
+   "words": [
+    {
+     "w": "start",
+     "start": 117.62,
+     "end": 117.96,
+     "ctc": {
+      "start": 117.63,
+      "end": 118.13,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "to",
+     "start": 118.12,
+     "end": 118.32,
+     "interp": true,
+     "ctc": {
+      "start": 118.15,
+      "end": 118.19,
+      "conf": 0.003
+     }
+    },
+    {
+     "w": "end",
+     "start": 118.28,
+     "end": 118.48,
+     "interp": true,
+     "ctc": {
+      "start": 118.21,
+      "end": 118.31,
+      "conf": 0.001
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "take the difference,",
+   "start": 118.44,
+   "end": 119.53,
+   "words": [
+    {
+     "w": "take",
+     "start": 118.44,
+     "end": 118.62,
+     "ctc": {
+      "start": 118.33,
+      "end": 118.75,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "the",
+     "start": 118.62,
+     "end": 118.78,
+     "ctc": {
+      "start": 118.77,
+      "end": 118.83,
+      "conf": 0.002
+     }
+    },
+    {
+     "w": "difference",
+     "start": 119.33,
+     "end": 119.53,
+     "interp": true,
+     "ctc": {
+      "start": 118.85,
+      "end": 120.23,
+      "conf": 0.003
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "let the constant fade away.",
+   "start": 119.88,
+   "end": 122.3,
+   "words": [
+    {
+     "w": "let",
+     "start": 119.88,
+     "end": 120.44,
+     "ctc": {
+      "start": 120.25,
+      "end": 120.45,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "the",
+     "start": 120.44,
+     "end": 120.62,
+     "ctc": {
+      "start": 120.47,
+      "end": 120.69,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "constant",
+     "start": 120.62,
+     "end": 121.04,
+     "ctc": {
+      "start": 120.71,
+      "end": 121.27,
+      "conf": 0.005
+     }
+    },
+    {
+     "w": "fade",
+     "start": 121.04,
+     "end": 121.54,
+     "ctc": {
+      "start": 121.29,
+      "end": 122.09,
+      "conf": 0.003
+     }
+    },
+    {
+     "w": "away",
+     "start": 121.54,
+     "end": 122.3,
+     "ctc": {
+      "start": 122.11,
+      "end": 122.771,
+      "conf": 0.004
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Rate to amount.",
+   "start": 122.78,
+   "end": 123.52,
+   "words": [
+    {
+     "w": "rate",
+     "start": 122.78,
+     "end": 123.12,
+     "ctc": {
+      "start": 122.791,
+      "end": 123.211,
+      "conf": 0.003
+     }
+    },
+    {
+     "w": "to",
+     "start": 123.12,
+     "end": 123.26,
+     "ctc": {
+      "start": 123.231,
+      "end": 123.471,
+      "conf": 0.002
+     }
+    },
+    {
+     "w": "amount",
+     "start": 123.26,
+     "end": 123.52,
+     "ctc": {
+      "start": 123.491,
+      "end": 123.791,
+      "conf": 0.011
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Height to area.",
+   "start": 123.72,
+   "end": 124.62,
+   "words": [
+    {
+     "w": "height",
+     "start": 123.72,
+     "end": 123.98,
+     "ctc": {
+      "start": 123.811,
+      "end": 124.131,
+      "conf": 0.002
+     }
+    },
+    {
+     "w": "to",
+     "start": 123.98,
+     "end": 124.22,
+     "ctc": {
+      "start": 124.151,
+      "end": 124.211,
+      "conf": 0.002
+     }
+    },
+    {
+     "w": "area",
+     "start": 124.22,
+     "end": 124.62,
+     "ctc": {
+      "start": 124.231,
+      "end": 124.731,
+      "conf": 0.002
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Different things,",
+   "start": 124.62,
+   "end": 125.62,
+   "words": [
+    {
+     "w": "different",
+     "start": 124.62,
+     "end": 125.16,
+     "ctc": {
+      "start": 124.751,
+      "end": 125.391,
+      "conf": 0.004
+     }
+    },
+    {
+     "w": "things",
+     "start": 125.16,
+     "end": 125.62,
+     "ctc": {
+      "start": 125.411,
+      "end": 126.051,
+      "conf": 0.011
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "same melody.",
+   "start": 125.68,
+   "end": 126.48,
+   "words": [
+    {
+     "w": "same",
+     "start": 125.68,
+     "end": 125.9,
+     "ctc": {
+      "start": 126.071,
+      "end": 126.271,
+      "conf": 0.036
+     }
+    },
+    {
+     "w": "melody",
+     "start": 125.9,
+     "end": 126.48,
+     "ctc": {
+      "start": 126.291,
+      "end": 126.751,
+      "conf": 0.04
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Same machine.",
+   "start": 126.78,
+   "end": 127.34,
+   "words": [
+    {
+     "w": "same",
+     "start": 126.78,
+     "end": 126.96,
+     "ctc": {
+      "start": 126.771,
+      "end": 127.091,
+      "conf": 0.006
+     }
+    },
+    {
+     "w": "machine",
+     "start": 126.96,
+     "end": 127.34,
+     "ctc": {
+      "start": 127.111,
+      "end": 127.571,
+      "conf": 0.079
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Different input.",
+   "start": 127.34,
+   "end": 128.18,
+   "words": [
+    {
+     "w": "different",
+     "start": 127.34,
+     "end": 127.72,
+     "ctc": {
+      "start": 127.591,
+      "end": 127.911,
+      "conf": 0.181
+     }
+    },
+    {
+     "w": "input",
+     "start": 127.72,
+     "end": 128.18,
+     "ctc": {
+      "start": 127.931,
+      "end": 128.391,
+      "conf": 0.039
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "Add up",
+   "start": 128.18,
+   "end": 128.98,
+   "words": [
+    {
+     "w": "add",
+     "start": 128.18,
+     "end": 128.58,
+     "ctc": {
+      "start": 128.411,
+      "end": 128.851,
+      "conf": 0.054
+     }
+    },
+    {
+     "w": "up",
+     "start": 128.58,
+     "end": 128.98,
+     "ctc": {
+      "start": 128.871,
+      "end": 128.971,
+      "conf": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "section": "Chorus — Melodic",
+   "text": "what you need.",
+   "start": 128.98,
+   "end": 130.18,
+   "words": [
+    {
+     "w": "what",
+     "start": 128.98,
+     "end": 129.36,
+     "ctc": {
+      "start": 128.991,
+      "end": 129.711,
+      "conf": 0.011
+     }
+    },
+    {
+     "w": "you",
+     "start": 129.36,
+     "end": 129.74,
+     "ctc": {
+      "start": 129.731,
+      "end": 129.851,
+      "conf": 0.006
+     }
+    },
+    {
+     "w": "need",
+     "start": 129.74,
+     "end": 130.18,
+     "ctc": {
+      "start": 129.871,
+      "end": 130.211,
+      "conf": 0.005
+     }
+    }
+   ]
+  },
+  {
+   "section": "Break — Spoken / Minimal Beat",
+   "text": "Take an antiderivative.",
+   "start": 131.26,
+   "end": 132.788,
+   "words": [
+    {
+     "w": "take",
+     "start": 131.26,
+     "end": 131.6,
+     "ctc": {
+      "start": 131.651,
+      "end": 131.791,
+      "conf": 0.54
+     }
+    },
+    {
+     "w": "an",
+     "start": 131.6,
+     "end": 131.84,
+     "ctc": {
+      "start": 131.851,
+      "end": 131.891,
+      "conf": 0.356
+     }
+    },
+    {
+     "w": "antiderivative",
+     "start": 131.988,
+     "end": 132.788,
+     "ctc": {
+      "start": 131.991,
+      "end": 132.791,
+      "conf": 0.534
+     }
+    }
+   ]
+  },
+  {
+   "section": "Break — Spoken / Minimal Beat",
+   "text": "Check both ends.",
+   "start": 133.148,
+   "end": 134.128,
+   "words": [
+    {
+     "w": "check",
+     "start": 133.148,
+     "end": 133.328,
+     "ctc": {
+      "start": 133.151,
+      "end": 133.331,
+      "conf": 0.438
+     }
+    },
+    {
+     "w": "both",
+     "start": 133.468,
+     "end": 133.708,
+     "ctc": {
+      "start": 133.471,
+      "end": 133.711,
+      "conf": 0.547
+     }
+    },
+    {
+     "w": "ends",
+     "start": 133.848,
+     "end": 134.128,
+     "ctc": {
+      "start": 133.851,
+      "end": 134.132,
+      "conf": 0.502
+     }
+    }
+   ]
+  },
+  {
+   "section": "Break — Spoken / Minimal Beat",
+   "text": "F of b",
+   "start": 134.44,
+   "end": 135.06,
+   "words": [
+    {
+     "w": "f",
+     "start": 134.44,
+     "end": 134.78,
+     "ctc": {
+      "start": 134.772,
+      "end": 134.792,
+      "conf": 0.346
+     }
+    },
+    {
+     "w": "of",
+     "start": 134.78,
+     "end": 134.88,
+     "ctc": {
+      "start": 134.812,
+      "end": 134.852,
+      "conf": 0.226
+     }
+    },
+    {
+     "w": "b",
+     "start": 134.88,
+     "end": 135.06,
+     "ctc": {
+      "start": 135.932,
+      "end": 135.952,
+      "conf": 0.024
+     }
+    }
+   ]
+  },
+  {
+   "section": "Break — Spoken / Minimal Beat",
+   "text": "minus F of a.",
+   "start": 135.06,
+   "end": 136.62,
+   "words": [
+    {
+     "w": "minus",
+     "start": 135.06,
+     "end": 136.08,
+     "ctc": {
+      "start": 135.972,
+      "end": 136.232,
+      "conf": 0.433
+     }
+    },
+    {
+     "w": "f",
+     "start": 136.08,
+     "end": 136.3,
+     "ctc": {
+      "start": 136.372,
+      "end": 136.392,
+      "conf": 0.417
+     }
+    },
+    {
+     "w": "of",
+     "start": 136.3,
+     "end": 136.48,
+     "ctc": {
+      "start": 136.412,
+      "end": 136.572,
+      "conf": 0.036
+     }
+    },
+    {
+     "w": "a",
+     "start": 136.48,
+     "end": 136.62,
+     "ctc": {
+      "start": 137.372,
+      "end": 137.392,
+      "conf": 0.087
+     }
+    }
+   ]
+  },
+  {
+   "section": "Break — Spoken / Minimal Beat",
+   "text": "C on the left.",
+   "start": 136.62,
+   "end": 137.92,
+   "words": [
+    {
+     "w": "c",
+     "start": 136.62,
+     "end": 137.1,
+     "ctc": {
+      "start": 137.412,
+      "end": 137.432,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "on",
+     "start": 137.528,
+     "end": 137.588,
+     "ctc": {
+      "start": 137.452,
+      "end": 137.592,
+      "conf": 0.336
+     }
+    },
+    {
+     "w": "the",
+     "start": 137.5,
+     "end": 137.62,
+     "ctc": {
+      "start": 137.612,
+      "end": 137.672,
+      "conf": 0.04
+     }
+    },
+    {
+     "w": "left",
+     "start": 137.62,
+     "end": 137.92,
+     "ctc": {
+      "start": 137.792,
+      "end": 138.052,
+      "conf": 0.279
+     }
+    }
+   ]
+  },
+  {
+   "section": "Break — Spoken / Minimal Beat",
+   "text": "C on the right.",
+   "start": 138.0,
+   "end": 138.84,
+   "words": [
+    {
+     "w": "c",
+     "start": 138.0,
+     "end": 138.1,
+     "ctc": {
+      "start": 138.132,
+      "end": 138.152,
+      "conf": 0.017
+     }
+    },
+    {
+     "w": "on",
+     "start": 138.1,
+     "end": 138.48,
+     "ctc": {
+      "start": 138.532,
+      "end": 138.572,
+      "conf": 0.312
+     }
+    },
+    {
+     "w": "the",
+     "start": 138.48,
+     "end": 138.58,
+     "ctc": {
+      "start": 138.652,
+      "end": 138.712,
+      "conf": 0.003
+     }
+    },
+    {
+     "w": "right",
+     "start": 138.58,
+     "end": 138.84,
+     "ctc": {
+      "start": 138.732,
+      "end": 139.012,
+      "conf": 0.274
+     }
+    }
+   ]
+  },
+  {
+   "section": "Break — Spoken / Minimal Beat",
+   "text": "Subtract—",
+   "start": 139.38,
+   "end": 139.82,
+   "words": [
+    {
+     "w": "subtract",
+     "start": 139.38,
+     "end": 139.82,
+     "ctc": {
+      "start": 139.512,
+      "end": 139.972,
+      "conf": 0.459
+     }
+    }
+   ]
+  },
+  {
+   "section": "Break — Spoken / Minimal Beat",
+   "text": "and it's gone.",
+   "start": 139.82,
+   "end": 141.06,
+   "words": [
+    {
+     "w": "and",
+     "start": 139.82,
+     "end": 140.7,
+     "ctc": {
+      "start": 139.992,
+      "end": 140.772,
+      "conf": 0.215
+     }
+    },
+    {
+     "w": "it's",
+     "start": 140.7,
+     "end": 140.84,
+     "ctc": {
+      "start": 140.792,
+      "end": 140.892,
+      "conf": 0.207
+     }
+    },
+    {
+     "w": "gone",
+     "start": 140.84,
+     "end": 141.06,
+     "ctc": {
+      "start": 140.952,
+      "end": 141.192,
+      "conf": 0.177
+     }
+    }
+   ]
+  },
+  {
+   "section": "Short Pause",
+   "text": "The family",
+   "start": 141.32,
+   "end": 142.148,
+   "words": [
+    {
+     "w": "the",
+     "start": 141.32,
+     "end": 141.66,
+     "ctc": {
+      "start": 141.212,
+      "end": 141.732,
+      "conf": 0.171
+     }
+    },
+    {
+     "w": "family",
+     "start": 141.808,
+     "end": 142.148,
+     "ctc": {
+      "start": 141.812,
+      "end": 142.152,
+      "conf": 0.51
+     }
+    }
+   ]
+  },
+  {
+   "section": "Short Pause",
+   "text": "becomes one number.",
+   "start": 142.02,
+   "end": 143.16,
+   "words": [
+    {
+     "w": "becomes",
+     "start": 142.02,
+     "end": 142.44,
+     "ctc": {
+      "start": 142.332,
+      "end": 142.712,
+      "conf": 0.228
+     }
+    },
+    {
+     "w": "one",
+     "start": 142.44,
+     "end": 142.8,
+     "ctc": {
+      "start": 142.732,
+      "end": 142.952,
+      "conf": 0.185
+     }
+    },
+    {
+     "w": "number",
+     "start": 142.96,
+     "end": 143.16,
+     "interp": true,
+     "ctc": {
+      "start": 142.972,
+      "end": 143.252,
+      "conf": 0.01
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Now take a curve",
+   "start": 143.12,
+   "end": 143.98,
+   "words": [
+    {
+     "w": "now",
+     "start": 143.12,
+     "end": 143.24,
+     "ctc": {
+      "start": 143.272,
+      "end": 143.352,
+      "conf": 0.011
+     }
+    },
+    {
+     "w": "take",
+     "start": 143.368,
+     "end": 143.548,
+     "ctc": {
+      "start": 143.372,
+      "end": 143.552,
+      "conf": 0.544
+     }
+    },
+    {
+     "w": "a",
+     "start": 143.44,
+     "end": 143.58,
+     "ctc": {
+      "start": 143.612,
+      "end": 143.632,
+      "conf": 0.014
+     }
+    },
+    {
+     "w": "curve",
+     "start": 143.58,
+     "end": 143.98,
+     "ctc": {
+      "start": 143.652,
+      "end": 144.172,
+      "conf": 0.614
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "above the ground.",
+   "start": 143.98,
+   "end": 144.948,
+   "words": [
+    {
+     "w": "above",
+     "start": 143.98,
+     "end": 144.26,
+     "ctc": {
+      "start": 144.232,
+      "end": 144.452,
+      "conf": 0.617
+     }
+    },
+    {
+     "w": "the",
+     "start": 144.26,
+     "end": 144.48,
+     "ctc": {
+      "start": 144.472,
+      "end": 144.532,
+      "conf": 0.392
+     }
+    },
+    {
+     "w": "ground",
+     "start": 144.608,
+     "end": 144.948,
+     "ctc": {
+      "start": 144.612,
+      "end": 144.952,
+      "conf": 0.683
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Thin little strips",
+   "start": 145.244,
+   "end": 146.449,
+   "words": [
+    {
+     "w": "thin",
+     "start": 145.244,
+     "end": 145.444,
+     "interp": true,
+     "ctc": {
+      "start": 145.552,
+      "end": 145.712,
+      "conf": 0.225
+     }
+    },
+    {
+     "w": "little",
+     "start": 145.54,
+     "end": 145.84,
+     "ctc": {
+      "start": 145.853,
+      "end": 146.073,
+      "conf": 0.574
+     }
+    },
+    {
+     "w": "strips",
+     "start": 146.088,
+     "end": 146.449,
+     "ctc": {
+      "start": 146.093,
+      "end": 146.453,
+      "conf": 0.781
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "all the way around.",
+   "start": 146.26,
+   "end": 147.22,
+   "words": [
+    {
+     "w": "all",
+     "start": 146.26,
+     "end": 146.54,
+     "ctc": {
+      "start": 146.553,
+      "end": 146.633,
+      "conf": 0.009
+     }
+    },
+    {
+     "w": "the",
+     "start": 146.54,
+     "end": 146.64,
+     "ctc": {
+      "start": 146.653,
+      "end": 146.713,
+      "conf": 0.004
+     }
+    },
+    {
+     "w": "way",
+     "start": 146.709,
+     "end": 146.909,
+     "ctc": {
+      "start": 146.793,
+      "end": 146.913,
+      "conf": 0.597
+     }
+    },
+    {
+     "w": "around",
+     "start": 146.84,
+     "end": 147.22,
+     "ctc": {
+      "start": 146.993,
+      "end": 147.393,
+      "conf": 0.429
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Height times width—",
+   "start": 147.22,
+   "end": 148.76,
+   "words": [
+    {
+     "w": "height",
+     "start": 147.22,
+     "end": 148.14,
+     "ctc": {
+      "start": 148.013,
+      "end": 148.213,
+      "conf": 0.485
+     }
+    },
+    {
+     "w": "times",
+     "start": 148.14,
+     "end": 148.44,
+     "ctc": {
+      "start": 148.293,
+      "end": 148.593,
+      "conf": 0.429
+     }
+    },
+    {
+     "w": "width",
+     "start": 148.44,
+     "end": 148.76,
+     "ctc": {
+      "start": 148.613,
+      "end": 148.913,
+      "conf": 0.193
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "one little piece.",
+   "start": 148.92,
+   "end": 150.0,
+   "words": [
+    {
+     "w": "one",
+     "start": 148.92,
+     "end": 149.3,
+     "ctc": {
+      "start": 148.933,
+      "end": 149.473,
+      "conf": 0.336
+     }
+    },
+    {
+     "w": "little",
+     "start": 149.3,
+     "end": 149.66,
+     "ctc": {
+      "start": 149.573,
+      "end": 149.793,
+      "conf": 0.242
+     }
+    },
+    {
+     "w": "piece",
+     "start": 149.66,
+     "end": 150.0,
+     "ctc": {
+      "start": 149.893,
+      "end": 150.193,
+      "conf": 0.21
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Add every piece",
+   "start": 150.0,
+   "end": 151.24,
+   "words": [
+    {
+     "w": "add",
+     "start": 150.0,
+     "end": 150.58,
+     "ctc": {
+      "start": 150.213,
+      "end": 150.813,
+      "conf": 0.106
+     }
+    },
+    {
+     "w": "every",
+     "start": 150.58,
+     "end": 150.88,
+     "ctc": {
+      "start": 150.833,
+      "end": 151.013,
+      "conf": 0.255
+     }
+    },
+    {
+     "w": "piece",
+     "start": 150.88,
+     "end": 151.24,
+     "ctc": {
+      "start": 151.133,
+      "end": 151.433,
+      "conf": 0.368
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "and the surface appears.",
+   "start": 151.24,
+   "end": 152.42,
+   "words": [
+    {
+     "w": "and",
+     "start": 151.24,
+     "end": 151.46,
+     "ctc": {
+      "start": 151.453,
+      "end": 151.533,
+      "conf": 0.163
+     }
+    },
+    {
+     "w": "the",
+     "start": 151.46,
+     "end": 151.56,
+     "ctc": {
+      "start": 151.553,
+      "end": 151.613,
+      "conf": 0.05
+     }
+    },
+    {
+     "w": "surface",
+     "start": 151.56,
+     "end": 151.92,
+     "ctc": {
+      "start": 151.633,
+      "end": 152.173,
+      "conf": 0.558
+     }
+    },
+    {
+     "w": "appears",
+     "start": 151.92,
+     "end": 152.42,
+     "ctc": {
+      "start": 152.233,
+      "end": 152.893,
+      "conf": 0.48
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Now take a solid.",
+   "start": 152.42,
+   "end": 153.72,
+   "words": [
+    {
+     "w": "now",
+     "start": 152.42,
+     "end": 153.02,
+     "ctc": {
+      "start": 152.913,
+      "end": 153.153,
+      "conf": 0.208
+     }
+    },
+    {
+     "w": "take",
+     "start": 153.02,
+     "end": 153.24,
+     "ctc": {
+      "start": 153.173,
+      "end": 153.413,
+      "conf": 0.308
+     }
+    },
+    {
+     "w": "a",
+     "start": 153.24,
+     "end": 153.42,
+     "ctc": {
+      "start": 153.433,
+      "end": 153.453,
+      "conf": 0.47
+     }
+    },
+    {
+     "w": "solid",
+     "start": 153.42,
+     "end": 153.72,
+     "ctc": {
+      "start": 153.473,
+      "end": 153.933,
+      "conf": 0.304
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Cut it thin.",
+   "start": 153.88,
+   "end": 154.9,
+   "words": [
+    {
+     "w": "cut",
+     "start": 153.88,
+     "end": 154.52,
+     "ctc": {
+      "start": 153.953,
+      "end": 154.653,
+      "conf": 0.275
+     }
+    },
+    {
+     "w": "it",
+     "start": 154.52,
+     "end": 154.7,
+     "ctc": {
+      "start": 154.673,
+      "end": 154.753,
+      "conf": 0.152
+     }
+    },
+    {
+     "w": "thin",
+     "start": 154.7,
+     "end": 154.9,
+     "ctc": {
+      "start": 154.773,
+      "end": 154.993,
+      "conf": 0.056
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Look at the slice,",
+   "start": 154.9,
+   "end": 155.96,
+   "words": [
+    {
+     "w": "look",
+     "start": 154.9,
+     "end": 155.44,
+     "ctc": {
+      "start": 155.013,
+      "end": 155.593,
+      "conf": 0.119
+     }
+    },
+    {
+     "w": "at",
+     "start": 155.44,
+     "end": 155.62,
+     "ctc": {
+      "start": 155.613,
+      "end": 155.673,
+      "conf": 0.044
+     }
+    },
+    {
+     "w": "the",
+     "start": 155.62,
+     "end": 155.72,
+     "ctc": {
+      "start": 155.693,
+      "end": 155.773,
+      "conf": 0.124
+     }
+    },
+    {
+     "w": "slice",
+     "start": 155.72,
+     "end": 155.96,
+     "ctc": {
+      "start": 155.793,
+      "end": 156.113,
+      "conf": 0.217
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "not only the skin.",
+   "start": 156.06,
+   "end": 157.34,
+   "words": [
+    {
+     "w": "not",
+     "start": 156.06,
+     "end": 156.24,
+     "ctc": {
+      "start": 156.213,
+      "end": 156.393,
+      "conf": 0.325
+     }
+    },
+    {
+     "w": "only",
+     "start": 156.24,
+     "end": 156.74,
+     "ctc": {
+      "start": 156.413,
+      "end": 156.893,
+      "conf": 0.249
+     }
+    },
+    {
+     "w": "the",
+     "start": 156.74,
+     "end": 156.98,
+     "ctc": {
+      "start": 156.913,
+      "end": 157.033,
+      "conf": 0.14
+     }
+    },
+    {
+     "w": "skin",
+     "start": 156.98,
+     "end": 157.34,
+     "ctc": {
+      "start": 157.053,
+      "end": 157.514,
+      "conf": 0.383
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Every cross-section",
+   "start": 157.34,
+   "end": 158.66,
+   "words": [
+    {
+     "w": "every",
+     "start": 157.34,
+     "end": 157.96,
+     "ctc": {
+      "start": 157.534,
+      "end": 158.114,
+      "conf": 0.47
+     }
+    },
+    {
+     "w": "cross",
+     "start": 157.96,
+     "end": 158.32,
+     "ctc": {
+      "start": 158.214,
+      "end": 158.434,
+      "conf": 0.727
+     }
+    },
+    {
+     "w": "section",
+     "start": 158.32,
+     "end": 158.66,
+     "ctc": {
+      "start": 158.514,
+      "end": 158.814,
+      "conf": 0.52
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "has an area inside.",
+   "start": 158.774,
+   "end": 159.74,
+   "words": [
+    {
+     "w": "has",
+     "start": 158.774,
+     "end": 158.974,
+     "interp": true,
+     "ctc": {
+      "start": 158.834,
+      "end": 158.994,
+      "conf": 0.437
+     }
+    },
+    {
+     "w": "an",
+     "start": 158.889,
+     "end": 159.129,
+     "ctc": {
+      "start": 159.094,
+      "end": 159.134,
+      "conf": 0.324
+     }
+    },
+    {
+     "w": "area",
+     "start": 159.04,
+     "end": 159.34,
+     "ctc": {
+      "start": 159.314,
+      "end": 159.554,
+      "conf": 0.27
+     }
+    },
+    {
+     "w": "inside",
+     "start": 159.34,
+     "end": 159.74,
+     "ctc": {
+      "start": 159.574,
+      "end": 160.394,
+      "conf": 0.55
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Add those areas",
+   "start": 159.74,
+   "end": 161.22,
+   "words": [
+    {
+     "w": "add",
+     "start": 159.74,
+     "end": 160.44,
+     "ctc": {
+      "start": 160.414,
+      "end": 160.614,
+      "conf": 0.025
+     }
+    },
+    {
+     "w": "those",
+     "start": 160.44,
+     "end": 160.8,
+     "ctc": {
+      "start": 160.634,
+      "end": 161.074,
+      "conf": 0.371
+     }
+    },
+    {
+     "w": "areas",
+     "start": 160.8,
+     "end": 161.22,
+     "ctc": {
+      "start": 161.194,
+      "end": 161.414,
+      "conf": 0.435
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "from side to side.",
+   "start": 161.22,
+   "end": 162.729,
+   "words": [
+    {
+     "w": "from",
+     "start": 161.22,
+     "end": 161.5,
+     "ctc": {
+      "start": 161.474,
+      "end": 161.634,
+      "conf": 0.58
+     }
+    },
+    {
+     "w": "side",
+     "start": 161.769,
+     "end": 162.069,
+     "ctc": {
+      "start": 161.774,
+      "end": 162.074,
+      "conf": 0.715
+     }
+    },
+    {
+     "w": "to",
+     "start": 161.86,
+     "end": 162.06,
+     "ctc": {
+      "start": 162.134,
+      "end": 162.194,
+      "conf": 0.009
+     }
+    },
+    {
+     "w": "side",
+     "start": 162.209,
+     "end": 162.729,
+     "ctc": {
+      "start": 162.214,
+      "end": 162.714,
+      "conf": 0.925
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "And suddenly—",
+   "start": 162.749,
+   "end": 163.249,
+   "words": [
+    {
+     "w": "and",
+     "start": 162.749,
+     "end": 162.809,
+     "ctc": {
+      "start": 162.734,
+      "end": 162.834,
+      "conf": 0.46
+     }
+    },
+    {
+     "w": "suddenly",
+     "start": 162.829,
+     "end": 163.249,
+     "ctc": {
+      "start": 162.854,
+      "end": 163.254,
+      "conf": 0.609
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "height became area.",
+   "start": 163.1,
+   "end": 164.76,
+   "words": [
+    {
+     "w": "height",
+     "start": 163.1,
+     "end": 163.54,
+     "ctc": {
+      "start": 163.454,
+      "end": 163.694,
+      "conf": 0.535
+     }
+    },
+    {
+     "w": "became",
+     "start": 163.54,
+     "end": 163.94,
+     "ctc": {
+      "start": 163.794,
+      "end": 164.394,
+      "conf": 0.208
+     }
+    },
+    {
+     "w": "area",
+     "start": 163.94,
+     "end": 164.76,
+     "ctc": {
+      "start": 164.414,
+      "end": 164.894,
+      "conf": 0.033
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Area became volume.",
+   "start": 164.76,
+   "end": 166.64,
+   "words": [
+    {
+     "w": "area",
+     "start": 164.76,
+     "end": 165.46,
+     "ctc": {
+      "start": 164.914,
+      "end": 165.734,
+      "conf": 0.081
+     }
+    },
+    {
+     "w": "became",
+     "start": 165.46,
+     "end": 165.98,
+     "ctc": {
+      "start": 165.754,
+      "end": 166.514,
+      "conf": 0.194
+     }
+    },
+    {
+     "w": "volume",
+     "start": 165.98,
+     "end": 166.64,
+     "ctc": {
+      "start": 166.534,
+      "end": 166.854,
+      "conf": 0.403
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Nothing changed",
+   "start": 166.64,
+   "end": 167.53,
+   "words": [
+    {
+     "w": "nothing",
+     "start": 166.64,
+     "end": 166.92,
+     "ctc": {
+      "start": 166.874,
+      "end": 167.114,
+      "conf": 0.326
+     }
+    },
+    {
+     "w": "changed",
+     "start": 167.15,
+     "end": 167.53,
+     "ctc": {
+      "start": 167.194,
+      "end": 167.534,
+      "conf": 0.658
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "inside the machine.",
+   "start": 167.61,
+   "end": 168.42,
+   "words": [
+    {
+     "w": "inside",
+     "start": 167.61,
+     "end": 168.11,
+     "ctc": {
+      "start": 167.614,
+      "end": 168.094,
+      "conf": 0.773
+     }
+    },
+    {
+     "w": "the",
+     "start": 167.74,
+     "end": 168.12,
+     "ctc": {
+      "start": 168.114,
+      "end": 168.194,
+      "conf": 0.127
+     }
+    },
+    {
+     "w": "machine",
+     "start": 168.12,
+     "end": 168.42,
+     "ctc": {
+      "start": 168.214,
+      "end": 168.874,
+      "conf": 0.446
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "Only what",
+   "start": 168.42,
+   "end": 169.7,
+   "words": [
+    {
+     "w": "only",
+     "start": 168.42,
+     "end": 169.46,
+     "ctc": {
+      "start": 168.894,
+      "end": 169.575,
+      "conf": 0.135
+     }
+    },
+    {
+     "w": "what",
+     "start": 169.46,
+     "end": 169.7,
+     "ctc": {
+      "start": 169.595,
+      "end": 169.855,
+      "conf": 0.109
+     }
+    }
+   ]
+  },
+  {
+   "section": "Beat Switch — Melodic Rap",
+   "text": "we chose to feed it.",
+   "start": 169.7,
+   "end": 172.84,
+   "words": [
+    {
+     "w": "we",
+     "start": 169.7,
+     "end": 170.0,
+     "ctc": {
+      "start": 169.875,
+      "end": 170.055,
+      "conf": 0.093
+     }
+    },
+    {
+     "w": "chose",
+     "start": 170.0,
+     "end": 170.4,
+     "ctc": {
+      "start": 170.075,
+      "end": 170.715,
+      "conf": 0.116
+     }
+    },
+    {
+     "w": "to",
+     "start": 170.76,
+     "end": 170.96,
+     "interp": true,
+     "ctc": {
+      "start": 170.735,
+      "end": 170.795,
+      "conf": 0.018
+     }
+    },
+    {
+     "w": "feed",
+     "start": 171.12,
+     "end": 171.32,
+     "interp": true,
+     "ctc": {
+      "start": 170.815,
+      "end": 171.835,
+      "conf": 0.007
+     }
+    },
+    {
+     "w": "it",
+     "start": 171.48,
+     "end": 172.84,
+     "ctc": {
+      "start": 171.855,
+      "end": 173.215,
+      "conf": 0.0
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "A rate",
+   "start": 173.053,
+   "end": 173.467,
+   "words": [
+    {
+     "w": "a",
+     "start": 173.053,
+     "end": 173.253,
+     "interp": true,
+     "ctc": {
+      "start": 173.235,
+      "end": 173.255,
+      "conf": 0.024
+     }
+    },
+    {
+     "w": "rate",
+     "start": 173.267,
+     "end": 173.467,
+     "interp": true,
+     "ctc": {
+      "start": 173.275,
+      "end": 173.635,
+      "conf": 0.131
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "becomes an amount.",
+   "start": 173.48,
+   "end": 174.66,
+   "words": [
+    {
+     "w": "becomes",
+     "start": 173.48,
+     "end": 174.02,
+     "ctc": {
+      "start": 173.655,
+      "end": 174.315,
+      "conf": 0.263
+     }
+    },
+    {
+     "w": "an",
+     "start": 174.02,
+     "end": 174.34,
+     "ctc": {
+      "start": 174.335,
+      "end": 174.435,
+      "conf": 0.217
+     }
+    },
+    {
+     "w": "amount",
+     "start": 174.34,
+     "end": 174.66,
+     "ctc": {
+      "start": 174.555,
+      "end": 174.855,
+      "conf": 0.239
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "A height",
+   "start": 174.74,
+   "end": 175.98,
+   "words": [
+    {
+     "w": "a",
+     "start": 174.74,
+     "end": 175.64,
+     "ctc": {
+      "start": 174.875,
+      "end": 174.895,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "height",
+     "start": 175.64,
+     "end": 175.98,
+     "ctc": {
+      "start": 175.855,
+      "end": 176.115,
+      "conf": 0.249
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "becomes an area.",
+   "start": 175.98,
+   "end": 177.28,
+   "words": [
+    {
+     "w": "becomes",
+     "start": 175.98,
+     "end": 176.44,
+     "ctc": {
+      "start": 176.335,
+      "end": 176.795,
+      "conf": 0.252
+     }
+    },
+    {
+     "w": "an",
+     "start": 176.44,
+     "end": 176.86,
+     "ctc": {
+      "start": 176.815,
+      "end": 177.055,
+      "conf": 0.122
+     }
+    },
+    {
+     "w": "area",
+     "start": 176.86,
+     "end": 177.28,
+     "ctc": {
+      "start": 177.075,
+      "end": 177.475,
+      "conf": 0.253
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "A slice",
+   "start": 177.28,
+   "end": 178.38,
+   "words": [
+    {
+     "w": "a",
+     "start": 177.28,
+     "end": 177.96,
+     "ctc": {
+      "start": 177.495,
+      "end": 177.515,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "slice",
+     "start": 177.96,
+     "end": 178.38,
+     "ctc": {
+      "start": 177.535,
+      "end": 178.675,
+      "conf": 0.09
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "becomes a volume.",
+   "start": 178.38,
+   "end": 179.78,
+   "words": [
+    {
+     "w": "becomes",
+     "start": 178.38,
+     "end": 178.9,
+     "ctc": {
+      "start": 178.695,
+      "end": 179.395,
+      "conf": 0.174
+     }
+    },
+    {
+     "w": "a",
+     "start": 178.9,
+     "end": 179.42,
+     "ctc": {
+      "start": 179.415,
+      "end": 179.435,
+      "conf": 0.003
+     }
+    },
+    {
+     "w": "volume",
+     "start": 179.42,
+     "end": 179.78,
+     "ctc": {
+      "start": 179.455,
+      "end": 180.035,
+      "conf": 0.274
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "Same operation.",
+   "start": 179.78,
+   "end": 180.76,
+   "words": [
+    {
+     "w": "same",
+     "start": 179.78,
+     "end": 180.14,
+     "ctc": {
+      "start": 180.055,
+      "end": 180.395,
+      "conf": 0.259
+     }
+    },
+    {
+     "w": "operation",
+     "start": 180.14,
+     "end": 180.76,
+     "ctc": {
+      "start": 180.415,
+      "end": 181.296,
+      "conf": 0.276
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "Different thing",
+   "start": 181.18,
+   "end": 182.1,
+   "words": [
+    {
+     "w": "different",
+     "start": 181.18,
+     "end": 181.58,
+     "ctc": {
+      "start": 181.316,
+      "end": 181.916,
+      "conf": 0.199
+     }
+    },
+    {
+     "w": "thing",
+     "start": 181.58,
+     "end": 182.1,
+     "ctc": {
+      "start": 182.036,
+      "end": 182.276,
+      "conf": 0.364
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "we choose",
+   "start": 182.1,
+   "end": 182.66,
+   "words": [
+    {
+     "w": "we",
+     "start": 182.1,
+     "end": 182.4,
+     "ctc": {
+      "start": 182.296,
+      "end": 182.436,
+      "conf": 0.264
+     }
+    },
+    {
+     "w": "choose",
+     "start": 182.4,
+     "end": 182.66,
+     "ctc": {
+      "start": 182.616,
+      "end": 182.936,
+      "conf": 0.443
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "to accumulate.",
+   "start": 182.66,
+   "end": 183.86,
+   "words": [
+    {
+     "w": "to",
+     "start": 182.66,
+     "end": 182.96,
+     "ctc": {
+      "start": 182.956,
+      "end": 183.036,
+      "conf": 0.375
+     }
+    },
+    {
+     "w": "accumulate",
+     "start": 182.96,
+     "end": 183.86,
+     "ctc": {
+      "start": 183.156,
+      "end": 184.796,
+      "conf": 0.201
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "Water.",
+   "start": 183.86,
+   "end": 184.92,
+   "words": [
+    {
+     "w": "water",
+     "start": 183.86,
+     "end": 184.92,
+     "ctc": {
+      "start": 184.816,
+      "end": 185.056,
+      "conf": 0.087
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "Mass.",
+   "start": 184.92,
+   "end": 185.26,
+   "words": [
+    {
+     "w": "mass",
+     "start": 184.92,
+     "end": 185.26,
+     "ctc": {
+      "start": 185.076,
+      "end": 185.736,
+      "conf": 0.141
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "Energy.",
+   "start": 185.26,
+   "end": 186.32,
+   "words": [
+    {
+     "w": "energy",
+     "start": 185.26,
+     "end": 186.32,
+     "ctc": {
+      "start": 185.756,
+      "end": 187.016,
+      "conf": 0.022
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "Different stories.",
+   "start": 187.14,
+   "end": 187.96,
+   "words": [
+    {
+     "w": "different",
+     "start": 187.14,
+     "end": 187.38,
+     "ctc": {
+      "start": 187.036,
+      "end": 187.556,
+      "conf": 0.028
+     }
+    },
+    {
+     "w": "stories",
+     "start": 187.38,
+     "end": 187.96,
+     "ctc": {
+      "start": 187.576,
+      "end": 188.096,
+      "conf": 0.293
+     }
+    }
+   ]
+  },
+  {
+   "section": "Bridge — Fully Sung",
+   "text": "Same machinery.",
+   "start": 188.02,
+   "end": 190.04,
+   "words": [
+    {
+     "w": "same",
+     "start": 188.02,
+     "end": 188.44,
+     "ctc": {
+      "start": 188.116,
+      "end": 188.796,
+      "conf": 0.1
+     }
+    },
+    {
+     "w": "machinery",
+     "start": 188.44,
+     "end": 190.04,
+     "ctc": {
+      "start": 188.816,
+      "end": 192.577,
+      "conf": 0.112
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "Add it up,",
+   "start": 191.92,
+   "end": 193.0,
+   "words": [
+    {
+     "w": "add",
+     "start": 191.92,
+     "end": 192.64,
+     "ctc": {
+      "start": 192.597,
+      "end": 192.897,
+      "conf": 0.113
+     }
+    },
+    {
+     "w": "it",
+     "start": 192.64,
+     "end": 192.78,
+     "ctc": {
+      "start": 192.917,
+      "end": 193.077,
+      "conf": 0.002
+     }
+    },
+    {
+     "w": "up",
+     "start": 192.78,
+     "end": 193.0,
+     "ctc": {
+      "start": 193.097,
+      "end": 193.177,
+      "conf": 0.079
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "piece by piece.",
+   "start": 193.0,
+   "end": 193.84,
+   "words": [
+    {
+     "w": "piece",
+     "start": 193.0,
+     "end": 193.24,
+     "ctc": {
+      "start": 193.197,
+      "end": 193.417,
+      "conf": 0.06
+     }
+    },
+    {
+     "w": "by",
+     "start": 193.24,
+     "end": 193.48,
+     "ctc": {
+      "start": 193.437,
+      "end": 193.697,
+      "conf": 0.002
+     }
+    },
+    {
+     "w": "piece",
+     "start": 193.48,
+     "end": 193.84,
+     "ctc": {
+      "start": 193.717,
+      "end": 194.077,
+      "conf": 0.022
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "Don't memorise",
+   "start": 193.84,
+   "end": 194.62,
+   "words": [
+    {
+     "w": "don't",
+     "start": 193.84,
+     "end": 194.22,
+     "ctc": {
+      "start": 194.097,
+      "end": 194.337,
+      "conf": 0.075
+     }
+    },
+    {
+     "w": "memorise",
+     "start": 194.42,
+     "end": 194.62,
+     "interp": true,
+     "ctc": {
+      "start": 194.417,
+      "end": 195.017,
+      "conf": 0.195
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "what you can see.",
+   "start": 194.62,
+   "end": 195.72,
+   "words": [
+    {
+     "w": "what",
+     "start": 194.62,
+     "end": 195.06,
+     "ctc": {
+      "start": 195.037,
+      "end": 195.177,
+      "conf": 0.111
+     }
+    },
+    {
+     "w": "you",
+     "start": 195.06,
+     "end": 195.22,
+     "ctc": {
+      "start": 195.217,
+      "end": 195.277,
+      "conf": 0.182
+     }
+    },
+    {
+     "w": "can",
+     "start": 195.34,
+     "end": 195.54,
+     "interp": true,
+     "ctc": {
+      "start": 195.297,
+      "end": 195.477,
+      "conf": 0.356
+     }
+    },
+    {
+     "w": "see",
+     "start": 195.46,
+     "end": 195.72,
+     "ctc": {
+      "start": 195.497,
+      "end": 195.877,
+      "conf": 0.199
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "Lose the start,",
+   "start": 195.72,
+   "end": 197.02,
+   "words": [
+    {
+     "w": "lose",
+     "start": 195.72,
+     "end": 196.62,
+     "ctc": {
+      "start": 195.897,
+      "end": 196.697,
+      "conf": 0.224
+     }
+    },
+    {
+     "w": "the",
+     "start": 196.62,
+     "end": 196.74,
+     "ctc": {
+      "start": 196.717,
+      "end": 196.777,
+      "conf": 0.033
+     }
+    },
+    {
+     "w": "start",
+     "start": 196.74,
+     "end": 197.02,
+     "ctc": {
+      "start": 196.797,
+      "end": 197.157,
+      "conf": 0.224
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "recover the family,",
+   "start": 197.1,
+   "end": 197.96,
+   "words": [
+    {
+     "w": "recover",
+     "start": 197.1,
+     "end": 197.36,
+     "ctc": {
+      "start": 197.177,
+      "end": 197.597,
+      "conf": 0.319
+     }
+    },
+    {
+     "w": "the",
+     "start": 197.36,
+     "end": 197.66,
+     "ctc": {
+      "start": 197.617,
+      "end": 197.717,
+      "conf": 0.133
+     }
+    },
+    {
+     "w": "family",
+     "start": 197.66,
+     "end": 197.96,
+     "ctc": {
+      "start": 197.797,
+      "end": 198.237,
+      "conf": 0.457
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "take the change",
+   "start": 197.96,
+   "end": 199.56,
+   "words": [
+    {
+     "w": "take",
+     "start": 197.96,
+     "end": 198.8,
+     "ctc": {
+      "start": 198.257,
+      "end": 199.157,
+      "conf": 0.06
+     }
+    },
+    {
+     "w": "the",
+     "start": 198.8,
+     "end": 199.18,
+     "ctc": {
+      "start": 199.177,
+      "end": 199.257,
+      "conf": 0.013
+     }
+    },
+    {
+     "w": "change",
+     "start": 199.18,
+     "end": 199.56,
+     "ctc": {
+      "start": 199.277,
+      "end": 199.817,
+      "conf": 0.077
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "and set it free.",
+   "start": 199.56,
+   "end": 200.64,
+   "words": [
+    {
+     "w": "and",
+     "start": 199.56,
+     "end": 199.82,
+     "ctc": {
+      "start": 199.837,
+      "end": 199.917,
+      "conf": 0.015
+     }
+    },
+    {
+     "w": "set",
+     "start": 199.82,
+     "end": 200.04,
+     "ctc": {
+      "start": 199.937,
+      "end": 200.077,
+      "conf": 0.014
+     }
+    },
+    {
+     "w": "it",
+     "start": 200.04,
+     "end": 200.24,
+     "ctc": {
+      "start": 200.097,
+      "end": 200.277,
+      "conf": 0.015
+     }
+    },
+    {
+     "w": "free",
+     "start": 200.24,
+     "end": 200.64,
+     "ctc": {
+      "start": 200.297,
+      "end": 202.237,
+      "conf": 0.027
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "Rate to amount.",
+   "start": 201.56,
+   "end": 202.7,
+   "words": [
+    {
+     "w": "rate",
+     "start": 201.56,
+     "end": 202.28,
+     "ctc": {
+      "start": 202.257,
+      "end": 202.517,
+      "conf": 0.027
+     }
+    },
+    {
+     "w": "to",
+     "start": 202.28,
+     "end": 202.46,
+     "ctc": {
+      "start": 202.537,
+      "end": 202.657,
+      "conf": 0.012
+     }
+    },
+    {
+     "w": "amount",
+     "start": 202.46,
+     "end": 202.7,
+     "ctc": {
+      "start": 202.677,
+      "end": 202.977,
+      "conf": 0.022
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "Height to area.",
+   "start": 202.92,
+   "end": 203.84,
+   "words": [
+    {
+     "w": "height",
+     "start": 202.92,
+     "end": 203.14,
+     "ctc": {
+      "start": 202.997,
+      "end": 203.297,
+      "conf": 0.013
+     }
+    },
+    {
+     "w": "to",
+     "start": 203.14,
+     "end": 203.42,
+     "ctc": {
+      "start": 203.317,
+      "end": 203.397,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "area",
+     "start": 203.42,
+     "end": 203.84,
+     "ctc": {
+      "start": 203.417,
+      "end": 204.538,
+      "conf": 0.108
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "Area to volume.",
+   "start": 203.84,
+   "end": 205.16,
+   "words": [
+    {
+     "w": "area",
+     "start": 203.84,
+     "end": 204.48,
+     "ctc": {
+      "start": 204.558,
+      "end": 204.678,
+      "conf": 0.106
+     }
+    },
+    {
+     "w": "to",
+     "start": 204.48,
+     "end": 204.74,
+     "ctc": {
+      "start": 204.698,
+      "end": 204.818,
+      "conf": 0.023
+     }
+    },
+    {
+     "w": "volume",
+     "start": 204.74,
+     "end": 205.16,
+     "ctc": {
+      "start": 204.918,
+      "end": 205.418,
+      "conf": 0.486
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "Same idea underneath.",
+   "start": 205.32,
+   "end": 207.34,
+   "words": [
+    {
+     "w": "same",
+     "start": 205.32,
+     "end": 205.6,
+     "ctc": {
+      "start": 205.438,
+      "end": 205.858,
+      "conf": 0.197
+     }
+    },
+    {
+     "w": "idea",
+     "start": 205.6,
+     "end": 206.08,
+     "ctc": {
+      "start": 205.878,
+      "end": 206.458,
+      "conf": 0.159
+     }
+    },
+    {
+     "w": "underneath",
+     "start": 206.78,
+     "end": 207.34,
+     "ctc": {
+      "start": 206.478,
+      "end": 207.438,
+      "conf": 0.168
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "Same machine.",
+   "start": 207.34,
+   "end": 208.272,
+   "words": [
+    {
+     "w": "same",
+     "start": 207.34,
+     "end": 207.72,
+     "ctc": {
+      "start": 207.698,
+      "end": 207.838,
+      "conf": 0.258
+     }
+    },
+    {
+     "w": "machine",
+     "start": 207.852,
+     "end": 208.272,
+     "ctc": {
+      "start": 207.858,
+      "end": 208.278,
+      "conf": 0.503
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "Different input.",
+   "start": 208.18,
+   "end": 208.92,
+   "words": [
+    {
+     "w": "different",
+     "start": 208.18,
+     "end": 208.4,
+     "ctc": {
+      "start": 208.298,
+      "end": 208.638,
+      "conf": 0.427
+     }
+    },
+    {
+     "w": "input",
+     "start": 208.4,
+     "end": 208.92,
+     "ctc": {
+      "start": 208.658,
+      "end": 209.058,
+      "conf": 0.106
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "Now you know",
+   "start": 208.92,
+   "end": 209.92,
+   "words": [
+    {
+     "w": "now",
+     "start": 208.92,
+     "end": 209.54,
+     "ctc": {
+      "start": 209.078,
+      "end": 209.138,
+      "conf": 0.001
+     }
+    },
+    {
+     "w": "you",
+     "start": 209.54,
+     "end": 209.72,
+     "ctc": {
+      "start": 209.158,
+      "end": 209.798,
+      "conf": 0.135
+     }
+    },
+    {
+     "w": "know",
+     "start": 209.72,
+     "end": 209.92,
+     "ctc": {
+      "start": 209.818,
+      "end": 210.038,
+      "conf": 0.183
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Chorus — Bigger, Warm",
+   "text": "what it's built to do.",
+   "start": 209.92,
+   "end": 211.06,
+   "words": [
+    {
+     "w": "what",
+     "start": 209.92,
+     "end": 210.2,
+     "ctc": {
+      "start": 210.058,
+      "end": 210.318,
+      "conf": 0.09
+     }
+    },
+    {
+     "w": "it's",
+     "start": 210.2,
+     "end": 210.36,
+     "ctc": {
+      "start": 210.338,
+      "end": 210.418,
+      "conf": 0.052
+     }
+    },
+    {
+     "w": "built",
+     "start": 210.36,
+     "end": 210.58,
+     "ctc": {
+      "start": 210.518,
+      "end": 210.678,
+      "conf": 0.075
+     }
+    },
+    {
+     "w": "to",
+     "start": 210.58,
+     "end": 210.78,
+     "ctc": {
+      "start": 210.698,
+      "end": 210.858,
+      "conf": 0.352
+     }
+    },
+    {
+     "w": "do",
+     "start": 210.78,
+     "end": 211.06,
+     "ctc": {
+      "start": 210.878,
+      "end": 211.038,
+      "conf": 0.061
+     }
+    }
+   ]
+  },
+  {
+   "section": "Break",
+   "text": "Why does it work?",
+   "start": 211.06,
+   "end": 212.16,
+   "words": [
+    {
+     "w": "why",
+     "start": 211.06,
+     "end": 211.46,
+     "ctc": {
+      "start": 211.058,
+      "end": 211.658,
+      "conf": 0.009
+     }
+    },
+    {
+     "w": "does",
+     "start": 211.46,
+     "end": 211.74,
+     "ctc": {
+      "start": 211.678,
+      "end": 211.878,
+      "conf": 0.032
+     }
+    },
+    {
+     "w": "it",
+     "start": 211.74,
+     "end": 211.9,
+     "ctc": {
+      "start": 211.898,
+      "end": 211.998,
+      "conf": 0.046
+     }
+    },
+    {
+     "w": "work",
+     "start": 211.9,
+     "end": 212.16,
+     "ctc": {
+      "start": 212.018,
+      "end": 212.278,
+      "conf": 0.063
+     }
+    }
+   ]
+  },
+  {
+   "section": "Group Chant",
+   "text": "From scratch!",
+   "start": 213.332,
+   "end": 214.704,
+   "words": [
+    {
+     "w": "from",
+     "start": 213.332,
+     "end": 213.532,
+     "interp": true,
+     "ctc": {
+      "start": 212.298,
+      "end": 212.778,
+      "conf": 0.081
+     }
+    },
+    {
+     "w": "scratch",
+     "start": 214.504,
+     "end": 214.704,
+     "interp": true,
+     "ctc": {
+      "start": 212.798,
+      "end": 213.358,
+      "conf": 0.038
+     }
+    }
+   ]
+  },
+  {
+   "section": "Group Chant",
+   "text": "From scratch!",
+   "start": 215.676,
+   "end": 217.048,
+   "words": [
+    {
+     "w": "from",
+     "start": 215.676,
+     "end": 215.876,
+     "interp": true,
+     "ctc": {
+      "start": 213.378,
+      "end": 217.739,
+      "conf": 0.09
+     }
+    },
+    {
+     "w": "scratch",
+     "start": 216.848,
+     "end": 217.048,
+     "interp": true,
+     "ctc": {
+      "start": 217.759,
+      "end": 218.199,
+      "conf": 0.055
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "Reverse it.",
+   "start": 218.02,
+   "end": 218.76,
+   "words": [
+    {
+     "w": "reverse",
+     "start": 218.02,
+     "end": 218.58,
+     "ctc": {
+      "start": 218.279,
+      "end": 218.779,
+      "conf": 0.285
+     }
+    },
+    {
+     "w": "it",
+     "start": 218.58,
+     "end": 218.76,
+     "ctc": {
+      "start": 218.799,
+      "end": 218.839,
+      "conf": 0.003
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "Add it.",
+   "start": 218.82,
+   "end": 219.4,
+   "words": [
+    {
+     "w": "add",
+     "start": 218.82,
+     "end": 219.22,
+     "ctc": {
+      "start": 218.859,
+      "end": 219.339,
+      "conf": 0.083
+     }
+    },
+    {
+     "w": "it",
+     "start": 219.22,
+     "end": 219.4,
+     "ctc": {
+      "start": 219.359,
+      "end": 219.419,
+      "conf": 0.004
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "Slice it.",
+   "start": 219.44,
+   "end": 220.24,
+   "words": [
+    {
+     "w": "slice",
+     "start": 219.44,
+     "end": 219.74,
+     "ctc": {
+      "start": 219.439,
+      "end": 220.159,
+      "conf": 0.116
+     }
+    },
+    {
+     "w": "it",
+     "start": 219.74,
+     "end": 220.24,
+     "ctc": {
+      "start": 220.179,
+      "end": 220.219,
+      "conf": 0.002
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "See.",
+   "start": 220.24,
+   "end": 220.66,
+   "words": [
+    {
+     "w": "see",
+     "start": 220.24,
+     "end": 220.66,
+     "ctc": {
+      "start": 220.239,
+      "end": 220.859,
+      "conf": 0.11
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "Derivative.",
+   "start": 221.173,
+   "end": 221.833,
+   "words": [
+    {
+     "w": "derivative",
+     "start": 221.173,
+     "end": 221.833,
+     "ctc": {
+      "start": 221.179,
+      "end": 221.799,
+      "conf": 0.465
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "Integral.",
+   "start": 222.283,
+   "end": 222.483,
+   "words": [
+    {
+     "w": "integral",
+     "start": 222.283,
+     "end": 222.483,
+     "interp": true,
+     "ctc": {
+      "start": 221.999,
+      "end": 222.459,
+      "conf": 0.257
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "Geometry.",
+   "start": 222.733,
+   "end": 223.313,
+   "words": [
+    {
+     "w": "geometry",
+     "start": 222.733,
+     "end": 223.313,
+     "ctc": {
+      "start": 222.739,
+      "end": 223.319,
+      "conf": 0.635
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "Piece by piece,",
+   "start": 222.88,
+   "end": 224.18,
+   "words": [
+    {
+     "w": "piece",
+     "start": 222.88,
+     "end": 223.56,
+     "ctc": {
+      "start": 223.339,
+      "end": 223.899,
+      "conf": 0.018
+     }
+    },
+    {
+     "w": "by",
+     "start": 223.56,
+     "end": 223.8,
+     "ctc": {
+      "start": 223.919,
+      "end": 223.999,
+      "conf": 0.0
+     }
+    },
+    {
+     "w": "piece",
+     "start": 223.8,
+     "end": 224.18,
+     "ctc": {
+      "start": 224.019,
+      "end": 224.479,
+      "conf": 0.01
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "the total grows.",
+   "start": 224.44,
+   "end": 225.14,
+   "words": [
+    {
+     "w": "the",
+     "start": 224.44,
+     "end": 224.58,
+     "ctc": {
+      "start": 224.499,
+      "end": 224.639,
+      "conf": 0.014
+     }
+    },
+    {
+     "w": "total",
+     "start": 224.58,
+     "end": 224.84,
+     "ctc": {
+      "start": 224.659,
+      "end": 224.959,
+      "conf": 0.025
+     }
+    },
+    {
+     "w": "grows",
+     "start": 224.84,
+     "end": 225.14,
+     "ctc": {
+      "start": 224.979,
+      "end": 225.959,
+      "conf": 0.052
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "Same machine—",
+   "start": 225.14,
+   "end": 226.48,
+   "words": [
+    {
+     "w": "same",
+     "start": 225.14,
+     "end": 226.08,
+     "ctc": {
+      "start": 225.979,
+      "end": 226.259,
+      "conf": 0.048
+     }
+    },
+    {
+     "w": "machine",
+     "start": 226.08,
+     "end": 226.48,
+     "ctc": {
+      "start": 226.279,
+      "end": 227.56,
+      "conf": 0.12
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "now you know.",
+   "start": 226.7,
+   "end": 227.88,
+   "words": [
+    {
+     "w": "now",
+     "start": 226.7,
+     "end": 227.5,
+     "ctc": {
+      "start": 227.58,
+      "end": 227.64,
+      "conf": 0.003
+     }
+    },
+    {
+     "w": "you",
+     "start": 227.5,
+     "end": 227.66,
+     "ctc": {
+      "start": 227.66,
+      "end": 227.76,
+      "conf": 0.356
+     }
+    },
+    {
+     "w": "know",
+     "start": 227.66,
+     "end": 227.88,
+     "ctc": {
+      "start": 227.78,
+      "end": 228.02,
+      "conf": 0.365
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "Ninety-nine percent...",
+   "start": 228.33,
+   "end": 229.43,
+   "words": [
+    {
+     "w": "ninety",
+     "start": 228.33,
+     "end": 228.53,
+     "interp": true,
+     "ctc": {
+      "start": 228.04,
+      "end": 229.16,
+      "conf": 0.018
+     }
+    },
+    {
+     "w": "nine",
+     "start": 228.78,
+     "end": 228.98,
+     "interp": true,
+     "ctc": {
+      "start": 229.18,
+      "end": 229.42,
+      "conf": 0.038
+     }
+    },
+    {
+     "w": "percent",
+     "start": 229.23,
+     "end": 229.43,
+     "interp": true,
+     "ctc": {
+      "start": 229.44,
+      "end": 229.94,
+      "conf": 0.03
+     }
+    }
+   ]
+  },
+  {
+   "section": "Final Hook — Half Sung / Half Spoken",
+   "text": "Loading.",
+   "start": 229.68,
+   "end": 230.4,
+   "words": [
+    {
+     "w": "loading",
+     "start": 229.68,
+     "end": 230.4,
+     "ctc": {
+      "start": 229.96,
+      "end": 231.26,
+      "conf": 0.054
+     }
+    }
+   ]
+  }
+ ]
+}

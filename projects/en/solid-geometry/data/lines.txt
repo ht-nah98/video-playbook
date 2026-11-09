@@ -1,0 +1,261 @@
+## Cold open   []
+p1 0 0.02 1.59 let's be honest with each other for a moment
+p1 1 2.04 7.61 how many times have you looked at a geometry problem with a box or a pyramid in it and thought this one isn't for me
+p1 2 8.74 14.23 today i'd like to change that by showing you that geometry in three dimensions isn't as complicated as it looks
+p1 3 14.70 22.97 it's in the three-legged stool in the kitchen it's in the corner of the room you're sitting in right now it's in every highway overpass you've ever driven under
+p1 4 24.66 27.39 by the end of this video i want to answer three questions with you
+p1 5 27.94 31.05 one what are the few simple rules that the whole subject is built on
+p1 6 31.45 35.81 two how do you measure an angle or a distance between things that never even touch
+p1 7 36.28 41.63 and three where do the volume formulas come from including that strange one third that keeps showing up
+p1 8 42.68 47.36 and it all starts with three ideas so simple that mathematics doesn't even try to define them
+## Point, line, plane   [ACT ONE — Three bricks]
+p2 0 0.02 6.38 every building needs a foundation and the foundation of solid geometry is three basic ideas the point the line and the plane
+p2 1 6.81 11.23 you already know points and lines from flat geometry the new character here is the plane
+p2 2 11.64 14.91 picture the top of a table or the surface of a perfectly still lake
+p2 3 15.30 19.85 now stretch it out forever in every direction and make it so thin that it has no thickness at all
+p2 4 20.26 25.36 on paper we usually draw a plane as a slanted parallelogram and give it a name with a letter like plane p
+p2 5 26.55 30.65 here's the interesting part mathematics never defines these three ideas in words
+p2 6 31.08 37.12 instead it describes how they behave through a few properties that we simply agree to accept they're called axioms
+## Four rules   [ACT ONE — Three bricks]
+p2 7 38.84 43.31 rule one through two different points there is exactly one line just like on flat paper
+p2 8 44.32 48.40 rule two through three points that don't lie on one line there is exactly one plane
+p2 9 48.79 52.25 this is why a three-legged stool never wobbles even on an uneven floor
+p2 10 52.66 57.83 the tips of its three legs always pin down exactly one plane so all three can touch the ground at once
+p2 11 58.28 64.57 a four-legged chair has no such guarantee the fourth leg can end up just off the plane of the other three and the chair rocks
+p2 12 65.00 67.77 it's also why a camera tripod has three legs and not four
+p2 13 68.76 72.90 rule three if two points of a line lie in a plane then the whole line lies in that plane
+p2 14 73.31 79.54 you can check this with a ruler on a table if both ends of the ruler touch the table the entire ruler lies flat against it
+p2 15 80.63 87.76 rule four if two different planes share one point then they share a whole line through that point that line is called their intersection
+p2 16 88.45 91.42 look up at the corner of your room where a wall meets the ceiling
+p2 17 91.81 95.81 that straight edge you see is the intersection of two planes the wall and the ceiling
+## Three ways to pin a plane   [ACT ONE — Three bricks]
+p2 18 97.44 99.79 from these rules we get three ways to fix a plane in place
+p2 19 100.22 101.89 three points that aren't on one line
+p2 20 102.31 103.76 a line and one point that isn't on it
+p2 21 104.17 105.57 or two lines that cross each other
+## The map   [ACT TWO — Where things can be]
+p2 22 108.01 112.47 once we have points lines and planes the next question is how can they sit relative to each other
+p2 23 112.90 116.88 this part can sound dry but it's actually the map for everything that comes after
+## Two lines   [ACT TWO — Where things can be]
+p2 24 118.56 122.47 on a flat page two lines have only two options they cross or they're parallel
+p2 25 122.86 126.70 in space a third option appears and it's a special one two lines can be skew
+p2 26 127.12 132.40 skew lines don't cross and they aren't parallel either there's no single plane that contains both of them
+p2 27 133.41 135.07 you can find a pair right in your room
+p2 28 135.48 142.77 take the top edge of the wall in front of you now take the vertical edge of the side wall at the end nearest to you where it meets the wall behind you
+p2 29 143.20 149.23 those two edges never meet but they aren't parallel either because one runs sideways and the other runs straight up
+p2 30 149.66 155.57 careful though the vertical edge in the far corner does meet the top edge right in the corner that pair crosses
+p2 31 156.58 158.36 another example is a highway overpass
+p2 32 158.81 163.11 the center line of the road on the bridge and the center line of the road underneath are skew
+p2 33 163.82 167.55 that's exactly why the cars can pass over each other without ever colliding
+## A line and a plane   [ACT TWO — Where things can be]
+p2 34 169.19 170.91 a line and a plane have three options
+p2 35 171.61 173.34 the line can lie entirely inside the plane
+p2 36 173.77 178.14 it can cut through the plane at exactly one point like a needle through a sheet of paper
+p2 37 178.55 183.97 or it can be parallel to the plane with no point in common at all like a straight cable stretched above a road
+## Two planes   [ACT TWO — Where things can be]
+p2 38 185.63 187.71 two different planes have exactly two options
+p2 39 188.12 192.02 they can cross along a line like the two pages of an open book meeting at the spine
+p2 40 192.41 197.17 or they can be parallel with nothing in common like the floor and the ceiling of the same room
+p2 41 198.26 201.51 once these three groups feel solid the next two parts get much easier
+p2 42 201.91 205.77 because those parts are really just a closer look at two of the cases on this map
+## A stand-in   [ACT THREE — Parallel]
+p2 43 208.25 213.67 being parallel comes down to one simple idea two things that keep the same distance from each other forever
+p2 44 214.06 217.97 but to prove that something is parallel we need a few theorems that act as bridges
+p2 45 219.02 221.68 the most important one for a line and a plane says this
+p2 46 222.13 227.92 if a line is not in a plane and it's parallel to some line that is in the plane then it's parallel to the whole plane
+p2 47 228.31 234.21 in plain words to show that line d is parallel to plane p you just need to find a stand-in inside p that's parallel to d
+p2 48 234.74 238.37 this is the move behind almost every proof of parallel lines and planes
+## Which way the cut goes   [ACT THREE — Parallel]
+p2 49 240.07 242.30 there's a useful result in the other direction too
+p2 50 242.73 248.34 if line d is parallel to plane p then any plane that contains d and cuts p cuts it along a line that's parallel to d
+p2 51 248.91 255.41 this is the key to a whole family of problems where you slice a solid with a plane it tells you which direction each cut has to run
+## Two directions lock a plane   [ACT THREE — Parallel]
+p2 52 257.07 259.51 to recognize two parallel planes we use this theorem
+p2 53 259.90 265.67 if one plane contains two crossing lines and both are parallel to a second plane then the two planes are parallel
+p2 54 266.10 268.02 notice the condition two lines that cross
+p2 55 268.53 274.83 one line isn't enough a plane can still swing around that single line like a door on its hinge until it hits the other plane
+p2 56 275.24 279.38 you need two different directions both parallel before the plane is locked in place
+p2 57 280.59 283.49 and once two planes are parallel there's a neat consequence
+p2 58 283.92 289.19 any third plane that cuts through both of them cuts them along two lines that are parallel to each other
+## Every line in the plane   [ACT FOUR — Perpendicular]
+p2 59 291.67 296.64 if parallel lines have the beauty of regularity perpendicular lines have the strength of stability
+p2 60 297.07 304.53 almost everything we build stands up because of right angles columns stand perpendicular to the ground walls stand perpendicular to the floor
+p2 61 305.56 308.40 the central idea here is a line perpendicular to a plane
+p2 62 308.81 313.60 a line is called perpendicular to a plane when it's perpendicular to every single line in that plane
+## Two are enough   [ACT FOUR — Perpendicular]
+p2 63 315.24 321.30 at first that sounds impossible to check a plane contains infinitely many lines surely we can't test them one by one
+p2 64 321.73 324.54 luckily there's a theorem that cuts the work down to almost nothing
+p2 65 324.93 330.15 if a line is perpendicular to two crossing lines in a plane then it's perpendicular to the whole plane
+p2 66 330.58 336.24 it may be the single most used theorem in all of solid geometry i'd suggest knowing it as well as your times tables
+## The theorem of three perpendiculars   [ACT FOUR — Perpendicular]
+p2 67 337.94 341.64 from here we get a powerful tool called the theorem of three perpendiculars
+p2 68 342.05 348.06 take a line call it a lying in plane p and take a second line b that isn't in p and isn't perpendicular to p either
+p2 69 348.44 353.51 shine a light straight down onto p and line b casts a shadow that shadow is called its projection
+p2 70 353.90 358.39 the theorem says a is perpendicular to b exactly when a is perpendicular to b's shadow
+p2 71 358.78 364.35 what makes it valuable is that it lets you trade a line floating in space for its shadow lying flat in the plane
+p2 72 364.78 368.44 and suddenly a problem in space becomes a familiar problem on a flat page
+## Two planes at a right angle   [ACT FOUR — Perpendicular]
+p2 73 370.08 375.01 next comes two planes that are perpendicular meaning the angle between them is ninety degrees
+p2 74 375.46 382.59 the usual way to recognize it if one plane contains a line that's perpendicular to the other plane then the two planes are perpendicular
+p2 75 383.02 389.81 a wall is perpendicular to the floor precisely because the wall contains vertical lines and each of them is perpendicular to the floor
+p2 76 390.88 394.80 and there's one consequence worth remembering because it shows up all the time
+p2 77 395.19 400.59 when two planes are perpendicular draw a line in the first plane that's perpendicular to their intersection
+p2 78 400.98 403.62 that line is then perpendicular to the whole second plane
+p2 79 404.01 409.24 it's a shortcut for building perpendicular lines and you'll need it in a lot of distance problems later on
+## In between   [ACT FIVE — Angles]
+p2 80 411.78 416.85 once we can sort things into parallel and perpendicular the next job is to measure everything in between
+p2 81 417.26 420.32 for example how steeply is a ladder leaning against the floor
+p2 82 420.73 422.01 there are three kinds of angle to know
+## Two lines   [ACT FIVE — Angles]
+p2 83 423.67 425.45 the first is the angle between two lines
+p2 84 425.84 428.15 if the lines cross you can measure the angle directly
+p2 85 428.56 432.42 the trouble is skew lines because they never meet so there's no corner to measure
+p2 86 432.81 439.22 the trick is to slide one line or both without turning them until they meet at a point and then measure the angle right there
+p2 87 439.63 445.77 sliding a line doesn't change its direction so the angle you get is a true measure of how differently the two lines point
+p2 88 446.18 450.74 by convention the angle between two lines is always taken between zero and ninety degrees
+## A line and a plane   [ACT FIVE — Angles]
+p2 89 452.72 454.90 the second is the angle between a line and a plane
+p2 90 455.30 460.90 it's the angle you feel when you look at a ladder leaning on a wall and wonder how steep it is compared to the ground
+p2 91 461.33 464.86 if the line is perpendicular to the plane the angle is ninety degrees
+p2 92 465.29 468.60 otherwise it's the angle between the line and its shadow on the plane
+p2 93 469.61 470.65 here's the usual recipe
+p2 94 471.08 477.29 first pick a point on the line and drop a perpendicular from it to the plane where it lands tells you where the shadow goes
+p2 95 477.74 480.71 then use the right triangle you've just built to work out the angle
+p2 96 481.10 484.36 and notice once again the shadow is at the center of everything
+## Two planes   [ACT FIVE — Angles]
+p2 97 486.00 489.12 the third is the angle between two planes picture an open book
+p2 98 489.57 492.21 how wide it's open is the angle between its two covers
+p2 99 492.62 497.14 to measure it properly pick a point on the spine which is the line where the two planes meet
+p2 100 497.59 501.41 from that point draw a line in each cover that's perpendicular to the spine
+p2 101 502.26 505.22 the angle between those two lines is the angle between the planes
+p2 102 506.27 509.66 by convention this angle is also taken between zero and ninety degrees
+p2 103 510.09 517.00 so if you open a laptop to a hundred and twenty degrees the angle between the screen and the keyboard as two planes is sixty degrees
+p2 104 517.41 522.31 in real life the pitch of a roof or the tilt of a laptop screen are both angles between two planes
+## Every road leads to a triangle   [ACT FIVE — Angles]
+p2 105 523.99 527.40 the general lesson with angles is that every road leads to a triangle
+p2 106 527.84 530.44 usually a right triangle lying neatly inside some plane
+p2 107 530.85 535.23 your job is to build that triangle after that it's just the trigonometry you already know
+## The shortest way   [ACT SIX — Distance]
+p2 108 537.71 539.23 right alongside angles comes distance
+p2 109 539.66 546.70 the core idea fits into one sentence distance is the length of the shortest path and the shortest path is always the perpendicular one
+## A point and a plane   [ACT SIX — Distance]
+p2 110 548.34 554.50 the most basic distance is from a point to a plane it's the length of the perpendicular dropped from the point to the plane
+p2 111 554.89 558.72 when you say a ceiling is three meters high this is exactly the distance you mean
+p2 112 559.15 565.05 in exercises the hard part is the construction you have to show where the foot of that perpendicular actually lands
+p2 113 565.49 569.99 and the facts about perpendicular planes from earlier are precisely the tools for doing that
+## Any point will do   [ACT SIX — Distance]
+p2 114 571.67 574.45 from this one idea the other distances follow logically
+p2 115 574.84 579.97 the distance from a line to a plane parallel to it is the distance from any point on the line to the plane
+p2 116 580.36 585.08 the distance between two parallel planes is the distance from any point on one of them to the other
+p2 117 585.49 591.03 we're allowed to pick any point because being parallel guarantees that every point is the same distance away
+## Two skew lines   [ACT SIX — Distance]
+p2 118 592.93 596.11 the most challenging one is the distance between two skew lines
+p2 119 596.52 604.84 mathematics proves that between two skew lines there is always exactly one segment that's perpendicular to both of them it's called their common perpendicular
+p2 120 605.25 607.29 its length is the distance we're looking for
+p2 121 607.70 612.61 building that segment directly is usually hard work so in practice we use a conversion trick
+p2 122 613.03 616.63 build a plane that contains one of the lines and is parallel to the other
+p2 123 617.06 621.86 then the distance between the two skew lines is just the distance from the other line to that plane
+p2 124 622.25 624.19 and the problem is back in familiar territory
+## Faces, edges, vertices   [ACT SEVEN — Solids]
+p2 125 626.63 631.96 now we leave relationships behind and step into solids where everything becomes much easier to picture
+p2 126 632.35 636.63 the first family is the polyhedra solids that are completely wrapped in flat polygons
+p2 127 637.22 640.15 a brick a die and the great pyramid of giza are all polyhedra
+p2 128 640.60 647.94 the polygons around the outside are called faces a side shared by two faces is called an edge and a corner where edges meet is called a vertex
+p2 129 649.05 652.44 the two most important families of polyhedra are prisms and pyramids
+## Prisms   [ACT SEVEN — Solids]
+p2 130 654.16 660.05 a prism has two bases two identical polygons lying in two parallel planes and its sides are all parallelograms
+p2 131 660.49 666.12 imagine taking a polygon and pushing it straight out in one fixed direction the shape it sweeps out is a prism
+p2 132 666.53 671.72 when the side edges stand perpendicular to the base it's a right prism and its sides become rectangles
+p2 133 672.17 675.65 a right prism with a regular polygon for a base is called a regular prism
+p2 134 676.64 681.22 the most familiar case is the rectangular box a right prism with a rectangle for a base
+p2 135 681.65 684.40 and even more special the cube with six equal square faces
+p2 136 684.83 687.16 the box comes with one formula worth remembering
+p2 137 687.55 692.34 the square of its long diagonal equals the sum of the squares of its length its width and its height
+p2 138 692.83 695.25 that's the pythagorean theorem in three dimensions
+## Pyramids   [ACT SEVEN — Solids]
+p2 139 697.00 704.16 a pyramid has one polygon for a base and one apex that sits outside the plane of that base its sides are all triangles that share that apex
+p2 140 704.67 706.69 the great pyramid is the most famous example
+p2 141 707.08 712.94 when the base is a regular polygon and the apex sits directly above the center of the base it's a regular pyramid
+p2 142 713.41 717.53 its side edges are all equal and its side faces are matching isosceles triangles
+p2 143 717.94 720.94 the smallest case is the tetrahedron a pyramid on a triangle
+p2 144 721.33 725.81 it's the simplest polyhedron that can exist with four faces four vertices and six edges
+## Only five   [ACT SEVEN — Solids]
+p2 145 727.47 729.51 and here's a fact that surprises a lot of people
+p2 146 729.90 735.73 on a flat page there are infinitely many regular polygons a triangle a square a pentagon a hexagon and on and on
+p2 147 736.16 740.46 but in space there are only five regular polyhedra they're called the platonic solids
+p2 148 740.89 746.89 the tetrahedron the cube the octahedron the dodecahedron with twelve faces and the icosahedron with twenty
+p2 149 747.90 749.66 you can even see why there can't be a sixth
+p2 150 750.05 758.41 at every corner of a solid at least three faces have to meet and their angles have to add up to less than a full turn otherwise the corner lies flat and can't fold up
+p2 151 758.82 764.20 three four or five triangles fit around a corner six triangles make exactly a full turn and lie flat
+p2 152 764.67 769.28 three squares fit four lie flat three pentagons fit and three hexagons already lie flat
+p2 153 769.73 770.98 that's five ways and no more
+p2 154 771.97 777.31 the ancient greeks knew this more than two thousand years ago euclid proves it in the final book of the elements
+p2 155 777.76 782.02 and you can still hold all five today in a set of dice for tabletop role-playing games
+## How much room   [ACT EIGHT — Volume]
+p2 156 784.48 790.29 volume answers one question how much space does a solid take up or more concretely how much water would it hold
+p2 157 790.68 794.15 it's measured in cubic units like cubic meters or cubic centimeters
+## Stacking cubes   [ACT EIGHT — Volume]
+p2 158 795.80 800.93 the most basic formula belongs to the rectangular box volume equals length times width times height
+p2 159 801.38 806.02 here's an easy way to see it imagine packing the box with little cubes each one unit on a side
+p2 160 806.41 808.71 on the bottom layer you fit length times width cubes
+p2 161 809.12 810.94 the height tells you how many layers there are
+p2 162 811.35 815.58 multiply the two and you've counted every little cube that count is the volume of the box
+p2 163 816.75 821.84 from there the general rule for every prism is volume equals the area of the base times the height
+p2 164 822.29 826.37 but be careful the height here is the distance between the two planes of the bases
+p2 165 826.78 829.96 for a slanted prism that's not the same as the length of a side edge
+## The one third   [ACT EIGHT — Volume]
+p2 166 831.62 837.00 when we get to pyramids a special number appears volume equals one third of the base area times the height
+p2 167 837.49 844.51 it's been proven that a triangular prism can always be cut into three pyramids with equal volumes that's where the one third comes from
+p2 168 845.52 846.73 and it reveals something fun
+p2 169 847.58 853.30 with the same base and the same height the great pyramid needs only one third of the stone of a box built on that base
+p2 170 853.77 859.61 that's still about two and a half million cubic meters of stone but a box would have needed nearly eight million
+## Turning a flat shape   [ACT NINE — Solids that spin]
+p2 171 862.07 864.49 now for the second family of solids born from rotation
+p2 172 864.88 868.86 when a flat shape spins around a fixed axis it sweeps out a solid of revolution
+## The cylinder   [ACT NINE — Solids that spin]
+p2 173 870.50 875.04 the first one is the cylinder it's what you get when a rectangle spins around one of its sides
+p2 174 875.73 880.78 its volume is the area of the base times the height that's pi times the radius squared times the height
+p2 175 881.26 885.58 it's the same pattern as the prism because a cylinder really is a prism with a round base
+p2 176 886.61 892.91 its curved surface area is the distance around the base times the height that's two pi times the radius times the height
+p2 177 893.30 896.32 the quickest way to see it is to peel the label off a soda can
+p2 178 896.71 902.08 laid flat the label is a rectangle one side is the distance around the can and the other side is its height
+## The cone   [ACT NINE — Solids that spin]
+p2 179 903.82 909.12 the second one is the cone it's what you get when a right triangle spins around one of its two shorter sides
+p2 180 909.55 912.41 an ice-cream cone a traffic cone and a party hat are all cones
+p2 181 912.85 916.28 its volume is one third pi times the radius squared times the height
+p2 182 916.71 920.78 the familiar one third is back because a cone really is a pyramid with a round base
+p2 183 921.84 927.40 a cone also has what's called a slant height the distance from the tip down to any point on the edge of the base
+p2 184 927.81 931.35 the curved surface area is pi times the radius times the slant height
+p2 185 931.82 936.62 unroll the surface of a cone onto flat paper and you get a sector of a circle like a slice of pizza
+## The sphere   [ACT NINE — Solids that spin]
+p2 186 938.26 942.76 the third one is the sphere it's what you get when a half-circle spins around its diameter
+p2 187 943.15 949.25 a sphere is the set of all points at the same fixed distance from one point the center that fixed distance is the radius
+p2 188 949.71 952.13 its surface area is four pi times the radius squared
+p2 189 952.52 955.02 its volume is four thirds pi times the radius cubed
+## Archimedes' favorite   [ACT NINE — Solids that spin]
+p2 190 956.66 958.85 there's a lovely story behind these two formulas
+p2 191 959.32 965.73 archimedes proved that if you fit a sphere snugly inside a cylinder the sphere's volume is exactly two thirds of the cylinder's
+p2 192 966.14 970.43 he was so proud of this that he asked for a sphere inside a cylinder to be carved on his tomb
+p2 193 971.02 979.51 and about a hundred and fifty years later the roman writer cicero found an overgrown tomb in syracuse recognized it by exactly that carving and had it cleaned up
+## Back to the flat page   [ACT TEN — Putting it together]
+p2 194 981.97 984.87 so that's the whole tour from three bricks to spinning solids
+p2 195 985.92 990.47 before we finish i want to leave you with a couple of habits that make solid geometry easier
+p2 196 990.86 995.23 the first is to always look for a way to turn the problem in space into a problem on a flat page
+p2 197 995.64 1003.21 you may have noticed that throughout this video every angle and every distance was finally worked out inside a triangle lying in some plane
+p2 198 1003.64 1009.83 so when you're stuck ask yourself which triangle contains the thing i need and which plane of the solid is it lying in
+## A chain, not a list   [ACT TEN — Putting it together]
+p2 199 1011.51 1017.26 the second habit is to stop memorizing theorems one by one because in this subject they link together into a chain
+p2 200 1017.65 1020.23 where things can be gives us parallel and perpendicular
+p2 201 1020.62 1022.73 perpendicular gives us angles and distances
+p2 202 1023.18 1025.79 and distance becomes the height in every volume formula
+## Putting it together   [ACT TEN — Putting it together]
+p2 203 1027.95 1028.82 so the three questions
+p2 204 1029.23 1034.64 what is the subject built on three ideas that are never defined and four simple rules about how they behave
+p2 205 1035.07 1043.39 how do you measure between things that never touch you build a triangle in a plane usually with a perpendicular or a shadow and then it's flat geometry again
+p2 206 1043.78 1050.47 and where does the one third come from from cutting a prism into three equal pyramids and it comes back in the cone for the same reason
+## Next time   [ACT TEN — Putting it together]
+p2 207 1052.13 1056.74 you might not remember every theorem and formula after one video and that's completely fine
+p2 208 1057.13 1066.41 what matters more is that when you look at a problem in space you know where to start what relationship to look for and how to bring it back step by step to things you already know
+p2 209 1066.86 1073.55 and next time you sit on a three-legged stool or look up into the corner of a room try to see the planes and the lines hiding there
+p2 210 1074.56 1078.48 solid geometry really isn't scary with a little patience it can be a lot of fun
+p2 211 1078.89 1081.49 thanks for exploring it with me see you in the next video

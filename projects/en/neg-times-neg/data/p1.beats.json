@@ -1,0 +1,158 @@
+{
+ "duration": 74.561,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "In the seventeen nineties, a schoolboy in Grenoble asked his maths teachers a simple question. Why does a minus times a minus make a plus?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 0.0,
+   "end": 6.902,
+   "wav": "audio/voice/da9086ba49c84ddb.wav"
+  },
+  {
+   "text": "Nobody could give him a reason. He was told, more or less, to learn the rule and move on.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 7.252,
+   "end": 11.468,
+   "wav": "audio/voice/b51fba4165fb9cb6.wav"
+  },
+  {
+   "text": "That boy grew up to be the French novelist Stendhal, and forty years later he was still annoyed enough to write about it in his memoir.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 11.818,
+   "end": 18.369,
+   "wav": "audio/voice/ceb24b1d909cec46.wav"
+  },
+  {
+   "text": "You probably know the rule without thinking. Negative times negative is positive.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 19.319,
+   "end": 23.318,
+   "wav": "audio/voice/d9fe3a60cd681fb6.wav"
+  },
+  {
+   "text": "But if you stop and ask why, the answers you get are a strange mix.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 23.668,
+   "end": 26.806,
+   "wav": "audio/voice/7be335fa01a04ed6.wav"
+  },
+  {
+   "text": "Some people say it's just a convention, so accept it and keep going.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 27.156,
+   "end": 30.197,
+   "wav": "audio/voice/ec361e7e2d140f60.wav"
+  },
+  {
+   "text": "Some people tell a story about debts. Some say that walking backwards and then turning around makes you walk forwards.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 30.547,
+   "end": 36.328,
+   "wav": "audio/voice/2bc75e5f077e0c69.wav"
+  },
+  {
+   "text": "Each of those has something to it. But are they proofs, or are they just ways to remember?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 36.678,
+   "end": 41.041,
+   "wav": "audio/voice/aed4a670845b6a36.wav"
+  },
+  {
+   "text": "So in this video, I want to answer three questions with you.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 41.991,
+   "end": 45.063,
+   "wav": "audio/voice/931985eaafd74de5.wav"
+  },
+  {
+   "text": "One. Why did people refuse to accept negative numbers for more than a thousand years?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 45.413,
+   "end": 49.671,
+   "wav": "audio/voice/a8e2d85780af7f51.wav"
+  },
+  {
+   "text": "Two. Are the usual explanations real proofs, or only ways to remember?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 50.021,
+   "end": 53.475,
+   "wav": "audio/voice/b122c9a1589d08c1.wav"
+  },
+  {
+   "text": "And three. Is negative times negative a convention that someone chose, or is it forced on us?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 53.825,
+   "end": 58.38,
+   "wav": "audio/voice/3a7b8225c77c11d7.wav"
+  },
+  {
+   "text": "Here is where we are going. The rule is not an arbitrary choice that someone made up.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 59.331,
+   "end": 63.303,
+   "wav": "audio/voice/23d50aa605890de2.wav"
+  },
+  {
+   "text": "It is what has to happen, the moment you ask negative numbers to behave like numbers.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 63.653,
+   "end": 67.658,
+   "wav": "audio/voice/7cee49e603c8810d.wav"
+  },
+  {
+   "text": "But to see why, we first have to understand why, for most of history, people didn't think they were numbers at all.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 68.008,
+   "end": 73.611,
+   "wav": "audio/voice/0973918e44b37955.wav"
+  }
+ ]
+}

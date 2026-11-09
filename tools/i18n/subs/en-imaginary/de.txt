@@ -1,0 +1,87 @@
+Welche Zahl liegt genau in der Mitte zwischen 1 und −1?
+Null, wenn du die Linie entlanggehst. Aber wenn du dich drehst, landest du auf halber Drehung bei einer Zahl, die gar nicht auf der Linie liegt.
+Im 16. Jahrhundert war diese Zahl der einzige Weg zu einer richtigen Antwort.
+Descartes nannte sie imaginär, und das war als Beleidigung gemeint.
+Heute hilft sie Ingenieuren, das Stromnetz zu betreiben.
+Am Ende dieses Videos kannst du auf sie zeigen, und du siehst genau, warum echte Maschinen sie benutzen.
+Alles beginnt mit einer Frage: Was macht Multiplizieren eigentlich?
+Zeichne den Zahlenstrahl und behandle jede Zahl als Pfeil, der bei null beginnt.
+Multipliziere jetzt mit 2. Jeder Pfeil wird doppelt so lang. Die 3 landet auf 6, und −1 landet auf −2.
+Mit 2 zu multiplizieren ist also nicht nur eine Rechnung. Es ist eine Bewegung, die du auf den ganzen Strahl anwendest: eine Streckung.
+Welche Bewegung ist das Multiplizieren mit −1?
+Die 3 geht zu −3. Die 5 geht zu −5. Die −2 geht zu 2.
+Alles wechselt die Seite. Es ist ein Umklappen durch die Null.
+Klappe zweimal um, und du bist wieder am Anfang. So kann man sehen, warum negativ mal negativ positiv ist.
+Und jetzt die Frage, die den ganzen Ärger macht.
+Gibt es eine Zahl, die mit sich selbst multipliziert −1 ergibt?
+Anders gesagt: Gibt es eine Bewegung, die zweimal ausgeführt ein Umklappen ergibt?
+Probier es auf dem Strahl. Eine positive Zahl lässt jeden Pfeil auf seiner Seite, und zweimal ändert daran nichts.
+Eine negative Zahl wechselt die Seite, und zweimal wechseln bringt dich zurück.
+So oder so endet dieselbe Bewegung, zweimal ausgeführt, nie auf der Gegenseite. Auf diesem Strahl ergibt also keine Zahl zum Quadrat −1.
+Lange war die Sache damit erledigt. Fragte man nach der Wurzel einer negativen Zahl, lautete die ehrliche Antwort: Die Frage ist falsch gestellt.
+Und dabei wäre es geblieben, wenn es nicht eine Gleichung gegeben hätte, die schon eine völlig gute Antwort hatte.
+1545 veröffentlichte der italienische Gelehrte Gerolamo Cardano eine Formel zur Lösung kubischer Gleichungen, also solcher mit x hoch 3.
+Aber die Formel hatte ein seltsames Problem.
+Nimm x³ = 15x + 4.
+Du kannst von Hand prüfen, dass x = 4 passt. 4 hoch 3 ist 64, und 15 mal 4 plus 4 ist ebenfalls 64.
+Es gibt also eine reelle Antwort, und sie ist eine kleine ganze Zahl.
+Aber gib die Gleichung in die Formel ein, und mittendrin verlangt sie die Wurzel aus −121.
+Du könntest denken, dass die Formel hier einfach nicht gilt. Das würde man normalerweise schließen, wenn eine Rechnung etwas Unmögliches verlangt.
+Aber die Antwort existiert. Wir haben sie gerade geprüft. Die Formel zeigte auf ein wahres Ergebnis, und ihr einziger Weg führte über eine Zahl, die nicht erlaubt war.
+1572 wagte ein Ingenieur namens Rafael Bombelli etwas Kühnes. Er ignorierte den Einwand und rechnete weiter.
+Er behandelte die Wurzel aus −1 als unbekanntes Symbol mit einer einzigen Regel: Ihr Quadrat ist −1. Ansonsten normale Algebra.
+Die Formel verlangte dann zwei Kubikwurzeln, und Bombelli fand sie: 2 plus dieses Symbol und 2 minus dieses Symbol.
+Addiere sie nun. Die 2 und die 2 ergeben 4. Die Symbole, einmal plus und einmal minus, heben sich auf.
+Vier. Genau die richtige Antwort, und der unmögliche Teil war unterwegs verschwunden.
+Niemand akzeptierte diese Zahl also, weil sie schön klang. Sie wurde akzeptiert, weil sie immer wieder richtige Ergebnisse lieferte, obwohl niemand sagen konnte, was sie war.
+1637 benutzte René Descartes das Wort imaginär für solche Größen, und es war kein Kompliment.
+Das heutige Symbol, der Buchstabe i, kam später. Aber die eigentliche Frage blieb offen. Eine Regel ist keine Erklärung. Was ist dieses Ding?
+Die Antwort tauchte um 1800 auf, veröffentlicht von Caspar Wessel und dann von Jean-Robert Argand, unabhängig voneinander.
+Und sie ist fast peinlich einfach. Wir haben gezeigt, dass keine Bewegung auf dem Strahl funktioniert. Also bleib nicht auf dem Strahl.
+Sieh dir das Umklappen noch einmal an. Es gibt einen anderen Weg, 1 nach −1, 3 nach −3 und alles auf sein Gegenteil zu schicken.
+Drehe den ganzen Strahl um eine halbe Drehung um die Null.
+Das Ergebnis sieht genauso aus wie das Umklappen, aber jetzt hat die Bewegung eine Mitte.
+Halte auf halber Strecke an. Du hast eine Vierteldrehung gemacht, und der Pfeil von 0 nach 1 zeigt jetzt gerade nach oben, weg vom Strahl.
+Das ist deine Bewegung. Eine Vierteldrehung, zweimal ausgeführt, ist eine halbe Drehung, und eine halbe Drehung ist das Multiplizieren mit −1.
+Die Wurzel aus −1 ist also keine geheimnisvolle Größe. Sie ist eine Vierteldrehung. Und den Punkt einen Schritt über der Null nennen wir i.
+Jetzt können wir die Anfangsfrage richtig beantworten. Geh den Strahl von 1 nach −1 entlang, und die Mitte ist 0.
+Dreh von 1 nach −1, und die Mitte ist i. Dreh andersherum, und die Mitte ist −i.
+Multipliziere weiter mit i, und du drehst dich einfach weiter.
+1, dann i, dann −1, dann −i, dann zurück zu 1. Vier Vierteldrehungen, ein voller Kreis.
+Eine Frage, die furchteinflößend aussieht, wie i hoch 100, ist also leicht. 100 sind 25 volle Kreise, und du endest genau dort, wo du begonnen hast: bei 1.
+Der Name imaginär lässt das geheimnisvoller klingen, als es ist.
+Auch −1 kannst du nicht in der Hand halten. Es ist eine Richtung auf einem Strahl. Und i ist nur eine weitere Richtung, in die wir nicht geschaut hatten.
+Sobald es eine Richtung nach oben gibt, wird jeder Punkt auf der Seite zu einer Zahl.
+3 nach rechts und 2 nach oben ist 3 + 2i. Wir nennen sie komplexe Zahlen, und komplex heißt hier: aus Teilen zusammengesetzt, nicht schwierig.
+Testen wir die Idee. Multipliziere 3 + 2i mit i, mit ganz normaler Algebra.
+3 mal i ist 3i. 2i mal i ist 2i², also −2.
+Du erhältst −2 + 3i. Sieh nun, wo dieser Punkt gelandet ist.
+Es ist derselbe Pfeil, dieselbe Länge, genau um eine Vierteldrehung gedreht. Die Algebra hat Geometrie betrieben, ohne dass man es ihr gesagt hat.
+Und das gilt für jede komplexe Zahl, nicht nur für i. Jede ist ein Pfeil mit einer Länge und einem Winkel.
+Multipliziert man zwei davon, multiplizieren sich die Längen und addieren sich die Winkel. Das ist die ganze Regel.
+Nimm 1 + i. Es zeigt auf 45 Grad, und seine Länge ist die Wurzel aus 2.
+Quadriere es. Der Winkel verdoppelt sich auf 90 Grad, und die Länge wird genau 2. Das sagt 2i voraus.
+Prüfe es mit Algebra: 1 plus 2i plus i². Die 1 und die −1 heben sich auf, und 2i bleibt übrig.
+Diese Regel erklärt endlich den Trick von 1572.
+Bombellis 2 + i ist ein Pfeil mit einem Winkel von etwa 26,5 Grad. Hoch 3 verdreifacht sich der Winkel auf fast 80 Grad, fast senkrecht, und landet genau auf 2 + 11i.
+Sein Spiegelbild, 2 − i, ergibt hoch 3 2 − 11i, und dieses 11i ist die Wurzel aus −121.
+Addiere nun die beiden Pfeile. Einer geht nach oben, sein Spiegelbild genauso weit nach unten, und was bleibt, liegt flach auf dem gewöhnlichen Strahl. 2 + 2: 4.
+Deshalb musste eine reelle Antwort durch das Imaginäre gehen. Der Weg der Formel verließ den Strahl und kam zurück. Die reelle Zahl war der Schatten von etwas, das in der Ebene geschah.
+Warum interessiert das nun das Stromnetz?
+Der Strom aus der Steckdose schwingt in einer glatten Welle hin und her, etwa 50- oder 60-mal pro Sekunde.
+Stell dir einen Pfeil vor, der sich gleichmäßig im Kreis dreht, und achte nur auf seine Höhe. Hoch, runter, hoch, runter. Diese Höhe zeichnet genau jene Welle.
+Jede glatte Welle lässt sich also als Schatten eines drehenden Pfeils behandeln. Und wir haben jetzt Zahlen, die drehen.
+Darum hilft das. Angenommen, zwei Wellen laufen durch denselben Stromkreis, eine mit 3 Volt Spitze, die andere mit 4 Volt, und die zweite läuft einen Viertelzyklus hinter der ersten.
+Wie hoch ist die Spitze zusammen? Du würdest vielleicht 7 sagen. Stimmt nicht, denn sie erreichen ihre Spitze nie gleichzeitig.
+Mit Pfeilen ist ein Viertelzyklus eine Vierteldrehung. Die beiden Wellen sind also 3 und 4i, im rechten Winkel.
+Addiere sie, und die Länge ist 5. Die kombinierte Welle erreicht genau 5 Volt.
+Ohne komplexe Zahlen käme man auch auf diese Antwort, aber über Seiten voller Trigonometrie. Mit ihnen ist es eine kurze Addition.
+Überträgt man das auf einen ganzen Stromkreis voller Spulen und Kondensatoren, die Wellen zeitlich verschieben, ist es der Unterschied zwischen einer Seite Algebra und etwas wirklich Schmerzhaftem.
+Elektroingenieure benutzen das so oft, dass sie die Zahl als j schreiben, weil i schon für den Strom vergeben war.
+Funksignale, Audioverarbeitung und die Gleichungen der Quantenmechanik beruhen ebenfalls darauf, aus demselben Grund. Was schwingt, das dreht sich.
+Warum musste man sie überhaupt akzeptieren? Weil die richtige Antwort 4 nur über die Wurzel einer negativen Zahl erreichbar war.
+Was ist sie? Eine Vierteldrehung. Und der Punkt einen Schritt über der Null, in einer Richtung, die der Zahlenstrahl uns nie gezeigt hat.
+Warum ist sie nützlich? Weil das Multiplizieren komplexer Zahlen dreht, und alles, was schwingt, sich als etwas Drehendes behandeln lässt.
+Probier es also mit einem Bleistift. Markiere einen beliebigen Punkt auf einem Blatt als Zahl, zum Beispiel 2 + i, und multipliziere ihn viermal mit i.
+Trage dann jedes Ergebnis ein. Niemand muss dir erklären, was i bedeutet. Du siehst, wie dein Punkt einen Kreis läuft und nach Hause kommt.
+Danke fürs Zuschauen, und wenn dir eine seltsame Idee dadurch klar wurde, abonniere 99% from scratch.

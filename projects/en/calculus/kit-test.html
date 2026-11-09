@@ -1,0 +1,156 @@
+<!doctype html><meta charset="utf-8">
+<title>calculus — tờ thử kit</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"CormorantI";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-weight:300 700;font-style:italic;}
+  @font-face{font-family:"Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Tờ thử MỌI vật của kit (DNA §11), hàm có tham số k ở 0.25 / 0.5 / 0.75 / 1 (LESSONS §89). Khung i (giây) → tờ ⌊t⌋:
+//  0 cold open = thumbnail · 1 cọc / dây / sào / điểm / thẻ / phân số / công thức theo k · 2 đồi, cột đất, đất đặc, đường
+//  theo k (4 ô) · 3 sổ đo (ghi dần, đẩy dòng) + thanh khoảng · 4 KÝ HIỆU DỄ NHẦM (x/×, l/1/I, O/0, ÷, −, ², h) ở cả ba mặt chữ
+//  · 5 đường mòn + hố cọc + bánh xe đo, công-tơ-mét, đồng hồ tốc độ theo k · 6 ERA cover: ảnh thật + nhãn bắt buộc + biển mục
+//  · 7 thẻ hồi (phụ đề dài nhất) · 8 thẻ lời hứa + đồng xu lật · 9 thước dây k 0.5 · 10 lật trang k 0.25 · 11 lật trang k 0.7
+//  · 12 bàn nối p1→p2 (bare) + khung nhìn VIEWS + camera nửa đường + 6 tư thế mascot · 13 VIEWS.zoom + BOOK + WHEEL
+//   node engine/render/shoot.js stills --page projects/en/calculus/kit-test.html --dur 14 --t 0.5,1.5,…,13.5 --outdir out/en/calculus/qa/kit
+import { W, H, C, AR, MO, FONTS, FONT_SAMPLE, loadKit, ground, bare, hill, mound, plot, rangingPole, secant, rod, rodAt, spot, hole, hiker, flag, loupe,
+  card, secTag, actTitle, ledger, interval, columns, areaFill, odometer, speedometer, wheel, photo, photoImages, PHOTO_MISSING, mini, coin, promiseCard,
+  figure, tapeSwap, pageSwap, text, math, frac, measure, pen, arrow, VIEWS, view, lerpView, STEPS, NEAR5, RIEMANN, D2X, upper, lower, sq, fmt,
+  SEC_MAX, ACT_SUB_MAX, CONTRAST, PROMISE, BOOK, WHEEL, STEP_COLS, STEP_ROWS } from './kit.js';
+const g = document.getElementById('cv').getContext('2d');
+let ready = false;
+const POSES = ['ponder', 'pointer', 'calculator', 'halt', 'ok', 'wave'];
+(async () => {
+  await Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE)));
+  const Pp = '../../../assets/character-v2/cut/';
+  await loadKit({ ...photoImages('newton', 'leibniz', 'nova', 'archimedes'), ...Object.fromEntries(POSES.map(p => ['pose-' + p, Pp + `pose-${p}.png`])) });
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const lab = s => text(g, s, 1824, 1050, { font: `600 30px ${AR}`, color: C.dim, align: 'right' });
+const KS = [0.25, 0.5, 0.75, 1];
+const thumb = t => {
+  ground(g, 'field', t);
+  const V = VIEWS.open;
+  hill(g, V, { a: -1.2, b: 2.3, t });
+  [2, 1.5, 1.1].forEach((x, i) => secant(g, V, 1, x, { a: [0.55, 0.72, 0.9][i] }));
+  mound(g, t);
+  rod(g, V, 1, { d0: -0.58, d1: 0.72 });
+  spot(g, V.X(1), V.Y(1)); hiker(g, V.X(1) - 6, V.Y(1) - 8, 0.95);
+  math(g, 'y = x²', 1410, 320, { px: 52, color: C.curveInk });
+  const big = `900 168px ${AR}`, w1 = text(g, '0 ÷ 0 = ', 120, 330, { font: big }); text(g, '2?', 120 + w1, 330, { font: big, color: C.poleInk });
+  figure(g, 'ponder', 210, H, 262, 1, { t: 1 });
+};
+const sheets = [
+  t => { thumb(t); lab('0 · cold open = thumbnail'); },
+  t => {                                                               // cọc, dây, sào, điểm, thẻ, phân số, công thức theo k
+    ground(g, 'sheet', t);
+    KS.forEach((k, i) => {
+      const x = 180 + i * 430, V = view(1, 1, x + 60, 470, 300, 200);
+      plot(g, V, sq, 0.4, 1.6, { color: C.curve, w: 6 });
+      secant(g, V, 1, 1.5, { k, poleK: k });
+      rod(g, V, 1, { k, d0: -0.5, d1: 0.5 });
+      spot(g, V.X(1), V.Y(1), { k });
+      rangingPole(g, x + 300, 740, { k });
+      card(g, '2.5', x + 120, 800, { size: 40, color: C.secInk, edge: C.sec, k });
+      frac(g, '1', '3', x + 330, 860, { px: 60, color: C.poleInk, k });
+      math(g, '(x² − 25) / (x − 5)', x, 960, { px: 34, k, color: C.ink });
+      text(g, `k = ${k}`, x, 160, { font: `700 34px ${AR}` });
+    });
+    lab('1 · cọc · dây (cát tuyến) · sào (tiếp tuyến, hạ xuống) · điểm · thẻ · ⅓ chồng · công thức gõ dần — k 0.25/0.5/0.75/1');
+  },
+  t => {                                                               // đồi / cột đất / đất đặc / đường theo k — 4 ô
+    ground(g, 'field', t);
+    KS.forEach((k, i) => {
+      const x0 = (i % 2) * 960, y0 = (i >> 1) * 540;
+      g.save(); g.beginPath(); g.rect(x0 + 8, y0 + 8, 944, 524); g.clip(); ground(g, 'sheet', t);
+      const V = view(0, 0, x0 + 300, y0 + 470, 520, 380);
+      hill(g, V, { a: -0.5, b: 1.25, k, t });
+      columns(g, V, 4, { side: 'right', k });
+      columns(g, V, 4, { side: 'left', k, a_: 0.9 });
+      const V2 = view(0, 0, x0 + 700, y0 + 470, 200, 160);
+      areaFill(g, V2, 0, 1, { k }); plot(g, V2, sq, -0.1, 1.15, { color: C.curve, w: 5, k });
+      text(g, `k = ${k}`, x0 + 40, y0 + 70, { font: `700 34px ${AR}` });
+      g.restore();
+    });
+    lab('2 · đồi vẽ dần · cột đất tổng trên (thừa tím) + tổng dưới (nét đứt) · đất đặc · đường — k theo ô');
+  },
+  t => {                                                               // sổ đo + thanh khoảng
+    ground(g, 'sheet', t);
+    const cols = [{ head: 'x', w: 0.2, isMath: true }, { head: 'y', w: 0.2, isMath: true }, { head: 'rise', w: 0.2 }, { head: 'run', w: 0.2 }, { head: 'slope', w: 0.2, color: C.secInk }];
+    const rows = STEPS.map(s => [s.x, s.y, s.rise, s.run, s.slope]);
+    ledger(g, 110, 110, 860, 420, { cols, rows, shown: 2.5, title: 'FIELD BOOK · SECANT TO (1, 1)' });
+    ledger(g, 110, 580, 860, 400, { cols, rows, shown: 5, hi: 4 });
+    const L = ledger(g, 1040, 110, 760, 870, { cols: [{ head: 'n', w: 0.2, isMath: true }, { head: 'low – high', w: 0.8 }], rows: [4, 10, 100, 1000].map(n => [String(n), `${RIEMANN[n].lo} – ${RIEMANN[n].hi}`]), shown: 4, rowH: 150, size: 36 });
+    [4, 10, 100, 1000].forEach((n, i) => interval(g, 1240, 1740, L.rowY(i) + 50, lower(n), upper(n), { k: KS[i] }));
+    lab('3 · sổ đo: dòng 3 đang ghi (2.5) · đầy sổ đẩy dòng + khoanh · khoảng [dưới, trên] co về ⅓ (k 0.25…1)');
+  },
+  t => {                                                               // ký hiệu dễ nhầm (§133)
+    ground(g, 'sheet', t);
+    const S = ['x × x', 'l 1 I', 'O 0 o', '÷ − + = ≈', 'x² x³ h²', '2h + h²', '2 + h', 'x³/3'];
+    S.forEach((s, i) => {
+      const y = 130 + i * 112;
+      text(g, s, 140, y, { font: `800 64px ${AR}` });
+      text(g, s, 640, y, { font: `500 64px ${MO}` });
+      if (!/[A-Z]/.test(s)) math(g, s, 1180, y, { px: 64 }); else text(g, '(chữ hoa: math() ném)', 1180, y, { font: `600 30px ${AR}`, color: C.dim });
+    });
+    text(g, 'Archivo 800', 140, 1010, { font: `600 30px ${AR}`, color: C.dim }); text(g, 'Plex Mono 500', 640, 1010, { font: `600 30px ${AR}`, color: C.dim }); text(g, 'math() — biến nghiêng', 1180, 1010, { font: `600 30px ${AR}`, color: C.dim });
+    lab('4 · ký hiệu dễ nhầm');
+  },
+  t => {                                                               // đường mòn + hố + bánh xe
+    ground(g, 'field', t, { pan: 700 });
+    const V = view(5, 10, 760, 380, 110, 46);
+    plot(g, V, u => u + 5, 0, 10, { color: C.soilInk, w: 14 }); plot(g, V, u => u + 5, 0, 10, { color: '#E2C792', w: 8 });
+    hole(g, V.X(5), V.Y(10)); flag(g, V.X(5) + 34, V.Y(10) + 10, { t });
+    NEAR5.forEach((p, i) => card(g, `${p.x} → ${p.v}`, 300 + i * 360, 640, { size: 34, k: KS[i] }));
+    KS.forEach((k, i) => { wheel(g, 360 + i * 440, 1000, { r: 70, dist: 300 * k, k, speed: k, odo: 1234.5 + k * 3 }); });
+    lab('5 · đường mòn y = x + 5 có hố cọc (5, 10) + cờ · thẻ quanh 5 · bánh xe đo + đồng hồ tốc độ + công-tơ-mét lăn — k 0.25…1');
+  },
+  t => {                                                               // ERA cover: ảnh thật
+    ground(g, 'cover', t);
+    secTag(g, "Where it's heading", { t });
+    photo(g, 'newton', 220, 190, 360, 460, {});
+    photo(g, 'archimedes', 780, 170, 360, 460, { rot: 0.02 });
+    photo(g, 'nova', 1340, 190, 360, 460, {});
+    lab(`6 · ERA cover, ảnh + nhãn bắt buộc (thiếu: ${PHOTO_MISSING.join(', ') || '—'}), secTag max ${SEC_MAX}`);
+  },
+  t => {                                                               // thẻ hồi
+    ground(g, 'field', t);
+    actTitle(g, 7.0, 7.2, 'ACT SEVEN', 'Two sides of one coin');
+    const subs = ['Two points', 'Closer and closer', 'The hole', 'The derivative', 'Adding up thin slices', 'Two sides of one coin', 'Putting it together'];
+    const mw = Math.max(...subs.map(s => measure(g, s, `500 44px ${MO}`)));
+    lab(`7 · actTitle (phụ đề dài nhất ${Math.round(mw)} / ${ACT_SUB_MAX} px)`);
+  },
+  t => {                                                               // lời hứa + đồng xu
+    ground(g, 'field', t, { pan: 300 });
+    [0, 1, 2].forEach(i => promiseCard(g, i, { flip: 0.25 }));
+    KS.forEach((k, i) => coin(g, 300 + i * 440, 940, 90, { flip: [0, 0.25, 0.75, 1][i] }));
+    lab('8 · ba thẻ lời hứa (③ xu lật 0.25) · đồng xu lật 0 / 0.25 / 0.75 / 1');
+  },
+  t => { tapeSwap(g, 0.5, () => thumb(t), () => { bare(g, t); }); lab('9 · thước dây k 0.5 (cũ phải, mới trái)'); },
+  t => { pageSwap(g, 0.25, () => thumb(t), () => { ground(g, 'cover', t); photo(g, 'leibniz', 760, 220, 380, 480, {}); }); lab('10 · lật trang k 0.25'); },
+  t => { pageSwap(g, 0.7, () => thumb(t), () => { ground(g, 'cover', t); photo(g, 'newton', 760, 220, 380, 480, {}); }); lab('11 · lật trang k 0.7'); },
+  t => {
+    bare(g, t);
+    const mid = lerpView(VIEWS.open, VIEWS.zoom, 0.5);
+    hill(g, mid, { a: -1, b: 2.2, t }); rod(g, mid, 1, {}); spot(g, mid.X(1), mid.Y(1));
+    loupe(g, 1300, 300, 170, () => { const Z = view(1, 1, 1300, 300, 2600, 1400); plot(g, Z, sq, 0.9, 1.1, { color: C.curve, w: 6 }); [1.1, 1.05, 1.01].forEach(x => secant(g, Z, 1, x, { ext: 0.05, poles: false, w: 4 })); rod(g, Z, 1, { d0: -0.12, d1: 0.12, w: 12 }); spot(g, Z.X(1), Z.Y(1)); });
+    POSES.forEach((p, i) => figure(g, p, 130 + i * 140, H, 200, 1));
+    lab(`12 · bare + camera open→zoom 0.5 + kính lúp · tư thế · tương phản min ${Math.min(...Object.values(CONTRAST))} · 2x: ${D2X[1]}, ${D2X[3]}, ${D2X[0]}`);
+  },
+  t => {                                                               // vật dùng chung: khung zoom + sổ đo BOOK + bánh xe WHEEL
+    ground(g, 'field', t, { pan: 400 });
+    const V = VIEWS.zoom; hill(g, V, { a: -1.2, b: 3.6, t });
+    [1.5, 1.1].forEach(x => secant(g, V, 1, x, { ext: 0.3, ext0: 0.03, a: 0.6 })); rod(g, V, 1, { d0: -0.45, d1: 0.6 }); spot(g, V.X(1), V.Y(1));
+    secTag(g, 'Sliding in', { t });
+    ledger(g, BOOK.x, BOOK.y, BOOK.w, BOOK.h, { cols: STEP_COLS, rows: STEP_ROWS, shown: 5 });
+    wheel(g, WHEEL.cx, WHEEL.y, { r: WHEEL.r, dist: 200, speed: 0.6, odo: 482.3 });
+    figure(g, 'calculator', 205, H, 262, 1);
+    lab('13 · VIEWS.zoom + BOOK (5 dòng STEPS) + WHEEL + mascot — vật dùng chung');
+  },
+];
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; sheets[Math.min(sheets.length - 1, Math.floor(t))](t); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 14 };
+</script>

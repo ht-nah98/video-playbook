@@ -1,0 +1,32 @@
+<!doctype html><meta charset="utf-8">
+<title>en lab — mascot xoay 3/4</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử đầu XOAY 3/4 của mascot vẽ nét (engine/mascot-line.js `yaw`: mặt chiếu lên khối cầu, thân trượt trên khối trụ ×0.4).
+// t 0.5 = dải góc −1 … +1 (đầu cỡ lớn + toàn thân cỡ video h 300) · 1.5 = cận cỡ thumbnail · 2–8 = quay qua lại (xem chuyển động).
+import { bindMascot, mascot, head, INK } from '../_kit/mascot.js';
+const g = document.getElementById('cv').getContext('2d'), W = 1920, H = 1080;
+let ready = false;
+new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => { document.fonts.add(f); bindMascot(g); ready = true; })
+  .catch(e => { window.__intro.error = String(e); });
+const label = (s, x, y, px) => { g.save(); g.font = `800 ${px}px Archivo`; g.fillStyle = INK; g.textAlign = 'center'; g.textBaseline = 'middle'; g.fillText(s, x, y); g.restore(); };
+const YAWS = [-1, -0.66, -0.33, 0, 0.33, 0.66, 1];
+const MOODS = [['deadpan', 'flat'], ['smug', 'smirk'], ['shock', 'wide'], ['deadpan', 'o'], ['happy', 'grin'], ['angry', 'frown'], ['think', 'mid']];
+const ease = u => u * u * (3 - 2 * u);
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = '#EEF2EE'; g.fillRect(0, 0, W, H); g.fillStyle = '#E3EDF1'; g.fillRect(0, 0, W, 560); if (!ready) return;
+  if (t < 1) { label('yaw −1 … +1 (≈ ±57°) — đầu cỡ lớn · toàn thân cỡ video (cao 300)', 960, 34, 30);
+    YAWS.forEach((yaw, i) => { const x = 170 + i * 263; head(x, 300, 105, { yaw, look: yaw * 0.8, mood: MOODS[i][0], mouth: MOODS[i][1] }); label(`${yaw > 0 ? '+' : ''}${yaw}`, x, 500, 26);
+      mascot(x, 1040, 300, { yaw, look: yaw * 0.8, mood: MOODS[i][0], mouth: MOODS[i][1], arms: i === 5 ? 'point' : 'rest' }); }); }
+  else if (t < 2) { label('cận lớn — soi mắt, kính, mũi, tai, mái', 960, 34, 30);
+    [-0.85, 0, 0.6].forEach((yaw, i) => head(330 + i * 560, 520, 240, { yaw, look: yaw * 0.8, mood: ['smug', 'deadpan', 'shock'][i], mouth: ['smirk', 'o', 'wide'][i] })); }
+  else { const u = (t - 2) / 6, ph = u * 3;                                                     // 3 lần: thẳng → phải → thẳng → trái → thẳng
+    const seg = Math.floor(ph), f = ease(ph - seg), tgt = [0, 0.85, -0.85, 0][seg + 1] ?? 0, prv = [0, 0.85, -0.85, 0][seg] ?? 0, yaw = prv + (tgt - prv) * f;
+    label(`quay đầu — yaw ${yaw.toFixed(2)}`, 960, 34, 30);
+    head(560, 560, 300, { yaw, look: yaw * 0.8, mood: 'deadpan', mouth: Math.floor(t * 8) % 3 ? 'mid' : 'o', blink: (t % 3) < 0.12 });
+    const fl = yaw < 0, ay = Math.abs(yaw);                                                      // quay trái = lật gương, tay chỉ theo hướng mặt
+    mascot(1450, 1040, 760, { yaw: ay, look: ay * 0.8, mood: 'smug', mouth: 'smirk', arms: ay > 0.3 ? 'point' : 'rest', flip: fl }); }
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 8, LEAD: 0, error: null };
+</script>

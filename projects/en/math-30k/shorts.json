@@ -1,0 +1,337 @@
+{
+ "cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {
+   "name": "florence-ban",
+   "hook": [
+    "A CITY {BANNED}",
+    "THE NUMBERS",
+    "YOU USE TODAY"
+   ],
+   "pieces": [
+    {
+     "from": "p1a:0",
+     "to": "p1a:0",
+     "video": 6.0,
+     "crop": [
+      1080,
+      40,
+      40,
+      0
+     ]
+    },
+    {
+     "from": "p2:59",
+     "to": "p2:59",
+     "crop": [
+      1215,
+      180,
+      180,
+      0
+     ]
+    },
+    {
+     "from": "p2:60",
+     "to": "p2:61",
+     "crop": [
+      1640,
+      40,
+      40,
+      0
+     ]
+    },
+    {
+     "from": "p2:62",
+     "to": "p2:62",
+     "crop": [
+      1215,
+      60,
+      60,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "sixty-minutes",
+   "hook": [
+    "WHY DOES AN HOUR",
+    "HAVE {60} MINUTES?"
+   ],
+   "pieces": [
+    {
+     "from": "p1b:21",
+     "to": "p1b:21",
+     "video": 171.5,
+     "crop": [
+      1215,
+      300,
+      300,
+      0
+     ]
+    },
+    {
+     "from": "p1b:14",
+     "to": "p1b:15",
+     "crop": [
+      1600,
+      160,
+      160,
+      0
+     ]
+    },
+    {
+     "from": "p1b:16",
+     "to": "p1b:17",
+     "crop": [
+      1215,
+      120,
+      120,
+      0
+     ]
+    },
+    {
+     "from": "p1b:19",
+     "to": "p1b:20",
+     "crop": [
+      1215,
+      300,
+      300,
+      0
+     ],
+     "tail": 0.4
+    }
+   ]
+  },
+  {
+   "name": "bigger-infinity",
+   "hook": [
+    "SOME INFINITIES ARE",
+    "{BIGGER} THAN OTHERS"
+   ],
+   "pieces": [
+    {
+     "from": "p1a:3",
+     "to": "p1a:3",
+     "crop": [
+      1080,
+      760,
+      760,
+      120
+     ]
+    },
+    {
+     "from": "p2:162",
+     "to": "p2:165",
+     "crop": [
+      1700,
+      100,
+      100,
+      0
+     ]
+    },
+    {
+     "from": "p2:166",
+     "to": "p2:170",
+     "crop": [
+      1215,
+      100,
+      100,
+      0
+     ],
+     "tail": 0.4
+    }
+   ]
+  },
+  {
+   "name": "russell-paradox",
+   "hook": [
+    "ONE QUESTION THAT",
+    "{BROKE} SET THEORY"
+   ],
+   "pieces": [
+    {
+     "from": "p2:175",
+     "to": "p2:176",
+     "crop": [
+      1700,
+      100,
+      100,
+      0
+     ]
+    },
+    {
+     "from": "p2:177",
+     "to": "p2:182",
+     "crop": [
+      1600,
+      120,
+      200,
+      0
+     ],
+     "tail": -0.3
+    }
+   ]
+  },
+  {
+   "name": "parallel-lines",
+   "hook": [
+    "HOW MANY PARALLELS?",
+    "{0, 1 OR INFINITELY MANY}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:129",
+     "to": "p2:131",
+     "crop": [
+      1215,
+      60,
+      60,
+      0
+     ]
+    },
+    {
+     "from": "p2:141",
+     "to": "p2:145",
+     "crop": [
+      1800,
+      60,
+      60,
+      0
+     ]
+    },
+    {
+     "from": "p2:149",
+     "to": "p2:151",
+     "crop": [
+      1600,
+      80,
+      80,
+      0
+     ],
+     "tail": 0.4
+    }
+   ]
+  },
+  {
+   "name": "godel-limits",
+   "hook": [
+    "THE PROOF THAT",
+    "MATH HAS {LIMITS}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:184",
+     "to": "p2:190",
+     "crop": [
+      1800,
+      60,
+      60,
+      0
+     ]
+    },
+    {
+     "from": "p2:193",
+     "to": "p2:193",
+     "crop": [
+      1800,
+      60,
+      60,
+      0
+     ],
+     "tail": -0.25
+    }
+   ]
+  },
+  {
+   "name": "i-quarter-turn",
+   "hook": [
+    "THE “USELESS” NUMBER",
+    "THAT RUNS {PHYSICS}"
+   ],
+   "pieces": [
+    {
+     "from": "p1a:2",
+     "to": "p1a:2",
+     "crop": [
+      1300,
+      40,
+      40,
+      0
+     ]
+    },
+    {
+     "from": "p2:121",
+     "to": "p2:125",
+     "crop": [
+      1600,
+      160,
+      160,
+      0
+     ]
+    },
+    {
+     "from": "p2:126",
+     "to": "p2:128",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ],
+     "tail": -0.25
+    }
+   ]
+  },
+  {
+   "name": "algebra-algorithm",
+   "hook": [
+    "ALGEBRA & ALGORITHM:",
+    "ONE MAN, {TWO BOOKS}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:38",
+     "to": "p2:39",
+     "crop": [
+      1700,
+      40,
+      40,
+      0
+     ]
+    },
+    {
+     "from": "p2:41",
+     "to": "p2:42",
+     "crop": [
+      1080,
+      40,
+      40,
+      160
+     ]
+    },
+    {
+     "from": "p2:44",
+     "to": "p2:45",
+     "crop": [
+      1700,
+      40,
+      40,
+      0
+     ]
+    },
+    {
+     "from": "p2:48",
+     "to": "p2:50",
+     "crop": [
+      1500,
+      60,
+      60,
+      0
+     ],
+     "tail": 0.4
+    }
+   ]
+  }
+ ]
+}

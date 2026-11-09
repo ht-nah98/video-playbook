@@ -1,0 +1,10 @@
+{"cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {"name": "rule-of-72", "hook": ["ONE NUMBER TELLS YOU", "WHEN YOUR MONEY", "{DOUBLES}"], "pieces": [{"from": "p1:0", "to": "p1:3", "crop": [1780, 90, 90, 0]}]},
+  {"name": "dollar-limit", "hook": ["$1 AT 100% INTEREST", "NEVER PASSES {$2.72}"], "pieces": [{"from": "p2:64", "to": "p2:68", "crop": [1640, 200, 200, 140]}]},
+  {"name": "ant-whale", "hook": ["ANT TO BLUE WHALE:", "ONLY {11 STEPS}"], "pieces": [{"from": "p2:23", "to": "p2:27", "crop": [1760, 110, 110, 0]}]},
+  {"name": "quake-32x", "hook": ["A MAGNITUDE 7 QUAKE:", "{32×} THE ENERGY", "OF A 6"], "pieces": [{"from": "p2:45", "to": "p2:46", "crop": [1640, 100, 100, 0]}]},
+  {"name": "napier-1614", "hook": ["NO CALCULATORS?", "THIS TRICK SAVED", "{ASTRONOMERS}"], "pieces": [{"from": "p2:36", "to": "p2:41", "crop": [1500, 320, 320, 0]}]},
+  {"name": "ratios-not-kilos", "hook": ["YOU NOTICE {RATIOS},", "NOT DIFFERENCES"], "pieces": [{"from": "p2:56", "to": "p2:59", "crop": [1560, 260, 260, 140]}]},
+  {"name": "trillion-loud", "hook": ["YOUR EARS SPAN A", "{TRILLION}-FOLD RANGE"], "pieces": [{"from": "p2:48", "to": "p2:50", "crop": [1340, 480, 480, 0]}]}
+ ]}

@@ -1,0 +1,299 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — lcd</title>
+<style>
+  html,body{margin:0;background:#B9C3AB;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "LCD" (zero-power). Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/lcd.html --dur 2 --t 0.5,1.5 --outdir out/_lab/lcd
+// Ý trung tâm: bài mở bằng "máy cãi nhau" (Python 1, TI ERROR) → cả video sống TRONG kính LCD xám-xanh của một máy tính
+//   cầm tay chung chung. Máy tính là nơi "chưa bấm gì" có trạng thái thật: thanh ghi nhân reset về 1, thanh ghi cộng về 0.
+// Vật xuyên suốt: THANH GHI × — cột kính nhuộm lam có chỉ báo "×" sáng và chữ số 7 đoạn `1` màu lam, có sẵn trước khi bấm
+//   phím nào. Rút thừa số = đoạn tắt (chỉ còn bóng mờ "8"), cái 1 vẫn sáng. Ô 0⁰ = ô nhấp nháy: lưới điểm caro (nửa sáng
+//   nửa tắt — ảnh chụp của nhấp nháy) + góc ngoặc đen, trong đó `1?` lam và `0?` gỉ cùng giành ô.
+// Màu (nền kính #C4CEB6→#B3BEA6, ≥ 4.5:1 mọi chữ): mực đoạn #18211B (thường) · "1"/khởi động/đúng = lam #0A3A86 ·
+//   "0" = gỉ #7A1A10 · giá trị phụ = mực nhạt #3E4A40 · đoạn tắt = mực 7% · tranh chấp 0⁰ = caro điểm + ngoặc góc ·
+//   "SAI" = âm bản: thanh mực đặc gạch ngang, chữ khoét ra màu kính, chỉ báo "ERR" bật (khác cả ba dấu trên).
+// Chữ: số = 7 đoạn vẽ path (nghiêng 6°, đoạn tắt hiện mờ); chữ = ma trận điểm 5×7 vẽ tay (ô tắt hiện mờ); số mũ = cùng
+//   kiểu, nhỏ, nâng lên. Không dùng font hệ thống trên màn.
+// Tiếng: beep (bấm phím) · tick (đoạn tắt/rút thừa số) · chip (reset thanh ghi) · question (nhấp nháy 0⁰) · error (ERR) · correct.
+// Phần khác: mở bài = hai màn LCD cạnh nhau, `1` vs `ERROR`, mascot pose-calculator · cầu thang 16→1, 1000→1 = cột 7 đoạn tắt
+//   dần, "÷2"/"÷10" ma trận điểm · aᵐ·aⁿ = hai thanh ghi nối nhau · x·x = x = phím lặp, chỉ 0 và 1 đứng yên · đếm cách điền ô =
+//   ô ma trận bật/tắt, 0 ô = màn trống vẫn có 1 cách (thanh ghi = 1) · nhị thức / đa thức / eˣ = dòng cuộn kiểu máy đồ thị ·
+//   Knuth 1992 = dòng chữ ma trận chạy · hai đường tới (0,0) + xʸ = 2 = đồ thị điểm ảnh · xˣ → 1 = bảng giá trị cuộn ·
+//   Cauchy 1821 / Libri 1833 / Möbius = màn nhấp nháy "E" theo năm · tóm tắt = lịch sử phép tính · lần sau 0! = 1 = phím "!".
+import { toCanvas } from '../../engine/mascot.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { ink: '#18211B', inkRGB: '24,33,27', one: '#0A3A86', oneRGB: '10,58,134', zero: '#7A1A10', zeroRGB: '122,26,16', dim: '#3E4A40' };
+const IM = {}; let GLASS, ready = false;
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+
+// ───────── kính LCD: nền xám-xanh, lớp phản quang, lưới điểm rất mờ, viền khung nhựa đổ bóng vào trong
+function glass() {
+  const c = mk(), x = c.getContext('2d');
+  const gr = x.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, '#C4CEB6'); gr.addColorStop(1, '#B3BEA6');
+  x.fillStyle = gr; x.fillRect(0, 0, W, H);
+  const sh = x.createLinearGradient(0, 0, W, H * 0.6);           // vệt phản chiếu chéo trên kính
+  sh.addColorStop(0, 'rgba(255,255,255,0)'); sh.addColorStop(0.42, 'rgba(255,255,255,0)'); sh.addColorStop(0.5, 'rgba(255,255,255,0.07)');
+  sh.addColorStop(0.62, 'rgba(255,255,255,0)'); x.fillStyle = sh; x.fillRect(0, 0, W, H);
+  x.fillStyle = 'rgba(24,33,27,0.028)';
+  for (let px = 0; px < W; px += 6) x.fillRect(px, 0, 1, H);
+  for (let py = 0; py < H; py += 6) x.fillRect(0, py, W, 1);
+  const edges = [[0, 0, W, 26, 0, 1], [0, H - 18, W, 18, 0, -1], [0, 0, 22, H, 1, 0], [W - 22, 0, 22, H, -1, 0]];
+  for (const [ex, ey, ew, eh, dx, dy] of edges) {                   // bóng viền nhựa đổ vào mặt kính
+    const lg = dx ? x.createLinearGradient(dx > 0 ? ex : ex + ew, 0, dx > 0 ? ex + ew : ex, 0)
+      : x.createLinearGradient(0, dy > 0 ? ey : ey + eh, 0, dy > 0 ? ey + eh : ey);
+    lg.addColorStop(0, 'rgba(20,26,22,0.30)'); lg.addColorStop(1, 'rgba(20,26,22,0)'); x.fillStyle = lg; x.fillRect(ex, ey, ew, eh);
+  }
+  return c;
+}
+
+// ───────── lớp mực: mọi chữ vẽ vào L, sau đó in bóng lệch (đoạn LCD đổ bóng lên tấm phản quang) rồi in mực
+const L = mk(), lx = L.getContext('2d'), SH = mk(), sx = SH.getContext('2d');
+let d = lx;                                                         // ngữ cảnh vẽ hiện tại
+
+// 7 đoạn: a b c d e f g; bảng đoạn cho chữ số và vài ký hiệu
+const SEG = { 0: 'abcdef', 1: 'bc', 2: 'abged', 3: 'abgcd', 4: 'fgbc', 5: 'afgcd', 6: 'afgedc', 7: 'abc', 8: 'abcdefg', 9: 'abcdfg', E: 'afged', '-': 'g' };
+const SK = 0.105;                                                   // nghiêng chữ (tan 6°)
+function bar(x0, y0, x1, y1, t, h0, oy) {                           // thanh lục giác giữa hai điểm, đã nghiêng
+  const hz = y0 === y1, gp = t * 0.3, hh = t / 2;
+  const pts = hz
+    ? [[x0 + gp, y0], [x0 + gp + hh, y0 - hh], [x1 - gp - hh, y0 - hh], [x1 - gp, y0], [x1 - gp - hh, y0 + hh], [x0 + gp + hh, y0 + hh]]
+    : [[x0, y0 + gp], [x0 + hh, y0 + gp + hh], [x0 + hh, y1 - gp - hh], [x0, y1 - gp], [x0 - hh, y1 - gp - hh], [x0 - hh, y0 + gp + hh]];
+  d.beginPath(); pts.forEach(([px, py], i) => { const X = px + (h0 - (py - oy)) * SK; i ? d.lineTo(X, py) : d.moveTo(X, py); }); d.closePath(); d.fill();
+}
+const GHOST = `rgba(${C.inkRGB},0.075)`;
+function seg7(ch, x, y, h, color, ghost = true, half = null) {     // (x,y) = góc trên trái; trả về bề rộng tiến
+  const w = h * 0.5, t = h * 0.13, Lx = x + t / 2, R = x + w - t / 2, T = y + t / 2, M = y + h / 2, B = y + h - t / 2;
+  const S = { a: [Lx, T, R, T], g: [Lx, M, R, M], d: [Lx, B, R, B], f: [Lx, T, Lx, M], b: [R, T, R, M], e: [Lx, M, Lx, B], c: [R, M, R, B] };
+  const on = SEG[ch] || '';
+  for (const k of 'abcdefg') {
+    if (on.includes(k)) d.fillStyle = color; else if (ghost) d.fillStyle = half && half.segs.includes(k) ? half.col : GHOST; else continue;
+    bar(...S[k], t, h, y);
+  }
+  return w;
+}
+function dp(x, y, h, color) { const s = h * 0.13; d.fillStyle = color; d.fillRect(x + (0) * SK, y + h - s, s, s); return s; }
+function opTimes(x, y, h, color) {                                  // dấu × bằng hai thanh chéo (kiểu 14 đoạn)
+  const s = h * 0.34, cx = x + s / 2 + h * 0.06 + (h / 2) * SK, cy = y + h / 2, t = h * 0.1;
+  d.save(); d.translate(cx, cy); d.fillStyle = color;
+  for (const a of [Math.PI / 4, -Math.PI / 4]) { d.save(); d.rotate(a); d.fillRect(-s * 0.72, -t / 2, s * 1.44, t); d.restore(); }
+  d.restore(); return s + h * 0.12;
+}
+function opEq(x, y, h, color) {
+  const w = h * 0.42, t = h * 0.1; d.fillStyle = color;
+  for (const oy of [-h * 0.12, h * 0.12]) { d.beginPath(); const yy = y + h / 2 + oy; const k = (h / 2 - oy) * SK;
+    d.rect(x + k, yy - t / 2, w, t); d.fill(); }
+  return w;
+}
+// chuỗi token: { c: '2' | '×' | '=' | '.', h, col, ghost, half, sup } — trả về hộp [x0,x1] từng token
+function row(tokens, x, y, h, gap = 0.3) {
+  const out = []; let cx = x;
+  for (const tk of tokens) {
+    const hh = tk.sup ? h * 0.5 : h, yy = y, col = tk.col || C.ink;
+    let w;
+    if (tk.c === '×') { cx += h * 0.12; w = tk.ghostOp ? opTimes(cx, yy, h, tk.ghostOp) : opTimes(cx, yy, h, col); cx += h * 0.06; }
+    else if (tk.c === '=') { cx += h * 0.16; w = opEq(cx, yy, h, col); cx += h * 0.06; }
+    else if (tk.c === '.') { cx -= h * 0.12; w = dp(cx, yy, h, col); cx -= h * 0.06; }
+    else if (tk.c === ' ') w = h * 0.3;
+    else w = seg7(tk.c, cx, yy, hh, col, tk.ghost !== false, tk.half || null);
+    out.push([cx, cx + w]); const nx = tokens[tokens.indexOf(tk) + 1];
+    cx += w + (tk.sup ? h * 0.1 : nx && nx.sup ? h * 0.2 : h * gap) + (tk.pad || 0);
+  }
+  out.end = cx; return out;
+}
+
+// ───────── ma trận điểm 5×7 (vẽ tay), ô tắt hiện mờ
+const F = {
+  A: '.###.#...##...#######...##...##...#', B: '####.#...##...#####.#...##...#####.', C: '.###.#...##....#....#....#...#.###.',
+  D: '####.#...##...##...##...##...#####.', E: '######....#....####.#....#....#####', F: '######....#....####.#....#....#....',
+  G: '.###.#...##....#.####...##...#.####', H: '#...##...##...#######...##...##...#', I: '.###...#....#....#....#....#...###.',
+  J: '..###...#....#....#....#.#..#..##..', K: '#...##..#.#.#..##...#.#..#..#.#...#', L: '#....#....#....#....#....#....#####',
+  M: '#...###.###.#.##.#.##...##...##...#', N: '#...##...###..##.#.##..###...##...#', O: '.###.#...##...##...##...##...#.###.',
+  P: '####.#...##...#####.#....#....#....', Q: '.###.#...##...##...##.#.##..#..##.#', R: '####.#...##...#####.#.#..#..#.#...#',
+  S: '.#####....#.....###.....#....#####.', T: '#####..#....#....#....#....#....#..', U: '#...##...##...##...##...##...#.###.',
+  V: '#...##...##...##...##...#.#.#...#..', W: '#...##...##...##.#.##.#.##.#.#.#.#.', X: '#...##...#.#.#...#...#.#.#...##...#',
+  Y: '#...##...#.#.#...#....#....#....#..', Z: '#####....#...#...#...#...#....#####',
+  0: '.###.#...##..###.#.###..##...#.###.', 1: '..#...##....#....#....#....#...###.', 2: '.###.#...#....#...#...#...#...#####',
+  3: '#####...#...#.....#.....##...#.###.', 4: '...#...##..#.#.#..#.#####...#....#.', 5: '######....####.....#....##...#.###.',
+  6: '..##..#...#....####.#...##...#.###.', 7: '#####....#...#...#...#....#....#...', 8: '.###.#...##...#.###.#...##...#.###.',
+  9: '.###.#...##...#.####....#...#..##..', '=': '..........#####.....#####..........', '?': '.###.#...#....#...#...#.........#..',
+  '-': '...............#####...............', '.': '..............................##...', '·': '...........##...##.................',
+  '×': '.....#...#.#.#...#...#.#.#...#.....', '÷': '.......#.......#####.......#.......', '/': '....#....#...#...#...#...#....#....',
+  '←': '.......#...#...#####.#.....#.......', '↑': '..#...###.#.#.#..#....#....#....#..', '+': '.......#....#..#####..#....#.......',
+  "'": '..#....#...#.......................', ' ': '...................................', ',': '.....................##....#...#...',
+  ':': '......##...##.......##...##.......',
+  '→': '.......#.....#.#####...#...#.......', '(': '...#...#...#....#....#.....#.....#.', ')': '.#.....#.....#....#....#...#...#...',
+};
+for (const k in F) F[k] = F[k].padEnd(35, '.').slice(0, 35);
+// dm(runs, x, y, p): runs = chuỗi hoặc [[chuỗi, màu], ...]; '^' bật/tắt số mũ (điểm nhỏ, nâng lên). Trả về bề rộng.
+function dm(runs, x, y, p, color = C.ink, align = 'left', ghost = true) {
+  if (typeof runs === 'string') runs = [[runs, color]];
+  const meas = () => { let w = 0, sup = false; for (const [s] of runs) for (const ch of s) { if (ch === '^') { sup = !sup; continue; } w += (sup ? 0.62 : 1) * p * 6; } return w - p; };
+  const tw = meas(); let cx = align === 'center' ? x - tw / 2 : align === 'right' ? x - tw : x, sup = false;
+  for (const [s, col] of runs) for (const ch of s) {
+    if (ch === '^') { sup = !sup; continue; }
+    const q = sup ? p * 0.62 : p, oy = sup ? y - p * 3.2 : y, gl = F[ch];
+    if (!gl) throw new Error('thiếu glyph ' + ch);
+    for (let i = 0; i < 35; i++) {
+      const on = gl[i] === '#'; if (!on && (!ghost || ch === ' ')) continue;
+      d.fillStyle = on ? (col || color) : `rgba(${C.inkRGB},0.045)`;
+      d.fillRect(cx + (i % 5) * q + (6 - ((i / 5) | 0)) * q * SK * 0.5, oy + ((i / 5) | 0) * q, q * 0.84, q * 0.84);
+    }
+    cx += q * 6;
+  }
+  return tw;
+}
+function bracket(x0, y0, x1, y1, len, t, col) {                     // ngoặc góc của ô tranh chấp
+  d.fillStyle = col;
+  for (const [cx, cy, sx, sy] of [[x0, y0, 1, 1], [x1, y0, -1, 1], [x0, y1, 1, -1], [x1, y1, -1, -1]]) {
+    d.fillRect(sx > 0 ? cx : cx - len, sy > 0 ? cy : cy - t, len, t); d.fillRect(sx > 0 ? cx : cx - t, sy > 0 ? cy : cy - len, t, len);
+  }
+}
+function checker(x0, y0, x1, y1, p, alpha) {                        // caro điểm = ảnh chụp của nhấp nháy
+  d.fillStyle = `rgba(${C.inkRGB},${alpha})`;
+  for (let yy = y0, r = 0; yy < y1; yy += p, r++) for (let xx = x0 + (r % 2) * p; xx < x1; xx += 2 * p) d.fillRect(xx, yy, p * 0.8, p * 0.8);
+}
+function annunciators(lit) {                                        // dải chỉ báo trên cùng của màn LCD
+  const items = ['DEG', 'M', '+', '×', 'E', 'ERR'];
+  let x = 1824;
+  for (let i = items.length - 1; i >= 0; i--) {
+    const s = items[i], on = lit.includes(s), col = on ? (s === '×' ? C.one : C.ink) : `rgba(${C.inkRGB},0.11)`;
+    const w = dm(s, x, 74, 4, col, 'right', false); x -= w + 34;
+  }
+}
+
+// ───────── nhân vật (ngoài lớp mực, viền tối để áo trắng tách khỏi kính)
+function sprite(pose) {
+  const im = IM[pose], p = 6, c = mk(im.width + 2 * p, im.height + 2 * p), x = c.getContext('2d');
+  const sil = mk(im.width, im.height), s = sil.getContext('2d'); s.drawImage(im, 0, 0); s.globalCompositeOperation = 'source-in';
+  s.fillStyle = '#1A221C'; s.fillRect(0, 0, im.width, im.height);
+  for (let k = 0; k < 16; k++) { const a = k / 16 * 2 * Math.PI; x.drawImage(sil, p + 3 * Math.cos(a), p + 3 * Math.sin(a)); }
+  x.drawImage(im, p, p); return { c, p, h: im.height, w: im.width, sil };
+}
+function figure(S, cx, foot, h) {
+  const s = h / S.h, w = S.c.width * s, x0 = cx - w / 2, y0 = foot - h - S.p * s;
+  g.save(); g.globalAlpha = 0.18; g.drawImage(S.sil, x0 + S.p * s + 10, y0 + S.p * s + 12, S.w * s, S.h * s); g.restore();  // bóng lên kính
+  g.drawImage(S.c, x0, y0, w, S.c.height * s); return [x0 + S.p * s, x0 + w - S.p * s];
+}
+
+const frames = [
+  () => {                                             // 0 · HỒI 2: rút thừa số 2 đi, còn thanh ghi 1
+    const vals = [must('2 ** 3', 8), must('2 ** 2', 4), must('2 ** 1', 2), must('2 ** 0', 1)];
+    must('1 * 2 * 2 * 2', vals[0]); must('1 * 2 * 2', vals[1]); must('1 * 2', vals[2]); must('1', vals[3]);
+    const sumE = must('[].reduce((a, b) => a + b, 0)', 0), prodE = must('[].reduce((a, b) => a * b, 1)', 1);
+    dm('ACT II · MULTIPLYING ZERO TIMES', 96, 74, 4);
+    annunciators(['×']);
+    const h = 104, X0 = 132, Y0 = 196, DY = 158;
+    let colOne = null, resX = null;
+    vals.forEach((v, r) => {
+      const n = 3 - r, y = Y0 + r * DY, last = r === 3;
+      const tk = [{ c: '2' }, { c: String(n), sup: true }, { c: '=' }, { c: '1', col: C.one }];
+      for (let i = 0; i < 3; i++) {                            // rút đi: chỉ còn bóng đoạn, nét "2" mờ dần
+        const gone = i >= n;
+        tk.push({ c: '×', col: gone ? `rgba(${C.inkRGB},0.13)` : C.ink },
+          gone ? { c: 'X', half: { segs: SEG[2], col: `rgba(${C.inkRGB},0.15)` } } : { c: '2' });
+      }
+      tk.push({ c: '=' }, { c: String(v), col: last ? C.one : C.ink });
+      const B = row(tk, X0, y, h);
+      if (!colOne) colOne = B[3];
+      resX = B[B.length - 1];
+      if (r) dm('÷2', resX[1] + 34, y - DY / 2 + 34, 4, C.dim);
+    });
+    // cột thanh ghi ×: kính nhuộm lam chạy qua cả 4 dòng — cái 1 có sẵn trước mọi phép nhân
+    const bx0 = colOne[0] - 26, bx1 = colOne[1] + 40, by0 = Y0 - 62, by1 = Y0 + 3 * DY + h + 26;
+    d.fillStyle = `rgba(${C.oneRGB},0.085)`; d.fillRect(bx0, by0, bx1 - bx0, by1 - by0);
+    d.fillStyle = C.one; d.fillRect(bx0, by0, bx1 - bx0, 4); d.fillRect(bx0, by1 - 4, bx1 - bx0, 4);
+    dm('×REG', (bx0 + bx1) / 2, by0 + 14, 3, C.one, 'center', false);
+    // dòng cuối: khung đậm quanh 2⁰ = 1
+    const yl = Y0 + 3 * DY;
+    dm([['NOTHING MULTIPLIED YET: STILL ', C.ink], ['1', C.one]], X0, yl + h + 62, 5);
+    // cộng khởi từ 0 / nhân khởi từ 1: hai thanh ghi nhỏ
+    const ry = 912, rh = 66;
+    const reg = (x, op, v, col, cap) => {
+      d.strokeStyle = `rgba(${C.inkRGB},0.55)`; d.lineWidth = 3; d.strokeRect(x, ry - 12, 196, rh + 24);
+      dm(op, x + 18, ry + 14, 6, C.ink, 'left', false);
+      seg7(String(v), x + 124, ry, rh, col);
+      return x + 222 + dm([[cap + ' = ', C.ink], [String(v), col]], x + 222, ry + 20, 4);
+    };
+    reg(X0, '+', sumE, C.zero, 'EMPTY SUM');
+    const xr = reg(X0 + 560, '×', prodE, C.one, 'EMPTY PRODUCT');
+    return { fig: ['notebook', 1660, 760], text: [X0, Math.max(resX[1] + 120, xr)] };
+  },
+  () => {                                             // 1 · HỒI 3: bảng xʸ, hai quy luật giành ô 0⁰
+    const XS = [0, 0.5, 2, 5], YS = [0, 1, 2, 3], XL = ['0', '1/2', '2', '5'];
+    dm('ACT III · TWO PATTERNS, ONE SQUARE', 96, 74, 4);
+    annunciators(['×', 'E']);
+    const tx = 652, cw = 222, hw = 168, ty = 168, hh = 92, rh = 156, x1 = tx + hw + 4 * cw, y1 = ty + hh + 4 * rh;
+    // dải màu: hàng y = 0 lam, cột x = 0 gỉ
+    d.fillStyle = `rgba(${C.oneRGB},0.085)`; d.fillRect(tx + hw, ty + hh, 4 * cw, rh);
+    d.fillStyle = `rgba(${C.zeroRGB},0.075)`; d.fillRect(tx + hw, ty + hh, cw, 4 * rh);
+    // lưới: đường chấm điểm
+    d.fillStyle = `rgba(${C.inkRGB},0.42)`;
+    for (let i = 0; i <= 4; i++) { const yy = ty + hh + i * rh; for (let xx = tx; xx < x1; xx += 8) d.fillRect(xx, yy - 1.5, 4, 3); }
+    for (let j = 0; j <= 4; j++) { const xx = tx + hw + j * cw; for (let yy = ty; yy < y1; yy += 8) d.fillRect(xx - 1.5, yy, 3, 4); }
+    dm('X^Y', tx + hw / 2, ty + 30, 6, C.ink, 'center');
+    XS.forEach((x, j) => dm('X=' + XL[j], tx + hw + j * cw + cw / 2, ty + 32, 5, j === 0 ? C.zero : C.ink, 'center'));
+    YS.forEach((y, i) => dm('Y=' + y, tx + hw / 2, ty + hh + i * rh + rh / 2 - 17, 5, i === 0 ? C.one : C.ink, 'center'));
+    const sh = 74;
+    YS.forEach((y, i) => XS.forEach((x, j) => {
+      const cx = tx + hw + j * cw + cw / 2, cy = ty + hh + i * rh + (rh - sh) / 2;
+      if (i === 0 && j === 0) return;                          // ô 0⁰ vẽ riêng — KHÔNG in kết quả của JS
+      const v = must(`${x} ** ${y}`, x ** y), s = String(v), col = i === 0 ? C.one : j === 0 ? C.zero : C.dim;
+      const toks = []; for (const ch of s) toks.push(ch === '.' ? { c: '.', col } : { c: ch, col });
+      let hh2 = sh, w = row(toks, 0, -9999, hh2).end - hh2 * 0.3;          // đo trước, co cỡ cho vừa ô
+      if (w > cw - 56) { hh2 = sh * (cw - 56) / w; w = cw - 56; }
+      row(toks, cx - w / 2 - hh2 * 0.05, cy + (sh - hh2) / 2, hh2);
+      if (i === 0 && v !== 1) throw new Error('hàng y=0 phải là 1');
+      if (j === 0 && v !== 0) throw new Error('cột x=0 phải là 0');
+    }));
+    // ô tranh chấp 0⁰
+    const ox0 = tx + hw, oy0 = ty + hh;
+    checker(ox0 + 10, oy0 + 10, ox0 + cw - 10, oy0 + rh - 10, 6, 0.10);
+    bracket(ox0 + 8, oy0 + 8, ox0 + cw - 8, oy0 + rh - 8, 34, 6, C.ink);
+    const ch = 70, cy = oy0 + 58;
+    seg7('1', ox0 + 30, cy, ch, C.one); dm('?', ox0 + 30 + ch * 0.5 + 16, cy + ch - 28, 4, C.one, 'left', false);
+    seg7('0', ox0 + 118, cy, ch, C.zero); dm('?', ox0 + 118 + ch * 0.5 + 16, cy + ch - 28, 4, C.zero, 'left', false);
+    dm('0^0', ox0 + cw / 2, oy0 + 24, 3, C.ink, 'center', false);
+    // mũi tên hai quy luật đổ vào cùng một ô
+    const ay = oy0 + rh - 22;
+    d.fillStyle = C.one; for (let xx = ox0 + cw + 22; xx < x1 - 12; xx += 10) d.fillRect(xx, ay, 6, 4);
+    dm('←', ox0 + cw + 2, ay - 12, 4, C.one, 'left', false);
+    const ax = ox0 + cw - 24;
+    d.fillStyle = C.zero; for (let yy = oy0 + rh + 26; yy < y1 - 12; yy += 10) d.fillRect(ax, yy, 4, 6);
+    dm('↑', ax - 10, oy0 + rh + 4, 4, C.zero, 'left', false);
+    // chú thích hai quy luật dưới bảng
+    const wl = Math.max(dm('ROW:    X^0^ = 1', tx, y1 + 30, 5, C.one), dm('COLUMN: 0^Y^ = 0', tx, y1 + 88, 5, C.zero));
+    const wr = dm([['ONE SQUARE: ', C.ink], ['1', C.one], [' OR ', C.ink], ['0', C.zero], [' ?', C.ink]], 1824, y1 + 59, 5, C.ink, 'right');
+    if (tx + wl + 60 > 1824 - wr) throw new Error('chú thích dưới bảng chồng nhau');
+    return { fig: ['twoways', 330, 760], text: [tx, x1] };
+  },
+];
+
+(async () => {
+  await Promise.all(['notebook', 'twoways'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../assets/character-v2/cut/pose-${p}.png`; })));
+  IM.notebookS = sprite('notebook'); IM.twowaysS = sprite('twoways');
+  GLASS = glass(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+
+const frame = t => {
+  const k = Math.min(1, Math.floor(t));
+  g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(GLASS, 0, 0);
+  lx.setTransform(1, 0, 0, 1, 0, 0); lx.clearRect(0, 0, W, H); d = lx;
+  const info = frames[k]();
+  sx.globalCompositeOperation = 'source-over'; sx.clearRect(0, 0, W, H); sx.drawImage(L, 0, 0);
+  sx.globalCompositeOperation = 'source-in'; sx.fillStyle = 'rgba(30,40,32,1)'; sx.fillRect(0, 0, W, H);
+  g.save(); g.globalAlpha = 0.13; g.drawImage(SH, 5, 6); g.restore();     // bóng đoạn lên tấm phản quang
+  g.drawImage(L, 0, 0);
+  const [pose, cx, hgt] = info.fig, S = IM[pose + 'S'], [fx0, fx1] = figure(S, cx, 1080, hgt);
+  const [t0, t1] = info.text;
+  if (cx > W / 2 ? t1 > fx0 + 40 : t0 < fx1 - 40) throw new Error(`chữ đè nhân vật: ${t0}-${t1} vs ${fx0 | 0}-${fx1 | 0}`);
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

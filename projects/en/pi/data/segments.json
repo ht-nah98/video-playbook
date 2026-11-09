@@ -1,0 +1,15 @@
+[
+ {
+  "timeline": "p1",
+  "offset": 0.6
+ },
+ {
+  "gap": "INTRO",
+  "start": 72.9,
+  "dur": 25.967
+ },
+ {
+  "timeline": "p2",
+  "offset": 101.867
+ }
+]

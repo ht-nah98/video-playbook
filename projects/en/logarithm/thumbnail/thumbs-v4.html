@@ -1,0 +1,87 @@
+<!doctype html><meta charset="utf-8">
+<title>logarithm — thumbnail v4 (thế giới khối gỗ của video + mascot dáng động)</title>
+<style>@font-face{font-family:"Archivo";src:url("../../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Thumbnail v4 (người dùng 2026-10-29: v3 "quay đi quay lại vài khung — bảng, hiệu ứng… không sáng tạo; video đổi mới liên tục
+// mà thumbnail không làm được; cả tư thế mặt mascot"). Luật mới: thumbnail SINH RA TỪ THẾ GIỚI CỦA VIDEO (kit + đạo cụ của bài,
+// DNA blocks: tường đục lỗ, bàn bạch dương, khối gỗ sơn, xu gỗ vàng, 「72」 gỗ cắt dày) + mascot ĐANG LÀM GÌ ĐÓ trong thế giới ấy
+// (dáng góc thẳng engine/mascot-line.js `mascot()` — §219), mỗi bản một tình huống + một góc máy. Mặt vẫn ≈ 40% cao khung ở 168 px (§216).
+// t = bản + 0.5: A (0) đỡ 72 gỗ · B (1) đồng hồ cát xu · C (2) tờ tiền chân dung mascot.
+import { W, H, C, loadKit, ground, block, coinStack, tag, big72, FONTS, FONT_SAMPLE } from '../kit.js';
+import { NOOP } from '../../../../engine/stickmove.js';
+import { bindMascot, mascot, head, INK, SKIN } from '../../../../engine/mascot-line.js';
+const g = document.getElementById('cv').getContext('2d');
+let ready = false;
+Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE))).then(() => loadKit({})).then(() => { bindMascot(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+function s0() {
+  g.save(); g.translate(960, 1080); g.scale(1.55, 1.55); g.translate(-960, -1080); ground(g, 'table'); g.restore();
+  // mascot góc thẳng (bản 4, LESSONS §219): khuỵu, hai tay ống blouse đỡ khối 72 trên đầu — dáng "đỡ khối trên đầu" của bảng dáng
+  const h = 1000, cx = 1180, y = 1330, r = h * 0.19, c = 0.45, hy = y - h + r * 1.38 + c * h * 0.15, topH = hy - r * 1.22;
+  const w72 = big72(NOOP, 0, 0, 1.0, { k: 0.001 })[2], base = topH - 40;
+  g.save(); g.translate(cx, base); g.rotate(-0.05); g.translate(-cx, -base); big72(g, cx - w72 / 2, base, 1.0); g.restore();
+  for (const [x, yy, a] of [[cx - w72 * 0.55, base - 60, -2.6], [cx + w72 * 0.55, base - 70, -0.5]]) { g.save(); g.strokeStyle = INK; g.lineWidth = 9; g.lineCap = 'round';   // vạch rung
+    for (const k of [0, 1, 2]) { g.beginPath(); g.moveTo(x + Math.cos(a + k * 0.35) * 30, yy + Math.sin(a + k * 0.35) * 30); g.lineTo(x + Math.cos(a + k * 0.35) * 80, yy + Math.sin(a + k * 0.35) * 80); g.stroke(); } g.restore(); }
+  mascot(cx, y, h, { crouch: c, hands: [[cx - h * 0.27, base - 6], [cx + h * 0.27, base - 6]], mood: 'angry', mouth: 'wavy', sweat: true, lookY: -0.6, look: -0.2 });
+  tag(g, '9 YEARS?', 480, 330, { size: 120, rot: -0.06, string: [480, -20] });
+}
+
+// 2 — ĐU ĐỈNH THÁP XU: chồng xu vàng (tiền gấp đôi) vọt quá trần, mascot đu ở đỉnh nhìn xuống hoảng; chồng $1,000 nhỏ dưới chân tháp
+function txtB(str, x, y, px, o = {}) { g.save(); g.font = `${o.w ?? 900} ${px}px Archivo`; g.textAlign = o.align ?? 'center'; g.textBaseline = 'middle'; g.lineJoin = 'round';
+  if (o.rot) { g.translate(x, y); g.rotate(o.rot); g.translate(-x, -y); }
+  if (o.stroke !== null) { g.strokeStyle = o.stroke ?? INK; g.lineWidth = px * (o.sw ?? 0.16); g.strokeText(str, x, y); }
+  g.fillStyle = o.fill ?? '#FFF'; g.fillText(str, x, y); g.restore(); }
+const goldCoin = (x, y, r) => { g.save(); g.fillStyle = '#F2B33D'; g.strokeStyle = INK; g.lineWidth = 5; g.beginPath(); g.ellipse(x, y, r, r * 0.42, 0, 0, 7); g.fill(); g.stroke();
+  g.strokeStyle = '#C98A1E'; g.lineWidth = 4; g.beginPath(); g.ellipse(x, y, r * 0.7, r * 0.29, 0, 0, 7); g.stroke(); g.restore(); };
+const hsh = i => { const x = Math.sin(i * 127.1 + 311.7) * 43758.5453; return x - Math.floor(x); };
+
+// B — ĐỒNG HỒ CÁT TIỀN: nền tối, đồng hồ cát gỗ nửa trái (bầu trên $1,000 → bầu dưới $2,000, xu chảy qua cổ), mascot cận mặt phải chống cằm sốt ruột
+function sB() {
+  let gr = g.createRadialGradient(700, 520, 80, 700, 520, 1300); gr.addColorStop(0, '#2C3F5C'); gr.addColorStop(1, '#0E1522'); g.fillStyle = gr; g.fillRect(0, 0, W, H);
+  g.fillStyle = 'rgba(255,255,255,0.05)'; for (let i = 0; i < 70; i++) { g.beginPath(); g.arc(hsh(i) * W, hsh(i + 9) * H, 2 + 3 * hsh(i + 3), 0, 7); g.fill(); }
+  const cx = 600, top = 150, mid = 560, bot = 970, wd = 300;
+  const bulb = (y0, y1) => { const P = new Path2D(); P.moveTo(cx - wd, y0); P.bezierCurveTo(cx - wd, (y0 + y1) / 2, cx - 30, y1 - (y1 - y0) * 0.25, cx - 26, y1); P.lineTo(cx + 26, y1);
+    P.bezierCurveTo(cx + 30, y1 - (y1 - y0) * 0.25, cx + wd, (y0 + y1) / 2, cx + wd, y0); P.closePath(); return P; };
+  const T = bulb(top + 40, mid), B = new Path2D(); { const y0 = bot - 40, y1 = mid; B.moveTo(cx - wd, y0); B.bezierCurveTo(cx - wd, (y0 + y1) / 2, cx - 30, y1 + (y0 - y1) * 0.25, cx - 26, y1); B.lineTo(cx + 26, y1);
+    B.bezierCurveTo(cx + 30, y1 + (y0 - y1) * 0.25, cx + wd, (y0 + y1) / 2, cx + wd, y0); B.closePath(); }
+  for (const P of [T, B]) { g.fillStyle = 'rgba(200,225,255,0.13)'; g.fill(P); }
+  g.save(); g.clip(T); for (let r = 0; r < 4; r++) for (let i = 0; i <= r; i++) goldCoin(cx + (i - r / 2) * 110, mid - 70 - (3 - r) * 0 - r * 34 + 0, 60); g.restore();   // bầu trên: còn vài xu
+  g.save(); g.clip(B); for (let r = 0; r < 7; r++) for (let i = 0; i < 7 - r; i++) goldCoin(cx + (i - (6 - r) / 2) * 92, bot - 80 - r * 46, 56); g.restore();               // bầu dưới: núi xu gấp đôi
+  for (let i = 0; i < 4; i++) goldCoin(cx + (i % 2 ? 8 : -8), mid + 30 + i * 60, 26);                                                                                   // xu rơi qua cổ
+  g.save(); g.lineWidth = 12; g.strokeStyle = INK; g.stroke(T); g.stroke(B); g.strokeStyle = 'rgba(255,255,255,0.45)'; g.lineWidth = 10; g.lineCap = 'round';
+  g.beginPath(); g.moveTo(cx - wd + 50, top + 90); g.quadraticCurveTo(cx - wd + 40, top + 240, cx - 120, mid - 90); g.stroke(); g.restore();
+  for (const [y, h] of [[top - 10, 60], [bot - 50, 60]]) { g.fillStyle = '#8A5A34'; g.strokeStyle = INK; g.lineWidth = 10; g.beginPath(); g.roundRect(cx - wd - 60, y, 2 * wd + 120, h, 14); g.fill(); g.stroke(); }
+  for (const s of [-1, 1]) { g.fillStyle = '#6E4428'; g.beginPath(); g.roundRect(cx + s * (wd + 30) - 18, top + 40, 36, bot - top - 80, 12); g.fill(); g.stroke(); }
+  txtB('$1,000', cx, top + 150, 74, { fill: '#FFF' }); txtB('$2,000', cx, bot - 330, 80, { fill: '#F6D860' });
+  txtB('HOW LONG?', 1410, 150, 128, { fill: '#F6D860', sw: 0.14 });
+  const r = 230; mascot(1480, 600 + r / 0.19 - r * 1.38, r / 0.19, { mood: 'deadpan', mouth: 'wavy', arms: 'think', look: -1, lookY: 0.2, flip: true, sweat: true });
+}
+
+// C — TỜ TIỀN: cả khung là một tờ bạc hoạt hình (không tên nước, không tiền thật) — chân dung mascot trong ô oval, mệnh giá "72" ở góc, băng "×2 IN 9 YEARS"
+function sC() {
+  g.fillStyle = '#16251B'; g.fillRect(0, 0, W, H);
+  const X = 70, Y = 50, BW = W - 140, BH = H - 100, ink = '#2F5D3A';
+  g.save(); g.fillStyle = '#D9E8CF'; g.strokeStyle = ink; g.lineWidth = 6; g.beginPath(); g.roundRect(X, Y, BW, BH, 24); g.fill(); g.clip();
+  g.strokeStyle = 'rgba(47,93,58,0.22)'; g.lineWidth = 2;                                                                          // hoa văn khắc guilloche
+  for (let k = 0; k < 26; k++) { g.beginPath(); for (let x = X; x <= X + BW; x += 8) { const y = Y + 40 + k * 38 + Math.sin(x * 0.012 + k * 0.6) * 16 + Math.sin(x * 0.031 + k) * 6; x === X ? g.moveTo(x, y) : g.lineTo(x, y); } g.stroke(); }
+  g.restore();
+  g.save(); g.strokeStyle = ink; g.lineWidth = 10; g.beginPath(); g.roundRect(X + 30, Y + 30, BW - 60, BH - 60, 18); g.stroke(); g.lineWidth = 3; g.beginPath(); g.roundRect(X + 46, Y + 46, BW - 92, BH - 92, 14); g.stroke(); g.restore();
+  const ox = 960, oy = 500, orx = 330, ory = 400;                                                                               // ô chân dung
+  g.save(); g.beginPath(); g.ellipse(ox, oy, orx, ory, 0, 0, 7); g.fillStyle = '#EEF4E6'; g.fill(); g.clip();
+  g.strokeStyle = 'rgba(47,93,58,0.25)'; g.lineWidth = 2; for (let i = -30; i < 30; i++) { g.beginPath(); g.moveTo(ox + i * 24, oy - ory); g.lineTo(ox + i * 24 - 200, oy + ory); g.stroke(); }
+  const r = 210; mascot(ox, 470 + r / 0.19 - r * 1.38, r / 0.19, { mood: 'smug', mouth: 'smirk', arms: 'pockets', look: 0.3 });
+  g.restore();
+  g.save(); g.strokeStyle = ink; g.lineWidth = 14; g.beginPath(); g.ellipse(ox, oy, orx, ory, 0, 0, 7); g.stroke(); g.lineWidth = 4; g.beginPath(); g.ellipse(ox, oy, orx + 24, ory + 24, 0, 0, 7); g.stroke(); g.restore();
+  for (const [x, y] of [[300, 250], [1620, 250], [300, 830]]) { g.save(); g.fillStyle = '#EEF4E6'; g.strokeStyle = ink; g.lineWidth = 8; g.beginPath(); g.arc(x, y, 150, 0, 7); g.fill(); g.stroke(); g.restore();
+    txtB('72', x, y + 6, 170, { fill: ink, stroke: '#EEF4E6', sw: 0.08 }); }
+  g.save(); g.translate(960, 950); g.fillStyle = '#C83A26'; g.strokeStyle = INK; g.lineWidth = 8;                                // băng
+  g.beginPath(); g.moveTo(-470, -70); g.lineTo(470, -70); g.lineTo(430, 0); g.lineTo(470, 70); g.lineTo(-470, 70); g.lineTo(-430, 0); g.closePath(); g.fill(); g.stroke(); g.restore();
+  txtB('×2 IN 9 YEARS', 960, 954, 100, { fill: '#FFF', sw: 0.12 });
+}
+
+const F = [s0, sB, sC];   // luật A/B (§217): chỉ A cùng bối cảnh video; B, C thế giới khác hẳn
+function frame(t) { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.fillStyle = '#222'; g.fillRect(0, 0, W, H); if (!ready) return; F[Math.min(F.length - 1, Math.floor(t))](); }
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 3, LEAD: 0, error: null };
+</script>

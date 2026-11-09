@@ -1,0 +1,5 @@
+# Cài: grep -v '^#' tools/yt/live.cron | crontab -   (ghi đè crontab — hiện chỉ có các dòng này)
+# mỗi giờ phút 7: chụp bộ đếm công khai (48 h đầu video mới) rồi dựng lại trang
+7 * * * * cd <repo> && tools/i18n/.venv/bin/python tools/yt/live.py >> analytics/live.log 2>&1 && python3 site/build.py >> analytics/live.log 2>&1
+# mỗi ngày 9:17: kéo Analytics + Reporting (file CTR chỉ giữ 60 ngày) rồi dựng lại trang
+17 9 * * * cd <repo> && tools/i18n/.venv/bin/python tools/yt/sync.py >> analytics/sync.log 2>&1 && python3 site/build.py >> analytics/sync.log 2>&1

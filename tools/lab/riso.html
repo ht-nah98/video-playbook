@@ -1,0 +1,219 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — riso</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#F2EDE4;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử chất liệu RISO cho add-it-up (khung phong cách để duyệt DNA). KHÔNG phải code MV.
+//   node engine/render/shoot.js stills --page tools/lab/riso.html --dur 4 \
+//     --t 0.5,1.5,2.5,3.5 --outdir out/_lab/riso
+// 0.x = "F of x plus C" · 1.x = "Eight, then more" · 2.x = "Look at the slice" · 3.x = "Add it up"
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080;
+const PAPER = '#F2EDE4', INK = { pink: '#FF48B0', blue: '#0078BF', yellow: '#FFE800', key: '#1F1D24' };
+const ANG = { pink: 75, blue: 15, yellow: 0, key: 45 };       // góc lưới tram mỗi mực, như máy riso thật
+const g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+let ready = false, IM = {}, PLATES = {}, GRAIN, SPECK, DOT = {};
+
+// --- giấy + hạt mực: sinh MỘT lần từ hash (tất định) ---
+function grain() {
+  const c = mk(W / 2, H / 2), x = c.getContext('2d'), d = x.createImageData(c.width, c.height);
+  for (let i = 0; i < c.width * c.height; i++) {
+    const v = 236 + (hash(i * 0.731) - 0.5) * 22 + (hash(Math.floor(i / 7) * 1.3) - 0.5) * 8;
+    d.data[i*4] = v; d.data[i*4+1] = v - 3; d.data[i*4+2] = v - 9; d.data[i*4+3] = 255;
+  }
+  x.putImageData(d, 0, 0); return c;
+}
+function speck() {                       // lỗ trắng li ti trên mặt mực (mực riso không đặc đều)
+  const c = mk(W / 2, H / 2), x = c.getContext('2d'), d = x.createImageData(c.width, c.height);
+  for (let i = 0; i < c.width * c.height; i++) { const h = hash(i * 1.917 + 3.1); d.data[i*4+3] = h > 0.93 ? 150 * (h - 0.93) / 0.07 : 0; }
+  x.putImageData(d, 0, 0); return c;
+}
+function dotPattern(ink, cell = 9, r = 3.2) {   // ô tram: một chấm tròn
+  const c = mk(cell, cell), x = c.getContext('2d'); x.fillStyle = INK[ink];
+  x.beginPath(); x.arc(cell / 2, cell / 2, r, 0, 7); x.fill();
+  const p = g.createPattern(c, 'repeat'); p.setTransform(new DOMMatrix().rotate(ANG[ink])); return p;
+}
+
+// --- một lớp mực: vẽ vào bộ đệm riêng rồi IN CHỒNG (multiply) với độ lệch khuôn ---
+const LAY = {}; for (const k of Object.keys(INK)) LAY[k] = mk();
+function plate(ink, paint, { dx = 0, dy = 0 } = {}) {
+  const c = LAY[ink], x = c.getContext('2d');
+  x.setTransform(1,0,0,1,0,0); x.globalCompositeOperation = 'source-over'; x.clearRect(0, 0, W, H);
+  x.fillStyle = x.strokeStyle = INK[ink]; paint(x);
+  x.setTransform(1,0,0,1,0,0); x.globalCompositeOperation = 'destination-out'; x.drawImage(SPECK, 0, 0, W, H);
+  g.save(); g.globalCompositeOperation = 'multiply'; g.drawImage(c, dx, dy); g.restore();
+}
+function paper() { g.setTransform(1,0,0,1,0,0); g.globalCompositeOperation = 'source-over'; g.drawImage(GRAIN, 0, 0, W, H); }
+
+// --- tách màu nhân vật thành bản in: key (nét + tóc + áo thun), xanh (bóng), hồng (da/ấm) ---
+function separate(im, cell = 7) {
+  const w = im.width, h = im.height, d = im.getContext('2d').getImageData(0, 0, w, h).data;
+  const out = { key: mk(w, h), blue: mk(w, h), pink: mk(w, h), yellow: mk(w, h), sil: mk(w, h) };
+  const kx = out.key.getContext('2d'), kd = kx.createImageData(w, h);
+  for (let i = 0; i < w * h; i++) {
+    const r = d[i*4], gg = d[i*4+1], b = d[i*4+2], a = d[i*4+3], L = (0.3*r + 0.59*gg + 0.11*b) / 255;
+    if (a > 128 && L < 0.30) { kd.data[i*4+3] = 255; }
+  }
+  kx.putImageData(kd, 0, 0);
+  const sx = out.sil.getContext('2d'); sx.drawImage(im, 0, 0); sx.globalCompositeOperation = 'source-in'; sx.fillStyle = '#000'; sx.fillRect(0, 0, w, h);
+  // tram: lấy mẫu mật độ trên lưới XOAY theo góc của từng mực
+  for (const [ink, dens] of [
+    ['blue', (r, gg, b, L) => L >= 0.30 ? Math.max(0, (0.93 - L) * 1.9) : 0],
+    ['pink', (r, gg, b, L) => L >= 0.30 ? Math.max(0, (r - b) / 255 * 1.25 - 0.05) : 0],
+    ['yellow', (r, gg, b, L) => Math.max(0, ((r + gg) / 2 - b) / 255 * 2.2 - 0.25)],
+  ]) {
+    const x = out[ink].getContext('2d'); x.fillStyle = INK[ink];
+    const th = ANG[ink] * Math.PI / 180, cs = Math.cos(th), sn = Math.sin(th), R = Math.hypot(w, h);
+    for (let u = -R; u < R; u += cell) for (let v = -R; v < R; v += cell) {
+      const px = Math.round(u * cs - v * sn), py = Math.round(u * sn + v * cs);
+      if (px < 0 || py < 0 || px >= w || py >= h) continue;
+      const i = py * w + px; if (d[i*4+3] < 128) continue;
+      const r = d[i*4], gg = d[i*4+1], b = d[i*4+2], L = (0.3*r + 0.59*gg + 0.11*b) / 255;
+      const k = Math.min(1, dens(r, gg, b, L)); if (k < 0.06) continue;
+      x.beginPath(); x.arc(px, py, cell * 0.62 * Math.sqrt(k), 0, 7); x.fill();
+    }
+  }
+  return out;
+}
+// nhân vật bản in: bóng bẹt lệch (hồng) + 3 bản tram + key; mỗi bản lệch khuôn riêng
+function printMascot(pose, cx, foot, h, { shadow = 'pink', mis = 1, inks = ['yellow','pink','blue','key'] } = {}) {
+  const P = PLATES[pose], s = h / P.key.height, w = P.key.width * s, x0 = cx - w / 2, y0 = foot - h;
+  if (shadow) plate(shadow, x => { x.drawImage(P.sil, x0 + 18, y0 + 12, w, h); x.globalCompositeOperation = 'source-in'; x.fillRect(0, 0, W, H);
+    x.globalCompositeOperation = 'destination-out'; x.drawImage(P.sil, x0, y0, w, h); });   // bóng CHỈ lộ ngoài silhouette: áo giữ màu giấy
+  const off = { yellow: [4, -3], pink: [-3, 2], blue: [2, 3], key: [0, 0] };
+  for (const ink of inks) plate(ink, x => x.drawImage(P[ink], x0, y0, w, h), { dx: off[ink][0] * mis, dy: off[ink][1] * mis });
+}
+
+// phủ toàn khổ nhưng ĐỤC LỖ dưới nhân vật (+ 10px chừa mép) — riso không có mực trắng
+function knock(x, pose, cx, foot, h) {
+  const P = PLATES[pose], s = h / P.key.height, w = P.key.width * s, x0 = cx - w / 2, y0 = foot - h;
+  x.globalCompositeOperation = 'destination-out';
+  for (let a = 0; a < 8; a++) x.drawImage(P.sil, x0 + 10 * Math.cos(a * Math.PI / 4), y0 + 10 * Math.sin(a * Math.PI / 4), w, h);
+  x.globalCompositeOperation = 'source-over';
+}
+// --- chữ ---
+const cond = (px, wt = 800, st = 70) => `${wt} ${px}px "Archivo"`;
+function setStretch(x, st) { x.fontStretch = st <= 75 ? 'condensed' : st >= 112 ? 'expanded' : 'normal'; }
+function tape(text, x, y, { font = cond(64), rot = -2.2, ink = 'key', bg = 'yellow', italic = false } = {}) {
+  // dải giấy dán chứa lời: mảng nền một mực + chữ key, như nhãn in
+  g.save(); g.font = font; const tw = g.measureText(text).width; g.restore();
+  plate(bg, x2 => { x2.translate(x, y); x2.rotate(rot * Math.PI / 180); x2.fillRect(-24, -62, tw + 48, 84); });
+  plate(ink, x2 => { x2.translate(x, y); x2.rotate(rot * Math.PI / 180); x2.font = font; x2.fillText(text, 0, 0); }, { dx: 2, dy: -1 });
+}
+function cropMarks() {
+  plate('key', x => {
+    x.lineWidth = 2;
+    for (const [px, py, sx, sy] of [[60,60,1,1],[W-60,60,-1,1],[60,H-60,1,-1],[W-60,H-60,-1,-1]]) {
+      x.beginPath(); x.moveTo(px - 30*sx, py); x.lineTo(px + 20*sx, py); x.moveTo(px, py - 30*sy); x.lineTo(px, py + 20*sy); x.stroke();
+      x.beginPath(); x.arc(px + 44*sx, py + 44*sy, 9, 0, 7); x.moveTo(px + 32*sx, py + 44*sy); x.lineTo(px + 56*sx, py + 44*sy);
+      x.moveTo(px + 44*sx, py + 32*sy); x.lineTo(px + 44*sx, py + 56*sy); x.stroke();
+    }
+    x.font = '500 18px "IBM Plex Mono"'; x.fillText('ADD IT UP · 99% FROM SCRATCH · PASS 4/4 · K', 130, H - 30);
+  });
+}
+
+// ===== khung A: "F of x plus C" — họ nguyên hàm = MỘT bản in lệch khuôn theo chiều dọc =====
+function frameA() {
+  paper();
+  const ox = 180, oy = 620, sx = 150, sy = 34;               // F(x) = x³/3 − x (đạo hàm x² − 1)
+  const F = x => x*x*x/3 - x, X = x => ox + (x + 0.2) * sx, Y = y => oy - y * sy;
+  plate('key', x => { x.lineWidth = 3; x.beginPath(); x.moveTo(90, oy); x.lineTo(1150, oy); x.moveTo(X(0), 1000); x.lineTo(X(0), 90); x.stroke();
+    x.font = '500 22px "IBM Plex Mono"'; x.fillText('x', 1160, oy + 8); });
+  // họ F + C: C = −6..6 bước 3, xen hồng/xanh; bản C = 0 xanh đặc dày
+  for (const C of [-9, -6, -3, 3, 6, 9]) plate(Math.abs(C) % 2 ? 'pink' : 'blue', x => {
+    x.lineWidth = 9; x.beginPath(); for (let u = -2.0; u <= 2.6; u += 0.02) { const px = X(u), py = Y(F(u) + C); u === -2 ? x.moveTo(px, py) : x.lineTo(px, py); } x.stroke();
+  }, { dx: (hash(C) - 0.5) * 8, dy: 0 });
+  plate('blue', x => { x.lineWidth = 16; x.beginPath(); for (let u = -2.0; u <= 2.6; u += 0.02) { const px = X(u), py = Y(F(u)); u === -2 ? x.moveTo(px, py) : x.lineTo(px, py); } x.stroke(); });
+  // cùng độ dốc: tiếp tuyến tại x = 1.8 trên mọi bản — song song
+  plate('key', x => { x.lineWidth = 4; const u = 1.8, m = u*u - 1;
+    for (const C of [-9,-6,-3,0,3,6,9]) { const px = X(u), py = Y(F(u) + C), dx = 70, dy = -m * dx * sy / sx; x.beginPath(); x.moveTo(px - dx, py - dy); x.lineTo(px + dx, py + dy); x.stroke(); x.beginPath(); x.arc(px, py, 7, 0, 7); x.fill(); } });
+  // +C khổng lồ: vàng (ký ức mờ) + viền key mảnh
+  plate('yellow', x => { x.font = '900 520px "Archivo"'; x.fillText('+C', 640, 620); });
+  plate('key', x => { x.lineWidth = 3; x.font = '900 520px "Archivo"'; x.strokeText('+C', 640, 620); }, { dx: -5, dy: 4 });
+  printMascot('plusc', 1560, 1080, 900);
+  tape('F OF X PLUS C,', 120, 960, { font: cond(78, 800) });
+  cropMarks();
+}
+
+// ===== khung B: "Eight, then more" — 8 dải dưới 3t², bồn đầy tới 8 =====
+function frameB() {
+  paper();
+  const ox = 200, oy = 900, sx = 380, sy = 62, f = t => 3*t*t, X = t => ox + t*sx, Y = y => oy - y*sy;
+  // ∫ khổng lồ chìm sau — đường giấy chạy qua máy (chữ S kéo dài của Leibniz: summa)
+  plate('pink', x => { x.font = '300 980px "Cormorant Garamond"'; x.fillStyle = dotPattern('pink', 11, 2.6); x.fillText('∫', 1020, 900); });   // tint = tram, không alpha
+  const n = 8, dx = 2 / n;
+  plate('pink', x => { for (let i = 0; i < n; i++) { const t = (i + 1) * dx; x.fillRect(X(i*dx) + 3, Y(f(t)), dx*sx - 6, oy - Y(f(t))); } });
+  plate('blue', x => { x.lineWidth = 10; x.beginPath(); for (let t = 0; t <= 2.05; t += 0.01) { t === 0 ? x.moveTo(X(t), Y(f(t))) : x.lineTo(X(t), Y(f(t))); } x.stroke(); }, { dx: 3, dy: -2 });
+  plate('key', x => { x.lineWidth = 3; x.beginPath(); x.moveTo(ox - 40, oy); x.lineTo(X(2.2), oy); x.moveTo(ox, oy + 30); x.lineTo(ox, 90); x.stroke();
+    x.font = '500 26px "IBM Plex Mono"'; x.fillText('f(t) = 3t²', X(2) + 30, Y(12) + 10); x.fillText('t', X(2.2) + 12, oy + 8); x.fillText('0', ox - 10, oy + 40); x.fillText('2', X(2) - 8, oy + 40);
+    x.font = cond(150, 900); x.fillText('8', X(0.25), 300); x.font = cond(40, 700); x.fillText('STRIPS', X(0.25) + 100, 300); });
+  // bồn: tích luỹ = t³ ; ở t = 2 → 8 đơn vị, vạch chia
+  const bx = 1280, by = 200, bw = 300, bh = 680, lvl = 8 / 8;
+  plate('blue', x => { x.fillStyle = dotPattern('blue', 8, 3.4); x.fillRect(bx, by + bh * (1 - lvl * 0.92), bw, bh * lvl * 0.92); });
+  plate('blue', x => { for (let i = 0; i < 8; i++) { const yy = by + bh - (i + 1) * bh * 0.92 / 8; x.fillRect(bx, yy, bw, 6); } }, { dx: 2 });
+  plate('key', x => { x.lineWidth = 6; x.strokeRect(bx, by, bw, bh); x.font = '500 26px "IBM Plex Mono"';
+    for (let i = 1; i <= 8; i++) x.fillText(String(i), bx + bw + 18, by + bh - i * bh * 0.92 / 8 + 9);
+    x.font = cond(54, 800); x.fillText('∫₀² 3t² dt = 8', bx - 40, by - 40); });
+  tape('EIGHT, THEN MORE.', 140, 1010, { font: cond(70, 800) });
+  printMascot('three', 1760, 1080, 640, { shadow: 'yellow' });
+  cropMarks();
+}
+
+// ===== khung C: "Look at the slice" — khối tròn xoay của √x dựng bằng chồng giấy =====
+function frameC() {
+  paper();
+  plate('blue', x => { x.fillStyle = dotPattern('blue', 14, 1.3); x.fillRect(0, 0, W, H); knock(x, 'pointer', 1640, 1080, 760); });   // nền tram xanh nhạt: bàn in
+  const cx = 300, cy = 640, sx = 170, ry = 0.36, N = 26, L = 4;           // trục x nằm ngang, đĩa bán kính √x
+  for (let i = N - 1; i >= 0; i--) {
+    const u = (i + 0.5) * L / N, r = Math.sqrt(u) * 150, px = cx + u * sx, pulled = i === 15;
+    const oy = pulled ? -250 : 0, ox = pulled ? 330 : 0;
+    if (pulled) plate('key', x => { x.lineWidth = 3; x.setLineDash([8, 8]); x.beginPath(); x.ellipse(px, cy, r * ry * 0.55, r, 0, 0, 7); x.stroke(); });
+    plate(pulled ? 'pink' : 'blue', pulled ? x => { x.beginPath(); x.ellipse(px + ox, cy + oy, r * 0.62, r, 0, 0, 7); x.fill(); } : x => { x.beginPath(); x.ellipse(px + ox, cy + oy, r * ry * 0.55, r, 0, 0, 7); x.fill(); }, { dx: (hash(i) - .5) * 4 });
+    plate('key', x => { x.lineWidth = pulled ? 5 : 2.5; x.beginPath(); x.ellipse(px + ox, cy + oy, pulled ? r * 0.62 : r * ry * 0.55, r, 0, 0, 7); x.stroke(); });
+    if (pulled) plate('key', x => { x.font = cond(48, 800); x.fillText('A(x) = π(√x)² = πx', px + ox + 110, cy + oy + 10);
+      });
+  }
+  plate('key', x => { x.font = cond(64, 900); x.fillText('V = ∫₀⁴ πx dx = 8π', 980, 980); });
+  printMascot('pointer', 1640, 1080, 760);
+  tape('LOOK AT THE SLICE,', 130, 1000, { font: cond(70, 800), bg: 'pink' });
+  cropMarks();
+}
+
+// ===== khung D: "Add it up" — áp phích điệp khúc, chữ dựng từ dải =====
+function frameD() {
+  paper();
+  plate('pink', x => { x.fillRect(0, 0, W, H); knock(x, 'fist', 1560, 1100, 1000); });   // phủ hồng toàn khổ, đục lỗ dưới nhân vật
+  const words = ['ADD', 'IT', 'UP'];
+  plate('blue', x => { x.font = '900 330px "Archivo"'; x.fillText('ADD IT', 80, 400); x.fillText('UP', 80, 760); }, { dx: 10, dy: 6 });
+  plate('key', x => {                                                              // chữ key bị cắt thành dải: các mảnh cộng lại
+    x.font = '900 330px "Archivo"'; const off = mk(); const o = off.getContext('2d'); o.font = x.font; o.fillStyle = INK.key;
+    o.fillText('ADD IT', 80, 400); o.fillText('UP', 80, 760);
+    for (let i = 0; i < 48; i++) { const sw = 1240 / 48, dy = (hash(i) - 0.5) * 60 * (1 - i / 60); x.drawImage(off, 40 + i*sw, 0, sw - 5, H, 40 + i*sw, dy, sw - 5, H); }
+  });
+  plate('yellow', x => { x.font = 'italic 600 120px "Cormorant Garamond"'; x.fillText('piece by piece.', 120, 990); });
+  plate('key', x => { x.font = 'italic 600 120px "Cormorant Garamond"'; x.fillText('piece by piece.', 120, 990); }, { dx: -4, dy: 3 });
+  printMascot('fist', 1560, 1100, 1000, { shadow: 'blue', mis: 2.2 });
+  cropMarks();
+}
+
+(async () => {
+  await Promise.all([document.fonts.load('900 400px "Archivo"'), document.fonts.load('800 70px "Archivo"'), document.fonts.load('700 40px "Archivo"'),
+    document.fonts.load('500 22px "IBM Plex Mono"'), document.fonts.load('italic 600 120px "Cormorant Garamond"'), document.fonts.load('200 120px "Cormorant Garamond"')]);
+  GRAIN = grain(); SPECK = speck();
+  await Promise.all(['plusc', 'three', 'pointer', 'fist'].map(p => new Promise(res => {
+    const im = new Image(); im.onload = () => { IM[p] = toCanvas(im); PLATES[p] = separate(IM[p]); res(); }; im.src = `../../assets/character-v2/cut/pose-${p}.png`;
+  })));
+  ready = true;
+})();
+const frame = t => [frameA, frameB, frameC, frameD][Math.min(3, Math.floor(t))]();
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 4 };
+</script>

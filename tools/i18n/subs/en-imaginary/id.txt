@@ -1,0 +1,87 @@
+Bilangan apa yang tepat di tengah antara 1 dan −1?
+Nol, kalau kamu berjalan di garis. Tapi kalau berputar, di tengah putaran kamu tiba di bilangan yang sama sekali tidak ada di garis.
+Pada tahun 1500-an, bilangan itu satu-satunya jalan menuju jawaban yang benar.
+Descartes menyebutnya imajiner, dan itu dimaksudkan sebagai hinaan.
+Kini, bilangan itu membantu para insinyur menjalankan jaringan listrik.
+Di akhir video ini, kamu bisa menunjuknya, dan kamu akan melihat persis kenapa mesin sungguhan memakainya.
+Semuanya berawal dari satu pertanyaan: apa sebenarnya yang dilakukan perkalian?
+Gambar garis bilangan, dan anggap setiap bilangan sebagai panah yang berawal dari nol.
+Sekarang kalikan dengan 2. Setiap panah jadi dua kali lebih panjang. 3 sampai ke 6, dan −1 sampai ke −2.
+Jadi mengali dengan 2 bukan sekadar hitungan. Itu gerakan yang diterapkan ke seluruh garis: peregangan.
+Gerakan apa yang terjadi saat mengali dengan −1?
+3 pindah ke −3. 5 pindah ke −5. −2 pindah ke 2.
+Semuanya bertukar sisi. Itu pembalikan melalui nol.
+Balik dua kali, dan kamu kembali ke awal. Itu salah satu cara melihat kenapa negatif kali negatif hasilnya positif.
+Nah, inilah pertanyaan yang menimbulkan semua masalah.
+Adakah bilangan yang jika dikalikan dengan dirinya sendiri hasilnya −1?
+Dengan kata lain, adakah gerakan yang, jika dilakukan dua kali, menghasilkan pembalikan?
+Coba di garis. Bilangan positif menjaga setiap panah di sisinya, dan melakukannya dua kali tetap menjaganya di sana.
+Bilangan negatif menukar sisi, dan menukar dua kali membawamu kembali.
+Bagaimanapun, gerakan yang sama dilakukan dua kali tak pernah berakhir di sisi seberang. Jadi di garis ini, tidak ada bilangan yang kuadratnya −1.
+Lama sekali, cerita berhenti di situ. Tanya akar kuadrat bilangan negatif, dan jawaban jujurnya: pertanyaan itu keliru.
+Dan akan tetap begitu, kalau bukan karena satu persamaan yang sudah punya jawaban yang sangat baik.
+Pada 1545, cendekiawan Italia Gerolamo Cardano menerbitkan rumus untuk menyelesaikan persamaan kubik, yang memuat x pangkat tiga.
+Tapi rumus itu punya masalah yang aneh.
+Ambil x³ = 15x + 4.
+Kamu bisa cek sendiri bahwa x = 4 berlaku. 4 pangkat tiga adalah 64, dan 15 kali 4 ditambah 4 juga 64.
+Jadi ada jawaban nyata, dan itu bilangan bulat kecil.
+Tapi masukkan persamaan itu ke rumus, dan di tengah jalan rumus meminta akar kuadrat dari −121.
+Mungkin kamu mengira artinya rumus itu memang tidak berlaku di sini. Biasanya itulah kesimpulannya saat perhitungan meminta sesuatu yang mustahil.
+Tapi jawabannya ada. Kita baru saja mengeceknya. Rumus itu menunjuk ke hasil yang benar, dan satu-satunya jalannya melewati bilangan yang tidak diizinkan.
+Pada 1572, seorang insinyur bernama Rafael Bombelli mencoba hal yang berani. Ia mengabaikan keberatan itu dan terus menghitung.
+Ia memperlakukan akar kuadrat dari −1 sebagai simbol yang tak diketahui, dengan satu aturan: kuadratnya −1. Selebihnya, aljabar biasa.
+Rumus itu lalu meminta dua akar pangkat tiga, dan Bombelli menemukannya: 2 ditambah simbol itu, dan 2 dikurangi simbol itu.
+Sekarang jumlahkan. 2 dan 2 menjadi 4. Simbolnya, satu plus dan satu minus, saling menghapus.
+Empat. Jawaban yang tepat, dan bagian yang mustahil lenyap di jalan keluar.
+Jadi tak ada yang menerima bilangan ini karena kedengarannya bagus. Ia diterima karena terus memberi hasil yang benar, meski tak ada yang bisa menjelaskan apa itu.
+Pada 1637, René Descartes memakai kata imajiner untuk besaran seperti ini, dan itu bukan pujian.
+Simbol yang kita pakai sekarang, huruf i, datang belakangan. Tapi pertanyaan sebenarnya masih terbuka. Aturan bukanlah penjelasan. Benda apa ini?
+Jawabannya muncul sekitar tahun 1800, diterbitkan oleh Caspar Wessel lalu Jean-Robert Argand, secara terpisah.
+Dan ini nyaris memalukan karena begitu sederhana. Kita sudah tunjukkan tak ada gerakan di garis yang berhasil. Jadi berhentilah tinggal di garis.
+Lihat lagi pembalikan tadi. Ada cara lain mengirim 1 ke −1, 3 ke −3, dan semuanya ke lawannya.
+Putar seluruh garis setengah putaran di sekitar nol.
+Hasilnya terlihat persis sama dengan pembalikan, tapi sekarang gerakan itu punya titik tengah.
+Berhenti di tengah rotasi. Kamu telah membuat seperempat putaran, dan panah dari 0 ke 1 kini menunjuk lurus ke atas, keluar dari garis.
+Itulah gerakannya. Seperempat putaran, dilakukan dua kali, adalah setengah putaran, dan setengah putaran adalah mengali dengan −1.
+Jadi akar kuadrat dari −1 bukan besaran misterius. Itu seperempat putaran. Dan titik satu langkah tepat di atas nol itulah yang kita sebut i.
+Sekarang kita bisa menjawab pertanyaan pembuka dengan benar. Berjalan di garis dari 1 ke −1, dan tengahnya 0.
+Berputar dari 1 ke −1, dan tengahnya i. Berputar ke arah sebaliknya, dan tengahnya −i.
+Terus kalikan dengan i, dan kamu terus saja berputar.
+1, lalu i, lalu −1, lalu −i, lalu kembali ke 1. Empat seperempat putaran, satu lingkaran penuh.
+Jadi pertanyaan yang tampak menyeramkan, seperti i pangkat 100, ternyata mudah. 100 adalah 25 lingkaran penuh, dan kamu berakhir persis di awal: 1.
+Nama imajiner membuat ini terdengar lebih misterius dari kenyataannya.
+−1 juga bukan sesuatu yang bisa kamu pegang. Itu arah di sebuah garis. Dan i hanyalah satu arah lagi, yang tidak kita lihat selama ini.
+Begitu ada arah ke atas, setiap titik di halaman menjadi bilangan.
+3 ke kanan dan 2 ke atas adalah 3 + 2i. Kita menyebutnya bilangan kompleks, dan kompleks di sini berarti tersusun dari bagian-bagian, bukan sulit.
+Sekarang uji gagasan ini. Kalikan 3 + 2i dengan i, memakai aljabar biasa.
+3 kali i adalah 3i. 2i kali i adalah 2i², yaitu −2.
+Kamu dapat −2 + 3i. Sekarang lihat di mana titik itu mendarat.
+Panah yang sama, panjang yang sama, diputar tepat seperempat putaran. Aljabar mengerjakan geometri tanpa disuruh.
+Dan ini berlaku untuk semua bilangan kompleks, bukan hanya i. Masing-masing adalah panah dengan panjang dan sudut.
+Saat mengalikan dua di antaranya, panjangnya dikalikan dan sudutnya dijumlahkan. Itulah seluruh aturannya.
+Ambil 1 + i. Ia menunjuk ke 45 derajat, dan panjangnya akar kuadrat dari 2.
+Kuadratkan. Sudutnya berlipat menjadi 90 derajat, dan panjangnya tepat 2. Itu memprediksi 2i.
+Cek dengan aljabar: 1, ditambah 2i, ditambah i². 1 dan −1 saling menghapus, dan yang tersisa 2i.
+Aturan itu akhirnya menjelaskan trik dari 1572.
+2 + i milik Bombelli adalah panah dengan sudut sekitar 26,5 derajat. Pangkatkan tiga, sudutnya menjadi tiga kali lipat, hampir 80 derajat, nyaris lurus ke atas, tepat mendarat di 2 + 11i.
+Bayangan cerminnya, 2 − i, pangkat tiganya 2 − 11i, dan 11i itulah akar kuadrat dari −121.
+Sekarang jumlahkan kedua panah. Satu naik, cerminnya turun sama jauh, dan sisanya terletak mendatar di garis biasa. 2 + 2: 4.
+Itulah kenapa jawaban nyata harus melewati yang imajiner. Jalur rumus itu keluar dari garis lalu kembali. Bilangan nyata adalah bayangan dari sesuatu yang terjadi di bidang.
+Jadi kenapa jaringan listrik peduli?
+Listrik dari stopkontak berayun maju mundur dalam gelombang halus, sekitar 50 atau 60 kali setiap detik.
+Bayangkan panah yang berputar stabil dalam lingkaran, dan perhatikan tingginya saja. Naik, turun, naik, turun. Tinggi itu menggambar persis gelombang tadi.
+Jadi setiap gelombang halus bisa dianggap sebagai bayangan panah yang berputar. Dan kini kita punya bilangan yang berputar.
+Inilah kenapa itu membantu. Misalkan dua gelombang melewati rangkaian yang sama, satu berpuncak 3 volt, yang lain 4 volt, dan yang kedua tertinggal seperempat siklus dari yang pertama.
+Berapa puncaknya saat digabung? Mungkin kamu bilang 7. Bukan, karena keduanya tak pernah berpuncak pada saat yang sama.
+Dengan panah, seperempat siklus adalah seperempat putaran. Jadi kedua gelombang itu adalah 3 dan 4i, saling tegak lurus.
+Jumlahkan, dan panjangnya 5. Gelombang gabungan berpuncak tepat 5 volt.
+Tanpa bilangan kompleks, kamu tetap bisa mendapat jawaban itu, tapi lewat berhalaman-halaman trigonometri. Dengan bilangan kompleks, cukup satu penjumlahan singkat.
+Perbesar itu ke seluruh rangkaian, penuh kumparan dan kapasitor yang menggeser gelombang dalam waktu, dan bedanya antara satu halaman aljabar dan sesuatu yang benar-benar menyiksa.
+Insinyur listrik begitu sering memakainya sampai menulis bilangan ini sebagai j, karena i sudah dipakai untuk arus.
+Sinyal radio, pemrosesan audio, dan persamaan mekanika kuantum juga mengandalkannya, dengan alasan dasar yang sama. Yang berosilasi adalah yang berputar.
+Kenapa orang terpaksa menerimanya? Karena jawaban benar, 4, hanya bisa dicapai dengan melewati akar kuadrat bilangan negatif.
+Apa itu? Seperempat putaran. Dan titik satu langkah di atas nol, ke arah yang tak pernah ditunjukkan garis bilangan.
+Kenapa berguna? Karena mengalikan bilangan kompleks itu memutar, dan apa pun yang berosilasi bisa dianggap sebagai sesuatu yang berputar.
+Jadi coba dengan pensil. Tandai titik mana saja di kertas sebagai bilangan, misalnya 2 + i, dan kalikan dengan i empat kali.
+Lalu gambar setiap hasilnya. Kamu tak perlu diberi tahu apa arti i. Kamu akan melihat titikmu mengitari lingkaran dan pulang.
+Terima kasih sudah menonton, dan kalau ini membuat ide aneh terasa jelas, subscribe ke 99% from scratch.

@@ -1,0 +1,160 @@
+{
+ "cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {
+   "name": "pyramid-one-third",
+   "hook": [
+    "A PYRAMID HOLDS",
+    "EXACTLY {1/3}",
+    "OF A BOX"
+   ],
+   "pieces": [
+    {
+     "from": "p1:0",
+     "to": "p1:2",
+     "crop": [
+      1500,
+      280,
+      280,
+      0
+     ]
+    },
+    {
+     "from": "p2:166",
+     "to": "p2:170",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "stool-never-wobbles",
+   "hook": [
+    "WHY A 3-LEGGED",
+    "STOOL {NEVER} WOBBLES"
+   ],
+   "pieces": [
+    {
+     "from": "p2:8",
+     "to": "p2:8",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from": "p2:9",
+     "to": "p2:12",
+     "crop": [
+      1215,
+      620,
+      620,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "only-five-solids",
+   "hook": [
+    "ONLY {5} PERFECT",
+    "SOLIDS CAN EXIST"
+   ],
+   "pieces": [
+    {
+     "from": "p2:146",
+     "to": "p2:153",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "laptop-120-is-60",
+   "hook": [
+    "LAPTOP OPEN AT 120°?",
+    "THE ANGLE IS {60°}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:97",
+     "to": "p2:103",
+     "crop": [
+      1215,
+      660,
+      660,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "archimedes-tomb",
+   "hook": [
+    "THE MATH CARVED",
+    "ON A {TOMB}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:191",
+     "to": "p2:193",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  },
+  {
+   "name": "skew-lines",
+   "hook": [
+    "LINES THAT {NEVER} MEET",
+    "BUT AREN'T PARALLEL"
+   ],
+   "pieces": [
+    {
+     "from": "p2:24",
+     "to": "p2:26",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from": "p2:27",
+     "to": "p2:29",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ]
+    },
+    {
+     "from": "p2:31",
+     "to": "p2:33",
+     "crop": [
+      1920,
+      0,
+      0,
+      0
+     ]
+    }
+   ]
+  }
+ ]
+}

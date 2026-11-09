@@ -1,0 +1,59 @@
+<!doctype html><meta charset="utf-8">
+<title>Sine Was Never About Triangles — p1</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Phần p1 (lời audio/p1.wav, mốc data/p1.timeline.json — align.py). p1 = cold open (một cảnh a0-open), KHÔNG intro kênh
+// (channel.json en intro null): build.py nối p1 → p2 liền; khung cuối p1 = kit.zenith() = khung đầu p2 (DNA §6).
+// Cảnh: plates/*.js, mỗi file `export default class` có static ERA ('fair' | 'tent'), IMAGES {key: đường dẫn}
+// (ảnh thật: kit.photoImages(...)), POSES [..]; sau init({ tl }) có START (câu đầu của mục) và FROM.
+// Chuyển (DNA §7, 0.9 s từ FROM): cùng ERA = DÂY CỜ QUÉT (kit.buntingSweep — dây bay phải → trái, cảnh mới lộ sau dây,
+// tiếng whoosh tự động); khác ERA = RÈM LỀU (kit.curtainSwap — khép che cảnh cũ, kéo ra hai bên lộ cảnh mới, whoosh-long).
+// CONTINUES = cắt thẳng (LESSONS §50). Chụp riêng vài cảnh: p1.html?plates=a0-open
+import { makeTimeline } from '../../../engine/timeline.js';
+import { loadKit, setTalk, ground, buntingSweep, curtainSwap, prog, FONTS, FONT_SAMPLE } from './kit.js';
+import { ALL } from './plates/p1-order.js';
+import { collectCues } from '../../../engine/sfx.js';
+const PAGE = 'p1';
+// LEAD/TAIL đọc từ build.json (MỘT nguồn): trang và build lệch LEAD là hình lệch tiếng cả phần (zero-div suýt mắc).
+let LEAD = 0, TAIL = 0; const g = document.getElementById('cv').getContext('2d');
+let ready = false, plates = [], DUR = 0, CUES = [];
+(async () => {
+  await Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE)));   // MỌI mặt chữ của kit trước init (LESSONS §16)
+  const part = (await (await fetch('./build.json')).json()).parts.find(p => p.page === PAGE);
+  LEAD = part.lead; TAIL = part.tail;
+  const tl = makeTimeline(await (await fetch(`./data/${PAGE}.timeline.json`)).json());
+  // miệng nói (engine/talk.js): đường bao giọng từ tools/voice/mouth_env.py. Chưa có tệp → mascot im.
+  const mo = await fetch(`./data/${PAGE}.mouth.json`); if (mo.ok) setTalk(await mo.json());
+  const want = new URLSearchParams(location.search).get('plates');
+  const names = want ? want.split(',') : ALL;
+  const mods = await Promise.all(names.map(n => import(`./plates/${n}.js`)));
+  const C = '../../../assets/character-v2/cut/', imgs = {};
+  for (const m of mods) { Object.assign(imgs, m.default.IMAGES || {}); for (const p of m.default.POSES || []) imgs['pose-' + p] = C + `pose-${p}.png`; }
+  await loadKit(imgs);
+  plates = mods.map(m => { const p = new m.default(); p.init({ tl }); return p; }).sort((a, b) => a.FROM - b.FROM);
+  DUR = LEAD + tl.lines.at(-1).end + TAIL;
+  CUES = collectCues(plates, LEAD); // tiếng hiệu ứng: chuyển cảnh tự có + sfx() của từng cảnh (docs/lesson/SFX.md)
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const reset = c => { c.setTransform(1, 0, 0, 1, 0, 0); c.globalAlpha = 1; c.globalCompositeOperation = 'source-over'; c.textAlign = 'left'; c.filter = 'none'; };
+const frame = t => {
+  reset(g);
+  const T = t - LEAD;
+  if (!plates.length) { ground(g, 'fair'); return; }
+  let i = 0; for (let j = 0; j < plates.length; j++) if (T >= plates[j].FROM) i = j;
+  const cur = plates[i], prev = plates[i - 1];
+  const k = prev && !cur.CONTINUES ? prog(T, cur.FROM, cur.FROM + 0.9) : 1;
+  if (k >= 1) { cur.render(g, T); return; }
+  const drawPrev = () => { reset(g); prev.render(g, T); }, drawCur = () => { reset(g); cur.render(g, T); };
+  if (prev.constructor.ERA !== cur.constructor.ERA) curtainSwap(g, k, drawPrev, drawCur);
+  else buntingSweep(g, k, drawPrev, drawCur);
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, get DUR() { return DUR; }, get LEAD() { return LEAD; }, get cues() { return CUES; } };
+</script>

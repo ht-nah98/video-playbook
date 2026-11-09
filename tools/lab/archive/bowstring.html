@@ -1,0 +1,227 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — bowstring</title>
+<style>
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";font-style:italic;src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;}
+  html,body{margin:0;background:#F4ECDC;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "bowstring · dây cung" (trig). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/bowstring.html --dur 2 --t 0.5,1.5 --outdir out/_lab/bowstring
+// Ý: chữ "sine" sinh ra từ jyā (Phạn) = DÂY CUNG → jiba → jaib → sinus. Nên cả bài là MỘT bàn vẽ giấy ngà, mực nâu đen, và MỘT SỢI CHỈ ĐỎ thật (có bóng, có thớ xoắn): sin chưa bao giờ là tam giác — nó là một sợi dây. Tam giác (xám lạnh, bằng thanh bìa ghim đinh) là thứ gãy; sợi chỉ thì không bao giờ gãy, chỉ uốn.
+// Vật xuyên suốt: SỢI CHỈ ĐỎ + một HẠT CƯỜM nâu thuỷ tinh. (1) chỉ buộc đinh ghim + bút chì = compa vẽ đường tròn · (2) chỉ căng ngang một cung = dây cung (jya, có cây cung gỗ thật) · (3) hạt cườm chạy quanh vòng = điểm (cos θ, sin θ) · (4) rút chỉ khỏi vòng, duỗi sang phải = sóng (độ cao hạt = độ cao sóng) · (5) chỉ căng giữa hai đinh, gảy → rung như dây đàn (ACT SIX).
+// Màu (một màu một nghĩa): giấy ngà #F4ECDC (vân giấy hash) · mực #2B2420 / phụ #5B4E42 = trung tính · ĐỎ CHỈ #B3202A = sin (sợi chỉ, thanh dọc, sóng, màn máy tính) · chàm #2B4A8B = cos (đoạn nằm ngang) · đất son #8A5A12 = góc (cung góc, số độ) · xám lạnh #7D8894 + vết nứt = tam giác hỏng / "sai" (không bao giờ dùng cho chữ) · gỗ bạch dương #E3C99A = máy tính, cây cung, khung ảnh.
+// Chữ: Cormorant Garamond Bold (nhãn, công thức, tiêu đề — chữ cổ, hợp Almagest) · IBM Plex Mono Medium (chữ in trên màn máy tính, mực đỏ) · Archivo (chữ in trên phím). θ KHÔNG có trong cả 3 font → viết "angle" hoặc dùng số cụ thể. Chữ ≥ 28, số ≥ 30.
+// Tiếng: phím = gõ gỗ khô (wood/tick) · màn in số = máy in kim ngắn (mới) · tam giác gãy = crack + rơi thanh bìa (crack) · đinh ghim cắm = tick/hanko nhẹ · bút chì vẽ vòng = pen (vòng dài) · hạt cườm chạy = lăn hạt gỗ nhẹ (mới) · chỉ duỗi thành sóng = whoosh mảnh + sợi kéo (mới: thread zip) · dây gảy = pluck dây đàn (mới: harp/oud pluck) · đúng = correct nhẹ, không chuông.
+// Các phần khác: núi / thuyền / Mặt Trăng = bản khắc mực nâu, chỉ đỏ căng từ mắt người đo tới đỉnh (góc ngắm = chỉ) · Hipparchus + ảnh thật (Almagest, bảng Plimpton 322) = ảnh dán góc bằng băng giấy, khung gỗ bạch dương mảnh + nhãn viết tay · họ tam giác 30° = ba tam giác thanh bìa lồng nhau, một sợi chỉ đỏ làm cạnh đối, tỉ số = độ dài chỉ / bán kính · jya → sinus = cây cung gỗ thật, dây cung là sợi chỉ, chữ Phạn/Ả Rập/Latin viết dọc theo chỉ · radian = chỉ quấn quanh vòng đúng một bán kính (1 rad), 2π = cả vòng chỉ · sóng: con lắc = hạt cườm treo chỉ, dây đàn = chỉ căng gảy, ổ điện = chỉ đỏ sóng 50 Hz trong khung ổ cắm vẽ mực · sin²+cos²=1 = chỉ đỏ + chỉ chàm làm 2 cạnh, bán kính là chỉ mực = 1 · Fourier = nhiều sợi chỉ (đỏ nhạt dần) cộng lại thành một sợi, chân dung Fourier trong khung gỗ.
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const CG = '"Cormorant Garamond"', MONO = '"IBM Plex Mono"', AR = '"Archivo"';
+const C = { paper: '#F4ECDC', ink: '#2B2420', mute: '#5B4E42', sin: '#B3202A', sinDk: '#6E0E14', sinHi: '#E2626A', cos: '#2B4A8B', ang: '#8A5A12',
+  broke: '#7D8894', brokeDk: '#4E5763', birch: '#E3C99A', birchDk: '#B8945C', screen: '#FBF6EA' };
+const IM = {}; let BG, ready = false;
+
+// ---- số: tính bằng code, must() ----
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { const r = ev(s); if (r !== v) throw new Error(`sai: ${s} = ${r} ≠ ${v}`); return v; };
+const r3 = s => `Math.round((${s}) * 1000) / 1000`;
+const A120 = must('2 * Math.PI / 3', 2 * Math.PI / 3);
+const S120 = must(r3('Math.sin(2 * Math.PI / 3)'), 0.866), C120 = must(r3('Math.cos(2 * Math.PI / 3)'), -0.5);
+must('Math.round(2 * Math.PI / 3 * 180 / Math.PI)', 120);
+const num = v => (v < 0 ? '−' : '') + String(Math.abs(v)).replace(/^0(?=\.)/, '0');   // dấu trừ thật U+2212
+
+// ---- tiện ích ----
+const rr = (x, y, w, h, r) => { const p = new Path2D(); p.roundRect(x, y, w, h, r); return p; };
+const txt = (s, x, y, font, col = C.ink, align = 'left', base = 'alphabetic') => { g.save(); g.font = font; g.textAlign = align; g.textBaseline = base; g.fillStyle = col; g.fillText(s, x, y); const w = g.measureText(s).width; g.restore(); return w; };
+const shadow = (col, blur, ox, oy, fn) => { g.save(); g.shadowColor = col; g.shadowBlur = blur; g.shadowOffsetX = ox; g.shadowOffsetY = oy; fn(); g.restore(); };
+
+// SỢI CHỈ: đường đa tuyến → bóng, lõi đỏ, thớ xoắn chéo, ánh sáng mảnh
+function thread(pts, { w = 6, lift = 4 } = {}) {
+  const line = (ox, oy) => { g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(x + ox, y + oy) : g.moveTo(x + ox, y + oy)); };
+  g.save(); g.lineCap = 'round'; g.lineJoin = 'round';
+  g.filter = 'blur(3px)'; g.strokeStyle = 'rgba(60,30,20,0.30)'; g.lineWidth = w + 1; line(lift * 0.6, lift); g.stroke(); g.filter = 'none';
+  g.strokeStyle = C.sinDk; g.lineWidth = w + 1.6; line(0, 0); g.stroke();
+  g.strokeStyle = C.sin; g.lineWidth = w; line(0, 0); g.stroke();
+  // thớ xoắn: vạch chéo đều theo chiều dài
+  g.strokeStyle = 'rgba(90,8,14,0.55)'; g.lineWidth = 1.6; let acc = 0;
+  for (let i = 1; i < pts.length; i++) { const [x0, y0] = pts[i - 1], [x1, y1] = pts[i], L = Math.hypot(x1 - x0, y1 - y0); if (!L) continue;
+    const ux = (x1 - x0) / L, uy = (y1 - y0) / L, nx = -uy, ny = ux; let s = (5 - acc % 5) % 5;
+    for (; s < L; s += 5) { const cx = x0 + ux * s, cy = y0 + uy * s, h = w * 0.48; g.beginPath(); g.moveTo(cx - ux * 2.2 + nx * h, cy - uy * 2.2 + ny * h); g.lineTo(cx + ux * 2.2 - nx * h, cy + uy * 2.2 - ny * h); g.stroke(); }
+    acc += L; }
+  g.strokeStyle = 'rgba(255,190,190,0.55)'; g.lineWidth = 1.3; line(-w * 0.18, -w * 0.22); g.stroke();
+  g.restore();
+}
+const sample = (f, a, b, n) => Array.from({ length: n + 1 }, (_, i) => f(a + (b - a) * i / n));
+// hạt cườm thuỷ tinh nâu = điểm
+function bead(x, y, r = 15) {
+  shadow('rgba(50,25,15,0.4)', 8, 3, 5, () => { const gr = g.createRadialGradient(x - r * 0.4, y - r * 0.45, r * 0.1, x, y, r); gr.addColorStop(0, '#C9875A'); gr.addColorStop(0.45, '#6A3A22'); gr.addColorStop(1, '#2A140C');
+    g.fillStyle = gr; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); });
+  g.fillStyle = 'rgba(255,240,220,0.85)'; g.beginPath(); g.ellipse(x - r * 0.38, y - r * 0.42, r * 0.26, r * 0.16, -0.6, 0, 7); g.fill();
+}
+// đinh ghim: mũ đồng thau
+function pin(x, y, r = 11) {
+  shadow('rgba(50,30,15,0.45)', 6, 4, 6, () => { const gr = g.createRadialGradient(x - 3, y - 4, 1, x, y, r); gr.addColorStop(0, '#FFF0C0'); gr.addColorStop(0.5, '#C9A04A'); gr.addColorStop(1, '#6E5220');
+    g.fillStyle = gr; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); });
+}
+
+// nền: giấy ngà, vân sợi giấy, lưới chì rất nhạt, tối nhẹ mép
+function paper() { const c = mk(), x = c.getContext('2d');
+  x.fillStyle = C.paper; x.fillRect(0, 0, W, H);
+  for (let i = 0; i < 9000; i++) { const px = hash(i * 1.17 + 3) * W, py = hash(i * 2.31 + 7) * H, l = 2 + hash(i * 3.7) * 7, a = hash(i * 5.3) * Math.PI;
+    x.strokeStyle = hash(i * 0.71) > 0.5 ? 'rgba(120,95,60,0.06)' : 'rgba(255,255,255,0.18)'; x.lineWidth = 1; x.beginPath(); x.moveTo(px, py); x.lineTo(px + Math.cos(a) * l, py + Math.sin(a) * l); x.stroke(); }
+  x.strokeStyle = 'rgba(91,78,66,0.07)'; x.lineWidth = 1;
+  for (let gx = 40; gx < W; gx += 40) { x.beginPath(); x.moveTo(gx, 0); x.lineTo(gx, H); x.stroke(); }
+  for (let gy = 20; gy < H; gy += 40) { x.beginPath(); x.moveTo(0, gy); x.lineTo(W, gy); x.stroke(); }
+  const v = x.createRadialGradient(W / 2, H * 0.46, H * 0.35, W / 2, H / 2, H * 1.05); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(110,80,40,0.16)');
+  x.fillStyle = v; x.fillRect(0, 0, W, H); return c; }
+
+function figure(pose, cx, foot, h, flip = false) {
+  const im = IM[pose], s = h / im.height, w = im.width * s, x0 = cx - w / 2, y0 = foot - h;
+  g.save(); g.shadowColor = 'rgba(70,50,30,0.25)'; g.shadowBlur = 24; g.shadowOffsetX = flip ? -6 : 6; g.shadowOffsetY = 8;
+  if (flip) { g.translate(cx * 2, 0); g.scale(-1, 1); } g.drawImage(im, x0, y0, w, h); g.restore();
+  return { x: x0, y: y0, w, h };
+}
+
+// thanh bìa xám (cạnh tam giác) từ a tới b, có lỗ đinh ở hai đầu
+function strip(a, b, wd = 26, { holes = [true, true] } = {}) {
+  const L = Math.hypot(b[0] - a[0], b[1] - a[1]), ang = Math.atan2(b[1] - a[1], b[0] - a[0]);
+  g.save(); g.translate(a[0], a[1]); g.rotate(ang);
+  shadow('rgba(40,45,55,0.35)', 10, 4, 7, () => { g.fillStyle = C.broke; g.fill(rr(-wd / 2, -wd / 2, L + wd, wd, 6)); });
+  g.strokeStyle = C.brokeDk; g.lineWidth = 2; g.stroke(rr(-wd / 2, -wd / 2, L + wd, wd, 6));
+  g.strokeStyle = 'rgba(255,255,255,0.25)'; g.lineWidth = 1.5; g.beginPath(); g.moveTo(-wd / 2 + 6, -wd / 2 + 4); g.lineTo(L + wd / 2 - 6, -wd / 2 + 4); g.stroke();
+  for (let k = 1; k * 22 < L; k++) { g.strokeStyle = 'rgba(40,45,55,0.35)'; g.lineWidth = 1.5; g.beginPath(); g.moveTo(k * 22, wd / 2); g.lineTo(k * 22, wd / 2 - (k % 5 ? 6 : 11)); g.stroke(); }
+  holes.forEach((h, i) => { if (!h) return; g.fillStyle = '#3A3F48'; g.beginPath(); g.arc(i ? L : 0, 0, 5, 0, 7); g.fill(); });
+  g.restore();
+}
+
+// máy tính: thân gỗ bạch dương, phím giấy in, màn = cửa sổ giấy, chữ mực đỏ in kim
+function calculator(x0, y0, w, h) {
+  shadow('rgba(70,45,20,0.38)', 40, 14, 22, () => { const gr = g.createLinearGradient(x0, y0, x0 + w, y0 + h); gr.addColorStop(0, '#EED8AE'); gr.addColorStop(1, '#D7B987'); g.fillStyle = gr; g.fill(rr(x0, y0, w, h, 44)); });
+  g.save(); g.clip(rr(x0, y0, w, h, 44));
+  for (let i = 0; i < 46; i++) { const yy = y0 + hash(i * 3.3 + 1) * h, amp = 4 + hash(i * 1.9) * 10, ph = hash(i * 7.7) * 6;
+    g.strokeStyle = `rgba(150,105,50,${0.10 + hash(i * 2.1) * 0.12})`; g.lineWidth = 1 + hash(i * 4.4) * 1.6; g.beginPath();
+    for (let xx = x0; xx <= x0 + w; xx += 12) { const yv = yy + Math.sin(xx / 90 + ph) * amp; xx === x0 ? g.moveTo(xx, yv) : g.lineTo(xx, yv); } g.stroke(); }
+  g.restore();
+  g.strokeStyle = '#A8834E'; g.lineWidth = 3; g.stroke(rr(x0 + 2, y0 + 2, w - 4, h - 4, 42));
+  // cửa sổ màn giấy (lõm vào)
+  const sx = x0 + 46, sy = y0 + 56, sw = w - 92, sh = 270;
+  g.fillStyle = '#8E6A3A'; g.fill(rr(sx - 8, sy - 8, sw + 16, sh + 16, 22));
+  const sg = g.createLinearGradient(0, sy, 0, sy + sh); sg.addColorStop(0, '#EFE6D2'); sg.addColorStop(0.12, C.screen); sg.addColorStop(1, '#F7F0E0');
+  g.fillStyle = sg; g.fill(rr(sx, sy, sw, sh, 16));
+  g.save(); g.clip(rr(sx, sy, sw, sh, 16)); g.strokeStyle = 'rgba(91,78,66,0.10)'; g.lineWidth = 1;   // giấy kẻ dòng mảnh
+  for (let yy = sy + 30; yy < sy + sh; yy += 34) { g.beginPath(); g.moveTo(sx, yy); g.lineTo(sx + sw, yy); g.stroke(); } g.restore();
+  const val = S120.toFixed(3);
+  txt('sin(120°)', sx + 28, sy + 76, `500 50px ${MONO}`, C.sin);
+  txt(val, sx + sw - 26, sy + sh - 34, `500 132px ${MONO}`, C.sin, 'right');
+  // phím: 5 hàng × 4 cột, nút tròn giấy in
+  const rows = [['sin', 'cos', 'tan', '°'], ['7', '8', '9', '÷'], ['4', '5', '6', '×'], ['1', '2', '3', '−'], ['0', '.', '=', '+']];
+  const kx0 = x0 + 58, ky0 = sy + sh + 56, kw = (w - 116) / 4, kh = (y0 + h - 50 - ky0) / 5;
+  rows.forEach((row, r) => row.forEach((s, c) => {
+    const cx = kx0 + kw * (c + 0.5), cy = ky0 + kh * (r + 0.5), rad = Math.min(kw, kh) * 0.40, hot = (r === 0 && c === 0) || (r === 4 && c === 2);
+    shadow('rgba(70,45,20,0.35)', 6, 2, 5, () => { g.fillStyle = hot ? '#F6E2DA' : '#F7EFDF'; g.beginPath(); g.arc(cx, cy, rad, 0, 7); g.fill(); });
+    g.strokeStyle = hot ? C.sin : '#A8834E'; g.lineWidth = hot ? 3 : 2; g.beginPath(); g.arc(cx, cy, rad, 0, 7); g.stroke();
+    txt(s, cx, cy + 2, `${s.length > 1 ? 600 : 700} ${s.length > 1 ? 32 : 40}px ${AR}`, hot ? C.sin : C.ink, 'center', 'middle');
+  }));
+  return { sx, sy, sw, sh };
+}
+
+const frames = [
+  () => {                                              // 0 · cold open: máy tính gỗ ↔ tam giác bìa gãy
+    g.drawImage(BG, 0, 0);
+    // tam giác vuông gãy: B = đỉnh vuông cũ; BC nằm ngang; BA bị kéo mở tới 120°
+    const B = [600, 740], Cc = [1040, 740], Lab = 380, a = A120;
+    const Aold = [B[0], B[1] - Lab], Anew = [B[0] + Lab * Math.cos(a), B[1] - Lab * Math.sin(a)];
+    // bóng ma vị trí cũ (90°): nét chì mờ + ô vuông
+    g.save(); g.setLineDash([10, 10]); g.strokeStyle = 'rgba(91,78,66,0.35)'; g.lineWidth = 3;
+    g.beginPath(); g.moveTo(B[0], B[1]); g.lineTo(Aold[0], Aold[1]); g.lineTo(Cc[0], Cc[1]); g.stroke(); g.setLineDash([]);
+    g.strokeRect(B[0], B[1] - 40, 40, 40); g.restore();
+    // cung góc 120° (đất son)
+    g.strokeStyle = C.ang; g.lineWidth = 5; g.beginPath(); g.arc(B[0], B[1], 100, -a, 0); g.stroke();
+    // cạnh huyền gãy: nửa còn ghim ở C chĩa lên vô ích, nửa kia rơi nằm trên bàn
+    const hu = [Aold[0] - Cc[0], Aold[1] - Cc[1]], hl = Math.hypot(...hu);
+    strip(Cc, [Cc[0] + hu[0] / hl * 250, Cc[1] + hu[1] / hl * 250], 22, { holes: [true, false] });
+    strip([700, 846], [930, 812], 22, { holes: [false, true] });
+    // hai cạnh góc vuông
+    strip(B, Cc, 26); strip([B[0] + 16 * Math.cos(-a), B[1] + 16 * Math.sin(-a)], Anew, 26);
+    // khớp gãy: vết nứt + đinh bật ra nằm cạnh
+    g.strokeStyle = C.brokeDk; g.lineWidth = 3; g.lineCap = 'round'; g.beginPath();
+    [[0, 0], [-16, -12], [-8, -26], [-26, -38], [-18, -52]].forEach(([dx, dy], i) => i ? g.lineTo(B[0] + dx, B[1] + dy) : g.moveTo(B[0] + dx, B[1] + dy)); g.stroke();
+    pin(B[0] - 46, B[1] + 52, 10);
+    txt('120°', B[0] + 62, B[1] - 150, `700 72px ${CG}`, C.ang);
+    // sợi chỉ đỏ thả lỏng trên bàn: buộc đinh ghim, một vòng xoắn, hạt cườm, chạy vào dưới máy tính
+    const P0 = [330, 960];
+    const lo = u => { const x = P0[0] + u * 800, y = P0[1] - 40 * Math.sin(u * Math.PI) + 26 * Math.sin(u * 9);
+      const k = Math.exp(-((u - 0.42) ** 2) / 0.004); return [x - 46 * k * Math.sin((u - 0.42) * 70), y - 52 * k * (1 - Math.cos((u - 0.42) * 70)) / 2]; };
+    const TP = sample(lo, 0, 1, 260); thread(TP, { w: 7 });
+    pin(P0[0], P0[1]); bead(...TP[180], 16);
+    // máy tính
+    const S = calculator(1150, 80, 600, 920);
+    // mascot nhỏ góc dưới trái (≤ 25% cao)
+    const F = figure('pose-ponder', 150, 1080, 268);
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], calc: [1150, 80, 600, 920], tri: { B, Cc, Anew }, screen: S };
+  },
+  () => {                                              // 1 · mọi góc có câu trả lời → sóng
+    g.drawImage(BG, 0, 0);
+    const cx = 520, cy = 520, R = 300, a = A120;
+    const px = must(`Math.round(${cx} + ${R} * Math.cos(2 * Math.PI / 3))`, 370), py = must(`Math.round(${cy} - ${R} * Math.sin(2 * Math.PI / 3))`, 260);
+    // trục mực
+    g.strokeStyle = C.mute; g.lineWidth = 2.5; g.beginPath(); g.moveTo(cx - R - 60, cy); g.lineTo(cx + R + 50, cy); g.moveTo(cx, cy + R + 50); g.lineTo(cx, cy - R - 50); g.stroke();
+    // vòng tròn mực nâu (vẽ bằng compa chỉ)
+    g.strokeStyle = C.ink; g.lineWidth = 4; g.beginPath(); g.arc(cx, cy, R, 0, 7); g.stroke();
+    txt('1', cx + R + 14, cy + 40, `700 34px ${CG}`, C.mute); txt('−1', cx - R - 56, cy + 40, `700 34px ${CG}`, C.mute);
+    // cung góc
+    g.strokeStyle = C.ang; g.lineWidth = 5; g.beginPath(); g.arc(cx, cy, 70, -a, 0); g.stroke();
+    txt('120°', cx + 34, cy - 84, `700 46px ${CG}`, C.ang);
+    // bán kính = chỉ mực mảnh từ đinh tâm
+    g.strokeStyle = C.mute; g.lineWidth = 2.5; g.beginPath(); g.moveTo(cx, cy); g.lineTo(px, py); g.stroke();
+    // cos: đoạn nằm ngang chàm
+    g.strokeStyle = C.cos; g.lineWidth = 9; g.lineCap = 'round'; g.beginPath(); g.moveTo(cx, cy); g.lineTo(px, cy); g.stroke(); g.lineCap = 'butt';
+    txt(`cos 120° = ${num(C120)}`, cx - 16, cy + 66, `700 40px ${CG}`, C.cos, 'right');
+    // sóng: chỉ đỏ duỗi ra từ vòng, biên độ = R
+    const x0 = 1040, X = 760;   // 360° = 760 px
+    const wx = d => x0 + X * d / 360, wy = d => cy - R * Math.sin(d * Math.PI / 180);
+    must(`Math.round(${cy} - ${R} * Math.sin(Math.PI / 2))`, cy - R);
+    g.strokeStyle = C.mute; g.lineWidth = 2.5; g.beginPath(); g.moveTo(x0 - 10, cy); g.lineTo(x0 + X + 40, cy); g.stroke();
+    [90, 180, 270, 360].forEach(d => { g.beginPath(); g.moveTo(wx(d), cy - 10); g.lineTo(wx(d), cy + 10); g.stroke();
+      txt(`${d}°`, d === 180 ? wx(d) + 12 : wx(d), d === 180 || d === 360 ? cy - 22 : cy + 46, `700 32px ${CG}`, C.mute, d === 180 ? 'left' : 'center'); });
+    // phần sóng sau 120° nhạt (chưa duỗi hết), phần đã duỗi là chỉ thật
+    g.save(); g.setLineDash([3, 9]); g.lineCap = 'round'; g.strokeStyle = 'rgba(179,32,42,0.45)'; g.lineWidth = 3;
+    g.beginPath(); sample(d => [wx(d), wy(d)], 120, 360, 120).forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.stroke(); g.restore();
+    const wave = sample(d => [wx(d), wy(d)], 0, 120, 70);
+    // vạch nối ngang: hạt trên vòng → điểm trên sóng (cùng độ cao)
+    g.save(); g.setLineDash([12, 10]); g.strokeStyle = 'rgba(179,32,42,0.6)'; g.lineWidth = 2.5; g.beginPath(); g.moveTo(px + 18, py); g.lineTo(wx(120) - 18, wy(120)); g.stroke(); g.restore();
+    if (Math.abs(wy(120) - py) > 0.5) throw new Error('sóng ≠ độ cao điểm');
+    // sin: chỉ đỏ thả dọc từ hạt xuống trục, rồi sợi sóng
+    thread([[px, cy], [px, py]], { w: 8 });
+    thread(wave, { w: 7 });
+    pin(cx, cy, 12); bead(px, py, 17); bead(wx(120), wy(120), 13);
+    // nhãn sin ở khoảng trống giữa vòng và sóng, mũi tên mực
+    txt(`sin 120° = ${S120.toFixed(3)}`, 96, 150, `700 56px ${CG}`, C.sin);
+    g.strokeStyle = C.sin; g.lineWidth = 2.5; g.beginPath(); g.moveTo(250, 168); g.quadraticCurveTo(300, 230, px - 22, py - 6); g.stroke();
+    // mascot nhỏ góc dưới trái, que chỉ hướng lên phải về hạt (vạch dẫn dừng trước nhãn cos)
+    const F = figure('pose-pointer', 140, 1080, 270), tip = [F.x + F.w * 0.948, F.y + F.h * 0.28];
+    g.save(); g.setLineDash([2, 9]); g.lineCap = 'round'; g.strokeStyle = 'rgba(138,90,18,0.8)'; g.lineWidth = 3; g.beginPath(); const k = (tip[1] - 640) / (tip[1] - py - 24); g.moveTo(tip[0] + 6, tip[1] - 6); g.lineTo(tip[0] + (px - 16 - tip[0]) * k, 640); g.stroke(); g.restore();
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], tip, point: [px, py], waveAt120: [wx(120), wy(120)] };
+  },
+];
+
+(async () => {
+  const S = 'sincota0123456789.=−+×÷°() ';
+  await Promise.all([
+    ...['700 72px', '700 46px', '700 40px', '700 34px', '700 32px', '700 56px'].map(f => document.fonts.load(`${f} ${CG}`, S + 'cos')),
+    ...['500 50px', '500 132px'].map(f => document.fonts.load(`${f} ${MONO}`, S)),
+    ...['600 32px', '700 40px'].map(f => document.fonts.load(`${f} ${AR}`, S)),
+  ]);
+  await Promise.all(['pose-ponder', 'pose-pointer'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../../assets/character-v2/cut/${p}.png`; })));
+  BG = paper(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.filter = 'none'; frames[t < 1 ? 0 : 1](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

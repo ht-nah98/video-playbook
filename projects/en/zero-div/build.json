@@ -1,0 +1,29 @@
+{
+ "lufs": -16,
+ "parts": [
+  {
+   "page": "p1",
+   "timeline": "p1",
+   "lead": 0.6,
+   "tail": 1.6,
+   "split": 1
+  },
+  {
+   "page": "p2",
+   "timeline": "p2",
+   "lead": 3.0,
+   "tail": 2.0,
+   "split": 12
+  }
+ ],
+ "sfx_db": -9,
+ "music": {
+  "file": "assets/music.m4a",
+  "lufs": -35,
+  "loop": [
+   6.0,
+   128.0
+  ],
+  "xfade": 2.0
+ }
+}

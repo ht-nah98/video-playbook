@@ -1,0 +1,2128 @@
+{
+ "duration": 1081.901,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Every building needs a foundation. And the foundation of solid geometry is three basic ideas: the point, the line, and the plane.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Point, line, plane",
+   "opens": "act",
+   "start": 0.0,
+   "end": 6.442,
+   "wav": "audio/voice/bf0e0ca32e42ab5b.wav"
+  },
+  {
+   "text": "You already know points and lines from flat geometry. The new character here is the plane.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Point, line, plane",
+   "opens": null,
+   "start": 6.792,
+   "end": 11.269,
+   "wav": "audio/voice/ca298ce2e33e8746.wav"
+  },
+  {
+   "text": "Picture the top of a table, or the surface of a perfectly still lake.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Point, line, plane",
+   "opens": null,
+   "start": 11.619,
+   "end": 14.931,
+   "wav": "audio/voice/446d609839b6dee3.wav"
+  },
+  {
+   "text": "Now stretch it out forever in every direction, and make it so thin that it has no thickness at all.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Point, line, plane",
+   "opens": null,
+   "start": 15.281,
+   "end": 19.894,
+   "wav": "audio/voice/f133d33ffff4b6aa.wav"
+  },
+  {
+   "text": "On paper, we usually draw a plane as a slanted parallelogram, and give it a name with a letter, like plane P.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Point, line, plane",
+   "opens": null,
+   "start": 20.244,
+   "end": 25.583,
+   "wav": "audio/voice/2abbadcbdab97e49.wav"
+  },
+  {
+   "text": "Here's the interesting part. Mathematics never defines these three ideas in words.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Point, line, plane",
+   "opens": null,
+   "start": 26.533,
+   "end": 30.711,
+   "wav": "audio/voice/5919c023662bcd76.wav"
+  },
+  {
+   "text": "Instead, it describes how they behave, through a few properties that we simply agree to accept. They're called axioms.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Point, line, plane",
+   "opens": null,
+   "start": 31.061,
+   "end": 37.175,
+   "wav": "audio/voice/198e582f203c1132.wav"
+  },
+  {
+   "text": "Rule one. Through two different points, there is exactly one line. Just like on flat paper.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": "stop",
+   "start": 38.775,
+   "end": 43.352,
+   "wav": "audio/voice/7bf2b4e524da5f49.wav"
+  },
+  {
+   "text": "Rule two. Through three points that don't lie on one line, there is exactly one plane.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": null,
+   "start": 44.302,
+   "end": 48.423,
+   "wav": "audio/voice/58c480ee4d673bf4.wav"
+  },
+  {
+   "text": "This is why a three-legged stool never wobbles, even on an uneven floor.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": null,
+   "start": 48.773,
+   "end": 52.291,
+   "wav": "audio/voice/5b5f32e4ba256197.wav"
+  },
+  {
+   "text": "The tips of its three legs always pin down exactly one plane, so all three can touch the ground at once.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": null,
+   "start": 52.641,
+   "end": 57.867,
+   "wav": "audio/voice/9dee8ee2784dc94f.wav"
+  },
+  {
+   "text": "A four-legged chair has no such guarantee. The fourth leg can end up just off the plane of the other three, and the chair rocks.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": null,
+   "start": 58.217,
+   "end": 64.627,
+   "wav": "audio/voice/e76c54a6426d37b4.wav"
+  },
+  {
+   "text": "It's also why a camera tripod has three legs, and not four.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": null,
+   "start": 64.977,
+   "end": 67.793,
+   "wav": "audio/voice/e08b4bf51d7c0e51.wav"
+  },
+  {
+   "text": "Rule three. If two points of a line lie in a plane, then the whole line lies in that plane.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": null,
+   "start": 68.743,
+   "end": 72.937,
+   "wav": "audio/voice/9ecaac0a01b31533.wav"
+  },
+  {
+   "text": "You can check this with a ruler on a table. If both ends of the ruler touch the table, the entire ruler lies flat against it.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": null,
+   "start": 73.287,
+   "end": 79.598,
+   "wav": "audio/voice/dd798ff556aa6bf7.wav"
+  },
+  {
+   "text": "Rule four. If two different planes share one point, then they share a whole line through that point. That line is called their intersection.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": null,
+   "start": 80.548,
+   "end": 87.802,
+   "wav": "audio/voice/1fc01bd981f467ed.wav"
+  },
+  {
+   "text": "Look up at the corner of your room, where a wall meets the ceiling.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": null,
+   "start": 88.152,
+   "end": 91.443,
+   "wav": "audio/voice/5688ed96252afd57.wav"
+  },
+  {
+   "text": "That straight edge you see is the intersection of two planes, the wall and the ceiling.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Four rules",
+   "opens": null,
+   "start": 91.793,
+   "end": 95.825,
+   "wav": "audio/voice/cf085d3b19e44581.wav"
+  },
+  {
+   "text": "From these rules, we get three ways to fix a plane in place.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Three ways to pin a plane",
+   "opens": "stop",
+   "start": 97.425,
+   "end": 99.847,
+   "wav": "audio/voice/43dfb9182b6fe5cd.wav"
+  },
+  {
+   "text": "Three points that aren't on one line.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Three ways to pin a plane",
+   "opens": null,
+   "start": 100.198,
+   "end": 101.934,
+   "wav": "audio/voice/ba101ba03a8b357d.wav"
+  },
+  {
+   "text": "A line, and one point that isn't on it.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Three ways to pin a plane",
+   "opens": null,
+   "start": 102.285,
+   "end": 103.804,
+   "wav": "audio/voice/0155458923cb47a3.wav"
+  },
+  {
+   "text": "Or two lines that cross each other.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Three bricks",
+   "section": "Three ways to pin a plane",
+   "opens": null,
+   "start": 104.154,
+   "end": 105.587,
+   "wav": "audio/voice/81dfd117e2511809.wav"
+  },
+  {
+   "text": "Once we have points, lines and planes, the next question is: how can they sit relative to each other?",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "The map",
+   "opens": "act",
+   "start": 107.987,
+   "end": 112.533,
+   "wav": "audio/voice/0b9d67f7d09c937b.wav"
+  },
+  {
+   "text": "This part can sound dry, but it's actually the map for everything that comes after.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "The map",
+   "opens": null,
+   "start": 112.883,
+   "end": 116.943,
+   "wav": "audio/voice/5d2cc92fdf206419.wav"
+  },
+  {
+   "text": "On a flat page, two lines have only two options. They cross, or they're parallel.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two lines",
+   "opens": "stop",
+   "start": 118.543,
+   "end": 122.493,
+   "wav": "audio/voice/aad094af18334aca.wav"
+  },
+  {
+   "text": "In space, a third option appears, and it's a special one. Two lines can be skew.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two lines",
+   "opens": null,
+   "start": 122.843,
+   "end": 126.746,
+   "wav": "audio/voice/940f9286083dd8c9.wav"
+  },
+  {
+   "text": "Skew lines don't cross, and they aren't parallel either. There's no single plane that contains both of them.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two lines",
+   "opens": null,
+   "start": 127.096,
+   "end": 132.436,
+   "wav": "audio/voice/7cb7ca032981ea6a.wav"
+  },
+  {
+   "text": "You can find a pair right in your room.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two lines",
+   "opens": null,
+   "start": 133.386,
+   "end": 135.108,
+   "wav": "audio/voice/1ca395e65653bc71.wav"
+  },
+  {
+   "text": "Take the top edge of the wall in front of you. Now take the vertical edge of the side wall, at the end nearest to you, where it meets the wall behind you.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two lines",
+   "opens": null,
+   "start": 135.458,
+   "end": 142.833,
+   "wav": "audio/voice/6ac9ed2be76a493b.wav"
+  },
+  {
+   "text": "Those two edges never meet. But they aren't parallel either, because one runs sideways and the other runs straight up.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two lines",
+   "opens": null,
+   "start": 143.183,
+   "end": 149.287,
+   "wav": "audio/voice/47ddbe6960fc716e.wav"
+  },
+  {
+   "text": "Careful, though. The vertical edge in the far corner does meet the top edge, right in the corner. That pair crosses.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two lines",
+   "opens": null,
+   "start": 149.637,
+   "end": 155.614,
+   "wav": "audio/voice/e2cb961d87c98fbb.wav"
+  },
+  {
+   "text": "Another example is a highway overpass.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two lines",
+   "opens": null,
+   "start": 156.564,
+   "end": 158.442,
+   "wav": "audio/voice/f6ed4126dfcd3d7a.wav"
+  },
+  {
+   "text": "The center line of the road on the bridge, and the center line of the road underneath, are skew.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two lines",
+   "opens": null,
+   "start": 158.792,
+   "end": 163.207,
+   "wav": "audio/voice/15769b44d272ebfd.wav"
+  },
+  {
+   "text": "That's exactly why the cars can pass over each other without ever colliding.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two lines",
+   "opens": null,
+   "start": 163.557,
+   "end": 167.566,
+   "wav": "audio/voice/0781ee5d08b6fad7.wav"
+  },
+  {
+   "text": "A line and a plane have three options.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "A line and a plane",
+   "opens": "stop",
+   "start": 169.166,
+   "end": 170.976,
+   "wav": "audio/voice/302fc272ff185272.wav"
+  },
+  {
+   "text": "The line can lie entirely inside the plane.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "A line and a plane",
+   "opens": null,
+   "start": 171.326,
+   "end": 173.356,
+   "wav": "audio/voice/18370b3db51c504a.wav"
+  },
+  {
+   "text": "It can cut through the plane at exactly one point, like a needle through a sheet of paper.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "A line and a plane",
+   "opens": null,
+   "start": 173.706,
+   "end": 178.179,
+   "wav": "audio/voice/f5a242755ecb7cb7.wav"
+  },
+  {
+   "text": "Or it can be parallel to the plane, with no point in common at all, like a straight cable stretched above a road.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "A line and a plane",
+   "opens": null,
+   "start": 178.529,
+   "end": 184.011,
+   "wav": "audio/voice/597af8b5b5264e6c.wav"
+  },
+  {
+   "text": "Two different planes have exactly two options.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two planes",
+   "opens": "stop",
+   "start": 185.611,
+   "end": 187.753,
+   "wav": "audio/voice/f1a29d5025db77f8.wav"
+  },
+  {
+   "text": "They can cross along a line, like the two pages of an open book meeting at the spine.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two planes",
+   "opens": null,
+   "start": 188.103,
+   "end": 192.041,
+   "wav": "audio/voice/0f88dad9e1cf0788.wav"
+  },
+  {
+   "text": "Or they can be parallel, with nothing in common, like the floor and the ceiling of the same room.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two planes",
+   "opens": null,
+   "start": 192.391,
+   "end": 197.231,
+   "wav": "audio/voice/c37ca938b6eddf8b.wav"
+  },
+  {
+   "text": "Once these three groups feel solid, the next two parts get much easier.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two planes",
+   "opens": null,
+   "start": 198.181,
+   "end": 201.535,
+   "wav": "audio/voice/314b9fcabe242877.wav"
+  },
+  {
+   "text": "Because those parts are really just a closer look at two of the cases on this map.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where things can be",
+   "section": "Two planes",
+   "opens": null,
+   "start": 201.885,
+   "end": 205.832,
+   "wav": "audio/voice/98294cf1e1a02744.wav"
+  },
+  {
+   "text": "Being parallel comes down to one simple idea: two things that keep the same distance from each other forever.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "A stand-in",
+   "opens": "act",
+   "start": 208.232,
+   "end": 213.694,
+   "wav": "audio/voice/4d590a47a5a66fdd.wav"
+  },
+  {
+   "text": "But to prove that something is parallel, we need a few theorems that act as bridges.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "A stand-in",
+   "opens": null,
+   "start": 214.044,
+   "end": 218.054,
+   "wav": "audio/voice/d739d576e8336c38.wav"
+  },
+  {
+   "text": "The most important one, for a line and a plane, says this.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "A stand-in",
+   "opens": null,
+   "start": 219.004,
+   "end": 221.764,
+   "wav": "audio/voice/1ba989585c6ca66e.wav"
+  },
+  {
+   "text": "If a line is not in a plane, and it's parallel to some line that is in the plane, then it's parallel to the whole plane.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "A stand-in",
+   "opens": null,
+   "start": 222.114,
+   "end": 227.936,
+   "wav": "audio/voice/4d253da8113c8d71.wav"
+  },
+  {
+   "text": "In plain words, to show that line d is parallel to plane P, you just need to find a stand-in inside P that's parallel to d.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "A stand-in",
+   "opens": null,
+   "start": 228.286,
+   "end": 234.367,
+   "wav": "audio/voice/44baa22ffe184197.wav"
+  },
+  {
+   "text": "This is the move behind almost every proof of parallel lines and planes.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "A stand-in",
+   "opens": null,
+   "start": 234.717,
+   "end": 238.45,
+   "wav": "audio/voice/b83bbed6c8b6c261.wav"
+  },
+  {
+   "text": "There's a useful result in the other direction too.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "Which way the cut goes",
+   "opens": "stop",
+   "start": 240.05,
+   "end": 242.364,
+   "wav": "audio/voice/69fb39e728b77c85.wav"
+  },
+  {
+   "text": "If line d is parallel to plane P, then any plane that contains d and cuts P, cuts it along a line that's parallel to d.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "Which way the cut goes",
+   "opens": null,
+   "start": 242.714,
+   "end": 248.54,
+   "wav": "audio/voice/6026384bdee947df.wav"
+  },
+  {
+   "text": "This is the key to a whole family of problems where you slice a solid with a plane. It tells you which direction each cut has to run.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "Which way the cut goes",
+   "opens": null,
+   "start": 248.89,
+   "end": 255.45,
+   "wav": "audio/voice/4a1dccc2d619c75a.wav"
+  },
+  {
+   "text": "To recognize two parallel planes, we use this theorem.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "Two directions lock a plane",
+   "opens": "stop",
+   "start": 257.05,
+   "end": 259.528,
+   "wav": "audio/voice/f918c745f0f48edc.wav"
+  },
+  {
+   "text": "If one plane contains two crossing lines, and both are parallel to a second plane, then the two planes are parallel.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "Two directions lock a plane",
+   "opens": null,
+   "start": 259.878,
+   "end": 265.731,
+   "wav": "audio/voice/4207f109a6187bc3.wav"
+  },
+  {
+   "text": "Notice the condition: two lines that cross.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "Two directions lock a plane",
+   "opens": null,
+   "start": 266.081,
+   "end": 268.124,
+   "wav": "audio/voice/31e1a4419c7a5726.wav"
+  },
+  {
+   "text": "One line isn't enough. A plane can still swing around that single line, like a door on its hinge, until it hits the other plane.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "Two directions lock a plane",
+   "opens": null,
+   "start": 268.474,
+   "end": 274.866,
+   "wav": "audio/voice/bb9aa34104264456.wav"
+  },
+  {
+   "text": "You need two different directions, both parallel, before the plane is locked in place.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "Two directions lock a plane",
+   "opens": null,
+   "start": 275.216,
+   "end": 279.421,
+   "wav": "audio/voice/fc5e220d34fde74e.wav"
+  },
+  {
+   "text": "And once two planes are parallel, there's a neat consequence.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "Two directions lock a plane",
+   "opens": null,
+   "start": 280.371,
+   "end": 283.554,
+   "wav": "audio/voice/c7a73048498fcfe2.wav"
+  },
+  {
+   "text": "Any third plane that cuts through both of them cuts them along two lines that are parallel to each other.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Parallel",
+   "section": "Two directions lock a plane",
+   "opens": null,
+   "start": 283.904,
+   "end": 289.254,
+   "wav": "audio/voice/75ef294e331af9e3.wav"
+  },
+  {
+   "text": "If parallel lines have the beauty of regularity, perpendicular lines have the strength of stability.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Every line in the plane",
+   "opens": "act",
+   "start": 291.654,
+   "end": 296.703,
+   "wav": "audio/voice/900db2cf1a573fe1.wav"
+  },
+  {
+   "text": "Almost everything we build stands up because of right angles. Columns stand perpendicular to the ground. Walls stand perpendicular to the floor.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Every line in the plane",
+   "opens": null,
+   "start": 297.053,
+   "end": 304.586,
+   "wav": "audio/voice/cce5144571082add.wav"
+  },
+  {
+   "text": "The central idea here is a line perpendicular to a plane.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Every line in the plane",
+   "opens": null,
+   "start": 305.536,
+   "end": 308.443,
+   "wav": "audio/voice/10f43bb0a45fd906.wav"
+  },
+  {
+   "text": "A line is called perpendicular to a plane when it's perpendicular to every single line in that plane.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Every line in the plane",
+   "opens": null,
+   "start": 308.793,
+   "end": 313.615,
+   "wav": "audio/voice/2221fa59146af583.wav"
+  },
+  {
+   "text": "At first, that sounds impossible to check. A plane contains infinitely many lines. Surely we can't test them one by one?",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two are enough",
+   "opens": "stop",
+   "start": 315.215,
+   "end": 321.357,
+   "wav": "audio/voice/48c36d00bc28385e.wav"
+  },
+  {
+   "text": "Luckily, there's a theorem that cuts the work down to almost nothing.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two are enough",
+   "opens": null,
+   "start": 321.707,
+   "end": 324.562,
+   "wav": "audio/voice/b5e822ab9527deb9.wav"
+  },
+  {
+   "text": "If a line is perpendicular to two crossing lines in a plane, then it's perpendicular to the whole plane.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two are enough",
+   "opens": null,
+   "start": 324.912,
+   "end": 330.174,
+   "wav": "audio/voice/80592f87d4c88ff7.wav"
+  },
+  {
+   "text": "It may be the single most used theorem in all of solid geometry. I'd suggest knowing it as well as your times tables.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two are enough",
+   "opens": null,
+   "start": 330.524,
+   "end": 336.317,
+   "wav": "audio/voice/f083433a0405464d.wav"
+  },
+  {
+   "text": "From here we get a powerful tool, called the theorem of three perpendiculars.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "The theorem of three perpendiculars",
+   "opens": "stop",
+   "start": 337.917,
+   "end": 341.682,
+   "wav": "audio/voice/f21080ace88452f2.wav"
+  },
+  {
+   "text": "Take a line, call it a, lying in plane P. And take a second line, b, that isn't in P, and isn't perpendicular to P either.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "The theorem of three perpendiculars",
+   "opens": null,
+   "start": 342.032,
+   "end": 348.075,
+   "wav": "audio/voice/5a97bc9f98757924.wav"
+  },
+  {
+   "text": "Shine a light straight down onto P, and line b casts a shadow. That shadow is called its projection.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "The theorem of three perpendiculars",
+   "opens": null,
+   "start": 348.425,
+   "end": 353.531,
+   "wav": "audio/voice/8b4f7e657fe38786.wav"
+  },
+  {
+   "text": "The theorem says: a is perpendicular to b, exactly when a is perpendicular to b's shadow.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "The theorem of three perpendiculars",
+   "opens": null,
+   "start": 353.881,
+   "end": 358.413,
+   "wav": "audio/voice/5e05b0618ae8f0bc.wav"
+  },
+  {
+   "text": "What makes it valuable is that it lets you trade a line floating in space for its shadow lying flat in the plane.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "The theorem of three perpendiculars",
+   "opens": null,
+   "start": 358.763,
+   "end": 364.374,
+   "wav": "audio/voice/f72215d786aa769b.wav"
+  },
+  {
+   "text": "And suddenly a problem in space becomes a familiar problem on a flat page.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "The theorem of three perpendiculars",
+   "opens": null,
+   "start": 364.724,
+   "end": 368.461,
+   "wav": "audio/voice/454127267350f791.wav"
+  },
+  {
+   "text": "Next comes two planes that are perpendicular, meaning the angle between them is ninety degrees.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two planes at a right angle",
+   "opens": "stop",
+   "start": 370.061,
+   "end": 375.095,
+   "wav": "audio/voice/d840583dd60eb73c.wav"
+  },
+  {
+   "text": "The usual way to recognize it: if one plane contains a line that's perpendicular to the other plane, then the two planes are perpendicular.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two planes at a right angle",
+   "opens": null,
+   "start": 375.445,
+   "end": 382.607,
+   "wav": "audio/voice/fbe2030896526f1a.wav"
+  },
+  {
+   "text": "A wall is perpendicular to the floor precisely because the wall contains vertical lines, and each of them is perpendicular to the floor.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two planes at a right angle",
+   "opens": null,
+   "start": 382.957,
+   "end": 389.874,
+   "wav": "audio/voice/d28088c546530470.wav"
+  },
+  {
+   "text": "And there's one consequence worth remembering, because it shows up all the time.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two planes at a right angle",
+   "opens": null,
+   "start": 390.824,
+   "end": 394.823,
+   "wav": "audio/voice/91989e212fb2d143.wav"
+  },
+  {
+   "text": "When two planes are perpendicular, draw a line in the first plane that's perpendicular to their intersection.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two planes at a right angle",
+   "opens": null,
+   "start": 395.173,
+   "end": 400.608,
+   "wav": "audio/voice/537b13eda60545ba.wav"
+  },
+  {
+   "text": "That line is then perpendicular to the whole second plane.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two planes at a right angle",
+   "opens": null,
+   "start": 400.958,
+   "end": 403.641,
+   "wav": "audio/voice/4193eb1d55fd45eb.wav"
+  },
+  {
+   "text": "It's a shortcut for building perpendicular lines, and you'll need it in a lot of distance problems later on.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Perpendicular",
+   "section": "Two planes at a right angle",
+   "opens": null,
+   "start": 403.991,
+   "end": 409.3,
+   "wav": "audio/voice/f93835fe861e7542.wav"
+  },
+  {
+   "text": "Once we can sort things into parallel and perpendicular, the next job is to measure everything in between.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "In between",
+   "opens": "act",
+   "start": 411.7,
+   "end": 416.888,
+   "wav": "audio/voice/00c77e426ab58bcf.wav"
+  },
+  {
+   "text": "For example, how steeply is a ladder leaning against the floor?",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "In between",
+   "opens": null,
+   "start": 417.238,
+   "end": 420.36,
+   "wav": "audio/voice/342c84726eceb749.wav"
+  },
+  {
+   "text": "There are three kinds of angle to know.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "In between",
+   "opens": null,
+   "start": 420.71,
+   "end": 422.052,
+   "wav": "audio/voice/9b9b80ce8f08280c.wav"
+  },
+  {
+   "text": "The first is the angle between two lines.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two lines",
+   "opens": "stop",
+   "start": 423.652,
+   "end": 425.474,
+   "wav": "audio/voice/bf675c6ac4989170.wav"
+  },
+  {
+   "text": "If the lines cross, you can measure the angle directly.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two lines",
+   "opens": null,
+   "start": 425.824,
+   "end": 428.187,
+   "wav": "audio/voice/019f6f8b94b03898.wav"
+  },
+  {
+   "text": "The trouble is skew lines, because they never meet, so there's no corner to measure.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two lines",
+   "opens": null,
+   "start": 428.537,
+   "end": 432.436,
+   "wav": "audio/voice/443293161ca946fa.wav"
+  },
+  {
+   "text": "The trick is to slide one line, or both, without turning them, until they meet at a point, and then measure the angle right there.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two lines",
+   "opens": null,
+   "start": 432.786,
+   "end": 439.262,
+   "wav": "audio/voice/707a61321c737eb8.wav"
+  },
+  {
+   "text": "Sliding a line doesn't change its direction, so the angle you get is a true measure of how differently the two lines point.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two lines",
+   "opens": null,
+   "start": 439.612,
+   "end": 445.807,
+   "wav": "audio/voice/74c4497d51781dd9.wav"
+  },
+  {
+   "text": "By convention, the angle between two lines is always taken between zero and ninety degrees.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two lines",
+   "opens": null,
+   "start": 446.157,
+   "end": 450.797,
+   "wav": "audio/voice/44c51e7d92d89567.wav"
+  },
+  {
+   "text": "The second is the angle between a line and a plane.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "A line and a plane",
+   "opens": "stop",
+   "start": 452.397,
+   "end": 454.926,
+   "wav": "audio/voice/74cdc92407984571.wav"
+  },
+  {
+   "text": "It's the angle you feel when you look at a ladder leaning on a wall and wonder how steep it is compared to the ground.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "A line and a plane",
+   "opens": null,
+   "start": 455.276,
+   "end": 460.962,
+   "wav": "audio/voice/eab1dd43955a0d8a.wav"
+  },
+  {
+   "text": "If the line is perpendicular to the plane, the angle is ninety degrees.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "A line and a plane",
+   "opens": null,
+   "start": 461.312,
+   "end": 464.922,
+   "wav": "audio/voice/86815391eeca608b.wav"
+  },
+  {
+   "text": "Otherwise, it's the angle between the line and its shadow on the plane.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "A line and a plane",
+   "opens": null,
+   "start": 465.272,
+   "end": 468.642,
+   "wav": "audio/voice/4b25394e437535c8.wav"
+  },
+  {
+   "text": "Here's the usual recipe.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "A line and a plane",
+   "opens": null,
+   "start": 469.592,
+   "end": 470.71,
+   "wav": "audio/voice/8371191974f86961.wav"
+  },
+  {
+   "text": "First, pick a point on the line, and drop a perpendicular from it to the plane. Where it lands tells you where the shadow goes.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "A line and a plane",
+   "opens": null,
+   "start": 471.06,
+   "end": 477.368,
+   "wav": "audio/voice/0d3304c594a8abdb.wav"
+  },
+  {
+   "text": "Then use the right triangle you've just built to work out the angle.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "A line and a plane",
+   "opens": null,
+   "start": 477.718,
+   "end": 480.726,
+   "wav": "audio/voice/4cf72af26ce91f5f.wav"
+  },
+  {
+   "text": "And notice, once again, the shadow is at the center of everything.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "A line and a plane",
+   "opens": null,
+   "start": 481.076,
+   "end": 484.377,
+   "wav": "audio/voice/40ed005b90cac891.wav"
+  },
+  {
+   "text": "The third is the angle between two planes. Picture an open book.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two planes",
+   "opens": "stop",
+   "start": 485.977,
+   "end": 489.201,
+   "wav": "audio/voice/848972025abb1fd7.wav"
+  },
+  {
+   "text": "How wide it's open is the angle between its two covers.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two planes",
+   "opens": null,
+   "start": 489.551,
+   "end": 492.249,
+   "wav": "audio/voice/b0c89c7cc74273fa.wav"
+  },
+  {
+   "text": "To measure it properly, pick a point on the spine, which is the line where the two planes meet.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two planes",
+   "opens": null,
+   "start": 492.599,
+   "end": 497.22,
+   "wav": "audio/voice/0aaf9241a65c984a.wav"
+  },
+  {
+   "text": "From that point, draw a line in each cover that's perpendicular to the spine.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two planes",
+   "opens": null,
+   "start": 497.57,
+   "end": 501.428,
+   "wav": "audio/voice/828a67fee170f22b.wav"
+  },
+  {
+   "text": "The angle between those two lines is the angle between the planes.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two planes",
+   "opens": null,
+   "start": 501.778,
+   "end": 505.298,
+   "wav": "audio/voice/c78da8b20cbf5281.wav"
+  },
+  {
+   "text": "By convention, this angle is also taken between zero and ninety degrees.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two planes",
+   "opens": null,
+   "start": 506.248,
+   "end": 509.717,
+   "wav": "audio/voice/20db413aea355fe8.wav"
+  },
+  {
+   "text": "So if you open a laptop to a hundred and twenty degrees, the angle between the screen and the keyboard, as two planes, is sixty degrees.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two planes",
+   "opens": null,
+   "start": 510.067,
+   "end": 517.043,
+   "wav": "audio/voice/840adaac49027666.wav"
+  },
+  {
+   "text": "In real life, the pitch of a roof, or the tilt of a laptop screen, are both angles between two planes.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Two planes",
+   "opens": null,
+   "start": 517.393,
+   "end": 522.372,
+   "wav": "audio/voice/f493b38d53019e09.wav"
+  },
+  {
+   "text": "The general lesson with angles is that every road leads to a triangle.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Every road leads to a triangle",
+   "opens": "stop",
+   "start": 523.972,
+   "end": 527.426,
+   "wav": "audio/voice/35ee548013af005c.wav"
+  },
+  {
+   "text": "Usually a right triangle, lying neatly inside some plane.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Every road leads to a triangle",
+   "opens": null,
+   "start": 527.776,
+   "end": 530.483,
+   "wav": "audio/voice/c7860d46f256b383.wav"
+  },
+  {
+   "text": "Your job is to build that triangle. After that, it's just the trigonometry you already know.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Angles",
+   "section": "Every road leads to a triangle",
+   "opens": null,
+   "start": 530.833,
+   "end": 535.289,
+   "wav": "audio/voice/2f46b11ada2d82ff.wav"
+  },
+  {
+   "text": "Right alongside angles comes distance.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "The shortest way",
+   "opens": "act",
+   "start": 537.689,
+   "end": 539.292,
+   "wav": "audio/voice/a7fdef0ffc01ba08.wav"
+  },
+  {
+   "text": "The core idea fits into one sentence. Distance is the length of the shortest path, and the shortest path is always the perpendicular one.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "The shortest way",
+   "opens": null,
+   "start": 539.642,
+   "end": 546.72,
+   "wav": "audio/voice/e449ba4df58c29d9.wav"
+  },
+  {
+   "text": "The most basic distance is from a point to a plane. It's the length of the perpendicular dropped from the point to the plane.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "A point and a plane",
+   "opens": "stop",
+   "start": 548.32,
+   "end": 554.523,
+   "wav": "audio/voice/7aa3bf9c9625a99b.wav"
+  },
+  {
+   "text": "When you say a ceiling is three meters high, this is exactly the distance you mean.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "A point and a plane",
+   "opens": null,
+   "start": 554.873,
+   "end": 558.782,
+   "wav": "audio/voice/e73b8d3dc1cbad06.wav"
+  },
+  {
+   "text": "In exercises, the hard part is the construction. You have to show where the foot of that perpendicular actually lands.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "A point and a plane",
+   "opens": null,
+   "start": 559.132,
+   "end": 565.115,
+   "wav": "audio/voice/f3996c15ef623db3.wav"
+  },
+  {
+   "text": "And the facts about perpendicular planes from earlier are precisely the tools for doing that.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "A point and a plane",
+   "opens": null,
+   "start": 565.465,
+   "end": 570.054,
+   "wav": "audio/voice/86e67d114753f798.wav"
+  },
+  {
+   "text": "From this one idea, the other distances follow logically.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Any point will do",
+   "opens": "stop",
+   "start": 571.654,
+   "end": 574.473,
+   "wav": "audio/voice/4d3fad2985afd73e.wav"
+  },
+  {
+   "text": "The distance from a line to a plane parallel to it is the distance from any point on the line to the plane.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Any point will do",
+   "opens": null,
+   "start": 574.823,
+   "end": 579.986,
+   "wav": "audio/voice/9aa0dbe961a67357.wav"
+  },
+  {
+   "text": "The distance between two parallel planes is the distance from any point on one of them to the other.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Any point will do",
+   "opens": null,
+   "start": 580.336,
+   "end": 585.122,
+   "wav": "audio/voice/7fe9858a8f125a4c.wav"
+  },
+  {
+   "text": "We're allowed to pick any point, because being parallel guarantees that every point is the same distance away.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Any point will do",
+   "opens": null,
+   "start": 585.472,
+   "end": 591.073,
+   "wav": "audio/voice/cb9c9bc2cbcc31ab.wav"
+  },
+  {
+   "text": "The most challenging one is the distance between two skew lines.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Two skew lines",
+   "opens": "stop",
+   "start": 592.673,
+   "end": 596.152,
+   "wav": "audio/voice/8483de9b88b77185.wav"
+  },
+  {
+   "text": "Mathematics proves that between two skew lines there is always exactly one segment that's perpendicular to both of them. It's called their common perpendicular.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Two skew lines",
+   "opens": null,
+   "start": 596.502,
+   "end": 604.878,
+   "wav": "audio/voice/992b6e884d481b6e.wav"
+  },
+  {
+   "text": "Its length is the distance we're looking for.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Two skew lines",
+   "opens": null,
+   "start": 605.228,
+   "end": 607.328,
+   "wav": "audio/voice/3321321462653191.wav"
+  },
+  {
+   "text": "Building that segment directly is usually hard work. So in practice, we use a conversion trick.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Two skew lines",
+   "opens": null,
+   "start": 607.678,
+   "end": 612.665,
+   "wav": "audio/voice/f89369b336179e2a.wav"
+  },
+  {
+   "text": "Build a plane that contains one of the lines and is parallel to the other.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Two skew lines",
+   "opens": null,
+   "start": 613.015,
+   "end": 616.692,
+   "wav": "audio/voice/4627e3cba20774a3.wav"
+  },
+  {
+   "text": "Then the distance between the two skew lines is just the distance from the other line to that plane.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Two skew lines",
+   "opens": null,
+   "start": 617.042,
+   "end": 621.879,
+   "wav": "audio/voice/34d8ab123eab338b.wav"
+  },
+  {
+   "text": "And the problem is back in familiar territory.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Distance",
+   "section": "Two skew lines",
+   "opens": null,
+   "start": 622.229,
+   "end": 624.212,
+   "wav": "audio/voice/676e5cb989cdbb12.wav"
+  },
+  {
+   "text": "Now we leave relationships behind, and step into solids, where everything becomes much easier to picture.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Faces, edges, vertices",
+   "opens": "act",
+   "start": 626.612,
+   "end": 631.979,
+   "wav": "audio/voice/311d837662f206be.wav"
+  },
+  {
+   "text": "The first family is the polyhedra, solids that are completely wrapped in flat polygons.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Faces, edges, vertices",
+   "opens": null,
+   "start": 632.329,
+   "end": 636.689,
+   "wav": "audio/voice/6234e51b80ecbd1a.wav"
+  },
+  {
+   "text": "A brick, a die, and the Great Pyramid of Giza are all polyhedra.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Faces, edges, vertices",
+   "opens": null,
+   "start": 637.039,
+   "end": 640.228,
+   "wav": "audio/voice/9baffd13b6773e98.wav"
+  },
+  {
+   "text": "The polygons around the outside are called faces. A side shared by two faces is called an edge. And a corner where edges meet is called a vertex.",
+   "idea": true,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Faces, edges, vertices",
+   "opens": null,
+   "start": 640.578,
+   "end": 648.082,
+   "wav": "audio/voice/a83b666905e9cfef.wav"
+  },
+  {
+   "text": "The two most important families of polyhedra are prisms and pyramids.",
+   "idea": true,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Faces, edges, vertices",
+   "opens": null,
+   "start": 649.032,
+   "end": 652.501,
+   "wav": "audio/voice/b692bd3699755ba6.wav"
+  },
+  {
+   "text": "A prism has two bases, two identical polygons lying in two parallel planes, and its sides are all parallelograms.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Prisms",
+   "opens": "stop",
+   "start": 654.101,
+   "end": 660.115,
+   "wav": "audio/voice/61c73cc3bfecfe01.wav"
+  },
+  {
+   "text": "Imagine taking a polygon and pushing it straight out in one fixed direction. The shape it sweeps out is a prism.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Prisms",
+   "opens": null,
+   "start": 660.465,
+   "end": 666.165,
+   "wav": "audio/voice/cd89cc76a941886f.wav"
+  },
+  {
+   "text": "When the side edges stand perpendicular to the base, it's a right prism, and its sides become rectangles.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Prisms",
+   "opens": null,
+   "start": 666.515,
+   "end": 671.803,
+   "wav": "audio/voice/3a2b4e2eb4350784.wav"
+  },
+  {
+   "text": "A right prism with a regular polygon for a base is called a regular prism.",
+   "idea": true,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Prisms",
+   "opens": null,
+   "start": 672.153,
+   "end": 675.673,
+   "wav": "audio/voice/8c59dc30402ab16b.wav"
+  },
+  {
+   "text": "The most familiar case is the rectangular box, a right prism with a rectangle for a base.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Prisms",
+   "opens": null,
+   "start": 676.623,
+   "end": 681.278,
+   "wav": "audio/voice/82871230dc60ad72.wav"
+  },
+  {
+   "text": "And even more special, the cube, with six equal square faces.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Prisms",
+   "opens": null,
+   "start": 681.628,
+   "end": 684.461,
+   "wav": "audio/voice/ecfb108b8dd2e4d8.wav"
+  },
+  {
+   "text": "The box comes with one formula worth remembering.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Prisms",
+   "opens": null,
+   "start": 684.811,
+   "end": 687.182,
+   "wav": "audio/voice/7a49a2838fcf3394.wav"
+  },
+  {
+   "text": "The square of its long diagonal equals the sum of the squares of its length, its width and its height.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Prisms",
+   "opens": null,
+   "start": 687.532,
+   "end": 692.457,
+   "wav": "audio/voice/eb876e857ff1e576.wav"
+  },
+  {
+   "text": "That's the Pythagorean theorem, in three dimensions.",
+   "idea": true,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Prisms",
+   "opens": null,
+   "start": 692.807,
+   "end": 695.335,
+   "wav": "audio/voice/13e8e6843a9d025f.wav"
+  },
+  {
+   "text": "A pyramid has one polygon for a base, and one apex that sits outside the plane of that base. Its sides are all triangles that share that apex.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Pyramids",
+   "opens": "stop",
+   "start": 696.935,
+   "end": 704.299,
+   "wav": "audio/voice/b55c8c8a6f23775a.wav"
+  },
+  {
+   "text": "The Great Pyramid is the most famous example.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Pyramids",
+   "opens": null,
+   "start": 704.649,
+   "end": 706.714,
+   "wav": "audio/voice/fcac58b8a0354709.wav"
+  },
+  {
+   "text": "When the base is a regular polygon, and the apex sits directly above the center of the base, it's a regular pyramid.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Pyramids",
+   "opens": null,
+   "start": 707.064,
+   "end": 713.0,
+   "wav": "audio/voice/818e56582d1bb3f7.wav"
+  },
+  {
+   "text": "Its side edges are all equal, and its side faces are matching isosceles triangles.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Pyramids",
+   "opens": null,
+   "start": 713.35,
+   "end": 717.566,
+   "wav": "audio/voice/7a4ec6c34352d122.wav"
+  },
+  {
+   "text": "The smallest case is the tetrahedron, a pyramid on a triangle.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Pyramids",
+   "opens": null,
+   "start": 717.916,
+   "end": 720.959,
+   "wav": "audio/voice/f01fa60bf3e32a69.wav"
+  },
+  {
+   "text": "It's the simplest polyhedron that can exist, with four faces, four vertices and six edges.",
+   "idea": true,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Pyramids",
+   "opens": null,
+   "start": 721.309,
+   "end": 725.849,
+   "wav": "audio/voice/f19497f494f0af07.wav"
+  },
+  {
+   "text": "And here's a fact that surprises a lot of people.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": "stop",
+   "start": 727.449,
+   "end": 729.529,
+   "wav": "audio/voice/811e99830ac19596.wav"
+  },
+  {
+   "text": "On a flat page, there are infinitely many regular polygons. A triangle, a square, a pentagon, a hexagon, and on and on.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": null,
+   "start": 729.879,
+   "end": 735.793,
+   "wav": "audio/voice/875b56967e841d03.wav"
+  },
+  {
+   "text": "But in space, there are only five regular polyhedra. They're called the Platonic solids.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": null,
+   "start": 736.143,
+   "end": 740.519,
+   "wav": "audio/voice/ef804915a3f3cb55.wav"
+  },
+  {
+   "text": "The tetrahedron, the cube, the octahedron, the dodecahedron with twelve faces, and the icosahedron with twenty.",
+   "idea": true,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": null,
+   "start": 740.869,
+   "end": 746.933,
+   "wav": "audio/voice/c7167137d65ebebc.wav"
+  },
+  {
+   "text": "You can even see why there can't be a sixth.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": null,
+   "start": 747.883,
+   "end": 749.681,
+   "wav": "audio/voice/4431a4c474cc13fe.wav"
+  },
+  {
+   "text": "At every corner of a solid, at least three faces have to meet, and their angles have to add up to less than a full turn. Otherwise the corner lies flat and can't fold up.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": null,
+   "start": 750.031,
+   "end": 758.452,
+   "wav": "audio/voice/61aa9eb1211c298b.wav"
+  },
+  {
+   "text": "Three, four or five triangles fit around a corner. Six triangles make exactly a full turn, and lie flat.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": null,
+   "start": 758.802,
+   "end": 764.243,
+   "wav": "audio/voice/6a5f08db7ebd81df.wav"
+  },
+  {
+   "text": "Three squares fit. Four lie flat. Three pentagons fit. And three hexagons already lie flat.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": null,
+   "start": 764.593,
+   "end": 769.363,
+   "wav": "audio/voice/4db72ede1f99170f.wav"
+  },
+  {
+   "text": "That's five ways, and no more.",
+   "idea": true,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": null,
+   "start": 769.713,
+   "end": 770.995,
+   "wav": "audio/voice/b984c7724ce625e9.wav"
+  },
+  {
+   "text": "The ancient Greeks knew this more than two thousand years ago. Euclid proves it in the final book of the Elements.",
+   "idea": false,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": null,
+   "start": 771.945,
+   "end": 777.388,
+   "wav": "audio/voice/13b954549645835d.wav"
+  },
+  {
+   "text": "And you can still hold all five today, in a set of dice for tabletop role-playing games.",
+   "idea": true,
+   "act": "ACT SEVEN \u2014 Solids",
+   "section": "Only five",
+   "opens": null,
+   "start": 777.738,
+   "end": 782.058,
+   "wav": "audio/voice/9c864ebd2a3aa85f.wav"
+  },
+  {
+   "text": "Volume answers one question: how much space does a solid take up? Or more concretely, how much water would it hold?",
+   "idea": false,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "How much room",
+   "opens": "act",
+   "start": 784.458,
+   "end": 790.309,
+   "wav": "audio/voice/cff5a99591497d49.wav"
+  },
+  {
+   "text": "It's measured in cubic units, like cubic meters, or cubic centimeters.",
+   "idea": true,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "How much room",
+   "opens": null,
+   "start": 790.659,
+   "end": 794.185,
+   "wav": "audio/voice/b93741a65f93a6fc.wav"
+  },
+  {
+   "text": "The most basic formula belongs to the rectangular box. Volume equals length times width times height.",
+   "idea": false,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "Stacking cubes",
+   "opens": "stop",
+   "start": 795.785,
+   "end": 801.01,
+   "wav": "audio/voice/709c09ba89bd9398.wav"
+  },
+  {
+   "text": "Here's an easy way to see it. Imagine packing the box with little cubes, each one unit on a side.",
+   "idea": false,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "Stacking cubes",
+   "opens": null,
+   "start": 801.36,
+   "end": 806.041,
+   "wav": "audio/voice/660d3cf0c65c00a5.wav"
+  },
+  {
+   "text": "On the bottom layer, you fit length times width cubes.",
+   "idea": false,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "Stacking cubes",
+   "opens": null,
+   "start": 806.391,
+   "end": 808.753,
+   "wav": "audio/voice/10dbe0e652ba3965.wav"
+  },
+  {
+   "text": "The height tells you how many layers there are.",
+   "idea": false,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "Stacking cubes",
+   "opens": null,
+   "start": 809.103,
+   "end": 810.984,
+   "wav": "audio/voice/702188e439ceb713.wav"
+  },
+  {
+   "text": "Multiply the two, and you've counted every little cube. That count is the volume of the box.",
+   "idea": true,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "Stacking cubes",
+   "opens": null,
+   "start": 811.334,
+   "end": 815.782,
+   "wav": "audio/voice/8d7d3c5e6138f04c.wav"
+  },
+  {
+   "text": "From there, the general rule for every prism is: volume equals the area of the base, times the height.",
+   "idea": false,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "Stacking cubes",
+   "opens": null,
+   "start": 816.732,
+   "end": 821.92,
+   "wav": "audio/voice/8f5bc9c0c64eae73.wav"
+  },
+  {
+   "text": "But be careful. The height here is the distance between the two planes of the bases.",
+   "idea": false,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "Stacking cubes",
+   "opens": null,
+   "start": 822.27,
+   "end": 826.409,
+   "wav": "audio/voice/21dfda2f87011266.wav"
+  },
+  {
+   "text": "For a slanted prism, that's not the same as the length of a side edge.",
+   "idea": true,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "Stacking cubes",
+   "opens": null,
+   "start": 826.759,
+   "end": 830.003,
+   "wav": "audio/voice/0a946109701cef71.wav"
+  },
+  {
+   "text": "When we get to pyramids, a special number appears. Volume equals one third of the base area, times the height.",
+   "idea": false,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "The one third",
+   "opens": "stop",
+   "start": 831.603,
+   "end": 837.119,
+   "wav": "audio/voice/f2bd34309df706e8.wav"
+  },
+  {
+   "text": "It's been proven that a triangular prism can always be cut into three pyramids with equal volumes. That's where the one third comes from.",
+   "idea": true,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "The one third",
+   "opens": null,
+   "start": 837.469,
+   "end": 844.55,
+   "wav": "audio/voice/cba9fb47ef6e11dd.wav"
+  },
+  {
+   "text": "And it reveals something fun.",
+   "idea": false,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "The one third",
+   "opens": null,
+   "start": 845.5,
+   "end": 846.807,
+   "wav": "audio/voice/b6384203b80a388d.wav"
+  },
+  {
+   "text": "With the same base and the same height, the Great Pyramid needs only one third of the stone of a box built on that base.",
+   "idea": false,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "The one third",
+   "opens": null,
+   "start": 847.157,
+   "end": 853.403,
+   "wav": "audio/voice/6950c85625221f5e.wav"
+  },
+  {
+   "text": "That's still about two and a half million cubic meters of stone. But a box would have needed nearly eight million.",
+   "idea": true,
+   "act": "ACT EIGHT \u2014 Volume",
+   "section": "The one third",
+   "opens": null,
+   "start": 853.753,
+   "end": 859.649,
+   "wav": "audio/voice/7dbf3cc6ba823468.wav"
+  },
+  {
+   "text": "Now for the second family of solids, born from rotation.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "Turning a flat shape",
+   "opens": "act",
+   "start": 862.049,
+   "end": 864.508,
+   "wav": "audio/voice/c99b15c21fedf5b4.wav"
+  },
+  {
+   "text": "When a flat shape spins around a fixed axis, it sweeps out a solid of revolution.",
+   "idea": true,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "Turning a flat shape",
+   "opens": null,
+   "start": 864.858,
+   "end": 868.88,
+   "wav": "audio/voice/1026c9a60a4fd94e.wav"
+  },
+  {
+   "text": "The first one is the cylinder. It's what you get when a rectangle spins around one of its sides.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cylinder",
+   "opens": "stop",
+   "start": 870.48,
+   "end": 875.083,
+   "wav": "audio/voice/ae07d88f43aab3aa.wav"
+  },
+  {
+   "text": "Its volume is the area of the base times the height. That's pi times the radius squared, times the height.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cylinder",
+   "opens": null,
+   "start": 875.433,
+   "end": 880.886,
+   "wav": "audio/voice/2b5ba8ace69278a4.wav"
+  },
+  {
+   "text": "It's the same pattern as the prism, because a cylinder really is a prism with a round base.",
+   "idea": true,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cylinder",
+   "opens": null,
+   "start": 881.236,
+   "end": 885.64,
+   "wav": "audio/voice/0095c72a80d205b9.wav"
+  },
+  {
+   "text": "Its curved surface area is the distance around the base times the height. That's two pi times the radius, times the height.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cylinder",
+   "opens": null,
+   "start": 886.59,
+   "end": 892.933,
+   "wav": "audio/voice/fb45817918a754a4.wav"
+  },
+  {
+   "text": "The quickest way to see it is to peel the label off a soda can.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cylinder",
+   "opens": null,
+   "start": 893.283,
+   "end": 896.34,
+   "wav": "audio/voice/c9457b9ff523c2e9.wav"
+  },
+  {
+   "text": "Laid flat, the label is a rectangle. One side is the distance around the can, and the other side is its height.",
+   "idea": true,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cylinder",
+   "opens": null,
+   "start": 896.69,
+   "end": 902.201,
+   "wav": "audio/voice/0393c4fdd9127a83.wav"
+  },
+  {
+   "text": "The second one is the cone. It's what you get when a right triangle spins around one of its two shorter sides.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cone",
+   "opens": "stop",
+   "start": 903.801,
+   "end": 909.176,
+   "wav": "audio/voice/85367c8507670c82.wav"
+  },
+  {
+   "text": "An ice-cream cone, a traffic cone, and a party hat are all cones.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cone",
+   "opens": null,
+   "start": 909.526,
+   "end": 912.475,
+   "wav": "audio/voice/6040954ca3e4cda4.wav"
+  },
+  {
+   "text": "Its volume is one third pi times the radius squared, times the height.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cone",
+   "opens": null,
+   "start": 912.825,
+   "end": 916.344,
+   "wav": "audio/voice/1b4b3402b5fac8d3.wav"
+  },
+  {
+   "text": "The familiar one third is back, because a cone really is a pyramid with a round base.",
+   "idea": true,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cone",
+   "opens": null,
+   "start": 916.694,
+   "end": 920.825,
+   "wav": "audio/voice/d8406e3c7e45fb1c.wav"
+  },
+  {
+   "text": "A cone also has what's called a slant height, the distance from the tip down to any point on the edge of the base.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cone",
+   "opens": null,
+   "start": 921.775,
+   "end": 927.439,
+   "wav": "audio/voice/4040258480032254.wav"
+  },
+  {
+   "text": "The curved surface area is pi times the radius, times the slant height.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cone",
+   "opens": null,
+   "start": 927.789,
+   "end": 931.45,
+   "wav": "audio/voice/ea566139f8b6c134.wav"
+  },
+  {
+   "text": "Unroll the surface of a cone onto flat paper, and you get a sector of a circle, like a slice of pizza.",
+   "idea": true,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The cone",
+   "opens": null,
+   "start": 931.8,
+   "end": 936.64,
+   "wav": "audio/voice/0d3a291278b3aa79.wav"
+  },
+  {
+   "text": "The third one is the sphere. It's what you get when a half-circle spins around its diameter.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The sphere",
+   "opens": "stop",
+   "start": 938.24,
+   "end": 942.783,
+   "wav": "audio/voice/817da2e4301a80e6.wav"
+  },
+  {
+   "text": "A sphere is the set of all points at the same fixed distance from one point, the center. That fixed distance is the radius.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The sphere",
+   "opens": null,
+   "start": 943.133,
+   "end": 949.335,
+   "wav": "audio/voice/3d19e44ffe115850.wav"
+  },
+  {
+   "text": "Its surface area is four pi times the radius squared.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The sphere",
+   "opens": null,
+   "start": 949.685,
+   "end": 952.148,
+   "wav": "audio/voice/d64c66d2405f3c3d.wav"
+  },
+  {
+   "text": "Its volume is four thirds pi times the radius cubed.",
+   "idea": true,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "The sphere",
+   "opens": null,
+   "start": 952.498,
+   "end": 955.043,
+   "wav": "audio/voice/b2a04d44d99fc3b3.wav"
+  },
+  {
+   "text": "There's a lovely story behind these two formulas.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "Archimedes' favorite",
+   "opens": "stop",
+   "start": 956.643,
+   "end": 958.892,
+   "wav": "audio/voice/36153b186e1186f6.wav"
+  },
+  {
+   "text": "Archimedes proved that if you fit a sphere snugly inside a cylinder, the sphere's volume is exactly two thirds of the cylinder's.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "Archimedes' favorite",
+   "opens": null,
+   "start": 959.242,
+   "end": 965.774,
+   "wav": "audio/voice/199ba2f8ff8ba7a8.wav"
+  },
+  {
+   "text": "He was so proud of this that he asked for a sphere inside a cylinder to be carved on his tomb.",
+   "idea": false,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "Archimedes' favorite",
+   "opens": null,
+   "start": 966.124,
+   "end": 970.468,
+   "wav": "audio/voice/2cf72dba8cf42688.wav"
+  },
+  {
+   "text": "And about a hundred and fifty years later, the Roman writer Cicero found an overgrown tomb in Syracuse, recognized it by exactly that carving, and had it cleaned up.",
+   "idea": true,
+   "act": "ACT NINE \u2014 Solids that spin",
+   "section": "Archimedes' favorite",
+   "opens": null,
+   "start": 970.818,
+   "end": 979.548,
+   "wav": "audio/voice/f07af52ad7f10c2f.wav"
+  },
+  {
+   "text": "So that's the whole tour, from three bricks to spinning solids.",
+   "idea": true,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Back to the flat page",
+   "opens": "act",
+   "start": 981.948,
+   "end": 984.955,
+   "wav": "audio/voice/22864329e11b96c9.wav"
+  },
+  {
+   "text": "Before we finish, I want to leave you with a couple of habits that make solid geometry easier.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Back to the flat page",
+   "opens": null,
+   "start": 985.905,
+   "end": 990.487,
+   "wav": "audio/voice/e92ccca70d907afc.wav"
+  },
+  {
+   "text": "The first is to always look for a way to turn the problem in space into a problem on a flat page.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Back to the flat page",
+   "opens": null,
+   "start": 990.837,
+   "end": 995.268,
+   "wav": "audio/voice/ae77d5f6dc3bf594.wav"
+  },
+  {
+   "text": "You may have noticed that throughout this video, every angle and every distance was finally worked out inside a triangle, lying in some plane.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Back to the flat page",
+   "opens": null,
+   "start": 995.618,
+   "end": 1003.266,
+   "wav": "audio/voice/a421d268bff5bc50.wav"
+  },
+  {
+   "text": "So when you're stuck, ask yourself: which triangle contains the thing I need, and which plane of the solid is it lying in?",
+   "idea": true,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Back to the flat page",
+   "opens": null,
+   "start": 1003.616,
+   "end": 1009.894,
+   "wav": "audio/voice/1c2d518c00e90b1d.wav"
+  },
+  {
+   "text": "The second habit is to stop memorizing theorems one by one, because in this subject they link together into a chain.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "A chain, not a list",
+   "opens": "stop",
+   "start": 1011.494,
+   "end": 1017.276,
+   "wav": "audio/voice/68a5671bd96725c4.wav"
+  },
+  {
+   "text": "Where things can be gives us parallel and perpendicular.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "A chain, not a list",
+   "opens": null,
+   "start": 1017.626,
+   "end": 1020.254,
+   "wav": "audio/voice/dda1353413ad6113.wav"
+  },
+  {
+   "text": "Perpendicular gives us angles and distances.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "A chain, not a list",
+   "opens": null,
+   "start": 1020.604,
+   "end": 1022.772,
+   "wav": "audio/voice/a869316975a6b2e9.wav"
+  },
+  {
+   "text": "And distance becomes the height in every volume formula.",
+   "idea": true,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "A chain, not a list",
+   "opens": null,
+   "start": 1023.122,
+   "end": 1025.826,
+   "wav": "audio/voice/c31f1657a633e8bc.wav"
+  },
+  {
+   "text": "So, the three questions.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": "stop",
+   "start": 1027.426,
+   "end": 1028.857,
+   "wav": "audio/voice/b489ed7f6179fc69.wav"
+  },
+  {
+   "text": "What is the subject built on? Three ideas that are never defined, and four simple rules about how they behave.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 1029.207,
+   "end": 1034.699,
+   "wav": "audio/voice/a36ae8e8c557d9a4.wav"
+  },
+  {
+   "text": "How do you measure between things that never touch? You build a triangle in a plane, usually with a perpendicular or a shadow, and then it's flat geometry again.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 1035.049,
+   "end": 1043.408,
+   "wav": "audio/voice/37a03680f0d6bf56.wav"
+  },
+  {
+   "text": "And where does the one third come from? From cutting a prism into three equal pyramids. And it comes back in the cone, for the same reason.",
+   "idea": true,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 1043.758,
+   "end": 1050.511,
+   "wav": "audio/voice/bd3014209f359b6a.wav"
+  },
+  {
+   "text": "You might not remember every theorem and formula after one video, and that's completely fine.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Next time",
+   "opens": "stop",
+   "start": 1052.111,
+   "end": 1056.76,
+   "wav": "audio/voice/0f7b8d8e27fb9e8b.wav"
+  },
+  {
+   "text": "What matters more is that when you look at a problem in space, you know where to start, what relationship to look for, and how to bring it back, step by step, to things you already know.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 1057.11,
+   "end": 1066.49,
+   "wav": "audio/voice/70837802f3ff9191.wav"
+  },
+  {
+   "text": "And next time you sit on a three-legged stool, or look up into the corner of a room, try to see the planes and the lines hiding there.",
+   "idea": true,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 1066.84,
+   "end": 1073.592,
+   "wav": "audio/voice/e69b2902c02a3295.wav"
+  },
+  {
+   "text": "Solid geometry really isn't scary. With a little patience, it can be a lot of fun.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 1074.542,
+   "end": 1078.518,
+   "wav": "audio/voice/4ef8b74aeb4585e9.wav"
+  },
+  {
+   "text": "Thanks for exploring it with me. See you in the next video.",
+   "idea": false,
+   "act": "ACT TEN \u2014 Putting it together",
+   "section": "Next time",
+   "opens": null,
+   "start": 1078.868,
+   "end": 1081.551,
+   "wav": "audio/voice/7cf16295af87a3a8.wav"
+  }
+ ]
+}

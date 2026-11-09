@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8">
+<title>Dữ liệu YouTube: lấy được gì, thiếu gì, lấy thế nào</title>
+<style>
+  @page { size: A4; margin: 15mm 14mm 15mm 14mm; }
+  :root { --ink:#1C2640; --dim:#5B6478; --line:#D9DEE8; --acc:#C8382A; --ok:#1E7A4C; --box:#F4F6FA; --warnbg:#FBEDEB; --okbg:#E9F5EE; --mid:#B7791F; --midbg:#FBF3E4; }
+  body { font-family: "Noto Sans", "DejaVu Sans", sans-serif; color: var(--ink); font-size: 10pt; line-height: 1.48; margin: 0; }
+  h1 { font-size: 20pt; margin: 0 0 1.5mm; }
+  .sub { color: var(--dim); margin: 0 0 5mm; }
+  h2 { font-size: 13pt; margin: 6mm 0 2mm; padding-bottom: 1mm; border-bottom: 2px solid var(--ink); break-after: avoid; }
+  h2 .n { display:inline-block; background: var(--ink); color:#fff; border-radius: 50%; width: 7mm; height: 7mm; line-height: 7mm;
+          text-align:center; font-size: 10.5pt; margin-right: 2mm; }
+  h3 { font-size: 11pt; margin: 4mm 0 1.5mm; break-after: avoid; }
+  ol, ul { margin: 1mm 0 2mm; padding-left: 6mm; }
+  li { margin: 0.6mm 0; }
+  code, .cmd { font-family: "DejaVu Sans Mono", monospace; font-size: 8.6pt; }
+  code { background: var(--box); padding: 0 1mm; border-radius: 2px; }
+  .cmd { display:block; background: var(--ink); color: #F2EEE3; padding: 2mm 3mm; border-radius: 3px; margin: 1.5mm 0; white-space: pre-wrap; }
+  .note { background: var(--box); border-left: 4px solid var(--ink); padding: 2mm 3mm; margin: 2mm 0; break-inside: avoid; }
+  .warn { background: var(--warnbg); border-left: 4px solid var(--acc); padding: 2mm 3mm; margin: 2mm 0; break-inside: avoid; }
+  .good { background: var(--okbg); border-left: 4px solid var(--ok); padding: 2mm 3mm; margin: 2mm 0; break-inside: avoid; }
+  table { border-collapse: collapse; width: 100%; margin: 2mm 0; font-size: 9pt; break-inside: avoid; }
+  td, th { border: 1px solid var(--line); padding: 1.3mm 1.8mm; text-align: left; vertical-align: top; }
+  th { background: var(--box); }
+  .y { color: var(--ok); font-weight: 700; } .x { color: var(--acc); font-weight: 700; } .m { color: var(--mid); font-weight: 700; }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin: 2mm 0; }
+  .card { border: 1px solid var(--line); border-radius: 3px; padding: 2.5mm 3mm; break-inside: avoid; }
+  .card h4 { margin: 0 0 1mm; font-size: 10.5pt; }
+  .card p { margin: 0; font-size: 9pt; color: var(--dim); }
+  .tag { display:inline-block; font-size: 8pt; font-weight: 700; padding: 0 1.5mm; border-radius: 2px; color:#fff; margin-left: 1mm; vertical-align: 1px; }
+  .t-ok { background: var(--ok); } .t-mid { background: var(--mid); } .t-no { background: var(--acc); }
+  .big { font-size: 15pt; font-weight: 700; }
+  .flow { display:flex; align-items: stretch; gap: 1.5mm; margin: 2mm 0; font-size: 8.8pt; }
+  .flow div { flex: 1; border: 1px solid var(--line); border-radius: 3px; padding: 2mm; background: #fff; }
+  .flow .arr { flex: 0 0 4mm; border: 0; background: none; padding: 0; align-self: center; text-align:center; color: var(--dim); }
+  .pb { break-before: page; }
+  .foot { color: var(--dim); font-size: 8pt; margin-top: 5mm; border-top: 1px solid var(--line); padding-top: 2mm; }
+</style></head>
+<body>
+
+<h1>Dữ liệu YouTube: lấy được gì, thiếu gì, lấy thế nào</h1>
+<p class="sub">Cho hai kênh 99の発見 (Nhật) và 99% from scartch (Anh) · 23/10/2026 · kiểm bằng tài liệu Google và <b>gọi thử thật</b> trên kênh Nhật</p>
+
+<h2><span class="n">1</span>Tóm tắt một trang</h2>
+
+<div class="grid">
+  <div class="card"><h4>Data API v3 <span class="tag t-ok">đang dùng</span></h4>
+    <p>Danh sách video, title, mô tả, tags, độ dài, trạng thái, tổng view/like/comment, bình luận. Dùng để <b>ghi</b> bản dịch 10 ngôn ngữ.</p></div>
+  <div class="card"><h4>Analytics API v2 <span class="tag t-ok">đang dùng</span></h4>
+    <p>Gần như mọi số ở tab Overview/Engagement của Studio: views, lượt xem thật, phút xem, giữ chân, nguồn traffic + từ khoá, thiết bị, quốc gia, tuổi/giới. <b>Toàn bộ lịch sử, theo ngày.</b></p></div>
+  <div class="card"><h4>Reporting API <span class="tag t-mid">job tạo 23/10</span></h4>
+    <p><b>Impressions + CTR thumbnail</b> theo ngày × video × nguồn traffic. Chỉ có từ 30 ngày trước ngày tạo job; file giữ 60 ngày → phải tải hằng ngày.</p></div>
+  <div class="card"><h4>YouTube Studio <span class="tag t-no">không có API</span></h4>
+    <p>Người xem duy nhất, mới / quay lại, "khán giả cũng xem", realtime theo giờ, kết quả A/B thumbnail, tab Research. Lấy bằng tay (Export CSV / chụp) hoặc extension.</p></div>
+</div>
+
+<div class="good"><b>Kết luận:</b> API + Reporting API phủ khoảng <b>85–90%</b> số liệu cần để tối ưu, kể cả impressions/CTR.
+Phần còn lại (≈10–15%) chỉ có trong Studio, nhưng là nhóm số liệu <b>về khán giả</b> — quan trọng khi kênh đã có người xem quay lại,
+chưa cấp thiết với kênh mới. Phương án: tự động hoá API hằng ngày, Studio lấy theo tuần, extension làm sau (mục 6).</div>
+
+<div class="warn"><b>Bẫy lớn nhất đã tìm thấy:</b> "views" của YouTube gồm cả lượt <b>tự phát khi lướt trang chủ</b>.
+Video π (Nhật) có 559 views nhưng chỉ <b>85 lượt xem thật</b> (mục 5). Đánh giá video bằng "views" thô sẽ sai.</div>
+
+<h2><span class="n">2</span>Lấy được — Analytics API (đã thử trên kênh Nhật)</h2>
+
+<table style="break-inside:auto">
+<tr><th style="width:22%">Nhóm</th><th>Số liệu</th><th style="width:30%">Dùng để</th></tr>
+<tr><td>Lượt xem</td><td><code>views</code>, <code>engagedViews</code> (xem qua mấy giây đầu) <span class="y">✓</span></td><td>đếm người xem THẬT</td></tr>
+<tr><td>Thời gian xem</td><td>phút xem, thời lượng xem TB, % xem TB <span class="y">✓</span></td><td>thứ YouTube tối ưu</td></tr>
+<tr><td>Giữ chân</td><td>% còn xem tại 100 điểm của video + <b>so với video cùng độ dài</b> (0.5 = trung bình) <span class="y">✓</span></td><td>tìm giây người xem bỏ đi</td></tr>
+<tr><td>Nguồn traffic</td><td>22 loại: trang chủ, gợi ý, tìm kiếm, kênh, Shorts, playlist, ngoài YouTube… <span class="y">✓</span></td><td>YouTube đang đẩy video ở đâu</td></tr>
+<tr><td>Chi tiết nguồn</td><td><b>từ khoá tìm kiếm</b>, <b>video nào dẫn tới</b>, trang web giới thiệu, hashtag <span class="y">✓</span></td><td>người xem muốn gì; mình nằm cạnh video nào</td></tr>
+<tr><td>Nơi phát</td><td>WATCH (bấm vào xem) / BROWSE (tự phát trang chủ) / nhúng <span class="y">✓</span></td><td>tách lượt xem thật khỏi tự phát</td></tr>
+<tr><td>Thiết bị</td><td>điện thoại / máy tính / TV / tablet; Android / iOS / Windows… <span class="y">✓</span></td><td>cỡ chữ, thumbnail cho màn nhỏ</td></tr>
+<tr><td>Khán giả</td><td>quốc gia, thành phố, tuổi × giới tính <span class="m">≈</span> (rỗng khi quá ít view)</td><td>giọng điệu, chủ đề</td></tr>
+<tr><td>Tương tác</td><td>like, comment, share, sub tăng/giảm, thêm vào playlist <span class="y">✓</span></td><td></td></tr>
+<tr><td>Dạng nội dung</td><td>video dài / Shorts / live <span class="y">✓</span></td><td>so Shorts với video dài</td></tr>
+<tr><td>Thời gian</td><td>theo <b>ngày</b> (hoặc tháng), mọi khoảng, toàn lịch sử</td><td>thấy vòng thử của YouTube</td></tr>
+</table>
+
+<h2><span class="n">3</span>Lấy được — Reporting API (impressions + CTR)</h2>
+
+<table style="break-inside:auto">
+<tr><th style="width:32%">Báo cáo</th><th>Số liệu</th><th style="width:34%">Chia theo</th></tr>
+<tr><td><code>channel_reach_basic_a1</code></td><td><b>impressions thumbnail, CTR</b></td><td>ngày × video</td></tr>
+<tr><td><code>channel_reach_combined_a1</code></td><td><b>impressions thumbnail, CTR</b></td><td>ngày × video × <b>nguồn traffic</b> × thiết bị</td></tr>
+<tr><td><code>channel_basic_a3</code></td><td>views, phút xem, sub…</td><td>× <b>đã / chưa đăng ký</b> × quốc gia</td></tr>
+</table>
+<div class="note"><b>Giới hạn:</b> (1) chỉ có số từ <b>30 ngày trước ngày tạo job</b> — kênh Nhật tạo 23/10 nên phủ từ 23/09, đủ cả video đầu (12/10);
+(2) file đầu tiên sau ~48 giờ, sau đó mỗi ngày một file, trễ ~2 ngày; (3) file chỉ giữ <b>60 ngày</b> → phải tải về hằng ngày;
+(4) dòng dưới ~10 view bị gộp (ngưỡng riêng tư).</div>
+
+<h2><span class="n">4</span>Không lấy được qua API — và cách bù</h2>
+
+<table style="break-inside:auto">
+<tr><th style="width:27%">Thiếu</th><th style="width:33%">Vì sao quan trọng</th><th>Cách bù</th></tr>
+<tr><td><b>Người xem duy nhất</b> (unique viewers)</td><td>phân biệt 1 người xem 5 lần với 5 người</td><td>Studio, tab Audience. Tạm thay bằng <code>engagedViews</code></td></tr>
+<tr><td><b>Người xem mới / quay lại / thường xuyên</b></td><td>kênh có giữ được khán giả không</td><td>Studio, tab Audience</td></tr>
+<tr><td><b>"Khán giả cũng xem"</b> (kênh, video khác)</td><td>biết mình đứng cạnh ai trong đề xuất</td><td>Studio — chỉ hiện khi đủ dữ liệu</td></tr>
+<tr><td><b>Realtime theo giờ</b> (48 giờ / 60 phút)</td><td>vòng thử đầu tiên của video mới</td><td>Studio Realtime; API chỉ theo ngày</td></tr>
+<tr><td><b>Kết quả A/B thumbnail</b></td><td>chọn thumbnail bằng số thật</td><td>Studio, khi test xong (ghi tay)</td></tr>
+<tr><td><b>Tab Research</b> (khán giả tìm gì)</td><td>ý tưởng bài mới</td><td>Studio</td></tr>
+<tr><td>Impressions/CTR <b>cũ hơn 30 ngày</b> trước ngày tạo job</td><td>lịch sử video cũ</td><td>Studio → Advanced mode → Export CSV (một lần). Kênh Anh cần làm khi có quyền</td></tr>
+<tr><td>Giữ chân <b>tách theo nơi phát</b></td><td>xem mục 5</td><td>không nơi nào có — chỉ ước lượng</td></tr>
+<tr><td>Đã/chưa đăng ký, thẻ, share theo nền tảng (qua Analytics API)</td><td></td><td>API báo lỗi trên kênh mình → lấy từ Reporting API</td></tr>
+<tr><td>Doanh thu</td><td></td><td>kênh chưa kiếm tiền; cần quyền riêng</td></tr>
+</table>
+
+<div style="break-inside:avoid"><h2><span class="n">5</span>Bẫy "views" — ví dụ thật: video π kênh Nhật</h2>
+
+<table>
+<tr><th>Nơi phát</th><th>Views</th><th>Phút xem</th><th>TB mỗi lượt</th></tr>
+<tr><td>BROWSE — tự phát khi lướt trang chủ</td><td class="big">470</td><td>71</td><td>~9 giây</td></tr>
+<tr><td>WATCH — bấm vào xem</td><td class="big">88</td><td>199</td><td>~2:16</td></tr>
+</table>
+<p>Ba nguồn khớp nhau: <code>engagedViews</code> = <b>85</b>; Studio CTR 2.8% × 2 398 impressions ≈ <b>67 lượt bấm</b>; WATCH = <b>88</b>.
+→ Người xem thật ≈ <b>70–90</b>, không phải 559. Đường giữ chân của API trộn cả lượt tự phát, nên cú rơi ở giây 11–33
+<b>có thể chỉ là autoplay dừng</b> khi người ta lướt qua — chưa đủ để kết luận phần mở đầu dở.</p></div>
+<div class="good"><b>Luật đọc số:</b> đánh giá video bằng <b>lượt xem thật + phút xem WATCH + impressions/CTR</b>, không bằng views thô.
+Mọi con số trong báo cáo ghi rõ nguồn (API / Reporting / Studio + ngày). Thiếu số → ghi "không có", không đoán.</div>
+
+<h2><span class="n">6</span>Phương án đề xuất</h2>
+
+<div class="flow">
+  <div><b>Tầng 1 — tự động hằng ngày</b><br>Analytics API + Reporting API<br><code>pull.py</code>, <code>reporting.py</code><br>≈ 90% số liệu</div>
+  <div class="arr">→</div>
+  <div><b>Kho riêng trên máy</b><br><code>analytics/raw/</code> (nguyên văn)<br><code>analytics/yt.sqlite</code><br>không commit</div>
+  <div class="arr">→</div>
+  <div><b>Báo cáo</b><br>ngày: video mới 48 h<br>tuần: thứ Hai, so 2 kênh<br><code>docs/analytics/weekly/</code></div>
+  <div class="arr">→</div>
+  <div><b>Quyết định</b><br>thí nghiệm ghi <code>EXPERIMENTS.md</code>, chấm sau 7 / 28 ngày → luật vào PACKAGING</div>
+</div>
+
+<h3>Tầng 2 — Studio theo tuần (bằng tay, ~5 phút)</h3>
+<ul>
+  <li>Chụp / ghi: <b>người xem mới / quay lại</b>, <b>"khán giả cũng xem"</b>, kết quả <b>A/B thumbnail</b> đang chạy.</li>
+  <li>Video mới đăng: chụp <b>Realtime</b> ở mốc 2 h, 24 h, 48 h (vòng thử đầu).</li>
+  <li>Một lần duy nhất: Advanced mode → Export CSV impressions/CTR cho video cũ (kênh Anh khi có quyền).</li>
+</ul>
+
+<h3>Tầng 3 — extension Chrome (làm sau, khi tầng 1–2 đã quen)</h3>
+<ul>
+  <li>Chỉ <b>đọc</b> trang Studio bạn đang mở, bấm một nút để lưu JSON vào kho — <b>không</b> tự đăng nhập, tự chuyển trang hay tự bấm thay đổi.</li>
+  <li>Phạm vi nhỏ: đúng 5 thứ ở mục 4 mà API không có. Không làm lại thứ API đã có.</li>
+  <li>Lưu ý: điều khoản YouTube cấm truy cập bằng phương tiện tự động; extension chỉ đọc trang bạn tự mở là rủi ro thấp,
+      nhưng <b>ưu tiên nút Export CSV chính thức của Studio</b> khi có. Không dùng extension bên thứ ba lạ cho kênh của người khác.</li>
+</ul>
+
+<h3>Việc cụ thể theo thứ tự</h3>
+<table style="break-inside:auto">
+<tr><th style="width:6%">#</th><th>Việc</th><th style="width:22%">Khi nào</th><th style="width:20%">Ai</th></tr>
+<tr><td>1</td><td>Kênh Nhật: API + 3 job Reporting</td><td><span class="y">✓ xong 23/10</span></td><td>—</td></tr>
+<tr><td>2</td><td>Kênh Anh: chủ kênh mời vào <b>Brand Account</b> (Manager) → đăng nhập → kéo số + tạo job (+ đẩy bản dịch 10 ngôn ngữ)</td><td>khi có lời mời</td><td>bạn + chủ kênh, rồi mình</td></tr>
+<tr><td>3</td><td>Một lệnh hằng ngày (<code>pull</code> + <code>reporting</code> + nạp sqlite) và <code>report.py</code> báo cáo tuần</td><td>trước 25/10</td><td>mình</td></tr>
+<tr><td>4</td><td>Báo cáo tuần đầu tiên có <b>CTR thật</b> + <code>PLAYBOOK.md</code> (đọc số) + <code>EXPERIMENTS.md</code></td><td>~27/10 (thứ Hai)</td><td>cùng nhau</td></tr>
+<tr><td>5</td><td>Mẫu ghi Studio theo tuần (tầng 2)</td><td>cùng báo cáo tuần đầu</td><td>bạn chụp, mình nạp</td></tr>
+<tr><td>6</td><td>Extension Studio (tầng 3)</td><td>sau 2–3 tuần</td><td>mình viết, bạn cài</td></tr>
+</table>
+
+<div class="note"><b>An toàn:</b> mọi công cụ chỉ <b>đọc</b>. Ghi lên YouTube chỉ có bản dịch title/mô tả (<code>push.py</code>), luôn chạy thử
+<code>--dry-run</code> trước và chờ bạn duyệt. Token nằm ở <code>~/.config/mascot-mv/</code> (chỉ tài khoản máy bạn đọc được), thu hồi bất cứ lúc nào
+tại myaccount.google.com/permissions. Hạn mức API mỗi ngày dư hàng chục lần cho hai kênh.</div>
+
+<p class="foot">Nguồn: developers.google.com/youtube/analytics/metrics, …/dimensions, …/reporting/v1/reports, …/reporting/v1/reports/channel_reports ·
+thử thật: tools/yt/pull.py, kênh 99の発見, 23/10/2026 · chi tiết kỹ thuật: docs/analytics/DATA.md, PLAN.md</p>
+</body></html>

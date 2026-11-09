@@ -1,0 +1,110 @@
+p1 0 0.02 8.83 If you spend enough time on social media, sooner or later you will meet a little sum that looks like nothing special, with thousands of people fighting about it in the comments.
+p1 1 9.28 13.90 The classic one goes like this: six divided by two, times the bracket one plus two. What is it?
+p1 2 14.89 19.00 Half the internet swears the answer is nine. The other half is just as sure it is one.
+p1 3 19.41 24.02 And the funny part is that both sides are confident they followed the very same rule. PEMDAS.
+p1 4 25.07 28.16 You probably learned it in primary school, as the order of operations.
+p1 5 28.59 33.84 Brackets first, then powers, then multiplication and division, and addition and subtraction last of all.
+p1 6 34.88 37.69 So today, we are going to ask where that order actually comes from.
+p1 7 38.10 41.62 Is it an unbreakable truth of mathematics, like one plus one making two?
+p1 8 42.11 47.00 Or is it a rule of the game, something people sat down and agreed on, simply because it was convenient?
+p1 9 48.05 54.24 Here is where I stand. PEMDAS is a convention, made by people. But a convention is not the same thing as an arbitrary choice.
+p1 10 54.67 59.93 And the best evidence that it is a convention, is exactly those sums the internet cannot stop arguing about.
+p1 11 60.32 65.52 To see why, we first have to look at what the rule really says, because a lot of us remember it slightly wrong.
+p2 0 0.02 1.70 PEMDAS is just a string of initials.
+p2 1 2.13 6.01 Parentheses, Exponents, Multiplication, Division, Addition, Subtraction.
+p2 2 6.44 13.14 In Britain they call it BODMAS, in Canada BEDMAS. The letters change a little from country to country, but the idea stays the same.
+p2 3 14.79 16.24 Here is where many people go astray.
+p2 4 16.67 21.51 You see the M before the D, and it is easy to think that multiplication always comes before division.
+p2 5 21.90 26.86 You see the A before the S, and it is easy to think that addition always comes before subtraction.
+p2 6 27.88 29.15 But that is not the rule.
+p2 7 29.56 35.54 Multiplication and division sit on the same level, and you work through them from left to right, whichever comes first.
+p2 8 35.95 39.31 Addition and subtraction share a level too, and they also go from left to right.
+p2 9 40.34 41.86 Take ten minus three plus two.
+p2 10 42.27 48.44 If you believe addition has to come first, you work out three plus two, which is five, and then ten minus five, which is five.
+p2 11 48.83 54.56 But read it from left to right, the way the rule really says. Ten minus three is seven, and seven plus two is nine.
+p2 12 54.95 55.89 The answer is nine.
+p2 13 56.88 58.72 Or take eight divided by four, times two.
+p2 14 59.13 62.38 Left to right, eight divided by four is two, and two times two is four.
+p2 15 62.79 70.06 Do the multiplication first, because the M comes before the D, and you get four times two is eight, then eight divided by eight is one. Wrong again.
+p2 16 71.31 72.70 I start here because it matters.
+p2 17 73.17 77.52 A large share of those online fights happen simply because people misremember the levels.
+p2 18 77.97 85.62 Once you know that multiplication and division are equals, and addition and subtraction are equals, a lot of the famous arguments quietly disappear.
+p2 19 88.08 92.29 So which parts of PEMDAS did people simply decide, with nothing in nature forcing them?
+p2 20 93.97 95.73 The first is reading from left to right.
+p2 21 96.14 102.77 When two operations sit on the same level, like addition and subtraction, we agree to do the left one first. But that is purely a choice.
+p2 22 103.19 109.31 Arabic is written from right to left, and in principle we could just as well have agreed to read our sums in that direction.
+p2 23 109.72 118.67 In fact, someone did. In the nineteen sixties, a programming language called APL was built to read every expression from right to left, with no ladder of priorities at all.
+p2 24 119.08 128.54 And even in ordinary maths, we already break our own habit. Two to the three to the two, a tower of powers, is worked out from the top down. It comes to five hundred and twelve, not sixty-four.
+p2 25 128.99 132.26 No law of nature says an expression must be read from left to right.
+p2 26 133.94 137.45 The second point, and I think the most important one, is the role of brackets.
+p2 27 137.90 138.82 Brackets always win.
+p2 28 139.23 143.20 Want to add before you multiply? Just put the addition in brackets, and you're done.
+p2 29 143.61 149.38 Which means PEMDAS is really the rule for when we get lazy, for when we leave the brackets out to keep things short.
+p2 30 150.05 156.68 If you always wrote every bracket, PEMDAS would be almost useless, because the brackets would already tell you what to do first.
+p2 31 157.69 163.19 In other words, PEMDAS is a rule about how we write and read. It is not a property of the numbers themselves.
+p2 32 165.13 166.44 The third clue is the name itself.
+p2 33 166.91 169.78 PEMDAS, BODMAS, BEDMAS, a different one in every country.
+p2 34 170.23 174.75 The very fact that one rule goes by so many names tells you it is the product of an agreement.
+p2 35 175.66 177.85 It's like choosing which side of the road to drive on.
+p2 36 178.26 183.82 Everyone needs a shared rule, but the particular rule could have been different, and the world would still work.
+p2 37 185.88 189.01 As for when it happened, the history is less tidy than you might expect.
+p2 38 189.66 197.49 Putting multiplication before addition grew up with algebra itself, in the sixteen hundreds, as mathematicians started writing equations in symbols.
+p2 39 197.94 206.76 But the full rule, spelled out in schoolbooks, only settled in around the late eighteen hundreds and early nineteen hundreds, as algebra and printed textbooks spread.
+p2 40 207.15 214.82 And it did not settle quietly. In nineteen seventeen, an American maths journal was already debating whether multiplication should go before division.
+p2 41 215.21 221.93 The catchy names, like PEMDAS, came later still. The rule grew up with our need to write mathematics briefly, and all in the same way.
+p2 42 224.41 228.18 If we stopped at "it's just a convention", we would be a little unfair to PEMDAS.
+p2 43 228.81 233.75 Because out of all the rules we could have picked, the one humanity settled on is a very clever one.
+p2 44 235.39 237.87 Think about why multiplication outranks addition.
+p2 45 238.28 244.02 The reason is polynomials, the things you write all the time in algebra. Take three x squared, plus two x, plus one.
+p2 46 244.41 249.91 With multiplication before addition, you can write that with no brackets at all. It is clean, and easy to read.
+p2 47 250.30 255.23 If addition outranked multiplication, you would need brackets everywhere just to say the same thing.
+p2 48 255.64 259.97 Three x squared in brackets, plus two x in brackets, plus one. Tiring just to look at.
+p2 49 260.96 263.56 There is a deeper reason too, called the distributive law.
+p2 50 264.01 267.03 When you write a times the bracket b plus c, it equals a b plus a c.
+p2 51 267.52 275.18 Giving multiplication the higher priority fits that law perfectly. The way we write things down mirrors the way the operations actually behave.
+p2 52 276.81 279.84 And why do powers sit above multiplication? Picture a ladder.
+p2 53 280.25 284.89 Multiplication is, at heart, repeated addition. Three times four is four, added three times.
+p2 54 285.34 289.88 A power is repeated multiplication. Four cubed is four, multiplied by itself three times.
+p2 55 290.31 297.27 On that ladder, the stronger the operation, the higher it sits, and the earlier it is done. It binds more tightly to the numbers around it.
+p2 56 297.72 300.75 Powers above multiplication, multiplication above addition.
+p2 57 301.74 306.57 The ladder is one way to see why the convention we chose feels so natural, and holds together so well.
+p2 58 308.23 310.05 So I think the fairest way to put it is this.
+p2 59 310.50 317.48 Out of all the conventions we could have invented, PEMDAS is close to the one that lets us write the most common expressions with the fewest brackets.
+p2 60 317.91 321.72 It is tuned for the things people write most, and that is why it feels natural.
+p2 61 322.11 326.99 But that natural feeling comes from convenience. Not from an unbreakable truth of mathematics.
+p2 62 329.47 334.09 Now let's go back to the sum from the start. Six divided by two, times the bracket one plus two.
+p2 63 335.08 339.52 Do the bracket first. One plus two is three, which leaves six divided by two, times three.
+p2 64 339.93 343.60 Multiplication and division are on the same level, so go from left to right.
+p2 65 344.09 347.31 Six divided by two is three, and three times three is nine. Nine.
+p2 66 348.30 350.28 But the people who say one have a point as well.
+p2 67 350.69 356.94 They look at that two pressed right up against the bracket, a multiplication with no sign, just a number touching a bracket.
+p2 68 357.37 366.36 In a lot of handwritten maths, especially in physics and engineering, this kind of glued-on multiplication is quietly treated as stronger than an ordinary division sign.
+p2 69 366.75 371.24 Read that way, two times three comes first, which is six, and six divided by six is one. One.
+p2 70 372.88 374.20 Even calculators can't agree.
+p2 71 374.60 381.63 Older Texas Instruments models gave that glued-on multiplication the higher priority. Later models treat it like any other multiplication.
+p2 72 382.04 383.99 Same company, same keys, different answers.
+p2 73 384.42 390.18 When the people who build calculators can't agree with each other, you know the problem is not about who is smarter.
+p2 74 391.82 395.58 The most honest answer to this sum is that it is badly written. It is ambiguous.
+p2 75 396.01 398.49 A good expression should never make its reader guess.
+p2 76 398.96 402.93 In practice, mathematicians almost never write it this way. They use a fraction bar.
+p2 77 403.44 409.55 Six on top and two times three underneath, or six over two, then times three, whichever they mean, and the argument is over.
+p2 78 410.56 420.94 That little division sign, a dot above and a dot below a line, has been fading out of serious mathematics for a long time. International standards for scientific writing even advise against using it.
+p2 79 421.38 423.10 And this is the point I want to underline.
+p2 80 423.51 431.39 If PEMDAS were an unbreakable truth of mathematics, there could be no expression where two people follow the rule correctly and get two different answers.
+p2 81 431.82 434.92 The fact that such expressions exist shows that the rule has gaps.
+p2 82 437.44 439.95 There is one small example I love, because it says everything.
+p2 83 440.34 447.63 In the usual mathematical convention, minus two squared means: square the two first, then attach the minus sign. So the answer is minus four.
+p2 84 448.08 451.57 But type exactly the same thing into Excel, and Excel gives you plus four.
+p2 85 452.00 458.49 Because Excel was built so that the minus sign holds on tighter than the power. It takes minus two first, and then squares it.
+p2 86 458.93 460.67 Python, on the other hand, says minus four.
+p2 87 461.10 465.44 And JavaScript refuses to answer at all. It stops with an error, and asks you to add brackets.
+p2 88 465.95 471.54 Same expression, different systems, different answers, all because each one ranks the operations its own way.
+p2 89 472.55 479.66 If the order of operations were an unbreakable truth of mathematics, the people who built these programs could not have chosen differently.
+p2 90 481.40 483.49 So here is my answer to the question in the title.
+p2 91 483.88 487.19 PEMDAS is simply how we agreed to read and write mathematics briefly.
+p2 92 487.60 489.67 It is a shortcut. Brackets are the real tool.
+p2 93 490.70 491.82 And the lesson is a simple one.
+p2 94 492.21 498.91 When you write an expression that someone could misread, don't trust that everybody remembers PEMDAS the same way. Just add the brackets.
+p2 95 499.36 502.15 A good expression is one its reader never has to argue about.
+p2 96 503.24 504.84 Thank you for watching all the way to the end.
+p2 97 505.60 510.30 If you enjoyed this video, subscribe to the channel so you don't miss the next one. See you soon.

@@ -1,0 +1,988 @@
+{
+ "duration": 510.693,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "PEMDAS is just a string of initials.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The letters",
+   "opens": "act",
+   "start": 0.0,
+   "end": 1.764,
+   "wav": "audio/voice/52357c048c68d361.wav"
+  },
+  {
+   "text": "Parentheses, Exponents, Multiplication, Division, Addition, Subtraction.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The letters",
+   "opens": null,
+   "start": 2.114,
+   "end": 6.069,
+   "wav": "audio/voice/f694f0192370eb20.wav"
+  },
+  {
+   "text": "In Britain they call it BODMAS, in Canada BEDMAS. The letters change a little from country to country, but the idea stays the same.",
+   "idea": true,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The letters",
+   "opens": null,
+   "start": 6.419,
+   "end": 13.166,
+   "wav": "audio/voice/641eefa06b5adefc.wav"
+  },
+  {
+   "text": "Here is where many people go astray.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": "stop",
+   "start": 14.766,
+   "end": 16.296,
+   "wav": "audio/voice/5ea1d2ced7f50807.wav"
+  },
+  {
+   "text": "You see the M before the D, and it is easy to think that multiplication always comes before division.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 16.646,
+   "end": 21.528,
+   "wav": "audio/voice/a1dda79e4d59d0e4.wav"
+  },
+  {
+   "text": "You see the A before the S, and it is easy to think that addition always comes before subtraction.",
+   "idea": true,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 21.878,
+   "end": 26.905,
+   "wav": "audio/voice/65b37cca810164cc.wav"
+  },
+  {
+   "text": "But that is not the rule.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 27.855,
+   "end": 29.191,
+   "wav": "audio/voice/6bcdc03e0a6e3da7.wav"
+  },
+  {
+   "text": "Multiplication and division sit on the same level, and you work through them from left to right, whichever comes first.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 29.541,
+   "end": 35.578,
+   "wav": "audio/voice/c9e28de2a137f072.wav"
+  },
+  {
+   "text": "Addition and subtraction share a level too, and they also go from left to right.",
+   "idea": true,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 35.928,
+   "end": 39.368,
+   "wav": "audio/voice/f6bd4516452f4c3e.wav"
+  },
+  {
+   "text": "Take ten minus three plus two.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 40.318,
+   "end": 41.901,
+   "wav": "audio/voice/e94d6d827876661b.wav"
+  },
+  {
+   "text": "If you believe addition has to come first, you work out three plus two, which is five, and then ten minus five, which is five.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 42.251,
+   "end": 48.458,
+   "wav": "audio/voice/4cbabf9ac5351014.wav"
+  },
+  {
+   "text": "But read it from left to right, the way the rule really says. Ten minus three is seven, and seven plus two is nine.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 48.808,
+   "end": 54.578,
+   "wav": "audio/voice/2220783f234279eb.wav"
+  },
+  {
+   "text": "The answer is nine.",
+   "idea": true,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 54.928,
+   "end": 55.914,
+   "wav": "audio/voice/c92691a28aea1241.wav"
+  },
+  {
+   "text": "Or take eight divided by four, times two.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 56.864,
+   "end": 58.758,
+   "wav": "audio/voice/986cb0f0c4bec418.wav"
+  },
+  {
+   "text": "Left to right, eight divided by four is two, and two times two is four.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 59.108,
+   "end": 62.423,
+   "wav": "audio/voice/fcbefabd9058c8ca.wav"
+  },
+  {
+   "text": "Do the multiplication first, because the M comes before the D, and you get four times two is eight, then eight divided by eight is one. Wrong again.",
+   "idea": true,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 62.773,
+   "end": 70.096,
+   "wav": "audio/voice/c2f5342aa3251f65.wav"
+  },
+  {
+   "text": "I start here because it matters.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 71.046,
+   "end": 72.761,
+   "wav": "audio/voice/2754157e8c41ca2f.wav"
+  },
+  {
+   "text": "A large share of those online fights happen simply because people misremember the levels.",
+   "idea": false,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 73.111,
+   "end": 77.596,
+   "wav": "audio/voice/b6deb158c6716cbe.wav"
+  },
+  {
+   "text": "Once you know that multiplication and division are equals, and addition and subtraction are equals, a lot of the famous arguments quietly disappear.",
+   "idea": true,
+   "act": "ACT ONE \u2014 What PEMDAS really says",
+   "section": "The part almost everyone gets wrong",
+   "opens": null,
+   "start": 77.946,
+   "end": 85.656,
+   "wav": "audio/voice/9df4b1fc967630f9.wav"
+  },
+  {
+   "text": "So which parts of PEMDAS did people simply decide, with nothing in nature forcing them?",
+   "idea": true,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "The part almost everyone gets wrong",
+   "opens": "act",
+   "start": 88.056,
+   "end": 92.348,
+   "wav": "audio/voice/b6f9fbed9ba30258.wav"
+  },
+  {
+   "text": "The first is reading from left to right.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Left to right",
+   "opens": "stop",
+   "start": 93.948,
+   "end": 95.767,
+   "wav": "audio/voice/80dff65b9b57c70d.wav"
+  },
+  {
+   "text": "When two operations sit on the same level, like addition and subtraction, we agree to do the left one first. But that is purely a choice.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Left to right",
+   "opens": null,
+   "start": 96.117,
+   "end": 102.815,
+   "wav": "audio/voice/8a8dca4ad815b066.wav"
+  },
+  {
+   "text": "Arabic is written from right to left, and in principle we could just as well have agreed to read our sums in that direction.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Left to right",
+   "opens": null,
+   "start": 103.165,
+   "end": 109.354,
+   "wav": "audio/voice/d3d69ce65ccb89de.wav"
+  },
+  {
+   "text": "In fact, someone did. In the nineteen sixties, a programming language called APL was built to read every expression from right to left, with no ladder of priorities at all.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Left to right",
+   "opens": null,
+   "start": 109.704,
+   "end": 118.709,
+   "wav": "audio/voice/2f9ea9ba2294e921.wav"
+  },
+  {
+   "text": "And even in ordinary maths, we already break our own habit. Two to the three to the two, a tower of powers, is worked out from the top down. It comes to five hundred and twelve, not sixty-four.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Left to right",
+   "opens": null,
+   "start": 119.059,
+   "end": 128.622,
+   "wav": "audio/voice/c7cf6d0b287d5911.wav"
+  },
+  {
+   "text": "No law of nature says an expression must be read from left to right.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Left to right",
+   "opens": null,
+   "start": 128.972,
+   "end": 132.319,
+   "wav": "audio/voice/6ae16d2888d71f1e.wav"
+  },
+  {
+   "text": "The second point, and I think the most important one, is the role of brackets.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Brackets beat everything",
+   "opens": "stop",
+   "start": 133.919,
+   "end": 137.531,
+   "wav": "audio/voice/d76f0b4505198111.wav"
+  },
+  {
+   "text": "Brackets always win.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Brackets beat everything",
+   "opens": null,
+   "start": 137.881,
+   "end": 138.86,
+   "wav": "audio/voice/1d13b2f8fced5894.wav"
+  },
+  {
+   "text": "Want to add before you multiply? Just put the addition in brackets, and you're done.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Brackets beat everything",
+   "opens": null,
+   "start": 139.21,
+   "end": 143.241,
+   "wav": "audio/voice/1e7d8ad10e877554.wav"
+  },
+  {
+   "text": "Which means PEMDAS is really the rule for when we get lazy, for when we leave the brackets out to keep things short.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Brackets beat everything",
+   "opens": null,
+   "start": 143.591,
+   "end": 149.418,
+   "wav": "audio/voice/5f4aa36f7a3fb9c2.wav"
+  },
+  {
+   "text": "If you always wrote every bracket, PEMDAS would be almost useless, because the brackets would already tell you what to do first.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Brackets beat everything",
+   "opens": null,
+   "start": 149.768,
+   "end": 156.724,
+   "wav": "audio/voice/95ad160b0756b501.wav"
+  },
+  {
+   "text": "In other words, PEMDAS is a rule about how we write and read. It is not a property of the numbers themselves.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Brackets beat everything",
+   "opens": null,
+   "start": 157.674,
+   "end": 163.23,
+   "wav": "audio/voice/cdb5ecdeb2e75cb8.wav"
+  },
+  {
+   "text": "The third clue is the name itself.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Many names, one agreement",
+   "opens": "stop",
+   "start": 164.83,
+   "end": 166.536,
+   "wav": "audio/voice/0fc6cfd7baf55511.wav"
+  },
+  {
+   "text": "PEMDAS, BODMAS, BEDMAS, a different one in every country.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Many names, one agreement",
+   "opens": null,
+   "start": 166.886,
+   "end": 169.857,
+   "wav": "audio/voice/c9d27863f1c0f234.wav"
+  },
+  {
+   "text": "The very fact that one rule goes by so many names tells you it is the product of an agreement.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Many names, one agreement",
+   "opens": null,
+   "start": 170.207,
+   "end": 174.806,
+   "wav": "audio/voice/1fde24a6d5933277.wav"
+  },
+  {
+   "text": "It's like choosing which side of the road to drive on.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Many names, one agreement",
+   "opens": null,
+   "start": 175.156,
+   "end": 177.895,
+   "wav": "audio/voice/cd8aad8c60bcfdc3.wav"
+  },
+  {
+   "text": "Everyone needs a shared rule, but the particular rule could have been different, and the world would still work.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "Many names, one agreement",
+   "opens": null,
+   "start": 178.245,
+   "end": 183.897,
+   "wav": "audio/voice/f802f6196297892e.wav"
+  },
+  {
+   "text": "As for when it happened, the history is less tidy than you might expect.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "When it was agreed",
+   "opens": "stop",
+   "start": 185.497,
+   "end": 189.294,
+   "wav": "audio/voice/207231ea10166a21.wav"
+  },
+  {
+   "text": "Putting multiplication before addition grew up with algebra itself, in the sixteen hundreds, as mathematicians started writing equations in symbols.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "When it was agreed",
+   "opens": null,
+   "start": 189.644,
+   "end": 197.57,
+   "wav": "audio/voice/b6cba2b4b1d42f67.wav"
+  },
+  {
+   "text": "But the full rule, spelled out in schoolbooks, only settled in around the late eighteen hundreds and early nineteen hundreds, as algebra and printed textbooks spread.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "When it was agreed",
+   "opens": null,
+   "start": 197.92,
+   "end": 206.78,
+   "wav": "audio/voice/ececc51797c97784.wav"
+  },
+  {
+   "text": "And it did not settle quietly. In nineteen seventeen, an American maths journal was already debating whether multiplication should go before division.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "When it was agreed",
+   "opens": null,
+   "start": 207.13,
+   "end": 214.844,
+   "wav": "audio/voice/fb1c44d794a76d9f.wav"
+  },
+  {
+   "text": "The catchy names, like PEMDAS, came later still. The rule grew up with our need to write mathematics briefly, and all in the same way.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The part that really is just a choice",
+   "section": "When it was agreed",
+   "opens": null,
+   "start": 215.194,
+   "end": 221.992,
+   "wav": "audio/voice/1986e2e58ab95f1e.wav"
+  },
+  {
+   "text": "If we stopped at \"it's just a convention\", we would be a little unfair to PEMDAS.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "When it was agreed",
+   "opens": "act",
+   "start": 224.392,
+   "end": 228.235,
+   "wav": "audio/voice/64d2350c2243be05.wav"
+  },
+  {
+   "text": "Because out of all the rules we could have picked, the one humanity settled on is a very clever one.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "When it was agreed",
+   "opens": null,
+   "start": 228.585,
+   "end": 233.769,
+   "wav": "audio/voice/6f1ef035ec2f6802.wav"
+  },
+  {
+   "text": "Think about why multiplication outranks addition.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Why multiply before you add",
+   "opens": "stop",
+   "start": 235.369,
+   "end": 237.909,
+   "wav": "audio/voice/501a219febb2b1e8.wav"
+  },
+  {
+   "text": "The reason is polynomials, the things you write all the time in algebra. Take three x squared, plus two x, plus one.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Why multiply before you add",
+   "opens": null,
+   "start": 238.259,
+   "end": 244.042,
+   "wav": "audio/voice/512b9aa86e1f804f.wav"
+  },
+  {
+   "text": "With multiplication before addition, you can write that with no brackets at all. It is clean, and easy to read.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Why multiply before you add",
+   "opens": null,
+   "start": 244.392,
+   "end": 249.929,
+   "wav": "audio/voice/cdb0975f93c27e82.wav"
+  },
+  {
+   "text": "If addition outranked multiplication, you would need brackets everywhere just to say the same thing.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Why multiply before you add",
+   "opens": null,
+   "start": 250.279,
+   "end": 255.27,
+   "wav": "audio/voice/51c09c5b410775a9.wav"
+  },
+  {
+   "text": "Three x squared in brackets, plus two x in brackets, plus one. Tiring just to look at.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Why multiply before you add",
+   "opens": null,
+   "start": 255.62,
+   "end": 259.991,
+   "wav": "audio/voice/731aef7f22a52068.wav"
+  },
+  {
+   "text": "There is a deeper reason too, called the distributive law.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Why multiply before you add",
+   "opens": null,
+   "start": 260.941,
+   "end": 263.645,
+   "wav": "audio/voice/4bd8e474aedeee24.wav"
+  },
+  {
+   "text": "When you write a times the bracket b plus c, it equals a b plus a c.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Why multiply before you add",
+   "opens": null,
+   "start": 263.995,
+   "end": 267.148,
+   "wav": "audio/voice/72d901413d932a27.wav"
+  },
+  {
+   "text": "Giving multiplication the higher priority fits that law perfectly. The way we write things down mirrors the way the operations actually behave.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Why multiply before you add",
+   "opens": null,
+   "start": 267.498,
+   "end": 275.195,
+   "wav": "audio/voice/cf0a0d26bd84e02c.wav"
+  },
+  {
+   "text": "And why do powers sit above multiplication? Picture a ladder.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "The ladder",
+   "opens": "stop",
+   "start": 276.795,
+   "end": 279.877,
+   "wav": "audio/voice/977ec4046fddc4af.wav"
+  },
+  {
+   "text": "Multiplication is, at heart, repeated addition. Three times four is four, added three times.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "The ladder",
+   "opens": null,
+   "start": 280.227,
+   "end": 284.927,
+   "wav": "audio/voice/8c0ac00aeda451af.wav"
+  },
+  {
+   "text": "A power is repeated multiplication. Four cubed is four, multiplied by itself three times.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "The ladder",
+   "opens": null,
+   "start": 285.277,
+   "end": 289.942,
+   "wav": "audio/voice/8d5f680e92a22281.wav"
+  },
+  {
+   "text": "On that ladder, the stronger the operation, the higher it sits, and the earlier it is done. It binds more tightly to the numbers around it.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "The ladder",
+   "opens": null,
+   "start": 290.292,
+   "end": 297.346,
+   "wav": "audio/voice/b180a9a13229cee1.wav"
+  },
+  {
+   "text": "Powers above multiplication, multiplication above addition.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "The ladder",
+   "opens": null,
+   "start": 297.696,
+   "end": 300.766,
+   "wav": "audio/voice/a0cf196c34982962.wav"
+  },
+  {
+   "text": "The ladder is one way to see why the convention we chose feels so natural, and holds together so well.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "The ladder",
+   "opens": null,
+   "start": 301.716,
+   "end": 306.609,
+   "wav": "audio/voice/71d00614a7095728.wav"
+  },
+  {
+   "text": "So I think the fairest way to put it is this.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Convenient, not inevitable",
+   "opens": "stop",
+   "start": 308.209,
+   "end": 310.131,
+   "wav": "audio/voice/8443d4bf5aec4bfd.wav"
+  },
+  {
+   "text": "Out of all the conventions we could have invented, PEMDAS is close to the one that lets us write the most common expressions with the fewest brackets.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Convenient, not inevitable",
+   "opens": null,
+   "start": 310.481,
+   "end": 317.542,
+   "wav": "audio/voice/0ce96fe43c36d8a3.wav"
+  },
+  {
+   "text": "It is tuned for the things people write most, and that is why it feels natural.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Convenient, not inevitable",
+   "opens": null,
+   "start": 317.892,
+   "end": 321.739,
+   "wav": "audio/voice/0c707d368db9f1f1.wav"
+  },
+  {
+   "text": "But that natural feeling comes from convenience. Not from an unbreakable truth of mathematics.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Not an arbitrary choice",
+   "section": "Convenient, not inevitable",
+   "opens": null,
+   "start": 322.089,
+   "end": 327.053,
+   "wav": "audio/voice/5575df2750bcad33.wav"
+  },
+  {
+   "text": "Now let's go back to the sum from the start. Six divided by two, times the bracket one plus two.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Back to the viral sum",
+   "opens": "act",
+   "start": 329.453,
+   "end": 334.115,
+   "wav": "audio/voice/882945f4bfe01790.wav"
+  },
+  {
+   "text": "Do the bracket first. One plus two is three, which leaves six divided by two, times three.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Back to the viral sum",
+   "opens": null,
+   "start": 335.065,
+   "end": 339.561,
+   "wav": "audio/voice/cb70d098a8232ff8.wav"
+  },
+  {
+   "text": "Multiplication and division are on the same level, so go from left to right.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Back to the viral sum",
+   "opens": null,
+   "start": 339.911,
+   "end": 343.641,
+   "wav": "audio/voice/192eb425b783d4ec.wav"
+  },
+  {
+   "text": "Six divided by two is three, and three times three is nine. Nine.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Back to the viral sum",
+   "opens": null,
+   "start": 343.991,
+   "end": 347.327,
+   "wav": "audio/voice/6dbfb4be795401d7.wav"
+  },
+  {
+   "text": "But the people who say one have a point as well.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Back to the viral sum",
+   "opens": null,
+   "start": 348.277,
+   "end": 350.324,
+   "wav": "audio/voice/3bd6053df82cdfa6.wav"
+  },
+  {
+   "text": "They look at that two pressed right up against the bracket, a multiplication with no sign, just a number touching a bracket.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Back to the viral sum",
+   "opens": null,
+   "start": 350.674,
+   "end": 357.0,
+   "wav": "audio/voice/f640ba073817499c.wav"
+  },
+  {
+   "text": "In a lot of handwritten maths, especially in physics and engineering, this kind of glued-on multiplication is quietly treated as stronger than an ordinary division sign.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Back to the viral sum",
+   "opens": null,
+   "start": 357.35,
+   "end": 366.384,
+   "wav": "audio/voice/193e175c904ac530.wav"
+  },
+  {
+   "text": "Read that way, two times three comes first, which is six, and six divided by six is one. One.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Back to the viral sum",
+   "opens": null,
+   "start": 366.734,
+   "end": 371.264,
+   "wav": "audio/voice/f5f94d7e5d2378f6.wav"
+  },
+  {
+   "text": "Even calculators can't agree.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Even the calculators disagree",
+   "opens": "stop",
+   "start": 372.864,
+   "end": 374.226,
+   "wav": "audio/voice/47394830a6a2f789.wav"
+  },
+  {
+   "text": "Older Texas Instruments models gave that glued-on multiplication the higher priority. Later models treat it like any other multiplication.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Even the calculators disagree",
+   "opens": null,
+   "start": 374.576,
+   "end": 381.672,
+   "wav": "audio/voice/f37275e593280eb6.wav"
+  },
+  {
+   "text": "Same company, same keys, different answers.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Even the calculators disagree",
+   "opens": null,
+   "start": 382.022,
+   "end": 384.051,
+   "wav": "audio/voice/40ed6354631b63e9.wav"
+  },
+  {
+   "text": "When the people who build calculators can't agree with each other, you know the problem is not about who is smarter.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "Even the calculators disagree",
+   "opens": null,
+   "start": 384.401,
+   "end": 390.201,
+   "wav": "audio/voice/992058b39e379b30.wav"
+  },
+  {
+   "text": "The most honest answer to this sum is that it is badly written. It is ambiguous.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "The honest answer",
+   "opens": "stop",
+   "start": 391.801,
+   "end": 395.64,
+   "wav": "audio/voice/682208cc832f854f.wav"
+  },
+  {
+   "text": "A good expression should never make its reader guess.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "The honest answer",
+   "opens": null,
+   "start": 395.99,
+   "end": 398.588,
+   "wav": "audio/voice/112281756f223d2f.wav"
+  },
+  {
+   "text": "In practice, mathematicians almost never write it this way. They use a fraction bar.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "The honest answer",
+   "opens": null,
+   "start": 398.938,
+   "end": 402.991,
+   "wav": "audio/voice/aef8a5f5a7c8b128.wav"
+  },
+  {
+   "text": "Six on top and two times three underneath, or six over two, then times three, whichever they mean, and the argument is over.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "The honest answer",
+   "opens": null,
+   "start": 403.341,
+   "end": 409.586,
+   "wav": "audio/voice/6147054333baec10.wav"
+  },
+  {
+   "text": "That little division sign, a dot above and a dot below a line, has been fading out of serious mathematics for a long time. International standards for scientific writing even advise against using it.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "The honest answer",
+   "opens": null,
+   "start": 410.536,
+   "end": 420.965,
+   "wav": "audio/voice/c86652fadaec2c5a.wav"
+  },
+  {
+   "text": "And this is the point I want to underline.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "The honest answer",
+   "opens": null,
+   "start": 421.315,
+   "end": 423.142,
+   "wav": "audio/voice/f594027ca787dfcd.wav"
+  },
+  {
+   "text": "If PEMDAS were an unbreakable truth of mathematics, there could be no expression where two people follow the rule correctly and get two different answers.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "The honest answer",
+   "opens": null,
+   "start": 423.492,
+   "end": 431.452,
+   "wav": "audio/voice/cbda527dfc7d4b18.wav"
+  },
+  {
+   "text": "The fact that such expressions exist shows that the rule has gaps.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Where the convention runs out",
+   "section": "The honest answer",
+   "opens": null,
+   "start": 431.802,
+   "end": 435.018,
+   "wav": "audio/voice/8051fe1766e366c1.wav"
+  },
+  {
+   "text": "There is one small example I love, because it says everything.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "Minus two squared",
+   "opens": "act",
+   "start": 437.418,
+   "end": 439.968,
+   "wav": "audio/voice/d9caae1f47da693a.wav"
+  },
+  {
+   "text": "In the usual mathematical convention, minus two squared means: square the two first, then attach the minus sign. So the answer is minus four.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "Minus two squared",
+   "opens": null,
+   "start": 440.318,
+   "end": 447.709,
+   "wav": "audio/voice/30212f37fcb63179.wav"
+  },
+  {
+   "text": "But type exactly the same thing into Excel, and Excel gives you plus four.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "Minus two squared",
+   "opens": null,
+   "start": 448.059,
+   "end": 451.627,
+   "wav": "audio/voice/bab7a0e4623ec77b.wav"
+  },
+  {
+   "text": "Because Excel was built so that the minus sign holds on tighter than the power. It takes minus two first, and then squares it.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "Minus two squared",
+   "opens": null,
+   "start": 451.977,
+   "end": 458.555,
+   "wav": "audio/voice/c4e287d1543b3c6b.wav"
+  },
+  {
+   "text": "Python, on the other hand, says minus four.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "Minus two squared",
+   "opens": null,
+   "start": 458.905,
+   "end": 460.733,
+   "wav": "audio/voice/3deab770cb2711d8.wav"
+  },
+  {
+   "text": "And JavaScript refuses to answer at all. It stops with an error, and asks you to add brackets.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "Minus two squared",
+   "opens": null,
+   "start": 461.083,
+   "end": 465.578,
+   "wav": "audio/voice/b7981c60bca3ac50.wav"
+  },
+  {
+   "text": "Same expression, different systems, different answers, all because each one ranks the operations its own way.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "Minus two squared",
+   "opens": null,
+   "start": 465.928,
+   "end": 471.579,
+   "wav": "audio/voice/ea459c5674bd365d.wav"
+  },
+  {
+   "text": "If the order of operations were an unbreakable truth of mathematics, the people who built these programs could not have chosen differently.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "Minus two squared",
+   "opens": null,
+   "start": 472.529,
+   "end": 479.716,
+   "wav": "audio/voice/59cc34d9291df210.wav"
+  },
+  {
+   "text": "So here is my answer to the question in the title.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "The answer",
+   "opens": "stop",
+   "start": 481.316,
+   "end": 483.513,
+   "wav": "audio/voice/47eec6f709c542ee.wav"
+  },
+  {
+   "text": "PEMDAS is simply how we agreed to read and write mathematics briefly.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "The answer",
+   "opens": null,
+   "start": 483.863,
+   "end": 487.229,
+   "wav": "audio/voice/d602a65d2e9ead9c.wav"
+  },
+  {
+   "text": "It is a shortcut. Brackets are the real tool.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "The answer",
+   "opens": null,
+   "start": 487.579,
+   "end": 489.727,
+   "wav": "audio/voice/325b538d78986a4a.wav"
+  },
+  {
+   "text": "And the lesson is a simple one.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "The answer",
+   "opens": null,
+   "start": 490.677,
+   "end": 491.841,
+   "wav": "audio/voice/c4ad4ed39f86ecdb.wav"
+  },
+  {
+   "text": "When you write an expression that someone could misread, don't trust that everybody remembers PEMDAS the same way. Just add the brackets.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "The answer",
+   "opens": null,
+   "start": 492.191,
+   "end": 498.991,
+   "wav": "audio/voice/cb48fe6a3d3d42b6.wav"
+  },
+  {
+   "text": "A good expression is one its reader never has to argue about.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "The answer",
+   "opens": null,
+   "start": 499.341,
+   "end": 502.209,
+   "wav": "audio/voice/91e7813491f211c6.wav"
+  },
+  {
+   "text": "Thank you for watching all the way to the end.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "The answer",
+   "opens": null,
+   "start": 503.159,
+   "end": 504.905,
+   "wav": "audio/voice/68f0d722151e0fa3.wav"
+  },
+  {
+   "text": "If you enjoyed this video, subscribe to the channel so you don't miss the next one. See you soon.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 So, natural, or agreed?",
+   "section": "The answer",
+   "opens": null,
+   "start": 505.255,
+   "end": 510.343,
+   "wav": "audio/voice/cb8ce78b22eff680.wav"
+  }
+ ]
+}

@@ -1,0 +1,2032 @@
+{
+ "sections": [
+  {
+   "name": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "start": 0.02,
+   "end": 50.116
+  },
+  {
+   "name": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "start": 50.116,
+   "end": 96.103
+  }
+ ],
+ "lines": [
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "The first mathematical invention was not a formula.",
+   "idea": false,
+   "start": 0.02,
+   "end": 2.417,
+   "words": [
+    {
+     "w": "the",
+     "start": 0.02,
+     "end": 0.081,
+     "conf": 0.627
+    },
+    {
+     "w": "first",
+     "start": 0.121,
+     "end": 0.363,
+     "conf": 0.998
+    },
+    {
+     "w": "mathematical",
+     "start": 0.443,
+     "end": 1.048,
+     "conf": 0.895
+    },
+    {
+     "w": "invention",
+     "start": 1.108,
+     "end": 1.551,
+     "conf": 0.887
+    },
+    {
+     "w": "was",
+     "start": 1.612,
+     "end": 1.712,
+     "conf": 0.999
+    },
+    {
+     "w": "not",
+     "start": 1.773,
+     "end": 1.873,
+     "conf": 0.884
+    },
+    {
+     "w": "a",
+     "start": 1.934,
+     "end": 1.954,
+     "conf": 0.003
+    },
+    {
+     "w": "formula",
+     "start": 2.014,
+     "end": 2.417,
+     "conf": 0.857
+    }
+   ]
+  },
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "It was just a scratch, carved into a bone.",
+   "idea": true,
+   "start": 2.828,
+   "end": 4.745,
+   "words": [
+    {
+     "w": "it",
+     "start": 2.828,
+     "end": 2.869,
+     "conf": 0.843
+    },
+    {
+     "w": "was",
+     "start": 2.889,
+     "end": 2.949,
+     "conf": 0.978
+    },
+    {
+     "w": "just",
+     "start": 2.969,
+     "end": 3.131,
+     "conf": 0.956
+    },
+    {
+     "w": "a",
+     "start": 3.151,
+     "end": 3.171,
+     "conf": 0.845
+    },
+    {
+     "w": "scratch",
+     "start": 3.252,
+     "end": 3.696,
+     "conf": 0.92
+    },
+    {
+     "w": "carved",
+     "start": 3.958,
+     "end": 4.18,
+     "conf": 0.671
+    },
+    {
+     "w": "into",
+     "start": 4.2,
+     "end": 4.341,
+     "conf": 0.988
+    },
+    {
+     "w": "a",
+     "start": 4.402,
+     "end": 4.422,
+     "conf": 0.331
+    },
+    {
+     "w": "bone",
+     "start": 4.483,
+     "end": 4.745,
+     "conf": 0.726
+    }
+   ]
+  },
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "In the Czech Republic, archaeologists found a wolf bone with notches cut into it, about thirty thousand years old.",
+   "idea": false,
+   "start": 5.735,
+   "end": 11.293,
+   "words": [
+    {
+     "w": "in",
+     "start": 5.735,
+     "end": 5.795,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 5.815,
+     "end": 5.876,
+     "conf": 0.996
+    },
+    {
+     "w": "czech",
+     "start": 5.896,
+     "end": 6.076,
+     "conf": 0.572
+    },
+    {
+     "w": "republic",
+     "start": 6.116,
+     "end": 6.518,
+     "conf": 1.0
+    },
+    {
+     "w": "archaeologists",
+     "start": 6.839,
+     "end": 7.42,
+     "conf": 0.774
+    },
+    {
+     "w": "found",
+     "start": 7.44,
+     "end": 7.621,
+     "conf": 0.942
+    },
+    {
+     "w": "a",
+     "start": 7.641,
+     "end": 7.661,
+     "conf": 0.998
+    },
+    {
+     "w": "wolf",
+     "start": 7.741,
+     "end": 7.902,
+     "conf": 0.699
+    },
+    {
+     "w": "bone",
+     "start": 8.002,
+     "end": 8.223,
+     "conf": 0.739
+    },
+    {
+     "w": "with",
+     "start": 8.243,
+     "end": 8.343,
+     "conf": 0.988
+    },
+    {
+     "w": "notches",
+     "start": 8.403,
+     "end": 8.704,
+     "conf": 0.536
+    },
+    {
+     "w": "cut",
+     "start": 8.785,
+     "end": 9.005,
+     "conf": 0.627
+    },
+    {
+     "w": "into",
+     "start": 9.086,
+     "end": 9.266,
+     "conf": 0.75
+    },
+    {
+     "w": "it",
+     "start": 9.407,
+     "end": 9.447,
+     "conf": 0.5
+    },
+    {
+     "w": "about",
+     "start": 9.788,
+     "end": 9.988,
+     "conf": 0.798
+    },
+    {
+     "w": "thirty",
+     "start": 10.009,
+     "end": 10.33,
+     "conf": 0.044
+    },
+    {
+     "w": "thousand",
+     "start": 10.35,
+     "end": 10.771,
+     "conf": 0.105
+    },
+    {
+     "w": "years",
+     "start": 10.831,
+     "end": 11.032,
+     "conf": 0.804
+    },
+    {
+     "w": "old",
+     "start": 11.192,
+     "end": 11.293,
+     "conf": 0.635
+    }
+   ]
+  },
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "And in nineteen fifty, in central Africa, they found a baboon bone covered in notches arranged in groups, about twenty thousand years old.",
+   "idea": false,
+   "start": 11.702,
+   "end": 18.683,
+   "words": [
+    {
+     "w": "and",
+     "start": 11.702,
+     "end": 11.802,
+     "conf": 0.998
+    },
+    {
+     "w": "in",
+     "start": 11.822,
+     "end": 11.883,
+     "conf": 0.998
+    },
+    {
+     "w": "nineteen",
+     "start": 11.903,
+     "end": 12.264,
+     "conf": 0.003
+    },
+    {
+     "w": "fifty",
+     "start": 12.284,
+     "end": 12.645,
+     "conf": 0.006
+    },
+    {
+     "w": "in",
+     "start": 12.785,
+     "end": 12.825,
+     "conf": 0.496
+    },
+    {
+     "w": "central",
+     "start": 12.886,
+     "end": 13.146,
+     "conf": 0.858
+    },
+    {
+     "w": "africa",
+     "start": 13.206,
+     "end": 13.527,
+     "conf": 0.834
+    },
+    {
+     "w": "they",
+     "start": 13.547,
+     "end": 14.189,
+     "conf": 0.75
+    },
+    {
+     "w": "found",
+     "start": 14.209,
+     "end": 14.43,
+     "conf": 0.998
+    },
+    {
+     "w": "a",
+     "start": 14.45,
+     "end": 14.47,
+     "conf": 0.997
+    },
+    {
+     "w": "baboon",
+     "start": 14.591,
+     "end": 15.092,
+     "conf": 0.639
+    },
+    {
+     "w": "bone",
+     "start": 15.212,
+     "end": 15.533,
+     "conf": 0.627
+    },
+    {
+     "w": "covered",
+     "start": 15.614,
+     "end": 15.834,
+     "conf": 0.847
+    },
+    {
+     "w": "in",
+     "start": 15.854,
+     "end": 15.914,
+     "conf": 0.863
+    },
+    {
+     "w": "notches",
+     "start": 15.955,
+     "end": 16.255,
+     "conf": 0.805
+    },
+    {
+     "w": "arranged",
+     "start": 16.275,
+     "end": 16.596,
+     "conf": 0.986
+    },
+    {
+     "w": "in",
+     "start": 16.617,
+     "end": 16.677,
+     "conf": 0.997
+    },
+    {
+     "w": "groups",
+     "start": 16.737,
+     "end": 17.018,
+     "conf": 0.833
+    },
+    {
+     "w": "about",
+     "start": 17.419,
+     "end": 17.579,
+     "conf": 0.757
+    },
+    {
+     "w": "twenty",
+     "start": 17.599,
+     "end": 17.86,
+     "conf": 0.225
+    },
+    {
+     "w": "thousand",
+     "start": 17.88,
+     "end": 18.221,
+     "conf": 0.163
+    },
+    {
+     "w": "years",
+     "start": 18.241,
+     "end": 18.442,
+     "conf": 0.82
+    },
+    {
+     "w": "old",
+     "start": 18.602,
+     "end": 18.683,
+     "conf": 0.55
+    }
+   ]
+  },
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "It is called the Ishango bone.",
+   "idea": true,
+   "start": 19.113,
+   "end": 20.473,
+   "words": [
+    {
+     "w": "it",
+     "start": 19.113,
+     "end": 19.174,
+     "conf": 0.994
+    },
+    {
+     "w": "is",
+     "start": 19.215,
+     "end": 19.296,
+     "conf": 0.964
+    },
+    {
+     "w": "called",
+     "start": 19.357,
+     "end": 19.54,
+     "conf": 0.807
+    },
+    {
+     "w": "the",
+     "start": 19.56,
+     "end": 19.661,
+     "conf": 0.696
+    },
+    {
+     "w": "ishango",
+     "start": 19.682,
+     "end": 20.128,
+     "conf": 0.758
+    },
+    {
+     "w": "bone",
+     "start": 20.23,
+     "end": 20.473,
+     "conf": 0.619
+    }
+   ]
+  },
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "It sounds simple, doesn't it? But this may be the biggest leap of all.",
+   "idea": false,
+   "start": 21.484,
+   "end": 24.395,
+   "words": [
+    {
+     "w": "it",
+     "start": 21.484,
+     "end": 21.544,
+     "conf": 0.662
+    },
+    {
+     "w": "sounds",
+     "start": 21.564,
+     "end": 21.805,
+     "conf": 0.816
+    },
+    {
+     "w": "simple",
+     "start": 21.906,
+     "end": 22.167,
+     "conf": 0.821
+    },
+    {
+     "w": "doesn't",
+     "start": 22.207,
+     "end": 22.428,
+     "conf": 0.75
+    },
+    {
+     "w": "it",
+     "start": 22.448,
+     "end": 22.528,
+     "conf": 0.657
+    },
+    {
+     "w": "but",
+     "start": 22.749,
+     "end": 22.809,
+     "conf": 0.339
+    },
+    {
+     "w": "this",
+     "start": 22.829,
+     "end": 22.97,
+     "conf": 0.96
+    },
+    {
+     "w": "may",
+     "start": 23.07,
+     "end": 23.191,
+     "conf": 0.785
+    },
+    {
+     "w": "be",
+     "start": 23.291,
+     "end": 23.331,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 23.411,
+     "end": 23.472,
+     "conf": 0.342
+    },
+    {
+     "w": "biggest",
+     "start": 23.572,
+     "end": 23.853,
+     "conf": 0.856
+    },
+    {
+     "w": "leap",
+     "start": 23.933,
+     "end": 24.074,
+     "conf": 0.674
+    },
+    {
+     "w": "of",
+     "start": 24.094,
+     "end": 24.174,
+     "conf": 0.665
+    },
+    {
+     "w": "all",
+     "start": 24.275,
+     "end": 24.395,
+     "conf": 0.74
+    }
+   ]
+  },
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "Because for the first time, people pulled the quantity apart from the things being counted.",
+   "idea": false,
+   "start": 24.785,
+   "end": 29.385,
+   "words": [
+    {
+     "w": "because",
+     "start": 24.785,
+     "end": 25.026,
+     "conf": 0.972
+    },
+    {
+     "w": "for",
+     "start": 25.046,
+     "end": 25.127,
+     "conf": 0.846
+    },
+    {
+     "w": "the",
+     "start": 25.147,
+     "end": 25.227,
+     "conf": 0.748
+    },
+    {
+     "w": "first",
+     "start": 25.287,
+     "end": 25.548,
+     "conf": 0.814
+    },
+    {
+     "w": "time",
+     "start": 25.609,
+     "end": 25.89,
+     "conf": 0.993
+    },
+    {
+     "w": "people",
+     "start": 26.412,
+     "end": 26.633,
+     "conf": 0.795
+    },
+    {
+     "w": "pulled",
+     "start": 26.673,
+     "end": 26.834,
+     "conf": 0.435
+    },
+    {
+     "w": "the",
+     "start": 26.854,
+     "end": 26.915,
+     "conf": 0.029
+    },
+    {
+     "w": "quantity",
+     "start": 26.935,
+     "end": 27.377,
+     "conf": 0.944
+    },
+    {
+     "w": "apart",
+     "start": 27.517,
+     "end": 27.959,
+     "conf": 0.831
+    },
+    {
+     "w": "from",
+     "start": 28.039,
+     "end": 28.14,
+     "conf": 0.75
+    },
+    {
+     "w": "the",
+     "start": 28.16,
+     "end": 28.24,
+     "conf": 0.886
+    },
+    {
+     "w": "things",
+     "start": 28.301,
+     "end": 28.562,
+     "conf": 0.855
+    },
+    {
+     "w": "being",
+     "start": 28.642,
+     "end": 28.843,
+     "conf": 0.822
+    },
+    {
+     "w": "counted",
+     "start": 28.923,
+     "end": 29.385,
+     "conf": 0.855
+    }
+   ]
+  },
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "Before, three sheep were simply three sheep.",
+   "idea": false,
+   "start": 29.796,
+   "end": 31.845,
+   "words": [
+    {
+     "w": "before",
+     "start": 29.796,
+     "end": 30.077,
+     "conf": 0.95
+    },
+    {
+     "w": "three",
+     "start": 30.258,
+     "end": 30.439,
+     "conf": 0.748
+    },
+    {
+     "w": "sheep",
+     "start": 30.539,
+     "end": 30.72,
+     "conf": 0.774
+    },
+    {
+     "w": "were",
+     "start": 30.74,
+     "end": 30.901,
+     "conf": 0.681
+    },
+    {
+     "w": "simply",
+     "start": 30.921,
+     "end": 31.182,
+     "conf": 0.938
+    },
+    {
+     "w": "three",
+     "start": 31.403,
+     "end": 31.604,
+     "conf": 0.793
+    },
+    {
+     "w": "sheep",
+     "start": 31.664,
+     "end": 31.845,
+     "conf": 0.762
+    }
+   ]
+  },
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "After the notches, three sheep, three days, and three moons could all be written the same way: three marks.",
+   "idea": true,
+   "start": 32.315,
+   "end": 37.553,
+   "words": [
+    {
+     "w": "after",
+     "start": 32.315,
+     "end": 32.496,
+     "conf": 0.791
+    },
+    {
+     "w": "the",
+     "start": 32.516,
+     "end": 32.576,
+     "conf": 0.994
+    },
+    {
+     "w": "notches",
+     "start": 32.596,
+     "end": 32.998,
+     "conf": 0.904
+    },
+    {
+     "w": "three",
+     "start": 33.379,
+     "end": 33.559,
+     "conf": 0.999
+    },
+    {
+     "w": "sheep",
+     "start": 33.62,
+     "end": 33.82,
+     "conf": 0.999
+    },
+    {
+     "w": "three",
+     "start": 33.84,
+     "end": 34.041,
+     "conf": 0.83
+    },
+    {
+     "w": "days",
+     "start": 34.061,
+     "end": 34.302,
+     "conf": 1.0
+    },
+    {
+     "w": "and",
+     "start": 34.362,
+     "end": 34.422,
+     "conf": 0.661
+    },
+    {
+     "w": "three",
+     "start": 34.443,
+     "end": 34.643,
+     "conf": 0.995
+    },
+    {
+     "w": "moons",
+     "start": 34.683,
+     "end": 34.944,
+     "conf": 0.822
+    },
+    {
+     "w": "could",
+     "start": 35.025,
+     "end": 35.145,
+     "conf": 0.602
+    },
+    {
+     "w": "all",
+     "start": 35.285,
+     "end": 35.426,
+     "conf": 0.665
+    },
+    {
+     "w": "be",
+     "start": 35.506,
+     "end": 35.546,
+     "conf": 0.5
+    },
+    {
+     "w": "written",
+     "start": 35.627,
+     "end": 35.847,
+     "conf": 0.844
+    },
+    {
+     "w": "the",
+     "start": 35.908,
+     "end": 35.968,
+     "conf": 0.364
+    },
+    {
+     "w": "same",
+     "start": 35.988,
+     "end": 36.209,
+     "conf": 0.8
+    },
+    {
+     "w": "way",
+     "start": 36.229,
+     "end": 36.409,
+     "conf": 0.75
+    },
+    {
+     "w": "three",
+     "start": 36.871,
+     "end": 37.092,
+     "conf": 0.801
+    },
+    {
+     "w": "marks",
+     "start": 37.152,
+     "end": 37.553,
+     "conf": 0.798
+    }
+   ]
+  },
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "That is the jump from counting things to the idea of number itself.",
+   "idea": false,
+   "start": 38.583,
+   "end": 41.655,
+   "words": [
+    {
+     "w": "that",
+     "start": 38.583,
+     "end": 38.683,
+     "conf": 0.249
+    },
+    {
+     "w": "is",
+     "start": 38.704,
+     "end": 38.804,
+     "conf": 0.661
+    },
+    {
+     "w": "the",
+     "start": 38.824,
+     "end": 38.904,
+     "conf": 0.744
+    },
+    {
+     "w": "jump",
+     "start": 38.985,
+     "end": 39.185,
+     "conf": 0.739
+    },
+    {
+     "w": "from",
+     "start": 39.306,
+     "end": 39.426,
+     "conf": 0.749
+    },
+    {
+     "w": "counting",
+     "start": 39.507,
+     "end": 39.888,
+     "conf": 0.874
+    },
+    {
+     "w": "things",
+     "start": 39.908,
+     "end": 40.23,
+     "conf": 0.872
+    },
+    {
+     "w": "to",
+     "start": 40.29,
+     "end": 40.37,
+     "conf": 0.994
+    },
+    {
+     "w": "the",
+     "start": 40.39,
+     "end": 40.471,
+     "conf": 0.966
+    },
+    {
+     "w": "idea",
+     "start": 40.591,
+     "end": 40.792,
+     "conf": 0.747
+    },
+    {
+     "w": "of",
+     "start": 40.892,
+     "end": 40.932,
+     "conf": 0.497
+    },
+    {
+     "w": "number",
+     "start": 41.013,
+     "end": 41.234,
+     "conf": 0.842
+    },
+    {
+     "w": "itself",
+     "start": 41.254,
+     "end": 41.655,
+     "conf": 0.851
+    }
+   ]
+  },
+  {
+   "section": "About 30,000 years ago \u2014 a scratch on a bone",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "And in a sense, all of mathematics since then is that same move, made again and again: pulling the idea away from the stuff.",
+   "idea": true,
+   "start": 42.126,
+   "end": 48.071,
+   "words": [
+    {
+     "w": "and",
+     "start": 42.126,
+     "end": 42.266,
+     "conf": 0.75
+    },
+    {
+     "w": "in",
+     "start": 42.326,
+     "end": 42.366,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 42.386,
+     "end": 42.406,
+     "conf": 0.998
+    },
+    {
+     "w": "sense",
+     "start": 42.526,
+     "end": 42.807,
+     "conf": 0.697
+    },
+    {
+     "w": "all",
+     "start": 42.927,
+     "end": 43.007,
+     "conf": 0.64
+    },
+    {
+     "w": "of",
+     "start": 43.027,
+     "end": 43.087,
+     "conf": 0.993
+    },
+    {
+     "w": "mathematics",
+     "start": 43.107,
+     "end": 43.667,
+     "conf": 0.862
+    },
+    {
+     "w": "since",
+     "start": 43.687,
+     "end": 43.948,
+     "conf": 0.833
+    },
+    {
+     "w": "then",
+     "start": 44.068,
+     "end": 44.248,
+     "conf": 0.749
+    },
+    {
+     "w": "is",
+     "start": 44.348,
+     "end": 44.408,
+     "conf": 0.498
+    },
+    {
+     "w": "that",
+     "start": 44.428,
+     "end": 44.568,
+     "conf": 0.8
+    },
+    {
+     "w": "same",
+     "start": 44.648,
+     "end": 44.808,
+     "conf": 0.749
+    },
+    {
+     "w": "move",
+     "start": 44.828,
+     "end": 45.068,
+     "conf": 1.0
+    },
+    {
+     "w": "made",
+     "start": 45.449,
+     "end": 45.649,
+     "conf": 0.749
+    },
+    {
+     "w": "again",
+     "start": 45.729,
+     "end": 46.009,
+     "conf": 0.817
+    },
+    {
+     "w": "and",
+     "start": 46.049,
+     "end": 46.109,
+     "conf": 0.441
+    },
+    {
+     "w": "again",
+     "start": 46.129,
+     "end": 46.39,
+     "conf": 0.922
+    },
+    {
+     "w": "pulling",
+     "start": 46.55,
+     "end": 46.79,
+     "conf": 0.867
+    },
+    {
+     "w": "the",
+     "start": 46.81,
+     "end": 46.89,
+     "conf": 0.998
+    },
+    {
+     "w": "idea",
+     "start": 47.05,
+     "end": 47.25,
+     "conf": 0.749
+    },
+    {
+     "w": "away",
+     "start": 47.37,
+     "end": 47.531,
+     "conf": 0.75
+    },
+    {
+     "w": "from",
+     "start": 47.611,
+     "end": 47.711,
+     "conf": 0.75
+    },
+    {
+     "w": "the",
+     "start": 47.731,
+     "end": 47.811,
+     "conf": 0.749
+    },
+    {
+     "w": "stuff",
+     "start": 47.891,
+     "end": 48.071,
+     "conf": 0.763
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "But notches have a problem.",
+   "idea": false,
+   "start": 50.116,
+   "end": 51.23,
+   "words": [
+    {
+     "w": "but",
+     "start": 50.116,
+     "end": 50.217,
+     "conf": 0.995
+    },
+    {
+     "w": "notches",
+     "start": 50.278,
+     "end": 50.602,
+     "conf": 0.53
+    },
+    {
+     "w": "have",
+     "start": 50.663,
+     "end": 50.784,
+     "conf": 0.756
+    },
+    {
+     "w": "a",
+     "start": 50.804,
+     "end": 50.825,
+     "conf": 0.983
+    },
+    {
+     "w": "problem",
+     "start": 50.865,
+     "end": 51.23,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "If you need to record four hundred and thirty-seven sheep, you can't carve four hundred and thirty-seven lines.",
+   "idea": true,
+   "start": 51.64,
+   "end": 57.246,
+   "words": [
+    {
+     "w": "if",
+     "start": 51.64,
+     "end": 51.72,
+     "conf": 1.0
+    },
+    {
+     "w": "you",
+     "start": 51.76,
+     "end": 51.86,
+     "conf": 0.993
+    },
+    {
+     "w": "need",
+     "start": 51.9,
+     "end": 52.061,
+     "conf": 1.0
+    },
+    {
+     "w": "to",
+     "start": 52.121,
+     "end": 52.181,
+     "conf": 0.998
+    },
+    {
+     "w": "record",
+     "start": 52.241,
+     "end": 52.661,
+     "conf": 0.831
+    },
+    {
+     "w": "four",
+     "start": 52.681,
+     "end": 52.901,
+     "conf": 0.0
+    },
+    {
+     "w": "hundred",
+     "start": 52.921,
+     "end": 53.222,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 53.242,
+     "end": 53.322,
+     "conf": 0.032
+    },
+    {
+     "w": "thirty-seven",
+     "start": 53.342,
+     "end": 53.883,
+     "conf": 0.022
+    },
+    {
+     "w": "sheep",
+     "start": 53.983,
+     "end": 54.163,
+     "conf": 0.799
+    },
+    {
+     "w": "you",
+     "start": 54.183,
+     "end": 54.583,
+     "conf": 0.741
+    },
+    {
+     "w": "can't",
+     "start": 54.643,
+     "end": 54.884,
+     "conf": 0.714
+    },
+    {
+     "w": "carve",
+     "start": 54.984,
+     "end": 55.424,
+     "conf": 0.678
+    },
+    {
+     "w": "four",
+     "start": 55.444,
+     "end": 55.685,
+     "conf": 0.0
+    },
+    {
+     "w": "hundred",
+     "start": 55.705,
+     "end": 55.965,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 55.985,
+     "end": 56.085,
+     "conf": 0.005
+    },
+    {
+     "w": "thirty-seven",
+     "start": 56.105,
+     "end": 56.686,
+     "conf": 0.004
+    },
+    {
+     "w": "lines",
+     "start": 56.906,
+     "end": 57.246,
+     "conf": 0.535
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "About five thousand years ago, the Sumerians of Mesopotamia invented the first written numerals.",
+   "idea": false,
+   "start": 58.639,
+   "end": 63.337,
+   "words": [
+    {
+     "w": "about",
+     "start": 58.639,
+     "end": 58.839,
+     "conf": 0.997
+    },
+    {
+     "w": "five",
+     "start": 58.88,
+     "end": 59.141,
+     "conf": 0.708
+    },
+    {
+     "w": "thousand",
+     "start": 59.161,
+     "end": 59.502,
+     "conf": 0.743
+    },
+    {
+     "w": "years",
+     "start": 59.542,
+     "end": 59.763,
+     "conf": 0.833
+    },
+    {
+     "w": "ago",
+     "start": 59.783,
+     "end": 59.924,
+     "conf": 0.993
+    },
+    {
+     "w": "the",
+     "start": 60.205,
+     "end": 60.265,
+     "conf": 0.406
+    },
+    {
+     "w": "sumerians",
+     "start": 60.345,
+     "end": 60.827,
+     "conf": 0.698
+    },
+    {
+     "w": "of",
+     "start": 60.847,
+     "end": 60.908,
+     "conf": 0.997
+    },
+    {
+     "w": "mesopotamia",
+     "start": 60.968,
+     "end": 61.63,
+     "conf": 0.88
+    },
+    {
+     "w": "invented",
+     "start": 61.731,
+     "end": 62.112,
+     "conf": 0.874
+    },
+    {
+     "w": "the",
+     "start": 62.132,
+     "end": 62.213,
+     "conf": 0.744
+    },
+    {
+     "w": "first",
+     "start": 62.313,
+     "end": 62.554,
+     "conf": 0.799
+    },
+    {
+     "w": "written",
+     "start": 62.574,
+     "end": 62.835,
+     "conf": 0.836
+    },
+    {
+     "w": "numerals",
+     "start": 62.916,
+     "end": 63.337,
+     "conf": 0.907
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "One sign for one, another for ten, and another for sixty.",
+   "idea": false,
+   "start": 63.807,
+   "end": 66.195,
+   "words": [
+    {
+     "w": "one",
+     "start": 63.807,
+     "end": 63.908,
+     "conf": 0.661
+    },
+    {
+     "w": "sign",
+     "start": 63.948,
+     "end": 64.108,
+     "conf": 0.508
+    },
+    {
+     "w": "for",
+     "start": 64.128,
+     "end": 64.208,
+     "conf": 0.738
+    },
+    {
+     "w": "one",
+     "start": 64.329,
+     "end": 64.449,
+     "conf": 0.601
+    },
+    {
+     "w": "another",
+     "start": 64.57,
+     "end": 64.81,
+     "conf": 0.964
+    },
+    {
+     "w": "for",
+     "start": 64.83,
+     "end": 64.931,
+     "conf": 0.862
+    },
+    {
+     "w": "ten",
+     "start": 65.011,
+     "end": 65.232,
+     "conf": 0.628
+    },
+    {
+     "w": "and",
+     "start": 65.372,
+     "end": 65.432,
+     "conf": 0.586
+    },
+    {
+     "w": "another",
+     "start": 65.452,
+     "end": 65.713,
+     "conf": 0.938
+    },
+    {
+     "w": "for",
+     "start": 65.733,
+     "end": 65.834,
+     "conf": 0.765
+    },
+    {
+     "w": "sixty",
+     "start": 65.914,
+     "end": 66.195,
+     "conf": 0.71
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "They counted in base sixty, not base ten.",
+   "idea": true,
+   "start": 66.625,
+   "end": 68.554,
+   "words": [
+    {
+     "w": "they",
+     "start": 66.625,
+     "end": 66.705,
+     "conf": 0.002
+    },
+    {
+     "w": "counted",
+     "start": 66.726,
+     "end": 67.007,
+     "conf": 0.98
+    },
+    {
+     "w": "in",
+     "start": 67.067,
+     "end": 67.107,
+     "conf": 0.389
+    },
+    {
+     "w": "base",
+     "start": 67.147,
+     "end": 67.348,
+     "conf": 0.751
+    },
+    {
+     "w": "sixty",
+     "start": 67.369,
+     "end": 67.71,
+     "conf": 0.272
+    },
+    {
+     "w": "not",
+     "start": 67.871,
+     "end": 67.991,
+     "conf": 0.795
+    },
+    {
+     "w": "base",
+     "start": 68.072,
+     "end": 68.293,
+     "conf": 0.589
+    },
+    {
+     "w": "ten",
+     "start": 68.313,
+     "end": 68.554,
+     "conf": 0.094
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "Why sixty?",
+   "idea": false,
+   "start": 69.584,
+   "end": 70.258,
+   "words": [
+    {
+     "w": "why",
+     "start": 69.584,
+     "end": 69.707,
+     "conf": 0.115
+    },
+    {
+     "w": "sixty",
+     "start": 69.85,
+     "end": 70.258,
+     "conf": 0.483
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "Because sixty divides evenly by two, three, four, five, six, ten, twelve, fifteen, twenty, and thirty.",
+   "idea": false,
+   "start": 70.689,
+   "end": 75.45,
+   "words": [
+    {
+     "w": "because",
+     "start": 70.689,
+     "end": 70.89,
+     "conf": 0.562
+    },
+    {
+     "w": "sixty",
+     "start": 70.91,
+     "end": 71.151,
+     "conf": 0.818
+    },
+    {
+     "w": "divides",
+     "start": 71.171,
+     "end": 71.553,
+     "conf": 0.809
+    },
+    {
+     "w": "evenly",
+     "start": 71.633,
+     "end": 71.915,
+     "conf": 0.809
+    },
+    {
+     "w": "by",
+     "start": 72.015,
+     "end": 72.115,
+     "conf": 0.504
+    },
+    {
+     "w": "two",
+     "start": 72.216,
+     "end": 72.377,
+     "conf": 0.397
+    },
+    {
+     "w": "three",
+     "start": 72.397,
+     "end": 72.618,
+     "conf": 0.254
+    },
+    {
+     "w": "four",
+     "start": 72.638,
+     "end": 72.819,
+     "conf": 0.048
+    },
+    {
+     "w": "five",
+     "start": 72.839,
+     "end": 73.18,
+     "conf": 0.035
+    },
+    {
+     "w": "six",
+     "start": 73.2,
+     "end": 73.441,
+     "conf": 0.102
+    },
+    {
+     "w": "ten",
+     "start": 73.461,
+     "end": 73.763,
+     "conf": 0.066
+    },
+    {
+     "w": "twelve",
+     "start": 73.783,
+     "end": 74.225,
+     "conf": 0.007
+    },
+    {
+     "w": "fifteen",
+     "start": 74.245,
+     "end": 74.687,
+     "conf": 0.003
+    },
+    {
+     "w": "twenty",
+     "start": 74.707,
+     "end": 74.968,
+     "conf": 0.005
+    },
+    {
+     "w": "and",
+     "start": 74.988,
+     "end": 75.109,
+     "conf": 0.166
+    },
+    {
+     "w": "thirty",
+     "start": 75.129,
+     "end": 75.45,
+     "conf": 0.054
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "That makes it wonderful for sharing out land, grain, and time.",
+   "idea": true,
+   "start": 75.881,
+   "end": 78.963,
+   "words": [
+    {
+     "w": "that",
+     "start": 75.881,
+     "end": 75.962,
+     "conf": 0.249
+    },
+    {
+     "w": "makes",
+     "start": 75.982,
+     "end": 76.143,
+     "conf": 0.874
+    },
+    {
+     "w": "it",
+     "start": 76.203,
+     "end": 76.244,
+     "conf": 0.498
+    },
+    {
+     "w": "wonderful",
+     "start": 76.344,
+     "end": 76.687,
+     "conf": 0.887
+    },
+    {
+     "w": "for",
+     "start": 76.747,
+     "end": 76.828,
+     "conf": 0.662
+    },
+    {
+     "w": "sharing",
+     "start": 76.929,
+     "end": 77.231,
+     "conf": 0.721
+    },
+    {
+     "w": "out",
+     "start": 77.311,
+     "end": 77.412,
+     "conf": 0.665
+    },
+    {
+     "w": "land",
+     "start": 77.513,
+     "end": 77.815,
+     "conf": 0.755
+    },
+    {
+     "w": "grain",
+     "start": 77.895,
+     "end": 78.238,
+     "conf": 0.739
+    },
+    {
+     "w": "and",
+     "start": 78.439,
+     "end": 78.54,
+     "conf": 0.643
+    },
+    {
+     "w": "time",
+     "start": 78.621,
+     "end": 78.963,
+     "conf": 0.627
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "And here is the fun part: Sumer is still alive in your daily life.",
+   "idea": false,
+   "start": 79.953,
+   "end": 82.944,
+   "words": [
+    {
+     "w": "and",
+     "start": 79.953,
+     "end": 80.033,
+     "conf": 0.994
+    },
+    {
+     "w": "here",
+     "start": 80.074,
+     "end": 80.194,
+     "conf": 0.73
+    },
+    {
+     "w": "is",
+     "start": 80.214,
+     "end": 80.274,
+     "conf": 0.975
+    },
+    {
+     "w": "the",
+     "start": 80.314,
+     "end": 80.375,
+     "conf": 0.985
+    },
+    {
+     "w": "fun",
+     "start": 80.395,
+     "end": 80.595,
+     "conf": 0.652
+    },
+    {
+     "w": "part",
+     "start": 80.676,
+     "end": 80.917,
+     "conf": 0.582
+    },
+    {
+     "w": "sumer",
+     "start": 81.198,
+     "end": 81.458,
+     "conf": 0.542
+    },
+    {
+     "w": "is",
+     "start": 81.479,
+     "end": 81.539,
+     "conf": 0.844
+    },
+    {
+     "w": "still",
+     "start": 81.559,
+     "end": 81.719,
+     "conf": 0.977
+    },
+    {
+     "w": "alive",
+     "start": 81.739,
+     "end": 82.121,
+     "conf": 0.996
+    },
+    {
+     "w": "in",
+     "start": 82.141,
+     "end": 82.201,
+     "conf": 0.997
+    },
+    {
+     "w": "your",
+     "start": 82.221,
+     "end": 82.342,
+     "conf": 0.937
+    },
+    {
+     "w": "daily",
+     "start": 82.402,
+     "end": 82.643,
+     "conf": 0.724
+    },
+    {
+     "w": "life",
+     "start": 82.723,
+     "end": 82.944,
+     "conf": 0.747
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "An hour has sixty minutes, a minute has sixty seconds, and a full circle has three hundred and sixty degrees, which is six times sixty.",
+   "idea": false,
+   "start": 83.434,
+   "end": 90.082,
+   "words": [
+    {
+     "w": "an",
+     "start": 83.434,
+     "end": 83.494,
+     "conf": 0.85
+    },
+    {
+     "w": "hour",
+     "start": 83.554,
+     "end": 83.754,
+     "conf": 0.826
+    },
+    {
+     "w": "has",
+     "start": 83.814,
+     "end": 83.955,
+     "conf": 0.982
+    },
+    {
+     "w": "sixty",
+     "start": 84.055,
+     "end": 84.275,
+     "conf": 0.648
+    },
+    {
+     "w": "minutes",
+     "start": 84.335,
+     "end": 84.615,
+     "conf": 0.681
+    },
+    {
+     "w": "a",
+     "start": 84.896,
+     "end": 84.916,
+     "conf": 0.001
+    },
+    {
+     "w": "minute",
+     "start": 85.016,
+     "end": 85.296,
+     "conf": 0.696
+    },
+    {
+     "w": "has",
+     "start": 85.376,
+     "end": 85.496,
+     "conf": 0.734
+    },
+    {
+     "w": "sixty",
+     "start": 85.576,
+     "end": 85.797,
+     "conf": 0.525
+    },
+    {
+     "w": "seconds",
+     "start": 85.897,
+     "end": 86.217,
+     "conf": 0.734
+    },
+    {
+     "w": "and",
+     "start": 86.437,
+     "end": 86.497,
+     "conf": 0.662
+    },
+    {
+     "w": "a",
+     "start": 86.518,
+     "end": 86.538,
+     "conf": 0.997
+    },
+    {
+     "w": "full",
+     "start": 86.638,
+     "end": 86.758,
+     "conf": 0.724
+    },
+    {
+     "w": "circle",
+     "start": 86.838,
+     "end": 87.178,
+     "conf": 0.809
+    },
+    {
+     "w": "has",
+     "start": 87.298,
+     "end": 87.439,
+     "conf": 0.688
+    },
+    {
+     "w": "three",
+     "start": 87.459,
+     "end": 87.659,
+     "conf": 0.003
+    },
+    {
+     "w": "hundred",
+     "start": 87.679,
+     "end": 87.919,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 87.939,
+     "end": 88.019,
+     "conf": 0.001
+    },
+    {
+     "w": "sixty",
+     "start": 88.039,
+     "end": 88.32,
+     "conf": 0.008
+    },
+    {
+     "w": "degrees",
+     "start": 88.4,
+     "end": 88.8,
+     "conf": 0.481
+    },
+    {
+     "w": "which",
+     "start": 88.98,
+     "end": 89.1,
+     "conf": 0.615
+    },
+    {
+     "w": "is",
+     "start": 89.12,
+     "end": 89.201,
+     "conf": 0.959
+    },
+    {
+     "w": "six",
+     "start": 89.281,
+     "end": 89.401,
+     "conf": 0.597
+    },
+    {
+     "w": "times",
+     "start": 89.521,
+     "end": 89.761,
+     "conf": 0.606
+    },
+    {
+     "w": "sixty",
+     "start": 89.821,
+     "end": 90.082,
+     "conf": 0.511
+    }
+   ]
+  },
+  {
+   "section": "About 3000 BC \u2014 Sumer",
+   "act": "ACT ONE \u2014 Counting",
+   "text": "So every time you check a clock, you are using an invention that is five thousand years old.",
+   "idea": true,
+   "start": 90.512,
+   "end": 95.114,
+   "words": [
+    {
+     "w": "so",
+     "start": 90.512,
+     "end": 90.592,
+     "conf": 0.998
+    },
+    {
+     "w": "every",
+     "start": 90.713,
+     "end": 90.854,
+     "conf": 0.998
+    },
+    {
+     "w": "time",
+     "start": 90.934,
+     "end": 91.115,
+     "conf": 0.751
+    },
+    {
+     "w": "you",
+     "start": 91.135,
+     "end": 91.215,
+     "conf": 0.995
+    },
+    {
+     "w": "check",
+     "start": 91.276,
+     "end": 91.436,
+     "conf": 0.716
+    },
+    {
+     "w": "a",
+     "start": 91.497,
+     "end": 91.517,
+     "conf": 0.005
+    },
+    {
+     "w": "clock",
+     "start": 91.537,
+     "end": 91.878,
+     "conf": 0.785
+    },
+    {
+     "w": "you",
+     "start": 92.26,
+     "end": 92.341,
+     "conf": 0.951
+    },
+    {
+     "w": "are",
+     "start": 92.421,
+     "end": 92.521,
+     "conf": 0.72
+    },
+    {
+     "w": "using",
+     "start": 92.622,
+     "end": 92.883,
+     "conf": 0.887
+    },
+    {
+     "w": "an",
+     "start": 92.923,
+     "end": 92.984,
+     "conf": 0.584
+    },
+    {
+     "w": "invention",
+     "start": 93.024,
+     "end": 93.546,
+     "conf": 0.881
+    },
+    {
+     "w": "that",
+     "start": 93.566,
+     "end": 93.667,
+     "conf": 0.962
+    },
+    {
+     "w": "is",
+     "start": 93.727,
+     "end": 93.787,
+     "conf": 0.499
+    },
+    {
+     "w": "five",
+     "start": 93.908,
+     "end": 94.169,
+     "conf": 0.623
+    },
+    {
+     "w": "thousand",
+     "start": 94.189,
+     "end": 94.551,
+     "conf": 0.766
+    },
+    {
+     "w": "years",
+     "start": 94.571,
+     "end": 94.792,
+     "conf": 0.832
+    },
+    {
+     "w": "old",
+     "start": 94.913,
+     "end": 95.114,
+     "conf": 0.696
+    }
+   ]
+  }
+ ]
+}

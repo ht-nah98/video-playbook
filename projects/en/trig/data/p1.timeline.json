@@ -1,0 +1,1268 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 56.988
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Type sine of one hundred and twenty degrees into any calculator, and it answers instantly: zero point eight six six.",
+   "idea": false,
+   "start": 0.02,
+   "end": 5.837,
+   "words": [
+    {
+     "w": "type",
+     "start": 0.02,
+     "end": 0.241,
+     "conf": 0.882
+    },
+    {
+     "w": "sine",
+     "start": 0.321,
+     "end": 0.642,
+     "conf": 0.678
+    },
+    {
+     "w": "of",
+     "start": 0.662,
+     "end": 0.742,
+     "conf": 0.995
+    },
+    {
+     "w": "one",
+     "start": 0.762,
+     "end": 0.822,
+     "conf": 0.0
+    },
+    {
+     "w": "hundred",
+     "start": 0.842,
+     "end": 1.183,
+     "conf": 0.002
+    },
+    {
+     "w": "and",
+     "start": 1.204,
+     "end": 1.284,
+     "conf": 0.09
+    },
+    {
+     "w": "twenty",
+     "start": 1.304,
+     "end": 1.565,
+     "conf": 0.029
+    },
+    {
+     "w": "degrees",
+     "start": 1.585,
+     "end": 1.886,
+     "conf": 0.583
+    },
+    {
+     "w": "into",
+     "start": 1.926,
+     "end": 2.026,
+     "conf": 0.685
+    },
+    {
+     "w": "any",
+     "start": 2.086,
+     "end": 2.166,
+     "conf": 0.749
+    },
+    {
+     "w": "calculator",
+     "start": 2.247,
+     "end": 2.788,
+     "conf": 0.875
+    },
+    {
+     "w": "and",
+     "start": 2.989,
+     "end": 3.049,
+     "conf": 0.665
+    },
+    {
+     "w": "it",
+     "start": 3.069,
+     "end": 3.129,
+     "conf": 0.994
+    },
+    {
+     "w": "answers",
+     "start": 3.209,
+     "end": 3.47,
+     "conf": 0.618
+    },
+    {
+     "w": "instantly",
+     "start": 3.53,
+     "end": 3.952,
+     "conf": 0.886
+    },
+    {
+     "w": "zero",
+     "start": 3.972,
+     "end": 4.614,
+     "conf": 0.008
+    },
+    {
+     "w": "point",
+     "start": 4.634,
+     "end": 4.934,
+     "conf": 0.001
+    },
+    {
+     "w": "eight",
+     "start": 4.955,
+     "end": 5.175,
+     "conf": 0.001
+    },
+    {
+     "w": "six",
+     "start": 5.195,
+     "end": 5.496,
+     "conf": 0.003
+    },
+    {
+     "w": "six",
+     "start": 5.516,
+     "end": 5.837,
+     "conf": 0.003
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "But no right triangle has a one-hundred-and-twenty-degree angle. Not a single one.",
+   "idea": false,
+   "start": 6.368,
+   "end": 10.463,
+   "words": [
+    {
+     "w": "but",
+     "start": 6.368,
+     "end": 6.448,
+     "conf": 0.975
+    },
+    {
+     "w": "no",
+     "start": 6.468,
+     "end": 6.569,
+     "conf": 0.673
+    },
+    {
+     "w": "right",
+     "start": 6.689,
+     "end": 6.87,
+     "conf": 0.977
+    },
+    {
+     "w": "triangle",
+     "start": 6.89,
+     "end": 7.312,
+     "conf": 0.86
+    },
+    {
+     "w": "has",
+     "start": 7.372,
+     "end": 7.492,
+     "conf": 0.909
+    },
+    {
+     "w": "a",
+     "start": 7.673,
+     "end": 7.693,
+     "conf": 0.001
+    },
+    {
+     "w": "one-hundred-and-twenty-degree",
+     "start": 7.713,
+     "end": 8.837,
+     "conf": 0.403
+    },
+    {
+     "w": "angle",
+     "start": 8.978,
+     "end": 9.239,
+     "conf": 0.796
+    },
+    {
+     "w": "not",
+     "start": 9.741,
+     "end": 9.841,
+     "conf": 0.765
+    },
+    {
+     "w": "a",
+     "start": 9.921,
+     "end": 9.941,
+     "conf": 0.0
+    },
+    {
+     "w": "single",
+     "start": 9.961,
+     "end": 10.243,
+     "conf": 0.856
+    },
+    {
+     "w": "one",
+     "start": 10.343,
+     "end": 10.463,
+     "conf": 0.662
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Sine of minus thirty degrees? Minus one half. Sine of a thousand degrees? It answers that too.",
+   "idea": false,
+   "start": 10.933,
+   "end": 15.41,
+   "words": [
+    {
+     "w": "sine",
+     "start": 10.933,
+     "end": 11.114,
+     "conf": 0.253
+    },
+    {
+     "w": "of",
+     "start": 11.134,
+     "end": 11.194,
+     "conf": 0.99
+    },
+    {
+     "w": "minus",
+     "start": 11.214,
+     "end": 11.455,
+     "conf": 0.897
+    },
+    {
+     "w": "thirty",
+     "start": 11.475,
+     "end": 11.736,
+     "conf": 0.091
+    },
+    {
+     "w": "degrees",
+     "start": 11.756,
+     "end": 12.218,
+     "conf": 0.491
+    },
+    {
+     "w": "minus",
+     "start": 12.459,
+     "end": 12.68,
+     "conf": 0.749
+    },
+    {
+     "w": "one",
+     "start": 12.7,
+     "end": 12.86,
+     "conf": 0.375
+    },
+    {
+     "w": "half",
+     "start": 12.88,
+     "end": 13.081,
+     "conf": 0.627
+    },
+    {
+     "w": "sine",
+     "start": 13.463,
+     "end": 13.603,
+     "conf": 0.228
+    },
+    {
+     "w": "of",
+     "start": 13.623,
+     "end": 13.683,
+     "conf": 0.977
+    },
+    {
+     "w": "a",
+     "start": 13.703,
+     "end": 13.723,
+     "conf": 0.838
+    },
+    {
+     "w": "thousand",
+     "start": 13.804,
+     "end": 14.125,
+     "conf": 0.542
+    },
+    {
+     "w": "degrees",
+     "start": 14.145,
+     "end": 14.486,
+     "conf": 0.453
+    },
+    {
+     "w": "it",
+     "start": 14.687,
+     "end": 14.727,
+     "conf": 0.498
+    },
+    {
+     "w": "answers",
+     "start": 14.787,
+     "end": 15.008,
+     "conf": 0.573
+    },
+    {
+     "w": "that",
+     "start": 15.028,
+     "end": 15.169,
+     "conf": 0.986
+    },
+    {
+     "w": "too",
+     "start": 15.249,
+     "end": 15.41,
+     "conf": 0.648
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Those numbers don't come from soh cah toa. They come from a single point, running around a circle.",
+   "idea": false,
+   "start": 15.86,
+   "end": 20.277,
+   "words": [
+    {
+     "w": "those",
+     "start": 15.86,
+     "end": 16.001,
+     "conf": 0.4
+    },
+    {
+     "w": "numbers",
+     "start": 16.041,
+     "end": 16.322,
+     "conf": 0.999
+    },
+    {
+     "w": "don't",
+     "start": 16.382,
+     "end": 16.543,
+     "conf": 0.804
+    },
+    {
+     "w": "come",
+     "start": 16.603,
+     "end": 16.784,
+     "conf": 0.75
+    },
+    {
+     "w": "from",
+     "start": 16.844,
+     "end": 16.964,
+     "conf": 0.75
+    },
+    {
+     "w": "soh",
+     "start": 17.165,
+     "end": 17.245,
+     "conf": 0.311
+    },
+    {
+     "w": "cah",
+     "start": 17.266,
+     "end": 17.426,
+     "conf": 0.395
+    },
+    {
+     "w": "toa",
+     "start": 17.506,
+     "end": 17.707,
+     "conf": 0.613
+    },
+    {
+     "w": "they",
+     "start": 17.727,
+     "end": 18.149,
+     "conf": 0.749
+    },
+    {
+     "w": "come",
+     "start": 18.209,
+     "end": 18.35,
+     "conf": 0.75
+    },
+    {
+     "w": "from",
+     "start": 18.37,
+     "end": 18.47,
+     "conf": 0.825
+    },
+    {
+     "w": "a",
+     "start": 18.53,
+     "end": 18.551,
+     "conf": 0.0
+    },
+    {
+     "w": "single",
+     "start": 18.631,
+     "end": 18.852,
+     "conf": 0.832
+    },
+    {
+     "w": "point",
+     "start": 18.872,
+     "end": 19.133,
+     "conf": 0.833
+    },
+    {
+     "w": "running",
+     "start": 19.394,
+     "end": 19.575,
+     "conf": 0.745
+    },
+    {
+     "w": "around",
+     "start": 19.595,
+     "end": 19.815,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 19.836,
+     "end": 19.856,
+     "conf": 0.996
+    },
+    {
+     "w": "circle",
+     "start": 19.956,
+     "end": 20.277,
+     "conf": 0.494
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And that circle, seen from the side, is hiding inside every wave: sound, light, even the power in your wall.",
+   "idea": true,
+   "start": 20.667,
+   "end": 26.072,
+   "words": [
+    {
+     "w": "and",
+     "start": 20.667,
+     "end": 20.727,
+     "conf": 0.993
+    },
+    {
+     "w": "that",
+     "start": 20.747,
+     "end": 20.848,
+     "conf": 0.267
+    },
+    {
+     "w": "circle",
+     "start": 20.948,
+     "end": 21.29,
+     "conf": 0.767
+    },
+    {
+     "w": "seen",
+     "start": 21.471,
+     "end": 21.631,
+     "conf": 0.996
+    },
+    {
+     "w": "from",
+     "start": 21.652,
+     "end": 21.752,
+     "conf": 0.951
+    },
+    {
+     "w": "the",
+     "start": 21.772,
+     "end": 21.832,
+     "conf": 0.998
+    },
+    {
+     "w": "side",
+     "start": 21.852,
+     "end": 22.254,
+     "conf": 0.698
+    },
+    {
+     "w": "is",
+     "start": 22.435,
+     "end": 22.475,
+     "conf": 0.5
+    },
+    {
+     "w": "hiding",
+     "start": 22.536,
+     "end": 22.837,
+     "conf": 0.996
+    },
+    {
+     "w": "inside",
+     "start": 22.877,
+     "end": 23.178,
+     "conf": 0.852
+    },
+    {
+     "w": "every",
+     "start": 23.199,
+     "end": 23.379,
+     "conf": 0.955
+    },
+    {
+     "w": "wave",
+     "start": 23.46,
+     "end": 23.741,
+     "conf": 0.758
+    },
+    {
+     "w": "sound",
+     "start": 24.103,
+     "end": 24.444,
+     "conf": 0.767
+    },
+    {
+     "w": "light",
+     "start": 24.605,
+     "end": 24.826,
+     "conf": 0.826
+    },
+    {
+     "w": "even",
+     "start": 25.007,
+     "end": 25.127,
+     "conf": 0.746
+    },
+    {
+     "w": "the",
+     "start": 25.147,
+     "end": 25.228,
+     "conf": 0.745
+    },
+    {
+     "w": "power",
+     "start": 25.248,
+     "end": 25.549,
+     "conf": 0.999
+    },
+    {
+     "w": "in",
+     "start": 25.609,
+     "end": 25.65,
+     "conf": 0.5
+    },
+    {
+     "w": "your",
+     "start": 25.67,
+     "end": 25.81,
+     "conf": 0.938
+    },
+    {
+     "w": "wall",
+     "start": 25.871,
+     "end": 26.072,
+     "conf": 0.644
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Trigonometry is more than two thousand years old, and for most of that time it was a tool for the sky, not for homework.",
+   "idea": false,
+   "start": 27.082,
+   "end": 32.875,
+   "words": [
+    {
+     "w": "trigonometry",
+     "start": 27.082,
+     "end": 27.723,
+     "conf": 0.875
+    },
+    {
+     "w": "is",
+     "start": 27.844,
+     "end": 27.924,
+     "conf": 0.998
+    },
+    {
+     "w": "more",
+     "start": 27.964,
+     "end": 28.104,
+     "conf": 0.403
+    },
+    {
+     "w": "than",
+     "start": 28.124,
+     "end": 28.245,
+     "conf": 0.94
+    },
+    {
+     "w": "two",
+     "start": 28.345,
+     "end": 28.505,
+     "conf": 0.25
+    },
+    {
+     "w": "thousand",
+     "start": 28.525,
+     "end": 28.946,
+     "conf": 0.5
+    },
+    {
+     "w": "years",
+     "start": 28.966,
+     "end": 29.167,
+     "conf": 0.998
+    },
+    {
+     "w": "old",
+     "start": 29.267,
+     "end": 29.467,
+     "conf": 0.7
+    },
+    {
+     "w": "and",
+     "start": 29.668,
+     "end": 29.728,
+     "conf": 0.667
+    },
+    {
+     "w": "for",
+     "start": 29.748,
+     "end": 29.848,
+     "conf": 0.927
+    },
+    {
+     "w": "most",
+     "start": 29.888,
+     "end": 30.048,
+     "conf": 0.75
+    },
+    {
+     "w": "of",
+     "start": 30.068,
+     "end": 30.109,
+     "conf": 0.997
+    },
+    {
+     "w": "that",
+     "start": 30.129,
+     "end": 30.269,
+     "conf": 0.94
+    },
+    {
+     "w": "time",
+     "start": 30.329,
+     "end": 30.57,
+     "conf": 0.75
+    },
+    {
+     "w": "it",
+     "start": 30.71,
+     "end": 30.75,
+     "conf": 0.499
+    },
+    {
+     "w": "was",
+     "start": 30.77,
+     "end": 30.87,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 30.93,
+     "end": 30.95,
+     "conf": 0.0
+    },
+    {
+     "w": "tool",
+     "start": 31.011,
+     "end": 31.231,
+     "conf": 0.732
+    },
+    {
+     "w": "for",
+     "start": 31.311,
+     "end": 31.371,
+     "conf": 0.595
+    },
+    {
+     "w": "the",
+     "start": 31.391,
+     "end": 31.472,
+     "conf": 0.995
+    },
+    {
+     "w": "sky",
+     "start": 31.552,
+     "end": 31.872,
+     "conf": 0.666
+    },
+    {
+     "w": "not",
+     "start": 32.153,
+     "end": 32.273,
+     "conf": 0.786
+    },
+    {
+     "w": "for",
+     "start": 32.333,
+     "end": 32.414,
+     "conf": 0.462
+    },
+    {
+     "w": "homework",
+     "start": 32.474,
+     "end": 32.875,
+     "conf": 0.99
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "In this video, I want to follow it from the stars, to the circle, to the waves, and answer three questions with you.",
+   "idea": false,
+   "start": 33.305,
+   "end": 38.757,
+   "words": [
+    {
+     "w": "in",
+     "start": 33.305,
+     "end": 33.345,
+     "conf": 0.999
+    },
+    {
+     "w": "this",
+     "start": 33.365,
+     "end": 33.505,
+     "conf": 0.999
+    },
+    {
+     "w": "video",
+     "start": 33.566,
+     "end": 33.806,
+     "conf": 0.8
+    },
+    {
+     "w": "i",
+     "start": 34.167,
+     "end": 34.187,
+     "conf": 0.209
+    },
+    {
+     "w": "want",
+     "start": 34.207,
+     "end": 34.327,
+     "conf": 0.992
+    },
+    {
+     "w": "to",
+     "start": 34.347,
+     "end": 34.407,
+     "conf": 0.678
+    },
+    {
+     "w": "follow",
+     "start": 34.427,
+     "end": 34.648,
+     "conf": 0.856
+    },
+    {
+     "w": "it",
+     "start": 34.708,
+     "end": 34.748,
+     "conf": 0.499
+    },
+    {
+     "w": "from",
+     "start": 34.808,
+     "end": 34.908,
+     "conf": 0.751
+    },
+    {
+     "w": "the",
+     "start": 34.929,
+     "end": 35.009,
+     "conf": 0.996
+    },
+    {
+     "w": "stars",
+     "start": 35.089,
+     "end": 35.55,
+     "conf": 0.8
+    },
+    {
+     "w": "to",
+     "start": 35.73,
+     "end": 35.77,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 35.79,
+     "end": 35.871,
+     "conf": 0.747
+    },
+    {
+     "w": "circle",
+     "start": 35.971,
+     "end": 36.352,
+     "conf": 0.791
+    },
+    {
+     "w": "to",
+     "start": 36.412,
+     "end": 36.472,
+     "conf": 0.518
+    },
+    {
+     "w": "the",
+     "start": 36.492,
+     "end": 36.572,
+     "conf": 0.75
+    },
+    {
+     "w": "waves",
+     "start": 36.632,
+     "end": 37.013,
+     "conf": 0.801
+    },
+    {
+     "w": "and",
+     "start": 37.253,
+     "end": 37.354,
+     "conf": 0.665
+    },
+    {
+     "w": "answer",
+     "start": 37.474,
+     "end": 37.755,
+     "conf": 0.862
+    },
+    {
+     "w": "three",
+     "start": 37.835,
+     "end": 38.015,
+     "conf": 0.774
+    },
+    {
+     "w": "questions",
+     "start": 38.035,
+     "end": 38.476,
+     "conf": 0.998
+    },
+    {
+     "w": "with",
+     "start": 38.496,
+     "end": 38.636,
+     "conf": 0.8
+    },
+    {
+     "w": "you",
+     "start": 38.656,
+     "end": 38.757,
+     "conf": 0.91
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "One. Why does every angle come with its own fixed number, its sine?",
+   "idea": false,
+   "start": 39.206,
+   "end": 42.437,
+   "words": [
+    {
+     "w": "one",
+     "start": 39.206,
+     "end": 39.407,
+     "conf": 0.688
+    },
+    {
+     "w": "why",
+     "start": 39.728,
+     "end": 39.848,
+     "conf": 0.815
+    },
+    {
+     "w": "does",
+     "start": 39.869,
+     "end": 39.969,
+     "conf": 0.811
+    },
+    {
+     "w": "every",
+     "start": 39.989,
+     "end": 40.17,
+     "conf": 0.83
+    },
+    {
+     "w": "angle",
+     "start": 40.27,
+     "end": 40.491,
+     "conf": 0.8
+    },
+    {
+     "w": "come",
+     "start": 40.551,
+     "end": 40.691,
+     "conf": 0.749
+    },
+    {
+     "w": "with",
+     "start": 40.711,
+     "end": 40.812,
+     "conf": 0.997
+    },
+    {
+     "w": "its",
+     "start": 40.832,
+     "end": 40.932,
+     "conf": 0.941
+    },
+    {
+     "w": "own",
+     "start": 41.012,
+     "end": 41.093,
+     "conf": 0.658
+    },
+    {
+     "w": "fixed",
+     "start": 41.193,
+     "end": 41.454,
+     "conf": 0.657
+    },
+    {
+     "w": "number",
+     "start": 41.474,
+     "end": 41.775,
+     "conf": 0.915
+    },
+    {
+     "w": "its",
+     "start": 41.855,
+     "end": 41.956,
+     "conf": 0.628
+    },
+    {
+     "w": "sine",
+     "start": 42.116,
+     "end": 42.437,
+     "conf": 0.419
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Two. How can a calculator find the sine of an angle that no triangle can hold?",
+   "idea": false,
+   "start": 42.827,
+   "end": 46.702,
+   "words": [
+    {
+     "w": "two",
+     "start": 42.827,
+     "end": 43.008,
+     "conf": 0.377
+    },
+    {
+     "w": "how",
+     "start": 43.349,
+     "end": 43.449,
+     "conf": 0.992
+    },
+    {
+     "w": "can",
+     "start": 43.51,
+     "end": 43.57,
+     "conf": 0.563
+    },
+    {
+     "w": "a",
+     "start": 43.61,
+     "end": 43.63,
+     "conf": 0.102
+    },
+    {
+     "w": "calculator",
+     "start": 43.69,
+     "end": 44.273,
+     "conf": 0.887
+    },
+    {
+     "w": "find",
+     "start": 44.293,
+     "end": 44.494,
+     "conf": 0.824
+    },
+    {
+     "w": "the",
+     "start": 44.514,
+     "end": 44.574,
+     "conf": 0.99
+    },
+    {
+     "w": "sine",
+     "start": 44.694,
+     "end": 44.915,
+     "conf": 0.516
+    },
+    {
+     "w": "of",
+     "start": 44.935,
+     "end": 44.975,
+     "conf": 0.531
+    },
+    {
+     "w": "an",
+     "start": 44.995,
+     "end": 45.056,
+     "conf": 0.998
+    },
+    {
+     "w": "angle",
+     "start": 45.116,
+     "end": 45.357,
+     "conf": 0.999
+    },
+    {
+     "w": "that",
+     "start": 45.377,
+     "end": 45.497,
+     "conf": 0.995
+    },
+    {
+     "w": "no",
+     "start": 45.518,
+     "end": 45.598,
+     "conf": 0.799
+    },
+    {
+     "w": "triangle",
+     "start": 45.738,
+     "end": 46.14,
+     "conf": 0.881
+    },
+    {
+     "w": "can",
+     "start": 46.2,
+     "end": 46.301,
+     "conf": 0.666
+    },
+    {
+     "w": "hold",
+     "start": 46.401,
+     "end": 46.702,
+     "conf": 0.972
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And three. Why does that same circle turn up inside every wave?",
+   "idea": true,
+   "start": 47.113,
+   "end": 50.175,
+   "words": [
+    {
+     "w": "and",
+     "start": 47.113,
+     "end": 47.214,
+     "conf": 0.885
+    },
+    {
+     "w": "three",
+     "start": 47.294,
+     "end": 47.496,
+     "conf": 0.499
+    },
+    {
+     "w": "why",
+     "start": 47.899,
+     "end": 48.06,
+     "conf": 0.954
+    },
+    {
+     "w": "does",
+     "start": 48.1,
+     "end": 48.221,
+     "conf": 0.94
+    },
+    {
+     "w": "that",
+     "start": 48.241,
+     "end": 48.362,
+     "conf": 0.998
+    },
+    {
+     "w": "same",
+     "start": 48.443,
+     "end": 48.604,
+     "conf": 0.75
+    },
+    {
+     "w": "circle",
+     "start": 48.624,
+     "end": 48.926,
+     "conf": 0.84
+    },
+    {
+     "w": "turn",
+     "start": 48.987,
+     "end": 49.168,
+     "conf": 0.789
+    },
+    {
+     "w": "up",
+     "start": 49.208,
+     "end": 49.289,
+     "conf": 0.52
+    },
+    {
+     "w": "inside",
+     "start": 49.349,
+     "end": 49.672,
+     "conf": 0.833
+    },
+    {
+     "w": "every",
+     "start": 49.692,
+     "end": 49.833,
+     "conf": 0.999
+    },
+    {
+     "w": "wave",
+     "start": 49.913,
+     "end": 50.175,
+     "conf": 0.751
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It all begins with a problem much older than any calculator: measuring something you can't reach.",
+   "idea": true,
+   "start": 51.185,
+   "end": 55.937,
+   "words": [
+    {
+     "w": "it",
+     "start": 51.185,
+     "end": 51.265,
+     "conf": 1.0
+    },
+    {
+     "w": "all",
+     "start": 51.285,
+     "end": 51.386,
+     "conf": 0.999
+    },
+    {
+     "w": "begins",
+     "start": 51.406,
+     "end": 51.726,
+     "conf": 1.0
+    },
+    {
+     "w": "with",
+     "start": 51.746,
+     "end": 51.867,
+     "conf": 0.986
+    },
+    {
+     "w": "a",
+     "start": 51.887,
+     "end": 51.907,
+     "conf": 0.998
+    },
+    {
+     "w": "problem",
+     "start": 51.967,
+     "end": 52.328,
+     "conf": 0.859
+    },
+    {
+     "w": "much",
+     "start": 52.649,
+     "end": 52.869,
+     "conf": 0.75
+    },
+    {
+     "w": "older",
+     "start": 53.01,
+     "end": 53.25,
+     "conf": 0.832
+    },
+    {
+     "w": "than",
+     "start": 53.27,
+     "end": 53.371,
+     "conf": 0.999
+    },
+    {
+     "w": "any",
+     "start": 53.431,
+     "end": 53.531,
+     "conf": 0.667
+    },
+    {
+     "w": "calculator",
+     "start": 53.591,
+     "end": 54.133,
+     "conf": 0.897
+    },
+    {
+     "w": "measuring",
+     "start": 54.433,
+     "end": 54.754,
+     "conf": 0.979
+    },
+    {
+     "w": "something",
+     "start": 54.774,
+     "end": 55.115,
+     "conf": 0.907
+    },
+    {
+     "w": "you",
+     "start": 55.135,
+     "end": 55.235,
+     "conf": 0.799
+    },
+    {
+     "w": "can't",
+     "start": 55.296,
+     "end": 55.556,
+     "conf": 0.765
+    },
+    {
+     "w": "reach",
+     "start": 55.657,
+     "end": 55.937,
+     "conf": 0.835
+    }
+   ]
+  }
+ ]
+}

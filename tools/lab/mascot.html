@@ -1,0 +1,48 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — chất liệu mascot</title>
+<style>
+  html,body{margin:0;background:#05070f;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử chất liệu mascot. KHÔNG thuộc MV nào — dùng để NHÌN từng kỹ thuật
+// trước khi gắn vào cảnh.  node engine/render/shoot.js stills \
+//   --page tools/lab/mascot.html --t 0,0.25,0.5,0.75,1 --outdir out/_lab
+import { Mascot } from '../../engine/mascot.js';
+import { C, W, H } from '../../engine/lib.js';
+
+const g = document.getElementById('cv').getContext('2d');
+const m = new Mascot();
+let ready = false;
+(async () => { await m.load('../../assets/character/cut'); ready = true; })();
+
+// k chạy 0→1 theo t; mỗi ô một chất liệu, nhãn ở dưới.
+const CELLS = [
+  ['draw',    (x,y,h,k) => m.draw(g, 'thumb', x, y, h, { alpha: 1, ring: 4 })],
+  ['chalk',   (x,y,h,k) => m.chalk(g, 'thumb', x, y, h, { alpha: 1 })],
+  ['mosaic',  (x,y,h,k) => m.mosaic(g, 'thumb', x, y, h, { alpha: 1, reveal: 1, t: k*6 })],
+  ['shatter', (x,y,h,k) => m.shatter(g, 'thumb', x, y, h, k, { alpha: 1 })],
+  ['frame',   (x,y,h,k) => { m.draw(g,'thumb',x,y,h,{alpha:1,ring:4});
+                             m.frame(g, x, y, h, k, { shape: 'circle' }); }],
+  ['mirror',  (x,y,h,k) => { m.draw(g,'thumb',x,y,h,{alpha:1,ring:4});
+                             m.mirror(g, 'thumb', x, y, h, { alpha: 0.34 }); }],
+];
+
+function frame(t) {
+  const k = Math.min(1, t);                       // t 0→1 lái tham số
+  g.fillStyle = C.navy; g.fillRect(0, 0, W, H);
+  const cols = 3, rows = 2, cw = W / cols, ch = H / rows, hpx = ch * 0.56;
+  CELLS.forEach((cell, i) => {
+    const cx = (i % cols + 0.5) * cw, cy = Math.floor(i / cols) * ch + ch * 0.80;
+    cell[1](cx, cy, hpx, k);
+    g.fillStyle = C.boneDim;
+    g.font = '500 30px monospace';
+    g.textAlign = 'center';
+    g.fillText(`${cell[0]}  k=${k.toFixed(2)}`, cx, cy + 46);
+  });
+}
+window.__intro = { get ready(){ return ready; }, still: frame, frame, DUR: 1 };
+const PREVIEW = !/headless/i.test(navigator.userAgent);
+if (PREVIEW) (function loop(){ if (ready) frame((Date.now()/2000) % 1); requestAnimationFrame(loop); })();
+</script>

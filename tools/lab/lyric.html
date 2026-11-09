@@ -1,0 +1,27 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — decodeLine</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;}
+  html,body{margin:0;background:#0B0F1E;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Chụp: node engine/render/shoot.js stills --page tools/lab/lyric.html \
+//   --t 0.95,1.05,1.3,1.6,2.2,3.02,3.2,3.6 --outdir out/_lab/lyric
+import { decodeLine } from '../../engine/lyric.js';
+const g = document.getElementById('cv').getContext('2d');
+const words = [
+  { w: 'Run', start: 1.0, end: 1.3 }, { w: 'it', start: 1.3, end: 1.45 },
+  { w: 'forward,', start: 1.45, end: 2.1 },
+];
+let ready = false;
+(async () => { await document.fonts.load('800 64px "Archivo"'); await document.fonts.ready; ready = true; })();
+function frame(t) {
+  g.setTransform(1,0,0,1,0,0); g.fillStyle = '#0B0F1E'; g.fillRect(0,0,1920,1080);
+  decodeLine(g, words, t, 960, 420, { align: 'center', keys: ['forward,'], burstAt: 3.0 });
+  decodeLine(g, words, t, 960, 660, { align: 'center', keys: ['forward,'], mirror: true, colBase: '#3FB8FF', colKey: '#BDE8FF' });
+}
+window.__intro = { get ready(){ return ready; }, still: frame, frame, DUR: 4 };
+if (!/headless/i.test(navigator.userAgent)) (function loop(){ if (ready) frame((Date.now()/1000)%4); requestAnimationFrame(loop); })();
+</script>

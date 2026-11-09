@@ -1,0 +1,19 @@
+{"cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {"name": "both-right", "hook": ["SIN 30 = 0.5", "OR {−0.988}?", "BOTH ARE RIGHT"], "pieces": [
+    {"from": "p1:0", "to": "p1:2", "crop": [1215, 560, 560, 0]},
+    {"from": "p2:74", "to": "p2:76", "crop": [1720, 100, 100, 0]},
+    {"from": "p2:78", "to": "p2:83", "crop": [1720, 100, 100, 0]}]},
+  {"name": "tree-height", "hook": ["A TREE'S HEIGHT", "WITHOUT {CLIMBING}"], "pieces": [{"from": "p2:0", "to": "p2:7", "crop": [1760, 80, 80, 0]}]},
+  {"name": "sin30-half", "hook": ["WHY IS SIN 30°", "EXACTLY {1/2}?"], "pieces": [{"from": "p2:19", "to": "p2:21", "crop": [1640, 220, 220, 0]}]},
+  {"name": "tan90-error", "hook": ["TAN 90° = {ERROR}", "YOUR CALCULATOR", "ISN'T BROKEN"], "pieces": [
+    {"from": "p2:35", "to": "p2:35", "crop": [1640, 0, 0, 0]},
+    {"from": "p2:55", "to": "p2:57", "crop": [1720, 40, 40, 0]}]},
+  {"name": "signs", "hook": ["NEVER MEMORIZE", "THE {SIGNS} AGAIN"], "pieces": [
+    {"from": "p2:30", "to": "p2:35", "crop": [1640, 0, 0, 0]},
+    {"from": "p2:43", "to": "p2:47", "crop": [1720, 40, 40, 0]}]},
+  {"name": "sin2-cos2", "hook": ["SIN² + COS² = 1", "IS ONE {PICTURE}"], "pieces": [
+    {"from": "p2:35", "to": "p2:35", "crop": [1640, 0, 0, 0]},
+    {"from": "p2:48", "to": "p2:51", "crop": [1720, 40, 40, 0]}]},
+  {"name": "radian", "hook": ["WHAT IS A {RADIAN}?", "NO CHOICE NEEDED"], "pieces": [{"from": "p2:61", "to": "p2:66", "crop": [1720, 40, 40, 0]}]}
+ ]}

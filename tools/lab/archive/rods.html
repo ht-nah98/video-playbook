@@ -1,0 +1,250 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — rods</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#1C1511;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Bàn tính que" (neg-times-neg). Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/rods.html --dur 2 --t 0.5,1.5 --outdir out/_lab/rods
+// Ý trung tâm: số âm ra đời trên BÀN ĐẾM của Cửu chương toán thuật — que đỏ là có, que đen là thiếu. Cả bài là một mặt bàn
+//   gỗ bách khung sơn mài đen; mọi phép tính là que đặt vào ô khắc, mọi công thức viết trên giấy dó dán lên bàn.
+// Vật xuyên suốt: CẶP QUE ĐỐI — một que đỏ + một que đen đặt CHÉO nhau trong một ô rồi bị gạt khỏi bàn; ô còn lại TRỐNG
+//   (đúng như số 0 của toán que: ô để trống). Hồi 1 que thật · Hồi 2 nợ/tài sản = que đen/đỏ · Hồi 3 mỗi bước "cộng lại bằng 0"
+//   là một hàng cặp chéo bị gạt · Hồi 4 que đen thừa không có que đỏ để chéo → bàn NỨT.
+// Màu: gỗ #D7C19B (nền) · khung sơn mài #1C1511 · giấy dó #F3EBDA · mực nâu #4B3A2A (chữ, phép toán, trung tính) ·
+//   ĐỎ SON #B32E1B = DƯƠNG · ĐEN SƠN #15110E = ÂM (cả que lẫn chữ số) · CHÀM #1F3C80 = SAI (gạch, vết nứt, "contradiction")
+//   — chàm không bao giờ dùng cho số. Giả định = mảnh giấy viền gạch đứt ghim tạm, không màu riêng.
+// Chữ: Cormorant Garamond LN (công thức, câu dẫn nghiêng) · IBM Plex Mono (nhãn khắc trên gỗ) · Archivo nén (biển hồi khắc trên khung).
+// Tiếng: tick (đặt que xuống gỗ) · snap (hai que chéo nhau) · whoosh (gạt cặp que khỏi bàn) · page (dán giấy) · coin/chip
+//   (nợ ↔ tài sản) · error (bàn nứt) · correct (ô trống = 0 chốt lại).
+// Phần khác: Stendhal = giấy học trò Grenoble dán lên bàn, câu hỏi viết dở · Diophantus 4x + 20 = 4 = ô kết quả phải đặt que
+//   đen nhưng người Hy Lạp không có que đen → ô bị gạch chàm "absurd" · que Trung Quốc = bàn đếm thật, chữ số que ngang/dọc ·
+//   Brahmagupta = sổ nợ (đen) / tài sản (đỏ), "nợ × nợ" ra que đỏ · Cardano/Maseres/Frend = ba tờ giấy dán đè, mỗi tờ gạch que
+//   đen đi · câu chuyện nợ = rút que đen ra khỏi đống = thêm que đỏ · dãy số = cột ô, que bớt dần qua 0 rồi đổi màu · quay 180° =
+//   que xoay nửa vòng trên trục khắc, đỏ lật thành đen · Euler = giấy dán ghi lập luận "chỉ còn hai lựa chọn" · các luật = ba thẻ
+//   gỗ treo (phân phối, số đối, số 0) · tóm tắt = cả bàn nhìn từ trên, các ô trống xếp hàng · quay 90° (lần sau) = que dựng đứng.
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { wood: '#D7C19B', frame: '#1C1511', paper: '#F3EBDA', ink: '#4B3A2A', inkT: '#6A5641', pos: '#B32E1B', neg: '#15110E', err: '#1F3C80' };
+const CG = '"Cormorant Garamond"', MONO = '"IBM Plex Mono"', ARC = '"Archivo"';
+const IM = {}; let BOARD, ready = false;
+const PI = Math.PI;
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+const num = n => (n < 0 ? '−' + (-n) : String(n));                      // dấu trừ U+2212
+const par = n => (n < 0 ? `(${num(n)})` : num(n));
+const col = n => (n > 0 ? C.pos : n < 0 ? C.neg : C.ink);               // màu theo dấu: đỏ dương, đen âm, 0 trung tính
+
+function board() {                                    // mặt gỗ bách: vân dọc theo x + hạt mịn, khung sơn mài đen, lưới ô khắc nhạt
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H), b = [0xD7, 0xC1, 0x9B];
+  for (let i = 0; i < W * H; i++) {
+    const px = i % W, py = (i / W) | 0;
+    const warp = Math.sin(px * 0.004 + hash((py >> 5) * 0.37) * 2) * 18 + Math.sin(px * 0.0011) * 40;
+    const ring = Math.sin((py + warp) * 0.11 + hash(((py + warp) >> 3) * 0.13) * 3);
+    const grain = ring > 0.82 ? -14 * (ring - 0.82) / 0.18 : 0, n = (hash(i * 0.517) - 0.5) * 6 + (hash(((px >> 4) * 7 + (py >> 1)) * 0.29) - 0.5) * 5;
+    const r = Math.hypot((px - W / 2) / W, (py - H / 2) / H), v = 1 - 0.07 * r * r * 4;
+    d.data[i * 4] = b[0] * v + n + grain; d.data[i * 4 + 1] = b[1] * v + n + grain * 1.1; d.data[i * 4 + 2] = b[2] * v + n + grain * 1.3; d.data[i * 4 + 3] = 255;
+  }
+  x.putImageData(d, 0, 0);
+  x.fillStyle = C.frame; x.fillRect(0, 0, W, 30); x.fillRect(0, H - 30, W, 30); x.fillRect(0, 0, 30, H); x.fillRect(W - 30, 0, 30, H);
+  x.strokeStyle = 'rgba(255,236,200,0.18)'; x.lineWidth = 1.5; x.strokeRect(31, 31, W - 62, H - 62);   // mép gỗ sáng sát khung
+  x.strokeStyle = 'rgba(40,24,10,0.35)'; x.lineWidth = 3; x.strokeRect(33, 33, W - 66, H - 66);
+  return c;
+}
+function text(s, x, y, font, color, align = 'left', ls = 0) { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.letterSpacing = ls + 'px'; g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; return w; }
+function segs(parts, x, y, size, align = 'left', italic = false) {   // chuỗi [chữ, màu]: số mang màu dấu, phép toán màu mực
+  const f = `${italic ? 'italic ' : ''}600 ${size}px ${CG}`; g.font = f;
+  const w = parts.reduce((a, [s]) => a + g.measureText(s).width, 0);
+  let cx = align === 'center' ? x - w / 2 : align === 'right' ? x - w : x;
+  parts.forEach(([s, c]) => { cx += text(s, cx, y, f, c); }); return w;
+}
+const engrave = (s, x, y, size = 20, align = 'left', color = C.ink) => {     // nhãn khắc vào gỗ: rãnh tối + gờ sáng dưới
+  text(s.toUpperCase(), x, y + 1.5, `500 ${size}px ${MONO}`, 'rgba(255,244,220,0.55)', align, 2);
+  return text(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 2);
+};
+function paper(x0, y0, w, h, seed, dashed = false) {   // giấy dó dán: mép xơ, bóng nhẹ, hồ dán đậm ở hai đầu
+  const edge = (k, n) => (hash(seed * 13.1 + k * 0.71) - 0.5) * n;
+  const pts = [];
+  for (let k = 0; k <= 24; k++) pts.push([x0 + w * k / 24, y0 + edge(k, 4)]);
+  for (let k = 0; k <= 8; k++) pts.push([x0 + w + edge(k + 40, 4), y0 + h * k / 8]);
+  for (let k = 24; k >= 0; k--) pts.push([x0 + w * k / 24, y0 + h + edge(k + 80, 4)]);
+  for (let k = 8; k >= 0; k--) pts.push([x0 + edge(k + 120, 4), y0 + h * k / 8]);
+  const path = () => { g.beginPath(); pts.forEach(([px, py], i) => i ? g.lineTo(px, py) : g.moveTo(px, py)); g.closePath(); };
+  g.save(); g.translate(4, 7); g.fillStyle = 'rgba(60,36,14,0.22)'; path(); g.fill(); g.restore();
+  g.fillStyle = C.paper; path(); g.fill();
+  g.save(); path(); g.clip();
+  for (let k = 0; k < 160; k++) { const fx = x0 + hash(seed + k * 1.37) * w, fy = y0 + hash(seed + k * 2.11) * h, a = hash(seed + k * 3.7) * PI;
+    g.strokeStyle = 'rgba(150,120,80,0.16)'; g.lineWidth = 1; g.beginPath(); g.moveTo(fx, fy); g.lineTo(fx + 18 * Math.cos(a), fy + 18 * Math.sin(a)); g.stroke(); }
+  [x0, x0 + w - 70].forEach(px => { g.fillStyle = 'rgba(190,160,110,0.12)'; g.fillRect(px, y0, 70, h); });
+  g.restore();
+  if (dashed) { g.save(); g.strokeStyle = C.inkT; g.lineWidth = 2; g.setLineDash([12, 9]); g.strokeRect(x0 + 12, y0 + 12, w - 24, h - 24); g.restore(); }
+}
+function rod(x0, y0, x1, y1, kind, a = 1, w = 13) {    // que tính sơn mài: bóng đổ, thân, đầu tre sáng, vệt bóng sơn
+  const dx = x1 - x0, dy = y1 - y0, L = Math.hypot(dx, dy), nx = -dy / L, ny = dx / L;
+  const body = kind > 0 ? C.pos : C.neg, hi = kind > 0 ? 'rgba(255,190,160,0.75)' : 'rgba(200,190,175,0.55)', tip = kind > 0 ? '#E2B48A' : '#8E8172';
+  g.save(); g.globalAlpha = a; g.lineCap = 'round';
+  g.strokeStyle = 'rgba(55,32,12,0.32)'; g.lineWidth = w + 3; g.beginPath(); g.moveTo(x0 + 5, y0 + 8); g.lineTo(x1 + 5, y1 + 8); g.stroke();
+  g.strokeStyle = body; g.lineWidth = w; g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke();
+  g.lineCap = 'butt'; g.strokeStyle = tip; g.lineWidth = w - 2;
+  [[x0, y0, 1], [x1, y1, -1]].forEach(([ex, ey, s]) => { g.beginPath(); g.moveTo(ex, ey); g.lineTo(ex + s * dx / L * 7, ey + s * dy / L * 7); g.stroke(); });
+  g.strokeStyle = hi; g.lineWidth = 2.4; g.lineCap = 'round'; g.beginPath();
+  g.moveTo(x0 + dx / L * 14 + nx * w * 0.24, y0 + dy / L * 14 + ny * w * 0.24); g.lineTo(x1 - dx / L * 14 + nx * w * 0.24, y1 - dy / L * 14 + ny * w * 0.24); g.stroke();
+  g.restore();
+}
+function cell(x, y, s, empty = false) {               // ô khắc trên bàn: rãnh tối + gờ sáng; ô trống = số 0 của toán que
+  g.save(); g.lineWidth = 2;
+  g.strokeStyle = 'rgba(255,244,220,0.6)'; g.strokeRect(x + 1.5, y + 1.5, s, s);
+  g.strokeStyle = 'rgba(70,46,22,0.55)'; g.strokeRect(x, y, s, s);
+  if (empty) { g.fillStyle = 'rgba(70,46,22,0.06)'; g.fillRect(x, y, s, s); }
+  g.restore();
+}
+function pair(x, y, s, a = 1, missing = 0) {          // CẶP QUE ĐỐI chéo trong ô; missing = 1 → thiếu que đỏ (chỉ còn rãnh đứt)
+  const m = s * 0.16;
+  if (missing) { g.save(); g.strokeStyle = 'rgba(31,60,128,0.9)'; g.lineWidth = 2.2; g.setLineDash([7, 6]); g.lineCap = 'round';
+    g.beginPath(); g.moveTo(x + m, y + s - m); g.lineTo(x + s - m, y + m); g.stroke(); g.restore(); }
+  else rod(x + m, y + s - m, x + s - m, y + m, 1, a);
+  rod(x + m, y + m, x + s - m, y + s - m, -1, a);
+}
+function sweep(x0, y, x1, label) {                    // nét gạt: vệt cọ cong + đầu mũi tên, ghi chú khắc
+  g.save(); g.strokeStyle = C.ink; g.lineWidth = 3; g.lineCap = 'round';
+  g.beginPath(); g.moveTo(x0, y + 14); g.quadraticCurveTo((x0 + x1) / 2, y - 26, x1, y); g.stroke();
+  g.fillStyle = C.ink; g.translate(x1, y); g.rotate(0.28); g.beginPath(); g.moveTo(4, 0); g.lineTo(-14, -8); g.lineTo(-10, 0); g.lineTo(-14, 8); g.closePath(); g.fill(); g.restore();
+  if (label) engrave(label, (x0 + x1) / 2, y + 40, 16, 'center');
+}
+function brushStrike(x0, y0, x1, y1, w, seed) {       // vệt cọ chàm = SAI: thuôn hai đầu, mép xơ
+  const dx = x1 - x0, dy = y1 - y0, L = Math.hypot(dx, dy), nx = -dy / L, ny = dx / L, N = 60;
+  g.save(); g.fillStyle = C.err; g.globalAlpha = 0.92; g.beginPath();
+  for (let k = 0; k <= N; k++) { const t = k / N, hw = w * Math.pow(Math.sin(PI * Math.min(1, t * 1.1 + 0.04)), 0.45) * (0.85 + 0.3 * hash(seed + k)); g.lineTo(x0 + dx * t + nx * hw, y0 + dy * t + ny * hw); }
+  for (let k = N; k >= 0; k--) { const t = k / N, hw = w * Math.pow(Math.sin(PI * Math.min(1, t * 1.1 + 0.04)), 0.45) * (0.85 + 0.3 * hash(seed + k + 99)); g.lineTo(x0 + dx * t - nx * hw, y0 + dy * t - ny * hw); }
+  g.closePath(); g.fill(); g.restore();
+}
+function sprite(pose, crop = 1) {                     // nhân vật + viền mực sơn 3px (áo blouse trắng tách khỏi gỗ sáng)
+  const im = IM[pose], sh = Math.round(im.height * crop), p = 6, c = mk(im.width + 2 * p, sh + 2 * p), x = c.getContext('2d');
+  const sil = mk(im.width, sh), sx = sil.getContext('2d'); sx.drawImage(im, 0, 0); sx.globalCompositeOperation = 'source-in'; sx.fillStyle = C.frame; sx.fillRect(0, 0, im.width, sh);
+  for (let k = 0; k < 16; k++) { const a = k / 16 * 2 * PI; x.drawImage(sil, p + 3.2 * Math.cos(a), p + 3.2 * Math.sin(a)); }
+  x.drawImage(im, p, p); return { c, p };
+}
+function figure(S, cx, foot, h, cropH) {
+  const s = h / cropH, w = S.c.width * s, x0 = cx - w / 2, y0 = foot - h - S.p * s;
+  g.drawImage(S.c, x0, y0, w, S.c.height * s); return (ix, iy) => [x0 + (ix + S.p) * s, y0 + (iy + S.p) * s];
+}
+function actPlate(s, x, y) {                          // biển hồi khắc trên khung sơn mài (chữ khắc màu gỗ)
+  g.font = `700 15px ${ARC}`; g.letterSpacing = '5px'; const w = g.measureText(s).width + 36; g.letterSpacing = '0px';
+  g.fillStyle = C.frame; g.fillRect(x, y - 2, w, 30); text(s, x + 18, y + 19, `700 15px ${ARC}`, '#D7C19B', 'left', 5);
+}
+
+const frames = [
+  () => {                                             // 0 · Hồi 3 bước cuối: (−3)(−2) bị ÉP ra 6 vì −6 và nó phải triệt tiêu
+    const a = -3, b = 2, nb = -b;
+    const inside = must('2 + (-2)', 0), lhs = must('(-3) * 0', 0), p1 = must('(-3) * 2', -6);
+    const x = must('-(-6)', 6);                                         // số đối của −6
+    must('-6 + 6', 0); must('(-3) * (-2)', x);
+    if (a * (b + nb) !== a * b + a * nb || p1 + x !== lhs || b + nb !== inside) throw new Error('sai chuỗi bước 3');
+    // giấy dán trên: hai dòng chứng minh
+    paper(96, 70, 1250, 250, 1);
+    engrave('start with minus three times, two plus minus two', 132, 116, 18, 'left', C.inkT);
+    const S = 60;
+    segs([[par(a), col(a)], [' × (', C.ink], [num(b), col(b)], [' + ', C.ink], [par(nb), col(nb)], [')  =  ', C.ink],
+      [par(a), col(a)], [' × ', C.ink], [num(inside), C.ink], ['  =  ', C.ink], [num(lhs), C.ink]], 132, 196, S);
+    segs([['=  ', C.ink], [par(a), col(a)], [' × ', C.ink], [num(b), col(b)], [' + ', C.ink], [par(a), col(a)], [' × ', C.ink], [par(nb), col(nb)],
+      ['  =  ', C.ink], [num(p1), col(p1)], [' + ', C.ink], [par(a), col(a)], [' × ', C.ink], [par(nb), col(nb)]], 132, 284, S);
+    // hàng A: 2 + (−2) → hai cặp chéo → gạt → ô trống
+    const cs = 104, yA = 410;
+    engrave(`${num(b)} + ${par(nb)}  ·  inside the brackets`, 96, yA - 22, 18);
+    for (let k = 0; k < b; k++) { cell(96 + k * (cs + 14), yA, cs); pair(96 + k * (cs + 14), yA, cs); }
+    sweep(96 + b * (cs + 14) + 6, yA + cs / 2, 96 + b * (cs + 14) + 136, 'swept');
+    const eA = 96 + b * (cs + 14) + 160; cell(eA, yA, cs, true);
+    text(num(inside), eA + cs + 22, yA + cs / 2 + 22, `600 64px ${CG}`, C.ink);
+    // hàng B: −6 và (−3)×(−2) → sáu cặp chéo → gạt → ô trống; que đỏ = phần bị ép
+    const yB = 630, n = -p1;
+    engrave(`${num(p1)}  +  ${par(a)} × ${par(nb)}  =  0`, 96, yB - 22, 18);
+    for (let k = 0; k < n; k++) { cell(96 + k * (cs + 14), yB, cs); pair(96 + k * (cs + 14), yB, cs); }
+    const xB = 96 + n * (cs + 14);
+    sweep(xB + 6, yB + cs / 2, xB + 136, 'swept');
+    cell(xB + 160, yB, cs, true); text('0', xB + 160 + cs + 22, yB + cs / 2 + 22, `600 64px ${CG}`, C.ink);
+    // chú giải dưới hàng B: mỗi ô một que đen của −6, một que đỏ bắt buộc
+    const ly = yB + cs + 52;
+    rod(104, ly - 10, 164, ly - 10, -1, 1, 11); engrave(`six black: ${num(p1)}, from step two`, 182, ly - 2, 18);
+    rod(620, ly - 10, 680, ly - 10, 1, 1, 11); engrave(`so six red must cancel them`, 698, ly - 2, 18);
+    // giấy dán dưới: kết luận
+    paper(96, 830, 1250, 186, 7);
+    engrave('the opposite of minus six', 132, 874, 18, 'left', C.inkT);
+    const wq = segs([[par(a), col(a)], [' × ', C.ink], [par(nb), col(nb)], ['  =  ', C.ink], [num(x), col(x)]], 132, 976, 92);
+    for (let k = 0; k < x; k++) { const rx = 132 + wq + 70 + k * 34; rod(rx, 900, rx, 990, 1, 1, 14); }
+    text('Nobody chose it.', 1320, 976, `italic 600 46px ${CG}`, C.ink, 'right');
+    // nhân vật: nửa thân, que đỏ thay viên phấn trên tay
+    const P = figure(IM.chalkS, 1640, 1080, 760, IM.chalk.height);
+    const [ax, ay] = P(212, 540), [bx, by] = P(300, 420); rod(ax, ay, bx, by, 1, 1, 14);   // que đỏ đúng trục viên phấn, che phấn
+    // khoá màu góc phải trên (giữ suốt video, như chú giải bàn đếm)
+    const kx = 1440; rod(kx, 112, kx + 64, 112, 1, 1, 12); engrave('red · positive', kx + 86, 120, 18);
+    rod(kx, 166, kx + 64, 166, -1, 1, 12); engrave('black · negative', kx + 86, 174, 18);
+    cell(kx + 6, 200, 52); pair(kx + 6, 200, 52); engrave('crossed · zero', kx + 86, 234, 18);
+  },
+  () => {                                             // 1 · Hồi 4 thử phá: giả định (−1)(−1) = −1 → que đen thừa, bàn nứt, 0 = −2
+    const m = -1, one = 1, rule = -1;                                   // luật GIẢ ĐỊNH, không phải số học thật
+    must('(-1) * (-1)', 1);                                             // sự thật (để đối chiếu, không hiện)
+    const inside = must('1 + (-1)', 0), left = must('(-1) * 0', 0), t1 = must('(-1) * 1', -1);
+    const right = must('(-1) * 1 + (-1)', -2);
+    if (t1 + rule !== right || m * (one + m) !== left) throw new Error('sai chuỗi hồi 4');
+    // mảnh giấy giả định: viền gạch đứt, ghim tạm
+    paper(520, 76, 700, 176, 3, true);
+    engrave('suppose · just for fun', 556, 128, 18, 'left', C.inkT);
+    segs([[par(m), col(m)], [' × ', C.ink], [par(m), col(m)], ['  =  ', C.ink], [num(rule), col(rule)]], 556, 214, 66);
+    g.fillStyle = C.frame; g.beginPath(); g.arc(1190, 104, 9, 0, 7); g.fill(); g.fillStyle = '#8E8172'; g.beginPath(); g.arc(1187, 101, 3, 0, 7); g.fill();
+    rod(1264, 214, 1324, 110, -1); rod(1324, 214, 1384, 110, -1); text('→', 1416, 186, `600 54px ${CG}`, C.ink);
+    rod(1480, 214, 1540, 110, -1); engrave('black × black → black?', 1264, 246, 16, 'left');
+    // hai vế
+    const cs = 104, yR = 420;
+    engrave('one way', 520, yR - 70, 18);
+    segs([[par(m), col(m)], [' × (', C.ink], [num(one), col(one)], [' + ', C.ink], [par(m), col(m)], [')  =  ', C.ink], [num(left), C.ink]], 520, yR - 10, 50);
+    cell(520, yR + 20, cs); pair(520, yR + 20, cs); sweep(520 + cs + 6, yR + 20 + cs / 2, 520 + cs + 136, 'swept');
+    cell(520 + cs + 160, yR + 20, cs, true);
+    text(num(left), 520 + 2 * cs + 182, yR + 20 + cs / 2 + 22, `600 64px ${CG}`, C.ink);
+    const xr = 1100;
+    engrave('the distributive law', xr, yR - 70, 18);
+    segs([[par(m), col(m)], [' × ', C.ink], [num(one), col(one)], [' + ', C.ink], [par(m), col(m)], [' × ', C.ink], [par(m), col(m)], ['  =  ', C.ink],
+      [num(t1), col(t1)], [' + ', C.ink], [par(rule), col(rule)]], xr, yR - 10, 50);
+    for (let k = 0; k < -right; k++) { cell(xr + k * (cs + 14), yR + 20, cs); pair(xr + k * (cs + 14), yR + 20, cs, 1, 1); }
+    engrave('no red rod to cancel', xr + 2 * (cs + 14) + 12, yR + 20 + cs / 2 - 4, 18, 'left', C.err);
+    text(`= ${num(right)}`, xr + 2 * (cs + 14) + 12, yR + 20 + cs / 2 + 56, `600 64px ${CG}`, C.neg);
+    // vết nứt chạy dọc bàn qua phương trình
+    const crack = Array.from({ length: 44 }, (_, k) => [1250 + k * 12.6 + Math.sin(k * 0.9) * 8 + (hash(k * 4.1) - 0.5) * 26, 572 + k * 10.6 + (hash(k * 2.3) - 0.5) * 10]);   // từ ô thiếu que đỏ xuống góc bàn
+    g.save(); g.lineJoin = 'miter';
+    g.strokeStyle = 'rgba(255,244,220,0.6)'; g.lineWidth = 3; g.beginPath(); crack.forEach(([x, y], i) => i ? g.lineTo(x + 3, y + 2) : g.moveTo(x + 3, y + 2)); g.stroke();
+    g.strokeStyle = C.frame; g.lineWidth = 4.5; g.beginPath(); crack.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.stroke();
+    g.strokeStyle = C.err; g.lineWidth = 1.6; g.beginPath(); crack.forEach(([x, y], i) => i ? g.lineTo(x - 2, y) : g.moveTo(x - 2, y)); g.stroke();
+    [[10, 1], [21, -1], [33, 1]].forEach(([i, s]) => { const [x, y] = crack[i]; g.strokeStyle = C.frame; g.lineWidth = 2.2; g.beginPath(); g.moveTo(x, y);
+      g.lineTo(x + s * 40, y + 16); g.lineTo(x + s * 66, y + 10); g.stroke(); });
+    g.restore();
+    // 0 = −2, gạch chàm
+    const zx = 1020, wz = segs([[num(left), C.ink], [' = ', C.ink], [num(right), col(right)]], zx, 870, 190, 'center');
+    brushStrike(zx - wz / 2 - 30, 862, zx + wz / 2 + 30, 742, 8, 5);
+    engrave('contradiction', zx, 934, 22, 'center', C.err);
+    text('One small change, and arithmetic collapses.', zx, 1008, `italic 600 46px ${CG}`, C.ink, 'center');
+    figure(IM.startledS, 262, 1080, 760, IM.startled.height);
+  },
+];
+
+(async () => {
+  await Promise.all(['600 60px', '600 66px', '600 50px', '600 64px', '600 92px', '600 190px', '600 54px', 'italic 600 46px']
+    .map(f => document.fonts.load(`${f} ${CG}`))
+    .concat(['500 22px', '500 18px', '500 16px'].map(f => document.fonts.load(`${f} ${MONO}`)))
+    .concat([document.fonts.load(`700 15px ${ARC}`)]));
+  await Promise.all(['chalk', 'startled'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../../assets/character-v2/cut/pose-${p}.png`; })));
+  IM.chalkS = sprite('chalk'); IM.startledS = sprite('startled');
+  BOARD = board(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(BOARD, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

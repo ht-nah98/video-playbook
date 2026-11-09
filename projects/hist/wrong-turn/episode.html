@@ -1,0 +1,61 @@
+<!doctype html><meta charset="utf-8">
+<title>hist/wrong-turn — Nobody Told the Driver</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Tập đầu kênh lịch sử — lời SCRIPT.md (bản 2), mốc = data/narration.timeline.json, tiếng = data/cues.py → cues.json.
+// Trang này chỉ NẠP tài nguyên + ghép cảnh; cảnh nằm theo hồi ở scenes/aN.js (mỗi file `export default K => [[giờ, (t, X) => …], …]`).
+// Luật dựng: channels/hist/EDITING.md · CHARACTER.md §2b (kiểu B vẽ đầu tròn là chính; ảnh thật chỉ ở cảnh tư liệu riêng).
+//   node engine/render/shoot.js check --page projects/hist/wrong-turn/episode.html
+import { loadMap, creditLeft } from '../_kit/mapkit.js';
+import { bindNarrator } from '../_kit/narrator.js';
+import { bindStage, PAPER } from '../_kit/stage.js';
+import { bindCast } from '../_kit/cast.js';
+import { bindBackdrop } from '../_kit/backdrop.js';
+import { bindCommon } from './scenes/common.js';
+import a0 from './scenes/a0.js'; import a1 from './scenes/a1.js'; import a2 from './scenes/a2.js'; import a3 from './scenes/a3.js';
+import a4 from './scenes/a4.js'; import a5 from './scenes/a5.js'; import a6 from './scenes/a6.js'; import a7 from './scenes/a7.js'; import a8 from './scenes/a8.js';
+creditLeft();
+
+const g = document.getElementById('cv').getContext('2d');
+bindNarrator(g);
+const IM = {}, HEADS = {}, MISSING = []; window.__missing = MISSING;   // khoá meta không có file (vd. s_sophie) → bỏ qua, cảnh không được dùng
+ let M = null, MW = null, TL = null, ready = false;
+const img = (k, src) => { const im = new Image(); im.src = src; return im.decode().then(() => { IM[k] = im; }); };
+const json = u => fetch(u).then(r => r.json());
+const SA = '../sarajevo/assets/';
+// ảnh: mọi khoá trong meta.json → IM.p_<k> (tập này), IM.s_<k> (ảnh tập mẫu), IM.w_<k> (ảnh web tập mẫu); cắt nền tập mẫu → IM.<k>
+const metaImgs = (dir, pre) => json(dir + 'meta.json').then(m => Promise.all(Object.keys(m).map(k => img(pre + k, `${dir}${k}.jpg`).catch(() => { MISSING.push(pre + k); }))));
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  loadMap('../_kit/maps/europe1914.json').then(m => { M = m; }), loadMap('../_kit/maps/world1914.json').then(m => { MW = m; }),
+  json('data/narration.timeline.json').then(j => { TL = j; }),
+  json('data/narration.mouth.json').then(j => bindNarrator(g, { mouth: j })),
+  metaImgs('assets/photos/', 'p_'), metaImgs(SA + 'photos/', 's_'), metaImgs(SA + 'web/', 'w_'),
+  ...['car', 'boom1', 'ff_bust', 'sophie_bust', 'potiorek_bust'].map(k => img(k, `${SA}cut/${k}.png`)),
+  ...['ff', 'sophie', 'potiorek', 'wilhelm', 'franzjoseph'].map(k => Promise.all([img('h_' + k, `../_kit/heads/${k}.png`), json(`../_kit/heads/${k}.json`)]).then(([, j]) => { HEADS[k] = { im: IM['h_' + k], chin: j.chin, unit: j.unit, jaw: j.jaw }; }))])
+  .then(() => { bindStage(g, { IM, M, MW }); bindCast(g, { HEADS }); bindBackdrop(g); bindCommon(g); build(); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+// ── mốc theo ĐẦU CÂU + TỪ (sống sót qua mọi lần viết lại / đọc lại) ──
+const norm = s => s.toLowerCase().replace(/[^a-z0-9']/g, '');
+function LT(pre) { const ls = TL.lines.filter(l => l.text.startsWith(pre)); if (ls.length !== 1) throw new Error(`LT: "${pre}" khớp ${ls.length} dòng`); return ls[0]; }
+/** giờ bắt đầu của từ `word` (lần thứ nth) tính từ dòng có đầu `pre` (tìm trong dòng đó + 2 dòng sau) */
+function wd(pre, word, nth = 0) { const i0 = TL.lines.indexOf(LT(pre)); const ws = TL.lines.slice(i0, i0 + 3).flatMap(l => l.words).filter(x => norm(x.w) === norm(word));
+  if (!ws[nth]) throw new Error(`wd: "${word}" ∉ "${pre}"`); return ws[nth].start; }
+const ST = pre => LT(pre).start - 0.2;                    // cảnh bắt đầu 0.2 s trước câu
+
+let SC = [], DUR = 700;
+function build() {
+  const last = TL.lines[TL.lines.length - 1];
+  DUR = last.end + 6.0;                                   // thẻ kết đứng ≥ 4 s
+  const K = { g, IM, M, MW, TL, HEADS, LT, wd, ST, END: last.end, get DUR() { return DUR; } };
+  SC = [a0, a1, a2, a3, a4, a5, a6, a7, a8].flatMap(f => f(K)).sort((a, b) => a[0] - b[0]);
+}
+
+function frame(X) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1;
+  if (!ready) { g.fillStyle = PAPER; g.fillRect(0, 0, 1920, 1080); return; }
+  let i = SC.findLastIndex(s => X >= s[0]); if (i < 0) i = 0;
+  g.save(); SC[i][1](X - SC[i][0], X); g.restore();
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, get DUR() { return DUR; }, LEAD: 0, error: null };
+</script>

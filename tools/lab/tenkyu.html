@@ -1,0 +1,321 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — tenkyu</title>
+<style>
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  html,body{margin:0;background:#070D22;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "天球 · Tenkyū" (ja/pi). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/tenkyu.html --dur 2 --t 0.5,1.5 --outdir out/_lab/tenkyu
+// Ý: π là số của SỰ QUAY — trời đêm quay quanh cực, hành tinh chạy quỹ đạo, người xưa đo góc bằng khí cụ đồng thau. Người Nhật quen thẩm mỹ này
+//   (渾天儀/天球儀, mặt đồng hồ cơ cao cấp, vạch chia khắc tinh xảo, 藍 chàm của đêm); cùng nhà với intro 漆と金 (vàng #D9A441, ngà #EFE3C8, son) nhưng đêm chàm thay sơn mài đen.
+// Vật xuyên suốt: MỘT vành đồng thau khắc 360 vạch (vòng của 天球儀) quanh một đường tròn mảnh — hồi 1 kẹp giữa đa giác thép/đồng · hồi 2 kim quay, cung son nửa vòng = π,
+//   bóng chiếu lên thước "壁" thành sóng · hồi 3 chữ số khắc chạy mãi quanh vành như vạch giây · hồi 4 vành gắn lên quả cầu (渾天儀 xích đạo, C/d = 2) / yên ngựa / hố đen bẻ cong vành.
+// Màu: chàm 藍 #050A1C→#13224A (hạt sao mịn, vệt sao quay ở hồi quay) · đồng thau #D9A441 (sáng #F3DFA2, tối #6E5224) = khí cụ, phép dựng · thép #A9B8D6 = đa giác/biên ngoài
+//   · ngà #EFE7D2 = chữ · chàm nhạt #8E9CC0 = chữ phụ · son 朱 #F0603C CHỈ cho π và đáp án đã chứng minh (cái SAI không dùng son: thép mờ gạch ngang).
+// Chữ: Shippori Mincho Bold (tiêu đề, テロップ) · Noto Sans JP (nhãn, ký hiệu π θ ÷ trong câu Nhật) · Cormorant Garamond LN (số lớn, π kiểu sách) · IBM Plex Mono (bảng số, vạch khắc).
+// Tiếng (~1/3 s): 拍子木 chuyển hồi (mới) · tick = vạch khắc / mỗi hàng bảng · 算盤 hạt bàn tính khi số chạy (mới) · whoosh-long = kim/vành quay · 鈴 "à ra thế" (mới) · shimmer = π son hiện
+//   · 判子 đóng dấu đáp án đề 東大 (mới) · pen = nét compa/đa giác · page = đổi bảng · correct · 和太鼓 chốt ý lớn cuối hồi (mới, hiếm ≤ 3 cả bài).
+// Các phần khác: người xưa đo = bảng đất sét/papyrus như vật khắc trên đĩa đồng (3 · 3.125 · 3.16) · đề 東大 = phiếu đề giấy ngà, lời giải viết bằng nét khắc, dấu son 証明終 ·
+//   劉徽/祖沖之 = vành đa giác 3072 cạnh, 355/113 khắc trên tấm đồng · 和算 村松/関/建部 = 算額 (bảng gỗ đền) dưới trời sao, chữ số 明朝 · 360° vs ラジアン = vạch độ trên vành ↔ sợi dây đồng dài 1 bán kính uốn theo vành ·
+//   1÷7 余り = phép chia khắc thành vòng lặp 1,3,2,6,4,5 quanh vành như mặt số · ランベルト/リンデマン = chữ số π khắc mãi theo đường xoắn ra ngoài, không lặp · 円積問題 = hình vuông thép không khép (thép gạch)
+//   · 100兆桁 = vành chữ số mịn như vân kim loại · quả cầu: vành thành xích đạo trên 天球, đo qua cực → C/d = 2 · 馬の鞍 = vành vặn theo yên ngựa · ブラックホール = vệt sao bị bẻ, vành giãn · まとめ = cả 天球儀 lắp đủ vòng, ba đáp án khắc trên ba vòng.
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { ai0: '#050A1C', ai1: '#0B1638', ai2: '#13224A', brass: '#D9A441', brassHi: '#F3DFA2', brassLo: '#6E5224', steel: '#A9B8D6',
+  ivory: '#EFE7D2', dim: '#8E9CC0', shu: '#F0603C', engrave: '#2A1C08' };
+const MIN = '"Shippori Mincho"', JP = '"Noto Sans JP"', CG = '"Cormorant Garamond"', MONO = '"IBM Plex Mono"';
+const IM = {}; let SKY, TRAILS, ready = false;
+const TAU = 2 * Math.PI;
+
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+const r4 = s => `Math.round((${s}) * 1e4) / 1e4`;
+const lum = h => { const c = [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16) / 255).map(v => v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4);
+  return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
+const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+// tương phản đo trên nền SÁNG NHẤT của trời (#13224A, giữa khung) — chữ nhỏ ≥ 4.5
+for (const k of ['ivory', 'dim', 'brass', 'steel', 'shu']) if (contrast(C[k], C.ai2) < 4.5) throw new Error(`tương phản ${k} ${contrast(C[k], C.ai2).toFixed(2)}`);
+window.__contrast = Object.fromEntries(['ivory', 'dim', 'brass', 'steel', 'shu'].map(k => [k, +contrast(C[k], C.ai2).toFixed(2)]));
+
+// ---------- trời: chàm + hạt + sao mịn (sprite, dựng một lần lúc nạp) ----------
+function sky() {
+  const c = mk(), x = c.getContext('2d');
+  const gr = x.createRadialGradient(W * 0.46, H * 0.42, 40, W * 0.46, H * 0.42, 1250);
+  gr.addColorStop(0, C.ai2); gr.addColorStop(0.45, C.ai1); gr.addColorStop(1, C.ai0);
+  x.fillStyle = gr; x.fillRect(0, 0, W, H);
+  // dải ngân hà rất nhẹ, chéo
+  const band = x.createLinearGradient(0, H, W, 0);
+  band.addColorStop(0.30, 'rgba(120,140,200,0)'); band.addColorStop(0.47, 'rgba(120,140,200,0.045)'); band.addColorStop(0.64, 'rgba(120,140,200,0)');
+  x.fillStyle = band; x.fillRect(0, 0, W, H);
+  const id = x.getImageData(0, 0, W, H), d = id.data;
+  for (let i = 0; i < W * H; i++) { const n = (hash(i * 0.613 + 0.17) - 0.5) * 4.5; d[i * 4] += n; d[i * 4 + 1] += n; d[i * 4 + 2] += n * 1.2; }
+  x.putImageData(id, 0, 0);
+  // sao: đa số 1 px rất mờ, ít sao sáng có quầng nhỏ — không lấp lánh rẻ
+  for (let i = 0; i < 2600; i++) {
+    const sx = hash(i * 1.37 + 0.5) * W, sy = hash(i * 2.91 + 0.3) * H, m = hash(i * 0.77 + 9.1) ** 3.2;
+    const along = Math.abs((sx / W) + (sy / H) - 1.02);                       // dày hơn trong dải
+    if (along > 0.22 && hash(i * 5.3) < 0.45) continue;
+    const warm = hash(i * 3.3 + 1.1), col = warm < 0.25 ? '255,226,180' : warm > 0.8 ? '190,210,255' : '235,238,250';
+    const a = 0.18 + 0.75 * m, r = 0.45 + 0.9 * m;
+    x.fillStyle = `rgba(${col},${a})`; x.beginPath(); x.arc(sx, sy, r, 0, TAU); x.fill();
+    if (m > 0.82) { const q = x.createRadialGradient(sx, sy, 0, sx, sy, 3 + 4 * m); q.addColorStop(0, `rgba(${col},${0.20 * m})`); q.addColorStop(1, `rgba(${col},0)`);
+      x.fillStyle = q; x.fillRect(sx - 16, sy - 16, 32, 32); }
+  }
+  // khung tối viền (vignette)
+  const v = x.createRadialGradient(W / 2, H / 2, 500, W / 2, H / 2, 1150); v.addColorStop(0, 'rgba(2,4,12,0)'); v.addColorStop(1, 'rgba(2,4,12,0.55)');
+  x.fillStyle = v; x.fillRect(0, 0, W, H);
+  return c;
+}
+// vệt sao quay quanh một cực (hồi 2: "bầu trời quay") — rất mờ
+function trails(px, py) {
+  const c = mk(), x = c.getContext('2d'); x.lineCap = 'round';
+  for (let i = 0; i < 520; i++) {
+    const r = 330 + hash(i * 1.91 + 4) * 1500, a0 = hash(i * 2.37 + 7) * TAU, len = 0.10 + 0.16 * hash(i * 4.1 + 2), m = hash(i * 0.53 + 3) ** 2;
+    const gr = x.createConicGradient(a0, px, py);
+    const f = len / TAU; gr.addColorStop(0, `rgba(220,228,255,${0.03 + 0.20 * m})`); gr.addColorStop(f, 'rgba(220,228,255,0)'); gr.addColorStop(1, 'rgba(220,228,255,0)');
+    x.strokeStyle = gr; x.lineWidth = 0.7 + 0.8 * m; x.beginPath(); x.arc(px, py, r, a0, a0 + len); x.stroke();
+  }
+  return c;
+}
+
+// ---------- chữ ----------
+function text(s, x, y, font, color, align = 'left', ls = 0) {
+  g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic'; g.letterSpacing = ls + 'px';
+  g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; return w;
+}
+function measure(s, font, ls = 0) { g.font = font; g.letterSpacing = ls + 'px'; const w = g.measureText(s).width; g.letterSpacing = '0px'; return w; }
+function runs(list, x, y, align = 'left') {           // [chuỗi, font, màu, ls?] nối liền — π/θ/= trong câu明朝 phải vẽ bằng font khác
+  const tot = list.reduce((s, [t, f, , ls = 0]) => s + measure(t, f, ls), 0);
+  let cx = align === 'center' ? x - tot / 2 : align === 'right' ? x - tot : x;
+  for (const [t, f, col, ls = 0] of list) cx += text(t, cx, y, f, col, 'left', ls);
+  return { x0: align === 'center' ? x - tot / 2 : align === 'right' ? x - tot : x, w: tot };
+}
+function rule(x0, x1, y, col = C.brass, a = 0.75) {   // thước mảnh: đường 1 px + vạch + hạt thoi ở đầu
+  g.save(); g.globalAlpha = a; g.strokeStyle = col; g.lineWidth = 1; g.beginPath(); g.moveTo(x0, y + 0.5); g.lineTo(x1, y + 0.5); g.stroke();
+  for (let x = x0; x <= x1 - 4; x += 12) { g.beginPath(); g.moveTo(x + 0.5, y); g.lineTo(x + 0.5, y + ((x - x0) % 60 === 0 ? 6 : 3)); g.stroke(); }
+  g.fillStyle = col; g.beginPath(); g.moveTo(x1, y - 4); g.lineTo(x1 + 5, y + 0.5); g.lineTo(x1, y + 5); g.lineTo(x1 - 5, y + 0.5); g.fill(); g.restore();
+}
+function head(kicker, title, y = 172) {
+  text(kicker, 98, y - 84, `500 22px ${JP}`, C.brass, 'left', 6);
+  const w = text(title, 96, y, `700 66px ${MIN}`, C.ivory, 'left', 4);
+  rule(98, 98 + w, y + 30);
+  return w;
+}
+
+// ---------- vành đồng thau (vật xuyên suốt) ----------
+function bezel(cx, cy, r0, r1, { marks = [] } = {}) {
+  // bóng đổ mềm xuống nền chàm
+  g.save(); g.shadowColor = 'rgba(0,0,0,0.6)'; g.shadowBlur = 28; g.shadowOffsetY = 10;
+  g.fillStyle = '#4A3714'; g.beginPath(); g.arc(cx, cy, r1, 0, TAU); g.arc(cx, cy, r0, 0, TAU, true); g.fill(); g.restore();
+  // kim loại: dải sáng xoay (conic) = phản xạ dị hướng của đồng tiện
+  const cg = g.createConicGradient(-0.9, cx, cy);
+  [[0, '#7E5E28'], [0.09, '#E6C77C'], [0.16, '#F6E4AA'], [0.24, '#B48A40'], [0.36, '#6F5222'], [0.47, '#C9A158'], [0.55, '#EED796'],
+   [0.63, '#A07935'], [0.76, '#6A4E20'], [0.88, '#D3AE62'], [1, '#7E5E28']].forEach(([o, c]) => cg.addColorStop(o, c));
+  g.save(); g.beginPath(); g.arc(cx, cy, r1, 0, TAU); g.arc(cx, cy, r0, 0, TAU, true); g.clip();
+  g.fillStyle = cg; g.fillRect(cx - r1, cy - r1, 2 * r1, 2 * r1);
+  // vân tiện đồng tâm — mịn
+  for (let r = r0 + 1; r < r1; r += 1.5) { const h = hash(r * 3.71 + cx); g.strokeStyle = h > 0.5 ? `rgba(255,240,200,${(h - 0.5) * 0.10})` : `rgba(40,25,5,${(0.5 - h) * 0.14})`;
+    g.lineWidth = 1; g.beginPath(); g.arc(cx, cy, r, 0, TAU); g.stroke(); }
+  // vát mép: tối ở hai mép, sáng ngay trong mép ngoài
+  const bv = g.createRadialGradient(cx, cy, r0, cx, cy, r1);
+  bv.addColorStop(0, 'rgba(20,12,0,0.55)'); bv.addColorStop(0.12, 'rgba(20,12,0,0)'); bv.addColorStop(0.82, 'rgba(255,245,215,0)');
+  bv.addColorStop(0.93, 'rgba(255,245,215,0.22)'); bv.addColorStop(1, 'rgba(20,12,0,0.6)');
+  g.fillStyle = bv; g.fillRect(cx - r1, cy - r1, 2 * r1, 2 * r1);
+  // vạch khắc 360: khắc = rãnh tối + mép sáng lệch 1 px
+  const tick = (a, l, w) => { const c = Math.cos(a), s = Math.sin(a);
+    g.lineWidth = w; g.strokeStyle = 'rgba(255,238,190,0.35)'; g.beginPath(); g.moveTo(cx + (r1 - 3) * c, cy + (r1 - 3) * s + 1); g.lineTo(cx + (r1 - 3 - l) * c, cy + (r1 - 3 - l) * s + 1); g.stroke();
+    g.strokeStyle = 'rgba(42,28,8,0.92)'; g.beginPath(); g.moveTo(cx + (r1 - 3) * c, cy + (r1 - 3) * s); g.lineTo(cx + (r1 - 3 - l) * c, cy + (r1 - 3 - l) * s); g.stroke(); };
+  for (let d = 0; d < 360; d++) { const a = -d * Math.PI / 180; tick(a, d % 10 === 0 ? 15 : d % 5 === 0 ? 10 : 6, d % 10 === 0 ? 1.4 : 1); }
+  // rãnh trong mảnh tách vạch và số
+  g.strokeStyle = 'rgba(42,28,8,0.7)'; g.lineWidth = 1; g.beginPath(); g.arc(cx, cy, r1 - 20, 0, TAU); g.stroke();
+  g.strokeStyle = 'rgba(255,238,190,0.25)'; g.beginPath(); g.arc(cx, cy, r1 - 19, 0, TAU); g.stroke();
+  // số độ khắc, đọc thuận chiều (nửa dưới lật lại)
+  const rn = (r0 + r1 - 20) / 2 + 1;
+  g.font = `500 13px ${MONO}`; g.textAlign = 'center'; g.textBaseline = 'middle';
+  for (let d = 0; d < 360; d += 30) {
+    const a = -d * Math.PI / 180, lower = Math.sin(a) > 0.01;
+    g.save(); g.translate(cx + rn * Math.cos(a), cy + rn * Math.sin(a)); g.rotate(a + (lower ? -Math.PI / 2 : Math.PI / 2));
+    g.fillStyle = 'rgba(255,238,190,0.35)'; g.fillText(String(d), 0, 1); g.fillStyle = C.engrave; g.fillText(String(d), 0, 0); g.restore();
+  }
+  for (const [d, col] of marks) {                      // chấm men son khảm vào vành (π ở 180°…)
+    const a = -d * Math.PI / 180, r = r1 - 9;
+    g.fillStyle = col; g.beginPath(); g.arc(cx + r * Math.cos(a), cy + r * Math.sin(a), 3.6, 0, TAU); g.fill();
+    g.strokeStyle = 'rgba(42,28,8,0.8)'; g.lineWidth = 1; g.stroke();
+  }
+  g.restore();
+  // chỉ viền sắc
+  g.strokeStyle = 'rgba(255,240,200,0.55)'; g.lineWidth = 1; g.beginPath(); g.arc(cx, cy, r1 - 0.5, -2.6, -0.4); g.stroke();
+  g.strokeStyle = 'rgba(10,6,0,0.8)'; g.beginPath(); g.arc(cx, cy, r0 + 0.5, 0, TAU); g.stroke();
+}
+function circleLine(cx, cy, R) {                       // đường tròn thật: chỉ vàng mảnh, glow rất tiết chế
+  g.save(); g.shadowColor = 'rgba(243,223,162,0.45)'; g.shadowBlur = 8; g.strokeStyle = C.brassHi; g.lineWidth = 1.8;
+  g.beginPath(); g.arc(cx, cy, R, 0, TAU); g.stroke(); g.restore();
+}
+function pivot(cx, cy) {
+  const gr = g.createRadialGradient(cx - 2, cy - 2, 0, cx, cy, 9); gr.addColorStop(0, '#FFF2C6'); gr.addColorStop(0.5, '#C9993E'); gr.addColorStop(1, '#4A3412');
+  g.fillStyle = gr; g.beginPath(); g.arc(cx, cy, 8, 0, TAU); g.fill();
+  g.fillStyle = '#7A1E10'; g.beginPath(); g.arc(cx, cy, 2.6, 0, TAU); g.fill();         // chân kính hồng ngọc như máy đồng hồ
+}
+function bead(x, y, r = 7, core = C.ivory) {
+  const gr = g.createRadialGradient(x, y, 0, x, y, r * 3); gr.addColorStop(0, 'rgba(255,245,220,0.35)'); gr.addColorStop(1, 'rgba(255,245,220,0)');
+  g.fillStyle = gr; g.fillRect(x - r * 3, y - r * 3, r * 6, r * 6);
+  g.fillStyle = core; g.beginPath(); g.arc(x, y, r, 0, TAU); g.fill();
+  g.strokeStyle = C.brass; g.lineWidth = 1.2; g.beginPath(); g.arc(x, y, r + 3, 0, TAU); g.stroke();
+}
+const poly = (cx, cy, r, n, a0) => Array.from({ length: n }, (_, k) => [cx + r * Math.cos(a0 + k * TAU / n), cy + r * Math.sin(a0 + k * TAU / n)]);
+function strokePoly(P, col, w, dash = []) { g.save(); g.strokeStyle = col; g.lineWidth = w; g.lineJoin = 'miter'; g.setLineDash(dash);
+  g.beginPath(); P.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath(); g.stroke(); g.restore(); }
+
+function figure(pose, cx, foot, h, crop = 1) {         // mascot dưới trời chàm: ám lạnh nhẹ + viền sáng đồng thau phía khí cụ
+  const im = IM[pose], sh = im.height * crop, s = h / sh, w = im.width * s, c = mk(Math.ceil(w), h), x = c.getContext('2d');
+  x.drawImage(im, 0, 0, im.width, sh, 0, 0, w, h); x.globalCompositeOperation = 'source-atop';
+  x.fillStyle = 'rgba(40,60,130,0.10)'; x.fillRect(0, 0, w, h);
+  g.drawImage(c, cx - w / 2, foot - h); return { x: cx - w / 2, y: foot - h, w, h };
+}
+
+// ---------- số (mọi con số tính bằng code) ----------
+const NS = [6, 12, 24, 48, 96];
+const IN_ = [3, 3.1058, 3.1326, 3.1394, 3.141], OUT_ = [3.4641, 3.2154, 3.1597, 3.1461, 3.1427];
+const TABLE = NS.map((n, i) => [n, must(r4(`${n} * Math.sin(Math.PI / ${n})`), IN_[i]), must(r4(`${n} * Math.tan(Math.PI / ${n})`), OUT_[i])]);
+const LO = must(r4('223 / 71'), 3.1408), HI = must(r4('22 / 7'), 3.1429);
+must('223 / 71 < 96 * Math.sin(Math.PI / 96) && 96 * Math.tan(Math.PI / 96) < 22 / 7', true);   // kẹp của Archimedes nằm ngoài kẹp 96 cạnh thật
+must('223 / 71 < Math.PI && Math.PI < 22 / 7', true);
+const f4 = v => v.toFixed(4);
+
+const frames = [
+  () => {                                              // 0 · Hồi 1 はさみうち: vòng kẹp giữa 12-giác nội tiếp (đồng) và ngoại tiếp (thép)
+    const cx = 540, cy = 606, R = 258;
+    head('第一幕　アルキメデスのはさみうち', '円を、はさみうちにする');
+    bezel(cx, cy, R + 30, R + 72, { marks: [[0, C.shu]] });
+    // đa giác: 6 (mờ, bước đầu) → 12 nội tiếp + 12 ngoại tiếp, tiếp điểm tại đỉnh nội tiếp
+    const P6 = poly(cx, cy, R, 6, -Math.PI / 2), Pin = poly(cx, cy, R, 12, -Math.PI / 2), Rout = R / Math.cos(Math.PI / 12), Pout = poly(cx, cy, Rout, 12, -Math.PI / 2 + Math.PI / 12);
+    g.save(); g.beginPath(); Pout.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath();
+    Pin.slice().reverse().forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.closePath();
+    g.fillStyle = 'rgba(217,164,65,0.10)'; g.fill('evenodd'); g.restore();               // khe kẹp
+    strokePoly(P6, 'rgba(169,184,214,0.38)', 1, [3, 5]);
+    strokePoly(Pout, C.steel, 1.6);
+    circleLine(cx, cy, R);
+    strokePoly(Pin, C.brass, 1.6);
+    Pin.forEach(([x, y]) => { g.fillStyle = C.brassHi; g.beginPath(); g.arc(x, y, 3.2, 0, TAU); g.fill(); });
+    Pout.forEach(([x, y]) => { g.strokeStyle = C.steel; g.lineWidth = 1.2; g.beginPath(); g.arc(x, y, 3, 0, TAU); g.stroke(); });
+    // đường kính 1
+    g.save(); g.strokeStyle = 'rgba(142,156,192,0.7)'; g.lineWidth = 1; g.setLineDash([2, 5]); g.beginPath(); g.moveTo(cx - R, cy); g.lineTo(cx + R, cy); g.stroke(); g.restore();
+    pivot(cx, cy);
+    runs([['直径', `500 22px ${JP}`, C.dim, 2], [' 1', `600 30px ${CG}`, C.ivory]], cx + R * 0.5, cy + 34, 'center');
+    // nhãn trong mặt số (như "complication" của đồng hồ)
+    text('正12角形', cx, cy - 120, `700 34px ${MIN}`, C.ivory, 'center', 4);
+    const sw = (y, col, lbl, val) => { g.strokeStyle = col; g.lineWidth = 2; g.beginPath(); g.moveTo(cx - 128, y - 8); g.lineTo(cx - 98, y - 8); g.stroke();
+      text(lbl, cx - 86, y, `500 22px ${JP}`, col, 'left', 2); text(val, cx + 128, y, `500 24px ${MONO}`, C.ivory, 'right'); };
+    sw(cy - 72, C.steel, '外接の周', f4(TABLE[1][2]));
+    sw(cy - 36, C.brass, '内接の周', f4(TABLE[1][1]));
+    // bảng: số cạnh gấp đôi 6 → 96
+    const X0 = 950, XI = 1160, XO = 1310;
+    text('辺の数を2倍に', X0, 312, `700 30px ${MIN}`, C.ivory, 'left', 3);
+    text('内接', XI, 356, `500 20px ${JP}`, C.brass, 'right', 2); text('外接', XO, 356, `500 20px ${JP}`, C.steel, 'right', 2);
+    rule(X0, XO, 372, C.brass, 0.5);
+    TABLE.forEach(([n, a, b], i) => {
+      const y = 418 + i * 50, last = n === 96;
+      if (last) { g.fillStyle = 'rgba(217,164,65,0.12)'; g.fillRect(X0 - 14, y - 34, XO - X0 + 28, 48); g.strokeStyle = 'rgba(217,164,65,0.5)'; g.lineWidth = 1; g.strokeRect(X0 - 14.5, y - 34.5, XO - X0 + 29, 49); }
+      runs([['正', `500 22px ${JP}`, last ? C.ivory : C.dim], [String(n), `600 30px ${CG}`, last ? C.ivory : C.dim], ['角形', `500 22px ${JP}`, last ? C.ivory : C.dim]], X0, y);
+      text(f4(a), XI, y, `500 26px ${MONO}`, last ? C.brassHi : C.brass, 'right');
+      text(f4(b), XO, y, `500 26px ${MONO}`, last ? C.ivory : C.steel, 'right');
+    });
+    // kết luận của Archimedes — son cho π
+    text('アルキメデスの証明', X0, 730, `500 22px ${JP}`, C.brass, 'left', 4);
+    const NUM = `500 70px ${CG}`, OP = `400 52px ${CG}`;
+    const r = runs([[f4(LO), NUM, C.ivory], ['  <  ', OP, C.dim], ['π', `600 80px ${CG}`, C.shu], ['  <  ', OP, C.dim], [f4(HI), NUM, C.ivory]], X0, 820);
+    window.__boxes = { ineq: [r.x0, 760, r.w, 70] };
+    const wl = measure(f4(LO), NUM), wr = measure(f4(HI), NUM);
+    text('223 / 71', X0 + wl / 2, 868, `italic 500 32px ${CG}`, C.dim, 'center');
+    text('22 / 7', r.x0 + r.w - wr / 2, 868, `italic 500 32px ${CG}`, C.dim, 'center');
+    g.save(); g.shadowColor = 'rgba(240,96,60,0.5)'; g.shadowBlur = 6; rule(X0, r.x0 + r.w, 892, C.shu, 0.8); g.restore();
+    const F = figure('pose-compass', 1640, 1080, 760);
+    window.__boxes.fig = [F.x, F.y, F.w, F.h];
+  },
+  () => {                                              // 1 · Hồi 2 回転の影: điểm quay trên vành, cung son nửa vòng = π, bóng lên thước → sóng sin
+    const cx = 900, cy = 610, R = 196;
+    g.drawImage(TRAILS, 0, 0);
+    head('第二幕　円周率は「回転」の数', '回転の影');
+    bezel(cx, cy, R + 30, R + 70, { marks: [[0, C.shu], [180, C.shu]] });
+    const th = 7 * Math.PI / 6, s = must(r4('Math.sin(7 * Math.PI / 6)'), -0.5), deg = must('Math.round(7 * 180 / 6)', 210);
+    const px = cx + R * Math.cos(th), py = cy - R * Math.sin(th);
+    // lưới trục mảnh
+    g.save(); g.strokeStyle = 'rgba(142,156,192,0.35)'; g.lineWidth = 1; g.beginPath(); g.moveTo(cx - R, cy + 0.5); g.lineTo(cx + R, cy + 0.5); g.moveTo(cx + 0.5, cy - R); g.lineTo(cx + 0.5, cy + R); g.stroke(); g.restore();
+    circleLine(cx, cy, R);
+    // nửa vòng = π : cung son 0 → π (phía trên)
+    g.save(); g.shadowColor = 'rgba(240,96,60,0.55)'; g.shadowBlur = 10; g.strokeStyle = C.shu; g.lineWidth = 4.5; g.lineCap = 'round';
+    g.beginPath(); g.arc(cx, cy, R, 0, -Math.PI, true); g.stroke(); g.restore();
+    // góc θ nhỏ ở tâm + kim
+    g.save(); g.strokeStyle = 'rgba(243,223,162,0.7)'; g.lineWidth = 1; g.beginPath(); g.arc(cx, cy, 38, 0, -th, true); g.stroke(); g.restore();
+    text('θ', cx - 20, cy - 46, `400 24px ${JP}`, C.brassHi, 'center');
+    g.save(); g.strokeStyle = C.brass; g.lineWidth = 2; g.beginPath(); g.moveTo(cx, cy); g.lineTo(px, py); g.stroke();
+    g.lineWidth = 1.2; g.strokeStyle = 'rgba(243,223,162,0.8)'; g.beginPath(); g.moveTo(cx, cy); g.lineTo(cx + R, cy); g.stroke(); g.restore();
+    text('1', cx + R / 2, cy + 30, `600 30px ${CG}`, C.ivory, 'center');
+    pivot(cx, cy);
+    runs([['半回転', `700 34px ${MIN}`, C.ivory, 3], [' = ', `400 40px ${CG}`, C.dim], ['π', `600 64px ${CG}`, C.shu]], cx, cy - 92, 'center');
+    // thước "壁" và sóng theo thời gian
+    const wx0 = 1270, wx1 = 1790, per = wx1 - wx0, X = a => wx0 + a / TAU * per, Y = v => cy - R * v;
+    g.save(); g.strokeStyle = 'rgba(142,156,192,0.18)'; g.lineWidth = 1;
+    [1, 0.5, -0.5, -1].forEach(v => { g.beginPath(); g.moveTo(wx0, Y(v) + 0.5); g.lineTo(wx1, Y(v) + 0.5); g.stroke(); }); g.restore();
+    g.strokeStyle = 'rgba(142,156,192,0.6)'; g.lineWidth = 1; g.beginPath(); g.moveTo(wx0, cy + 0.5); g.lineTo(wx1 + 10, cy + 0.5); g.stroke();
+    // thước đồng: vạch mỗi 0.1
+    g.fillStyle = 'rgba(217,164,65,0.18)'; g.fillRect(wx0 - 6, Y(1) - 12, 6, 2 * R + 24);
+    g.strokeStyle = C.brass; g.lineWidth = 1.4; g.beginPath(); g.moveTo(wx0 + 0.5, Y(1) - 12); g.lineTo(wx0 + 0.5, Y(-1) + 12); g.stroke();
+    for (let k = -10; k <= 10; k++) { g.lineWidth = 1; g.beginPath(); g.moveTo(wx0, Y(k / 10) + 0.5); g.lineTo(wx0 - (k % 5 === 0 ? 14 : 7), Y(k / 10) + 0.5); g.stroke(); }
+    [[1, '1'], [-1, '−1']].forEach(([v, t]) => text(t, wx0 - 20, Y(v) + 7, `500 18px ${MONO}`, C.dim, 'right'));
+    text('壁', wx0, Y(1) - 24, `500 22px ${JP}`, C.brass, 'center');
+    // phần sóng chưa vẽ: chấm mờ
+    for (let a = th + 0.12; a <= TAU + 1e-9; a += 0.12) { g.fillStyle = 'rgba(243,223,162,0.45)'; g.beginPath(); g.arc(X(a), Y(Math.sin(a)), 1.7, 0, TAU); g.fill(); }
+    g.save(); g.shadowColor = 'rgba(243,223,162,0.5)'; g.shadowBlur = 6; g.strokeStyle = C.brassHi; g.lineWidth = 2.4; g.lineJoin = 'round';
+    g.beginPath(); for (let a = 0; a <= th + 1e-9; a += 0.01) { const x = X(a), y = Y(Math.sin(a)); a ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke(); g.restore();
+    // nửa chu kỳ đầu gạch chân son: sóng cũng "đi hết nửa vòng ở π"
+    g.save(); g.strokeStyle = C.shu; g.lineWidth = 2; g.beginPath(); g.moveTo(X(0), cy + 22.5); g.lineTo(X(Math.PI), cy + 22.5); g.stroke();
+    [0, Math.PI].forEach(a => { g.beginPath(); g.moveTo(X(a) + 0.5, cy + 16); g.lineTo(X(a) + 0.5, cy + 29); g.stroke(); }); g.restore();
+    text('π', X(Math.PI), cy + 70, `600 44px ${CG}`, C.shu, 'center');
+    text('2π', X(TAU), cy + 70, `600 40px ${CG}`, C.ivory, 'center');
+    g.strokeStyle = 'rgba(142,156,192,0.6)'; g.lineWidth = 1; g.beginPath(); g.moveTo(X(TAU) + 0.5, cy - 8); g.lineTo(X(TAU) + 0.5, cy + 8); g.stroke();
+    runs([['一定の速さで回る点の、', `700 30px ${MIN}`, C.ivory, 2], ['影', `700 30px ${MIN}`, C.brassHi, 2], ['だけを見る', `700 30px ${MIN}`, C.ivory, 2]], wx1, 250, 'right');
+    runs([['→ ', `500 26px ${JP}`, C.dim], ['サイン波', `700 30px ${MIN}`, C.brassHi, 3]], wx1, 300, 'right');
+    text('時間 →', wx1 + 10, cy - 18, `500 20px ${JP}`, C.dim, 'right', 2);
+    // chiếu: điểm → bóng trên tường → đầu sóng
+    const wy = Y(s);
+    g.save(); g.strokeStyle = 'rgba(239,231,210,0.55)'; g.lineWidth = 1; g.setLineDash([2, 6]); g.beginPath(); g.moveTo(px + 12, py + 0.5); g.lineTo(X(th) - 12, wy + 0.5); g.stroke(); g.restore();
+    bead(px, py, 7); bead(wx0, wy, 5); bead(X(th), wy, 6);
+    text('影', wx0 + 16, wy + 34, `500 24px ${JP}`, C.ivory, 'left');
+    runs([['影の高さ', `500 24px ${JP}`, C.dim, 1], [' = ', `500 24px ${MONO}`, C.dim], [`sin ${deg}° = ${String(s).replace('-', '−')}`, `500 24px ${MONO}`, C.ivory]], wx1, Y(-1) + 92, 'right');
+    // mascot: ngón trỏ chỉ lên, vệt quỹ đạo quanh đầu ngón
+    const F = figure('pose-spin', 300, 1080, 640, 0.45);
+    const tip = [F.x + F.w * 0.205, F.y + F.h * 0.211];
+    { const oc = [tip[0] + 4, tip[1] - 44], rx = 66, ry = 21, tilt = -0.18;
+      const P = a => [oc[0] + rx * Math.cos(a) * Math.cos(tilt) - ry * Math.sin(a) * Math.sin(tilt), oc[1] + rx * Math.cos(a) * Math.sin(tilt) + ry * Math.sin(a) * Math.cos(tilt)];
+      g.save(); g.strokeStyle = 'rgba(217,164,65,0.35)'; g.lineWidth = 1; g.beginPath(); for (let a = 0; a <= TAU + 0.01; a += 0.05) { const [x, y] = P(a); a ? g.lineTo(x, y) : g.moveTo(x, y); } g.stroke();
+      for (let k = 0; k < 12; k++) { const [x, y] = P(k * TAU / 12); g.fillStyle = 'rgba(243,223,162,0.6)'; g.beginPath(); g.arc(x, y, 1.1, 0, TAU); g.fill(); }
+      const head0 = 0.55;                                                     // vệt sao chổi: sáng dần về hạt
+      for (let i = 0; i < 70; i++) { const a0 = head0 - (i + 1) * 0.06, a1 = head0 - i * 0.06, [x0, y0] = P(a0), [x1, y1] = P(a1);
+        g.strokeStyle = `rgba(243,223,162,${0.9 * (1 - i / 70) ** 1.6})`; g.lineWidth = 2.4 * (1 - i / 70) + 0.4; g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke(); }
+      const [bx, by] = P(head0); g.restore(); bead(bx, by, 3.5); }
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], tip };
+  },
+];
+
+(async () => {
+  const fonts = [`700 66px ${MIN}`, `700 34px ${MIN}`, `700 30px ${MIN}`, `500 22px ${JP}`, `400 24px ${JP}`, `500 20px ${JP}`,
+    `500 70px ${CG}`, `600 80px ${CG}`, `400 52px ${CG}`, `italic 500 32px ${CG}`, `500 26px ${MONO}`];
+  await Promise.all(fonts.map(f => document.fonts.load(f, '円周率はさみうち回転の影壁半内接外接正角形辺数倍時間第一二幕直径証明アルキメデス一定速点見サイン波高3.14πθ=')));
+  await Promise.all(['pose-compass', 'pose-spin'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../assets/character-v2/cut/${p}.png`; })));
+  SKY = sky(); TRAILS = trails(900, 610); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(SKY, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

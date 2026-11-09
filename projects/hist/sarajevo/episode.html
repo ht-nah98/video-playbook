@@ -1,0 +1,295 @@
+<!doctype html><meta charset="utf-8">
+<title>hist/sarajevo — World War I, part 1</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// World War I phần 1 (tập mẫu kênh lịch sử) — lời SCRIPT.md, mốc = data/narration.timeline.json, tiếng = data/cues.py → cues.json.
+// Luật dựng: channels/hist/EDITING.md · lời + người dẫn: WRITING.md §1c · đồ nghề hình: ../_kit/stage.js (import, không chép lại).
+// Mọi ảnh CC0 / public domain — nguồn ở assets/{photos,web}/meta.json.
+//   node engine/render/shoot.js check --page projects/hist/sarajevo/episode.html
+import { loadMap, view, drawMap, mapFace, cutout, ll, bubble, ANCHOR, INK, SEA, LAND, creditLeft } from '../_kit/mapkit.js';
+import { bindNarrator, narrator, cornerHost, mouthAt } from '../_kit/narrator.js';
+import { W, H, PAPER, RED, clamp, lerp, hash, easeOut, ease, back, bindStage, EMP, OWN, arrow, assassin, bars, bigFace, boxer, carPhoto, closeUp, credit,
+  crowdRow, desat, driverAt, flash, hostIn, label, lipHost, nameTag, paper, person, photo, photoBg, pt, realBoom, shake, smoke, stamp, sticker, sweat,
+  tear, vein, ward, world1914 } from '../_kit/stage.js';
+creditLeft();
+
+const g = document.getElementById('cv').getContext('2d');
+bindNarrator(g);
+const AH = 'Austro-Hungarian Empire', RS = 'Serbia', DE = 'German Empire', RU = 'Russian Empire', FR = 'France',
+  UK = 'United Kingdom of Great Britain and Ireland', BE = 'Belgium', IT = 'Kingdom of Italy';
+const SARA = [18.41, 43.86];
+
+// ── tài nguyên ──
+const IM = {}; let M = null, MW = null, TL = null, ready = false;
+const img = (k, src) => { const im = new Image(); im.src = src; return im.decode().then(() => { IM[k] = im; }); };
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  loadMap('../_kit/maps/europe1914.json').then(m => { M = m; }), loadMap('../_kit/maps/world1914.json').then(m => { MW = m; }),
+  fetch('data/narration.timeline.json').then(r => r.json()).then(j => { TL = j; }),
+  fetch('data/narration.mouth.json').then(r => r.json()).then(j => bindNarrator(g, { mouth: j })),
+  ...['car', 'boom1', 'ff_bust', 'sophie_bust', 'potiorek_bust'].map(k => img(k, `assets/cut/${k}.png`)),
+  ...['ff', 'princip', 'nyt', 'townhall', 'sarajevo', 'cabri', 'worldnow', 'rhodes'].map(k => img('p_' + k, `assets/photos/${k}.jpg`)),
+  ...['street1910', 'phone', 'fordT', 'wright', 'ring', 'imperialmap', 'cake', 'bulow', 'hospital', 'latin1930'].map(k => img('w_' + k, `assets/web/${k}.jpg`))])
+  .then(() => { bindStage(g, { IM, M, MW }); build(); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+// dòng cảnh đánh số theo bản 4 → dòng bản hiện tại tìm bằng ĐẦU CÂU (sống sót qua mọi lần viết lại / cắt câu)
+const HOSTX = 1780;   // chỗ người dẫn trong đám đông phố Sarajevo — giữ nguyên qua hai cảnh liền nhau (EDITING A2)
+const PRE = ["Hey everyone.", "By nineteen fourteen, the world had", "Naturally, they decided", "In nineteen fourteen they finally", "Today we just call it", "This is the world map today", "And this is the world in nineteen fourteen", "That's imperialism", "Britain ran about a fifth", "Germany, on the other hand", "But by the time Germany", "So Europe split", "Germany, Austria-Hungary, which", "Italy, still sulking", "Everyone promised", "And the most dangerous spot", "People called the Balkans", "That spark came", "June twenty-eighth", "Along the route", "The first one throws", "So he swallows", "Plan failed", "But no.", "After complaining", "Nice of him", "So the cars turn", "Standing right there", "And no, he wasn't", "He fires twice", "Franz Ferdinand and Sophie are dead", "One month later", "All because nobody told", "Next time:"];
+const LT = pre => { const l = TL.lines.find(l => l.text.startsWith(pre)); if (!l) throw new Error(`LT: "${pre}"`); return l; };
+const L = n => LT(PRE[n - 1]);
+function w(n, word, nth = 0) { const i0 = TL.lines.indexOf(L(n)); const ws = TL.lines.slice(i0, i0 + 3).flatMap(l => l.words).filter(x => x.w.replace(/[^a-z']/g, '') === word); if (!ws[nth]) throw new Error(`w: "${word}" ∉ L${n}`); return ws[nth].start; }
+
+// ── cảnh — dựng sau khi có mốc giọng ──
+let SC = [], DUR = 212;
+function build() {
+  const S = n => L(n).start - 0.2;
+  DUR = L(34).end + 4.0;
+  const V0 = view(M, { cx: 15, cy: 49.5, zoom: 1.05 });
+  const T = {};                                                       // mốc từ
+  for (const [k, n, word, nth] of [['tele', 2, 'telephones'], ['cars', 2, 'cars'], ['air', 2, 'airplanes'], ['biz', 2, 'richer'], ['great', 3, 'biggest'], ['punch', 3, 'navy'],
+    ['war4', 4, 'war'], ['writer', 4, 'wells'], ['ww', 5, 'world'], ['us', 6, 'united'], ['hand', 7, 'handful'], ['imp', 8, 'imperialism'], ['flag', 8, 'flag'], ['ship', 8, 'ship'],
+    ['fifth', 9, 'fifth'], ['fr9', 9, 'france'], ['eigh', 10, 'eighteen'], ['steel', 10, 'steel'], ['party', 11, 'party'], ['place', 11, 'place'], ['alli', 13, 'alliance'],
+    ['nerv', 13, 'nervous'], ['tunisia', 14, 'tunisia'], ['asked', 14, 'asked'], ['sure', 14, 'sure'], ['spoil', 14, 'spoiler'], ['small', 15, 'small'], ['giant', 15, 'giant'], ['bosnia', 16, 'bosnia'], ['serb', 16, 'serbia'],
+    ['furious', 16, 'furious'], ['keg', 17, 'keg'], ['spark', 17, 'spark'], ['wrong18', 18, 'wrong'], ['drv18', 18, 'driver'],
+    ['arch', 19, 'archduke'], ['rides', 19, 'rides'], ['sophie', 19, 'sophie'], ['six', 20, 'six'], ['secret', 20, 'secret'], ['pist', 20, 'pistols'],
+    ['throw', 21, 'throws'], ['bounce', 21, 'bounces'], ['expl', 21, 'explodes'], ['jump', 22, 'jumps'], ['poison', 22, 'poison'], ['five', 22, 'five'], ['canc', 23, 'cancelled'],
+    ['guest', 25, 'guest'], ['bombs', 25, 'bombs'], ['decide', 25, 'decides'], ['drv26', 26, 'driver'], ['gov', 27, 'governor'], ['rev', 27, 'reversing'], ['stall', 27, 'stalls'],
+    ['deli', 27, 'deli'], ['prin', 28, 'gavrilo'], ['target', 28, 'target'], ['feet', 28, 'feet'], ['myth', 29, 'myth'], ['fires', 30, 'fires'], ['twice', 30, 'twice'],
+    ['month', 32, 'month'], ['decl', 32, 'declares'], ['week', 32, 'week'], ['drv33', 33, 'driver'], ['letter', 34, 'letter'], ['week7', 34, 'seven']]) T[k] = w(n, word, nth);
+  const at = (k, T0) => T0 - T[k];
+
+  SC = [
+    // ═══ MỞ BÀI ═══
+    [0, (t, X) => { photoBg(IM.p_sarajevo, t, { desat: 0.6, dark: 0.35, fy: 0.5, zoom: 1.14 }); lipHost(X, clamp(t / 0.35)); }],   // L1 chào — trên ảnh phố 1914 (REVIEW B: khung đen chết)
+    [LT('Today: how a wrong turn').start - 0.2, (t, X) => { const l = LT('Today: how a wrong turn'), wt = wd => l.words.find(x => x.w.replace(/[^a-z']/g, '') === wd)?.start ?? l.start;   // câu MÓC: 3 hình nhanh
+      if (X < wt('stalled')) { photoBg(IM.w_latin1930, t, { desat: 0.5, fy: 0.62 }); carPhoto(lerp(1500, 900, easeOut(t / 0.8)), 1070, 900, X, { riders: false, moving: true }); label('WRONG TURN', 960, 200, 90, clamp(t / 0.2), '#FFF', { stroke: RED }); }
+      else if (X < wt('nineteenyearold') - 0.05 && X < wt('outside')) { photoBg(IM.w_latin1930, t, { desat: 0.5, fy: 0.62 }); carPhoto(900, 1070, 900, X, { riders: false }); smoke(900 + 400, 980, wt('stalled'), X); label('*STALL*', 1250, 760, 64, clamp((X - wt('stalled')) / 0.2), '#FFF', { stroke: INK }); }
+      else if (X < wt('lit')) { paper('#141414'); assassin(960, 1000, 520, { look: -1, gun: 0.9 }); label('19', 1260, 420, 110, clamp((X - wt('outside')) / 0.2), '#FFF', { stroke: RED }); }
+      else { drawMap(g, M, V0, { fill: { [AH]: 'flag', [RS]: 'flag', [DE]: 'flag', [FR]: 'flag', [RU]: 'flag', [UK]: 'flag' } }); for (const n of [AH, RS, DE, FR, RU, UK]) mapFace(g, M, V0, n, { mood: 'angry' });
+        const u = X - wt('lit'); realBoom(pt(V0, ...SARA)[0], pt(V0, ...SARA)[1], 520, u, 3); realBoom(700, 420, 480, u - 0.5, 4); realBoom(1300, 380, 480, u - 0.8, 5); }
+      lipHost(X); }],
+    [LT('But first, you need to know').start - 0.2, (t, X) => { const V = view(M, { cx: lerp(15, 18.4, ease(t / 3)), cy: lerp(49.5, 44, ease(t / 3)), zoom: lerp(1.05, 2.2, ease(t / 3)) });   // ngòi nổ chạy qua châu Âu
+      drawMap(g, M, V, { fill: { [AH]: 'flag', [RS]: 'flag', [DE]: 'flag', [FR]: 'flag', [RU]: 'flag', [UK]: 'flag' } }); desat(0.5, 0.2);
+      const c = pt(V, ...SARA), u = clamp(t / 3.5), s0 = [c[0] - 900, c[1] - 420], p = [lerp(s0[0], c[0], u), lerp(s0[1], c[1], u)];
+      g.save(); g.strokeStyle = '#2A2A2A'; g.lineWidth = 8; g.setLineDash([18, 10]); g.beginPath(); g.moveTo(...s0); g.lineTo(...c); g.stroke(); g.restore();
+      for (let i = 0; i < 12; i++) { const a = hash(i + Math.floor(X * 20)) * 7, r = 10 + 30 * hash(i + 5); g.fillStyle = i % 2 ? '#FFD34D' : '#FF7A1A'; g.beginPath(); g.arc(p[0] + Math.cos(a) * r, p[1] + Math.sin(a) * r, 6, 0, 7); g.fill(); }
+      label('THE FUSE', 960, 150, 80, clamp(t / 0.3), '#FFF', { stroke: INK }); lipHost(X); }],
+    [S(2), (t, X) => {                                                                                                                         // L2 ảnh đời thật đổi theo từ
+      const pics = [['w_street1910', S(2), 'Los Angeles, c. 1910', 0.5, 0.75], ['w_phone', T.tele, 'Liberty Loan poster, 1917', 0.5, 0.35], ['w_fordT', T.cars, 'Ford Model T, c. 1910', 0.5, 0.6],
+        ['w_wright', T.air, 'Wright Flyer, 1903', 0.5, 0.5], ['w_street1910', T.biz, 'Los Angeles, c. 1910', 0.5, 0.35]];
+      let i = pics.findLastIndex(p => X >= p[1]); if (i < 0) i = 0; const [k, t0, cr, fx, fy] = pics[i];
+      photoBg(IM[k], X - t0, { fx, fy, zoom: k === 'w_phone' ? 1.0 : 1.05, credit: cr + ' · public domain' });
+      if (i === 4) stamp('BUSINESS: BOOMING', 760, 300, 64, clamp((X - T.biz) / 0.3), -0.06);
+      lipHost(X); }],
+    [S(3), (t, X) => { paper('#FFFFFF'); const pre = X < T.punch, pk = pre ? 0.15 : undefined;                                 // L3 các nước ra oai → tới chữ "punch" thì đấm
+      // (bản 4 đầu dùng cận mặt người dẫn 3.5 s ở đây — người dùng: "sao có mỗi cái mặt"; cận mặt chỉ là phản ứng ≤ 1.2 s, §197)
+      boxer(UK, 330, 900, 380, X, { dir: 1, mood: pre ? 'smug' : 'angry', punch: pk }); boxer(FR, 760, 820, 330, X + 0.3, { dir: -1, mood: pre ? 'smug' : 'angry', punch: pk });
+      boxer(DE, 1180, 900, 380, X + 0.6, { dir: 1, mood: pre ? 'cool' : 'angry', punch: pk }); boxer(RU, 1620, 880, 420, X + 0.9, { dir: -1, mood: pre ? 'smug' : 'angry', punch: pk });
+      if (pre) label("WHO'S THE STRONGEST?", 960, 200, 80, clamp((X - T.great) / 0.3), INK);
+      if (X > T.punch) for (let i = 0; i < 4; i++) label('POW!', 540 + i * 420, 360 + 60 * Math.sin(i), 70, clamp((X - T.punch - i * 0.2) / 0.2), RED, { stroke: '#FFF', rot: (hash(i) - 0.5) * 0.4 }); }],
+    [S(4), (t, X) => { const [sx, sy] = shake(clamp(((X - T.war4) % 0.8) / 0.5), 10, X);                                                       // L4 bản đồ cũ + vụ nổ thật chồng lên
+      g.save(); g.translate(sx, sy); photoBg(IM.w_imperialmap, t, { zoom: 1.1, fy: 0.42, desat: 0.85 }); g.fillStyle = 'rgba(20,18,15,0.35)'; g.fillRect(-40, -40, W + 80, H + 80);
+      for (let i = 0; i < 14; i++) realBoom(160 + hash(i + 20) * 1500, 280 + hash(i + 40) * 600, 420 + 260 * hash(i + 60), X - (T.war4 + i * 0.42), i);
+      g.restore();
+      if (X > T.writer) { label('“THE WAR THAT WILL END WAR”', 700, 140, 60, clamp((X - T.writer) / 0.3), '#FFF', { stroke: INK }); label('— H. G. Wells, 1914', 700, 205, 38, clamp((X - T.writer - 0.4) / 0.3), '#FFF', { stroke: INK }); }
+      lipHost(X); credit('Map: Imperial Federation, 1886 · public domain'); }],
+    [S(5), (t, X) => { photoBg(IM.w_ring, t, { dark: 0.25, fy: 0.45 });                                                                        // L5 sàn đấu thật + các nước + tên trận
+      boxer(UK, 260, 1000, 360, X, { dir: 1 }); boxer(FR, 620, 860, 300, X + 0.4, { dir: 1 }); boxer(DE, 1000, 980, 380, X + 0.8, { dir: -1 }); boxer(RU, 1320, 880, 330, X + 1.2, { dir: -1 });
+
+      const k = clamp((X - T.ww) / 0.3); if (k > 0) { label('WORLD WAR I', 900, 250, 170, k, '#FFF', { stroke: RED }); label('1914 – 1918', 900, 340, 56, clamp(k - 0.4), '#FFF', { stroke: INK }); }
+      credit('Boxing ring · CC0 (StockSnap)'); }],
+    // ═══ BỐI CẢNH ═══
+    [S(6), (t, X) => { const P = photoBg(IM.p_worldnow, t, { push: 0.004, fy: 0.45, credit: 'Political Map of the World, CIA · public domain' });     // L6 bản đồ hôm nay — nước Mỹ ngủ
+      label('THE WORLD TODAY', 960, 90, 64, clamp(t / 0.3), INK, { stroke: '#FFF' });
+      const k = clamp((X - T.us) / 0.3); if (k > 0) { const [x, y] = P(410, 330); g.save(); g.strokeStyle = RED; g.lineWidth = 8; g.globalAlpha = k; g.beginPath(); g.ellipse(x, y, 230 * back(k), 130 * back(k), 0, 0, 7); g.stroke(); g.restore();
+        for (const s of [-1, 1]) { g.fillStyle = '#FFF'; g.strokeStyle = INK; g.lineWidth = 4; g.beginPath(); g.ellipse(x + s * 46, y, 34, 40, 0, 0, 7); g.fill(); g.stroke(); g.fillStyle = INK; g.fillRect(x + s * 46 - 36, y - 42, 72, 46); }
+        label('z z z', x + 150, y - 110, 54, clamp((X - T.us - 0.5) / 0.3), INK, { stroke: '#FFF' }); }
+      lipHost(X, clamp(t / 0.35)); }],
+    [S(7), (t, X) => { world1914(X, T.hand); label('THE WORLD IN 1914', 960, 90, 64, clamp(t / 0.3), INK, { stroke: '#FFF' }); }],                // L7 thế giới 1914 tô theo đế quốc
+    [S(8), (t, X) => { paper('#1B1A18'); photo(IM.p_rhodes, 640, 560, 500, 1, { push: 1 + 0.02 * t, credit: '“The Rhodes Colossus”, Punch, 1892 · public domain' });   // L8 chủ nghĩa đế quốc
+      stamp('IMPERIALISM', 600, 140, 70, clamp((X - T.imp) / 0.3), -0.05);
+      [['1. SHOW UP', T.imp + 0.5], ['2. PLANT A FLAG', T.flag], ['3. SHIP THE GOOD STUFF HOME', T.ship]].forEach(([tx, t0], i) => label(tx, 1000, 420 + i * 110, 48, clamp((X - t0) / 0.25), '#FFF', { align: 'left', stroke: INK }));
+      lipHost(X, clamp(t / 0.3)); }],
+    [S(9), (t, X) => { if (X < T.fr9 - 0.1) { photoBg(IM.w_imperialmap, t, { zoom: 1.0, fy: 0.45, credit: 'Imperial Federation map of the British Empire, 1886 · public domain' });   // L9 Đế quốc Anh
+        g.fillStyle = 'rgba(15,15,20,0.35)'; g.fillRect(0, 0, W, H); stamp('≈ 1/5 OF ALL LAND', 960, 200, 90, clamp((X - T.fifth) / 0.3), 0.04); return; }
+      world1914(X, 0, { only: ['UK', 'FR', 'RU'] }); label('BRITAIN · FRANCE · RUSSIA', 960, 90, 60, clamp((X - T.fr9) / 0.3), INK, { stroke: '#FFF' }); }],
+    [S(10), (t, X) => { const V = view(M, { cx: lerp(15, 11, ease(t / 1.5)), cy: lerp(49.5, 51, ease(t / 1.5)), zoom: lerp(1.05, 2.0, ease(t / 1.5)) });   // L10 nước Đức trẻ, nhiều thép
+      drawMap(g, M, V, { fill: { [DE]: 'flag', [UK]: 'flag' } }); mapFace(g, M, V, DE, { mood: X > T.steel ? 'cool' : 'smug' }); mapFace(g, M, V, UK, { mood: X > T.steel ? 'shock' : 'calm' });
+      stamp('UNITED: 1871', 1450, 200, 64, clamp((X - T.eigh) / 0.3), 0.05); bars(X, T.steel); }],
+    [S(11), (t, X) => { if (X < T.place - 0.1) { paper('#1B1A18'); photo(IM.w_cake, 960, 540 + 260 - t * 40, 900, 1, { push: 1.1 + 0.02 * t, credit: '“China — the cake of kings and emperors”, Le Petit Journal, 1898 · public domain' });   // L11 tiệc thuộc địa
+        label('THE COLONY PARTY', 960, 110, 64, clamp((X - T.party) / 0.3), '#FFF', { stroke: INK }); return; }
+      paper('#1B1A18'); photo(IM.w_bulow, 560, 540, 520, 1, { push: 1 + 0.02 * t, credit: 'Bernhard von Bülow · public domain' });
+      nameTag('BERNHARD VON BÜLOW, 1897', clamp((X - T.place) / 0.3), 900, 420);
+      bubble(g, 'We demand our own place in the sun!', 1300, 600, 900, 520, clamp((X - T.place - 0.3) / 0.25), 40); }],
+    [S(12), (t, X) => { drawMap(g, M, V0, { fill: { [DE]: '#9C3B3B', [AH]: '#9C3B3B', [IT]: '#9C3B3B', [UK]: '#3B5E9C', [FR]: '#3B5E9C', [RU]: '#3B5E9C' } });   // L12–L13 hai băng
+      for (const n of [DE, AH, IT, UK, FR, RU]) mapFace(g, M, V0, n, { mood: 'angry' }); label('TWO GANGS', 960, 100, 80, clamp(t / 0.3), '#FFF', { stroke: INK }); }],
+    [S(13), (t, X) => { photoBg(IM.p_worldnow, t, { dark: 0.6, desat: 1, push: 0.005 });
+      const k1 = clamp((X - T.alli) / 0.3), k2 = clamp((X - w(13, 'britain')) / 0.3);
+      [[DE, 240, 400], [AH, 480, 360], [IT, 700, 330]].forEach(([n, x, h], i) => { if (k1 > 0) cutout(g, M, n, x, 1000 - (1 - back(k1)) * 300, h, { mood: 'cool', arms: 'cross', t: X }); });
+      [[UK, 1180, 330], [FR, 1420, 360], [RU, 1700, 420]].forEach(([n, x, h]) => { if (k2 > 0) cutout(g, M, n, x, 1000 - (1 - back(k2)) * 300, h, { mood: X > T.nerv ? 'shock' : 'calm', arms: 'cross', t: X }); });
+      label('TRIPLE ALLIANCE', 470, 150, 64, k1, '#FFF', { stroke: INK }); label('TRIPLE ENTENTE', 1440, 150, 64, k2, '#FFF', { stroke: INK });
+      if (X > T.nerv) for (const x of [1180, 1420, 1700]) sweat(x + 90, 600, 1.4); }],
+    [S(14), (t, X) => { photoBg(IM.p_worldnow, t, { dark: 0.6, desat: 1, push: 0.005 });                                                         // L14 Ý tự xin vào (cay Pháp vì Tunisia) — đúng sử
+      cutout(g, M, IT, 1320, 1000, 440, { mood: X > T.asked ? 'sad' : 'angry', arms: 'wave', t: X }); cutout(g, M, DE, 560, 1000, 460, { mood: X > T.spoil ? 'shock' : 'smug', arms: 'cross', t: X });
+      if (X < T.asked) bubble(g, 'France took TUNISIA!', 1320, 330, 1320, 560, clamp((X - T.tunisia) / 0.25), 48);
+      else bubble(g, 'Can I join your gang?', 1320, 330, 1320, 560, clamp((X - T.asked) / 0.25), 48);
+      bubble(g, 'Sure. Just don’t flake on us.', 640, 300, 560, 520, clamp((X - T.sure) / 0.25), 48);
+      stamp('SPOILER: ITALY SWITCHES SIDES (1915)', 960, 930, 48, clamp((X - T.spoil) / 0.3), -0.04); }],
+    [S(15), (t, X) => { paper('#FFFFFF');                                                                                                     // L15 hứa bảo kê → domino
+      const row = [[RS, 0.6], [AH, 1], [RU, 1.15], [DE, 1], [FR, 0.95], [UK, 0.85]];
+      row.forEach(([n, s], i) => { const x = 200 + i * 300, tip = clamp((X - T.giant - i * 0.18) / 0.35);
+        g.save(); g.translate(x + 60, 980); g.rotate(ease(tip) * 1.1); g.translate(-(x + 60), -980); cutout(g, M, n, x, 980, 300 * s, { mood: tip > 0 ? 'shock' : 'angry', arms: 'cross', t: X }); g.restore(); });
+      if (X > T.small) label('one small fight…', 960, 200, 64, clamp((X - T.small) / 0.3), INK);
+      if (X > T.giant) { label('…→ GIANT FIGHT', 960, 300, 80, clamp((X - T.giant - 0.6) / 0.3), RED); for (let i = 0; i < 4; i++) realBoom(500 + i * 330, 700, 380, X - T.giant - 0.9 - i * 0.2, i + 50); } }],
+    [S(16), (t, X) => { const V = view(M, { cx: lerp(15, 18.6, ease(t / 1.5)), cy: lerp(49, 44.6, ease(t / 1.5)), zoom: lerp(1.05, 3.2, ease(t / 1.5)) });   // L16 Balkan, Bosnia 1908
+      drawMap(g, M, V, { fill: { [AH]: 'flag', [RS]: 'flag' } }); mapFace(g, M, V, AH, { mood: 'smug' }); const f = mapFace(g, M, V, RS, { mood: X > T.serb ? 'angry' : 'calm', look: [-1, -0.3] });
+      label('THE BALKANS', 330, 760, 70, clamp(t / 0.3), INK, { stroke: '#FFF' });
+      const p = pt(V, 17.8, 44.2); if (X > T.bosnia) { label('BOSNIA', p[0], p[1], 50, clamp((X - T.bosnia) / 0.3), '#FFF', { stroke: INK }); stamp('ANNEXED 1908', p[0] - 40, p[1] + 90, 44, clamp((X - T.bosnia - 0.4) / 0.3), -0.1); }
+      if (X > T.furious && f) { vein(f.x + f.r * 0.9, f.y - f.r * 0.9, 1.6); label('!!!', f.x + f.r * 1.6, f.y - f.r * 1.4, 70, clamp((X - T.furious) / 0.2), RED); } }],
+    [S(17), (t, X) => { drawMap(g, M, V0, { fill: { [AH]: 'flag', [RS]: 'flag', [DE]: 'flag', [FR]: 'flag', [RU]: 'flag', [UK]: 'flag', [IT]: 'flag' } }); desat(0.7, 0.35);   // L17 thùng thuốc súng + mồi lửa
+      label('POWDER KEG', 960, 120, 90, clamp((X - T.keg) / 0.3), '#FFF', { stroke: RED });
+      const c = pt(V0, ...SARA); if (X > T.spark) { const u = clamp((X - T.spark) / 1.0), s0 = [c[0] - 520, c[1] + 300], p = [lerp(s0[0], c[0], u), lerp(s0[1], c[1], u)];
+        g.strokeStyle = '#2A2A2A'; g.lineWidth = 6; g.beginPath(); g.moveTo(...p); g.lineTo(...c); g.stroke();
+        for (let i = 0; i < 12; i++) { const a = hash(i + Math.floor(X * 20)) * 7, r = 10 + 30 * hash(i + 5); g.fillStyle = i % 2 ? '#FFD34D' : '#FF7A1A'; g.beginPath(); g.arc(p[0] + Math.cos(a) * r, p[1] + Math.sin(a) * r, 5, 0, 7); g.fill(); } } }],
+    [S(18), (t, X) => { const P = photoBg(IM.p_sarajevo, t, { desat: 0.4, fy: 0.5, zoom: 1.14, credit: 'Sarajevo, c. 1914 · public domain' });               // L18 xe thật vào Sarajevo
+      label('SARAJEVO', 360, 120, 80, clamp(t / 0.3), '#FFF', { stroke: INK });
+      const k = clamp((X - S(18) - 0.3) / 1.2); carPhoto(lerp(-600, 900, easeOut(k)), 1020, 1000, X, { moving: k < 1, riders: false });
+      if (X > T.drv18) { const [dx, dy] = driverAt(900, 1020, 1000); g.strokeStyle = RED; g.lineWidth = 7; g.beginPath(); g.arc(dx, dy, 80 * back(clamp((X - T.drv18) / 0.3)), 0, 7); g.stroke();
+        label('?', dx + 110, dy - 80, 120, clamp((X - T.drv18 - 0.2) / 0.2), RED, { stroke: '#FFF' }); } }],
+    // ═══ SARAJEVO ═══
+    [S(19), (t, X) => {                                                                                                                       // L19 ngày, FF, xe vào phố có dân
+      if (X < T.arch - 0.15) { const V = view(M, { cx: lerp(15, 18.4, ease(t / 1.6)), cy: lerp(49, 44, ease(t / 1.6)), zoom: lerp(1.2, 3.4, ease(t / 1.6)) });
+        drawMap(g, M, V, { fill: { [AH]: 'flag', [RS]: 'flag' } }); mapFace(g, M, V, AH, { mood: 'smug' }); mapFace(g, M, V, RS, { mood: 'angry', look: [-1, -0.3] });
+        const p = pt(V, ...SARA), k = clamp((t - 1.0) / 0.3); if (k > 0) { g.fillStyle = RED; g.beginPath(); g.arc(p[0], p[1], 16 * back(k), 0, 7); g.fill(); label('SARAJEVO', p[0], p[1] - 34, 52, k, '#FFF', { stroke: INK }); }
+        stamp('28 JUNE 1914', 520, 220, 70, clamp((t - 0.2) / 0.5), -0.06); return; }
+      if (X < T.rides - 0.1) { const u = X - T.arch; paper('#1A1A1A'); photo(IM.p_ff, 520, 520, 540, 1, { push: 1 + 0.03 * u, credit: 'Franz Ferdinand, c. 1914 · public domain' });
+        nameTag('ARCHDUKE FRANZ FERDINAND', clamp(u / 0.3), 880, 470); nameTag('HEIR TO AUSTRIA-HUNGARY', clamp((u - 0.5) / 0.3), 880, 550); return; }
+      const u = X - T.rides; photoBg(IM.p_sarajevo, u, { desat: 0.4, fy: 0.5, zoom: 1.14, credit: 'Sarajevo, c. 1914 · public domain' });
+      crowdRow(-40, 1960, 760, 230, X, { cheer: true, skip: [HOSTX] });
+      narrator(HOSTX, 770 - Math.max(0, Math.sin(X * 8)) * 10, 235, { outfit: 'bowler', arms: 'flag', mouth: 'smile', t: X });   // người dẫn lẫn trong đám đông vẫy cờ — không lời (người dùng 10-28)
+      carPhoto(lerp(-600, 960, easeOut(u / 2.6)), 1060, 1000, X, { moving: u < 2.6 }); nameTag('+ SOPHIE, HIS WIFE', clamp((X - T.sophie) / 0.3), 70, 1010); }],
+    [S(20), (t, X) => { paper('#17151A');                                                                                                     // L20 phòng tối, sáu người, Black Hand
+      g.fillStyle = '#5A1414'; g.strokeStyle = '#2A0808'; g.lineWidth = 6; g.beginPath(); g.moveTo(1330, 90); g.lineTo(1670, 90); g.lineTo(1670, 500); g.lineTo(1500, 450); g.lineTo(1330, 500); g.closePath(); g.fill(); g.stroke();   // cờ hội kín treo tường
+      g.fillStyle = '#C9A24A'; g.fillRect(1310, 78, 380, 14);
+      g.save(); g.translate(1500, 290); g.scale(0.62, 0.62); g.rotate(-0.15); g.fillStyle = '#050505'; g.beginPath(); g.ellipse(0, 40, 95, 115, 0, 0, 7); g.fill();
+      for (let i = 0; i < 5; i++) { const a = -1.9 + i * 0.42 + (i === 0 ? -0.5 : 0); g.save(); g.rotate(a + Math.PI / 2); g.beginPath(); g.roundRect(-22, -230, 44, 170 - (i === 0 ? 50 : 0), 22); g.fill(); g.restore(); } g.restore();
+      label('BLACK HAND', 1500, 620, 74, clamp((X - T.secret) / 0.3), '#F4F1E8'); label('secret society · Serbia', 1500, 685, 40, clamp((X - T.secret - 0.3) / 0.3), '#C9C2AE');
+      for (let i = 0; i < 6; i++) { const k = clamp((X - T.six - i * 0.16) / 0.25); if (k <= 0) continue; const y = 960 + (1 - back(k)) * 200;
+        if (i === 4) narrator(130 + i * 175, y, 262, { outfit: 'suit', mood: 'angry', mouth: 'rest', look: 1 });   // người dẫn LÀ một trong sáu — không chữ, không lời (người dùng 10-28)
+        else assassin(130 + i * 175, y, 300, { look: 1 }); }
+      if (X > T.six) label('YOUNG BOSNIA', 570, 560, 46, clamp((X - T.six - 1.1) / 0.3), '#F4F1E8');
+      if (X > T.pist) { const k = clamp((X - T.pist) / 0.3); g.save(); g.globalAlpha = k; g.fillStyle = '#FFF'; g.beginPath(); g.ellipse(1500, 850, 210 * back(k), 150 * back(k), 0, 0, 7); g.fill();
+        g.font = '900 44px Archivo, sans-serif'; g.fillStyle = INK; g.textAlign = 'center'; g.fillText('PISTOLS', 1500, 810); g.fillText('BOMBS', 1500, 862); g.fillStyle = '#3C8A3C'; g.fillText('CYANIDE', 1500, 914); g.restore(); } }],
+    [S(21), (t, X) => {                                                                                                                       // L21 Čabrinović: ảnh thật → người vẽ ném bom
+      if (X < T.throw - 0.2) { paper('#1A1A1A'); photo(IM.p_cabri, 560, 520, 460, 1, { push: 1 + 0.03 * t, credit: 'Nedeljko Čabrinović · public domain' }); nameTag('NEDELJKO ČABRINOVIĆ, 19', clamp(t / 0.3), 880, 520); return; }
+      const [sx, sy] = shake(clamp((X - T.expl) / 0.6), 26, X);
+      g.save(); g.translate(sx, sy); photoBg(IM.p_sarajevo, t, { desat: 0.4, fy: 0.5, zoom: 1.14 }); crowdRow(-40, 1960, 760, 230, X, { panic: X > T.expl, skip: [380, HOSTX] });
+      if (X < T.expl + 0.1) narrator(HOSTX, 770 - Math.max(0, Math.sin(X * 8)) * 10, 235, { outfit: 'bowler', arms: 'flag', mouth: 'smile', t: X });   // cùng chỗ, cùng cỡ như cảnh trước
+      else narrator(HOSTX, 775, 235, { outfit: 'bowler', arms: 'cover', mood: 'closed', mouth: 'grit', crouch: 1 });   // bom nổ → núp
+      assassin(380, 780, 300, { look: 1, arm: X < T.throw ? 1.2 : X < T.bounce ? -0.9 : 0.6 });
+      const carX = X > T.expl ? 1150 + (X - T.expl) * 500 : 1150; carPhoto(carX, 1060, 1000, X, { moving: X > T.expl });
+      const k = clamp((X - T.throw) / Math.max(0.3, T.bounce - T.throw)), k2 = clamp((X - T.bounce) / Math.max(0.3, T.expl - T.bounce));
+      if (X > T.throw && X < T.expl) { const p = k < 1 ? [lerp(520, 1080, k), lerp(420, 720, k) - Math.sin(k * Math.PI) * 280] : [lerp(1080, 300, k2), 720 - Math.sin(k2 * Math.PI) * 240 + 200 * k2];
+        g.fillStyle = '#111'; g.beginPath(); g.arc(p[0], p[1], 24, 0, 7); g.fill(); g.strokeStyle = '#E8541E'; g.lineWidth = 4; g.beginPath(); g.moveTo(p[0], p[1] - 24); g.lineTo(p[0] + 10, p[1] - 44); g.stroke();
+        if (k >= 1 && k2 < 0.35) label('BOING', 1100, 640, 80, clamp(k2 * 8), '#FFF', { stroke: INK, rot: 0.1 }); }
+      realBoom(300, 980, 700, X - T.expl, 7);
+      g.restore(); }],
+    [S(22), (t, X) => {                                                                                                                       // L22 xyanua cũ, sông sâu 5 inch
+      if (X < T.jump) { paper('#E9E2CF'); const f = assassin(960, 1180, 1000, { green: t > 1.2 }); const k = clamp((t - 0.4) / 0.6);
+        if (k < 1) { g.save(); g.translate(lerp(1500, 960, k), lerp(300, f.face[1] + 120, k)); g.rotate(-0.5); g.fillStyle = '#F3F3F3'; g.strokeStyle = INK; g.lineWidth = 4; g.beginPath(); g.roundRect(-40, -16, 80, 32, 16); g.fill(); g.stroke(); g.restore(); }
+        else label('*gulp*', 1420, 420, 90, clamp((t - 1.0) / 0.2), INK, { rot: 0.1 }); return; }
+      const u = X - T.jump, P = photoBg(IM.p_sarajevo, u, { desat: 0.3, fy: 0.62, zoom: 1.3, credit: 'Miljacka river, Sarajevo, c. 1914 · public domain' });
+      label('MILJACKA RIVER', 520, 120, 70, clamp(u / 0.3), '#FFF', { stroke: INK });
+      const fy = lerp(-250, 900, clamp(u / 0.8) ** 2); const f = assassin(1000, fy, 260, { green: true });
+      if (u > 0.8) { g.fillStyle = 'rgba(90,140,170,0.65)'; g.fillRect(860, 880, 280, 30); label('*splash?*', 1000, 840 - 260, 70, clamp((u - 0.8) / 0.2), '#FFF', { stroke: INK }); }
+      if (X > T.poison) { stamp('POISON: EXPIRED', 480, 700, 54, clamp((X - T.poison) / 0.3), -0.1); sweat(f.face[0] + 60, f.face[1] - 20, 1.3); }
+      if (X > T.five - 0.1) { const k = clamp((X - T.five + 0.1) / 0.3); g.save(); g.globalAlpha = clamp(k * 3); g.fillStyle = '#F2C94C'; g.strokeStyle = INK; g.lineWidth = 4; g.fillRect(1180, 800, 50, 110); g.strokeRect(1180, 800, 50, 110);
+        for (let i = 0; i < 6; i++) { g.beginPath(); g.moveTo(1180, 910 - i * 20); g.lineTo(1180 + (i % 2 ? 16 : 26), 910 - i * 20); g.stroke(); } g.restore();
+        label('5 inches deep', 1480, 860, 64, k, RED, { stroke: '#FFF' }); } }],
+    [S(23), (t, X) => { paper('#FDF6E3');                                                                                                     // L23 gài: THE END giả
+      for (let i = 0; i < 60; i++) { const y = (hash(i) * 1200 + t * 300 * (0.5 + hash(i + 9))) % 1200 - 60; g.fillStyle = ['#E8541E', '#2F6DB5', '#F7C21B', '#3FA34D'][i % 4]; g.fillRect(hash(i + 3) * W, y, 14, 22); }
+      label('THE END', 860, 430, 190, clamp((t - 0.05) / 0.3)); stamp('WORLD WAR I: CANCELLED ✓', 860, 640, 60, clamp((X - T.canc) / 0.3), -0.05);
+      hostIn(1650, 1060, 400, clamp((t - 0.4) / 0.35), { arms: 'thumb', mouth: 'smile', t: X }); }],
+    [S(24) - 0.15, (t, X) => { bigFace(t, 'shock', 'o');                                                              // L24 "But no."
+      for (let i = 0; i < 26; i++) { g.fillStyle = 'rgba(255,255,255,0.22)'; g.fillRect(0, hash(i + Math.floor(t * 12)) * H, W, 2 + 5 * hash(i)); }
+      label('◀◀', 260, 200, 110, clamp(t / 0.1), '#FFF'); }],
+    [S(25), (t, X) => {                                                                                                                       // L25 toà thị chính → bệnh viện
+      if (X < T.decide - 0.1) { photoBg(IM.p_townhall, t, { dark: 0.35, desat: 0.6, credit: 'Sarajevo Town Hall, 28 June 1914 · public domain' });
+        label('TOWN HALL', 300, 110, 60, clamp(t / 0.3), '#FFF', { stroke: INK });
+        person(1450, 1080, 420, { hat: 'fez' }); g.fillStyle = '#FFF'; g.strokeStyle = INK; g.lineWidth = 4; g.fillRect(1240, 860, 120, 150); g.strokeRect(1240, 860, 120, 150);
+        sticker(IM.ff_bust, 640, 1090, 760, { shadow: false }); if (X > T.guest) { vein(780, 470, 2); label('!!', 880, 420, 80, clamp((X - T.guest) / 0.2), RED); }
+        bubble(g, 'BOMBS?! I came here as a GUEST!', 820, 200, 700, 380, clamp((X - T.bombs) / 0.25), 46); return; }
+      const u = X - T.decide; g.fillStyle = '#0E0E10'; g.fillRect(0, 0, W, H);                                            // ý định (ông CHƯA tới viện — bị bắn trên đường)
+      sticker(IM.ff_bust, 520, H + 10, 0.62 * H, { k: clamp(u / 0.3), from: 500, dx: -1, shadow: false }); ward(1260, 470, clamp((u - 0.4) / 0.35), X);
+      label('PLAN: VISIT THE WOUNDED', 1260, 900, 54, clamp((u - 0.9) / 0.3), '#FFF'); }],
+    [S(26), (t, X) => { photoBg(IM.p_sarajevo, t, { desat: 0.4, fy: 0.5, zoom: 1.14 }); carPhoto(820, 1060, 1100, X);
+      lipHost(X);                                                                                                                             // L26 không ai báo tài xế
+      for (let i = 0; i < 3; i++) { const k = ((X * 0.9 + i / 3) % 1); label('♪', 900 + 40 * Math.sin(k * 6 + i), 560 - k * 260, 70, 1, `rgba(255,255,255,${1 - k})`, { stroke: INK }); }
+      if (X > T.drv26) { const k = clamp((X - T.drv26) / 0.3), [dx, dy] = driverAt(820, 1060, 1100); g.strokeStyle = RED; g.lineWidth = 7; g.beginPath(); g.arc(dx, dy, 90 * back(k), 0, 7); g.stroke(); label('NOBODY TOLD HIM', dx, dy - 170, 60, k, '#FFF', { stroke: RED }); }
+      }],
+    [S(27), (t, X) => {                                                                                                                       // L27 đường cũ → "Wrong way!" → chết máy
+      if (X < T.gov - 0.1) { const u = clamp((X - S(27)) / Math.max(0.5, T.gov - S(27) - 0.2));                             // ảnh góc phố thật + xe thật nhỏ + mũi tên
+        photoBg(IM.w_latin1930, X - S(27), { desat: 0.5, fy: 0.62, credit: 'Corner near the Latin Bridge, Sarajevo · public domain' });
+        g.save(); g.lineCap = 'round'; g.lineWidth = 16; g.setLineDash([30, 22]); g.strokeStyle = '#2E8B57'; g.beginPath(); g.moveTo(80, 900); g.lineTo(1840, 900); g.stroke(); g.setLineDash([]);
+        g.fillStyle = '#2E8B57'; g.beginPath(); g.moveTo(1880, 900); g.lineTo(1820, 860); g.lineTo(1820, 940); g.fill(); g.restore();
+        label('NEW ROUTE → hospital', 1500, 860, 44, 1, '#FFF', { stroke: '#1E5C3A' });
+        const turn = 0.55, carX = u < turn ? lerp(-300, 900, u / turn) : 900, carY = u < turn ? 1000 : lerp(1000, 760, (u - turn) / (1 - turn)), sc = u < turn ? 1 : lerp(1, 0.6, (u - turn) / (1 - turn));
+        if (u > turn) { const k = clamp((u - turn) / 0.15); g.save(); g.strokeStyle = RED; g.lineWidth = 18; g.lineCap = 'round'; g.beginPath(); g.moveTo(900, 900); g.lineTo(900, 900 - 330 * k); g.stroke();
+          g.fillStyle = RED; g.beginPath(); g.moveTo(900, 520 - 40 * k); g.lineTo(860, 590); g.lineTo(940, 590); g.fill(); g.restore(); label('WRONG WAY', 1150, 560, 80, k, '#FFF', { stroke: RED, rot: -0.04 }); }
+        carPhoto(carX, carY, 760 * sc, X, { moving: true }); return; }
+      if (X < T.rev - 0.1) { const u = X - T.gov; photoBg(IM.p_sarajevo, u, { desat: 0.5, dark: 0.3, fy: 0.5, zoom: 1.14 });                                    // Potiorek la
+        sticker(IM.potiorek_bust, 640, 1090, 820, { shadow: false }); bubble(g, 'WRONG WAY!', 760, 200, 700, 330, clamp(u / 0.2), 90);
+        nameTag('GOVERNOR OSKAR POTIOREK', clamp(u / 0.3), 70, 1010); return; }
+      const u = X - T.rev; photoBg(IM.w_latin1930, u, { desat: 0.5, fy: 0.62, credit: 'Corner near the Latin Bridge, Sarajevo · public domain' });   // lùi → chết máy trước tiệm
+      if (X > T.deli - 0.3) { const k = clamp((X - T.deli + 0.3) / 0.3); g.save(); g.globalAlpha = k; g.fillStyle = '#7C2E25'; g.fillRect(160, 160, 760, 86); g.fillStyle = '#F4E3C3'; g.font = '900 44px Archivo, sans-serif'; g.textAlign = 'center'; g.fillText("SCHILLER'S DELICATESSEN", 540, 220); g.restore(); }
+      const st = T.stall - T.rev, x = lerp(1250, 1000, ease(u / Math.max(0.4, st))); carPhoto(x, 1070, 1000, X, { moving: X < T.stall });
+      label('◀ REVERSE', 960, 470, 64, clamp(u / 0.2) * (X < T.stall ? 1 : 0), '#FFF', { stroke: INK });
+      if (X > T.stall) { smoke(x + 560, 980, T.stall, X); label('*cough*', x + 560, 840, 60, clamp((X - T.stall) / 0.3), '#FFF', { stroke: INK, rot: 0.1 }); } }],
+    [S(28), (t, X) => {                                                                                                                       // L28 Princip: ảnh thật → người vẽ cầm súng, cách 5 ft
+      if (X < T.target - 0.1) { paper('#1A1A1A'); photo(IM.p_princip, 700, 520, 820, 1, { push: 1 + 0.025 * t, credit: 'Gavrilo Princip · public domain' });
+        nameTag('GAVRILO PRINCIP, 19', clamp((X - T.prin) / 0.3), 1180, 520); label('one of the six', 1180, 600, 46, clamp((X - T.prin - 0.8) / 0.3), '#C9C2AE', { align: 'left' }); return; }
+      const u = X - T.target; photoBg(IM.w_latin1930, u, { desat: 0.5, fy: 0.62 }); carPhoto(1100, 1070, 1000, X);
+      assassin(330, 980, 380, { look: 1, gun: X > T.feet ? -0.05 : 0.9 });
+      const k = clamp((X - T.feet + 0.4) / 0.3); if (k > 0) { g.strokeStyle = RED; g.lineWidth = 6; g.beginPath(); g.moveTo(420, 1000); g.lineTo(640, 1000); g.stroke();
+        for (const x of [420, 640]) { g.beginPath(); g.moveTo(x, 980); g.lineTo(x, 1020); g.stroke(); } label('5 FT', 530, 970, 54, k, RED, { stroke: '#FFF' }); }
+      }],
+    [S(29), (t, X) => { paper('#F4F1E8'); g.save(); g.translate(560, 560); g.scale(1.4, 1.4); g.strokeStyle = INK; g.lineWidth = 6; g.lineJoin = 'round';      // L29 huyền thoại bánh mì
+      g.fillStyle = '#E2B56B'; g.beginPath(); g.ellipse(0, -60, 210, 70, 0, Math.PI, 0); g.lineTo(210, -40); g.lineTo(-210, -40); g.closePath(); g.fill(); g.stroke();
+      [['#7CC35B', -40], ['#D9534F', -14], ['#F2C94C', 10]].forEach(([c, y]) => { g.fillStyle = c; g.fillRect(-205, y, 410, 24); g.strokeRect(-205, y, 410, 24); });
+      g.fillStyle = '#E2B56B'; g.beginPath(); g.roundRect(-210, 32, 420, 46, 18); g.fill(); g.stroke(); g.restore();
+      stamp('MYTH', 560, 560, 120, clamp((X - T.myth) / 0.3), -0.18); hostIn(1500, 1040, 460, clamp(t / 0.25), { arms: 'shrug', mood: 'smug', mouth: mouthAt(X) }); }],
+    [S(30) - 0.3, (t, X) => { g.fillStyle = '#000'; g.fillRect(0, 0, W, H); flash(820, 520, clamp((X - T.fires) / 0.18)); flash(1100, 560, clamp((X - T.twice) / 0.18)); }],   // L30 màn đen
+    [S(31), (t, X) => { paper('#141414'); photo(IM.p_nyt, 760, 540 + 380 - t * 60, 960, clamp(t / 0.6), { push: 1.0 + 0.02 * t, credit: 'The New York Times, 29 June 1914 · public domain' });   // L31 nghiêm
+      desat(1, 0.15); hostIn(1620, 1060, 420, clamp((t - 0.6) / 0.5), { arms: 'hatchest', mood: 'closed', mouth: 'rest' }); }],
+    [S(32), (t, X) => { const V = view(M, { cx: 13, cy: 49.5, zoom: 1.1 });                                                                  // L32 dây chuyền tuyên chiến + vụ nổ thật
+      drawMap(g, M, V, { fill: { [AH]: 'flag', [RS]: 'flag', [DE]: 'flag', [FR]: 'flag', [RU]: 'flag', [UK]: 'flag', [BE]: 'flag' } });
+      for (const n of [AH, RS, DE, FR, RU, UK]) mapFace(g, M, V, n, { mood: X > T.decl ? 'angry' : 'calm' }); desat(0.45, 0.12);
+      const A = [[ANCHOR[AH], ANCHOR[RS], T.decl], [ANCHOR[DE], ANCHOR[RU], T.week], [ANCHOR[DE], ANCHOR[FR], T.week + 0.5], [ANCHOR[UK], ANCHOR[DE], T.week + 1.0]];
+      A.forEach(([a, b, t0], i) => { arrow(V, a, b, clamp((X - t0) / 0.45)); const B = pt(V, ...b); realBoom(B[0], B[1], 360, X - t0 - 0.45, 30 + i); });
+      stamp('28 JULY 1914', 330, 800, 56, clamp((X - T.month) / 0.3), 0.05); stamp('4 AUGUST 1914', 330, 950, 56, clamp((X - T.week - 1.0) / 0.3), -0.04); }],
+    [S(33), (t, X) => { const V = view(M, { cx: lerp(15, 18.4, ease(t / 1.4)), cy: lerp(49.5, 44.6, ease(t / 1.4)), zoom: lerp(1.05, 2.6, ease(t / 1.4)) });   // L33 tất cả vì không ai báo tài xế
+      drawMap(g, M, V, { fill: { [AH]: 'flag', [RS]: 'flag', [DE]: 'flag', [FR]: 'flag', [RU]: 'flag' } }); desat(0.5, 0.2);
+      for (let i = 0; i < 6; i++) realBoom(200 + hash(i + 80) * 1500, 250 + hash(i + 90) * 500, 380, X - S(33) - i * 0.25, 80 + i);
+      carPhoto(960, 1000, 700, X, { riders: false }); label('?', 1010, 520, 140, clamp((X - T.drv33) / 0.25), RED, { stroke: '#FFF' });
+      hostIn(250, 1070, 330, clamp((t - 0.3) / 0.35), { dx: -1, crouch: 1, mood: 'sad', mouth: 'rest' }); }],
+    [S(34), (t, X) => { drawMap(g, M, V0, { fill: { [DE]: 'flag', [AH]: 'flag', [IT]: 'flag', [UK]: 'flag', [FR]: 'flag', [RU]: 'flag', [RS]: 'flag', [BE]: 'flag' } });   // L34 móc tập sau
+      for (const n of [DE, AH, UK, FR, RU, RS]) mapFace(g, M, V0, n, { mood: 'angry' }); desat(0.3, 0.2);
+      g.fillStyle = 'rgba(14,14,18,0.62)'; g.fillRect(120, 60, 880, 640);
+      label('NEXT TIME', 560, 150, 80, clamp(t / 0.3), '#FFF', { stroke: RED });
+      [['ONE ANGRY LETTER', T.letter - 0.3], ['ONE BLANK CHEQUE', w(34, 'blank')], ['SEVEN DAYS', T.week7]].forEach(([tx, t0], i) => stamp(tx, 520, 300 + i * 120, 46, clamp((X - t0) / 0.3), -0.04 + i * 0.03));
+      { const il = LT('And Italy?'); if (X > il.start) { const f = mapFace(g, M, V0, IT, { mood: 'shock', look: [1, -1] }); if (f) label('?', f.x + f.r * 1.6, f.y - f.r, 90, clamp((X - il.start) / 0.3), RED, { stroke: '#FFF' }); } }
+      lipHost(X, clamp(t / 0.35)); }],
+    [L(34).end + 0.5, (t, X) => { paper('#141414'); label('WORLD WAR I', 960, 470, 170, clamp(t / 0.35), '#FFF', { stroke: RED });              // kết
+      label('PART 1 · THE SPARK', 960, 590, 64, clamp((t - 0.4) / 0.3), '#C9C2AE'); hostIn(960, 900, 300, clamp((t - 0.7) / 0.4), { from: 400, arms: 'wave', mouth: 'smile', t: X }); }],
+  ];
+
+}
+
+function frame(X) {
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  if (!ready) { g.fillStyle = PAPER; g.fillRect(0, 0, W, H); return; }
+  let i = SC.findLastIndex(s => X >= s[0]); if (i < 0) i = 0;
+  SC[i][1](X - SC[i][0], X);
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, get DUR() { return DUR; }, LEAD: 0, error: null };   // tiếng: data/cues.py → data/cues.json (tools/hist/mix.py)
+</script>

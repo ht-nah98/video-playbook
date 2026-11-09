@@ -1,0 +1,317 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — nightlab</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#05070C;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Nightlab" (solid-geometry). Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/nightlab.html --dur 2 --t 0.5,1.5 --outdir out/_lab/nightlab
+// Ý trung tâm: không gian là phòng tối; ta chỉ "thấy" một hình khi ánh sáng hạ nó xuống mặt phẳng. Mọi bài toán kết thúc
+//   khi một chùm sáng thẳng đứng in một TAM GIÁC CAM lên lưới — đó là chỗ hình học phẳng làm nốt phần còn lại.
+// Cái bóng = vệt CAM phát sáng trên lưới (hình chiếu là ánh sáng, không phải bóng tối). Căn phòng = hộp wireframe xanh băng
+//   lơ lửng trên lưới sàn, trần 3 m có đèn trần là nguồn chùm chiếu; đường chéo/cạnh chéo nhau sáng lên khi được hỏi.
+// Màu: mực #05070C→#0E1320 · lưới #2A3550/#4A5C8A · nét kính xanh băng #7FE9F0 (mặt kính mờ cùng sắc) · đường thứ hai #B7C4FF
+//   · cam #FF6A2B = cái bóng / tam giác cần tìm · xương #EEE9DF = chữ · xám xanh #93A3C4 = nhãn phụ · đỏ #FF4D5E chỉ cho "careful".
+// Chữ: Archivo (công thức, tên khối, nhãn điểm to) · IBM Plex Mono (nhãn kỹ thuật, đếm V/E/F) · Cormorant nghiêng (lời dẫn).
+// Tiếng: shimmer (lưới/đèn bật) · beep (điểm, nhãn hiện) · whoosh-long (chùm sáng quét xuống) · snap (dấu góc vuông chốt)
+//   · chip (khối đặt xuống) · correct (tam giác cam khép) · error (cặp "careful").
+// Phần khác: ghế ba chân = 3 điểm sáng định một mặt lưới · cầu vượt = hai thanh neon chéo nhau, bóng cam cắt nhau trên lưới ·
+//   sách mở = hai tấm kính bản lề, góc nhị diện tô cam · thang dựa tường = tam giác cam tường–sàn–thang · xếp khối đơn vị =
+//   ô lập phương kính rơi vào hộp phòng, đếm mono · lăng trụ cắt 3 chóp = ba lớp kính tách ra, mỗi chóp một sắc · bóc nhãn
+//   lon = trụ wireframe trải ra thành hình chữ nhật cam trên lưới · Archimedes = cầu kính trong trụ kính, tỉ số 2/3 sáng ·
+//   tóm tắt = mười tam giác cam xếp trên lưới, mỗi cái một hồi.
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { ink: '#05070C', ink2: '#0E1320', grid: '42,53,80', gridHi: '74,92,138', glass: '127,233,240', glassHex: '#7FE9F0',
+  line2: '#B7C4FF', orange: '#FF6A2B', bone: '#EEE9DF', dim: '#93A3C4', teal: '#1E9C98' };
+const ARC = '"Archivo"', MONO = '"IBM Plex Mono"', CG = '"Cormorant Garamond"';
+const IM = {}, HALO = {}; let BG, ready = false;
+
+// ---------- kiểm bằng code ----------
+const must = (name, v, want, tol = 1e-9) => { if (Math.abs(v - want) > tol) throw new Error(`sai: ${name} = ${v} ≠ ${want}`); return v; };
+const lum = hex => { const c = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(u => u <= 0.03928 ? u / 12.92 : ((u + 0.055) / 1.055) ** 2.4);
+  return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
+const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+for (const k of ['bone', 'dim', 'orange', 'glassHex', 'line2'])      // nền sáng nhất của trang là #18213A (giữa lưới)
+  if (contrast(C[k], '#18213A') < 4.5) throw new Error(`tương phản thấp: ${k} ${contrast(C[k], '#18213A').toFixed(2)}`);
+
+// ---------- vector ----------
+const sub = (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]], add = (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]];
+const mul = (a, s) => [a[0] * s, a[1] * s, a[2] * s], dot = (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2];
+const cross = (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]];
+const norm = a => mul(a, 1 / Math.hypot(...a));
+const rad = d => d * Math.PI / 180;
+
+// camera: nhìn vào target từ góc (yaw, pitch), khoảng cách dist, FOV dọc; z hướng lên
+function camera({ target, yaw, pitch, dist, fov = 32, cx = W / 2, cy = H / 2 }) {
+  const eye = add(target, mul([Math.cos(rad(pitch)) * Math.cos(rad(yaw)), Math.cos(rad(pitch)) * Math.sin(rad(yaw)), Math.sin(rad(pitch))], dist));
+  const f = norm(sub(target, eye)), r = norm(cross(f, [0, 0, 1])), u = cross(r, f), F = (H / 2) / Math.tan(rad(fov) / 2);
+  const P = p => { const q = sub(p, eye), z = dot(q, f); return [cx + F * dot(q, r) / z, cy - F * dot(q, u) / z, z]; };
+  return { eye, P };
+}
+
+// ---------- vẽ ----------
+function bg() {                                         // mực: gradient + vệt chân trời + bụi xa (tất định) + vignette
+  const c = mk(), x = c.getContext('2d');
+  const gr = x.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, '#05070C'); gr.addColorStop(0.55, '#0B1020'); gr.addColorStop(1, '#0E1320');
+  x.fillStyle = gr; x.fillRect(0, 0, W, H);
+  const hz = x.createRadialGradient(W * 0.58, H * 0.62, 0, W * 0.58, H * 0.62, W * 0.55);
+  hz.addColorStop(0, 'rgba(40,58,104,0.35)'); hz.addColorStop(1, 'rgba(40,58,104,0)'); x.fillStyle = hz; x.fillRect(0, 0, W, H);
+  for (let i = 0; i < 260; i++) { const px = hash(i * 1.37) * W, py = hash(i * 2.71 + 3) * H, r = 0.6 + hash(i * 4.1) * 1.3;
+    x.fillStyle = `rgba(150,175,230,${0.05 + hash(i * 7.7) * 0.12})`; x.beginPath(); x.arc(px, py, r, 0, 7); x.fill(); }
+  const vg = x.createRadialGradient(W / 2, H / 2, H * 0.45, W / 2, H / 2, W * 0.75);
+  vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,0.55)'); x.fillStyle = vg; x.fillRect(0, 0, W, H);
+  const id = x.getImageData(0, 0, W, H);
+  for (let i = 0; i < W * H; i++) { const n = (hash(i * 0.613) - 0.5) * 4; for (let k = 0; k < 3; k++) id.data[i * 4 + k] += n; }
+  x.putImageData(id, 0, 0); return c;
+}
+function path(pts, close = false) { g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); if (close) g.closePath(); }
+function neon(pts, rgb, w = 3, { dash = null, a = 1, glow = 1, close = false } = {}) {   // nét phát quang: 2 lớp quầng cộng dồn + lõi
+  g.save(); g.lineCap = g.lineJoin = 'round'; if (dash) g.setLineDash(dash);
+  g.globalCompositeOperation = 'lighter';
+  [[w + 14, 0.06], [w + 6, 0.14]].forEach(([lw, al]) => { g.strokeStyle = `rgba(${rgb},${al * a * glow})`; g.lineWidth = lw; path(pts, close); g.stroke(); });
+  g.globalCompositeOperation = 'source-over'; g.strokeStyle = `rgba(${rgb},${a})`; g.lineWidth = w; path(pts, close); g.stroke();
+  g.restore();
+}
+function glowDot(x, y, r, rgb, a = 1) {
+  const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, `rgba(${rgb},${a})`); gr.addColorStop(1, `rgba(${rgb},0)`);
+  g.save(); g.globalCompositeOperation = 'lighter'; g.fillStyle = gr; g.fillRect(x - r, y - r, 2 * r, 2 * r); g.restore();
+}
+function text(s, x, y, font, color, align = 'left', ls = 0) { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.letterSpacing = ls + 'px'; g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; return w; }
+const label = (s, x, y, color = C.dim, align = 'left', size = 24) => text(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 3);
+function tag(s, x, y, color, size = 48) {               // nhãn điểm/đường: chữ phẳng, có đệm mực để không lẫn với nét
+  g.save(); g.font = `600 ${size}px ${ARC}`; g.textAlign = 'center'; g.textBaseline = 'middle';
+  g.lineJoin = 'round'; g.strokeStyle = 'rgba(5,7,12,0.85)'; g.lineWidth = 10; g.strokeText(s, x, y);
+  g.fillStyle = color; g.fillText(s, x, y); g.restore();
+}
+// công thức: ⊥ và ⇔ không có trong font nào của repo (kiểm fontTools) → vẽ tay bằng nét
+function formula(tokens, x, y, size) {
+  const sw = Math.max(5, size * 0.095);
+  for (const tk of tokens) {
+    g.save(); g.lineCap = 'round'; g.lineJoin = 'round';
+    if (tk === 'perp') {
+      const w = size * 0.6, h = size * 0.68; x += size * 0.14; g.strokeStyle = C.bone; g.lineWidth = sw;
+      g.beginPath(); g.moveTo(x + w / 2, y - h); g.lineTo(x + w / 2, y); g.moveTo(x, y); g.lineTo(x + w, y); g.stroke(); x += w + size * 0.18;
+    } else if (tk === 'iff') {
+      const w = size * 1.05, m = y - size * 0.34, d = size * 0.11, hd = size * 0.2; x += size * 0.3; g.strokeStyle = C.bone; g.lineWidth = sw * 0.8;
+      g.beginPath(); g.moveTo(x + hd * 0.6, m - d); g.lineTo(x + w - hd * 0.6, m - d); g.moveTo(x + hd * 0.6, m + d); g.lineTo(x + w - hd * 0.6, m + d);
+      g.moveTo(x + hd, m - d - hd); g.lineTo(x, m); g.lineTo(x + hd, m + d + hd); g.moveTo(x + w - hd, m - d - hd); g.lineTo(x + w, m); g.lineTo(x + w - hd, m + d + hd); g.stroke();
+      x += w + size * 0.3;
+    } else { x += text(tk.s, x, y, `600 ${size}px ${ARC}`, tk.c || C.bone); }
+    g.restore();
+  }
+  return x;
+}
+function figure(pose, left, foot, h, crop) {           // mascot: viền sáng xanh mờ phía sau (sprite làm sẵn lúc nạp) để tóc/áo đen không chìm
+  const im = IM[pose], sh = im.height * crop, s = h / sh, w = im.width * s, hl = HALO[pose], pad = 40;
+  g.save(); g.globalAlpha = 0.75; g.globalCompositeOperation = 'lighter';
+  g.drawImage(hl, 0, 0, hl.width, sh + pad, left - pad * s, foot - h - pad * s, hl.width * s, (sh + pad) * s); g.restore();
+  g.drawImage(im, 0, 0, im.width, sh, left, foot - h, w, h); return { x: left, y: foot - h, w, h, s };
+}
+function makeHalo(im) {                                  // một lần lúc nạp: bóng người tô xanh, làm mờ bằng filter (không dùng filter lúc vẽ khung)
+  const pad = 40, a = mk(im.width + 2 * pad, im.height + 2 * pad), x = a.getContext('2d');
+  x.drawImage(im, pad, pad); x.globalCompositeOperation = 'source-in'; x.fillStyle = 'rgb(70,110,190)'; x.fillRect(0, 0, a.width, a.height);
+  const b = mk(a.width, a.height), y = b.getContext('2d'); y.filter = 'blur(16px)'; y.drawImage(a, 0, 0); y.drawImage(a, 0, 0); y.filter = 'none'; return b;
+}
+
+// ---------- khung 0: định lý ba đường vuông góc ----------
+function frame0() {
+  const al = rad(40);
+  const O = [0, 0, 0], A = [1, 0, 0], B = [0, Math.cos(al), Math.sin(al)];
+  const shadow = p => [p[0], p[1], 0];                                // chiếu thẳng xuống z = 0
+  const Bs = sub(shadow(B), shadow(O));
+  must('a·b′', dot(A, Bs), 0); must('a·b', dot(A, B), 0);
+  must('b không nằm trong P', B[2] > 0.1 ? 1 : 0, 1); must('b không ⊥ P', Math.abs(dot(B, [0, 0, 1])) < 0.99 ? 1 : 0, 1);
+  const tB = 2.7, Bp = mul(B, tB), BpS = shadow(Bp);
+  must('BB′ ⊥ P', dot(norm(sub(Bp, BpS)), [1, 0, 0]) + dot(norm(sub(Bp, BpS)), [0, 1, 0]), 0);
+
+  const cam = camera({ target: [0.3, 0.9, 0.9], yaw: -40, pitch: 24, dist: 13.2, fov: 32, cx: 1310, cy: 610 }), P = cam.P;
+  const seg = (p, q, n = 2) => Array.from({ length: n }, (_, i) => P(add(p, mul(sub(q, p), i / (n - 1)))));
+
+  // b phần dưới P (khuất): nét đứt, vẽ trước tấm lưới
+  neon(seg(mul(B, -1.5), O), '183,196,255', 3, { dash: [14, 12], a: 0.9, glow: 0.6 });
+
+  // mặt phẳng P: tấm lưới sáng mờ
+  const X0 = -2.9, X1 = 3.1, Y0 = -1.6, Y1 = 3.4, corners = [[X0, Y0, 0], [X1, Y0, 0], [X1, Y1, 0], [X0, Y1, 0]].map(P);
+  g.save(); path(corners, true); g.fillStyle = 'rgba(24,33,58,0.62)'; g.fill(); g.clip();
+  g.lineWidth = 1.4;
+  for (let v = -2.5; v <= 3.01; v += 0.5) { g.strokeStyle = `rgba(${C.gridHi},${Math.abs(v % 1) < 1e-6 ? 0.55 : 0.28})`; path([P([v, Y0, 0]), P([v, Y1, 0])]); g.stroke(); }
+  for (let v = -1.5; v <= 3.51; v += 0.5) { g.strokeStyle = `rgba(${C.gridHi},${Math.abs(v % 1) < 1e-6 ? 0.55 : 0.28})`; path([P([X0, v, 0]), P([X1, v, 0])]); g.stroke(); }
+  g.restore();
+  neon(corners, C.gridHi, 2.5, { close: true, a: 0.95 });
+  tag('P', corners[0][0] + 34, corners[0][1] - 40, C.bone, 56);
+
+  // chùm sáng thẳng đứng chiếu xuống, trong mặt phẳng đứng chứa b
+  const Z = 3.6, t1 = 3.3, lampY0 = -0.2, lampY1 = Math.cos(al) * t1 + 0.2;
+  const curtain = [[0, 0, 0], [0, Math.cos(al) * t1, 0], [0, Math.cos(al) * t1, Z], [0, 0, Z]].map(P);
+  const top = (curtain[2][1] + curtain[3][1]) / 2, bot = (curtain[0][1] + curtain[1][1]) / 2;
+  const cg = g.createLinearGradient(0, top, 0, bot); cg.addColorStop(0, 'rgba(255,214,170,0.20)'); cg.addColorStop(1, 'rgba(255,140,80,0.05)');
+  g.save(); g.globalCompositeOperation = 'lighter'; path(curtain, true); g.fillStyle = cg; g.fill(); g.restore();
+  // đèn: tấm sáng ở trên
+  const lamp = [[-0.45, lampY0, Z], [0.45, lampY0, Z], [0.45, lampY1, Z], [-0.45, lampY1, Z]].map(P);
+  g.save(); path(lamp, true); g.fillStyle = 'rgba(255,236,214,0.9)'; g.fill(); g.restore();
+  neon(lamp, '255,226,190', 3, { close: true });
+  const lc = P([0, (lampY0 + lampY1) / 2, Z]); glowDot(lc[0], lc[1], 220, '255,200,150', 0.28);
+  // tia: từ đèn qua điểm trên b xuống bóng của nó
+  for (const t of [1.5, tB]) {
+    const p = mul(B, t), s = shadow(p), up = [p[0], p[1], Z];
+    neon([P(up), P(p)], '255,226,190', 2, { dash: [6, 10], a: 0.45, glow: 0.3 });
+    neon([P(p), P(s)], '255,226,190', 3, { dash: [10, 9], a: 0.9, glow: 0.6 });
+    const q = P(add(s, [0, 0, 0.32])), sP = P(s);                       // mũi tên xuống
+    const dir = norm([sP[0] - q[0], sP[1] - q[1], 0]), nx = -dir[1], ny = dir[0], tip = P(add(s, [0, 0, 0.06]));
+    g.fillStyle = 'rgba(255,226,190,0.95)'; path([tip, [tip[0] - dir[0] * 20 + nx * 9, tip[1] - dir[1] * 20 + ny * 9], [tip[0] - dir[0] * 20 - nx * 9, tip[1] - dir[1] * 20 - ny * 9]], true); g.fill();
+  }
+
+  // bóng b′: vệt cam phát sáng trên lưới
+  const bsA = [0, -1.4 * Math.cos(al), 0], bsB = [0, Math.cos(al) * 4.0, 0];
+  neon([P(bsA), P(bsB)], '255,106,43', 6, { glow: 2 });
+  // a nằm trong P
+  neon([P([-2.7, 0, 0]), P([2.9, 0, 0])], '127,233,240', 5);
+  // dấu góc vuông: a ⊥ b′ (trên P, cam) và a ⊥ b (xiên, xanh)
+  const s = 0.55, ex = mul(A, s);
+  neon([P(ex), P(add(ex, mul(norm(Bs), s))), P(mul(norm(Bs), s))], '255,106,43', 3.5, { glow: 1 });
+  const ex2 = mul(A, -s); neon([P(ex2), P(add(ex2, mul(B, s))), P(mul(B, s))], '238,233,223', 3.5, { glow: 1 });
+  // BB′ ⊥ P tại B′ (đường vuông góc thứ ba)
+  const u = norm(Bs), m = 0.26;
+  neon([P(add(BpS, [0, 0, m])), P(add(add(BpS, [0, 0, m]), mul(u, -m))), P(add(BpS, mul(u, -m)))], '255,226,190', 3, { glow: 0.6 });
+  // b phía trên P
+  neon(seg(O, mul(B, 3.9)), '183,196,255', 5);
+
+  // điểm
+  for (const [p, rgb] of [[O, '238,233,223'], [Bp, '183,196,255'], [BpS, '255,106,43']]) { const q = P(p); glowDot(q[0], q[1], 26, rgb, 0.7);
+    g.fillStyle = `rgb(${rgb})`; g.beginPath(); g.arc(q[0], q[1], 7.5, 0, 7); g.fill(); }
+  const pO = P(O), pB = P(Bp), pBs = P(BpS), aEnd = P([2.9, 0, 0]), bEnd = P(mul(B, 3.9)), bsEnd = P(bsB);
+  tag('O', pO[0] - 58, pO[1] + 2, C.bone, 44);
+  tag('B', pB[0] + 40, pB[1] - 6, C.line2, 44);
+  tag('B′', pBs[0] + 50, pBs[1] + 10, C.orange, 44);
+  tag('a', aEnd[0] + 34, aEnd[1] + 4, C.glassHex, 60);
+  tag('b', bEnd[0] + 34, bEnd[1] - 8, C.line2, 60);
+  tag('b′', bsEnd[0] + 42, bsEnd[1] + 2, C.orange, 60);
+  const lr = lamp.reduce((m, q) => q[0] > m[0] ? q : m); label('light,', lr[0] + 30, lr[1] + 34, C.bone, 'left', 24); label('straight down', lr[0] + 30, lr[1] + 68, C.bone, 'left', 24);
+
+  // chữ
+  label('Act 4 · the theorem of three perpendiculars', 96, 110, C.dim, 'left', 26);
+  formula([{ s: 'a' }, 'perp', { s: 'b′', c: C.orange }, 'iff', { s: 'a' }, 'perp', { s: 'b' }], 96, 236, 104);
+  text('b′ is the shadow of b on P', 98, 312, `italic 500 48px ${CG}`, C.bone);
+  const F = figure('point', -40, 1080, 640, 0.45);
+  void F;
+}
+
+// ---------- khung 1: chỉ có năm ----------
+const PHI = (1 + Math.sqrt(5)) / 2;
+function solid(name, verts) {                             // bao lồi từ toạ độ thật → mặt, cạnh; đếm V, E, F từ chính lưới này
+  const V = verts.map(v => mul(v, 1 / Math.hypot(...verts[0]))), faces = [], keys = new Set(), n = V.length;
+  for (let i = 0; i < n; i++) for (let j = i + 1; j < n; j++) for (let k = j + 1; k < n; k++) {
+    let nr = cross(sub(V[j], V[i]), sub(V[k], V[i])); const L = Math.hypot(...nr); if (L < 1e-9) continue; nr = mul(nr, 1 / L);
+    let d = dot(nr, V[i]), pos = 0, neg = 0;
+    for (const p of V) { const e = dot(nr, p) - d; if (e > 1e-9) pos++; else if (e < -1e-9) neg++; }
+    if (pos && neg) continue; if (pos) { nr = mul(nr, -1); d = -d; }
+    const key = nr.map(c => Math.round(c * 1e6)).join(','); if (keys.has(key)) continue; keys.add(key);
+    const idx = V.map((p, q) => q).filter(q => Math.abs(dot(nr, V[q]) - d) < 1e-9);
+    const c = mul(idx.reduce((s, q) => add(s, V[q]), [0, 0, 0]), 1 / idx.length), e1 = norm(sub(V[idx[0]], c)), e2 = cross(nr, e1);
+    idx.sort((p, q) => Math.atan2(dot(sub(V[p], c), e2), dot(sub(V[p], c), e1)) - Math.atan2(dot(sub(V[q], c), e2), dot(sub(V[q], c), e1)));
+    faces.push({ idx, n: nr });
+  }
+  const E = new Map();
+  faces.forEach((f, fi) => f.idx.forEach((a, q) => { const b = f.idx[(q + 1) % f.idx.length], k = a < b ? `${a}-${b}` : `${b}-${a}`;
+    if (!E.has(k)) E.set(k, { a: Math.min(a, b), b: Math.max(a, b), f: [] }); E.get(k).f.push(fi); }));
+  const edges = [...E.values()], len0 = Math.hypot(...sub(V[edges[0].a], V[edges[0].b]));
+  edges.forEach(e => { must(`${name}: cạnh đều`, Math.hypot(...sub(V[e.a], V[e.b])), len0); must(`${name}: cạnh nối 2 mặt`, e.f.length, 2); });
+  const used = new Set(faces.flatMap(f => f.idx)).size;
+  must(`${name}: V − E + F`, used - edges.length + faces.length, 2);
+  return { name, V, faces, edges, counts: { V: used, E: edges.length, F: faces.length } };
+}
+const pm = [1, -1];
+const SOLIDS = () => [
+  solid('tetrahedron', [[1, 1, 1], [1, -1, -1], [-1, 1, -1], [-1, -1, 1]]),
+  solid('cube', pm.flatMap(a => pm.flatMap(b => pm.map(c => [a, b, c])))),
+  solid('octahedron', [[1, 0, 0], [-1, 0, 0], [0, 1, 0], [0, -1, 0], [0, 0, 1], [0, 0, -1]]),
+  solid('dodecahedron', [...pm.flatMap(a => pm.flatMap(b => pm.map(c => [a, b, c]))),
+    ...pm.flatMap(a => pm.flatMap(b => [[0, a / PHI, b * PHI], [a / PHI, b * PHI, 0], [a * PHI, 0, b / PHI]]))]),
+  solid('icosahedron', pm.flatMap(a => pm.flatMap(b => [[0, a, b * PHI], [a, b * PHI, 0], [a * PHI, 0, b]]))),
+];
+function rot(v, [rx, ry, rz]) {
+  let [x, y, z] = v; const [a, b, c] = [rad(rx), rad(ry), rad(rz)];
+  [y, z] = [y * Math.cos(a) - z * Math.sin(a), y * Math.sin(a) + z * Math.cos(a)];
+  [x, z] = [x * Math.cos(b) + z * Math.sin(b), -x * Math.sin(b) + z * Math.cos(b)];
+  [x, y] = [x * Math.cos(c) - y * Math.sin(c), x * Math.sin(c) + y * Math.cos(c)];
+  return [x, y, z];
+}
+function hull2(pts) {                                     // bao lồi 2D (chuỗi đơn điệu) cho bóng trên sàn
+  const p = pts.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1]), cr = (o, a, b) => (a[0] - o[0]) * (b[1] - o[1]) - (a[1] - o[1]) * (b[0] - o[0]);
+  const lo = [], up = [];
+  for (const q of p) { while (lo.length > 1 && cr(lo[lo.length - 2], lo[lo.length - 1], q) <= 0) lo.pop(); lo.push(q); }
+  for (const q of p.reverse()) { while (up.length > 1 && cr(up[up.length - 2], up[up.length - 1], q) <= 0) up.pop(); up.push(q); }
+  return lo.slice(0, -1).concat(up.slice(0, -1));
+}
+function frame1() {
+  const S = SOLIDS(), want = [4, 6, 8, 12, 20];
+  S.forEach((s, i) => must(`${s.name}: F`, s.counts.F, want[i]));
+  const cam = camera({ target: [0, 0, 1.15], yaw: -90, pitch: 17, dist: 21, fov: 32, cx: 800, cy: 590 }), P = cam.P;
+  // sàn lưới
+  const fx0 = -7.2, fx1 = 7.2, fy0 = -2.2, fy1 = 2.6, fl = [[fx0, fy0, 0], [fx1, fy0, 0], [fx1, fy1, 0], [fx0, fy1, 0]].map(P);
+  g.save(); path(fl, true); const fg = g.createLinearGradient(0, fl[2][1], 0, fl[0][1]); fg.addColorStop(0, 'rgba(24,33,58,0.15)'); fg.addColorStop(1, 'rgba(24,33,58,0.7)');
+  g.fillStyle = fg; g.fill(); g.clip(); g.lineWidth = 1.3;
+  for (let v = -7; v <= 7.01; v += 0.5) { g.strokeStyle = `rgba(${C.gridHi},0.32)`; path([P([v, fy0, 0]), P([v, fy1, 0])]); g.stroke(); }
+  for (let v = -2; v <= 2.51; v += 0.5) { g.strokeStyle = `rgba(${C.gridHi},0.32)`; path([P([fx0, v, 0]), P([fx1, v, 0])]); g.stroke(); }
+  g.restore();
+  neon([fl[0], fl[1]], C.gridHi, 2.5, { a: 0.9 });
+
+  const R = 1.0, X = [-5.9, -2.95, 0, 2.95, 5.9], Hc = 1.85;
+  const orient = [[-24, 38, 12], [22, -14, 28], [16, 10, 16], [14, 24, 8], [20, 12, 30]];
+  S.forEach((s, i) => {
+    const c = [X[i], 0, Hc], Vw = s.V.map(v => add(c, mul(rot(v, orient[i]), R))), Vs = Vw.map(P);
+    // bóng: chiếu thẳng xuống sàn
+    const sh = hull2(Vw.map(v => [v[0], v[1]])).map(([x, y]) => P([x, y, 0]));
+    g.save(); g.globalCompositeOperation = 'lighter'; path(sh, true); g.fillStyle = 'rgba(255,106,43,0.30)'; g.fill(); g.restore();
+    neon(sh, '255,106,43', 3, { close: true, glow: 1.4 });
+    // chùm sáng mờ từ trên xuống qua khối
+    const top = P([X[i], 0, 3.9]), bot = P([X[i], 0, 0]), bw = 150;
+    const bg2 = g.createLinearGradient(0, top[1], 0, bot[1]); bg2.addColorStop(0, 'rgba(255,214,170,0.10)'); bg2.addColorStop(1, 'rgba(255,214,170,0)');
+    g.save(); g.globalCompositeOperation = 'lighter'; g.fillStyle = bg2; path([[top[0] - bw * 0.5, top[1]], [top[0] + bw * 0.5, top[1]], [bot[0] + bw, bot[1]], [bot[0] - bw, bot[1]]], true); g.fill(); g.restore();
+    const isIco = s.name === 'icosahedron', rgb = isIco ? '150,245,235' : C.glass;
+    const L = norm([-0.4, -0.6, 0.7]);
+    const front = s.faces.map(f => { const n = rot(f.n, orient[i]), cc = add(c, mul(rot(f.idx.reduce((a, q) => add(a, s.V[q]), [0, 0, 0]).map(u => u / f.idx.length), orient[i]), R));
+      return { vis: dot(n, sub(cc, cam.eye)) < 0, sh: Math.max(0, dot(n, L)) }; });
+    // mặt sau (mờ) → cạnh khuất (đứt) → mặt trước (kính mờ) → cạnh thấy (neon)
+    s.faces.forEach((f, fi) => { if (front[fi].vis) return; path(f.idx.map(q => Vs[q]), true); g.fillStyle = isIco ? 'rgba(20,120,118,0.22)' : `rgba(${C.glass},0.04)`; g.fill(); });
+    s.edges.forEach(e => { if (e.f.some(fi => front[fi].vis)) return; neon([Vs[e.a], Vs[e.b]], rgb, 3, { dash: [9, 9], a: 0.42, glow: 0.3 }); });
+    s.faces.forEach((f, fi) => { if (!front[fi].vis) return; path(f.idx.map(q => Vs[q]), true);
+      const k = front[fi].sh; g.fillStyle = isIco ? `rgba(${Math.round(18 + 40 * k)},${Math.round(110 + 70 * k)},${Math.round(112 + 60 * k)},0.78)` : `rgba(${C.glass},${0.06 + 0.16 * k})`; g.fill(); });
+    s.edges.forEach(e => { if (!e.f.some(fi => front[fi].vis)) return; neon([Vs[e.a], Vs[e.b]], rgb, 3.2); });
+    // nhãn: tên + số mặt (số từ lưới)
+    const lx = P([X[i], -2.2, 0])[0];
+    text(s.name, lx, 870, `600 38px ${ARC}`, C.bone, 'center');
+    text(`${s.counts.F} faces`, lx, 916, `500 30px ${MONO}`, isIco ? '#7FE9E0' : C.glassHex, 'center');
+    label(`V ${s.counts.V} · E ${s.counts.E}`, lx, 958, C.dim, 'center', 22);
+  });
+  text('Only five.', 96, 190, `800 112px ${ARC}`, C.bone);
+  text('regular polyhedra in space — no sixth can fold up', 100, 262, `italic 500 48px ${CG}`, C.bone);
+  label('every one checks  V − E + F = 2', 98, 330, C.dim, 'left', 26);
+  figure('icosa', 1452, 1080, 760, 1);
+}
+
+const frames = [frame0, frame1];
+(async () => {
+  await Promise.all([
+    ...['600 104px', '600 60px', '600 56px', '600 48px', '600 44px', '600 40px', '600 38px', '800 112px'].map(f => document.fonts.load(`${f} ${ARC}`)),
+    ...['500 30px', '500 26px', '500 24px', '500 22px'].map(f => document.fonts.load(`${f} ${MONO}`)),
+    ...['italic 500 48px'].map(f => document.fonts.load(`${f} ${CG}`)),
+    ...['point', 'icosa'].map(p => new Promise((res, rej) => { const im = new Image();
+      im.onload = () => { IM[p] = toCanvas(im); HALO[p] = makeHalo(IM[p]); res(); }; im.onerror = () => rej(new Error('img ' + p));
+      im.src = `../../../assets/character-v2/cut/pose-${p}.png`; })),
+  ]);
+  BG = bg(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(BG, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

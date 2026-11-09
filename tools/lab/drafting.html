@@ -1,0 +1,238 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — drafting</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#EFE8D6;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Bàn dựng hình" (pi). Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/drafting.html --dur 2 --t 0.5,1.5 --outdir out/_lab/drafting
+// Ý trung tâm: cả bài là MỘT BẢN VẼ của nhà hình học. Kẹp đường tròn, cầu phương, radian ("bước một bán kính dọc mép")
+//   đều là bài toán thước-compa; π là thứ bản vẽ đuổi theo mà nét chì dựng hình KHÔNG BAO GIỜ tẩy — người xem thấy cách làm.
+// Vật xuyên suốt: vòng tròn MỰC XANH do compa quay (lỗ chốt ở tâm, nét cuối chồng lên nét đầu): H1 bị đa giác mực đen kẹp ·
+//   H2 thành mặt đồng hồ quay, nửa vòng tô xanh = π, bóng vẽ ra sóng · H3 thước đo khắc chữ số chạy quanh vành · H4 vẽ lên
+//   quả cầu / tờ giấy uốn yên ngựa — lưới in cong theo, compa vẫn quay nhưng C/d đo bằng dây ra 2 hoặc > π.
+// Màu: giấy can #EFE8D6 + lưới in xanh-không-chụp #8FB8CC · chì dựng hình #8A8E90 (nét) / #5B5F63 (chữ nhỏ) · mực #1F2A36
+//   (hình cuối, chữ) · XANH SỰ THẬT #2348A6 (π, vòng tròn, cận đúng) · đỏ son #B3342B CHỈ cho số/ý sai (gạch "3", "360 là tự nhiên").
+// Chữ: Cormorant Garamond LN (số lớn, lời dẫn nghiêng) · IBM Plex Mono (chữ ghi chú kỹ thuật, bảng) · Archivo nén (khung tên bản vẽ).
+// Tiếng: pen (nét mực/compa quay) · tick (cắm chốt, đặt mốc dividers) · page (lật bản vẽ = sang hồi) · snap (thước kẹp) · correct.
+// Phần khác: người xưa = bản vẽ trên giấy cói/đất sét ghi "≈3" "3⅛" bị gạch đỏ · Tổ Xung Chi / van Ceulen = "DETAIL" phóng ×n liên
+//   tiếp, đa giác dày tới đặc như mép bút; bia mộ = khung tên khắc 35 chữ số · 360° vs radian = thước đo độ in sẵn (quy ước, chì)
+//   đối với dividers bước bán kính (tự nhiên, xanh) · 1÷7 = phép chia dài viết tay, dư số lặp vòng 3-2-6-4-5-1 vẽ thành vòng lục giác ·
+//   Lambert/Lindemann = "Q.E.D." đóng dấu ở góc bản vẽ; cầu phương = hình vuông dựng mãi không khép, ghi "IMPOSSIBLE (1882)" ·
+//   cầu xích đạo = vẽ trên quả địa cầu thạch cao, C/d = 2 · yên ngựa = giấy uốn cong · hố đen = lưới in lún xuống ·
+//   tóm tắt = cả bộ bản vẽ (PLATE I–IV) xếp cạnh nhau trên bàn.
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { paper: '#EFE8D6', grid: '143,184,204', lead: '#8A8E90', leadT: '#5B5F63', ink: '#1F2A36', blue: '#2348A6', red: '#B3342B' };
+const CG = '"Cormorant Garamond"', MONO = '"IBM Plex Mono"', ARC = '"Archivo"';
+const IM = {}; let PAPER, ready = false;
+const PI = Math.PI;
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+
+function paper() {                                    // giấy can ấm: xơ giấy + lưới in xanh nhạt + viền khổ giấy
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H), b = [0xEF, 0xE8, 0xD6];
+  for (let i = 0; i < W * H; i++) {
+    const px = i % W, py = (i / W) | 0, n = (hash(i * 0.517) - 0.5) * 7 + (hash(((px >> 3) * 31 + (py >> 1)) * 0.29) - 0.5) * 4;
+    const r = Math.hypot((px - W / 2) / W, (py - H / 2) / H), v = 1 - 0.06 * r * r * 4;
+    d.data[i * 4] = b[0] * v + n; d.data[i * 4 + 1] = b[1] * v + n; d.data[i * 4 + 2] = b[2] * v + n - 1; d.data[i * 4 + 3] = 255;
+  }
+  x.putImageData(d, 0, 0);
+  for (let k = 0; k * 24 <= W; k++) { x.fillStyle = `rgba(${C.grid},${k % 5 ? 0.22 : 0.42})`; x.fillRect(k * 24, 0, k % 5 ? 1 : 1.5, H); }
+  for (let k = 0; k * 24 <= H; k++) { x.fillStyle = `rgba(${C.grid},${k % 5 ? 0.22 : 0.42})`; x.fillRect(0, k * 24, W, k % 5 ? 1 : 1.5); }
+  for (let k = 0; k < 6; k++) {                        // vết tẩy cũ: vệt sáng mờ, tất định
+    const ex = 200 + hash(k * 3.1) * 1500, ey = 120 + hash(k * 7.7) * 840, gr = x.createRadialGradient(ex, ey, 0, ex, ey, 90);
+    gr.addColorStop(0, 'rgba(250,246,236,0.45)'); gr.addColorStop(1, 'rgba(250,246,236,0)'); x.fillStyle = gr; x.fillRect(ex - 90, ey - 90, 180, 180);
+  }
+  x.strokeStyle = C.ink; x.globalAlpha = 0.55; x.lineWidth = 2.5; x.strokeRect(36, 36, W - 72, H - 72);
+  x.lineWidth = 1; x.strokeRect(46, 46, W - 92, H - 92); x.globalAlpha = 1;
+  return c;
+}
+function text(s, x, y, font, color, align = 'left', ls = 0) { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.letterSpacing = ls + 'px'; g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; return w; }
+const note = (s, x, y, color = C.leadT, align = 'left', size = 22) => text(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 2);
+function line(pts, color, w, dash = []) { g.save(); g.strokeStyle = color; g.lineWidth = w; g.lineCap = g.lineJoin = 'round'; g.setLineDash(dash);
+  g.beginPath(); pts.forEach(([x, y], i) => i ? g.lineTo(x, y) : g.moveTo(x, y)); g.stroke(); g.restore(); }
+const poly = (cx, cy, r, n, a0 = 0) => Array.from({ length: n + 1 }, (_, k) => [cx + r * Math.cos(a0 + 2 * PI * k / n), cy - r * Math.sin(a0 + 2 * PI * k / n)]);
+function compassCircle(cx, cy, R, a0, w = 4.5) {      // vòng tròn compa: quét hơn một vòng, bán kính nhích 2px → thấy chỗ nét chồng
+  g.save(); g.strokeStyle = C.blue; g.lineWidth = w; g.lineCap = 'round'; g.beginPath();
+  const N = 400, sweep = 2 * PI + 0.16;
+  for (let k = 0; k <= N; k++) { const a = a0 + sweep * k / N, r = R + 2.2 * k / N; const p = [cx + r * Math.cos(a), cy - r * Math.sin(a)]; k ? g.lineTo(...p) : g.moveTo(...p); }
+  g.stroke(); g.restore();
+}
+function pivot(cx, cy) {                              // lỗ chốt compa + dấu chữ thập bằng chì
+  line([[cx - 26, cy], [cx + 26, cy]], C.lead, 1.4); line([[cx, cy - 26], [cx, cy + 26]], C.lead, 1.4);
+  g.fillStyle = 'rgba(31,42,54,0.18)'; g.beginPath(); g.arc(cx, cy, 6.5, 0, 7); g.fill();
+  g.fillStyle = C.ink; g.beginPath(); g.arc(cx, cy, 2.8, 0, 7); g.fill();
+}
+function arrowHead(x, y, ang, color, s = 14) { g.save(); g.translate(x, y); g.rotate(ang); g.fillStyle = color;
+  g.beginPath(); g.moveTo(0, 0); g.lineTo(-s, -s * 0.38); g.lineTo(-s * 0.8, 0); g.lineTo(-s, s * 0.38); g.closePath(); g.fill(); g.restore(); }
+function frac(num, den, x, y, size, color) {          // phân số chồng: tử / gạch / mẫu, căn giữa tại x; trả về bề rộng
+  g.font = `600 ${size}px ${CG}`; const w = Math.max(g.measureText(num).width, g.measureText(den).width) + size * 0.2;
+  text(num, x, y - size * 0.42, `600 ${size}px ${CG}`, color, 'center'); g.fillStyle = color; g.fillRect(x - w / 2, y - size * 0.3, w, Math.max(2, size * 0.05));
+  text(den, x, y + size * 0.5, `600 ${size}px ${CG}`, color, 'center'); return w;
+}
+function sprite(pose, crop = 1) {                     // nhân vật + viền mực 3px (áo trắng không được chìm vào giấy can)
+  const im = IM[pose], sh = Math.round(im.height * crop), p = 6, c = mk(im.width + 2 * p, sh + 2 * p), x = c.getContext('2d');
+  const sil = mk(im.width, sh), sx = sil.getContext('2d'); sx.drawImage(im, 0, 0); sx.globalCompositeOperation = 'source-in'; sx.fillStyle = C.ink; sx.fillRect(0, 0, im.width, sh);
+  for (let k = 0; k < 16; k++) { const a = k / 16 * 2 * PI; x.drawImage(sil, p + 3.2 * Math.cos(a), p + 3.2 * Math.sin(a)); }
+  x.drawImage(im, p, p); return { c, p };
+}
+function figure(S, cx, foot, h, cropH) {              // h = chiều cao phần ảnh đã cắt; trả về hàm đổi toạ độ ảnh gốc → khung
+  const s = h / cropH, w = (S.c.width) * s, x0 = cx - w / 2, y0 = foot - h - S.p * s;
+  g.drawImage(S.c, x0, y0, w, S.c.height * s); return (ix, iy) => [x0 + (ix + S.p) * s, y0 + (iy + S.p) * s];
+}
+function titleBlock(x, y, plate, name, sub) {         // khung tên bản vẽ góc phải trên
+  const w = 420, h = 96; g.save(); g.strokeStyle = C.ink; g.lineWidth = 2; g.strokeRect(x - w, y, w, h); g.lineWidth = 1;
+  g.beginPath(); g.moveTo(x - w + 120, y); g.lineTo(x - w + 120, y + h); g.moveTo(x - w + 120, y + 52); g.lineTo(x, y + 52); g.stroke(); g.restore();
+  text('PLATE', x - w + 60, y + 30, `600 18px ${ARC}`, C.leadT, 'center', 3);
+  text(plate, x - w + 60, y + 80, `600 46px ${CG}`, C.ink, 'center');
+  text(name, x - w + 136, y + 38, `700 26px ${ARC}`, C.ink, 'left', 2);
+  note(sub, x - w + 136, y + 82, C.leadT, 'left', 18);
+}
+
+const frames = [
+  () => {                                             // 0 · HỒI 1: kẹp vòng tròn giữa đa giác trong và ngoài
+    const cx = 560, cy = 470, R = 300, n = must('6 * 2', 12), a0 = PI / 2;
+    const Ro = R / Math.cos(PI / n);
+    // dựng hình bằng chì (để lại): lục giác bước bán kính 6 lần, tia tới đỉnh, cung giao nhau ở đỉnh lục giác
+    for (let k = 0; k < n; k++) { const a = a0 + 2 * PI * k / n; line([[cx, cy], [cx + (Ro + 34) * Math.cos(a), cy - (Ro + 34) * Math.sin(a)]], 'rgba(138,142,144,0.55)', 1); }
+    line(poly(cx, cy, R, 6, a0), C.lead, 1.2, [7, 6]);
+    for (let k = 0; k < 6; k++) { const a = a0 + 2 * PI * k / 6, vx = cx + R * Math.cos(a), vy = cy - R * Math.sin(a), b = Math.atan2(cy - vy, vx - cx);
+      g.save(); g.strokeStyle = C.lead; g.lineWidth = 1.2; g.beginPath(); g.arc(vx, vy, R, -b + PI - 0.12 + PI / 3, -b + PI + 0.12 + PI / 3); g.stroke(); g.restore(); }
+    // mực: đa giác trong / ngoài 12 cạnh
+    line(poly(cx, cy, R, n, a0), C.ink, 2.4);
+    line(poly(cx, cy, Ro, n, a0), C.ink, 2.4);
+    poly(cx, cy, Ro, n, a0).slice(0, n).forEach(([x, y]) => { g.fillStyle = C.ink; g.beginPath(); g.arc(x, y, 3.6, 0, 7); g.fill(); });
+    compassCircle(cx, cy, R, -0.55);
+    pivot(cx, cy);
+    line([[cx, cy], [cx + R * Math.cos(-0.55 + 0.04) - 2, cy - R * Math.sin(-0.55 + 0.04)]], C.lead, 1.4);
+    text('r', cx + 150 * Math.cos(-0.55) + 4, cy - 150 * Math.sin(-0.55) - 12, `italic 600 40px ${CG}`, C.leadT);
+    // ghi chú đa giác (đường dẫn chì)
+    const pin = poly(cx, cy, R, n, a0)[4], pout = poly(cx, cy, Ro, n, a0)[3];
+    const mi = [(pin[0] + poly(cx, cy, R, n, a0)[5][0]) / 2, (pin[1] + poly(cx, cy, R, n, a0)[5][1]) / 2];
+    line([[mi[0], mi[1]], [260, 790], [96, 790]], C.leadT, 1.2); g.fillStyle = C.leadT; g.beginPath(); g.arc(mi[0], mi[1], 4, 0, 7); g.fill();
+    note(`inside · ${n} sides`, 96, 780, C.ink);
+    line([[pout[0], pout[1]], [150, 210], [96, 210]], C.leadT, 1.2); g.fillStyle = C.leadT; g.beginPath(); g.arc(pout[0], pout[1], 4, 0, 7); g.fill();
+    note(`outside · ${n} sides`, 96, 200, C.ink);
+    // DETAIL A: chỗ kẹp ở 96 cạnh, phóng to, không theo tỉ lệ
+    const da = a0 - 2 * PI * 1.5 / n, dx = cx + R * Math.cos(da), dy = cy - R * Math.sin(da);
+    g.save(); g.strokeStyle = C.leadT; g.lineWidth = 1.3; g.setLineDash([10, 5, 2, 5]); g.beginPath(); g.arc(dx, dy, 44, 0, 7); g.stroke(); g.restore();
+    const ix = 1100, iy = 300, ir = 150;
+    line([[dx + 44 * 0.8, dy - 44 * 0.6], [ix - ir * 0.8, iy + ir * 0.6]], C.leadT, 1.2, [10, 5, 2, 5]);
+    g.save(); g.fillStyle = 'rgba(244,239,226,0.96)'; g.beginPath(); g.arc(ix, iy, ir, 0, 7); g.fill(); g.clip();
+    const zc = [ix, iy + 560], zr = 560, half = 0.30;                        // vòng tròn phóng to: chỉ một cung
+    const inner = [[zc[0] + zr * Math.sin(-half), zc[1] - zr * Math.cos(half)], [zc[0] + zr * Math.sin(half), zc[1] - zr * Math.cos(half)]];
+    const tR = zr / Math.cos(half), outer = [[zc[0] - tR * Math.sin(half) * 1.0, zc[1] - zr - 0], [zc[0] + tR * Math.sin(half), zc[1] - zr]];
+    g.save(); g.beginPath(); g.moveTo(inner[0][0], inner[0][1]); g.arc(zc[0], zc[1], zr, -PI / 2 - half, -PI / 2 + half); g.closePath(); g.clip();
+    g.strokeStyle = 'rgba(91,95,99,0.55)'; g.lineWidth = 1; for (let k = -40; k < 40; k++) { g.beginPath(); g.moveTo(ix + k * 9, iy - 200); g.lineTo(ix + k * 9 + 200, iy + 200); g.stroke(); } g.restore();
+    line(inner, C.ink, 2.6); line([[ix - ir, zc[1] - zr], [ix + ir, zc[1] - zr]], C.ink, 2.6);
+    g.save(); g.strokeStyle = C.blue; g.lineWidth = 4.5; g.beginPath(); g.arc(zc[0], zc[1], zr, -PI / 2 - 0.4, -PI / 2 + 0.4); g.stroke(); g.restore();
+    g.restore();
+    g.save(); g.strokeStyle = C.ink; g.lineWidth = 2; g.beginPath(); g.arc(ix, iy, ir, 0, 7); g.stroke(); g.restore();
+    note('detail a · 96 sides', ix, iy + ir + 36, C.ink, 'center');
+    note('not to scale', ix, iy + ir + 64, C.leadT, 'center', 18);
+    // bảng nhân đôi cạnh: chu vi nửa (đường kính = 1) = n·sin(π/n) và n·tan(π/n)
+    const f4 = v => v.toFixed(4), rows = [6, 12, 24, 48, 96].map(m => [m, f4(m * Math.sin(PI / m)), f4(m * Math.tan(PI / m))]);
+    must('(6 * Math.sin(Math.PI / 6)).toFixed(4)', '3.0000'); must('(6 * Math.tan(Math.PI / 6)).toFixed(4)', '3.4641');
+    must('(96 * Math.sin(Math.PI / 96)).toFixed(4)', '3.1410'); must('(96 * Math.tan(Math.PI / 96)).toFixed(4)', '3.1427');
+    const tx = 960, ty = 580;
+    note('sides', tx, ty, C.leadT, 'left', 18); note('inside', tx + 120, ty, C.leadT, 'left', 18); note('outside', tx + 250, ty, C.leadT, 'left', 18);
+    line([[tx, ty + 12], [tx + 360, ty + 12]], C.ink, 1.2);
+    rows.forEach(([m, a, b], k) => { const y = ty + 52 + k * 40, last = m === 96, col = last ? C.ink : C.leadT;
+      text(String(m), tx, y, `500 26px ${MONO}`, col); text(a, tx + 120, y, `500 26px ${MONO}`, col); text(b, tx + 250, y, `500 26px ${MONO}`, col); });
+    line([[tx - 8, ty + 52 + 4 * 40 - 30], [tx + 368, ty + 52 + 4 * 40 - 30], [tx + 368, ty + 52 + 4 * 40 + 12], [tx - 8, ty + 52 + 4 * 40 + 12], [tx - 8, ty + 52 + 4 * 40 - 30]], C.ink, 1.4);
+    // cận của Archimedes ở 96 cạnh: phân số hữu tỉ bọc ngoài giá trị đa giác
+    const lo = must('Math.round(223 / 71 * 1e4) / 1e4', 3.1408), hi = must('Math.round(22 / 7 * 1e4) / 1e4', 3.1429);
+    must('223 / 71 < 96 * Math.sin(Math.PI / 96) && 96 * Math.sin(Math.PI / 96) < Math.PI && Math.PI < 96 * Math.tan(Math.PI / 96) && 96 * Math.tan(Math.PI / 96) < 22 / 7', true);
+    note('at 96 sides, archimedes proved', 96, 868, C.leadT);
+    let x = 96, by = 965;
+    x += frac('223', '71', x + 50, by - 18, 54, C.ink) + 24;
+    x += text(`≈ ${lo.toFixed(4)}`, x, by, `600 62px ${CG}`, C.ink) + 34;
+    x += text('<', x, by, `600 62px ${CG}`, C.ink) + 34;
+    x += text('π', x, by + 4, `italic 700 92px ${CG}`, C.blue) + 34;
+    x += text('<', x, by, `600 62px ${CG}`, C.ink) + 34;
+    x += frac('22', '7', x + 36, by - 18, 54, C.ink) + 30;
+    text(`≈ ${hi.toFixed(4)}`, x, by, `600 62px ${CG}`, C.ink);
+    text('Trap the curve between straight lines.', 96, 118, `italic 600 54px ${CG}`, C.ink);
+    titleBlock(1824, 64, 'I', 'THE SQUEEZE', 'syracuse · c. 250 bc');
+    const P = figure(IM.compassS, 1610, 1080, 760, IM.compass.height);
+    const tip = P(8, 578); g.save(); g.fillStyle = C.blue; g.globalAlpha = 0.8; g.beginPath(); g.arc(tip[0] - 2, tip[1] + 6, 3, 0, 7); g.fill(); g.restore();
+  },
+  () => {                                             // 1 · HỒI 2: cùng vòng tròn (r = 1), nửa vòng = π, bóng của điểm quay vẽ ra sóng
+    const cx = 880, cy = 590, R = 225, phi = must('4', 4);
+    const s = must('Math.round(Math.sin(4) * 1000) / 1000', -0.757), left = must('Math.round((Math.PI - 3) * 1e4) / 1e4', 0.1416);
+    // chì: trục, tia tới điểm, cung các bước radian
+    line([[cx - R - 60, cy], [cx + R + 60, cy]], C.lead, 1.2); line([[cx, cy - R - 60], [cx, cy + R + 60]], C.lead, 1.2);
+    // nửa vòng = π (xanh, dày) + bước 1 bán kính ba lần và phần dư
+    g.save(); g.strokeStyle = C.lead; g.lineWidth = 1.2; g.beginPath(); g.arc(cx, cy, R + 38, -PI, 0); g.stroke(); g.restore();
+    [0, 1, 2, 3, PI].forEach(a => line([[cx + (R - 16) * Math.cos(a), cy - (R - 16) * Math.sin(a)], [cx + (R + 50) * Math.cos(a), cy - (R + 50) * Math.sin(a)]], C.ink, 2));
+    [0.5, 1.5, 2.5].forEach(a => text('1', cx + (R - 46) * Math.cos(a), cy - (R - 46) * Math.sin(a) + 14, `italic 600 40px ${CG}`, C.ink, 'center'));
+    const lx = cx + (R + 64) * Math.cos(PI - 0.07), ly = cy - (R + 64) * Math.sin(PI - 0.07);
+    line([[lx, ly], [lx, cy - 278]], C.leadT, 1.1); note(`3 radii + ${left}…`, lx - 120, cy - 290, C.ink, 'left', 22);
+    compassCircle(cx, cy, R, -2.0, 3);
+    g.save(); g.strokeStyle = C.blue; g.lineWidth = 10; g.lineCap = 'butt'; g.beginPath(); g.arc(cx, cy, R, -PI, 0); g.stroke(); g.restore();
+    text('π', cx, cy - R - 64, `italic 700 96px ${CG}`, C.blue, 'center');
+    note('= half a turn', cx + 44, cy - R - 82, C.blue, 'left');
+    pivot(cx, cy);
+    line([[cx, cy], [cx + R, cy]], C.ink, 2); text('1', cx + R / 2, cy + 44, `italic 600 40px ${CG}`, C.ink, 'center');
+    // điểm quay tại góc phi; tia + cung góc
+    const px = cx + R * Math.cos(phi), py = cy - R * Math.sin(phi);
+    line([[cx, cy], [px, py]], C.ink, 1.6, [8, 6]);
+    g.save(); g.strokeStyle = C.ink; g.lineWidth = 1.6; g.beginPath(); g.arc(cx, cy, 52, -phi, 0); g.stroke(); g.restore();
+    arrowHead(cx + 52 * Math.cos(phi), cy - 52 * Math.sin(phi), -phi - PI / 2, C.ink, 12);
+    // tường + bóng + sóng theo thời gian
+    const X0 = 1250, X1 = 1790, k = (X1 - X0) / (2 * PI), wall = 1200;
+    g.save(); g.beginPath(); g.rect(wall - 26, cy - R - 40, 26, 2 * R + 80); g.clip(); g.strokeStyle = C.lead; g.lineWidth = 1;
+    for (let y = cy - R - 70; y < cy + R + 80; y += 12) { g.beginPath(); g.moveTo(wall, y); g.lineTo(wall - 26, y + 26); g.stroke(); } g.restore();
+    line([[wall, cy - R - 40], [wall, cy + R + 40]], C.ink, 2.6);
+    line([[X0, cy], [X1 + 10, cy]], C.ink, 1.6); arrowHead(X1 + 20, cy, 0, C.ink, 14);
+    const wave = (a, b) => Array.from({ length: 200 }, (_, i) => { const t = a + (b - a) * i / 199; return [X0 + t * k, cy - R * Math.sin(t)]; });
+    line(wave(phi, 2 * PI), C.lead, 1.4, [3, 7]);
+    line(wave(0, phi), C.ink, 3.4);
+    const sy = cy - R * s, tipX = X0 + phi * k;
+    line([[px, py], [tipX, sy]], C.blue, 1.6, [2, 7]);
+    g.fillStyle = C.ink; g.beginPath(); g.arc(wall, sy, 7, 0, 7); g.fill();
+    g.fillStyle = C.ink; g.beginPath(); g.arc(tipX, sy, 6, 0, 7); g.fill();
+    g.fillStyle = C.paper; g.beginPath(); g.arc(px, py, 12, 0, 7); g.fill(); g.strokeStyle = C.blue; g.lineWidth = 4; g.stroke();
+    g.fillStyle = C.blue; g.beginPath(); g.arc(px, py, 5, 0, 7); g.fill();
+    [[PI, 'π'], [2 * PI, '2π']].forEach(([a, l]) => { const x = X0 + a * k; line([[x, cy - 10], [x, cy + 10]], C.ink, 2);
+      text(l, x, cy + 58, `italic 700 46px ${CG}`, l === 'π' ? C.blue : C.ink, 'center'); });
+    note('time', X1 + 4, cy - 22, C.leadT, 'right', 18);
+    note('shadow on the wall', wall - 14, cy - R - 58, C.leadT, 'left', 18);
+    note(`sin ${phi} = ${String(s).replace('-', '−')}`, wall + 24, sy + 46, C.ink, 'left', 22);
+    note(`${phi} rad`, cx + 40, cy + 90, C.ink, 'left', 22);
+    text('Half a turn is π.', 640, 140, `italic 600 76px ${CG}`, C.ink);
+    text('A point turns at a steady pace; its shadow, traced over time, is a wave.', 640, 990, `italic 600 40px ${CG}`, C.ink);
+    titleBlock(1824, 64, 'II', 'TURNING', 'radius 1 · radians');
+    // nhân vật: nửa trên, ngón trỏ chỉ lên; vệt vòng quay bằng chì quanh đầu ngón
+    const P = figure(IM.spinS, 300, 1080, 660, Math.round(IM.spin.height * 0.45));
+    const [fx, fy] = P(120, 132), rr = 46;
+    g.save(); g.strokeStyle = C.blue; g.lineWidth = 3; g.lineCap = 'round'; g.beginPath(); g.ellipse(fx, fy - 40, rr, rr * 0.36, 0, PI * 0.62, PI * 0.62 + 2 * PI * 0.82); g.stroke(); g.restore();
+    const ea = PI * 0.62 + 2 * PI * 0.82; arrowHead(fx + rr * Math.cos(ea), fy - 40 + rr * 0.36 * Math.sin(ea), ea + PI / 2 - 0.25, C.blue, 13);
+    g.save(); g.strokeStyle = C.lead; g.lineWidth = 1.2; g.setLineDash([3, 6]); g.beginPath(); g.ellipse(fx, fy - 40, rr + 16, (rr + 16) * 0.36, 0, 0, 7); g.stroke(); g.restore();
+  },
+];
+
+(async () => {
+  await Promise.all(['italic 600 54px', 'italic 600 76px', 'italic 600 40px', 'italic 700 92px', 'italic 700 96px', 'italic 700 46px', '600 62px', '600 54px', '600 46px']
+    .map(f => document.fonts.load(`${f} ${CG}`))
+    .concat(['500 26px', '500 22px', '500 20px', '500 18px'].map(f => document.fonts.load(`${f} ${MONO}`)))
+    .concat(['700 26px', '600 18px'].map(f => document.fonts.load(`${f} ${ARC}`))));
+  await Promise.all(['compass', 'spin'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../assets/character-v2/cut/pose-${p}.png`; })));
+  IM.compassS = sprite('compass'); IM.spinS = sprite('spin', 0.45);
+  PAPER = paper(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(PAPER, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

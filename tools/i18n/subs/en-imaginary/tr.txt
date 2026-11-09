@@ -1,0 +1,87 @@
+1 ile −1'in tam ortasında hangi sayı var?
+Çizgi boyunca yürürseniz sıfır. Ama dönerseniz, dönüşün yarısında çizginin üzerinde hiç olmayan bir sayıya varırsınız.
+1500'lerde bu sayı, doğru cevaba giden tek yoldu.
+Descartes ona sanal dedi ve bunu hakaret olarak söyledi.
+Bugün mühendislerin elektrik şebekesini işletmesine yardım ediyor.
+Bu videonun sonunda onu gösterebilecek ve gerçek makinelerin onu neden kullandığını tam olarak göreceksiniz.
+Her şey tek bir soruyla başlıyor: çarpma aslında ne yapar?
+Sayı doğrusunu çizin ve her sayıyı sıfırdan başlayan bir ok olarak düşünün.
+Şimdi 2 ile çarpın. Her ok iki kat uzar. 3, 6'ya gider, −1 de −2'ye.
+Yani 2 ile çarpmak sadece bir işlem değil. Tüm doğruya uyguladığınız bir hareket: germe.
+−1 ile çarpmak nasıl bir harekettir?
+3, −3'e gider. 5, −5'e gider. −2, 2'ye gider.
+Her şey taraf değiştirir. Bu, sıfırdan geçen bir ters çevirmedir.
+İki kez çevirin, başladığınız yere dönersiniz. Negatif çarpı negatifin neden pozitif olduğunu görmenin bir yolu budur.
+Şimdi bütün derde yol açan soruya geldik.
+Kendisiyle çarpılınca −1 veren bir sayı var mı?
+Başka bir deyişle, iki kez yapılınca ters çevirme veren bir hareket var mı?
+Doğru üzerinde deneyin. Pozitif bir sayı her oku kendi tarafında tutar, iki kez yapınca da orada kalır.
+Negatif bir sayı taraf değiştirir, iki kez değiştirmek de sizi geri getirir.
+Her iki durumda da aynı hareket iki kez yapılınca asla karşı tarafta bitmez. Yani bu doğruda hiçbir sayının karesi −1 değildir.
+Uzun süre iş burada bitti. Negatif bir sayının karekökünü sorarsanız dürüst cevap şuydu: bu soru yanlış sorulmuş.
+Zaten gayet iyi bir cevabı olan bir denklem olmasaydı, öyle de kalacaktı.
+1545'te İtalyan bilgin Gerolamo Cardano, içinde x küp olan kübik denklemleri çözmek için bir formül yayımladı.
+Ama formülün garip bir sorunu vardı.
+x³ = 15x + 4 denklemini alın.
+x = 4'ün sağladığını elle kontrol edebilirsiniz. 4'ün küpü 64'tür, 15 çarpı 4 artı 4 de 64'tür.
+Yani gerçek bir cevap var ve küçük bir tam sayı.
+Ama denklemi formüle koyun, yolun ortasında −121'in karekökünü ister.
+Bunun, formülün burada geçerli olmadığı anlamına geldiğini düşünebilirsiniz. Bir hesap imkânsız bir şey istediğinde normalde varılan sonuç budur.
+Ama cevap var. Az önce kontrol ettik. Formül doğru bir sonucu gösteriyordu ve tek yolu izin verilmeyen bir sayıdan geçiyordu.
+1572'de Rafael Bombelli adlı bir mühendis cesur bir şey denedi. İtirazı görmezden gelip hesaplamaya devam etti.
+−1'in karekökünü tek kurallı bilinmeyen bir sembol gibi ele aldı: karesi −1'dir. Gerisi normal cebir.
+Formül sonra iki küpkök istedi ve Bombelli onları buldu: 2 artı o sembol ve 2 eksi o sembol.
+Şimdi toplayın. 2 ile 2, 4 eder. Biri artı biri eksi olan semboller birbirini götürür.
+Dört. Tam doğru cevap ve imkânsız kısım çıkış yolunda yok olmuştu.
+Yani kimse bu sayıyı kulağa hoş geldiği için kabul etmedi. Kimse ne olduğunu söyleyemezken doğru sonuçlar vermeye devam ettiği için kabul edildi.
+1637'de René Descartes bu tür nicelikler için sanal kelimesini kullandı ve bu bir iltifat değildi.
+Bugün kullandığımız sembol, i harfi, daha sonra geldi. Ama asıl soru açık kaldı. Bir kural, bir açıklama değildir. Bu şey nedir?
+Cevap 1800 civarında ortaya çıktı; Caspar Wessel ve ardından Jean-Robert Argand birbirinden bağımsız olarak yayımladı.
+Ve neredeyse utandıracak kadar basit. Doğru üzerindeki hiçbir hareketin işe yaramadığını gördük. O halde doğruda kalmayı bırakın.
+O ters çevirmeye tekrar bakın. 1'i −1'e, 3'ü −3'e ve her şeyi karşıtına göndermenin başka bir yolu var.
+Tüm doğruyu sıfır etrafında yarım tur döndürün.
+Sonuç ters çevirmeyle tamamen aynı görünür, ama artık hareketin bir ortası vardır.
+Dönüşün yarısında durun. Çeyrek tur attınız ve 0'dan 1'e giden ok artık dosdoğru yukarıyı, doğrunun dışını gösteriyor.
+İşte aradığınız hareket. İki kez yapılan çeyrek tur yarım turdur ve yarım tur −1 ile çarpmaktır.
+Yani −1'in karekökü gizemli bir nicelik değil. Çeyrek turdur. Sıfırın bir adım dosdoğru yukarısındaki noktaya da i deriz.
+Şimdi baştaki soruyu doğru cevaplayabiliriz. Doğru boyunca 1'den −1'e yürüyün, orta nokta 0'dır.
+1'den −1'e dönün, orta nokta i'dir. Öbür yöne dönün, orta nokta −i'dir.
+i ile çarpmaya devam edin, sadece dönmeye devam edersiniz.
+1, sonra i, sonra −1, sonra −i, sonra yine 1. Dört çeyrek tur, tam bir daire.
+Yani i üzeri 100 gibi korkutucu görünen bir soru kolaydır. 100, 25 tam dairedir ve tam başladığınız yerde bitirirsiniz: 1.
+Sanal adı, bunu olduğundan daha gizemli gösteriyor.
+−1 de elinizde tutabileceğiniz bir şey değil. Bir doğru üzerinde bir yöndür. i de yalnızca bir yön daha, bakmadığımız yön.
+Yukarı yönü olunca sayfadaki her nokta bir sayı olur.
+Sağa 3 ve yukarı 2, 3 + 2i'dir. Bunlara karmaşık sayılar deriz ve karmaşık burada zor değil, parçalardan oluşmuş demektir.
+Şimdi fikri test edelim. 3 + 2i'yi düz cebirle i ile çarpın.
+3 çarpı i, 3i'dir. 2i çarpı i, 2i²'dir, yani −2.
+−2 + 3i elde edersiniz. Şimdi o noktanın nereye düştüğüne bakın.
+Aynı ok, aynı uzunluk, tam çeyrek tur dönmüş. Cebir, kimse söylemeden geometri yaptı.
+Ve bu yalnızca i için değil, her karmaşık sayı için geçerli. Her biri uzunluğu ve açısı olan bir oktur.
+İkisini çarptığınızda uzunluklar çarpılır, açılar toplanır. Kuralın tamamı bu.
+1 + i'yi alın. 45 dereceyi gösterir ve uzunluğu 2'nin kareköküdür.
+Karesini alın. Açı iki katına, 90 dereceye çıkar, uzunluk tam 2 olur. Bu, 2i'yi öngörür.
+Cebirle kontrol edin: 1, artı 2i, artı i². 1 ile −1 birbirini götürür, geriye 2i kalır.
+Bu kural, 1572'deki numarayı sonunda açıklıyor.
+Bombelli'nin 2 + i'si yaklaşık 26,5 derecelik bir oktur. Küpünü alın, açı üç katına, neredeyse 80 dereceye çıkar, neredeyse dikey olur ve tam 2 + 11i'ye düşer.
+Ayna görüntüsü 2 − i'nin küpü 2 − 11i'dir ve o 11i, −121'in kareköküdür.
+Şimdi iki oku toplayın. Biri yukarı gider, aynası aynı miktarda aşağı iner ve kalan, sıradan doğru üzerinde yatar. 2 + 2: 4.
+İşte bu yüzden gerçek bir cevap sanaldan geçmek zorundaydı. Formülün yolu doğrudan çıkıp geri döndü. Gerçek sayı, düzlemde olan bir şeyin gölgesiydi.
+Peki elektrik şebekesi bunu neden önemsiyor?
+Prizden gelen elektrik, saniyede yaklaşık 50 veya 60 kez düzgün bir dalga halinde ileri geri salınır.
+Bir daire üzerinde düzenli dönen bir ok düşünün ve yalnızca yüksekliğine bakın. Yukarı, aşağı, yukarı, aşağı. Bu yükseklik tam o dalgayı çizer.
+Yani her düzgün dalga, dönen bir okun gölgesi olarak ele alınabilir. Artık dönen sayılarımız da var.
+İşte bunun faydası. İki dalganın aynı devreden geçtiğini varsayın; biri 3 volt, öteki 4 volt tepe yapıyor ve ikincisi birincinin çeyrek döngü gerisinde.
+Birleşince tepe kaç olur? 7 diyebilirsiniz. Değil, çünkü asla aynı anda tepe yapmazlar.
+Oklarla çeyrek döngü, çeyrek turdur. Yani iki dalga, dik açıda 3 ve 4i'dir.
+Toplayın, uzunluk 5 olur. Birleşik dalga tam 5 volt tepe yapar.
+Karmaşık sayılar olmadan da bu cevaba ulaşabilirsiniz, ama sayfalarca trigonometriyle. Onlarla kısa bir toplama yeterli.
+Bunu dalgaları zamanda kaydıran bobin ve kondansatörlerle dolu bütün bir devreye taşıyın; bir sayfa cebir ile gerçekten acı verici bir şey arasındaki fark ortaya çıkar.
+Elektrik mühendisleri bunu o kadar çok kullanır ki sayıyı j diye yazarlar, çünkü i zaten akım için kullanılıyordu.
+Radyo sinyalleri, ses işleme ve kuantum mekaniği denklemleri de aynı temel nedenle ona dayanır. Salınan şeyler dönen şeylerdir.
+Neden kabul etmek zorunda kalındı? Çünkü doğru cevap olan 4'e ancak negatif bir sayının karekökünden geçerek ulaşılabiliyordu.
+Nedir? Çeyrek tur. Ve sıfırın bir adım üstündeki nokta, sayı doğrusunun bize hiç göstermediği bir yönde.
+Neden faydalı? Çünkü karmaşık sayıları çarpmak döndürür ve salınan her şey dönen bir şey olarak ele alınabilir.
+O halde bir kalemle deneyin. Kâğıtta herhangi bir noktayı, örneğin 2 + i gibi bir sayı olarak işaretleyin ve i ile dört kez çarpın.
+Sonra her cevabı işaretleyin. i'nin ne demek olduğunu kimsenin söylemesine gerek kalmayacak. Noktanızın bir daireyi dolaşıp eve döndüğünü göreceksiniz.
+İzlediğiniz için teşekkürler; bu, garip bir fikri apaçık kıldıysa 99% from scratch'e abone olun.

@@ -1,0 +1,289 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — survey</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  @font-face{font-family:"Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  html,body{margin:0;background:#E4EFF4;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "survey · đường mòn + sổ đo đạc thực địa" (calculus). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/survey.html --dur 2 --t 0.5,1.5 --outdir out/_lab/survey
+// Ý: "dốc tại đúng chỗ chân đứng" là câu hỏi của người ĐO ĐẠC NGOÀI TRỜI. Cả bài là một buổi sáng trên sườn đồi cỏ: trời mát, núi xa nhạt có đường đồng mức, một đoàn trắc địa nhỏ với cọc tiêu sọc đỏ trắng, dây căng, ống ngắm và cuốn sổ đo bìa cứng kẻ ô. Mọi số đều được GHI vào sổ — tính được thì mới ghi.
+// Vật xuyên suốt: SƯỜN ĐỒI y = x² (cắt dọc thấy lớp đất). (1) người đi bộ đứng trên sườn, điểm sáng dưới chân tại (1, 1) · (2) TIẾP TUYẾN = cây sào ngắm sọc đỏ trắng áp đúng một điểm (y = 2x − 1); CÁT TUYẾN = dây đo xanh căng giữa hai cọc tiêu (x = 2, 1.5, 1.1), cọc dời dần về chân → dây xoay khép vào sào · (3) giới hạn = đường mòn thẳng y = x + 5 có MỘT hố cọc rỗng tại (5, 10) (vòng tròn rỗng, cọc rút ra) · (4) tích phân = TRẮC DỌC: đất dưới sườn cắt thành các CỘT ĐẤT mỏng (cỏ trên, lớp đất dưới) như bản vẽ khoan địa chất; phần cột thò lên trên sườn = đất đắp thừa, gạch chéo tím · (5) hồi cuối = BÁNH XE ĐO có công-tơ-mét (cộng dồn quãng) ↔ đồng hồ tốc độ gắn cán (đọc ngay lúc này).
+// Màu (một màu một nghĩa) trên trời mát #DCEAF1→#F3F6EE: ĐỎ CỌC TIÊU #D9481E (chữ #B23A12) = điểm đang hỏi + tiếp tuyến (sào) · XANH DÂY ĐO #2F6DB5 (chữ #23579A) = cát tuyến · LỤC SƯỜN #3E7A3A = đường cong y = x² (mép cỏ) · NÂU ĐẤT #B98A4E…#E7D3A8 (chữ #6E4A1C) = diện tích / dải · TÍM GẠCH CHÉO #7A4FB8 (chữ #5E3A9A) = phần thừa "sai" · mực navy #22313B + giấy sổ #FBF7EA = trung tính.
+// Chữ: Archivo 800–900 (đủ ÷ ≈ − ²) cho chữ lớn · IBM Plex Mono = chữ GHI SỔ (số liệu, có ⅓) · biến x, y, h = Cormorant Garamond Italic (không viết hoa). Chữ ≥ 28 px, số ≥ 30 px; ≤ 3 cụm lớn mỗi khung.
+// Tiếng (assets/sfx/library.json): cắm cọc = wood (có) · căng dây = snap nhẹ · ghi sổ = pen (có) · lật sổ = page (có) · cát tuyến xoay khép = whoosh · sào chạm đúng điểm = correct/shimmer · lỗ (5, 10) = pop rỗng · đếm dải = tick · công-tơ-mét = soroban/tick lăn số; đề xuất MỚI: "wheel-click" (bánh xe đo lạch cạch), "tape-reel" (cuộn thước dây rút).
+// Các phần khác: bảng 3 → 2.5 → 2.1 → 2.01 → 2.001 = từng dòng chép tay vào sổ đo (cột x, rise, run, dốc), dòng mới đẩy dòng cũ lên · lỗ ở (5, 10) = đường mòn thẳng với một hố cọc rỗng, cờ hiệu cắm cạnh · 2 + h = khoảng cách giữa hai cọc là h, dây thước dây rút ngắn dần · đồng hồ tốc độ = mặt đồng hồ trên cán bánh xe đo · Newton / Leibniz / trang 1684 / Archimedes = ảnh thật kẹp vào bìa sổ bằng kẹp giấy, mép giấy ảnh trắng như ảnh thực địa dán sổ · dải mỏng → ⅓ = cột đất mảnh dần, thanh khoảng [dưới, trên] trong sổ co vào vạch ⅓.
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+import { shadowRR, glow } from '../../engine/shade.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const AR = '"Archivo"', IT = '"Cormorant Garamond"', MO = '"Plex Mono"';
+const C = { ink: '#22313B', sky0: '#DCEAF1', sky1: '#F3F6EE', paper: '#FBF7EA',
+  pole: '#D9481E', poleInk: '#B23A12', sec: '#2F6DB5', secInk: '#23579A', curve: '#3E7A3A', grass: '#7FB05A',
+  soil: '#C9A46A', soilInk: '#6E4A1C', bad: '#7A4FB8', badInk: '#5E3A9A', cover: '#2F5A46' };
+const STRATA = ['#E7D3A8', '#D9BC86', '#CBA56E', '#BE9562', '#D6BE92'];
+const IM = {}; let BG0, BG1, ready = false;
+const BOX = window.__boxes = {};
+
+// ---- số: tính bằng code, must() ----
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { const r = ev(s); if (r !== v) throw new Error(`sai: ${s} = ${r} ≠ ${v}`); return v; };
+const r6 = s => `Math.round((${s}) * 1e6) / 1e6`;
+const sq = x => x * x;
+must('(2 ** 2 - 1) / (2 - 1)', 3);
+must(r6('(1.5 ** 2 - 1) / (1.5 - 1)'), 2.5);
+must(r6('(1.1 ** 2 - 1) / (1.1 - 1)'), 2.1);
+must('2 * 1 - 1', 1);                                                     // thước y = 2x − 1 đi qua (1, 1)
+const sumSq = (a, b) => { let s = 0; for (let i = a; i <= b; i++) s += i * i; return s; };
+const UP = n => sumSq(1, n) / n ** 3, LO = n => sumSq(0, n - 1) / n ** 3;
+must(r6(String(UP(4))), 0.46875); must(String(LO(4)), 0.21875);
+must(r6(String(UP(10))), 0.385); must(r6(String(LO(10))), 0.285);
+must(r6(String(UP(100))), 0.33835); must(r6(String(LO(100))), 0.32835);
+[4, 10, 100].forEach(n => must(r6(`${UP(n)} - ${LO(n)}`), 1 / n));       // khe = 1/n
+const THIRD = 1 / 3;
+const f3 = v => v.toFixed(3);
+must(`'${f3(UP(4))}'`, '0.469'); must(`'${f3(LO(4))}'`, '0.219');
+must(`'${UP(4).toFixed(2)}'`, '0.47'); must(`'${LO(4).toFixed(2)}'`, '0.22');
+
+// ---- tương phản ĐO bằng số ----
+const lum = hex => { const v = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(c => c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4); return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]; };
+const cr = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+const CR = {};
+[['ink/sky', C.ink, C.sky0, 4.5], ['pole/sky (lớn)', C.poleInk, C.sky0, 4.5], ['ink/paper', C.ink, C.paper, 4.5], ['poleInk/paper', C.poleInk, C.paper, 4.5],
+ ['secInk/paper', C.secInk, C.paper, 4.5], ['soilInk/paper', C.soilInk, C.paper, 4.5], ['badInk/paper', C.badInk, C.paper, 4.5], ['white/cover', '#FFFFFF', C.cover, 4.5],
+ ['ink/strata0', C.ink, STRATA[0], 4.5]]
+  .forEach(([k, a, b, m]) => { CR[k] = Math.round(cr(a, b) * 10) / 10; if (CR[k] < m) throw new Error(`tương phản ${k} = ${CR[k]}`); });
+window.__contrast = CR;
+
+// ---- tiện ích ----
+const rr = (x, y, w, h, r) => { const p = new Path2D(); p.roundRect(x, y, w, h, r); return p; };
+const txt = (s, x, y, font, col = C.ink, align = 'left', base = 'alphabetic') => { g.save(); g.font = font; g.textAlign = align; g.textBaseline = base; g.fillStyle = col; g.fillText(s, x, y); const w = g.measureText(s).width; g.restore(); return w; };
+const tw = (s, font) => { g.save(); g.font = font; const w = g.measureText(s).width; g.restore(); return w; };
+// công thức: [[chuỗi, 'i'|'r'], …] — biến nghiêng serif, còn lại Archivo
+function formula(parts, x, y, px, col, align = 'left') {
+  const F = k => k === 'i' ? `italic 600 ${Math.round(px * 1.18)}px ${IT}` : `600 ${px}px ${AR}`;
+  const total = parts.reduce((a, [s, k]) => a + tw(s, F(k)), 0); let cx = align === 'center' ? x - total / 2 : align === 'right' ? x - total : x;
+  parts.forEach(([s, k]) => { cx += txt(s, cx, y, F(k), col); }); return total;
+}
+const line = (x0, y0, x1, y1, col, w, cap = 'round') => { g.save(); g.strokeStyle = col; g.lineWidth = w; g.lineCap = cap; g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke(); g.restore(); };
+
+// ---- trời + núi xa có đường đồng mức (vẽ sẵn) ----
+function sky(top = C.sky0, bot = C.sky1, hills = true) {
+  const c = mk(), x = c.getContext('2d');
+  let gr = x.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, top); gr.addColorStop(1, bot); x.fillStyle = gr; x.fillRect(0, 0, W, H);
+  const sun = x.createRadialGradient(360, 60, 0, 360, 60, 900); sun.addColorStop(0, 'rgba(255,250,232,0.75)'); sun.addColorStop(1, 'rgba(255,250,232,0)'); x.fillStyle = sun; x.fillRect(0, 0, W, H);
+  for (let k = 0; k < 4; k++) { const cx = 300 + hash(k * 3.1) * 1300, cy = 90 + hash(k * 7.3) * 120, s = 0.7 + hash(k * 1.9) * 0.6;   // mây mỏng
+    x.fillStyle = 'rgba(255,255,255,0.55)'; for (let j = 0; j < 5; j++) { x.beginPath(); x.ellipse(cx + (j - 2) * 46 * s, cy - Math.sin(j / 4 * Math.PI) * 18 * s, 60 * s, 22 * s, 0, 0, 7); x.fill(); } }
+  if (!hills) return c;
+  const layers = [ { base: 600, amp: 70, col: '#C9DCE3', con: 'rgba(110,150,165,0.20)', ph: 0.3 }, { base: 690, amp: 56, col: '#BBD3CB', con: 'rgba(90,140,120,0.22)', ph: 2.1 } ];
+  layers.forEach(L => {
+    const yAt = px => L.base - L.amp * (0.6 * Math.sin(px * 0.0031 + L.ph) + 0.4 * Math.sin(px * 0.0079 + L.ph * 3)) - L.amp * 0.8;
+    const p = new Path2D(); p.moveTo(0, H); for (let px = 0; px <= W; px += 8) p.lineTo(px, yAt(px)); p.lineTo(W, H); p.closePath();
+    x.fillStyle = L.col; x.fill(p);
+    x.save(); x.clip(p); x.strokeStyle = L.con; x.lineWidth = 2;                       // đường đồng mức: cùng hình, dịch xuống, bẹt dần
+    for (let k = 1; k < 9; k++) { x.beginPath(); for (let px = 0; px <= W; px += 8) { const py = L.base + k * 22 + (yAt(px) - L.base) * (1 - k * 0.1); px ? x.lineTo(px, py) : x.moveTo(px, py); } x.stroke(); }
+    x.restore();
+  });
+  return c;
+}
+
+// ---- toạ độ toán ↔ pixel (affine: tiếp xúc giữ nguyên) ----
+const mapper = (ox, oy, sx, sy) => ({ X: u => ox + u * sx, Y: v => oy - v * sy, sx, sy });
+
+// lớp đất trắc dọc: dải ngang theo y pixel toàn cục, sỏi tất định
+function strata(clip, y0, y1, seed = 0) {
+  g.save(); g.clip(clip);
+  const bands = [0, 46, 120, 210, 330, 470, 2000];
+  for (let i = 0; i < bands.length - 1; i++) { g.fillStyle = STRATA[i % STRATA.length]; g.fillRect(0, y0 + bands[i], W, bands[i + 1] - bands[i] + 1);
+    g.strokeStyle = 'rgba(110,74,28,0.25)'; g.lineWidth = 2; g.beginPath(); for (let px = 0; px <= W; px += 10) { const py = y0 + bands[i] + Math.sin(px * 0.013 + i * 1.7) * 5; px ? g.lineTo(px, py) : g.moveTo(px, py); } g.stroke(); }
+  for (let k = 0; k < 260; k++) { const px = hash(k * 1.37 + seed) * W, py = y0 + 30 + hash(k * 2.71 + seed) * (y1 - y0), r = 2 + hash(k * 4.13 + seed) * 5;
+    g.fillStyle = `rgba(110,80,45,${0.18 + hash(k * 5.9) * 0.2})`; g.beginPath(); g.ellipse(px, py, r * 1.4, r, hash(k) * 3, 0, 7); g.fill(); }
+  g.restore();
+}
+// mép cỏ dọc đường cong: nét lục đậm + nhúm cỏ tất định (lên trên)
+function turf(M, a, b, w = 7, tufts = true) {
+  const p = new Path2D(); for (let i = 0; i <= 200; i++) { const u = a + (b - a) * i / 200; i ? p.lineTo(M.X(u), M.Y(sq(u))) : p.moveTo(M.X(u), M.Y(sq(u))); }
+  g.save(); g.strokeStyle = C.grass; g.lineWidth = w + 10; g.lineJoin = 'round'; g.stroke(p); g.strokeStyle = C.curve; g.lineWidth = w; g.stroke(p); g.restore();
+  if (!tufts) return;
+  g.save(); g.strokeStyle = C.curve; g.lineWidth = 2.5; g.lineCap = 'round';
+  for (let i = 0; i < 90; i++) { const u = a + (b - a) * hash(i * 3.3 + 0.5), px = M.X(u), py = M.Y(sq(u)), d = Math.atan2(-2 * u * M.sy, M.sx);   // pháp tuyến hướng ra trời
+    const nx = Math.sin(d), ny = -Math.cos(d), L = 8 + hash(i * 1.7) * 10;
+    for (const s of [-0.35, 0, 0.35]) { g.beginPath(); g.moveTo(px, py); g.lineTo(px + (nx + s * Math.cos(d)) * L, py + (ny + s * Math.sin(d)) * L); g.stroke(); } }
+  g.restore();
+}
+// cọc tiêu sọc đỏ trắng (ranging pole) cắm tại (px, py)
+function rangingPole(px, py, h = 120, w = 9) {
+  shadowRR(g, px - w / 2, py - h, w, h, 3, { col: 'rgba(40,60,50,0.22)', blur: 6, ox: 5, oy: 3 });
+  const seg = h / 6; for (let k = 0; k < 6; k++) { g.fillStyle = k % 2 ? '#FFFFFF' : C.pole; g.fillRect(px - w / 2, py - h + k * seg, w, seg + 0.5); }
+  g.strokeStyle = 'rgba(60,30,20,0.45)'; g.lineWidth = 1.5; g.strokeRect(px - w / 2, py - h, w, h);
+  g.fillStyle = '#5A5148'; g.beginPath(); g.moveTo(px - w / 2, py); g.lineTo(px + w / 2, py); g.lineTo(px, py + 10); g.closePath(); g.fill();
+}
+// sào ngắm (tiếp tuyến): thanh gỗ sơn sọc đỏ trắng, dài, vạch chia
+function sightRod(x0, y0, x1, y1, w = 16) {
+  const L = Math.hypot(x1 - x0, y1 - y0), a = Math.atan2(y1 - y0, x1 - x0);
+  g.save(); g.translate(x0, y0); g.rotate(a);
+  shadowRR(g, 0, -w / 2, L, w, 4, { col: 'rgba(60,30,20,0.25)', blur: 8, ox: 0, oy: 7 });
+  const n = 12, seg = L / n; for (let k = 0; k < n; k++) { g.fillStyle = k % 2 ? '#FFF8EE' : C.pole; g.fillRect(k * seg, -w / 2, seg + 0.5, w); }
+  g.strokeStyle = 'rgba(90,30,10,0.7)'; g.lineWidth = 2; g.strokeRect(0, -w / 2, L, w);
+  g.fillStyle = 'rgba(255,255,255,0.45)'; g.fillRect(0, -w / 2 + 2, L, 3);
+  for (let k = 1; k < n * 4; k++) if (k % 4) line(k * seg / 4, -w / 2, k * seg / 4, -w / 2 + 5, 'rgba(60,20,10,0.55)', 1.5, 'butt');
+  g.restore();
+}
+// người đi bộ nhỏ (balo, gậy) đứng tại (px, py), mặt hướng lên dốc (phải)
+function hiker(px, py, s = 1) {
+  g.save(); g.translate(px, py); g.scale(s, s); g.lineCap = 'round'; g.lineJoin = 'round';
+  const ink = '#2B3640';
+  g.strokeStyle = ink; g.lineWidth = 7; g.beginPath(); g.moveTo(-8, -2); g.lineTo(-2, -34); g.lineTo(10, -4); g.stroke();            // chân (bước lên dốc)
+  g.fillStyle = '#3B4A57'; g.beginPath(); g.ellipse(-10, 0, 8, 3.5, 0, 0, 7); g.fill(); g.beginPath(); g.ellipse(13, -5, 8, 3.5, -0.4, 0, 7); g.fill();
+  g.fillStyle = '#E7A33A'; g.fill(rr(-24, -78, 18, 34, 5));                                                                         // balo
+  g.fillStyle = '#2F6DB5'; g.beginPath(); g.moveTo(-8, -76); g.lineTo(6, -74); g.lineTo(6, -34); g.lineTo(-6, -34); g.closePath(); g.fill(); // áo
+  g.fillStyle = '#F1C9A5'; g.beginPath(); g.arc(1, -88, 10, 0, 7); g.fill();                                                        // đầu
+  g.fillStyle = '#4C6B3A'; g.beginPath(); g.ellipse(1, -95, 15, 4, 0, 0, 7); g.fill(); g.fill(rr(-7, -106, 16, 11, 5));              // mũ
+  g.strokeStyle = '#2F6DB5'; g.lineWidth = 6; g.beginPath(); g.moveTo(2, -70); g.lineTo(18, -52); g.stroke();                      // tay
+  g.strokeStyle = '#8A6A44'; g.lineWidth = 3; g.beginPath(); g.moveTo(20, -56); g.lineTo(30, -2); g.stroke();                     // gậy
+  g.restore();
+}
+function figure(pose, cx, foot, h) {
+  const im = IM[pose], s = h / im.height, w = im.width * s, x0 = cx - w / 2, y0 = foot - h;
+  g.drawImage(im, x0, y0, w, h); return { x: x0, y: y0, w, h };
+}
+// thẻ ghi chú giấy sổ, chữ mono
+function card(s, x, y, font, col, edge, key, align = 'left') {
+  const w = tw(s, font) + 40, h = Math.round(parseInt(font.match(/(\d+)px/)[1]) * 1.6), x0 = align === 'center' ? x - w / 2 : x, y0 = y - h / 2;
+  shadowRR(g, x0, y0, w, h, 6, { col: 'rgba(40,50,40,0.22)', blur: 8, ox: 3, oy: 5 });
+  g.fillStyle = C.paper; g.fill(rr(x0, y0, w, h, 6)); g.fillStyle = edge; g.fillRect(x0, y0, 7, h);
+  txt(s, x0 + 24, y + 2, font, col, 'left', 'middle'); if (key) BOX[key] = [x0, y0, w, h];
+}
+
+const frames = [
+  () => {                                                                // 0 · cold open = thế giới thumbnail: sườn đồi, điểm sáng, sào ngắm, dây đo khép lại
+    g.drawImage(BG0, 0, 0);
+    const M = mapper(1010, 950, 375, 186), A = -1.2, B = 2.3;
+    // đất cắt dọc dưới sườn
+    const ground = new Path2D(); ground.moveTo(M.X(A), H); for (let i = 0; i <= 240; i++) { const u = A + (B - A) * i / 240; ground.lineTo(M.X(u), M.Y(sq(u))); } ground.lineTo(W, M.Y(sq(B))); ground.lineTo(W, H); ground.closePath();
+    g.fillStyle = '#9CC274'; g.fill(ground);
+    const cut = new Path2D(); cut.moveTo(M.X(A), H); for (let i = 0; i <= 240; i++) { const u = A + (B - A) * i / 240; cut.lineTo(M.X(u) , M.Y(sq(u)) + 26); } cut.lineTo(W, H); cut.closePath();
+    strata(cut, M.Y(0) - 30, H, 1);
+    // đường đồng mức trên mặt đồi: cùng sườn, dịch xuống từng bậc
+    g.save(); g.clip(ground); g.strokeStyle = 'rgba(62,122,58,0.28)'; g.lineWidth = 2;
+    for (let k = 1; k <= 6; k++) { g.beginPath(); for (let i = 0; i <= 160; i++) { const u = 0.35 + (B - 0.35) * i / 160, py = M.Y(sq(u)) + k * 46 * (0.4 + 0.6 * u / B); i ? g.lineTo(M.X(u) + k * 10, py) : g.moveTo(M.X(u) + k * 10, py); } g.stroke(); }
+    g.restore();
+    turf(M, A, B);
+    // dây đo (cát tuyến) — cọc ở x = 2, 1.5, 1.1, mờ dần khi xa
+    const P = [1, 1], Xs = [2, 1.5, 1.1];
+    Xs.forEach((a, k) => { const m = must(r6(`(${a} ** 2 - 1) / (${a} - 1)`), [3, 2.5, 2.1][k]);
+      const e0 = 1, e1 = a + 0.12;                                                                 // dây kéo thẳng qua hai cọc, ra ngoài một chút
+      g.save(); g.globalAlpha = [0.55, 0.72, 0.9][k];
+      line(M.X(e0), M.Y(1 + m * (e0 - 1)), M.X(e1), M.Y(1 + m * (e1 - 1)), C.sec, 5);
+      g.restore(); rangingPole(M.X(a), M.Y(sq(a)), 110 - k * 10);
+    });
+    // sào ngắm = tiếp tuyến y = 2x − 1, áp đúng (1, 1)
+    // đồi cỏ gần (tiền cảnh) che mép trái, mascot đứng trên đó
+    const mound = new Path2D(); mound.moveTo(0, 700); mound.bezierCurveTo(300, 668, 560, 676, 680, 730); mound.bezierCurveTo(800, 790, 870, 930, 930, H); mound.lineTo(0, H); mound.closePath();
+    g.fillStyle = '#8DB868'; g.fill(mound); g.save(); g.clip(mound); const mg = g.createLinearGradient(0, 680, 0, H); mg.addColorStop(0, 'rgba(255,255,230,0.25)'); mg.addColorStop(1, 'rgba(40,80,30,0.25)'); g.fillStyle = mg; g.fillRect(0, 600, 1000, 480);
+    g.strokeStyle = 'rgba(62,122,58,0.55)'; g.lineWidth = 2.5; g.lineCap = 'round'; for (let k = 0; k < 140; k++) { const qx = hash(k * 2.3) * 900, qy = 700 + hash(k * 6.1) * 380, L = 8 + hash(k * 3.7) * 10; g.beginPath(); g.moveTo(qx, qy); g.lineTo(qx - 3, qy - L); g.moveTo(qx, qy); g.lineTo(qx + 4, qy - L * 0.8); g.stroke(); } g.restore();
+    g.strokeStyle = '#4E8A42'; g.lineWidth = 5; g.stroke(mound);
+    const t0 = 0.42, t1 = 1.72; sightRod(M.X(t0), M.Y(2 * t0 - 1), M.X(t1), M.Y(2 * t1 - 1));
+    BOX.rod = [M.X(t0), M.Y(2 * t1 - 1), M.X(t1) - M.X(t0), M.Y(2 * t0 - 1) - M.Y(2 * t1 - 1)];
+    // điểm sáng ấm dưới chân + người đi bộ
+    const px = M.X(1), py = M.Y(1);
+    glow(g, px, py, 70, '255,170,90', 0.75); glow(g, px, py, 26, '255,236,200', 0.95);
+    g.fillStyle = C.pole; g.beginPath(); g.arc(px, py, 11, 0, 7); g.fill(); g.strokeStyle = '#FFFFFF'; g.lineWidth = 4; g.stroke();
+    hiker(px - 6, py - 8, 0.95); BOX.hiker = [px - 30, py - 110, 70, 110];
+    // y = x² trên trời, cạnh sườn
+    BOX.curveLbl = [1410, 268, 230, 64]; formula([['y', 'i'], [' = ', 'r'], ['x', 'i'], ['²', 'r']], 1410, 320, 52, C.curve);
+    // chữ thumbnail
+    const big = `900 168px ${AR}`, s1 = '0 ÷ 0 = ', w1 = tw(s1, big);
+    txt(s1, 120, 330, big, C.ink); txt('2?', 120 + w1, 330, big, C.poleInk);
+    BOX.title = [120, 200, w1 + tw('2?', big), 150];
+    const F = figure('pose-sky', 205, 1080, 268); BOX.fig = [F.x, F.y, F.w, F.h];
+  },
+  () => {                                                                // 1 · ACT FIVE: trắc dọc — 4 cột đất dưới sườn, sổ đo bên phải
+    g.drawImage(BG1, 0, 0);
+    const M = mapper(540, 920, 800, 720), n = 4, dx = 1 / n;
+    // tờ trắc dọc (giấy kẻ ô) kẹp trên bảng
+    shadowRR(g, 420, 96, 990, 948, 8, { col: 'rgba(40,50,40,0.22)', blur: 16, ox: 8, oy: 10 }); g.fillStyle = '#FCFAF1'; g.fill(rr(420, 96, 990, 948, 8));
+    // lưới giấy trắc dọc
+    g.save(); g.strokeStyle = 'rgba(62,122,58,0.14)'; g.lineWidth = 1.5;
+    for (let k = 0; k <= 22; k++) { const u = -0.1 + k * 0.05; line(M.X(u), M.Y(1.12), M.X(u), M.Y(-0.05), 'rgba(62,122,58,0.13)', 1.5, 'butt'); }
+    for (let k = 0; k <= 23; k++) { const v = -0.05 + k * 0.05; line(M.X(-0.1), M.Y(v), M.X(1.05), M.Y(v), 'rgba(62,122,58,0.13)', 1.5, 'butt'); }
+    g.restore();
+    const under = new Path2D(); under.moveTo(M.X(0), M.Y(0)); for (let i = 0; i <= 200; i++) { const u = i / 200; under.lineTo(M.X(u), M.Y(sq(u))); } under.lineTo(M.X(1), M.Y(0)); under.closePath();
+    // cột đất (tổng trên): đất dưới sườn + phần đắp thừa gạch chéo tím
+    for (let i = 0; i < n; i++) {
+      const a = i * dx, b = a + dx, hT = sq(b), x0 = M.X(a) + 3, x1 = M.X(b) - 3, yT = M.Y(hT), yB = M.Y(0);
+      shadowRR(g, x0, yT, x1 - x0, yB - yT, 3, { col: 'rgba(70,50,20,0.22)', blur: 10, ox: 6, oy: 6 });
+      const col = new Path2D(); col.rect(x0, yT, x1 - x0, yB - yT);
+      // phần thừa: trên đường cong
+      g.save(); g.clip(col); g.fillStyle = '#E6DCF3'; g.fillRect(x0, yT, x1 - x0, yB - yT);
+      g.strokeStyle = 'rgba(122,79,184,0.75)'; g.lineWidth = 3; for (let k = -40; k < 40; k++) line(x0 + k * 14, yT, x0 + k * 14 + 300, yT + 300, 'rgba(122,79,184,0.65)', 3, 'butt');
+      const soilClip = new Path2D(); soilClip.addPath(under); g.clip(soilClip); g.fillStyle = STRATA[0]; g.fillRect(x0, yT, x1 - x0, yB - yT);
+      g.restore();
+      const cc = new Path2D(); cc.rect(x0, yT, x1 - x0, yB - yT); const both = new Path2D(); both.addPath(cc);
+      g.save(); g.clip(cc); g.clip(under); strata(new Path2D(`M0 0H${W}V${H}H0Z`), M.Y(0.55) - 40, yB, 5 + i); g.restore();
+      g.strokeStyle = C.badInk; g.lineWidth = 3; g.strokeRect(x0, yT, x1 - x0, yB - yT);
+      // tổng dưới: viền nét đứt mực navy ở cao f(trái)
+      const hL = sq(a); if (hL > 0) { g.save(); g.setLineDash([12, 8]); g.strokeStyle = C.ink; g.lineWidth = 4; g.strokeRect(x0 + 6, M.Y(hL), x1 - x0 - 12, yB - M.Y(hL)); g.restore(); }
+    }
+    turf(M, -0.06, 1.06, 6, false);
+    // trục
+    line(M.X(-0.08), M.Y(0), M.X(1.07), M.Y(0), C.ink, 4, 'butt'); line(M.X(0), M.Y(0) + 4, M.X(0), M.Y(1.12), C.ink, 4, 'butt');
+    [0, 0.25, 0.5, 0.75, 1].forEach(u => { line(M.X(u), M.Y(0), M.X(u), M.Y(0) + 14, C.ink, 3, 'butt'); txt(String(u), M.X(u), M.Y(0) + 52, `600 30px ${MO}`, C.ink, 'center'); });
+    line(M.X(0) - 14, M.Y(1), M.X(0), M.Y(1), C.ink, 3, 'butt'); txt('1', M.X(0) - 24, M.Y(1) + 10, `600 30px ${MO}`, C.ink, 'right');
+    formula([['y', 'i'], [' = ', 'r'], ['x', 'i'], ['²', 'r']], M.X(0.93), M.Y(1.06), 44, C.curve, 'right');
+    // nhãn ≈ 0.47 / ≈ 0.22
+    // chú giải (không mũi chỉ): biểu tượng = đúng kiểu vẽ của dải
+    const legend = (s, cx, cy, col, edge, key, icon) => { const font = `600 40px ${MO}`, w = tw(s, font) + 110, h = 66, x0 = cx, y0 = cy - h / 2;
+      shadowRR(g, x0, y0, w, h, 6, { col: 'rgba(40,50,40,0.22)', blur: 8, ox: 3, oy: 5 }); g.fillStyle = C.paper; g.fill(rr(x0, y0, w, h, 6)); g.fillStyle = edge; g.fillRect(x0, y0, 7, h);
+      icon(x0 + 24, y0 + 13, 40, 40); txt(s, x0 + 82, cy + 2, font, col, 'left', 'middle'); BOX[key] = [x0, y0, w, h]; };
+    legend(`≈ ${UP(4).toFixed(2)}`, M.X(0.04), M.Y(0.86), C.badInk, C.bad, 'up', (x, y, w, h) => {
+      g.save(); g.beginPath(); g.rect(x, y, w, h); g.clip(); g.fillStyle = '#E6DCF3'; g.fillRect(x, y, w, h);
+      for (let k = -4; k < 6; k++) line(x + k * 9, y, x + k * 9 + 40, y + 40, 'rgba(122,79,184,0.8)', 2.5, 'butt'); g.fillStyle = STRATA[1]; g.fillRect(x, y + h * 0.5, w, h * 0.5); g.restore();
+      g.strokeStyle = C.badInk; g.lineWidth = 3; g.strokeRect(x, y, w, h); });
+    legend(`≈ ${LO(4).toFixed(2)}`, M.X(0.04), M.Y(0.72), C.ink, C.ink, 'lo', (x, y, w, h) => {
+      g.fillStyle = STRATA[1]; g.fillRect(x, y, w, h); g.save(); g.setLineDash([8, 5]); g.strokeStyle = C.ink; g.lineWidth = 3.5; g.strokeRect(x + 2, y + 2, w - 4, h - 4); g.restore(); });
+    // sổ đo bìa cứng: bảng [dưới, trên] co vào ⅓
+    const bx = 1424, by = 150, bw = 410, bh = 790;
+    shadowRR(g, bx, by, bw, bh, 14, { col: 'rgba(30,40,30,0.30)', blur: 18, ox: 10, oy: 12 });
+    g.fillStyle = C.cover; g.fill(rr(bx, by, bw, bh, 14));
+    g.fillStyle = C.paper; g.fill(rr(bx + 16, by + 16, bw - 32, bh - 32, 6));
+    const L0 = bx + 16, R0 = bx + bw - 16;
+    for (let y = by + 120; y < by + bh - 20; y += 42) line(L0, y, R0, y, 'rgba(47,109,181,0.22)', 1.5, 'butt');
+    line(L0 + 72, by + 16, L0 + 72, by + bh - 16, 'rgba(217,72,30,0.45)', 2, 'butt');
+    formula([['n', 'i']], L0 + 36, by + 96, 40, C.ink, 'center');
+    txt('low – high', L0 + 96, by + 92, `600 30px ${MO}`, C.ink);
+    // trục nhỏ 0.2 … 0.5 cho mỗi n
+    const sx0 = L0 + 96, sx1 = R0 - 24, S = v => sx0 + (v - 0.2) / 0.3 * (sx1 - sx0);
+    [4, 10, 100].forEach((nn, r) => {
+      const y = by + 190 + r * 170, lo = LO(nn), hi = UP(nn);
+      txt(String(nn), L0 + 36, y - 10, `600 34px ${MO}`, C.ink, 'center');
+      txt(`${f3(lo)} – ${f3(hi)}`, sx0, y - 10, `500 30px ${MO}`, C.ink);
+      line(sx0, y + 50, sx1, y + 50, 'rgba(34,49,59,0.4)', 2, 'butt');
+      g.fillStyle = C.soil; g.fill(rr(S(lo), y + 36, Math.max(6, S(hi) - S(lo)), 28, 4));
+      g.strokeStyle = C.soilInk; g.lineWidth = 2; g.stroke(rr(S(lo), y + 36, Math.max(6, S(hi) - S(lo)), 28, 4));
+    });
+    const tx = S(THIRD); g.save(); g.setLineDash([6, 6]); [0, 1, 2].forEach(r => { const y = by + 190 + r * 170; line(tx, y + 22, tx, y + 78, C.poleInk, 3, 'butt'); }); line(tx, by + 190 + 2 * 170 + 78, tx, by + 630, C.poleInk, 3, 'butt'); g.restore();
+    // → 1/3 phân số chồng (glyph ⅓ của Plex quá nhỏ)
+    const fy = by + 690; txt('→', tx - 50, fy + 18, `600 52px ${MO}`, C.poleInk, 'right', 'middle');
+    txt('1', tx, fy - 14, `600 44px ${MO}`, C.poleInk, 'center', 'alphabetic'); line(tx - 22, fy, tx + 22, fy, C.poleInk, 4, 'butt'); txt('3', tx, fy + 46, `600 44px ${MO}`, C.poleInk, 'center', 'alphabetic');
+    BOX.book = [bx, by, bw, bh];
+    const F = figure('pose-pointer', 240, 1080, 280); BOX.fig = [F.x, F.y, F.w, F.h];
+  },
+];
+
+(async () => {
+  const S = '0123456789÷=?≈–−⅓→.lowhign ';
+  await Promise.all([`900 168px ${AR}`, `600 52px ${AR}`, `600 44px ${AR}`, `italic 600 61px ${IT}`, `italic 600 52px ${IT}`, `italic 600 47px ${IT}`,
+    `600 30px ${MO}`, `500 30px ${MO}`, `600 34px ${MO}`, `600 40px ${MO}`, `600 52px ${MO}`, `600 44px ${MO}`].map(f => document.fonts.load(f, S)));
+  await Promise.all(['pose-sky', 'pose-pointer'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../assets/character-v2/cut/${p}.png`; })));
+  BG0 = sky(); BG1 = sky('#E3EEF0', '#F6F4EA', false); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; frames[t < 1 ? 0 : 1](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

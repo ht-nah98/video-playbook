@@ -1,0 +1,87 @@
+Số nào nằm chính giữa 1 và −1?
+Là 0, nếu bạn đi dọc đường thẳng. Nhưng nếu quay, đến nửa vòng quay bạn sẽ gặp một số hoàn toàn không nằm trên đường thẳng.
+Vào những năm 1500, con số đó là con đường duy nhất dẫn tới đáp án đúng.
+Descartes gọi nó là số ảo, với ý chê bai.
+Ngày nay, nó giúp các kỹ sư vận hành lưới điện.
+Cuối video này, bạn sẽ chỉ được nó nằm ở đâu, và thấy chính xác vì sao máy móc thật dùng đến nó.
+Tất cả bắt đầu từ một câu hỏi: phép nhân thực ra làm gì?
+Vẽ trục số, và xem mỗi số là một mũi tên xuất phát từ 0.
+Giờ nhân với 2. Mỗi mũi tên dài gấp đôi. 3 tới 6, và −1 tới −2.
+Vậy nhân với 2 không chỉ là một phép tính. Đó là một chuyển động áp lên cả trục số: phép kéo giãn.
+Nhân với −1 là chuyển động gì?
+3 sang −3. 5 sang −5. −2 sang 2.
+Mọi thứ đổi bên. Đó là phép lật qua 0.
+Lật hai lần, bạn trở về chỗ cũ. Đó là một cách để thấy vì sao âm nhân âm ra dương.
+Đây là câu hỏi gây ra mọi rắc rối.
+Có số nào nhân với chính nó ra −1 không?
+Nói cách khác, có chuyển động nào làm hai lần thì thành một phép lật không?
+Thử trên trục số. Số dương giữ mỗi mũi tên ở bên của nó, làm hai lần thì vẫn ở đó.
+Số âm đổi bên, và đổi hai lần thì trở về chỗ cũ.
+Dù thế nào, cùng một chuyển động làm hai lần không bao giờ kết thúc ở bên đối diện. Nên trên trục số này, không số nào bình phương ra −1.
+Suốt một thời gian dài, chuyện dừng ở đó. Hỏi căn bậc hai của số âm, câu trả lời thành thật là: câu hỏi đặt sai rồi.
+Và mọi chuyện đã dừng ở đó, nếu không có một phương trình vốn đã có đáp án hoàn toàn đàng hoàng.
+Năm 1545, học giả người Ý Gerolamo Cardano công bố công thức giải phương trình bậc ba, loại có x mũ 3.
+Nhưng công thức ấy có một vấn đề kỳ lạ.
+Lấy phương trình x³ = 15x + 4.
+Bạn có thể tự kiểm tra rằng x = 4 thỏa mãn. 4 mũ 3 là 64, và 15 nhân 4 cộng 4 cũng là 64.
+Vậy là có một đáp án thực, và đó là một số nguyên nhỏ.
+Nhưng đưa phương trình vào công thức, giữa chừng nó đòi căn bậc hai của −121.
+Bạn có thể nghĩ như thế nghĩa là công thức không áp dụng được ở đây. Thường thì ta sẽ kết luận vậy khi phép tính đòi điều bất khả thi.
+Nhưng đáp án có tồn tại. Ta vừa kiểm tra xong. Công thức chỉ đúng vào một kết quả thật, và con đường duy nhất của nó đi qua một con số không được phép.
+Năm 1572, một kỹ sư tên Rafael Bombelli đã làm một việc táo bạo. Ông bỏ qua lời phản đối và cứ tính tiếp.
+Ông xem căn bậc hai của −1 là một ký hiệu chưa biết, với một quy tắc duy nhất: bình phương của nó là −1. Còn lại là đại số bình thường.
+Công thức sau đó cần hai căn bậc ba, và Bombelli tìm ra chúng: 2 cộng ký hiệu đó, và 2 trừ ký hiệu đó.
+Giờ cộng lại. 2 với 2 là 4. Hai ký hiệu, một cộng một trừ, triệt tiêu nhau.
+Bốn. Đúng chính xác đáp án, và phần bất khả thi đã biến mất trên đường ra.
+Vậy không ai chấp nhận con số này vì nghe hay. Nó được chấp nhận vì cứ cho ra kết quả đúng, trong khi không ai nói được nó là gì.
+Năm 1637, René Descartes dùng từ ảo cho những đại lượng như thế, và đó không phải lời khen.
+Ký hiệu ta dùng ngày nay, chữ i, ra đời sau đó. Nhưng câu hỏi thật vẫn bỏ ngỏ. Quy tắc không phải là lời giải thích. Thứ này là gì?
+Câu trả lời xuất hiện vào khoảng năm 1800, do Caspar Wessel rồi Jean-Robert Argand công bố một cách độc lập.
+Và nó đơn giản đến mức gần như ngượng. Ta đã thấy không chuyển động nào trên trục số làm được. Vậy thì đừng ở lại trên trục số nữa.
+Nhìn lại phép lật đó. Còn một cách khác để đưa 1 sang −1, 3 sang −3, và mọi thứ sang phía đối của nó.
+Quay cả trục số nửa vòng quanh 0.
+Kết quả trông y hệt phép lật, nhưng giờ chuyển động này có một điểm giữa.
+Dừng lại giữa vòng quay. Bạn đã quay một phần tư vòng, và mũi tên từ 0 tới 1 giờ chỉ thẳng lên, rời khỏi trục số.
+Chuyển động cần tìm đây rồi. Một phần tư vòng, làm hai lần, là nửa vòng, và nửa vòng chính là nhân với −1.
+Vậy căn bậc hai của −1 không phải đại lượng bí ẩn. Nó là một phần tư vòng quay. Và điểm cách 0 một bước thẳng lên trên chính là cái ta gọi là i.
+Giờ ta trả lời đúng được câu hỏi mở đầu. Đi dọc trục số từ 1 tới −1, điểm giữa là 0.
+Quay từ 1 tới −1, điểm giữa là i. Quay chiều ngược lại, điểm giữa là −i.
+Cứ nhân tiếp với i, bạn chỉ đơn giản là quay tiếp.
+1, rồi i, rồi −1, rồi −i, rồi về lại 1. Bốn lần một phần tư vòng, đủ một vòng tròn.
+Nên câu hỏi trông đáng sợ như i mũ 100 lại rất dễ. 100 là 25 vòng trọn, và bạn dừng đúng chỗ bắt đầu: 1.
+Cái tên số ảo khiến chuyện này nghe bí ẩn hơn thực tế.
+−1 cũng đâu phải thứ bạn cầm được trên tay. Nó là một hướng trên đường thẳng. Và i chỉ là thêm một hướng nữa, hướng mà ta chưa từng nhìn tới.
+Khi đã có hướng đi lên, mọi điểm trên trang giấy đều trở thành một số.
+Sang phải 3 và lên trên 2 là 3 + 2i. Ta gọi chúng là số phức, và phức ở đây nghĩa là ghép từ nhiều phần, không phải khó.
+Giờ kiểm tra ý tưởng này. Nhân 3 + 2i với i, bằng đại số thông thường.
+3 nhân i là 3i. 2i nhân i là 2i², tức là −2.
+Bạn được −2 + 3i. Giờ nhìn xem điểm đó rơi vào đâu.
+Vẫn mũi tên ấy, vẫn độ dài ấy, quay đúng một phần tư vòng. Đại số đã làm hình học mà không ai bảo.
+Và điều này đúng với mọi số phức, không chỉ i. Mỗi số là một mũi tên có độ dài và góc.
+Khi nhân hai số, độ dài nhân với nhau, và góc cộng với nhau. Toàn bộ quy tắc chỉ có vậy.
+Lấy 1 + i. Nó chỉ về góc 45 độ, và độ dài là căn bậc hai của 2.
+Bình phương nó. Góc gấp đôi thành 90 độ, và độ dài đúng bằng 2. Vậy dự đoán là 2i.
+Kiểm tra bằng đại số: 1, cộng 2i, cộng i². 1 và −1 triệt tiêu, còn lại 2i.
+Quy tắc đó cuối cùng đã giải thích mẹo của năm 1572.
+2 + i của Bombelli là mũi tên có góc khoảng 26,5 độ. Lập phương lên, góc gấp ba thành gần 80 độ, gần như thẳng đứng, rơi đúng vào 2 + 11i.
+Ảnh gương của nó, 2 − i, lập phương ra 2 − 11i, và 11i đó chính là căn bậc hai của −121.
+Giờ cộng hai mũi tên. Một cái đi lên, ảnh gương đi xuống đúng bằng vậy, phần còn lại nằm ngang trên trục số thường. 2 + 2: 4.
+Đó là lý do một đáp án thực phải đi qua số ảo. Đường đi của công thức rời trục số rồi quay về. Số thực là cái bóng của điều đang diễn ra trên mặt phẳng.
+Vậy tại sao lưới điện lại quan tâm?
+Điện từ ổ cắm dao động qua lại thành một sóng mượt, khoảng 50 hoặc 60 lần mỗi giây.
+Hãy hình dung một mũi tên quay đều trên vòng tròn, và chỉ nhìn chiều cao của nó. Lên, xuống, lên, xuống. Chiều cao đó vẽ ra đúng con sóng ấy.
+Vậy mọi sóng mượt đều có thể xem là cái bóng của một mũi tên đang quay. Và giờ ta đã có những con số biết quay.
+Đây là lý do nó có ích. Giả sử hai sóng cùng chạy qua một mạch, một sóng đỉnh 3 volt, sóng kia 4 volt, và sóng thứ hai chậm sau sóng thứ nhất một phần tư chu kỳ.
+Khi kết hợp, đỉnh là bao nhiêu? Bạn có thể nói 7. Không phải, vì chúng không bao giờ lên đỉnh cùng lúc.
+Với mũi tên, một phần tư chu kỳ là một phần tư vòng quay. Vậy hai sóng là 3 và 4i, vuông góc nhau.
+Cộng lại, độ dài là 5. Sóng kết hợp có đỉnh đúng 5 volt.
+Không có số phức, bạn vẫn ra được đáp án đó, nhưng qua nhiều trang lượng giác. Có số phức, chỉ cần một phép cộng ngắn.
+Mở rộng ra cả một mạch, đầy cuộn cảm và tụ điện làm lệch sóng theo thời gian, thì đó là khác biệt giữa một trang đại số và một thứ thực sự cực hình.
+Kỹ sư điện dùng nó nhiều đến mức viết số này là j, vì chữ i đã dùng cho dòng điện.
+Tín hiệu radio, xử lý âm thanh và các phương trình cơ học lượng tử cũng dựa vào nó, vì cùng một lý do cơ bản. Thứ gì dao động thì đều là thứ đang quay.
+Vì sao người ta buộc phải chấp nhận nó? Vì đáp án đúng là 4 chỉ đạt được khi đi qua căn bậc hai của một số âm.
+Nó là gì? Một phần tư vòng quay. Và là điểm cách 0 một bước lên trên, theo một hướng mà trục số chưa từng cho ta thấy.
+Vì sao nó hữu ích? Vì nhân số phức là quay, và mọi thứ dao động đều có thể xem như đang quay.
+Vậy hãy thử bằng bút chì. Đánh dấu một điểm bất kỳ trên giấy như một số, chẳng hạn 2 + i, rồi nhân với i bốn lần.
+Rồi chấm từng kết quả. Bạn sẽ không cần ai nói i nghĩa là gì. Bạn sẽ thấy điểm của mình đi quanh một vòng tròn và về nhà.
+Cảm ơn bạn đã xem, và nếu video này khiến một ý tưởng kỳ lạ trở nên hiển nhiên, hãy đăng ký 99% from scratch.

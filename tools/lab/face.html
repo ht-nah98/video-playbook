@@ -1,0 +1,27 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — face</title>
+<style>html,body{margin:0;background:#0B0F1E;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Chuỗi 15fps quanh "Run it forward, run it back" (46.4–48.4):
+// node engine/render/shoot.js stills --page tools/lab/face.html --dur 240 \
+//   --t 46.52,46.7,46.85,47.3,47.5,47.7,48.0,48.25 --outdir out/_lab/face
+import { Face } from '../../engine/face.js';
+import { mouthAt } from '../../engine/visemes.js';
+import { loadTimeline } from '../../engine/timeline.js';
+const g = document.getElementById('cv').getContext('2d');
+let ready = false, face, words;
+(async () => {
+  face = await new Face().load('../../assets/character-v2/cut');
+  const tl = await loadTimeline('../../projects/mv/exp-log/data/timeline.json');
+  words = tl.lines.flatMap(l => l.words);
+  ready = true;
+})();
+function frame(t) {
+  g.setTransform(1,0,0,1,0,0); g.fillStyle = '#0B0F1E'; g.fillRect(0,0,1920,1080);
+  const m = mouthAt(t, words);
+  face.draw(g, 960, 1060, 1000, m);
+  g.fillStyle = '#F4F1EA'; g.font = '30px monospace'; g.fillText(`t=${t.toFixed(2)} mouth=${m}`, 40, 60);
+}
+window.__intro = { get ready(){ return ready; }, still: frame, frame, DUR: 240 };
+</script>

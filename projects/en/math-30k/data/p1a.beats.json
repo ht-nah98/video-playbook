@@ -1,0 +1,118 @@
+{
+ "duration": 57.915,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "In twelve ninety-nine, the city of Florence banned the numbers you use every single day.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 0.0,
+   "end": 4.235,
+   "wav": "audio/voice/1bb30a30ef56c444.wav"
+  },
+  {
+   "text": "Zero was once treated as nothing at all. Negative numbers were called fictitious.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 4.585,
+   "end": 8.809,
+   "wav": "audio/voice/90d0aa11ca07a4a3.wav"
+  },
+  {
+   "text": "The square root of minus one was dismissed as useless.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 9.159,
+   "end": 11.571,
+   "wav": "audio/voice/9c095bbf23c43d43.wav"
+  },
+  {
+   "text": "And a man who claimed that some infinities are bigger than others was called a corrupter of youth.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 11.921,
+   "end": 16.941,
+   "wav": "audio/voice/2ec59cfb51ef5978.wav"
+  },
+  {
+   "text": "Today, every one of those ideas sits quietly in a school textbook.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 17.891,
+   "end": 21.036,
+   "wav": "audio/voice/97d0ce3c5e9fa496.wav"
+  },
+  {
+   "text": "The maths you learned at school, from simple addition all the way to derivatives and integrals, did not just appear on its own.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 21.386,
+   "end": 27.976,
+   "wav": "audio/voice/90f1fc1825324f10.wav"
+  },
+  {
+   "text": "Every symbol, every rule, every concept was invented, at a particular moment, inside one particular person's head.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 28.326,
+   "end": 34.118,
+   "wav": "audio/voice/d15de934bc5e196d.wav"
+  },
+  {
+   "text": "And many of them were once seen as crazy, forbidden, or simply meaningless, long before they became something every student learns by heart.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 34.468,
+   "end": 41.677,
+   "wav": "audio/voice/c693caa3b2842ca3.wav"
+  },
+  {
+   "text": "So in this video, we'll walk along the timeline together, from the very first mark to the machine in your pocket.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 42.627,
+   "end": 48.163,
+   "wav": "audio/voice/e8216ba8210563ec.wav"
+  },
+  {
+   "text": "We'll stop at each turning point, to see what was invented, and why it changed everything.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 48.513,
+   "end": 52.931,
+   "wav": "audio/voice/7e991df06463609b.wav"
+  },
+  {
+   "text": "And the first stop is much older, and much simpler, than you might think.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 53.281,
+   "end": 56.965,
+   "wav": "audio/voice/955ad62e1e70998c.wav"
+  }
+ ]
+}

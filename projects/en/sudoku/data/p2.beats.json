@@ -1,0 +1,1408 @@
+{
+ "duration": 585.275,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "A sudoku is a nine by nine grid.",
+   "idea": false,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "One rule, three ways",
+   "opens": "act",
+   "start": 0.0,
+   "end": 1.48,
+   "wav": "audio/voice/5df725759c8e414f.wav"
+  },
+  {
+   "text": "Every row has to contain the digits one to nine, each exactly once.",
+   "idea": false,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "One rule, three ways",
+   "opens": null,
+   "start": 1.83,
+   "end": 4.973,
+   "wav": "audio/voice/66cbe83fe9203bb7.wav"
+  },
+  {
+   "text": "So does every column. And so does each of the nine three by three boxes.",
+   "idea": true,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "One rule, three ways",
+   "opens": null,
+   "start": 5.323,
+   "end": 8.927,
+   "wav": "audio/voice/8c8d8706aed3d3a1.wav"
+  },
+  {
+   "text": "You start with some digits already filled in. Those are the clues.",
+   "idea": false,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "One rule, three ways",
+   "opens": null,
+   "start": 9.877,
+   "end": 13.162,
+   "wav": "audio/voice/197d1f467ef9afca.wav"
+  },
+  {
+   "text": "And a fair puzzle has exactly one way to finish it.",
+   "idea": true,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "One rule, three ways",
+   "opens": null,
+   "start": 13.512,
+   "end": 15.829,
+   "wav": "audio/voice/b6cccd4bb259c58e.wav"
+  },
+  {
+   "text": "You might think sudoku comes from Japan. The name does, but the puzzle doesn't.",
+   "idea": false,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "Not from Japan",
+   "opens": "stop",
+   "start": 17.429,
+   "end": 21.255,
+   "wav": "audio/voice/e6d14c15282c65eb.wav"
+  },
+  {
+   "text": "It was first printed in nineteen seventy-nine, in an American puzzle magazine, under the name Number Place.",
+   "idea": false,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "Not from Japan",
+   "opens": null,
+   "start": 21.605,
+   "end": 27.306,
+   "wav": "audio/voice/43e34bfb3d4cb52f.wav"
+  },
+  {
+   "text": "The setter was most likely Howard Garns, a retired architect from Indiana.",
+   "idea": false,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "Not from Japan",
+   "opens": null,
+   "start": 27.656,
+   "end": 31.453,
+   "wav": "audio/voice/c0c9103cefae5b7d.wav"
+  },
+  {
+   "text": "A Japanese publisher, Nikoli, picked it up in nineteen eighty-four and gave it the name sudoku.",
+   "idea": false,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "Not from Japan",
+   "opens": null,
+   "start": 31.803,
+   "end": 36.678,
+   "wav": "audio/voice/23b38d9eba05cbbb.wav"
+  },
+  {
+   "text": "And it only became a worldwide craze in two thousand and four, when British newspapers started printing it.",
+   "idea": true,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "Not from Japan",
+   "opens": null,
+   "start": 37.028,
+   "end": 42.697,
+   "wav": "audio/voice/25eaacddaaa0ff8e.wav"
+  },
+  {
+   "text": "So how many different finished grids are there?",
+   "idea": false,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "How many grids?",
+   "opens": "stop",
+   "start": 44.297,
+   "end": 46.035,
+   "wav": "audio/voice/846409d4dd668d9f.wav"
+  },
+  {
+   "text": "In two thousand and five, it was counted exactly. About six point seven times ten to the twenty-one.",
+   "idea": false,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "How many grids?",
+   "opens": null,
+   "start": 46.385,
+   "end": 51.297,
+   "wav": "audio/voice/fe0ef5b1f74e4e9a.wav"
+  },
+  {
+   "text": "That's six thousand seven hundred billion billion grids.",
+   "idea": false,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "How many grids?",
+   "opens": null,
+   "start": 51.647,
+   "end": 54.336,
+   "wav": "audio/voice/a00bba813dd0ce31.wav"
+  },
+  {
+   "text": "Keep that number in mind. It's going to come back and cause a lot of trouble.",
+   "idea": true,
+   "act": "ACT ONE \u2014 The rules, and a very big number",
+   "section": "How many grids?",
+   "opens": null,
+   "start": 54.686,
+   "end": 58.04,
+   "wav": "audio/voice/50774b7ef47a6ec0.wav"
+  },
+  {
+   "text": "Here's the key idea, and it's surprisingly simple.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Counting without knowing",
+   "opens": "act",
+   "start": 60.44,
+   "end": 62.48,
+   "wav": "audio/voice/ef1e0074e78bf2b7.wav"
+  },
+  {
+   "text": "Take any row of a finished sudoku. You don't know where each digit is, but you know exactly which digits are there.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Counting without knowing",
+   "opens": null,
+   "start": 62.83,
+   "end": 68.608,
+   "wav": "audio/voice/a10428668dd15c5c.wav"
+  },
+  {
+   "text": "One to nine, once each. Call that one full set.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Counting without knowing",
+   "opens": null,
+   "start": 68.958,
+   "end": 71.0,
+   "wav": "audio/voice/ce0a87d41331f4e0.wav"
+  },
+  {
+   "text": "The same is true for any column, and for any box.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Counting without knowing",
+   "opens": null,
+   "start": 71.35,
+   "end": 73.642,
+   "wav": "audio/voice/399125f1f1252db5.wav"
+  },
+  {
+   "text": "So if I colour some whole rows, columns or boxes, I can say exactly what the coloured cells hold in total, without solving anything.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Counting without knowing",
+   "opens": null,
+   "start": 74.592,
+   "end": 81.393,
+   "wav": "audio/voice/19c70fda2716af62.wav"
+  },
+  {
+   "text": "Puzzle solvers call this set equivalence.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Counting without knowing",
+   "opens": null,
+   "start": 81.743,
+   "end": 83.715,
+   "wav": "audio/voice/2e9fd58f8233b831.wav"
+  },
+  {
+   "text": "Let's colour four things in red. Row three, row seven, and the two boxes on the left and right of the middle.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Red and blue",
+   "opens": "stop",
+   "start": 85.315,
+   "end": 90.569,
+   "wav": "audio/voice/51d969aba57df476.wav"
+  },
+  {
+   "text": "Four regions, so the red cells hold four full sets of one to nine.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Red and blue",
+   "opens": null,
+   "start": 90.919,
+   "end": 94.326,
+   "wav": "audio/voice/27207c3ef306b741.wav"
+  },
+  {
+   "text": "Now colour four columns in blue. The first two, and the last two.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Red and blue",
+   "opens": null,
+   "start": 94.676,
+   "end": 97.868,
+   "wav": "audio/voice/73a04666b9fe58f3.wav"
+  },
+  {
+   "text": "That's also four full sets of one to nine.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Red and blue",
+   "opens": null,
+   "start": 98.218,
+   "end": 100.205,
+   "wav": "audio/voice/119b7bd2460ba317.wav"
+  },
+  {
+   "text": "So red and blue hold exactly the same digits. Four of each, from one to nine.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Red and blue",
+   "opens": null,
+   "start": 101.155,
+   "end": 104.874,
+   "wav": "audio/voice/a13441cefa7f2ae4.wav"
+  },
+  {
+   "text": "Now look at the cells that are both red and blue.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Take away the overlap",
+   "opens": "stop",
+   "start": 106.474,
+   "end": 108.636,
+   "wav": "audio/voice/961f7cec70e31634.wav"
+  },
+  {
+   "text": "Take one of them out of both groups. Whatever digit is hiding there, we've removed it from both sides.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Take away the overlap",
+   "opens": null,
+   "start": 108.986,
+   "end": 114.193,
+   "wav": "audio/voice/dfb65555c689fd10.wav"
+  },
+  {
+   "text": "So red and blue still hold the same digits.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Take away the overlap",
+   "opens": null,
+   "start": 114.543,
+   "end": 116.761,
+   "wav": "audio/voice/1a1e1bb195220213.wav"
+  },
+  {
+   "text": "Do that with every cell that has both colours, and the balance never changes.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "Take away the overlap",
+   "opens": null,
+   "start": 117.111,
+   "end": 120.946,
+   "wav": "audio/voice/d8bb0b76f4d7f5bd.wav"
+  },
+  {
+   "text": "Here's what remains.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "What's left",
+   "opens": "stop",
+   "start": 122.546,
+   "end": 123.436,
+   "wav": "audio/voice/5fbe10b4cbd0142d.wav"
+  },
+  {
+   "text": "In red, sixteen cells, forming a ring around the middle box.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "What's left",
+   "opens": null,
+   "start": 123.785,
+   "end": 126.674,
+   "wav": "audio/voice/582c1907f76424bb.wav"
+  },
+  {
+   "text": "In blue, the four two by two squares in the corners.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "What's left",
+   "opens": null,
+   "start": 127.024,
+   "end": 129.614,
+   "wav": "audio/voice/9912a7365cf35003.wav"
+  },
+  {
+   "text": "And they must hold exactly the same digits.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "What's left",
+   "opens": null,
+   "start": 129.964,
+   "end": 131.938,
+   "wav": "audio/voice/909ce2fba5bc2574.wav"
+  },
+  {
+   "text": "This is the Phistomefel ring, named after the German puzzle setter who noticed it.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "What's left",
+   "opens": null,
+   "start": 132.888,
+   "end": 136.932,
+   "wav": "audio/voice/baee5bf758a84bad.wav"
+  },
+  {
+   "text": "Next time you finish a sudoku, check it. It works on every single one.",
+   "idea": false,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "What's left",
+   "opens": null,
+   "start": 137.282,
+   "end": 140.736,
+   "wav": "audio/voice/9145aa7f53dd5815.wav"
+  },
+  {
+   "text": "And notice that we never solved anything. We only counted.",
+   "idea": true,
+   "act": "ACT TWO \u2014 The ring",
+   "section": "What's left",
+   "opens": null,
+   "start": 141.086,
+   "end": 143.801,
+   "wav": "audio/voice/60d297205836310d.wav"
+  },
+  {
+   "text": "So can the same trick make other shapes? It can.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Four rows, five columns",
+   "opens": "act",
+   "start": 146.201,
+   "end": 148.504,
+   "wav": "audio/voice/a59933f393d702bc.wav"
+  },
+  {
+   "text": "This time, colour the top four rows in red. That's four full sets.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Four rows, five columns",
+   "opens": null,
+   "start": 148.854,
+   "end": 151.898,
+   "wav": "audio/voice/1dc3b462481b027a.wav"
+  },
+  {
+   "text": "And colour the five columns on the right in blue. That's five full sets.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Four rows, five columns",
+   "opens": null,
+   "start": 152.248,
+   "end": 155.764,
+   "wav": "audio/voice/3f2ca7471bd649bc.wav"
+  },
+  {
+   "text": "Blue has exactly one set more than red.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Four rows, five columns",
+   "opens": null,
+   "start": 156.114,
+   "end": 158.042,
+   "wav": "audio/voice/46c3f57338a0ed44.wav"
+  },
+  {
+   "text": "Now remove every cell that's both colours. That's a four by five block along the top.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Squares appear",
+   "opens": "stop",
+   "start": 159.642,
+   "end": 163.939,
+   "wav": "audio/voice/d43d318b7f197694.wav"
+  },
+  {
+   "text": "What's left in red is a four by four square, top left.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Squares appear",
+   "opens": null,
+   "start": 164.289,
+   "end": 166.818,
+   "wav": "audio/voice/3c47d3fd389cbaa3.wav"
+  },
+  {
+   "text": "What's left in blue is a five by five square, bottom right.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Squares appear",
+   "opens": null,
+   "start": 167.168,
+   "end": 169.967,
+   "wav": "audio/voice/6fb6410cae526798.wav"
+  },
+  {
+   "text": "And since we removed the same cells from both, blue still has exactly one full set more.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Squares appear",
+   "opens": null,
+   "start": 170.317,
+   "end": 174.747,
+   "wav": "audio/voice/c6ee9eff346e07eb.wav"
+  },
+  {
+   "text": "So the big square holds everything the small square holds, plus one more of each digit from one to nine.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Squares appear",
+   "opens": null,
+   "start": 175.697,
+   "end": 181.147,
+   "wav": "audio/voice/99357cf28683dd5f.wav"
+  },
+  {
+   "text": "Count the cells. Twenty-five minus sixteen is nine.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Squares appear",
+   "opens": null,
+   "start": 181.497,
+   "end": 184.01,
+   "wav": "audio/voice/ba4907502d51aa99.wav"
+  },
+  {
+   "text": "Five squared minus four squared is exactly one full set.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Squares appear",
+   "opens": null,
+   "start": 184.36,
+   "end": 187.1,
+   "wav": "audio/voice/5ba3195e851e0d08.wav"
+  },
+  {
+   "text": "And if you add up the digits, the big square always beats the small one by exactly forty-five.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Squares appear",
+   "opens": null,
+   "start": 187.45,
+   "end": 192.004,
+   "wav": "audio/voice/ec3fbd702532771b.wav"
+  },
+  {
+   "text": "The Dutch setter Aad van de Wetering found a trick of exactly this kind, a square in one corner tied to a square in the opposite corner.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Squares appear",
+   "opens": null,
+   "start": 192.954,
+   "end": 199.834,
+   "wav": "audio/voice/d48de0b116df044e.wav"
+  },
+  {
+   "text": "And puzzle setters have taken it much further.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Other shapes",
+   "section": "Squares appear",
+   "opens": null,
+   "start": 200.184,
+   "end": 202.545,
+   "wav": "audio/voice/3607a6fb972a56b8.wav"
+  },
+  {
+   "text": "Here's a puzzle called Difference of Squares, set by MathGuy underscore twelve.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": "act",
+   "start": 204.945,
+   "end": 208.994,
+   "wav": "audio/voice/a5ec028805483809.wav"
+  },
+  {
+   "text": "It follows the normal sudoku rules, plus a few extra ones.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": null,
+   "start": 209.344,
+   "end": 212.12,
+   "wav": "audio/voice/204883b4c25b90b5.wav"
+  },
+  {
+   "text": "Digits in a cage add up to the number written in its corner.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": null,
+   "start": 212.47,
+   "end": 215.146,
+   "wav": "audio/voice/9219034704dbbfef.wav"
+  },
+  {
+   "text": "Digits along an arrow add up to the digit in its circle.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": null,
+   "start": 215.496,
+   "end": 218.287,
+   "wav": "audio/voice/e14cee10e3fe6eb7.wav"
+  },
+  {
+   "text": "And digits on a purple line are a run of consecutive numbers, in any order.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": null,
+   "start": 218.637,
+   "end": 222.421,
+   "wav": "audio/voice/b32d91a56b6fb79e.wav"
+  },
+  {
+   "text": "But some of the cages don't show a number. They show letters.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": null,
+   "start": 223.371,
+   "end": 226.506,
+   "wav": "audio/voice/7d17cb710f60b476.wav"
+  },
+  {
+   "text": "This cage adds up to x. This one adds up to y.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": null,
+   "start": 226.856,
+   "end": 228.849,
+   "wav": "audio/voice/0c0a476b887d26e8.wav"
+  },
+  {
+   "text": "This long cage adds up to y squared. And this big one adds up to x squared.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": null,
+   "start": 229.199,
+   "end": 232.82,
+   "wav": "audio/voice/11a547b371f16181.wav"
+  },
+  {
+   "text": "Two single cells are each equal to x minus y.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": null,
+   "start": 233.17,
+   "end": 235.345,
+   "wav": "audio/voice/3ff57a829c886a3a.wav"
+  },
+  {
+   "text": "And x and y are positive whole numbers, with x bigger than y.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": null,
+   "start": 235.695,
+   "end": 238.538,
+   "wav": "audio/voice/3d055f06c948ff10.wav"
+  },
+  {
+   "text": "Almost nothing else is given. So where do you even start?",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "A puzzle built from algebra",
+   "opens": null,
+   "start": 239.488,
+   "end": 242.126,
+   "wav": "audio/voice/ac9084083ffbe691.wav"
+  },
+  {
+   "text": "You start with the same colouring.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Red, blue, and one box",
+   "opens": "stop",
+   "start": 243.726,
+   "end": 245.239,
+   "wav": "audio/voice/d3553e465851c21a.wav"
+  },
+  {
+   "text": "Red, the top four rows. Blue, the five columns on the right.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Red, blue, and one box",
+   "opens": null,
+   "start": 245.589,
+   "end": 248.459,
+   "wav": "audio/voice/dcad0579754e7787.wav"
+  },
+  {
+   "text": "Take away the overlap, and the five by five square holds one more full set than the four by four square.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Red, blue, and one box",
+   "opens": null,
+   "start": 248.809,
+   "end": 253.764,
+   "wav": "audio/voice/53520671caa58482.wav"
+  },
+  {
+   "text": "Now take the top left box out of red as well. That's one more full set gone.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Red, blue, and one box",
+   "opens": null,
+   "start": 254.714,
+   "end": 258.173,
+   "wav": "audio/voice/e56d5d3e46852278.wav"
+  },
+  {
+   "text": "So blue now holds exactly two full sets more than red.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Red, blue, and one box",
+   "opens": null,
+   "start": 258.523,
+   "end": 261.318,
+   "wav": "audio/voice/ad7d13fe42fa1cb2.wav"
+  },
+  {
+   "text": "And look what's left in red. It's exactly the y squared cage.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Red, blue, and one box",
+   "opens": null,
+   "start": 261.668,
+   "end": 264.617,
+   "wav": "audio/voice/35b8928db9e75e4d.wav"
+  },
+  {
+   "text": "Blue is two sets ahead, so let's give red two more sets.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Balance the books",
+   "opens": "stop",
+   "start": 266.217,
+   "end": 268.814,
+   "wav": "audio/voice/693bb1bd3d0b97cb.wav"
+  },
+  {
+   "text": "Add the whole of the last column to red, and the whole of the bottom row.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Balance the books",
+   "opens": null,
+   "start": 269.164,
+   "end": 272.622,
+   "wav": "audio/voice/4136e4c0c0ac10ae.wav"
+  },
+  {
+   "text": "Now red and blue hold exactly the same digits again.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Balance the books",
+   "opens": null,
+   "start": 272.972,
+   "end": 275.365,
+   "wav": "audio/voice/93c6b4a331b44ca1.wav"
+  },
+  {
+   "text": "Notice the bottom right corner cell. It's in red twice now, and in blue once.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Balance the books",
+   "opens": null,
+   "start": 275.715,
+   "end": 279.413,
+   "wav": "audio/voice/d0101a2b82b7b998.wav"
+  },
+  {
+   "text": "Remove everything that's in both colours, one copy at a time.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Balance the books",
+   "opens": null,
+   "start": 280.363,
+   "end": 283.207,
+   "wav": "audio/voice/bbb73bc6f59f4d0a.wav"
+  },
+  {
+   "text": "Then let the arrows do the rest.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Balance the books",
+   "opens": null,
+   "start": 283.557,
+   "end": 284.891,
+   "wav": "audio/voice/bedf8747f424bf33.wav"
+  },
+  {
+   "text": "These two red cells on an arrow add up to that blue circle, so take out all three.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Balance the books",
+   "opens": null,
+   "start": 285.241,
+   "end": 289.185,
+   "wav": "audio/voice/98871af53caa1d1c.wav"
+  },
+  {
+   "text": "The same happens here, at the bottom.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Balance the books",
+   "opens": null,
+   "start": 289.535,
+   "end": 290.942,
+   "wav": "audio/voice/60d56c1b28784b01.wav"
+  },
+  {
+   "text": "And the corner cell, still red once, is the circle of this arrow, whose three cells are blue. Out they go.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Balance the books",
+   "opens": null,
+   "start": 291.292,
+   "end": 296.472,
+   "wav": "audio/voice/96895c85e7fe2b26.wav"
+  },
+  {
+   "text": "Here's what survives.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The equation",
+   "opens": "stop",
+   "start": 298.072,
+   "end": 298.927,
+   "wav": "audio/voice/7616f87cad6e2983.wav"
+  },
+  {
+   "text": "In blue, only the x squared cage.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The equation",
+   "opens": null,
+   "start": 299.277,
+   "end": 300.889,
+   "wav": "audio/voice/ed39619524a28b67.wav"
+  },
+  {
+   "text": "In red, the y squared cage, the x cage at the top right, and the y cage at the bottom left.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The equation",
+   "opens": null,
+   "start": 301.239,
+   "end": 305.542,
+   "wav": "audio/voice/c33e8f7e03f5202b.wav"
+  },
+  {
+   "text": "So x squared equals y squared plus x plus y.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The equation",
+   "opens": null,
+   "start": 305.892,
+   "end": 308.119,
+   "wav": "audio/voice/35e1262d78653652.wav"
+  },
+  {
+   "text": "That's algebra, and we can finish it.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The equation",
+   "opens": null,
+   "start": 309.069,
+   "end": 310.782,
+   "wav": "audio/voice/7e8e76298ed700a7.wav"
+  },
+  {
+   "text": "Move y squared across. x squared minus y squared equals x plus y.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The equation",
+   "opens": null,
+   "start": 311.132,
+   "end": 314.344,
+   "wav": "audio/voice/d192fb06a498449f.wav"
+  },
+  {
+   "text": "The left side is a difference of squares, so it's x minus y, times x plus y.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The equation",
+   "opens": null,
+   "start": 314.694,
+   "end": 318.339,
+   "wav": "audio/voice/a82c626008f8378e.wav"
+  },
+  {
+   "text": "And x plus y isn't zero, so x minus y must be one.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The equation",
+   "opens": null,
+   "start": 318.689,
+   "end": 321.003,
+   "wav": "audio/voice/0681d7e980af55d0.wav"
+  },
+  {
+   "text": "The puzzle's title wasn't decoration. The grid itself is a difference of squares, and so is the equation.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The equation",
+   "opens": null,
+   "start": 321.353,
+   "end": 326.561,
+   "wav": "audio/voice/7040334aaba3fadd.wav"
+  },
+  {
+   "text": "So both x minus y cells are ones.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Two ones, and a range",
+   "opens": "stop",
+   "start": 328.161,
+   "end": 329.875,
+   "wav": "audio/voice/6b9164cfa53e1069.wav"
+  },
+  {
+   "text": "That puts a one in the bottom row. So the y cage, two different cells in that row, must be at least two plus three. y is at least five.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Two ones, and a range",
+   "opens": null,
+   "start": 330.225,
+   "end": 336.943,
+   "wav": "audio/voice/1ffc22204fc40a00.wav"
+  },
+  {
+   "text": "And the y squared cage can't be too big.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Two ones, and a range",
+   "opens": null,
+   "start": 337.293,
+   "end": 339.043,
+   "wav": "audio/voice/db07544c7a2b4b19.wav"
+  },
+  {
+   "text": "Its column part and its row part are runs of three, at most seven plus eight plus nine each, and the corner cell has to be different from all of them.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Two ones, and a range",
+   "opens": null,
+   "start": 339.393,
+   "end": 346.872,
+   "wav": "audio/voice/a3655e4b87571ed5.wav"
+  },
+  {
+   "text": "So the most it can hold is fifty-four. Sixty-four is out of reach, so y is at most seven.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Two ones, and a range",
+   "opens": null,
+   "start": 347.222,
+   "end": 351.728,
+   "wav": "audio/voice/a3986ef070f6b27b.wav"
+  },
+  {
+   "text": "y is five, six or seven, and x is one more.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "Two ones, and a range",
+   "opens": null,
+   "start": 352.078,
+   "end": 354.046,
+   "wav": "audio/voice/df6f1475ea746fd4.wav"
+  },
+  {
+   "text": "Pinning down exactly which takes many more steps.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The rest of the grid",
+   "opens": "stop",
+   "start": 355.646,
+   "end": 358.099,
+   "wav": "audio/voice/54bbbb4511cce7cf.wav"
+  },
+  {
+   "text": "When the Cracking the Cryptic channel solved it on video, the full solve took close to an hour.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The rest of the grid",
+   "opens": null,
+   "start": 358.449,
+   "end": 363.162,
+   "wav": "audio/voice/cc20f3c350e1dda8.wav"
+  },
+  {
+   "text": "Here is where it lands. x is eight. y is seven.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The rest of the grid",
+   "opens": null,
+   "start": 363.512,
+   "end": 365.554,
+   "wav": "audio/voice/83987d66b28905a5.wav"
+  },
+  {
+   "text": "The y squared cage adds up to forty-nine. The x squared cage adds up to sixty-four.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The rest of the grid",
+   "opens": null,
+   "start": 365.904,
+   "end": 370.034,
+   "wav": "audio/voice/70c9a40d5ff11bed.wav"
+  },
+  {
+   "text": "And sixty-four minus forty-nine is fifteen, which is exactly eight plus seven.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 Difference of Squares",
+   "section": "The rest of the grid",
+   "opens": null,
+   "start": 370.384,
+   "end": 374.168,
+   "wav": "audio/voice/7290f9780e0abf30.wav"
+  },
+  {
+   "text": "Newspaper sudokus usually give you around twenty-five clues.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "How few?",
+   "opens": "act",
+   "start": 376.568,
+   "end": 379.538,
+   "wav": "audio/voice/c8033cf861b5f6a5.wav"
+  },
+  {
+   "text": "So here's a natural question. What's the fewest clues a puzzle can have, and still have only one answer?",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "How few?",
+   "opens": null,
+   "start": 379.888,
+   "end": 385.0,
+   "wav": "audio/voice/4140ced7e8b91918.wav"
+  },
+  {
+   "text": "For years, people found puzzles with seventeen clues. Tens of thousands of them.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "How few?",
+   "opens": null,
+   "start": 385.95,
+   "end": 389.933,
+   "wav": "audio/voice/8e954ed3ddca0c42.wav"
+  },
+  {
+   "text": "But nobody ever found one with sixteen.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "How few?",
+   "opens": null,
+   "start": 390.283,
+   "end": 392.019,
+   "wav": "audio/voice/c1fd9ea9e603b8cb.wav"
+  },
+  {
+   "text": "Every sixteen-clue puzzle anyone tried had more than one answer.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "How few?",
+   "opens": null,
+   "start": 392.369,
+   "end": 395.456,
+   "wav": "audio/voice/acfdeeaae2e667e5.wav"
+  },
+  {
+   "text": "That's a strong hint. But not finding something isn't a proof that it doesn't exist.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "How few?",
+   "opens": null,
+   "start": 395.806,
+   "end": 399.904,
+   "wav": "audio/voice/1404ead450e4f0bd.wav"
+  },
+  {
+   "text": "The obvious way to prove it is to check everything.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Too big to search",
+   "opens": "stop",
+   "start": 401.504,
+   "end": 403.605,
+   "wav": "audio/voice/debf0aaa8a447964.wav"
+  },
+  {
+   "text": "Take every possible grid, try every way to keep just sixteen clues, and see whether any of them has only one answer.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Too big to search",
+   "opens": null,
+   "start": 403.955,
+   "end": 409.783,
+   "wav": "audio/voice/131ceaeb379e8df2.wav"
+  },
+  {
+   "text": "But there are about six point seven times ten to the twenty-one grids.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Too big to search",
+   "opens": null,
+   "start": 410.133,
+   "end": 413.349,
+   "wav": "audio/voice/ff690e054b346505.wav"
+  },
+  {
+   "text": "And in each grid, there are about three point four times ten to the sixteen ways to choose sixteen cells.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Too big to search",
+   "opens": null,
+   "start": 413.699,
+   "end": 418.823,
+   "wav": "audio/voice/7df894ecb0af3b4d.wav"
+  },
+  {
+   "text": "Even for a supercomputer, that's hopeless.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Too big to search",
+   "opens": null,
+   "start": 419.173,
+   "end": 421.254,
+   "wav": "audio/voice/be31b2b4383fff78.wav"
+  },
+  {
+   "text": "So the first step was to stop checking grids that are really the same.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Families of grids",
+   "opens": "stop",
+   "start": 422.854,
+   "end": 426.229,
+   "wav": "audio/voice/f4d6f3f2d770cbca.wav"
+  },
+  {
+   "text": "Swap two rows inside the same band of three, and you still have a valid grid.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Families of grids",
+   "opens": null,
+   "start": 426.579,
+   "end": 430.383,
+   "wav": "audio/voice/35839257182283e1.wav"
+  },
+  {
+   "text": "Swap two whole bands, swap columns the same way, turn the grid on its side, or relabel the digits, swapping every three with every five.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Families of grids",
+   "opens": null,
+   "start": 430.733,
+   "end": 437.862,
+   "wav": "audio/voice/a899470d2a9e49e8.wav"
+  },
+  {
+   "text": "All of these give valid grids, and they keep a puzzle's clue count too.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Families of grids",
+   "opens": null,
+   "start": 438.212,
+   "end": 441.59,
+   "wav": "audio/voice/fd168a19c3a7a8b0.wav"
+  },
+  {
+   "text": "So grids come in big families, and you only need to check one grid from each family.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Families of grids",
+   "opens": null,
+   "start": 441.94,
+   "end": 446.114,
+   "wav": "audio/voice/dd3ed4a84c3c43b7.wav"
+  },
+  {
+   "text": "That cuts six point seven times ten to the twenty-one down to about five point five billion.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Families of grids",
+   "opens": null,
+   "start": 446.464,
+   "end": 450.994,
+   "wav": "audio/voice/f3309e46495f5aca.wav"
+  },
+  {
+   "text": "The second step cuts down the clues.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Patterns that must be broken",
+   "opens": "stop",
+   "start": 452.594,
+   "end": 454.252,
+   "wav": "audio/voice/feaa3f64b9995fe7.wav"
+  },
+  {
+   "text": "Suppose a seven and a nine sit in one row, and another seven and nine sit in the same two columns, a few rows down, in the same two boxes.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Patterns that must be broken",
+   "opens": null,
+   "start": 454.602,
+   "end": 461.507,
+   "wav": "audio/voice/712392806872185d.wav"
+  },
+  {
+   "text": "Then you could swap the sevens and the nines in those four cells, and the grid would still be perfectly valid.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Patterns that must be broken",
+   "opens": null,
+   "start": 461.857,
+   "end": 466.87,
+   "wav": "audio/voice/293701e8bf210b33.wav"
+  },
+  {
+   "text": "So a puzzle with only one answer must have a clue in at least one of those four cells.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Patterns that must be broken",
+   "opens": null,
+   "start": 467.22,
+   "end": 471.308,
+   "wav": "audio/voice/6339c76104353ed8.wav"
+  },
+  {
+   "text": "These sets of cells are called unavoidable sets.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Patterns that must be broken",
+   "opens": null,
+   "start": 471.658,
+   "end": 473.904,
+   "wav": "audio/voice/ab6b98f35c069bdf.wav"
+  },
+  {
+   "text": "Find enough of them, and most ways of placing sixteen clues fail immediately, without any solving at all.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Patterns that must be broken",
+   "opens": null,
+   "start": 474.254,
+   "end": 479.86,
+   "wav": "audio/voice/e1c300e47ba351fc.wav"
+  },
+  {
+   "text": "In two thousand and eleven, Gary McGuire, a mathematician at University College Dublin, ran this search with Bastian Tugemann and Gilles Civario.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Seven million hours",
+   "opens": "stop",
+   "start": 481.46,
+   "end": 489.004,
+   "wav": "audio/voice/6300563029876bed.wav"
+  },
+  {
+   "text": "It took about seven million hours of computer time, running for the whole year on a supercomputer in Ireland.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Seven million hours",
+   "opens": null,
+   "start": 489.354,
+   "end": 494.94,
+   "wav": "audio/voice/bcb01b894dd8a994.wav"
+  },
+  {
+   "text": "And it found nothing. No sixteen-clue sudoku with a unique answer exists.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Seven million hours",
+   "opens": null,
+   "start": 495.29,
+   "end": 498.847,
+   "wav": "audio/voice/c620fa89765b3e87.wav"
+  },
+  {
+   "text": "Since seventeen-clue puzzles do exist, seventeen is the minimum.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Seven million hours",
+   "opens": null,
+   "start": 499.197,
+   "end": 502.189,
+   "wav": "audio/voice/cf327fdc4e898da5.wav"
+  },
+  {
+   "text": "They announced it in January two thousand and twelve.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Seventeen clues",
+   "section": "Seven million hours",
+   "opens": null,
+   "start": 502.539,
+   "end": 505.002,
+   "wav": "audio/voice/00f7113899e8a76d.wav"
+  },
+  {
+   "text": "Some people, including some mathematicians, find sudoku a little dull.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "A computer can do it",
+   "opens": "act",
+   "start": 507.402,
+   "end": 510.972,
+   "wav": "audio/voice/5b52da1d499dfbba.wav"
+  },
+  {
+   "text": "It's pure logic, and a computer can solve any newspaper sudoku in a fraction of a second.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "A computer can do it",
+   "opens": null,
+   "start": 511.322,
+   "end": 515.728,
+   "wav": "audio/voice/527de7041bdb4828.wav"
+  },
+  {
+   "text": "And that's true. But notice what the computer can't do.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "A computer can do it",
+   "opens": null,
+   "start": 516.678,
+   "end": 519.504,
+   "wav": "audio/voice/ccecd5d22d95f7ff.wav"
+  },
+  {
+   "text": "It can solve a grid without ever noticing the ring.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "A computer can do it",
+   "opens": null,
+   "start": 519.854,
+   "end": 522.156,
+   "wav": "audio/voice/1a963024ed7c7375.wav"
+  },
+  {
+   "text": "It can't tell you why the ring is there, or that a square of twenty-five cells beats a square of sixteen by exactly forty-five.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "A computer can do it",
+   "opens": null,
+   "start": 522.506,
+   "end": 528.961,
+   "wav": "audio/voice/27aa4768a80d57f4.wav"
+  },
+  {
+   "text": "Even the seventeen-clue proof only finished in a year because people first understood the families and the unavoidable sets.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "A computer can do it",
+   "opens": null,
+   "start": 529.311,
+   "end": 535.644,
+   "wav": "audio/voice/8d5ef6dbd1ebd2a5.wav"
+  },
+  {
+   "text": "The search was computing. Knowing what to search was mathematics.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "A computer can do it",
+   "opens": null,
+   "start": 535.994,
+   "end": 539.34,
+   "wav": "audio/voice/4ccd81c2a0b37bdf.wav"
+  },
+  {
+   "text": "So, the three questions.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "Putting it together",
+   "opens": "stop",
+   "start": 540.94,
+   "end": 542.148,
+   "wav": "audio/voice/b489ed7f6179fc69.wav"
+  },
+  {
+   "text": "Why does the ring exist? Because two groups of whole rows, columns and boxes hold the same digits, and taking away the overlap keeps them equal.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 542.498,
+   "end": 549.942,
+   "wav": "audio/voice/3f4e1ebde58c9ce1.wav"
+  },
+  {
+   "text": "How far does the trick go? Far enough to turn the grid into algebra. Five squared minus four squared is one full set of digits, and a whole puzzle can hide x squared minus y squared.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 550.292,
+   "end": 559.598,
+   "wav": "audio/voice/40fbd7497efb8e2f.wav"
+  },
+  {
+   "text": "And how few clues can a sudoku have? Seventeen. Proven by cutting a hopeless search down to a year of computing.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "Putting it together",
+   "opens": null,
+   "start": 559.948,
+   "end": 565.604,
+   "wav": "audio/voice/b7e2412f0f4cf974.wav"
+  },
+  {
+   "text": "Next time you finish a sudoku, don't throw it away straight away.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "Next time",
+   "opens": "stop",
+   "start": 567.204,
+   "end": 570.208,
+   "wav": "audio/voice/a10e8ca5a4ba21f3.wav"
+  },
+  {
+   "text": "Circle the ring around the middle box, and the four corners, and compare.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "Next time",
+   "opens": null,
+   "start": 570.558,
+   "end": 574.34,
+   "wav": "audio/voice/1efc4f42b340b3cb.wav"
+  },
+  {
+   "text": "Then add up the four by four square in the top left, and the five by five square in the bottom right.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "Next time",
+   "opens": null,
+   "start": 574.69,
+   "end": 579.751,
+   "wav": "audio/voice/18ef96786abbe1df.wav"
+  },
+  {
+   "text": "The difference will be forty-five. Every time.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "Next time",
+   "opens": null,
+   "start": 580.101,
+   "end": 582.146,
+   "wav": "audio/voice/0cfa4d7fa6bd13a6.wav"
+  },
+  {
+   "text": "Thanks for watching. See you in the next one.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Just logic?",
+   "section": "Next time",
+   "opens": null,
+   "start": 583.096,
+   "end": 584.925,
+   "wav": "audio/voice/93a16d1b4e593213.wav"
+  }
+ ]
+}

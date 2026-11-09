@@ -1,0 +1,80 @@
+<!doctype html><meta charset="utf-8">
+<title>円周率の正体 ― なぜπは3.14なのか — p1</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Phần p1 (lời audio/p1.wav, mốc data/p1.timeline.json — align.py; trước khi có giọng: estimate.py).
+// Cảnh: plates/*.js, mỗi file `export default class` có static ERA, IMAGES {key: đường dẫn}, POSES [..];
+// sau init({ tl }) có START (câu đầu của mục) và FROM (lúc cảnh bắt đầu hiện; mở hồi = START − 2.6).
+// Chuyển: khác ERA → nền mới loang từ WIPE (mặc định giữa khung); cùng ERA → trời quay (bầu sao xoay, tấm cũ lướt ra theo cung, tấm mới vào). 0.9 s từ FROM.
+// Chụp riêng vài cảnh: p1.html?plates=a1-x,a2-y
+import { makeTimeline } from '../../../engine/timeline.js';
+import { loadKit, setTalk, outCubic, prog, W, H, mk, FONTS, FONT_SAMPLE, setGround, setSkyOffset, ground } from './kit.js';
+import { ALL } from './plates/p1-order.js';
+import { collectCues } from '../../../engine/sfx.js';
+// LEAD/TAIL đọc từ build.json (MỘT nguồn): trang và build lệch LEAD là hình lệch tiếng cả phần (zero-div suýt mắc).
+let LEAD = 0, TAIL = 0; const g = document.getElementById('cv').getContext('2d');
+let ready = false, plates = [], DUR = 0, CUES = [];
+// Chuyển cảnh cùng ERA「trời quay」: bầu sao xoay SPIN quanh cực; tấm cũ lướt ra theo cung quanh một tâm xa dưới khung,
+// tấm mới lướt vào từ phía kia. Cảnh vẽ vào bộ đệm trong suốt (setGround(false) bỏ nền) rồi ghép trên nền trời.
+const SPIN = 0.35, SWING = 0.62, PIV = [W / 2, H * 2.6];
+const BUF = [mk(), mk()].map(c => c.getContext('2d'));
+(async () => {
+  // MỌI mặt chữ của kit (kit.FONTS) + Archivo (marker kênh của khung mẫu) — Promise.all trước init (font race, LESSONS §16).
+  const fonts = FONTS.concat(['800 40px "Archivo"']);
+  await Promise.all(fonts.map(f => document.fonts.load(f, FONT_SAMPLE)));
+  const part = (await (await fetch('./build.json')).json()).parts.find(p => p.page === 'p1');
+  LEAD = part.lead; TAIL = part.tail;
+  const tl = makeTimeline(await (await fetch('./data/p1.timeline.json')).json());
+  // miệng nói (engine/talk.js): đường bao giọng từ tools/voice/mouth_env.py. Trước khi có giọng (estimate.py) chưa có
+  // tệp → mascot im; build.py chặn render khi thiếu hoặc cũ hơn audio/p1.dry.wav.
+  const mo = await fetch('./data/p1.mouth.json'); if (mo.ok) setTalk(await mo.json());
+  const want = new URLSearchParams(location.search).get('plates');
+  const names = want ? want.split(',') : ALL;
+  const mods = await Promise.all(names.map(n => import(`./plates/${n}.js`)));
+  const C = '../../../assets/character-v2/cut/', imgs = {};
+  for (const m of mods) { Object.assign(imgs, m.default.IMAGES || {}); for (const p of m.default.POSES || []) imgs['pose-' + p] = C + `pose-${p}.png`; }
+  await loadKit(imgs);
+  plates = mods.map(m => { const p = new m.default(); p.init({ tl }); return p; }).sort((a, b) => a.FROM - b.FROM);
+  DUR = LEAD + tl.lines.at(-1).end + TAIL;
+  // trời quay (DNA §7): mỗi chuyển cảnh cùng ERA xoay bầu sao thêm SPIN — độ xoay cộng dồn là hàm thuần của giờ.
+  const turns = plates.filter((p, j) => j && !p.CONTINUES && p.constructor.ERA === plates[j - 1].constructor.ERA).map(p => p.FROM);
+  setSkyOffset(T => turns.reduce((a, f) => a + SPIN * outCubic(prog(T, f, f + 0.9)), 0));
+  CUES = collectCues(plates, LEAD); // tiếng hiệu ứng: chuyển cảnh tự có + sfx() của từng cảnh (docs/lesson/SFX.md)
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const frame = t => {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.textAlign = 'left'; g.filter = 'none';
+  const T = t - LEAD;
+  let i = 0; for (let j = 0; j < plates.length; j++) if (T >= plates[j].FROM) i = j;
+  const cur = plates[i], prev = plates[i - 1];
+  // CONTINUES = true (trường của cảnh): cảnh nối tiếp bố cục cảnh trước (cùng cán cân, cùng đèn) → cắt thẳng, không
+  // trượt — trượt hai bản cùng bố cục trông như hình nhân đôi (fifty-percent, LESSONS §50).
+  const k = prev && !cur.CONTINUES ? prog(T, cur.FROM, cur.FROM + 0.9) : 1;
+  if (k >= 1) { cur.render(g, T); return; }
+  if (prev.constructor.ERA !== cur.constructor.ERA) {
+    prev.render(g, T);
+    const [cx, cy] = cur.WIPE || [W / 2, H / 2];
+    g.save(); g.beginPath(); g.arc(cx, cy, 2300 * Math.pow(outCubic(k), 1.3), 0, 7); g.clip(); cur.render(g, T); g.restore();
+  } else {
+    const e = outCubic(k);
+    setGround(false);
+    try { for (const [b, p] of [[BUF[0], prev], [BUF[1], cur]]) { b.setTransform(1, 0, 0, 1, 0, 0); b.clearRect(0, 0, W, H); b.globalAlpha = 1; b.globalCompositeOperation = 'source-over'; p.render(b, T); } }
+    finally { setGround(true); }
+    ground(g, cur.constructor.ERA, T);
+    const swing = (b, a) => { g.save(); g.translate(PIV[0], PIV[1]); g.rotate(a); g.translate(-PIV[0], -PIV[1]); g.drawImage(b.canvas, 0, 0); g.restore(); };
+    swing(BUF[0], -SWING * e); swing(BUF[1], SWING * (1 - e));
+  }
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, get DUR() { return DUR; }, get LEAD() { return LEAD; }, get cues() { return CUES; } };
+</script>

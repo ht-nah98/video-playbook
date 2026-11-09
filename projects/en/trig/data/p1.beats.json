@@ -1,0 +1,130 @@
+{
+ "duration": 56.988,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "lang": "en",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Type sine of one hundred and twenty degrees into any calculator, and it answers instantly: zero point eight six six.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Type sine of one hundred and twenty degrees into any calculator, and it answers instantly: zero point eight six six.",
+   "start": 0.0,
+   "end": 5.998,
+   "wav": "audio/voice/d09d433877207856.wav"
+  },
+  {
+   "text": "But no right triangle has a one-hundred-and-twenty-degree angle. Not a single one.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "But no right triangle has a one-hundred-and-twenty-degree angle. Not a single one.",
+   "start": 6.348,
+   "end": 10.483,
+   "wav": "audio/voice/0243224694ec68f3.wav"
+  },
+  {
+   "text": "Sine of minus thirty degrees? Minus one half. Sine of a thousand degrees? It answers that too.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Sine of minus thirty degrees? Minus one half. Sine of a thousand degrees? It answers that too.",
+   "start": 10.833,
+   "end": 15.49,
+   "wav": "audio/voice/120554550219a06a.wav"
+  },
+  {
+   "text": "Those numbers don't come from soh cah toa. They come from a single point, running around a circle.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Those numbers don't come from soh cah toa. They come from a single point, running around a circle.",
+   "start": 15.84,
+   "end": 20.297,
+   "wav": "audio/voice/166af35c799f77f3.wav"
+  },
+  {
+   "text": "And that circle, seen from the side, is hiding inside every wave: sound, light, even the power in your wall.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "And that circle, seen from the side, is hiding inside every wave: sound, light, even the power in your wall.",
+   "start": 20.647,
+   "end": 26.112,
+   "wav": "audio/voice/d478bfefe3a8ff7e.wav"
+  },
+  {
+   "text": "Trigonometry is more than two thousand years old, and for most of that time it was a tool for the sky, not for homework.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Trigonometry is more than two thousand years old, and for most of that time it was a tool for the sky, not for homework.",
+   "start": 27.062,
+   "end": 32.934,
+   "wav": "audio/voice/4758fa56779e8317.wav"
+  },
+  {
+   "text": "In this video, I want to follow it from the stars, to the circle, to the waves, and answer three questions with you.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "In this video, I want to follow it from the stars, to the circle, to the waves, and answer three questions with you.",
+   "start": 33.285,
+   "end": 38.776,
+   "wav": "audio/voice/6e00b40e7e630d34.wav"
+  },
+  {
+   "text": "One. Why does every angle come with its own fixed number, its sine?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "One. Why does every angle come with its own fixed number, its sine?",
+   "start": 39.126,
+   "end": 42.457,
+   "wav": "audio/voice/de3f7ae4db8184c6.wav"
+  },
+  {
+   "text": "Two. How can a calculator find the sine of an angle that no triangle can hold?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Two. How can a calculator find the sine of an angle that no triangle can hold?",
+   "start": 42.807,
+   "end": 46.743,
+   "wav": "audio/voice/a8a8189066b6f9e9.wav"
+  },
+  {
+   "text": "And three. Why does that same circle turn up inside every wave?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "And three. Why does that same circle turn up inside every wave?",
+   "start": 47.093,
+   "end": 50.215,
+   "wav": "audio/voice/d52cb0cda53ecc46.wav"
+  },
+  {
+   "text": "It all begins with a problem much older than any calculator: measuring something you can't reach.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "It all begins with a problem much older than any calculator: measuring something you can't reach.",
+   "start": 51.165,
+   "end": 56.038,
+   "wav": "audio/voice/cf44186d84195448.wav"
+  }
+ ]
+}

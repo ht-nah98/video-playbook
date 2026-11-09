@@ -1,0 +1,148 @@
+{
+ "duration": 72.332,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "Ask anyone why one plus one is two, and the answer comes straight away. One stone and another stone make two stones.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 0.0,
+   "end": 5.902,
+   "wav": "audio/voice/f3e635de232afc74.wav"
+  },
+  {
+   "text": "Now ask them why pi is three point one four. Why not two, or four, or seven?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 6.252,
+   "end": 9.933,
+   "wav": "audio/voice/9c75b42ad9eb4e76.wav"
+  },
+  {
+   "text": "Most people go quiet. The honest answer is usually, because that's what the calculator says.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 10.283,
+   "end": 14.723,
+   "wav": "audio/voice/5dc052acb93ea3ca.wav"
+  },
+  {
+   "text": "You met pi in school, as the distance around a circle divided by the distance across it.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 15.673,
+   "end": 19.962,
+   "wav": "audio/voice/6975c634b3bed806.wav"
+  },
+  {
+   "text": "That definition is true. But it only tells you how to measure pi. It doesn't tell you what pi is.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 20.312,
+   "end": 25.075,
+   "wav": "audio/voice/704bf4a20d2df32d.wav"
+  },
+  {
+   "text": "So in this video, I want to answer three questions with you.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 26.025,
+   "end": 28.866,
+   "wav": "audio/voice/931985eaafd74de5.wav"
+  },
+  {
+   "text": "One. Why is pi three point one four, and not some other number?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 29.216,
+   "end": 32.115,
+   "wav": "audio/voice/a2f10d3e9cd163ea.wav"
+  },
+  {
+   "text": "Two. Why do its digits never end?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 32.465,
+   "end": 34.145,
+   "wav": "audio/voice/b600f296f455da1e.wav"
+  },
+  {
+   "text": "And three. Why, in a universe with a different geometry, would a circle give you a different number?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 34.495,
+   "end": 39.575,
+   "wav": "audio/voice/f2cc1c23959be3ea.wav"
+  },
+  {
+   "text": "Here is the first strange thing. Nobody chose this number. No committee of mathematicians ever met and voted for three point one four.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 40.525,
+   "end": 47.426,
+   "wav": "audio/voice/57948d2ed317827b.wav"
+  },
+  {
+   "text": "Once you accept the basic rules of flat geometry, pi is forced on you. It could not be anything else.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 47.776,
+   "end": 52.708,
+   "wav": "audio/voice/efd95fbbb6f6a1aa.wav"
+  },
+  {
+   "text": "And yet it is an ugly number. It isn't a fraction, and its digits run on forever without ever repeating.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 53.058,
+   "end": 58.213,
+   "wav": "audio/voice/e3687ccc7aa993e9.wav"
+  },
+  {
+   "text": "If you were designing a universe, you would never pick something this messy as a basic constant. Ours picked it anyway.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 58.563,
+   "end": 64.576,
+   "wav": "audio/voice/6055ee4e3b7af7b3.wav"
+  },
+  {
+   "text": "So where does it come from? To find out, we have to go back more than two thousand years, to the first person who really caught it.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "start": 64.926,
+   "end": 71.382,
+   "wav": "audio/voice/e163a6fecca87e48.wav"
+  }
+ ]
+}

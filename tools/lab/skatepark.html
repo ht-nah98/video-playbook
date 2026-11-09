@@ -1,0 +1,237 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — skatepark</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"CormI";src:url("../../assets/fonts/CormorantGaramond-Italic[wght].ttf");font-weight:300 700;font-style:italic;}
+  html,body{margin:0;background:#DCEBF5;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "skatepark · bowl bê tông + ván ép, nắng ban ngày" (calculus). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/skatepark.html --dur 2 --t 0.5,1.5 --outdir out/_lab/skatepark
+// Ý: con dốc của câu hỏi là lòng BOWL trượt ván — y = x² là mặt cắt bê tông thật; "dốc tại đúng chỗ chân đứng" là câu dân trượt ván hỏi mỗi ngày. Tiếp tuyến = MẶT VÁN (deck) áp vào bowl, chạm đúng MỘT điểm (như thợ đặt thước kiểm transition trên tấm khuôn); tích phân = đóng một quarter-pipe bằng sườn ván ép.
+// Vật xuyên suốt: MẶT CẮT BOWL / RAMP y = x². (1) dốc + người: bowl cắt ngang, mascot dưới chân bowl nhìn lên, điểm nắng ấm tại (1, 1) · (2) thước = deck ván cam có vạch, mép trên = y = 2x − 1; cát tuyến = dây căng xanh giữa hai đinh trên mặt bê tông, quạt khép về deck · (3) lỗ = đường dây căng thủng một vòng đinh rỗng ở (5, 10) (khoen trống, như lỗ bắt truck) · (4) dải = SƯỜN VÁN ÉP dựng đứng dưới mặt ramp (khung quarter-pipe); phần thò quá mặt cong = gạch chéo hồng "cắt bỏ" · (5) đồng hồ tốc độ gắn ván (kim) ↔ công-tơ-mét = bánh xe đếm vòng / bảng điểm lật số.
+// Màu trên nền trời MÁT #DCEBF5 + bê tông xám ấm #D4CFC7: CAM DECK #E8590C (chữ #B83F06) = điểm đang hỏi / tiếp tuyến / đáp số đạo hàm · điểm nắng #FFC23A · XANH DÂY #2563A8 (chữ #1D4F8A) = cát tuyến · MỰC NAVY #1F2A36 = đường cong (mép bê tông/da ramp) + chữ trung tính · GỖ ÉP #E9CF9C (lõi tối #C99A55, chữ #7A4E12) = diện tích / dải · HỒNG #C2386B = phần thừa "sai" (gạch chéo cắt bỏ) · thép coping #8F9AA4 trung tính.
+// Chữ: Archivo 800–900 (số, ÷ ≈ − đã kiểm cmap) như chữ stencil xịt sơn ở skatepark; biến x, y, n = Cormorant Garamond Italic, chữ thường; ⅓ KHÔNG có trong Archivo/Cormorant → vẽ phân số chồng (1 trên 3) bằng tay. Chữ ≥ 28 px, số ≥ 30 px.
+// Tiếng (assets/sfx/library.json): điểm sáng = chime/ding · dây căng bật = pluck/whoosh ngắn · deck áp vào = tock gỗ (wood) · đếm bảng 3 → 2.001 = tick · dựng sườn = tock gỗ nhịp đều · tổng trên/dưới = pop · ⅓ = ding. Đề xuất MỚI: tiếng bánh xe lăn bê tông (roll, nền nhẹ khi cát tuyến xoay), "tail pop" ván (cho tiếp tuyến chốt), cưa ngắn (cắt phần thừa).
+// Các phần khác: cát tuyến xoay = dây căng tuột đinh, đinh trượt dọc mặt bê tông về (1, 1); bảng số 3 → 2.001 = bảng điểm sân trượt (lật số) · 2 + h = sticker dán trên deck · đồng hồ tốc độ = mặt đồng hồ gắn đầu ván · Newton / Leibniz / trang 1684 / Archimedes = ảnh thật in như poster dán trên tường bê tông có băng keo + vết xịt sơn quanh khung · dải mỏng → ⅓ = sườn dày dần (10, 100) như khung đóng sát, bảng điểm thu khe về ⅓ · công-tơ-mét = bánh xe xe đẩy đo quãng (measuring wheel) lăn dưới ramp.
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+import { shadowRR, glow } from '../../engine/shade.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const AR = '"Archivo"', CI = '"CormI"';
+const C = { sky0: '#BFDCEF', sky: '#DCEBF5', conc: '#D4CFC7', concDk: '#B9B2A8', ink: '#1F2A36',
+  deck: '#E8590C', deckInk: '#B83F06', sun: '#FFC23A', cord: '#2563A8', cordInk: '#1D4F8A',
+  ply: '#E9CF9C', plyDk: '#C99A55', plyInk: '#7A4E12', waste: '#C2386B', steel: '#8F9AA4', card: '#FFFFFF', tile: '#3E86B8' };
+const IM = {}; let BG0, BG1, CONC, ready = false;
+const BOX = window.__boxes = {};
+
+// ---- số: tính bằng code, must() ----
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { const r = ev(s); if (r !== v) throw new Error(`sai: ${s} = ${r} ≠ ${v}`); return v; };
+const f = x => x * x;
+const sec = a => (f(a) - f(1)) / (a - 1);
+must('(2 ** 2 - 1) / (2 - 1)', 3);
+const SLOPES = [[2, 3], [1.5, 2.5], [1.1, 2.1]];
+SLOPES.forEach(([a, s]) => must(`Math.round(((${a}) ** 2 - 1) / ((${a}) - 1) * 1000) / 1000`, s));
+must('2 * 1 - 1', 1);                                         // tiếp tuyến y = 2x − 1 đi qua (1, 1)
+must('[0.3, 0.7, 1.4, 2].every(x => x * x - (2 * x - 1) > 0)', true);   // (x − 1)² > 0: chạm đúng MỘT điểm
+const riem = (n, up) => { let s = 0; for (let k = up ? 1 : 0; k <= (up ? n : n - 1); k++) s += k * k; return s / (n ** 3); };   // Σk²/n³ — số nguyên chia một lần
+const UP4 = must(`(1 + 4 + 9 + 16) / 64`, 0.46875), LO4 = must(`(0 + 1 + 4 + 9) / 64`, 0.21875);
+if (riem(4, true) !== UP4 || riem(4, false) !== LO4) throw new Error('riem 4');
+must(`${UP4} - ${LO4}`, 0.25);                                 // khe = 1/n
+const ROWS = [4, 10, 100].map(n => ({ n, lo: riem(n, false), up: riem(n, true) }));
+must(`Math.round(${ROWS[1].lo} * 1000) / 1000`, 0.285); must(`Math.round(${ROWS[1].up} * 1000) / 1000`, 0.385);
+must(`Math.round(${ROWS[2].lo} * 100000) / 100000`, 0.32835); must(`Math.round(${ROWS[2].up} * 100000) / 100000`, 0.33835);
+ROWS.forEach(r => { if (Math.abs(r.up - r.lo - 1 / r.n) > 1e-12) throw new Error('khe ≠ 1/n'); });
+const THIRD = 1 / 3;
+const r2 = v => v.toFixed(2);
+must(`'${r2(UP4)}'`, '0.47'); must(`'${r2(LO4)}'`, '0.22');
+
+// ---- tương phản ĐO bằng số ----
+const lum = hex => { const v = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(c => c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4); return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]; };
+const cr = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+const CR = {};
+[['inkSky', C.ink, C.sky, 4.5], ['inkSky0', C.ink, C.sky0, 4.5], ['deckInkSky', C.deckInk, C.sky, 4.5], ['cordInkSky', C.cordInk, C.sky, 4.5],
+ ['plyInkSky', C.plyInk, C.sky, 4.5], ['inkCard', C.ink, C.card, 4.5], ['plyInkCard', C.plyInk, C.card, 4.5], ['inkConc', C.ink, C.conc, 4.5],
+ ['deckEdgeVsConc', C.deckInk, C.conc, 3], ['cordVsSky', C.cord, C.sky, 4.5], ['whiteOnDeck', '#FFFFFF', C.deckInk, 4.5]]
+  .forEach(([k, a, b, m]) => { CR[k] = Math.round(cr(a, b) * 10) / 10; if (CR[k] < m) throw new Error(`tương phản ${k} = ${CR[k]}`); });
+window.__contrast = CR;
+
+// ---- tiện ích ----
+const txt = (s, x, y, font, col = C.ink, align = 'left', base = 'alphabetic') => { g.save(); g.font = font; g.textAlign = align; g.textBaseline = base; g.fillStyle = col; g.fillText(s, x, y); const w = g.measureText(s).width; g.restore(); return w; };
+const line = (x0, y0, x1, y1, col, w, cap = 'round') => { g.save(); g.strokeStyle = col; g.lineWidth = w; g.lineCap = cap; g.beginPath(); g.moveTo(x0, y0); g.lineTo(x1, y1); g.stroke(); g.restore(); };
+const rr = (x, y, w, h, r) => { const p = new Path2D(); p.roundRect(x, y, w, h, r); return p; };
+function figure(pose, x0, foot, h) { const im = IM[pose], s = h / im.height, w = im.width * s; g.drawImage(im, x0, foot - h, w, h); return [x0, foot - h, w, h]; }
+// chuỗi chữ hỗn hợp: [[text, font, col], …] nối tiếp trên một đường gốc
+function runs(parts, x, y) { let cx = x; for (const [s, font, col] of parts) cx += txt(s, cx, y, font, col); return cx - x; }
+// ⅓ vẽ tay: 1 trên 3, gạch ngang
+function third(cx, cy, size, col) { const fnt = `800 ${size}px ${AR}`; txt('1', cx, cy - size * 0.12, fnt, col, 'center', 'alphabetic');
+  line(cx - size * 0.38, cy, cx + size * 0.38, cy, col, Math.max(3, size * 0.08), 'butt'); txt('3', cx, cy + size * 0.84, fnt, col, 'center', 'alphabetic'); }
+
+// ---- bê tông: tấm hạt cốt liệu (hash) phủ multiply ----
+function concrete() {
+  const c = mk(), x = c.getContext('2d'); x.fillStyle = '#FFFFFF'; x.fillRect(0, 0, W, H);
+  for (let i = 0; i < 9000; i++) { const px = hash(i * 1.37) * W, py = hash(i * 2.91 + 7) * H, r = 0.6 + hash(i * 4.13) * 1.8, d = hash(i * 5.7);
+    x.fillStyle = d < 0.6 ? `rgba(110,98,84,${0.10 + d * 0.18})` : `rgba(255,255,255,${0.25 + (d - 0.6) * 0.8})`; x.beginPath(); x.arc(px, py, r, 0, 7); x.fill(); }
+  for (let i = 0; i < 40; i++) { const px = hash(i * 9.1) * W, py = hash(i * 3.3) * H, rx = 60 + hash(i * 6.6) * 160;   // mảng ẩm/vết bánh xe mờ
+    const gr = x.createRadialGradient(px, py, 0, px, py, rx); gr.addColorStop(0, 'rgba(150,140,128,0.10)'); gr.addColorStop(1, 'rgba(150,140,128,0)'); x.fillStyle = gr; x.fillRect(px - rx, py - rx, 2 * rx, 2 * rx); }
+  return c;
+}
+function concFill(path, base = C.conc) { g.save(); g.fillStyle = base; g.fill(path); g.clip(path); g.globalCompositeOperation = 'multiply'; g.drawImage(CONC, 0, 0); g.restore(); }
+
+// ---- trời: gradient mát + mây phẳng + hàng rào lưới + cây xa ----
+function sky(fenceY, clouds, { trees = true } = {}) {
+  const c = mk(), x = c.getContext('2d');
+  let gr = x.createLinearGradient(0, 0, 0, H); gr.addColorStop(0, C.sky0); gr.addColorStop(0.7, C.sky); gr.addColorStop(1, '#EEF5F8'); x.fillStyle = gr; x.fillRect(0, 0, W, H);
+  const lt = x.createRadialGradient(300, -100, 0, 300, -100, 1000); lt.addColorStop(0, 'rgba(255,255,255,0.55)'); lt.addColorStop(1, 'rgba(255,255,255,0)'); x.fillStyle = lt; x.fillRect(0, 0, W, H);
+  for (const [cx, cy, s] of clouds) {   // mây phẳng (đặt tay, tránh chữ)
+    x.fillStyle = 'rgba(255,255,255,0.75)'; for (let j = 0; j < 5; j++) { x.beginPath(); x.ellipse(cx + (j - 2) * 46 * s, cy - (j % 2) * 18 * s, 60 * s, 34 * s, 0, 0, 7); x.fill(); }
+    x.fillRect(cx - 150 * s, cy, 300 * s, 20 * s); }
+  if (trees) for (let k = 0; k < 9; k++) { const tx = 40 + k * 130 + hash(k * 2.2) * 50, r = 50 + hash(k * 4.4) * 40;   // tán cây xa, xanh lam nhạt
+    x.fillStyle = 'rgba(120,160,170,0.35)'; x.beginPath(); x.arc(tx, fenceY - 60 - r * 0.4, r, 0, 7); x.arc(tx + r * 0.7, fenceY - 40 - r * 0.2, r * 0.8, 0, 7); x.fill();
+    x.fillRect(tx - 5, fenceY - 60, 10, 60); }
+  // hàng rào lưới B40: cột + mắt lưới chéo, mảnh, xanh xám
+  x.strokeStyle = 'rgba(80,105,125,0.22)'; x.lineWidth = 1.5;
+  for (let px = -200; px < W + 200; px += 22) { x.beginPath(); x.moveTo(px, fenceY - 120); x.lineTo(px + 120, fenceY); x.moveTo(px + 120, fenceY - 120); x.lineTo(px, fenceY); x.stroke(); }
+  x.fillStyle = 'rgba(80,105,125,0.45)'; for (let px = 30; px < W; px += 260) x.fillRect(px, fenceY - 128, 7, 128); x.fillRect(0, fenceY - 128, W, 5);
+  return c;
+}
+
+// ---- mặt cong y = x² trong toạ độ màn hình ----
+function curvePts(S, a, b, n = 160) { const p = []; for (let i = 0; i <= n; i++) { const x = a + (b - a) * i / n; p.push(S(x, f(x))); } return p; }
+function strokePts(pts, col, w) { g.save(); g.strokeStyle = col; g.lineWidth = w; g.lineJoin = 'round'; g.lineCap = 'round'; g.beginPath(); pts.forEach(([a, b], i) => i ? g.lineTo(a, b) : g.moveTo(a, b)); g.stroke(); g.restore(); }
+function coping(x, y, r = 15) { const gr = g.createLinearGradient(x, y - r, x, y + r); gr.addColorStop(0, '#E4E9ED'); gr.addColorStop(0.45, C.steel); gr.addColorStop(1, '#5D6872');
+  g.fillStyle = gr; g.beginPath(); g.arc(x, y, r, 0, 7); g.fill(); g.strokeStyle = '#4A545D'; g.lineWidth = 2; g.stroke(); }
+// gạch men viền bowl (pool tile) ngay dưới coping, đặt theo pháp tuyến mặt cong
+function tiles(S, U, a, b, n) {
+  for (let i = 0; i < n; i++) { const x0 = a + (b - a) * i / n, x1 = a + (b - a) * (i + 1) / n, [p0x, p0y] = S(x0, f(x0)), [p1x, p1y] = S(x1, f(x1));
+    const dx = p1x - p0x, dy = p1y - p0y, L = Math.hypot(dx, dy), nx = dy / L, ny = -dx / L, d = -30;   // pháp tuyến vào trong bê tông
+    const q = new Path2D(); q.moveTo(p0x, p0y); q.lineTo(p1x, p1y); q.lineTo(p1x + nx * d, p1y + ny * d); q.lineTo(p0x + nx * d, p0y + ny * d); q.closePath();
+    g.fillStyle = i % 2 ? C.tile : '#5A9CCB'; g.fill(q); g.strokeStyle = '#EEF3F5'; g.lineWidth = 2; g.stroke(q); }
+}
+
+// ---- deck ván = cây thước tiếp tuyến: mép trên nằm ĐÚNG trên y = 2x − 1 ----
+function deck(S, xa, xb, th = 30) {
+  const [ax, ay] = S(xa, 2 * xa - 1), [bx, by] = S(xb, 2 * xb - 1), L = Math.hypot(bx - ax, by - ay), ang = Math.atan2(by - ay, bx - ax);
+  g.save(); g.translate(ax, ay); g.rotate(ang);
+  shadowRR(g, 0, 0, L, th, 12, { col: 'rgba(60,50,40,0.30)', blur: 12, ox: 0, oy: 10 });
+  const body = rr(0, 0, L, th, [0, 0, th / 2, th / 2]);
+  const gr = g.createLinearGradient(0, 0, 0, th); gr.addColorStop(0, '#F47B32'); gr.addColorStop(1, C.deckInk); g.fillStyle = gr; g.fill(body);
+  for (let k = 0; k < 7; k++) line(0, 8 + k * 3, L, 8 + k * 3, 'rgba(255,230,200,0.10)', 1);     // lớp ván ép 7 lớp ở cạnh
+  g.strokeStyle = "#5A2304"; g.lineWidth = 2.5; g.stroke(body);
+  g.fillStyle = '#26221F'; g.fillRect(0, 0, L, 6);                                                  // giấy nhám (grip) = mép tiếp tuyến
+  const step = L / 24; for (let k = 1; k < 24; k++) line(k * step, 6, k * step, 6 + (k % 4 ? 9 : 17), '#FFF4E8', 2.5, 'butt');   // vạch thước
+  g.restore();
+  return [Math.min(ax, bx), Math.min(ay, by), Math.abs(bx - ax), Math.abs(by - ay)];
+}
+// dây căng xanh giữa hai đinh trên mặt bê tông
+function cord(S, a, b, alpha) { const [x0, y0] = S(a, f(a)), [x1, y1] = S(b, f(b));
+  g.save(); line(x0, y0, x1, y1, `rgba(255,255,255,${0.7 * alpha})`, 13); g.globalAlpha = alpha; line(x0, y0, x1, y1, C.cord, 6); g.fillStyle = '#4A545D'; g.beginPath(); g.arc(x1, y1, 7, 0, 7); g.fill(); g.fillStyle = '#C9D0D6'; g.beginPath(); g.arc(x1 - 2, y1 - 2, 3, 0, 7); g.fill(); g.restore(); }
+function chalkTag(s, x, y, col, size = 34, key) { g.save(); g.font = `800 ${size}px ${AR}`; const w = g.measureText(s).width + 26, h = size * 1.35;
+  shadowRR(g, x - w / 2, y - h / 2, w, h, 8, { col: 'rgba(40,60,80,0.18)', blur: 8, oy: 4 }); g.fillStyle = C.card; g.fill(rr(x - w / 2, y - h / 2, w, h, 8)); g.restore();
+  txt(s, x, y + 2, `800 ${size}px ${AR}`, col, 'center', 'middle'); if (key) BOX[key] = [x - w / 2, y - h / 2, w, h]; }
+
+const frames = [
+  () => {                                                                // 0 · cold open = thế giới thumbnail: bowl, điểm nắng, deck-thước, quạt dây
+    g.drawImage(BG0, 0, 0);
+    const U = 190, X0 = 1310, Y0 = 955, S = (x, y) => [X0 + U * x, Y0 - U * y];
+    const XL = -1.2, XR = 2.05, [lx, ly] = S(XL, f(XL)), [rx, ry] = S(XR, f(XR));
+    const pts = curvePts(S, XL, XR);
+    const body = new Path2D(); body.moveTo(0, ly); pts.forEach(([a, b]) => body.lineTo(a, b)); body.lineTo(W, ry); body.lineTo(W, H); body.lineTo(0, H); body.closePath();
+    concFill(body);
+    // dải sáng nắng ngay dưới mép (bê tông được mài láng)
+    g.save(); g.clip(body); strokePts(pts, 'rgba(255,255,255,0.55)', 26); g.restore();
+    tiles(S, U, 1.86, XR, 4); tiles(S, U, XL, -1.08, 2);
+    line(0, ly, lx, ly, C.ink, 6); line(rx, ry, W, ry, C.ink, 6);
+    strokePts(pts, C.ink, 6);                                           // ĐƯỜNG CONG y = x² (mép bê tông)
+    coping(lx, ly - 4); coping(rx, ry - 4);
+    // deck = tiếp tuyến tại (1, 1), áp vào mặt cắt
+    BOX.deck = deck(S, 0.42, 1.78);
+    // quạt cát tuyến: dây căng khép về deck (xa → gần: mờ → đậm)
+    const [px, py] = S(1, 1);
+    SLOPES.forEach(([a], i) => cord(S, 1, a, [0.5, 0.72, 0.95][i]));
+    // điểm nắng ấm tại (1, 1)
+    glow(g, px, py, 90, '255,194,58', 0.55); g.fillStyle = C.sun; g.beginPath(); g.arc(px, py, 15, 0, 7); g.fill(); g.strokeStyle = C.deckInk; g.lineWidth = 4; g.stroke();
+    BOX.point = [px - 15, py - 15, 30, 30];
+    // dốc từng dây (số nhỏ, mực xanh) — đặt trong khoảng trời bên trái dây
+    chalkTag(String(SLOPES[0][1]), S(1.62, 3.2)[0] - 40, S(1.62, 3.2)[1], C.cordInk, 34, 'tag3');
+    chalkTag(String(SLOPES[1][1]), S(1.2, 2.25)[0] - 40, S(1.2, 2.25)[1], C.cordInk, 34, 'tag25');
+    // chữ của thumbnail
+    const w = runs([['0 ÷ 0 = ', `900 160px ${AR}`, C.ink], ['2?', `900 160px ${AR}`, C.deckInk]], 120, 420);
+    BOX.title = [120, 420 - 120, w, 128];
+    BOX.fig = figure('pose-sky', 70, 1080, 265);
+  },
+  () => {                                                                // 1 · ACT FIVE: quarter-pipe y = x² trên [0, 1], 4 sườn ván ép
+    g.drawImage(BG1, 0, 0);
+    const U = 600, X0 = 600, Y0 = 900, S = (x, y) => [X0 + U * x, Y0 - U * y], n = 4, wpx = U / n;
+    // sàn bê tông
+    const floor = new Path2D(); floor.rect(0, Y0, W, H - Y0); concFill(floor); line(0, Y0, W, Y0, C.ink, 4);
+    // sườn ván ép: chữ nhật chạm cong ở mép PHẢI (tổng trên)
+    const above = new Path2D(); above.moveTo(X0 - 5, 0); curvePts(S, 0, 1).forEach(([a, b]) => above.lineTo(a, b)); above.lineTo(S(1, 1)[0] + 5, 0); above.closePath();
+    for (let k = 0; k < n; k++) {
+      const x0 = X0 + k * wpx, hu = U * f((k + 1) / n), hl = U * f(k / n);
+      shadowRR(g, x0 + 4, Y0 - hu, wpx - 8, hu, 4, { col: 'rgba(70,50,20,0.22)', blur: 10, ox: 6, oy: 6 });
+      const rib = new Path2D(); rib.rect(x0 + 3, Y0 - hu, wpx - 6, hu);
+      g.fillStyle = C.ply; g.fill(rib);
+      g.save(); g.clip(rib); for (let j = 0; j < 22; j++) { const yy = Y0 - hash(j * 3.1 + k) * hu, a = 0.08 + hash(j * 7.3 + k) * 0.12;   // vân ván ép
+        g.strokeStyle = `rgba(140,95,35,${a})`; g.lineWidth = 1.5 + hash(j * 1.7) * 2; g.beginPath(); g.moveTo(x0, yy); g.bezierCurveTo(x0 + wpx * 0.3, yy - 8, x0 + wpx * 0.7, yy + 8, x0 + wpx, yy); g.stroke(); }
+      if (hl > 0) { g.fillStyle = 'rgba(201,154,85,0.55)'; g.fillRect(x0 + 3, Y0 - hl, wpx - 6, hl); }                           // lõi = tổng dưới
+      // phần thò quá mặt cong: gạch chéo hồng "cắt bỏ"
+      g.clip(above); g.fillStyle = 'rgba(194,56,107,0.16)'; g.fillRect(x0, Y0 - hu, wpx, hu);
+      g.strokeStyle = C.waste; g.lineWidth = 3; for (let d = -hu; d < wpx + hu; d += 16) { g.beginPath(); g.moveTo(x0 + d, Y0 - hu); g.lineTo(x0 + d + hu, Y0); g.stroke(); }
+      g.restore();
+      g.strokeStyle = C.plyDk; g.lineWidth = 3; g.stroke(rib);
+      // vạch phấn ở mép TRÁI = tổng dưới
+      if (hl > 0) { g.save(); g.setLineDash([14, 9]); line(x0 + 3, Y0 - hl, x0 + wpx - 3, Y0 - hl, C.ink, 4, 'butt'); g.restore(); }
+      for (const yy of [Y0 - 30, Y0 - Math.max(60, hu - 30)]) if (hu > 70) { g.fillStyle = '#6C5A44'; g.beginPath(); g.arc(x0 + 18, yy, 4, 0, 7); g.arc(x0 + wpx - 18, yy, 4, 0, 7); g.fill(); }   // đinh vít
+    }
+    // da ramp = đường cong y = x²
+    strokePts(curvePts(S, 0, 1), C.ink, 7);
+    const [cx, cy] = S(1, 1);
+    // bục đứng trên đỉnh + coping
+    g.fillStyle = C.plyDk; g.fillRect(cx, cy, 90, 16); line(cx + 80, cy + 16, cx + 80, Y0, '#8E7350', 8, 'butt'); coping(cx, cy - 2, 14);
+    // trục: x dọc sàn, y dọc mép trái
+    line(X0, Y0, X0, cy - 40, C.ink, 4); for (let k = 0; k <= n; k++) line(X0 + k * wpx, Y0, X0 + k * wpx, Y0 + 16, C.ink, 4, 'butt');
+    txt('0', X0, Y0 + 56, `800 34px ${AR}`, C.ink, 'center'); txt('1', X0 + U, Y0 + 56, `800 34px ${AR}`, C.ink, 'center');
+    txt('x', X0 + U + 120, Y0 + 52, `600 italic 44px ${CI}`, C.ink, 'center');
+    line(X0 - 14, cy, X0, cy, C.ink, 4, 'butt'); txt('1', X0 - 26, cy + 12, `800 34px ${AR}`, C.ink, 'right'); txt('y', X0 - 26, cy - 50, `600 italic 44px ${CI}`, C.ink, 'right');
+    // chú giải: tổng trên / tổng dưới
+    const LX = 150, LY = 430;
+    g.fillStyle = C.ply; g.fillRect(LX, LY - 34, 40, 40); g.save(); g.beginPath(); g.rect(LX, LY - 34, 40, 20); g.clip(); g.fillStyle = 'rgba(194,56,107,0.25)'; g.fillRect(LX, LY - 34, 40, 20);
+    g.strokeStyle = C.waste; g.lineWidth = 3; for (let d = -20; d < 60; d += 12) line(LX + d, LY - 34, LX + d + 20, LY - 14, C.waste, 3); g.restore(); g.strokeStyle = C.plyDk; g.lineWidth = 3; g.strokeRect(LX, LY - 34, 40, 40);
+    BOX.up = [LX, LY - 60, 0, 70]; BOX.up[2] = 60 + txt(`≈ ${r2(UP4)}`, LX + 60, LY, `900 60px ${AR}`, C.plyInk);
+    const LY2 = LY + 96; g.fillStyle = 'rgba(201,154,85,0.85)'; g.fillRect(LX, LY2 - 34, 40, 40); g.save(); g.setLineDash([10, 6]); line(LX, LY2 - 34, LX + 40, LY2 - 34, C.ink, 4, 'butt'); g.restore();
+    BOX.lo = [LX, LY2 - 60, 0, 70]; BOX.lo[2] = 60 + txt(`≈ ${r2(LO4)}`, LX + 60, LY2, `900 60px ${AR}`, C.ink);
+    // bảng điểm sân trượt: 4 / 10 / 100 sườn, khe thu về ⅓
+    const PX = 1350, PY = 170, PW = 470, PH = 470, A = 0.2, B = 0.5, bx0 = PX + 120, bw = PW - 160, M = v => bx0 + (v - A) / (B - A) * bw;
+    line(PX + 60, PY + PH, PX + 60, Y0, '#6F7A84', 12, 'butt'); line(PX + PW - 60, PY + PH, PX + PW - 60, Y0, '#6F7A84', 12, 'butt');
+    shadowRR(g, PX, PY, PW, PH, 14, { col: 'rgba(40,60,80,0.22)', blur: 16, oy: 8 });
+    g.fillStyle = '#5E6A75'; g.fill(rr(PX, PY, PW, PH, 14)); g.fillStyle = C.card; g.fill(rr(PX + 12, PY + 12, PW - 24, PH - 24, 8));
+    runs([['n', `600 italic 44px ${CI}`, C.ink]], PX + 40, PY + 74);
+    const tx = M(THIRD); g.save(); g.setLineDash([8, 8]); line(tx, PY + 100, tx, PY + 352, C.plyInk, 3, 'butt'); g.restore();
+    ROWS.forEach((r, i) => { const yy = PY + 128 + i * 82;
+      txt(String(r.n), PX + 96, yy + 12, `800 34px ${AR}`, C.ink, 'right');
+      line(bx0, yy, bx0 + bw, yy, '#D8DDE1', 4, 'butt');
+      const a = M(r.lo), b = M(r.up); g.fillStyle = C.ply; g.fillRect(a, yy - 18, Math.max(4, b - a), 36); g.strokeStyle = C.plyDk; g.lineWidth = 2; g.strokeRect(a, yy - 18, Math.max(4, b - a), 36);
+      g.fillStyle = C.waste; g.fillRect(b - 2, yy - 22, 4, 44); g.fillStyle = C.ink; g.fillRect(a - 2, yy - 22, 4, 44); });
+    // → ⅓ ở đáy bảng
+    txt('→', tx - 40, PY + 420, `800 44px ${AR}`, C.plyInk, 'right'); third(tx, PY + 392, 46, C.plyInk);
+    BOX.panel = [PX, PY, PW, PH];
+    BOX.fig = figure('pose-pointer', 120, 1080, 262);
+  },
+];
+
+(async () => {
+  const S = '0123456789 ÷=?.≈→−';
+  await Promise.all([...['900 160px', '900 60px', '800 46px', '800 44px', '800 34px'].map(fz => document.fonts.load(`${fz} ${AR}`, S)),
+    document.fonts.load(`600 italic 44px ${CI}`, 'xyn')]);
+  await Promise.all(['pose-sky', 'pose-pointer'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../assets/character-v2/cut/${p}.png`; })));
+  CONC = concrete(); BG0 = sky(686, [[260, 110, 0.8], [1250, 300, 1.0], [880, 560, 0.7]]); BG1 = sky(900, [[200, 140, 0.8], [1080, 120, 0.9]]); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; frames[t < 1 ? 0 : 1](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

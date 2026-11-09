@@ -1,0 +1,88 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — notebook</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"Plex";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  html,body{margin:0;background:#FBF8EF;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "notebook · vở nháp ô li đi thi" (probability). Bàn thử. Chụp: node engine/render/shoot.js stills --page tools/lab/notebook.html --dur 2 --t 0.5,1.5 --outdir out/_lab/notebook
+// Ý: xác suất là ĐẾM — và đếm thì làm trên giấy nháp. Cả bài là một trang vở ô li của người đi thi: bút bi xanh viết,
+//   bút dạ vàng tô "cái ta muốn" (biến cố), bút đỏ gạch chỗ sai, giấy note dán = mẹo (5 bước). Title "How to Solve Any
+//   Probability Problem" → người xem thấy chính trang nháp mình sẽ viết.
+// Vật xuyên suốt: LƯỚI Ô LI. (1) hai thẻ cược dán băng keo · (2) lưới 6×6 kẻ bút chì, ô tổng 7 tô dạ vàng · (3) "không
+//   có 6" = tô ngược (phần bù) · (4) cây xác suất kẻ trên chính các ô · (5) 1000 người = 1000 chấm ô li.
+// Màu: giấy #FBF8EF + ô #BFD3E6 · mực bi #1E2F6B = chữ/trung tính · dạ VÀNG #FFE45C = cái ta đếm (biến cố) · CAM #E2701E
+//   = ca hiếm/so sánh · XANH LÁ #1B6B43 = thắng/đúng · ĐỎ BÚT #B02A24 = sai/thua (gạch) · xúc xắc đỏ #D8433A / xanh #2F6DB5.
+// Chữ: Archivo 800 (số, tiêu đề) + IBM Plex Mono (phép tính nháp). Người que: nét bút bi, mũ rộng vành 1654.
+// Tiếng: bút bi viết (scribble), dạ quang quẹt (swish), xúc xắc lăn trên giấy, giấy note dán (pop), xé nháp.
+import { run, W, H, mk, rr, txt, line, contact, wobble, PIPS, mix, hash, stick, P } from './prob-common.js';
+const C = { paper: '#FBF8EF', gridLn: 'rgba(120,160,200,0.30)', ink: '#1E2F6B', ink2: '#3A466E', win: '#1B6B43', winInk: '#1B6B43',
+  lose: '#B02A24', loseInk: '#B02A24', hi: '#FFE45C', orange: '#E2701E', orangeInk: '#9A4A10', dieA: '#D8433A', dieB: '#2F6DB5', card: '#FFFFFF', tape: 'rgba(240,226,180,0.75)' };
+const F = { big: '"Archivo"', bigW: 800, small: '"Archivo"', smallW: 600, mono: '"Plex"', monoW: 500 };
+const T = {
+  C, F,
+  fonts: ['800 150px "Archivo"', '800 108px "Archivo"', '600 36px "Archivo"', '500 36px "Plex"'],
+  contrast: [['ink', C.ink, C.paper], ['ink2', C.ink2, C.card], ['win', C.winInk, C.card], ['lose', C.loseInk, C.card], ['inkOnHi', C.ink, C.hi], ['loseOnPaper', C.loseInk, C.paper], ['orangeInk', C.orangeInk, C.paper]],
+  bg(k) {
+    const c = mk(), x = c.getContext('2d'); x.fillStyle = C.paper; x.fillRect(0, 0, W, H);
+    x.strokeStyle = C.gridLn; x.lineWidth = 1.5;
+    for (let gx = 12; gx < W; gx += 40) { x.beginPath(); x.moveTo(gx, 0); x.lineTo(gx, H); x.stroke(); }
+    for (let gy = 20; gy < H; gy += 40) { x.beginPath(); x.moveTo(0, gy); x.lineTo(W, gy); x.stroke(); }
+    x.strokeStyle = 'rgba(214,90,90,0.55)'; x.lineWidth = 3; x.beginPath(); x.moveTo(92, 0); x.lineTo(92, H); x.stroke();     // lề đỏ
+    for (let i = 0; i < 3; i++) { x.fillStyle = '#E9E4D6'; x.beginPath(); x.arc(46, 240 + i * 300, 16, 0, 7); x.fill(); }          // lỗ đục
+    const v = x.createRadialGradient(W / 2, H / 2, 300, W / 2, H / 2, 1200); v.addColorStop(0, 'rgba(0,0,0,0)'); v.addColorStop(1, 'rgba(90,80,50,0.10)'); x.fillStyle = v; x.fillRect(0, 0, W, H);
+    return c;
+  },
+  panel(g, x, y, w, h, i) {                                    // thẻ trắng dán băng keo, hơi nghiêng
+    g.save(); g.translate(x + w / 2, y + h / 2); g.rotate(i ? 0.012 : -0.014); g.translate(-(x + w / 2), -(y + h / 2));
+    contact(g, x + w / 2 + 8, y + h + 4, w * 0.55, 24, 0.22, '60,60,40');
+    g.fillStyle = 'rgba(60,60,40,0.10)'; g.fill(rr(x + 6, y + 8, w, h, 6));
+    g.fillStyle = C.card; g.fill(rr(x, y, w, h, 6));
+    g.fillStyle = C.tape; g.save(); g.translate(x + w / 2, y); g.rotate(-0.05); g.fillRect(-90, -22, 180, 44); g.restore();
+    txt(g, i ? 'BET 2' : 'BET 1', x + 40, y + 52, `800 34px "Archivo"`, C.ink2, 'left');
+    g.restore();
+  },
+  die(g, cx, cy, s, n, col, rot, seed) {                      // xúc xắc vẽ tay: tô dạ nhạt + viền bi
+    g.save(); g.translate(cx, cy); g.rotate(rot);
+    const p = rr(-s / 2, -s / 2, s, s, s * 0.18); g.fillStyle = mix(col, 0.55); g.fill(p);
+    g.fillStyle = col; g.globalAlpha = 0.9; g.fill(rr(-s / 2 + 3, -s / 2 + 3, s - 6, s * 0.3, s * 0.15)); g.globalAlpha = 1;
+    g.strokeStyle = C.ink; g.lineWidth = Math.max(2.5, s * 0.035); g.stroke(p);
+    g.fillStyle = C.ink; for (const [px, py] of PIPS[n]) { g.beginPath(); g.arc(px * s * 0.26, py * s * 0.26, s * 0.075, 0, 7); g.fill(); }
+    g.restore();
+  },
+  strike(g, x, y, w, seed) { wobble(g, [[x, y + 2], [x + w * 0.5, y - 1], [x + w, y - 4]], C.lose, 4.5, seed * 13, 1.2); },
+  mark(g, cx, cy, w, tag) {
+    if (tag === 'win') { g.save(); g.strokeStyle = C.win; g.lineWidth = 6; g.beginPath(); g.ellipse(cx, cy - 4, w / 2 + 62, 86, -0.03, 0.2, 6.6); g.stroke(); g.restore();
+      wobble(g, [[cx + w / 2 + 30, cy - 70], [cx + w / 2 + 52, cy - 44], [cx + w / 2 + 96, cy - 112]], C.win, 9, 41, 1); }
+    else { const y = cy + 70, pts = []; for (let k = 0; k <= 24; k++) pts.push([cx - w / 2 + k * w / 24, y + (k % 2 ? 9 : -5)]); wobble(g, pts, C.lose, 6, 77, 1); }
+  },
+  title(g, s, cx, y) {
+    g.font = '800 112px "Archivo"'; const w = g.measureText(s).width;
+    g.save(); g.globalCompositeOperation = 'multiply'; g.fillStyle = C.hi; g.translate(cx, y - 36); g.rotate(-0.012); g.fill(rr(-w / 2 - 30, -50, w + 60, 92, 14)); g.restore();
+    txt(g, s, cx, y, '800 112px "Archivo"', C.ink, 'center');
+  },
+  gambler(g, x, y, h) { const J = stick(g, x, y, P.shrug, { h, color: C.ink, dir: 1 });
+    const hx = J.head[0], hy = J.head[1] - J.headR * 0.55;                                                     // mũ rộng vành 1654, đội trên đỉnh đầu
+    g.save(); g.fillStyle = C.ink; g.beginPath(); g.ellipse(hx, hy, h * 0.17, h * 0.03, -0.06, 0, 7); g.fill();
+    g.beginPath(); g.moveTo(hx - h * 0.08, hy); g.quadraticCurveTo(hx - h * 0.08, hy - h * 0.1, hx, hy - h * 0.1); g.quadraticCurveTo(hx + h * 0.08, hy - h * 0.1, hx + h * 0.08, hy); g.fill(); g.restore();
+    wobble(g, [[hx + h * 0.05, hy - h * 0.08], [hx + h * 0.13, hy - h * 0.17], [hx + h * 0.18, hy - h * 0.15]], C.lose, 5, 9, 1); },
+  gridBack(g, x, y, c, n) { g.save(); g.fillStyle = 'rgba(255,255,255,0.55)'; g.fillRect(x, y, c * n, c * n); g.restore();
+    for (let k = 0; k <= n; k++) { wobble(g, [[x + k * c, y], [x + k * c, y + n * c]], 'rgba(60,66,90,0.55)', 2.5, k * 3 + 1, 0.8); wobble(g, [[x, y + k * c], [x + n * c, y + k * c]], 'rgba(60,66,90,0.55)', 2.5, k * 5 + 2, 0.8); } },
+  cell(g, x, y, c, s, kind, seed) {
+    if (kind === 'seven') { g.save(); g.globalCompositeOperation = 'multiply'; g.fillStyle = C.hi; g.fill(rr(x + 6, y + 10, c - 12, c - 20, 10)); g.restore(); }
+    txt(g, String(s), x + c / 2, y + c / 2 + 2, `${kind ? 800 : 600} 40px "Archivo"`, kind ? C.ink : 'rgba(58,70,110,0.62)', 'center', 'middle');
+    if (kind === 'twelve') { g.save(); g.strokeStyle = C.orange; g.lineWidth = 5; g.beginPath(); g.ellipse(x + c / 2, y + c / 2, c * 0.38, c * 0.34, 0.2, 0.3, 6.5); g.stroke(); g.restore(); }
+  },
+  key(g, x, y, s, frac, kind) {
+    if (kind === 'seven') { g.save(); g.globalCompositeOperation = 'multiply'; g.fillStyle = C.hi; g.fill(rr(x - 10, y - 66, 110, 86, 10)); g.restore(); }
+    else { g.save(); g.strokeStyle = C.orange; g.lineWidth = 5; g.beginPath(); g.ellipse(x + 45, y - 22, 58, 48, 0.2, 0.3, 6.5); g.stroke(); g.restore(); }
+    txt(g, s, x + 45, y, '800 72px "Archivo"', C.ink, 'center');
+    txt(g, frac, x + 130, y, '800 64px "Archivo"', kind === 'seven' ? C.ink : C.orangeInk, 'left');
+  },
+  stickGrid(g, gx, gy, c) { stick(g, gx + 6 * c + 60, gy + 6 * c + 10, P.pointDown, { h: 150, color: C.ink, dir: -1 }); },
+};
+run(T);
+</script>

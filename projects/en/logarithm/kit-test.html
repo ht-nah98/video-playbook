@@ -1,0 +1,116 @@
+<!doctype html><meta charset="utf-8">
+<title>logarithm — tờ thử kit</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Tờ thử MỌI vật của kit (DNA §11). Khung i (giây) → tờ ⌊t⌋:
+//  0 cold open = thumbnail (xu $1,000 + 8% + bóng chồng gấp đôi "?" + 「72」 + mascot) · 1 khối: màu, nhãn, mẻ, sticker,
+//  tháp đếm tầng, tháp TREO NGƯỢC, khối đang rơi / đang nhấc · 2 xu (lẻ = xu đang rơi), bóng chồng, thẻ, băng keo, sticker ①②③
+//  3 ván thước ×10 + thú gỗ + ngoặc ≈ 11 STEPS · 4 ERA photo: khối ảnh (có ảnh / thiếu ảnh), biển tên mục dài nhất
+//  5 thẻ hồi (phụ đề dài nhất) · 6 biểu tượng, 「72」, ba khối lời hứa · 7 khối trượt k 0.5 · 8 domino k 0.25 · 9 domino k 0.7
+//  10 bàn trơn (khung cuối p1 = khung đầu p2)
+//   node engine/render/shoot.js stills --page projects/en/logarithm/kit-test.html --dur 11 --t 0.5,1.5,…,10.5 --outdir out/en/logarithm/qa/kit
+import { W, H, C, AR, FONTS, FONT_SAMPLE, loadKit, ground, bare, block, tower, coinStack, ghostStack, sticker, tag, tape, big72, logBoard,
+  brace, animal, icon, photoBlock, photoImages, promiseBlock, secTag, actTitle, figure, slideSwap, dominoSwap, text, measure, money, grow8,
+  RULE, R8, DAYS8, LN2, E, ANT_MG, WHALE_T, STEPS, QUAKE, PHOTO_MISSING, SEC_MAX, ACT_SUB_MAX, CONTRAST, COIN_SM, BOARD, num, pow10 } from './kit.js';
+const g = document.getElementById('cv').getContext('2d');
+let ready = false;
+(async () => {
+  await Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE)));
+  const Pp = '../../../assets/character-v2/cut/';
+  await loadKit({ ...photoImages('napier', 'descriptio', 'logtable', 'sliderule', 'bernoulli'), ...Object.fromEntries(['calculator', 'pointer', 'ponder'].map(p => ['pose-' + p, Pp + `pose-${p}.png`])) });
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const lab = s => text(g, s, 1824, 1050, { font: `600 28px ${AR}`, color: C.dim, align: 'right' });
+const thumb = (k72 = 1) => {
+  ground(g, 'table');
+  const A = 540, B = 990, base = 860;
+  const topA = coinStack(g, A, base, 5);
+  const topB = ghostStack(g, B, base, 10);
+  block(g, 770, base, 116, { label: '×2' });
+  tag(g, money(1000), A, topA - 70, { size: 44, color: C.goldInk, edge: C.gold, string: [A - 40, topA + 8] });
+  tag(g, '?', B, topB - 70, { size: 52, color: C.ink, edge: C.ink, string: [B - 20, topB + 8] });
+  tag(g, '8%', A - 230, base - 160, { size: 44, color: C.goldInk, edge: C.gold, string: [A - 124, base - 110] });
+  big72(g, 1150, 800, 1, { k: k72 });
+  figure(g, 'calculator', 150, H, 262, 1, { t: 1 });
+};
+const sheets = [
+  t => { thumb(); lab('0 · cold open = thumbnail'); },
+  t => {                                                               // khối + tháp
+    ground(g, 'table');
+    [[C.base, '×2'], [C.base, '×10'], [C.birch, '9'], [C.log, 'log'], [C.gold, '$'], [C.bad, 'TRICK']].forEach(([c, l], i) => block(g, 180 + i * 150, 330, 110, { color: c, label: l, chip: c === C.bad }));
+    block(g, 1120, 330, 110, { color: C.birch, sticker: '3' });
+    block(g, 1290, 330, 110, { color: C.base, label: '×2', k: 0.5 });
+    block(g, 1460, 330, 110, { color: C.base, label: '×2', lift: 0.3 });
+    block(g, 1640, 330, 0, { w: 180, h: 60, color: C.birch, label: '69.3' });
+    tower(g, 300, 860, 3, { label: '×2', count: 3 });
+    tower(g, 620, 860, 5, { s: 80, label: '×2', k: 4.5, count: 4 });
+    tower(g, 1000, 760, 3, { s: 90, color: C.base, label: '÷2', hang: true, count: 3 });
+    tower(g, 1400, 860, 4, { s: 90, label: '×3', lift: 1.4 });
+    tag(g, `log₂ 8 = 3`, 1620, 560, { size: 44, color: C.logInk, edge: C.log });
+    tag(g, `log₂(1/8) = ${num(-3)}`, 1620, 680, { size: 40, color: C.logInk, edge: C.log });
+    lab('1 · khối: màu / nhãn / mẻ / sticker / rơi 0.5 / nhấc 0.3 · tháp đếm, tháp 4.5, TREO NGƯỢC, gỡ 1.4');
+  },
+  t => {                                                               // xu + thẻ + băng keo
+    ground(g, 'table');
+    const t1 = coinStack(g, 300, 860, 5); tag(g, money(1000), 300, t1 - 70, { size: 44, color: C.goldInk, edge: C.gold, string: [260, t1 + 8] });
+    const t2 = coinStack(g, 620, 860, 7.5); tag(g, money(grow8(5)), 620, t2 - 70, { size: 44, color: C.goldInk, edge: C.gold });
+    ghostStack(g, 940, 860, 10, { k: 0.6 });
+    [3, 6, 12].forEach((r, i) => { const x = 1240 + i * 200, tp = coinStack(g, x, 860, 3 + i, COIN_SM); tag(g, `${r}%`, x, tp - 60, { size: 36, color: C.goldInk, edge: C.gold });
+      block(g, x, 990, 0, { w: 150, h: 66, color: C.birch, label: `${RULE[r]} YRS` }); });
+    tag(g, "BANKER'S TRICK", 1300, 200, { size: 48, color: C.badInk, edge: C.bad }); tape(g, 1060, 220, 1540, 184, 1);
+    tag(g, "IT'S A LOGARITHM", 1300, 330, { size: 48, color: C.logInk, edge: C.log });
+    tape(g, 300, 120, 700, 120, 0.5);
+    ['1', '2', '3'].forEach((s, i) => sticker(g, s, 820 + i * 90, 160, { r: 34 }));
+    tag(g, `${R8} YEARS = 9 YEARS + ${DAYS8} DAYS`, 560, 300, { size: 36 });
+    lab('2 · xu (7.5 = xu đang rơi), bóng chồng k 0.6, thẻ, băng keo (k 1 / 0.5), sticker');
+  },
+  t => {                                                               // ván thước
+    ground(g, 'table');
+    const { X, Y, PT } = logBoard(g, {});
+    animal(g, 'ant', X(0) + Math.log10(ANT_MG) * BOARD.step, PT - 10, 1);
+    animal(g, 'mouse', X(4) + 4, Y(4) - 10, 0.95); animal(g, 'elephant', X(9) - 24, Y(9) - 10, 0.72); animal(g, 'whale', X(11) - 34, Y(11) - 12, 0.58);
+    brace(g, 300, Y(11), PT, 1);
+    tag(g, `${ANT_MG} mg`, X(0) + 30, PT - 120, { size: 34, string: [X(0) + 56, PT - 30] });
+    tag(g, `${WHALE_T} t`, X(11) - 300, Y(11) - 150, { size: 34, string: [X(11) - 150, Y(11) - 80] });
+    text(g, `≈ ${Math.round(STEPS)} STEPS`, 340, 236, { font: `900 64px ${AR}`, color: C.logInk });
+    text(g, 'OF ×10', 340, 300, { font: `900 64px ${AR}`, color: C.baseInk });
+    figure(g, 'pointer', 140, H, 270, 1);
+    lab(`3 · ván thước ${pow10(0)}…${pow10(11)}, thú gỗ, ngoặc`);
+  },
+  t => {                                                               // ERA photo
+    ground(g, 'photo');
+    secTag(g, 'Standing at the start', { t });
+    photoBlock(g, 'napier', 160, 220, 380, 480, { label: 'JOHN NAPIER · 1550–1617' });
+    photoBlock(g, 'descriptio', 640, 200, 400, 520, { label: '1614' });
+    photoBlock(g, 'logtable', 1140, 240, 300, 380, {});
+    photoBlock(g, 'seismogram', 1520, 300, 300, 260, { label: 'not loaded' });
+    lab(`4 · ERA photo, khối ảnh (thiếu: ${PHOTO_MISSING.join(', ') || '—'}), secTag max ${SEC_MAX}`);
+  },
+  t => {                                                               // thẻ hồi
+    ground(g, 'table');
+    tower(g, 1500, 860, 3, { label: '×2' });
+    actTitle(g, 6, 7.2, 'ACT THREE', 'Multiplication becomes addition');
+    const w = measure(g, 'Where seventy-two comes from', `700 48px ${AR}`), w2 = measure(g, 'Multiplication becomes addition', `700 48px ${AR}`);
+    lab(`5 · actTitle (phụ đề dài nhất ${Math.round(Math.max(w, w2))} / ${ACT_SUB_MAX} px)`);
+  },
+  t => {                                                               // biểu tượng, 72, lời hứa
+    ground(g, 'table');
+    ['quake', 'speaker', 'lemon', 'weight'].forEach((k, i) => icon(g, k, 200 + i * 150, 160, 54));
+    big72(g, 1250, 400, 0.8);
+    promiseBlock(g, 0, {}); promiseBlock(g, 1, { turn: 0.5 }); promiseBlock(g, 2, { k: 1, cap: 1 });
+    text(g, `ln 2 = ${LN2} · e = ${E} · ${QUAKE} ≈ 32`, 1250, 470, { font: `800 36px ${AR}` });
+    lab('6 · biểu tượng, 「72」, ba khối lời hứa (② đang xoay)');
+  },
+  t => { slideSwap(g, 0.5, () => thumb(), () => { bare(g); tower(g, 960, 860, 3, { label: '×2' }); }); lab('7 · khối trượt k 0.5 (cũ phải, mới trái)'); },
+  t => { dominoSwap(g, 0.25, () => thumb(), () => ground(g, 'photo')); lab('8 · domino k 0.25'); },
+  t => { dominoSwap(g, 0.7, () => thumb(), () => { ground(g, 'photo'); photoBlock(g, 'napier', 760, 220, 380, 480, {}); }); lab('9 · domino k 0.7'); },
+  t => { bare(g); lab(`10 · bàn trơn = khung cuối p1 = khung đầu p2 · tương phản min ${Math.min(...Object.values(CONTRAST))}`); },
+];
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; sheets[Math.min(sheets.length - 1, Math.floor(t))](t); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 11 };
+</script>

@@ -1,0 +1,10 @@
+# 99の発見 — video
+
+| dự án | tiêu đề | dài | trạng thái |
+|---|---|---|---|
+| `ja/intro` | intro kênh (DNA「漆と金」, nhạc Suno「なぜ？ どうして？ 答えを探せ！」) | 20.7 s | render `out/ja/intro/intro.mp4` (2026-10-10), người dùng duyệt khung mẫu |
+| `ja/pi` | 円周率の正体 ― なぜπは3.14なのか (tên tạm) — bài đầu tiên; cùng nguồn với `projects/en/pi`, bản địa hoá (東大 2003, 和算, kỷ lục tính π) | 18:14 | render `out/ja/pi_public/pi.mp4` (2026-10-10) + gói đăng `out/ja/pi_public/youtube/`; DNA 天球; thumbnail chốt 2026-10-13 — XONG |
+| `ja/2048` | 2048はなぜ勝てないのか？ 数学が明かす「131072の壁」と運の正体 — bài 2; mạch + số mô phỏng từ video kênh Ratio (người dùng chốt bám sát), bản địa hoá (質量保存, 1.2垓, 将棋AI, 松崎) | 15:39 | render `out/ja/2048_public/2048.mp4` (2026-10-12, đổi gói + mở đầu 2026-10-19, §111) + gói đăng; DNA 盤上; thumbnail v3; playlist 「知ってるつもりの数学」 chờ người dùng chốt |
+| `ja/chirality` | 鏡の中の分子 ― 2026年ノーベル化学賞が解いた「生命はなぜ片手なのか」 (title chốt) — bài 3, bài HOÁ đầu tiên; Kagan (非線形効果) + 硤合憲三 (不斉自己触媒), nguồn người dùng (bản Việt) đã soát 11 chỗ | 17:00 | render `out/ja/chirality_public/chirality.mp4` (2026-10-13) + gói đăng `out/ja/chirality_public/youtube/`; DNA 合わせ鏡; thumbnail chốt 2026-10-13 (`projects/ja/chirality/thumbnail.png`); đúc kết §102–§106; còn chờ tai người dùng: SFX (pop 43%, cảnh đồng xu ~13:40) |
+| `ja/hikari` | なぜ世界は見えるのか？ アインシュタインのノーベル賞でわかる、光の正体と虹・空の青・色の秘密 (title chốt lại 2026-10-14: 光の本質とは何でしょうか？リンゴが「赤く」見える本当の理由とは。) — bài 4, playlist なぜ？を解いたノーベル賞; nguồn người dùng (bản Việt) đã soát ~46 chỗ (2 họ nguồn sáng, quang điện, lò vi sóng, rhodopsin…) | 17:27 | render `out/ja/hikari/hikari.mp4` (2026-10-14) + gói đăng `out/ja/hikari/youtube/`; DNA 節穴の暗室; nhạc dùng lại bản zero-power; đúc kết §107–§110; thumbnail chốt lại 2026-10-14 「このリンゴ、赤くない。」 (bản đầu 「色は脳が作る？」 → thumbnail/v0); người dùng duyệt 2026-10-14 — XONG |
+| `ja/gacha` | ガチャの罠 — bài 5, nguồn người dùng (bản Việt), gói TRƯỚC lời lần đầu (PACKAGING §0b); mô phỏng 天井 | 16:46 | render `out/ja/gacha_public/gacha.mp4` (2026-10-19) + gói đăng; DNA カプセル; thumbnail 「同じ？」 chốt; đúc kết §116–§123 — XONG |

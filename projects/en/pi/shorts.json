@@ -1,0 +1,156 @@
+{
+ "cta": "FULL STORY ▶ link below",
+ "shorts": [
+  {
+   "name": "nobody-chose-pi",
+   "hook": [
+    "WHY IS PI {3.14}?",
+    "NOBODY CHOSE IT"
+   ],
+   "pieces": [
+    {
+     "from": "p1:0",
+     "to": "p1:0",
+     "video": 2.4,
+     "crop": [
+      1080,
+      60,
+      60,
+      0
+     ]
+    },
+    {
+     "from": "p1:1",
+     "to": "p1:2",
+     "crop": [
+      1080,
+      60,
+      60,
+      0
+     ]
+    },
+    {
+     "from": "p1:9",
+     "to": "p1:12",
+     "crop": [
+      1880,
+      0,
+      0,
+      0
+     ],
+     "tail": -0.2
+    }
+   ]
+  },
+  {
+   "name": "archimedes-squeeze",
+   "hook": [
+    "MEASURE A CIRCLE",
+    "WITH {NO RULER}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:5",
+     "to": "p2:13",
+     "crop": [
+      1880,
+      0,
+      0,
+      0
+     ],
+     "tail": -0.15
+    }
+   ]
+  },
+  {
+   "name": "pi-is-turning",
+   "hook": [
+    "PI ISN'T ABOUT",
+    "{CIRCLES}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:25",
+     "to": "p2:26",
+     "crop": [
+      1080,
+      640,
+      640,
+      0
+     ]
+    },
+    {
+     "from": "p2:33",
+     "to": "p2:39",
+     "crop": [
+      1340,
+      20,
+      20,
+      0
+     ],
+     "tail": 0.3
+    }
+   ]
+  },
+  {
+   "name": "pi-without-circles",
+   "hook": [
+    "PI WHERE THERE ARE",
+    "{NO CIRCLES}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:42",
+     "to": "p2:49",
+     "crop": [
+      1880,
+      0,
+      0,
+      0
+     ],
+     "tail": -0.45
+    }
+   ]
+  },
+  {
+   "name": "why-pi-never-ends",
+   "hook": [
+    "WHY PI CAN'T BE",
+    "A {FRACTION}"
+   ],
+   "pieces": [
+    {
+     "from": "p2:50",
+     "to": "p2:57",
+     "crop": [
+      1880,
+      0,
+      0,
+      0
+     ],
+     "tail": -0.05
+    }
+   ]
+  },
+  {
+   "name": "circle-ratio-two",
+   "hook": [
+    "A CIRCLE WHERE",
+    "C ÷ d = {2}, NOT PI"
+   ],
+   "pieces": [
+    {
+     "from": "p2:70",
+     "to": "p2:77",
+     "crop": [
+      1880,
+      0,
+      0,
+      0
+     ],
+     "tail": 0.2
+    }
+   ]
+  }
+ ]
+}

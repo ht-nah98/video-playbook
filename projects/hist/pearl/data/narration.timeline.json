@@ -1,0 +1,11322 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 65.212
+  },
+  {
+   "name": "Running on empty",
+   "act": "",
+   "start": 65.212,
+   "end": 115.06
+  },
+  {
+   "name": "Paradise, Sunday edition",
+   "act": "",
+   "start": 115.06,
+   "end": 181.427
+  },
+  {
+   "name": "The first alarm",
+   "act": "",
+   "start": 181.427,
+   "end": 217.931
+  },
+  {
+   "name": "The second alarm",
+   "act": "",
+   "start": 217.931,
+   "end": 316.472
+  },
+  {
+   "name": "The third alarm",
+   "act": "",
+   "start": 316.472,
+   "end": 376.512
+  },
+  {
+   "name": "Just before eight",
+   "act": "",
+   "start": 376.512,
+   "end": 425.19
+  },
+  {
+   "name": "Japan hits snooze too",
+   "act": "",
+   "start": 425.19,
+   "end": 476.389
+  },
+  {
+   "name": "The bill",
+   "act": "",
+   "start": 476.389,
+   "end": 522.385
+  },
+  {
+   "name": "Outro",
+   "act": "",
+   "start": 522.385,
+   "end": 586.768
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Hey everyone, and welcome back to a channel about history's biggest disasters, and the tiny, stupid mistakes that started them.",
+   "idea": false,
+   "start": 0.02,
+   "end": 7.261,
+   "words": [
+    {
+     "w": "hey",
+     "start": 0.02,
+     "end": 0.221,
+     "conf": 0.0
+    },
+    {
+     "w": "everyone",
+     "start": 0.241,
+     "end": 0.682,
+     "conf": 0.971
+    },
+    {
+     "w": "and",
+     "start": 0.883,
+     "end": 0.963,
+     "conf": 0.662
+    },
+    {
+     "w": "welcome",
+     "start": 1.043,
+     "end": 1.344,
+     "conf": 0.843
+    },
+    {
+     "w": "back",
+     "start": 1.364,
+     "end": 1.544,
+     "conf": 0.993
+    },
+    {
+     "w": "to",
+     "start": 1.605,
+     "end": 1.665,
+     "conf": 0.5
+    },
+    {
+     "w": "a",
+     "start": 1.765,
+     "end": 1.785,
+     "conf": 0.004
+    },
+    {
+     "w": "channel",
+     "start": 1.865,
+     "end": 2.206,
+     "conf": 0.828
+    },
+    {
+     "w": "about",
+     "start": 2.307,
+     "end": 2.587,
+     "conf": 0.933
+    },
+    {
+     "w": "history's",
+     "start": 2.768,
+     "end": 3.35,
+     "conf": 0.838
+    },
+    {
+     "w": "biggest",
+     "start": 3.51,
+     "end": 3.811,
+     "conf": 0.853
+    },
+    {
+     "w": "disasters",
+     "start": 3.831,
+     "end": 4.653,
+     "conf": 0.945
+    },
+    {
+     "w": "and",
+     "start": 4.874,
+     "end": 4.954,
+     "conf": 0.662
+    },
+    {
+     "w": "the",
+     "start": 4.974,
+     "end": 5.055,
+     "conf": 0.945
+    },
+    {
+     "w": "tiny",
+     "start": 5.175,
+     "end": 5.496,
+     "conf": 0.743
+    },
+    {
+     "w": "stupid",
+     "start": 5.636,
+     "end": 5.977,
+     "conf": 0.698
+    },
+    {
+     "w": "mistakes",
+     "start": 6.037,
+     "end": 6.479,
+     "conf": 0.806
+    },
+    {
+     "w": "that",
+     "start": 6.499,
+     "end": 6.639,
+     "conf": 0.978
+    },
+    {
+     "w": "started",
+     "start": 6.739,
+     "end": 7.101,
+     "conf": 0.853
+    },
+    {
+     "w": "them",
+     "start": 7.121,
+     "end": 7.261,
+     "conf": 0.804
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Last time, a man who didn't read his memo accidentally opened the Berlin Wall, and for once, the story ended with a party.",
+   "idea": false,
+   "start": 7.691,
+   "end": 14.343,
+   "words": [
+    {
+     "w": "last",
+     "start": 7.691,
+     "end": 7.932,
+     "conf": 0.991
+    },
+    {
+     "w": "time",
+     "start": 7.952,
+     "end": 8.232,
+     "conf": 0.703
+    },
+    {
+     "w": "a",
+     "start": 8.372,
+     "end": 8.392,
+     "conf": 0.998
+    },
+    {
+     "w": "man",
+     "start": 8.452,
+     "end": 8.653,
+     "conf": 0.917
+    },
+    {
+     "w": "who",
+     "start": 8.713,
+     "end": 8.773,
+     "conf": 0.999
+    },
+    {
+     "w": "didn't",
+     "start": 8.873,
+     "end": 9.094,
+     "conf": 0.792
+    },
+    {
+     "w": "read",
+     "start": 9.114,
+     "end": 9.274,
+     "conf": 0.992
+    },
+    {
+     "w": "his",
+     "start": 9.294,
+     "end": 9.414,
+     "conf": 0.748
+    },
+    {
+     "w": "memo",
+     "start": 9.494,
+     "end": 9.695,
+     "conf": 0.731
+    },
+    {
+     "w": "accidentally",
+     "start": 9.935,
+     "end": 10.556,
+     "conf": 0.745
+    },
+    {
+     "w": "opened",
+     "start": 10.796,
+     "end": 10.997,
+     "conf": 0.805
+    },
+    {
+     "w": "the",
+     "start": 11.017,
+     "end": 11.097,
+     "conf": 0.902
+    },
+    {
+     "w": "berlin",
+     "start": 11.157,
+     "end": 11.518,
+     "conf": 0.983
+    },
+    {
+     "w": "wall",
+     "start": 11.618,
+     "end": 11.898,
+     "conf": 0.75
+    },
+    {
+     "w": "and",
+     "start": 12.099,
+     "end": 12.219,
+     "conf": 0.694
+    },
+    {
+     "w": "for",
+     "start": 12.299,
+     "end": 12.419,
+     "conf": 0.663
+    },
+    {
+     "w": "once",
+     "start": 12.58,
+     "end": 12.82,
+     "conf": 0.748
+    },
+    {
+     "w": "the",
+     "start": 12.84,
+     "end": 13.02,
+     "conf": 0.664
+    },
+    {
+     "w": "story",
+     "start": 13.12,
+     "end": 13.401,
+     "conf": 0.797
+    },
+    {
+     "w": "ended",
+     "start": 13.561,
+     "end": 13.802,
+     "conf": 0.799
+    },
+    {
+     "w": "with",
+     "start": 13.822,
+     "end": 13.962,
+     "conf": 0.974
+    },
+    {
+     "w": "a",
+     "start": 14.002,
+     "end": 14.022,
+     "conf": 0.007
+    },
+    {
+     "w": "party",
+     "start": 14.102,
+     "end": 14.343,
+     "conf": 0.799
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "I promised you the next one wouldn't, so let's get this over with.",
+   "idea": false,
+   "start": 14.833,
+   "end": 18.205,
+   "words": [
+    {
+     "w": "i",
+     "start": 14.833,
+     "end": 14.853,
+     "conf": 0.434
+    },
+    {
+     "w": "promised",
+     "start": 14.873,
+     "end": 15.315,
+     "conf": 0.836
+    },
+    {
+     "w": "you",
+     "start": 15.335,
+     "end": 15.415,
+     "conf": 0.849
+    },
+    {
+     "w": "the",
+     "start": 15.496,
+     "end": 15.576,
+     "conf": 0.997
+    },
+    {
+     "w": "next",
+     "start": 15.596,
+     "end": 15.877,
+     "conf": 0.742
+    },
+    {
+     "w": "one",
+     "start": 16.037,
+     "end": 16.098,
+     "conf": 0.663
+    },
+    {
+     "w": "wouldn't",
+     "start": 16.198,
+     "end": 16.559,
+     "conf": 0.832
+    },
+    {
+     "w": "so",
+     "start": 16.98,
+     "end": 17.041,
+     "conf": 0.5
+    },
+    {
+     "w": "let's",
+     "start": 17.121,
+     "end": 17.261,
+     "conf": 0.597
+    },
+    {
+     "w": "get",
+     "start": 17.281,
+     "end": 17.442,
+     "conf": 0.749
+    },
+    {
+     "w": "this",
+     "start": 17.462,
+     "end": 17.643,
+     "conf": 0.821
+    },
+    {
+     "w": "over",
+     "start": 17.743,
+     "end": 17.964,
+     "conf": 0.749
+    },
+    {
+     "w": "with",
+     "start": 18.044,
+     "end": 18.205,
+     "conf": 0.25
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It's December seventh, nineteen forty-one, two minutes past seven on a quiet Sunday morning in Hawaii.",
+   "idea": false,
+   "start": 18.634,
+   "end": 24.268,
+   "words": [
+    {
+     "w": "it's",
+     "start": 18.634,
+     "end": 18.734,
+     "conf": 0.477
+    },
+    {
+     "w": "december",
+     "start": 18.775,
+     "end": 19.216,
+     "conf": 0.876
+    },
+    {
+     "w": "seventh",
+     "start": 19.236,
+     "end": 19.717,
+     "conf": 0.016
+    },
+    {
+     "w": "nineteen",
+     "start": 19.737,
+     "end": 20.158,
+     "conf": 0.001
+    },
+    {
+     "w": "forty-one",
+     "start": 20.178,
+     "end": 20.82,
+     "conf": 0.001
+    },
+    {
+     "w": "two",
+     "start": 20.96,
+     "end": 21.1,
+     "conf": 0.64
+    },
+    {
+     "w": "minutes",
+     "start": 21.12,
+     "end": 21.381,
+     "conf": 0.855
+    },
+    {
+     "w": "past",
+     "start": 21.461,
+     "end": 21.782,
+     "conf": 0.542
+    },
+    {
+     "w": "seven",
+     "start": 21.802,
+     "end": 22.283,
+     "conf": 0.042
+    },
+    {
+     "w": "on",
+     "start": 22.444,
+     "end": 22.504,
+     "conf": 0.498
+    },
+    {
+     "w": "a",
+     "start": 22.564,
+     "end": 22.584,
+     "conf": 0.002
+    },
+    {
+     "w": "quiet",
+     "start": 22.664,
+     "end": 23.005,
+     "conf": 0.721
+    },
+    {
+     "w": "sunday",
+     "start": 23.065,
+     "end": 23.346,
+     "conf": 0.99
+    },
+    {
+     "w": "morning",
+     "start": 23.426,
+     "end": 23.747,
+     "conf": 0.863
+    },
+    {
+     "w": "in",
+     "start": 23.807,
+     "end": 23.847,
+     "conf": 0.495
+    },
+    {
+     "w": "hawaii",
+     "start": 23.928,
+     "end": 24.268,
+     "conf": 0.459
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Two young privates on a hilltop are staring at the biggest blip they have ever seen on a radar screen, and it is heading straight for them.",
+   "idea": false,
+   "start": 24.879,
+   "end": 32.454,
+   "words": [
+    {
+     "w": "two",
+     "start": 24.879,
+     "end": 25.04,
+     "conf": 0.715
+    },
+    {
+     "w": "young",
+     "start": 25.1,
+     "end": 25.28,
+     "conf": 0.987
+    },
+    {
+     "w": "privates",
+     "start": 25.34,
+     "end": 25.921,
+     "conf": 0.931
+    },
+    {
+     "w": "on",
+     "start": 26.062,
+     "end": 26.142,
+     "conf": 0.945
+    },
+    {
+     "w": "a",
+     "start": 26.182,
+     "end": 26.202,
+     "conf": 0.99
+    },
+    {
+     "w": "hilltop",
+     "start": 26.262,
+     "end": 26.703,
+     "conf": 0.812
+    },
+    {
+     "w": "are",
+     "start": 26.803,
+     "end": 26.903,
+     "conf": 0.946
+    },
+    {
+     "w": "staring",
+     "start": 26.963,
+     "end": 27.344,
+     "conf": 0.836
+    },
+    {
+     "w": "at",
+     "start": 27.364,
+     "end": 27.464,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 27.484,
+     "end": 27.565,
+     "conf": 0.994
+    },
+    {
+     "w": "biggest",
+     "start": 27.685,
+     "end": 27.985,
+     "conf": 0.864
+    },
+    {
+     "w": "blip",
+     "start": 28.066,
+     "end": 28.266,
+     "conf": 0.729
+    },
+    {
+     "w": "they",
+     "start": 28.286,
+     "end": 28.406,
+     "conf": 0.798
+    },
+    {
+     "w": "have",
+     "start": 28.466,
+     "end": 28.587,
+     "conf": 0.759
+    },
+    {
+     "w": "ever",
+     "start": 28.727,
+     "end": 28.927,
+     "conf": 0.999
+    },
+    {
+     "w": "seen",
+     "start": 29.068,
+     "end": 29.348,
+     "conf": 0.749
+    },
+    {
+     "w": "on",
+     "start": 29.488,
+     "end": 29.549,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 29.609,
+     "end": 29.629,
+     "conf": 0.002
+    },
+    {
+     "w": "radar",
+     "start": 29.709,
+     "end": 30.029,
+     "conf": 0.784
+    },
+    {
+     "w": "screen",
+     "start": 30.13,
+     "end": 30.51,
+     "conf": 0.769
+    },
+    {
+     "w": "and",
+     "start": 30.751,
+     "end": 30.811,
+     "conf": 0.661
+    },
+    {
+     "w": "it",
+     "start": 30.871,
+     "end": 30.951,
+     "conf": 0.498
+    },
+    {
+     "w": "is",
+     "start": 31.011,
+     "end": 31.092,
+     "conf": 0.499
+    },
+    {
+     "w": "heading",
+     "start": 31.232,
+     "end": 31.532,
+     "conf": 0.862
+    },
+    {
+     "w": "straight",
+     "start": 31.693,
+     "end": 32.013,
+     "conf": 0.817
+    },
+    {
+     "w": "for",
+     "start": 32.094,
+     "end": 32.254,
+     "conf": 0.671
+    },
+    {
+     "w": "them",
+     "start": 32.334,
+     "end": 32.454,
+     "conf": 0.741
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So they do exactly what they're supposed to do, and they pick up the phone.",
+   "idea": false,
+   "start": 32.864,
+   "end": 36.921,
+   "words": [
+    {
+     "w": "so",
+     "start": 32.864,
+     "end": 32.924,
+     "conf": 0.999
+    },
+    {
+     "w": "they",
+     "start": 32.985,
+     "end": 33.105,
+     "conf": 0.999
+    },
+    {
+     "w": "do",
+     "start": 33.206,
+     "end": 33.266,
+     "conf": 0.5
+    },
+    {
+     "w": "exactly",
+     "start": 33.426,
+     "end": 33.989,
+     "conf": 0.855
+    },
+    {
+     "w": "what",
+     "start": 34.049,
+     "end": 34.17,
+     "conf": 0.997
+    },
+    {
+     "w": "they're",
+     "start": 34.19,
+     "end": 34.33,
+     "conf": 0.718
+    },
+    {
+     "w": "supposed",
+     "start": 34.35,
+     "end": 34.792,
+     "conf": 0.868
+    },
+    {
+     "w": "to",
+     "start": 34.812,
+     "end": 34.873,
+     "conf": 0.667
+    },
+    {
+     "w": "do",
+     "start": 34.993,
+     "end": 35.074,
+     "conf": 0.514
+    },
+    {
+     "w": "and",
+     "start": 35.636,
+     "end": 35.716,
+     "conf": 0.721
+    },
+    {
+     "w": "they",
+     "start": 35.736,
+     "end": 35.877,
+     "conf": 0.907
+    },
+    {
+     "w": "pick",
+     "start": 36.018,
+     "end": 36.238,
+     "conf": 0.782
+    },
+    {
+     "w": "up",
+     "start": 36.319,
+     "end": 36.399,
+     "conf": 0.51
+    },
+    {
+     "w": "the",
+     "start": 36.5,
+     "end": 36.56,
+     "conf": 0.662
+    },
+    {
+     "w": "phone",
+     "start": 36.66,
+     "end": 36.921,
+     "conf": 0.554
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And the officer on the other end of the line listens, thinks about it, and says: don't worry about it.",
+   "idea": false,
+   "start": 37.452,
+   "end": 42.743,
+   "words": [
+    {
+     "w": "and",
+     "start": 37.452,
+     "end": 37.553,
+     "conf": 0.993
+    },
+    {
+     "w": "the",
+     "start": 37.573,
+     "end": 37.633,
+     "conf": 0.993
+    },
+    {
+     "w": "officer",
+     "start": 37.773,
+     "end": 38.194,
+     "conf": 0.995
+    },
+    {
+     "w": "on",
+     "start": 38.314,
+     "end": 38.354,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 38.374,
+     "end": 38.454,
+     "conf": 0.894
+    },
+    {
+     "w": "other",
+     "start": 38.595,
+     "end": 38.775,
+     "conf": 0.798
+    },
+    {
+     "w": "end",
+     "start": 38.895,
+     "end": 38.995,
+     "conf": 0.726
+    },
+    {
+     "w": "of",
+     "start": 39.015,
+     "end": 39.096,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 39.116,
+     "end": 39.196,
+     "conf": 0.995
+    },
+    {
+     "w": "line",
+     "start": 39.296,
+     "end": 39.637,
+     "conf": 0.524
+    },
+    {
+     "w": "listens",
+     "start": 39.757,
+     "end": 40.258,
+     "conf": 0.794
+    },
+    {
+     "w": "thinks",
+     "start": 40.538,
+     "end": 40.759,
+     "conf": 0.806
+    },
+    {
+     "w": "about",
+     "start": 40.819,
+     "end": 41.079,
+     "conf": 0.818
+    },
+    {
+     "w": "it",
+     "start": 41.139,
+     "end": 41.2,
+     "conf": 0.499
+    },
+    {
+     "w": "and",
+     "start": 41.3,
+     "end": 41.38,
+     "conf": 0.664
+    },
+    {
+     "w": "says",
+     "start": 41.46,
+     "end": 41.64,
+     "conf": 0.747
+    },
+    {
+     "w": "don't",
+     "start": 41.921,
+     "end": 42.101,
+     "conf": 0.897
+    },
+    {
+     "w": "worry",
+     "start": 42.121,
+     "end": 42.342,
+     "conf": 0.798
+    },
+    {
+     "w": "about",
+     "start": 42.442,
+     "end": 42.662,
+     "conf": 0.793
+    },
+    {
+     "w": "it",
+     "start": 42.682,
+     "end": 42.743,
+     "conf": 0.652
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "A couple of hours later, more than two thousand Americans are dead, and the United States is at war.",
+   "idea": true,
+   "start": 43.353,
+   "end": 48.633,
+   "words": [
+    {
+     "w": "a",
+     "start": 43.353,
+     "end": 43.373,
+     "conf": 0.998
+    },
+    {
+     "w": "couple",
+     "start": 43.473,
+     "end": 43.694,
+     "conf": 0.668
+    },
+    {
+     "w": "of",
+     "start": 43.714,
+     "end": 43.795,
+     "conf": 0.997
+    },
+    {
+     "w": "hours",
+     "start": 43.815,
+     "end": 44.136,
+     "conf": 0.952
+    },
+    {
+     "w": "later",
+     "start": 44.216,
+     "end": 44.457,
+     "conf": 0.799
+    },
+    {
+     "w": "more",
+     "start": 44.558,
+     "end": 44.698,
+     "conf": 0.901
+    },
+    {
+     "w": "than",
+     "start": 44.718,
+     "end": 44.859,
+     "conf": 0.798
+    },
+    {
+     "w": "two",
+     "start": 44.879,
+     "end": 45.16,
+     "conf": 0.517
+    },
+    {
+     "w": "thousand",
+     "start": 45.22,
+     "end": 45.562,
+     "conf": 0.577
+    },
+    {
+     "w": "americans",
+     "start": 45.622,
+     "end": 46.144,
+     "conf": 0.888
+    },
+    {
+     "w": "are",
+     "start": 46.164,
+     "end": 46.284,
+     "conf": 0.748
+    },
+    {
+     "w": "dead",
+     "start": 46.385,
+     "end": 46.666,
+     "conf": 0.792
+    },
+    {
+     "w": "and",
+     "start": 46.907,
+     "end": 46.967,
+     "conf": 0.633
+    },
+    {
+     "w": "the",
+     "start": 46.987,
+     "end": 47.067,
+     "conf": 0.997
+    },
+    {
+     "w": "united",
+     "start": 47.148,
+     "end": 47.489,
+     "conf": 0.832
+    },
+    {
+     "w": "states",
+     "start": 47.589,
+     "end": 47.971,
+     "conf": 0.869
+    },
+    {
+     "w": "is",
+     "start": 48.051,
+     "end": 48.111,
+     "conf": 0.498
+    },
+    {
+     "w": "at",
+     "start": 48.212,
+     "end": 48.312,
+     "conf": 0.499
+    },
+    {
+     "w": "war",
+     "start": 48.413,
+     "end": 48.633,
+     "conf": 0.671
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And here's the part that makes it worse.",
+   "idea": false,
+   "start": 49.785,
+   "end": 51.801,
+   "words": [
+    {
+     "w": "and",
+     "start": 49.785,
+     "end": 49.886,
+     "conf": 0.996
+    },
+    {
+     "w": "here's",
+     "start": 49.967,
+     "end": 50.168,
+     "conf": 0.641
+    },
+    {
+     "w": "the",
+     "start": 50.188,
+     "end": 50.289,
+     "conf": 0.756
+    },
+    {
+     "w": "part",
+     "start": 50.35,
+     "end": 50.632,
+     "conf": 0.749
+    },
+    {
+     "w": "that",
+     "start": 50.713,
+     "end": 50.894,
+     "conf": 0.64
+    },
+    {
+     "w": "makes",
+     "start": 51.096,
+     "end": 51.317,
+     "conf": 0.797
+    },
+    {
+     "w": "it",
+     "start": 51.378,
+     "end": 51.438,
+     "conf": 0.499
+    },
+    {
+     "w": "worse",
+     "start": 51.519,
+     "end": 51.801,
+     "conf": 0.795
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "That phone call wasn't even the first warning that morning, and it wouldn't be the last.",
+   "idea": false,
+   "start": 52.371,
+   "end": 57.059,
+   "words": [
+    {
+     "w": "that",
+     "start": 52.371,
+     "end": 52.532,
+     "conf": 0.988
+    },
+    {
+     "w": "phone",
+     "start": 52.612,
+     "end": 52.832,
+     "conf": 0.483
+    },
+    {
+     "w": "call",
+     "start": 52.852,
+     "end": 53.133,
+     "conf": 0.609
+    },
+    {
+     "w": "wasn't",
+     "start": 53.293,
+     "end": 53.573,
+     "conf": 0.721
+    },
+    {
+     "w": "even",
+     "start": 53.613,
+     "end": 53.794,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 53.814,
+     "end": 53.934,
+     "conf": 0.665
+    },
+    {
+     "w": "first",
+     "start": 54.014,
+     "end": 54.295,
+     "conf": 0.798
+    },
+    {
+     "w": "warning",
+     "start": 54.415,
+     "end": 54.755,
+     "conf": 0.829
+    },
+    {
+     "w": "that",
+     "start": 54.775,
+     "end": 54.956,
+     "conf": 0.81
+    },
+    {
+     "w": "morning",
+     "start": 55.056,
+     "end": 55.417,
+     "conf": 0.857
+    },
+    {
+     "w": "and",
+     "start": 55.577,
+     "end": 55.637,
+     "conf": 0.661
+    },
+    {
+     "w": "it",
+     "start": 55.657,
+     "end": 55.737,
+     "conf": 0.663
+    },
+    {
+     "w": "wouldn't",
+     "start": 55.817,
+     "end": 56.178,
+     "conf": 0.82
+    },
+    {
+     "w": "be",
+     "start": 56.278,
+     "end": 56.338,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 56.458,
+     "end": 56.538,
+     "conf": 0.642
+    },
+    {
+     "w": "last",
+     "start": 56.639,
+     "end": 57.059,
+     "conf": 0.748
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So how do you sleep through three alarms in a single morning?",
+   "idea": false,
+   "start": 57.47,
+   "end": 60.799,
+   "words": [
+    {
+     "w": "so",
+     "start": 57.47,
+     "end": 57.55,
+     "conf": 0.997
+    },
+    {
+     "w": "how",
+     "start": 57.671,
+     "end": 57.771,
+     "conf": 0.793
+    },
+    {
+     "w": "do",
+     "start": 57.791,
+     "end": 57.831,
+     "conf": 0.972
+    },
+    {
+     "w": "you",
+     "start": 57.911,
+     "end": 57.991,
+     "conf": 0.737
+    },
+    {
+     "w": "sleep",
+     "start": 58.112,
+     "end": 58.413,
+     "conf": 0.799
+    },
+    {
+     "w": "through",
+     "start": 58.513,
+     "end": 58.814,
+     "conf": 0.869
+    },
+    {
+     "w": "three",
+     "start": 58.974,
+     "end": 59.195,
+     "conf": 0.743
+    },
+    {
+     "w": "alarms",
+     "start": 59.275,
+     "end": 59.736,
+     "conf": 0.832
+    },
+    {
+     "w": "in",
+     "start": 59.796,
+     "end": 59.836,
+     "conf": 0.498
+    },
+    {
+     "w": "a",
+     "start": 59.896,
+     "end": 59.916,
+     "conf": 0.003
+    },
+    {
+     "w": "single",
+     "start": 60.017,
+     "end": 60.378,
+     "conf": 0.871
+    },
+    {
+     "w": "morning",
+     "start": 60.438,
+     "end": 60.799,
+     "conf": 0.861
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "To answer that, we need to talk about oil.",
+   "idea": true,
+   "start": 61.31,
+   "end": 63.432,
+   "words": [
+    {
+     "w": "to",
+     "start": 61.31,
+     "end": 61.351,
+     "conf": 0.5
+    },
+    {
+     "w": "answer",
+     "start": 61.452,
+     "end": 61.694,
+     "conf": 0.895
+    },
+    {
+     "w": "that",
+     "start": 61.714,
+     "end": 61.916,
+     "conf": 0.798
+    },
+    {
+     "w": "we",
+     "start": 62.038,
+     "end": 62.098,
+     "conf": 0.997
+    },
+    {
+     "w": "need",
+     "start": 62.179,
+     "end": 62.3,
+     "conf": 0.754
+    },
+    {
+     "w": "to",
+     "start": 62.341,
+     "end": 62.421,
+     "conf": 0.994
+    },
+    {
+     "w": "talk",
+     "start": 62.502,
+     "end": 62.745,
+     "conf": 0.751
+    },
+    {
+     "w": "about",
+     "start": 62.825,
+     "end": 63.068,
+     "conf": 0.799
+    },
+    {
+     "w": "oil",
+     "start": 63.31,
+     "end": 63.432,
+     "conf": 0.658
+    }
+   ]
+  },
+  {
+   "section": "Running on empty",
+   "act": "",
+   "text": "By nineteen forty-one, Japan had been fighting a brutal war in China for four years, and it had just marched into French Indochina as well.",
+   "idea": false,
+   "start": 65.212,
+   "end": 72.856,
+   "words": [
+    {
+     "w": "by",
+     "start": 65.212,
+     "end": 65.333,
+     "conf": 0.898
+    },
+    {
+     "w": "nineteen",
+     "start": 65.393,
+     "end": 65.734,
+     "conf": 0.0
+    },
+    {
+     "w": "forty-one",
+     "start": 65.754,
+     "end": 66.416,
+     "conf": 0.004
+    },
+    {
+     "w": "japan",
+     "start": 66.496,
+     "end": 66.858,
+     "conf": 0.828
+    },
+    {
+     "w": "had",
+     "start": 66.918,
+     "end": 66.978,
+     "conf": 0.64
+    },
+    {
+     "w": "been",
+     "start": 67.038,
+     "end": 67.159,
+     "conf": 0.749
+    },
+    {
+     "w": "fighting",
+     "start": 67.259,
+     "end": 67.62,
+     "conf": 0.847
+    },
+    {
+     "w": "a",
+     "start": 67.7,
+     "end": 67.72,
+     "conf": 0.0
+    },
+    {
+     "w": "brutal",
+     "start": 67.841,
+     "end": 68.202,
+     "conf": 0.785
+    },
+    {
+     "w": "war",
+     "start": 68.322,
+     "end": 68.503,
+     "conf": 0.666
+    },
+    {
+     "w": "in",
+     "start": 68.583,
+     "end": 68.643,
+     "conf": 0.5
+    },
+    {
+     "w": "china",
+     "start": 68.743,
+     "end": 69.064,
+     "conf": 0.766
+    },
+    {
+     "w": "for",
+     "start": 69.185,
+     "end": 69.285,
+     "conf": 0.666
+    },
+    {
+     "w": "four",
+     "start": 69.385,
+     "end": 69.566,
+     "conf": 0.756
+    },
+    {
+     "w": "years",
+     "start": 69.686,
+     "end": 70.007,
+     "conf": 0.832
+    },
+    {
+     "w": "and",
+     "start": 70.108,
+     "end": 70.168,
+     "conf": 0.546
+    },
+    {
+     "w": "it",
+     "start": 70.188,
+     "end": 70.248,
+     "conf": 0.831
+    },
+    {
+     "w": "had",
+     "start": 70.268,
+     "end": 70.348,
+     "conf": 0.907
+    },
+    {
+     "w": "just",
+     "start": 70.429,
+     "end": 70.629,
+     "conf": 0.748
+    },
+    {
+     "w": "marched",
+     "start": 70.83,
+     "end": 71.171,
+     "conf": 0.859
+    },
+    {
+     "w": "into",
+     "start": 71.231,
+     "end": 71.372,
+     "conf": 0.748
+    },
+    {
+     "w": "french",
+     "start": 71.452,
+     "end": 71.693,
+     "conf": 0.832
+    },
+    {
+     "w": "indochina",
+     "start": 71.813,
+     "end": 72.355,
+     "conf": 0.874
+    },
+    {
+     "w": "as",
+     "start": 72.475,
+     "end": 72.555,
+     "conf": 0.5
+    },
+    {
+     "w": "well",
+     "start": 72.656,
+     "end": 72.856,
+     "conf": 0.79
+    }
+   ]
+  },
+  {
+   "section": "Running on empty",
+   "act": "",
+   "text": "The United States answered by freezing Japanese money and cutting off its oil, which was a big deal, because most of Japan's oil came from America.",
+   "idea": false,
+   "start": 73.306,
+   "end": 81.539,
+   "words": [
+    {
+     "w": "the",
+     "start": 73.306,
+     "end": 73.366,
+     "conf": 0.994
+    },
+    {
+     "w": "united",
+     "start": 73.426,
+     "end": 73.707,
+     "conf": 0.986
+    },
+    {
+     "w": "states",
+     "start": 73.747,
+     "end": 74.047,
+     "conf": 0.91
+    },
+    {
+     "w": "answered",
+     "start": 74.167,
+     "end": 74.548,
+     "conf": 0.872
+    },
+    {
+     "w": "by",
+     "start": 74.628,
+     "end": 74.748,
+     "conf": 0.5
+    },
+    {
+     "w": "freezing",
+     "start": 74.868,
+     "end": 75.269,
+     "conf": 0.75
+    },
+    {
+     "w": "japanese",
+     "start": 75.369,
+     "end": 75.99,
+     "conf": 0.868
+    },
+    {
+     "w": "money",
+     "start": 76.07,
+     "end": 76.311,
+     "conf": 0.74
+    },
+    {
+     "w": "and",
+     "start": 76.391,
+     "end": 76.471,
+     "conf": 0.697
+    },
+    {
+     "w": "cutting",
+     "start": 76.551,
+     "end": 76.811,
+     "conf": 0.876
+    },
+    {
+     "w": "off",
+     "start": 76.892,
+     "end": 76.992,
+     "conf": 0.673
+    },
+    {
+     "w": "its",
+     "start": 77.072,
+     "end": 77.152,
+     "conf": 0.662
+    },
+    {
+     "w": "oil",
+     "start": 77.292,
+     "end": 77.472,
+     "conf": 0.637
+    },
+    {
+     "w": "which",
+     "start": 77.553,
+     "end": 77.673,
+     "conf": 0.987
+    },
+    {
+     "w": "was",
+     "start": 77.693,
+     "end": 77.793,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 77.873,
+     "end": 77.893,
+     "conf": 0.001
+    },
+    {
+     "w": "big",
+     "start": 77.973,
+     "end": 78.113,
+     "conf": 0.666
+    },
+    {
+     "w": "deal",
+     "start": 78.254,
+     "end": 78.514,
+     "conf": 0.745
+    },
+    {
+     "w": "because",
+     "start": 78.694,
+     "end": 79.075,
+     "conf": 0.825
+    },
+    {
+     "w": "most",
+     "start": 79.335,
+     "end": 79.616,
+     "conf": 0.772
+    },
+    {
+     "w": "of",
+     "start": 79.676,
+     "end": 79.716,
+     "conf": 0.499
+    },
+    {
+     "w": "japan's",
+     "start": 79.776,
+     "end": 80.197,
+     "conf": 0.822
+    },
+    {
+     "w": "oil",
+     "start": 80.317,
+     "end": 80.497,
+     "conf": 0.645
+    },
+    {
+     "w": "came",
+     "start": 80.617,
+     "end": 80.817,
+     "conf": 0.749
+    },
+    {
+     "w": "from",
+     "start": 80.878,
+     "end": 80.998,
+     "conf": 0.749
+    },
+    {
+     "w": "america",
+     "start": 81.078,
+     "end": 81.539,
+     "conf": 0.852
+    }
+   ]
+  },
+  {
+   "section": "Running on empty",
+   "act": "",
+   "text": "Without oil, Japan's navy would slowly turn into a very expensive collection of parked boats.",
+   "idea": false,
+   "start": 81.948,
+   "end": 87.165,
+   "words": [
+    {
+     "w": "without",
+     "start": 81.948,
+     "end": 82.249,
+     "conf": 0.989
+    },
+    {
+     "w": "oil",
+     "start": 82.329,
+     "end": 82.57,
+     "conf": 0.737
+    },
+    {
+     "w": "japan's",
+     "start": 82.691,
+     "end": 83.072,
+     "conf": 0.81
+    },
+    {
+     "w": "navy",
+     "start": 83.152,
+     "end": 83.373,
+     "conf": 0.759
+    },
+    {
+     "w": "would",
+     "start": 83.433,
+     "end": 83.594,
+     "conf": 0.947
+    },
+    {
+     "w": "slowly",
+     "start": 83.714,
+     "end": 84.135,
+     "conf": 0.822
+    },
+    {
+     "w": "turn",
+     "start": 84.256,
+     "end": 84.456,
+     "conf": 0.785
+    },
+    {
+     "w": "into",
+     "start": 84.517,
+     "end": 84.657,
+     "conf": 0.749
+    },
+    {
+     "w": "a",
+     "start": 84.757,
+     "end": 84.777,
+     "conf": 0.006
+    },
+    {
+     "w": "very",
+     "start": 84.838,
+     "end": 85.018,
+     "conf": 0.75
+    },
+    {
+     "w": "expensive",
+     "start": 85.119,
+     "end": 85.66,
+     "conf": 0.889
+    },
+    {
+     "w": "collection",
+     "start": 85.701,
+     "end": 86.142,
+     "conf": 0.889
+    },
+    {
+     "w": "of",
+     "start": 86.162,
+     "end": 86.262,
+     "conf": 0.665
+    },
+    {
+     "w": "parked",
+     "start": 86.383,
+     "end": 86.704,
+     "conf": 0.542
+    },
+    {
+     "w": "boats",
+     "start": 86.784,
+     "end": 87.165,
+     "conf": 0.783
+    }
+   ]
+  },
+  {
+   "section": "Running on empty",
+   "act": "",
+   "text": "So Japan's leaders had a choice: back down, or grab the oil fields of Southeast Asia and fight whoever tried to stop them.",
+   "idea": true,
+   "start": 87.596,
+   "end": 94.359,
+   "words": [
+    {
+     "w": "so",
+     "start": 87.596,
+     "end": 87.656,
+     "conf": 0.999
+    },
+    {
+     "w": "japan's",
+     "start": 87.797,
+     "end": 88.359,
+     "conf": 0.933
+    },
+    {
+     "w": "leaders",
+     "start": 88.459,
+     "end": 88.76,
+     "conf": 0.855
+    },
+    {
+     "w": "had",
+     "start": 88.8,
+     "end": 88.941,
+     "conf": 0.876
+    },
+    {
+     "w": "a",
+     "start": 89.001,
+     "end": 89.021,
+     "conf": 0.01
+    },
+    {
+     "w": "choice",
+     "start": 89.101,
+     "end": 89.543,
+     "conf": 0.984
+    },
+    {
+     "w": "back",
+     "start": 89.663,
+     "end": 89.824,
+     "conf": 0.75
+    },
+    {
+     "w": "down",
+     "start": 89.924,
+     "end": 90.185,
+     "conf": 0.706
+    },
+    {
+     "w": "or",
+     "start": 90.325,
+     "end": 90.386,
+     "conf": 0.498
+    },
+    {
+     "w": "grab",
+     "start": 90.466,
+     "end": 90.667,
+     "conf": 0.659
+    },
+    {
+     "w": "the",
+     "start": 90.787,
+     "end": 90.867,
+     "conf": 0.995
+    },
+    {
+     "w": "oil",
+     "start": 90.968,
+     "end": 91.108,
+     "conf": 0.661
+    },
+    {
+     "w": "fields",
+     "start": 91.208,
+     "end": 91.489,
+     "conf": 0.852
+    },
+    {
+     "w": "of",
+     "start": 91.509,
+     "end": 91.59,
+     "conf": 0.998
+    },
+    {
+     "w": "southeast",
+     "start": 91.67,
+     "end": 92.091,
+     "conf": 0.895
+    },
+    {
+     "w": "asia",
+     "start": 92.192,
+     "end": 92.392,
+     "conf": 0.75
+    },
+    {
+     "w": "and",
+     "start": 92.513,
+     "end": 92.593,
+     "conf": 0.729
+    },
+    {
+     "w": "fight",
+     "start": 92.693,
+     "end": 92.974,
+     "conf": 0.75
+    },
+    {
+     "w": "whoever",
+     "start": 93.115,
+     "end": 93.476,
+     "conf": 0.871
+    },
+    {
+     "w": "tried",
+     "start": 93.556,
+     "end": 93.777,
+     "conf": 0.802
+    },
+    {
+     "w": "to",
+     "start": 93.797,
+     "end": 93.857,
+     "conf": 0.681
+    },
+    {
+     "w": "stop",
+     "start": 93.938,
+     "end": 94.158,
+     "conf": 0.75
+    },
+    {
+     "w": "them",
+     "start": 94.239,
+     "end": 94.359,
+     "conf": 0.534
+    }
+   ]
+  },
+  {
+   "section": "Running on empty",
+   "act": "",
+   "text": "They chose to fight, and the one thing that could stop them was sitting in the middle of the Pacific.",
+   "idea": false,
+   "start": 95.449,
+   "end": 100.901,
+   "words": [
+    {
+     "w": "they",
+     "start": 95.449,
+     "end": 95.57,
+     "conf": 0.736
+    },
+    {
+     "w": "chose",
+     "start": 95.67,
+     "end": 95.95,
+     "conf": 0.83
+    },
+    {
+     "w": "to",
+     "start": 95.97,
+     "end": 96.051,
+     "conf": 0.665
+    },
+    {
+     "w": "fight",
+     "start": 96.171,
+     "end": 96.532,
+     "conf": 0.831
+    },
+    {
+     "w": "and",
+     "start": 96.832,
+     "end": 96.912,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 96.932,
+     "end": 97.033,
+     "conf": 0.743
+    },
+    {
+     "w": "one",
+     "start": 97.233,
+     "end": 97.393,
+     "conf": 0.999
+    },
+    {
+     "w": "thing",
+     "start": 97.473,
+     "end": 97.694,
+     "conf": 0.841
+    },
+    {
+     "w": "that",
+     "start": 97.754,
+     "end": 97.854,
+     "conf": 0.684
+    },
+    {
+     "w": "could",
+     "start": 97.914,
+     "end": 98.055,
+     "conf": 0.756
+    },
+    {
+     "w": "stop",
+     "start": 98.135,
+     "end": 98.355,
+     "conf": 0.656
+    },
+    {
+     "w": "them",
+     "start": 98.496,
+     "end": 98.736,
+     "conf": 0.995
+    },
+    {
+     "w": "was",
+     "start": 99.037,
+     "end": 99.217,
+     "conf": 0.67
+    },
+    {
+     "w": "sitting",
+     "start": 99.418,
+     "end": 99.718,
+     "conf": 0.868
+    },
+    {
+     "w": "in",
+     "start": 99.778,
+     "end": 99.818,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 99.838,
+     "end": 99.919,
+     "conf": 0.984
+    },
+    {
+     "w": "middle",
+     "start": 99.979,
+     "end": 100.199,
+     "conf": 0.832
+    },
+    {
+     "w": "of",
+     "start": 100.219,
+     "end": 100.299,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 100.319,
+     "end": 100.4,
+     "conf": 0.996
+    },
+    {
+     "w": "pacific",
+     "start": 100.46,
+     "end": 100.901,
+     "conf": 0.857
+    }
+   ]
+  },
+  {
+   "section": "Running on empty",
+   "act": "",
+   "text": "The year before, the United States had kept its Pacific Fleet at Pearl Harbor, in Hawaii, instead of California, to make Japan think twice.",
+   "idea": false,
+   "start": 101.331,
+   "end": 109.104,
+   "words": [
+    {
+     "w": "the",
+     "start": 101.331,
+     "end": 101.411,
+     "conf": 0.334
+    },
+    {
+     "w": "year",
+     "start": 101.431,
+     "end": 101.511,
+     "conf": 0.25
+    },
+    {
+     "w": "before",
+     "start": 101.531,
+     "end": 101.952,
+     "conf": 0.971
+    },
+    {
+     "w": "the",
+     "start": 102.012,
+     "end": 102.072,
+     "conf": 0.995
+    },
+    {
+     "w": "united",
+     "start": 102.132,
+     "end": 102.413,
+     "conf": 0.998
+    },
+    {
+     "w": "states",
+     "start": 102.453,
+     "end": 102.733,
+     "conf": 0.92
+    },
+    {
+     "w": "had",
+     "start": 102.773,
+     "end": 102.854,
+     "conf": 0.998
+    },
+    {
+     "w": "kept",
+     "start": 102.894,
+     "end": 103.074,
+     "conf": 0.999
+    },
+    {
+     "w": "its",
+     "start": 103.154,
+     "end": 103.234,
+     "conf": 0.614
+    },
+    {
+     "w": "pacific",
+     "start": 103.334,
+     "end": 103.735,
+     "conf": 0.857
+    },
+    {
+     "w": "fleet",
+     "start": 103.855,
+     "end": 104.116,
+     "conf": 0.786
+    },
+    {
+     "w": "at",
+     "start": 104.276,
+     "end": 104.336,
+     "conf": 0.498
+    },
+    {
+     "w": "pearl",
+     "start": 104.416,
+     "end": 104.677,
+     "conf": 0.444
+    },
+    {
+     "w": "harbor",
+     "start": 104.757,
+     "end": 105.157,
+     "conf": 0.966
+    },
+    {
+     "w": "in",
+     "start": 105.438,
+     "end": 105.478,
+     "conf": 0.497
+    },
+    {
+     "w": "hawaii",
+     "start": 105.618,
+     "end": 106.379,
+     "conf": 0.649
+    },
+    {
+     "w": "instead",
+     "start": 106.4,
+     "end": 106.7,
+     "conf": 0.855
+    },
+    {
+     "w": "of",
+     "start": 106.72,
+     "end": 106.78,
+     "conf": 0.999
+    },
+    {
+     "w": "california",
+     "start": 106.84,
+     "end": 107.441,
+     "conf": 0.899
+    },
+    {
+     "w": "to",
+     "start": 107.561,
+     "end": 107.602,
+     "conf": 0.499
+    },
+    {
+     "w": "make",
+     "start": 107.662,
+     "end": 107.822,
+     "conf": 0.855
+    },
+    {
+     "w": "japan",
+     "start": 107.842,
+     "end": 108.303,
+     "conf": 0.999
+    },
+    {
+     "w": "think",
+     "start": 108.423,
+     "end": 108.583,
+     "conf": 0.683
+    },
+    {
+     "w": "twice",
+     "start": 108.663,
+     "end": 109.104,
+     "conf": 0.655
+    }
+   ]
+  },
+  {
+   "section": "Running on empty",
+   "act": "",
+   "text": "Japan's admirals did think twice, and their conclusion was: sink it.",
+   "idea": true,
+   "start": 109.534,
+   "end": 113.28,
+   "words": [
+    {
+     "w": "japan's",
+     "start": 109.534,
+     "end": 109.915,
+     "conf": 0.911
+    },
+    {
+     "w": "admirals",
+     "start": 109.995,
+     "end": 110.375,
+     "conf": 0.933
+    },
+    {
+     "w": "did",
+     "start": 110.435,
+     "end": 110.596,
+     "conf": 0.998
+    },
+    {
+     "w": "think",
+     "start": 110.656,
+     "end": 110.836,
+     "conf": 0.985
+    },
+    {
+     "w": "twice",
+     "start": 110.936,
+     "end": 111.377,
+     "conf": 0.794
+    },
+    {
+     "w": "and",
+     "start": 111.497,
+     "end": 111.577,
+     "conf": 0.987
+    },
+    {
+     "w": "their",
+     "start": 111.597,
+     "end": 111.717,
+     "conf": 0.948
+    },
+    {
+     "w": "conclusion",
+     "start": 111.777,
+     "end": 112.238,
+     "conf": 0.905
+    },
+    {
+     "w": "was",
+     "start": 112.318,
+     "end": 112.559,
+     "conf": 0.657
+    },
+    {
+     "w": "sink",
+     "start": 112.959,
+     "end": 113.199,
+     "conf": 0.85
+    },
+    {
+     "w": "it",
+     "start": 113.22,
+     "end": 113.28,
+     "conf": 0.096
+    }
+   ]
+  },
+  {
+   "section": "Paradise, Sunday edition",
+   "act": "",
+   "text": "On November twenty-sixth, Japan time, six Japanese aircraft carriers slipped out of a foggy bay in the far north of Japan and headed east, in total radio silence.",
+   "idea": false,
+   "start": 115.06,
+   "end": 123.98,
+   "words": [
+    {
+     "w": "on",
+     "start": 115.06,
+     "end": 115.1,
+     "conf": 0.497
+    },
+    {
+     "w": "november",
+     "start": 115.141,
+     "end": 115.441,
+     "conf": 0.939
+    },
+    {
+     "w": "twenty-sixth",
+     "start": 115.461,
+     "end": 116.103,
+     "conf": 0.001
+    },
+    {
+     "w": "japan",
+     "start": 116.123,
+     "end": 116.463,
+     "conf": 0.982
+    },
+    {
+     "w": "time",
+     "start": 116.524,
+     "end": 116.724,
+     "conf": 0.748
+    },
+    {
+     "w": "six",
+     "start": 116.744,
+     "end": 117.065,
+     "conf": 0.673
+    },
+    {
+     "w": "japanese",
+     "start": 117.245,
+     "end": 117.746,
+     "conf": 0.994
+    },
+    {
+     "w": "aircraft",
+     "start": 117.806,
+     "end": 118.167,
+     "conf": 0.887
+    },
+    {
+     "w": "carriers",
+     "start": 118.227,
+     "end": 118.588,
+     "conf": 0.843
+    },
+    {
+     "w": "slipped",
+     "start": 118.688,
+     "end": 118.949,
+     "conf": 0.856
+    },
+    {
+     "w": "out",
+     "start": 119.029,
+     "end": 119.109,
+     "conf": 0.666
+    },
+    {
+     "w": "of",
+     "start": 119.129,
+     "end": 119.189,
+     "conf": 0.992
+    },
+    {
+     "w": "a",
+     "start": 119.25,
+     "end": 119.27,
+     "conf": 0.003
+    },
+    {
+     "w": "foggy",
+     "start": 119.39,
+     "end": 119.69,
+     "conf": 0.346
+    },
+    {
+     "w": "bay",
+     "start": 119.791,
+     "end": 119.971,
+     "conf": 0.654
+    },
+    {
+     "w": "in",
+     "start": 120.051,
+     "end": 120.091,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 120.111,
+     "end": 120.192,
+     "conf": 0.997
+    },
+    {
+     "w": "far",
+     "start": 120.212,
+     "end": 120.412,
+     "conf": 0.75
+    },
+    {
+     "w": "north",
+     "start": 120.492,
+     "end": 120.673,
+     "conf": 0.867
+    },
+    {
+     "w": "of",
+     "start": 120.693,
+     "end": 120.773,
+     "conf": 0.666
+    },
+    {
+     "w": "japan",
+     "start": 120.793,
+     "end": 121.214,
+     "conf": 1.0
+    },
+    {
+     "w": "and",
+     "start": 121.474,
+     "end": 121.555,
+     "conf": 0.635
+    },
+    {
+     "w": "headed",
+     "start": 121.615,
+     "end": 121.855,
+     "conf": 0.804
+    },
+    {
+     "w": "east",
+     "start": 122.016,
+     "end": 122.276,
+     "conf": 0.75
+    },
+    {
+     "w": "in",
+     "start": 122.497,
+     "end": 122.557,
+     "conf": 0.499
+    },
+    {
+     "w": "total",
+     "start": 122.637,
+     "end": 122.958,
+     "conf": 0.8
+    },
+    {
+     "w": "radio",
+     "start": 123.038,
+     "end": 123.318,
+     "conf": 0.802
+    },
+    {
+     "w": "silence",
+     "start": 123.479,
+     "end": 123.98,
+     "conf": 0.817
+    }
+   ]
+  },
+  {
+   "section": "Paradise, Sunday edition",
+   "act": "",
+   "text": "The next day, Washington sent the Navy in Hawaii a message that literally began with the words: this dispatch is to be considered a war warning.",
+   "idea": false,
+   "start": 124.41,
+   "end": 132.45,
+   "words": [
+    {
+     "w": "the",
+     "start": 124.41,
+     "end": 124.47,
+     "conf": 0.325
+    },
+    {
+     "w": "next",
+     "start": 124.49,
+     "end": 124.751,
+     "conf": 0.989
+    },
+    {
+     "w": "day",
+     "start": 124.771,
+     "end": 124.911,
+     "conf": 0.999
+    },
+    {
+     "w": "washington",
+     "start": 125.052,
+     "end": 125.593,
+     "conf": 0.9
+    },
+    {
+     "w": "sent",
+     "start": 125.773,
+     "end": 125.974,
+     "conf": 0.732
+    },
+    {
+     "w": "the",
+     "start": 125.994,
+     "end": 126.094,
+     "conf": 0.742
+    },
+    {
+     "w": "navy",
+     "start": 126.174,
+     "end": 126.435,
+     "conf": 0.634
+    },
+    {
+     "w": "in",
+     "start": 126.515,
+     "end": 126.555,
+     "conf": 0.496
+    },
+    {
+     "w": "hawaii",
+     "start": 126.636,
+     "end": 126.936,
+     "conf": 0.279
+    },
+    {
+     "w": "a",
+     "start": 127.017,
+     "end": 127.037,
+     "conf": 0.006
+    },
+    {
+     "w": "message",
+     "start": 127.137,
+     "end": 127.538,
+     "conf": 0.856
+    },
+    {
+     "w": "that",
+     "start": 127.618,
+     "end": 127.738,
+     "conf": 0.615
+    },
+    {
+     "w": "literally",
+     "start": 127.899,
+     "end": 128.24,
+     "conf": 0.866
+    },
+    {
+     "w": "began",
+     "start": 128.32,
+     "end": 128.661,
+     "conf": 0.8
+    },
+    {
+     "w": "with",
+     "start": 128.741,
+     "end": 128.841,
+     "conf": 0.745
+    },
+    {
+     "w": "the",
+     "start": 128.861,
+     "end": 128.941,
+     "conf": 0.981
+    },
+    {
+     "w": "words",
+     "start": 129.002,
+     "end": 129.383,
+     "conf": 0.777
+    },
+    {
+     "w": "this",
+     "start": 129.743,
+     "end": 129.924,
+     "conf": 0.727
+    },
+    {
+     "w": "dispatch",
+     "start": 130.124,
+     "end": 130.706,
+     "conf": 0.853
+    },
+    {
+     "w": "is",
+     "start": 130.826,
+     "end": 130.886,
+     "conf": 0.498
+    },
+    {
+     "w": "to",
+     "start": 130.906,
+     "end": 130.987,
+     "conf": 0.666
+    },
+    {
+     "w": "be",
+     "start": 131.007,
+     "end": 131.067,
+     "conf": 0.665
+    },
+    {
+     "w": "considered",
+     "start": 131.167,
+     "end": 131.608,
+     "conf": 0.9
+    },
+    {
+     "w": "a",
+     "start": 131.648,
+     "end": 131.668,
+     "conf": 0.001
+    },
+    {
+     "w": "war",
+     "start": 131.789,
+     "end": 132.009,
+     "conf": 0.665
+    },
+    {
+     "w": "warning",
+     "start": 132.15,
+     "end": 132.45,
+     "conf": 0.864
+    }
+   ]
+  },
+  {
+   "section": "Paradise, Sunday edition",
+   "act": "",
+   "text": "The Army got its own message, saying hostile action was possible at any moment.",
+   "idea": false,
+   "start": 132.84,
+   "end": 137.182,
+   "words": [
+    {
+     "w": "the",
+     "start": 132.84,
+     "end": 132.9,
+     "conf": 0.506
+    },
+    {
+     "w": "army",
+     "start": 133.021,
+     "end": 133.182,
+     "conf": 0.75
+    },
+    {
+     "w": "got",
+     "start": 133.282,
+     "end": 133.423,
+     "conf": 0.651
+    },
+    {
+     "w": "its",
+     "start": 133.443,
+     "end": 133.564,
+     "conf": 0.746
+    },
+    {
+     "w": "own",
+     "start": 133.644,
+     "end": 133.745,
+     "conf": 0.663
+    },
+    {
+     "w": "message",
+     "start": 133.805,
+     "end": 134.328,
+     "conf": 0.858
+    },
+    {
+     "w": "saying",
+     "start": 134.549,
+     "end": 134.77,
+     "conf": 0.772
+    },
+    {
+     "w": "hostile",
+     "start": 134.85,
+     "end": 135.212,
+     "conf": 0.784
+    },
+    {
+     "w": "action",
+     "start": 135.312,
+     "end": 135.594,
+     "conf": 0.832
+    },
+    {
+     "w": "was",
+     "start": 135.654,
+     "end": 135.755,
+     "conf": 0.666
+    },
+    {
+     "w": "possible",
+     "start": 135.855,
+     "end": 136.398,
+     "conf": 0.875
+    },
+    {
+     "w": "at",
+     "start": 136.458,
+     "end": 136.539,
+     "conf": 0.501
+    },
+    {
+     "w": "any",
+     "start": 136.639,
+     "end": 136.78,
+     "conf": 0.667
+    },
+    {
+     "w": "moment",
+     "start": 136.9,
+     "end": 137.182,
+     "conf": 0.589
+    }
+   ]
+  },
+  {
+   "section": "Paradise, Sunday edition",
+   "act": "",
+   "text": "That sounds pretty clear, but the Army commander in Hawaii, General Walter Short, decided the real danger was sabotage by spies on the island.",
+   "idea": false,
+   "start": 137.572,
+   "end": 145.576,
+   "words": [
+    {
+     "w": "that",
+     "start": 137.572,
+     "end": 137.652,
+     "conf": 0.31
+    },
+    {
+     "w": "sounds",
+     "start": 137.672,
+     "end": 137.893,
+     "conf": 0.824
+    },
+    {
+     "w": "pretty",
+     "start": 137.933,
+     "end": 138.134,
+     "conf": 0.853
+    },
+    {
+     "w": "clear",
+     "start": 138.214,
+     "end": 138.455,
+     "conf": 0.783
+    },
+    {
+     "w": "but",
+     "start": 138.615,
+     "end": 138.715,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 138.735,
+     "end": 138.816,
+     "conf": 0.996
+    },
+    {
+     "w": "army",
+     "start": 138.916,
+     "end": 139.076,
+     "conf": 0.75
+    },
+    {
+     "w": "commander",
+     "start": 139.137,
+     "end": 139.498,
+     "conf": 0.994
+    },
+    {
+     "w": "in",
+     "start": 139.558,
+     "end": 139.598,
+     "conf": 0.498
+    },
+    {
+     "w": "hawaii",
+     "start": 139.678,
+     "end": 140.2,
+     "conf": 0.437
+    },
+    {
+     "w": "general",
+     "start": 140.541,
+     "end": 140.862,
+     "conf": 0.856
+    },
+    {
+     "w": "walter",
+     "start": 140.922,
+     "end": 141.243,
+     "conf": 0.832
+    },
+    {
+     "w": "short",
+     "start": 141.383,
+     "end": 141.684,
+     "conf": 0.785
+    },
+    {
+     "w": "decided",
+     "start": 141.905,
+     "end": 142.326,
+     "conf": 0.856
+    },
+    {
+     "w": "the",
+     "start": 142.366,
+     "end": 142.446,
+     "conf": 0.87
+    },
+    {
+     "w": "real",
+     "start": 142.567,
+     "end": 142.747,
+     "conf": 0.75
+    },
+    {
+     "w": "danger",
+     "start": 142.848,
+     "end": 143.189,
+     "conf": 0.771
+    },
+    {
+     "w": "was",
+     "start": 143.269,
+     "end": 143.369,
+     "conf": 0.647
+    },
+    {
+     "w": "sabotage",
+     "start": 143.489,
+     "end": 144.131,
+     "conf": 0.74
+    },
+    {
+     "w": "by",
+     "start": 144.212,
+     "end": 144.352,
+     "conf": 0.499
+    },
+    {
+     "w": "spies",
+     "start": 144.492,
+     "end": 144.934,
+     "conf": 0.615
+    },
+    {
+     "w": "on",
+     "start": 145.034,
+     "end": 145.074,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 145.094,
+     "end": 145.174,
+     "conf": 0.934
+    },
+    {
+     "w": "island",
+     "start": 145.335,
+     "end": 145.576,
+     "conf": 0.968
+    }
+   ]
+  },
+  {
+   "section": "Paradise, Sunday edition",
+   "act": "",
+   "text": "So to protect his planes from saboteurs, he had them parked close together, wingtip to wingtip, out in the open, with the ammunition locked away.",
+   "idea": false,
+   "start": 146.025,
+   "end": 154.046,
+   "words": [
+    {
+     "w": "so",
+     "start": 146.025,
+     "end": 146.085,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 146.186,
+     "end": 146.246,
+     "conf": 0.997
+    },
+    {
+     "w": "protect",
+     "start": 146.346,
+     "end": 146.847,
+     "conf": 0.998
+    },
+    {
+     "w": "his",
+     "start": 146.867,
+     "end": 147.008,
+     "conf": 0.75
+    },
+    {
+     "w": "planes",
+     "start": 147.088,
+     "end": 147.469,
+     "conf": 0.884
+    },
+    {
+     "w": "from",
+     "start": 147.489,
+     "end": 147.629,
+     "conf": 0.799
+    },
+    {
+     "w": "saboteurs",
+     "start": 147.71,
+     "end": 148.411,
+     "conf": 0.62
+    },
+    {
+     "w": "he",
+     "start": 148.512,
+     "end": 148.552,
+     "conf": 0.931
+    },
+    {
+     "w": "had",
+     "start": 148.632,
+     "end": 148.752,
+     "conf": 0.67
+    },
+    {
+     "w": "them",
+     "start": 148.772,
+     "end": 148.913,
+     "conf": 0.799
+    },
+    {
+     "w": "parked",
+     "start": 148.993,
+     "end": 149.254,
+     "conf": 0.832
+    },
+    {
+     "w": "close",
+     "start": 149.334,
+     "end": 149.595,
+     "conf": 0.79
+    },
+    {
+     "w": "together",
+     "start": 149.615,
+     "end": 150.056,
+     "conf": 0.886
+    },
+    {
+     "w": "wingtip",
+     "start": 150.276,
+     "end": 150.617,
+     "conf": 0.835
+    },
+    {
+     "w": "to",
+     "start": 150.697,
+     "end": 150.738,
+     "conf": 0.486
+    },
+    {
+     "w": "wingtip",
+     "start": 150.858,
+     "end": 151.339,
+     "conf": 0.808
+    },
+    {
+     "w": "out",
+     "start": 151.56,
+     "end": 151.66,
+     "conf": 0.664
+    },
+    {
+     "w": "in",
+     "start": 151.72,
+     "end": 151.76,
+     "conf": 0.501
+    },
+    {
+     "w": "the",
+     "start": 151.78,
+     "end": 151.84,
+     "conf": 0.976
+    },
+    {
+     "w": "open",
+     "start": 151.961,
+     "end": 152.262,
+     "conf": 0.791
+    },
+    {
+     "w": "with",
+     "start": 152.482,
+     "end": 152.582,
+     "conf": 0.747
+    },
+    {
+     "w": "the",
+     "start": 152.602,
+     "end": 152.683,
+     "conf": 0.984
+    },
+    {
+     "w": "ammunition",
+     "start": 152.763,
+     "end": 153.284,
+     "conf": 0.876
+    },
+    {
+     "w": "locked",
+     "start": 153.425,
+     "end": 153.705,
+     "conf": 0.838
+    },
+    {
+     "w": "away",
+     "start": 153.766,
+     "end": 154.046,
+     "conf": 0.749
+    }
+   ]
+  },
+  {
+   "section": "Paradise, Sunday edition",
+   "act": "",
+   "text": "Which is a great way to stop one guy with a wrench, and a terrible way to stop an air raid.",
+   "idea": true,
+   "start": 154.577,
+   "end": 159.355,
+   "words": [
+    {
+     "w": "which",
+     "start": 154.577,
+     "end": 154.738,
+     "conf": 0.989
+    },
+    {
+     "w": "is",
+     "start": 154.758,
+     "end": 154.838,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 154.899,
+     "end": 154.919,
+     "conf": 0.001
+    },
+    {
+     "w": "great",
+     "start": 154.979,
+     "end": 155.22,
+     "conf": 0.786
+    },
+    {
+     "w": "way",
+     "start": 155.28,
+     "end": 155.4,
+     "conf": 0.662
+    },
+    {
+     "w": "to",
+     "start": 155.441,
+     "end": 155.481,
+     "conf": 0.499
+    },
+    {
+     "w": "stop",
+     "start": 155.581,
+     "end": 155.802,
+     "conf": 0.75
+    },
+    {
+     "w": "one",
+     "start": 155.983,
+     "end": 156.103,
+     "conf": 0.666
+    },
+    {
+     "w": "guy",
+     "start": 156.183,
+     "end": 156.364,
+     "conf": 0.748
+    },
+    {
+     "w": "with",
+     "start": 156.424,
+     "end": 156.525,
+     "conf": 0.744
+    },
+    {
+     "w": "a",
+     "start": 156.585,
+     "end": 156.605,
+     "conf": 0.002
+    },
+    {
+     "w": "wrench",
+     "start": 156.625,
+     "end": 157.006,
+     "conf": 0.828
+    },
+    {
+     "w": "and",
+     "start": 157.187,
+     "end": 157.267,
+     "conf": 0.975
+    },
+    {
+     "w": "a",
+     "start": 157.288,
+     "end": 157.308,
+     "conf": 0.997
+    },
+    {
+     "w": "terrible",
+     "start": 157.428,
+     "end": 157.87,
+     "conf": 0.853
+    },
+    {
+     "w": "way",
+     "start": 157.93,
+     "end": 158.091,
+     "conf": 0.667
+    },
+    {
+     "w": "to",
+     "start": 158.171,
+     "end": 158.211,
+     "conf": 0.499
+    },
+    {
+     "w": "stop",
+     "start": 158.311,
+     "end": 158.613,
+     "conf": 0.751
+    },
+    {
+     "w": "an",
+     "start": 158.773,
+     "end": 158.833,
+     "conf": 0.499
+    },
+    {
+     "w": "air",
+     "start": 158.914,
+     "end": 159.034,
+     "conf": 0.645
+    },
+    {
+     "w": "raid",
+     "start": 159.134,
+     "end": 159.355,
+     "conf": 0.677
+    }
+   ]
+  },
+  {
+   "section": "Paradise, Sunday edition",
+   "act": "",
+   "text": "And on Sunday mornings, Pearl Harbor did what most of America did on Sunday mornings, which was sleep in.",
+   "idea": false,
+   "start": 160.465,
+   "end": 166.212,
+   "words": [
+    {
+     "w": "and",
+     "start": 160.465,
+     "end": 160.545,
+     "conf": 0.992
+    },
+    {
+     "w": "on",
+     "start": 160.565,
+     "end": 160.645,
+     "conf": 0.998
+    },
+    {
+     "w": "sunday",
+     "start": 160.725,
+     "end": 161.006,
+     "conf": 0.853
+    },
+    {
+     "w": "mornings",
+     "start": 161.086,
+     "end": 161.566,
+     "conf": 0.873
+    },
+    {
+     "w": "pearl",
+     "start": 161.787,
+     "end": 161.947,
+     "conf": 0.318
+    },
+    {
+     "w": "harbor",
+     "start": 162.007,
+     "end": 162.267,
+     "conf": 0.892
+    },
+    {
+     "w": "did",
+     "start": 162.387,
+     "end": 162.547,
+     "conf": 0.999
+    },
+    {
+     "w": "what",
+     "start": 162.608,
+     "end": 162.728,
+     "conf": 0.749
+    },
+    {
+     "w": "most",
+     "start": 162.848,
+     "end": 163.108,
+     "conf": 0.75
+    },
+    {
+     "w": "of",
+     "start": 163.188,
+     "end": 163.248,
+     "conf": 0.497
+    },
+    {
+     "w": "america",
+     "start": 163.328,
+     "end": 163.909,
+     "conf": 0.851
+    },
+    {
+     "w": "did",
+     "start": 164.109,
+     "end": 164.37,
+     "conf": 0.667
+    },
+    {
+     "w": "on",
+     "start": 164.55,
+     "end": 164.63,
+     "conf": 0.998
+    },
+    {
+     "w": "sunday",
+     "start": 164.73,
+     "end": 164.97,
+     "conf": 0.749
+    },
+    {
+     "w": "mornings",
+     "start": 165.01,
+     "end": 165.391,
+     "conf": 0.886
+    },
+    {
+     "w": "which",
+     "start": 165.411,
+     "end": 165.571,
+     "conf": 0.91
+    },
+    {
+     "w": "was",
+     "start": 165.591,
+     "end": 165.731,
+     "conf": 0.745
+    },
+    {
+     "w": "sleep",
+     "start": 165.831,
+     "end": 166.091,
+     "conf": 0.82
+    },
+    {
+     "w": "in",
+     "start": 166.152,
+     "end": 166.212,
+     "conf": 0.458
+    }
+   ]
+  },
+  {
+   "section": "Paradise, Sunday edition",
+   "act": "",
+   "text": "Battleships lined up in a neat row, sailors on weekend leave, and a radar system that, on paper, only had to work from four to seven in the morning.",
+   "idea": false,
+   "start": 166.742,
+   "end": 174.765,
+   "words": [
+    {
+     "w": "battleships",
+     "start": 166.742,
+     "end": 167.324,
+     "conf": 0.96
+    },
+    {
+     "w": "lined",
+     "start": 167.384,
+     "end": 167.625,
+     "conf": 0.999
+    },
+    {
+     "w": "up",
+     "start": 167.665,
+     "end": 167.765,
+     "conf": 0.999
+    },
+    {
+     "w": "in",
+     "start": 167.886,
+     "end": 167.946,
+     "conf": 0.998
+    },
+    {
+     "w": "a",
+     "start": 168.006,
+     "end": 168.026,
+     "conf": 0.004
+    },
+    {
+     "w": "neat",
+     "start": 168.126,
+     "end": 168.287,
+     "conf": 0.641
+    },
+    {
+     "w": "row",
+     "start": 168.387,
+     "end": 168.628,
+     "conf": 0.604
+    },
+    {
+     "w": "sailors",
+     "start": 168.948,
+     "end": 169.309,
+     "conf": 0.778
+    },
+    {
+     "w": "on",
+     "start": 169.37,
+     "end": 169.43,
+     "conf": 0.498
+    },
+    {
+     "w": "weekend",
+     "start": 169.53,
+     "end": 169.831,
+     "conf": 0.581
+    },
+    {
+     "w": "leave",
+     "start": 169.851,
+     "end": 170.152,
+     "conf": 0.755
+    },
+    {
+     "w": "and",
+     "start": 170.332,
+     "end": 170.533,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 170.613,
+     "end": 170.633,
+     "conf": 0.004
+    },
+    {
+     "w": "radar",
+     "start": 170.753,
+     "end": 171.074,
+     "conf": 0.591
+    },
+    {
+     "w": "system",
+     "start": 171.195,
+     "end": 171.516,
+     "conf": 0.832
+    },
+    {
+     "w": "that",
+     "start": 171.576,
+     "end": 171.696,
+     "conf": 0.745
+    },
+    {
+     "w": "on",
+     "start": 171.897,
+     "end": 171.937,
+     "conf": 0.499
+    },
+    {
+     "w": "paper",
+     "start": 172.017,
+     "end": 172.398,
+     "conf": 0.796
+    },
+    {
+     "w": "only",
+     "start": 172.599,
+     "end": 172.779,
+     "conf": 0.992
+    },
+    {
+     "w": "had",
+     "start": 172.859,
+     "end": 172.98,
+     "conf": 0.666
+    },
+    {
+     "w": "to",
+     "start": 173.0,
+     "end": 173.08,
+     "conf": 0.997
+    },
+    {
+     "w": "work",
+     "start": 173.16,
+     "end": 173.321,
+     "conf": 0.749
+    },
+    {
+     "w": "from",
+     "start": 173.381,
+     "end": 173.501,
+     "conf": 0.747
+    },
+    {
+     "w": "four",
+     "start": 173.641,
+     "end": 173.822,
+     "conf": 0.539
+    },
+    {
+     "w": "to",
+     "start": 173.842,
+     "end": 173.902,
+     "conf": 0.646
+    },
+    {
+     "w": "seven",
+     "start": 174.043,
+     "end": 174.323,
+     "conf": 0.566
+    },
+    {
+     "w": "in",
+     "start": 174.384,
+     "end": 174.424,
+     "conf": 0.495
+    },
+    {
+     "w": "the",
+     "start": 174.444,
+     "end": 174.524,
+     "conf": 0.985
+    },
+    {
+     "w": "morning",
+     "start": 174.544,
+     "end": 174.765,
+     "conf": 0.491
+    }
+   ]
+  },
+  {
+   "section": "Paradise, Sunday edition",
+   "act": "",
+   "text": "Everyone had set their alarm, so to speak.",
+   "idea": false,
+   "start": 175.275,
+   "end": 177.392,
+   "words": [
+    {
+     "w": "everyone",
+     "start": 175.275,
+     "end": 175.638,
+     "conf": 0.874
+    },
+    {
+     "w": "had",
+     "start": 175.658,
+     "end": 175.759,
+     "conf": 0.996
+    },
+    {
+     "w": "set",
+     "start": 175.84,
+     "end": 176.001,
+     "conf": 0.661
+    },
+    {
+     "w": "their",
+     "start": 176.062,
+     "end": 176.183,
+     "conf": 0.912
+    },
+    {
+     "w": "alarm",
+     "start": 176.263,
+     "end": 176.666,
+     "conf": 0.799
+    },
+    {
+     "w": "so",
+     "start": 176.808,
+     "end": 176.868,
+     "conf": 0.499
+    },
+    {
+     "w": "to",
+     "start": 176.969,
+     "end": 177.009,
+     "conf": 0.5
+    },
+    {
+     "w": "speak",
+     "start": 177.11,
+     "end": 177.392,
+     "conf": 0.799
+    }
+   ]
+  },
+  {
+   "section": "Paradise, Sunday edition",
+   "act": "",
+   "text": "They just weren't planning to get up.",
+   "idea": true,
+   "start": 177.803,
+   "end": 179.667,
+   "words": [
+    {
+     "w": "they",
+     "start": 177.803,
+     "end": 177.905,
+     "conf": 0.258
+    },
+    {
+     "w": "just",
+     "start": 178.067,
+     "end": 178.31,
+     "conf": 0.727
+    },
+    {
+     "w": "weren't",
+     "start": 178.391,
+     "end": 178.634,
+     "conf": 0.282
+    },
+    {
+     "w": "planning",
+     "start": 178.654,
+     "end": 179.099,
+     "conf": 0.857
+    },
+    {
+     "w": "to",
+     "start": 179.18,
+     "end": 179.241,
+     "conf": 0.492
+    },
+    {
+     "w": "get",
+     "start": 179.403,
+     "end": 179.565,
+     "conf": 0.628
+    },
+    {
+     "w": "up",
+     "start": 179.626,
+     "end": 179.667,
+     "conf": 0.025
+    }
+   ]
+  },
+  {
+   "section": "The first alarm",
+   "act": "",
+   "text": "At six thirty-seven that morning, the old American destroyer Ward spotted a tiny submarine trying to sneak into the harbor behind a supply ship.",
+   "idea": false,
+   "start": 181.427,
+   "end": 189.511,
+   "words": [
+    {
+     "w": "at",
+     "start": 181.427,
+     "end": 181.508,
+     "conf": 0.994
+    },
+    {
+     "w": "six",
+     "start": 181.648,
+     "end": 181.788,
+     "conf": 0.153
+    },
+    {
+     "w": "thirty-seven",
+     "start": 181.809,
+     "end": 182.41,
+     "conf": 0.005
+    },
+    {
+     "w": "that",
+     "start": 182.43,
+     "end": 182.611,
+     "conf": 0.691
+    },
+    {
+     "w": "morning",
+     "start": 182.691,
+     "end": 183.012,
+     "conf": 0.824
+    },
+    {
+     "w": "the",
+     "start": 183.173,
+     "end": 183.253,
+     "conf": 0.669
+    },
+    {
+     "w": "old",
+     "start": 183.453,
+     "end": 183.574,
+     "conf": 0.69
+    },
+    {
+     "w": "american",
+     "start": 183.654,
+     "end": 184.035,
+     "conf": 0.884
+    },
+    {
+     "w": "destroyer",
+     "start": 184.075,
+     "end": 184.557,
+     "conf": 0.833
+    },
+    {
+     "w": "ward",
+     "start": 184.677,
+     "end": 185.018,
+     "conf": 0.741
+    },
+    {
+     "w": "spotted",
+     "start": 185.239,
+     "end": 185.56,
+     "conf": 0.855
+    },
+    {
+     "w": "a",
+     "start": 185.62,
+     "end": 185.64,
+     "conf": 0.001
+    },
+    {
+     "w": "tiny",
+     "start": 185.72,
+     "end": 186.021,
+     "conf": 0.747
+    },
+    {
+     "w": "submarine",
+     "start": 186.161,
+     "end": 186.723,
+     "conf": 0.888
+    },
+    {
+     "w": "trying",
+     "start": 186.823,
+     "end": 187.104,
+     "conf": 0.831
+    },
+    {
+     "w": "to",
+     "start": 187.124,
+     "end": 187.205,
+     "conf": 0.664
+    },
+    {
+     "w": "sneak",
+     "start": 187.345,
+     "end": 187.586,
+     "conf": 0.759
+    },
+    {
+     "w": "into",
+     "start": 187.666,
+     "end": 187.826,
+     "conf": 0.748
+    },
+    {
+     "w": "the",
+     "start": 187.846,
+     "end": 187.927,
+     "conf": 0.741
+    },
+    {
+     "w": "harbor",
+     "start": 188.007,
+     "end": 188.328,
+     "conf": 0.984
+    },
+    {
+     "w": "behind",
+     "start": 188.428,
+     "end": 188.809,
+     "conf": 0.853
+    },
+    {
+     "w": "a",
+     "start": 188.829,
+     "end": 188.849,
+     "conf": 0.987
+    },
+    {
+     "w": "supply",
+     "start": 188.93,
+     "end": 189.251,
+     "conf": 0.792
+    },
+    {
+     "w": "ship",
+     "start": 189.351,
+     "end": 189.511,
+     "conf": 0.748
+    }
+   ]
+  },
+  {
+   "section": "The first alarm",
+   "act": "",
+   "text": "The Ward opened fire, hit the submarine, and dropped depth charges on it, and those were the first American shots of the Pacific War, fired more than an hour before the attack.",
+   "idea": false,
+   "start": 189.941,
+   "end": 199.737,
+   "words": [
+    {
+     "w": "the",
+     "start": 189.941,
+     "end": 190.001,
+     "conf": 0.888
+    },
+    {
+     "w": "ward",
+     "start": 190.101,
+     "end": 190.402,
+     "conf": 0.73
+    },
+    {
+     "w": "opened",
+     "start": 190.522,
+     "end": 190.802,
+     "conf": 0.82
+    },
+    {
+     "w": "fire",
+     "start": 190.842,
+     "end": 191.223,
+     "conf": 0.973
+    },
+    {
+     "w": "hit",
+     "start": 191.403,
+     "end": 191.524,
+     "conf": 0.722
+    },
+    {
+     "w": "the",
+     "start": 191.544,
+     "end": 191.684,
+     "conf": 0.993
+    },
+    {
+     "w": "submarine",
+     "start": 191.764,
+     "end": 192.325,
+     "conf": 0.878
+    },
+    {
+     "w": "and",
+     "start": 192.445,
+     "end": 192.525,
+     "conf": 0.664
+    },
+    {
+     "w": "dropped",
+     "start": 192.625,
+     "end": 192.946,
+     "conf": 0.459
+    },
+    {
+     "w": "depth",
+     "start": 192.966,
+     "end": 193.206,
+     "conf": 0.887
+    },
+    {
+     "w": "charges",
+     "start": 193.306,
+     "end": 193.687,
+     "conf": 0.839
+    },
+    {
+     "w": "on",
+     "start": 193.827,
+     "end": 193.867,
+     "conf": 0.5
+    },
+    {
+     "w": "it",
+     "start": 193.947,
+     "end": 194.028,
+     "conf": 0.499
+    },
+    {
+     "w": "and",
+     "start": 194.248,
+     "end": 194.408,
+     "conf": 0.738
+    },
+    {
+     "w": "those",
+     "start": 194.508,
+     "end": 194.889,
+     "conf": 0.798
+    },
+    {
+     "w": "were",
+     "start": 194.949,
+     "end": 195.089,
+     "conf": 0.797
+    },
+    {
+     "w": "the",
+     "start": 195.109,
+     "end": 195.189,
+     "conf": 0.842
+    },
+    {
+     "w": "first",
+     "start": 195.27,
+     "end": 195.49,
+     "conf": 0.798
+    },
+    {
+     "w": "american",
+     "start": 195.55,
+     "end": 195.871,
+     "conf": 0.988
+    },
+    {
+     "w": "shots",
+     "start": 195.951,
+     "end": 196.191,
+     "conf": 0.978
+    },
+    {
+     "w": "of",
+     "start": 196.211,
+     "end": 196.291,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 196.311,
+     "end": 196.411,
+     "conf": 0.75
+    },
+    {
+     "w": "pacific",
+     "start": 196.492,
+     "end": 196.892,
+     "conf": 0.856
+    },
+    {
+     "w": "war",
+     "start": 196.992,
+     "end": 197.193,
+     "conf": 0.666
+    },
+    {
+     "w": "fired",
+     "start": 197.413,
+     "end": 197.774,
+     "conf": 0.834
+    },
+    {
+     "w": "more",
+     "start": 197.894,
+     "end": 198.114,
+     "conf": 0.749
+    },
+    {
+     "w": "than",
+     "start": 198.174,
+     "end": 198.274,
+     "conf": 0.648
+    },
+    {
+     "w": "an",
+     "start": 198.334,
+     "end": 198.395,
+     "conf": 0.496
+    },
+    {
+     "w": "hour",
+     "start": 198.495,
+     "end": 198.775,
+     "conf": 0.994
+    },
+    {
+     "w": "before",
+     "start": 198.875,
+     "end": 199.216,
+     "conf": 0.835
+    },
+    {
+     "w": "the",
+     "start": 199.256,
+     "end": 199.316,
+     "conf": 0.585
+    },
+    {
+     "w": "attack",
+     "start": 199.396,
+     "end": 199.737,
+     "conf": 0.801
+    }
+   ]
+  },
+  {
+   "section": "The first alarm",
+   "act": "",
+   "text": "Its captain radioed the news up the chain of command, and that's where it went to slow down.",
+   "idea": false,
+   "start": 200.227,
+   "end": 205.186,
+   "words": [
+    {
+     "w": "its",
+     "start": 200.227,
+     "end": 200.348,
+     "conf": 0.984
+    },
+    {
+     "w": "captain",
+     "start": 200.428,
+     "end": 200.83,
+     "conf": 0.847
+    },
+    {
+     "w": "radioed",
+     "start": 200.97,
+     "end": 201.392,
+     "conf": 0.806
+    },
+    {
+     "w": "the",
+     "start": 201.412,
+     "end": 201.512,
+     "conf": 0.742
+    },
+    {
+     "w": "news",
+     "start": 201.593,
+     "end": 201.854,
+     "conf": 0.749
+    },
+    {
+     "w": "up",
+     "start": 202.014,
+     "end": 202.074,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 202.155,
+     "end": 202.215,
+     "conf": 0.634
+    },
+    {
+     "w": "chain",
+     "start": 202.295,
+     "end": 202.476,
+     "conf": 0.785
+    },
+    {
+     "w": "of",
+     "start": 202.496,
+     "end": 202.576,
+     "conf": 0.665
+    },
+    {
+     "w": "command",
+     "start": 202.657,
+     "end": 203.078,
+     "conf": 0.842
+    },
+    {
+     "w": "and",
+     "start": 203.299,
+     "end": 203.379,
+     "conf": 0.683
+    },
+    {
+     "w": "that's",
+     "start": 203.46,
+     "end": 203.66,
+     "conf": 0.64
+    },
+    {
+     "w": "where",
+     "start": 203.721,
+     "end": 203.881,
+     "conf": 0.984
+    },
+    {
+     "w": "it",
+     "start": 203.901,
+     "end": 203.982,
+     "conf": 0.663
+    },
+    {
+     "w": "went",
+     "start": 204.062,
+     "end": 204.202,
+     "conf": 0.748
+    },
+    {
+     "w": "to",
+     "start": 204.283,
+     "end": 204.343,
+     "conf": 0.5
+    },
+    {
+     "w": "slow",
+     "start": 204.524,
+     "end": 204.785,
+     "conf": 0.735
+    },
+    {
+     "w": "down",
+     "start": 204.885,
+     "end": 205.186,
+     "conf": 0.776
+    }
+   ]
+  },
+  {
+   "section": "The first alarm",
+   "act": "",
+   "text": "The Navy had chased plenty of false submarine sightings before, so the report got passed along, questioned, and double-checked, one desk at a time.",
+   "idea": false,
+   "start": 205.596,
+   "end": 213.895,
+   "words": [
+    {
+     "w": "the",
+     "start": 205.596,
+     "end": 205.656,
+     "conf": 0.565
+    },
+    {
+     "w": "navy",
+     "start": 205.676,
+     "end": 205.937,
+     "conf": 0.994
+    },
+    {
+     "w": "had",
+     "start": 205.977,
+     "end": 206.097,
+     "conf": 0.888
+    },
+    {
+     "w": "chased",
+     "start": 206.177,
+     "end": 206.478,
+     "conf": 0.847
+    },
+    {
+     "w": "plenty",
+     "start": 206.578,
+     "end": 206.959,
+     "conf": 0.916
+    },
+    {
+     "w": "of",
+     "start": 207.059,
+     "end": 207.12,
+     "conf": 0.992
+    },
+    {
+     "w": "false",
+     "start": 207.24,
+     "end": 207.52,
+     "conf": 0.798
+    },
+    {
+     "w": "submarine",
+     "start": 207.54,
+     "end": 208.062,
+     "conf": 0.895
+    },
+    {
+     "w": "sightings",
+     "start": 208.082,
+     "end": 208.603,
+     "conf": 0.634
+    },
+    {
+     "w": "before",
+     "start": 208.663,
+     "end": 209.084,
+     "conf": 0.824
+    },
+    {
+     "w": "so",
+     "start": 209.224,
+     "end": 209.264,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 209.284,
+     "end": 209.405,
+     "conf": 0.731
+    },
+    {
+     "w": "report",
+     "start": 209.445,
+     "end": 209.786,
+     "conf": 0.838
+    },
+    {
+     "w": "got",
+     "start": 209.846,
+     "end": 210.006,
+     "conf": 0.665
+    },
+    {
+     "w": "passed",
+     "start": 210.106,
+     "end": 210.447,
+     "conf": 0.816
+    },
+    {
+     "w": "along",
+     "start": 210.507,
+     "end": 210.908,
+     "conf": 0.79
+    },
+    {
+     "w": "questioned",
+     "start": 211.048,
+     "end": 211.57,
+     "conf": 0.9
+    },
+    {
+     "w": "and",
+     "start": 211.59,
+     "end": 211.71,
+     "conf": 0.755
+    },
+    {
+     "w": "double-checked",
+     "start": 211.81,
+     "end": 212.512,
+     "conf": 0.799
+    },
+    {
+     "w": "one",
+     "start": 212.752,
+     "end": 212.893,
+     "conf": 0.664
+    },
+    {
+     "w": "desk",
+     "start": 212.973,
+     "end": 213.253,
+     "conf": 0.745
+    },
+    {
+     "w": "at",
+     "start": 213.334,
+     "end": 213.394,
+     "conf": 0.485
+    },
+    {
+     "w": "a",
+     "start": 213.414,
+     "end": 213.434,
+     "conf": 0.929
+    },
+    {
+     "w": "time",
+     "start": 213.554,
+     "end": 213.895,
+     "conf": 0.772
+    }
+   ]
+  },
+  {
+   "section": "The first alarm",
+   "act": "",
+   "text": "In other words, don't worry about it.",
+   "idea": true,
+   "start": 214.405,
+   "end": 216.191,
+   "words": [
+    {
+     "w": "in",
+     "start": 214.405,
+     "end": 214.446,
+     "conf": 0.5
+    },
+    {
+     "w": "other",
+     "start": 214.486,
+     "end": 214.646,
+     "conf": 0.998
+    },
+    {
+     "w": "words",
+     "start": 214.706,
+     "end": 215.007,
+     "conf": 0.701
+    },
+    {
+     "w": "don't",
+     "start": 215.288,
+     "end": 215.509,
+     "conf": 0.705
+    },
+    {
+     "w": "worry",
+     "start": 215.549,
+     "end": 215.77,
+     "conf": 0.982
+    },
+    {
+     "w": "about",
+     "start": 215.87,
+     "end": 216.111,
+     "conf": 0.799
+    },
+    {
+     "w": "it",
+     "start": 216.131,
+     "end": 216.191,
+     "conf": 0.994
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "Up on the northern tip of the island, at a place called Opana, Privates Joseph Lockard and George Elliott were finishing the early shift on a brand-new radar set.",
+   "idea": false,
+   "start": 217.931,
+   "end": 226.942,
+   "words": [
+    {
+     "w": "up",
+     "start": 217.931,
+     "end": 218.011,
+     "conf": 0.5
+    },
+    {
+     "w": "on",
+     "start": 218.091,
+     "end": 218.171,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 218.191,
+     "end": 218.272,
+     "conf": 0.747
+    },
+    {
+     "w": "northern",
+     "start": 218.372,
+     "end": 218.712,
+     "conf": 0.895
+    },
+    {
+     "w": "tip",
+     "start": 218.772,
+     "end": 218.912,
+     "conf": 0.653
+    },
+    {
+     "w": "of",
+     "start": 218.972,
+     "end": 219.012,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 219.033,
+     "end": 219.113,
+     "conf": 0.749
+    },
+    {
+     "w": "island",
+     "start": 219.313,
+     "end": 219.573,
+     "conf": 0.68
+    },
+    {
+     "w": "at",
+     "start": 219.753,
+     "end": 219.793,
+     "conf": 0.498
+    },
+    {
+     "w": "a",
+     "start": 219.813,
+     "end": 219.834,
+     "conf": 0.997
+    },
+    {
+     "w": "place",
+     "start": 219.914,
+     "end": 220.174,
+     "conf": 0.826
+    },
+    {
+     "w": "called",
+     "start": 220.214,
+     "end": 220.414,
+     "conf": 0.831
+    },
+    {
+     "w": "opana",
+     "start": 220.474,
+     "end": 220.915,
+     "conf": 0.794
+    },
+    {
+     "w": "privates",
+     "start": 221.115,
+     "end": 221.596,
+     "conf": 0.749
+    },
+    {
+     "w": "joseph",
+     "start": 221.676,
+     "end": 222.076,
+     "conf": 0.826
+    },
+    {
+     "w": "lockard",
+     "start": 222.176,
+     "end": 222.637,
+     "conf": 0.717
+    },
+    {
+     "w": "and",
+     "start": 222.737,
+     "end": 222.817,
+     "conf": 0.715
+    },
+    {
+     "w": "george",
+     "start": 222.897,
+     "end": 223.158,
+     "conf": 0.828
+    },
+    {
+     "w": "elliott",
+     "start": 223.238,
+     "end": 223.558,
+     "conf": 0.423
+    },
+    {
+     "w": "were",
+     "start": 223.678,
+     "end": 223.798,
+     "conf": 0.749
+    },
+    {
+     "w": "finishing",
+     "start": 223.818,
+     "end": 224.179,
+     "conf": 0.966
+    },
+    {
+     "w": "the",
+     "start": 224.199,
+     "end": 224.279,
+     "conf": 0.958
+    },
+    {
+     "w": "early",
+     "start": 224.439,
+     "end": 224.679,
+     "conf": 0.818
+    },
+    {
+     "w": "shift",
+     "start": 224.88,
+     "end": 225.18,
+     "conf": 0.785
+    },
+    {
+     "w": "on",
+     "start": 225.4,
+     "end": 225.44,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 225.501,
+     "end": 225.521,
+     "conf": 0.003
+    },
+    {
+     "w": "brand-new",
+     "start": 225.641,
+     "end": 226.181,
+     "conf": 0.879
+    },
+    {
+     "w": "radar",
+     "start": 226.322,
+     "end": 226.682,
+     "conf": 0.784
+    },
+    {
+     "w": "set",
+     "start": 226.802,
+     "end": 226.942,
+     "conf": 0.645
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "Their shift ended at seven, but the truck that was supposed to take them to breakfast was late, so they kept the radar running for a bit more practice.",
+   "idea": false,
+   "start": 227.432,
+   "end": 235.701,
+   "words": [
+    {
+     "w": "their",
+     "start": 227.432,
+     "end": 227.552,
+     "conf": 0.81
+    },
+    {
+     "w": "shift",
+     "start": 227.692,
+     "end": 227.953,
+     "conf": 0.798
+    },
+    {
+     "w": "ended",
+     "start": 228.093,
+     "end": 228.313,
+     "conf": 0.799
+    },
+    {
+     "w": "at",
+     "start": 228.393,
+     "end": 228.473,
+     "conf": 0.497
+    },
+    {
+     "w": "seven",
+     "start": 228.713,
+     "end": 229.074,
+     "conf": 0.649
+    },
+    {
+     "w": "but",
+     "start": 229.354,
+     "end": 229.454,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 229.514,
+     "end": 229.594,
+     "conf": 0.994
+    },
+    {
+     "w": "truck",
+     "start": 229.694,
+     "end": 229.975,
+     "conf": 0.771
+    },
+    {
+     "w": "that",
+     "start": 230.055,
+     "end": 230.155,
+     "conf": 0.686
+    },
+    {
+     "w": "was",
+     "start": 230.175,
+     "end": 230.315,
+     "conf": 0.748
+    },
+    {
+     "w": "supposed",
+     "start": 230.435,
+     "end": 230.896,
+     "conf": 0.891
+    },
+    {
+     "w": "to",
+     "start": 230.916,
+     "end": 230.976,
+     "conf": 0.844
+    },
+    {
+     "w": "take",
+     "start": 231.076,
+     "end": 231.256,
+     "conf": 0.749
+    },
+    {
+     "w": "them",
+     "start": 231.276,
+     "end": 231.396,
+     "conf": 0.973
+    },
+    {
+     "w": "to",
+     "start": 231.456,
+     "end": 231.496,
+     "conf": 0.499
+    },
+    {
+     "w": "breakfast",
+     "start": 231.596,
+     "end": 232.077,
+     "conf": 0.684
+    },
+    {
+     "w": "was",
+     "start": 232.157,
+     "end": 232.277,
+     "conf": 0.746
+    },
+    {
+     "w": "late",
+     "start": 232.417,
+     "end": 232.658,
+     "conf": 0.568
+    },
+    {
+     "w": "so",
+     "start": 232.818,
+     "end": 232.878,
+     "conf": 0.501
+    },
+    {
+     "w": "they",
+     "start": 232.978,
+     "end": 233.078,
+     "conf": 0.747
+    },
+    {
+     "w": "kept",
+     "start": 233.138,
+     "end": 233.338,
+     "conf": 0.749
+    },
+    {
+     "w": "the",
+     "start": 233.358,
+     "end": 233.498,
+     "conf": 0.983
+    },
+    {
+     "w": "radar",
+     "start": 233.619,
+     "end": 233.959,
+     "conf": 0.588
+    },
+    {
+     "w": "running",
+     "start": 234.079,
+     "end": 234.339,
+     "conf": 0.86
+    },
+    {
+     "w": "for",
+     "start": 234.399,
+     "end": 234.519,
+     "conf": 0.665
+    },
+    {
+     "w": "a",
+     "start": 234.58,
+     "end": 234.6,
+     "conf": 0.007
+    },
+    {
+     "w": "bit",
+     "start": 234.72,
+     "end": 234.86,
+     "conf": 0.667
+    },
+    {
+     "w": "more",
+     "start": 234.94,
+     "end": 235.08,
+     "conf": 0.747
+    },
+    {
+     "w": "practice",
+     "start": 235.16,
+     "end": 235.701,
+     "conf": 0.87
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "At seven oh two, a giant blob appeared on their screen, about a hundred and thirty miles to the north.",
+   "idea": false,
+   "start": 236.131,
+   "end": 241.652,
+   "words": [
+    {
+     "w": "at",
+     "start": 236.131,
+     "end": 236.231,
+     "conf": 0.984
+    },
+    {
+     "w": "seven",
+     "start": 236.352,
+     "end": 236.613,
+     "conf": 0.078
+    },
+    {
+     "w": "oh",
+     "start": 236.633,
+     "end": 236.753,
+     "conf": 0.004
+    },
+    {
+     "w": "two",
+     "start": 236.774,
+     "end": 237.055,
+     "conf": 0.009
+    },
+    {
+     "w": "a",
+     "start": 237.316,
+     "end": 237.336,
+     "conf": 0.003
+    },
+    {
+     "w": "giant",
+     "start": 237.536,
+     "end": 237.757,
+     "conf": 0.789
+    },
+    {
+     "w": "blob",
+     "start": 237.817,
+     "end": 238.139,
+     "conf": 0.74
+    },
+    {
+     "w": "appeared",
+     "start": 238.199,
+     "end": 238.52,
+     "conf": 0.872
+    },
+    {
+     "w": "on",
+     "start": 238.54,
+     "end": 238.641,
+     "conf": 0.665
+    },
+    {
+     "w": "their",
+     "start": 238.661,
+     "end": 238.801,
+     "conf": 0.966
+    },
+    {
+     "w": "screen",
+     "start": 238.902,
+     "end": 239.283,
+     "conf": 0.675
+    },
+    {
+     "w": "about",
+     "start": 239.544,
+     "end": 239.765,
+     "conf": 0.755
+    },
+    {
+     "w": "a",
+     "start": 239.785,
+     "end": 239.805,
+     "conf": 0.001
+    },
+    {
+     "w": "hundred",
+     "start": 239.825,
+     "end": 240.307,
+     "conf": 0.01
+    },
+    {
+     "w": "and",
+     "start": 240.327,
+     "end": 240.407,
+     "conf": 0.255
+    },
+    {
+     "w": "thirty",
+     "start": 240.427,
+     "end": 240.708,
+     "conf": 0.004
+    },
+    {
+     "w": "miles",
+     "start": 240.809,
+     "end": 241.11,
+     "conf": 0.977
+    },
+    {
+     "w": "to",
+     "start": 241.19,
+     "end": 241.23,
+     "conf": 0.479
+    },
+    {
+     "w": "the",
+     "start": 241.291,
+     "end": 241.351,
+     "conf": 0.958
+    },
+    {
+     "w": "north",
+     "start": 241.451,
+     "end": 241.652,
+     "conf": 0.399
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "Lockard had never seen anything that big on radar, and at first he thought the machine was broken.",
+   "idea": false,
+   "start": 242.122,
+   "end": 247.518,
+   "words": [
+    {
+     "w": "lockard",
+     "start": 242.122,
+     "end": 242.443,
+     "conf": 0.607
+    },
+    {
+     "w": "had",
+     "start": 242.483,
+     "end": 242.604,
+     "conf": 0.997
+    },
+    {
+     "w": "never",
+     "start": 242.624,
+     "end": 242.885,
+     "conf": 0.737
+    },
+    {
+     "w": "seen",
+     "start": 243.005,
+     "end": 243.206,
+     "conf": 0.749
+    },
+    {
+     "w": "anything",
+     "start": 243.326,
+     "end": 243.687,
+     "conf": 0.856
+    },
+    {
+     "w": "that",
+     "start": 243.707,
+     "end": 243.868,
+     "conf": 0.971
+    },
+    {
+     "w": "big",
+     "start": 244.008,
+     "end": 244.249,
+     "conf": 0.665
+    },
+    {
+     "w": "on",
+     "start": 244.349,
+     "end": 244.429,
+     "conf": 0.996
+    },
+    {
+     "w": "radar",
+     "start": 244.55,
+     "end": 244.931,
+     "conf": 0.752
+    },
+    {
+     "w": "and",
+     "start": 245.151,
+     "end": 245.212,
+     "conf": 0.662
+    },
+    {
+     "w": "at",
+     "start": 245.272,
+     "end": 245.332,
+     "conf": 0.499
+    },
+    {
+     "w": "first",
+     "start": 245.392,
+     "end": 245.753,
+     "conf": 0.997
+    },
+    {
+     "w": "he",
+     "start": 245.894,
+     "end": 245.954,
+     "conf": 0.909
+    },
+    {
+     "w": "thought",
+     "start": 246.074,
+     "end": 246.255,
+     "conf": 0.866
+    },
+    {
+     "w": "the",
+     "start": 246.275,
+     "end": 246.375,
+     "conf": 0.745
+    },
+    {
+     "w": "machine",
+     "start": 246.395,
+     "end": 246.756,
+     "conf": 0.809
+    },
+    {
+     "w": "was",
+     "start": 246.796,
+     "end": 246.897,
+     "conf": 0.666
+    },
+    {
+     "w": "broken",
+     "start": 247.057,
+     "end": 247.518,
+     "conf": 0.798
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "It wasn't.",
+   "idea": true,
+   "start": 248.173,
+   "end": 248.945,
+   "words": [
+    {
+     "w": "it",
+     "start": 248.173,
+     "end": 248.254,
+     "conf": 0.483
+    },
+    {
+     "w": "wasn't",
+     "start": 248.396,
+     "end": 248.945,
+     "conf": 0.616
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "So they called the information center at Fort Shafter, where almost everyone had already gone to breakfast.",
+   "idea": false,
+   "start": 250.016,
+   "end": 256.116,
+   "words": [
+    {
+     "w": "so",
+     "start": 250.016,
+     "end": 250.116,
+     "conf": 0.666
+    },
+    {
+     "w": "they",
+     "start": 250.177,
+     "end": 250.277,
+     "conf": 0.698
+    },
+    {
+     "w": "called",
+     "start": 250.357,
+     "end": 250.698,
+     "conf": 0.847
+    },
+    {
+     "w": "the",
+     "start": 250.718,
+     "end": 250.819,
+     "conf": 0.951
+    },
+    {
+     "w": "information",
+     "start": 250.899,
+     "end": 251.461,
+     "conf": 0.907
+    },
+    {
+     "w": "center",
+     "start": 251.561,
+     "end": 251.862,
+     "conf": 0.829
+    },
+    {
+     "w": "at",
+     "start": 252.103,
+     "end": 252.183,
+     "conf": 0.499
+    },
+    {
+     "w": "fort",
+     "start": 252.344,
+     "end": 252.564,
+     "conf": 0.745
+    },
+    {
+     "w": "shafter",
+     "start": 252.685,
+     "end": 253.106,
+     "conf": 0.827
+    },
+    {
+     "w": "where",
+     "start": 253.266,
+     "end": 253.427,
+     "conf": 0.971
+    },
+    {
+     "w": "almost",
+     "start": 253.527,
+     "end": 253.888,
+     "conf": 0.845
+    },
+    {
+     "w": "everyone",
+     "start": 254.129,
+     "end": 254.671,
+     "conf": 0.861
+    },
+    {
+     "w": "had",
+     "start": 254.771,
+     "end": 254.892,
+     "conf": 0.99
+    },
+    {
+     "w": "already",
+     "start": 254.952,
+     "end": 255.213,
+     "conf": 0.856
+    },
+    {
+     "w": "gone",
+     "start": 255.313,
+     "end": 255.494,
+     "conf": 0.599
+    },
+    {
+     "w": "to",
+     "start": 255.514,
+     "end": 255.574,
+     "conf": 0.996
+    },
+    {
+     "w": "breakfast",
+     "start": 255.674,
+     "end": 256.116,
+     "conf": 0.713
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "The call ended up with Lieutenant Kermit Tyler, a fighter pilot who was on just his second shift there, with no real training and nobody to help.",
+   "idea": false,
+   "start": 256.505,
+   "end": 264.528,
+   "words": [
+    {
+     "w": "the",
+     "start": 256.505,
+     "end": 256.565,
+     "conf": 0.658
+    },
+    {
+     "w": "call",
+     "start": 256.605,
+     "end": 256.846,
+     "conf": 0.931
+    },
+    {
+     "w": "ended",
+     "start": 256.966,
+     "end": 257.167,
+     "conf": 0.8
+    },
+    {
+     "w": "up",
+     "start": 257.227,
+     "end": 257.327,
+     "conf": 0.999
+    },
+    {
+     "w": "with",
+     "start": 257.347,
+     "end": 257.508,
+     "conf": 0.666
+    },
+    {
+     "w": "lieutenant",
+     "start": 257.588,
+     "end": 258.009,
+     "conf": 0.654
+    },
+    {
+     "w": "kermit",
+     "start": 258.029,
+     "end": 258.35,
+     "conf": 0.564
+    },
+    {
+     "w": "tyler",
+     "start": 258.431,
+     "end": 258.872,
+     "conf": 0.611
+    },
+    {
+     "w": "a",
+     "start": 259.112,
+     "end": 259.133,
+     "conf": 0.0
+    },
+    {
+     "w": "fighter",
+     "start": 259.333,
+     "end": 259.654,
+     "conf": 0.804
+    },
+    {
+     "w": "pilot",
+     "start": 259.774,
+     "end": 260.135,
+     "conf": 0.62
+    },
+    {
+     "w": "who",
+     "start": 260.196,
+     "end": 260.296,
+     "conf": 0.892
+    },
+    {
+     "w": "was",
+     "start": 260.356,
+     "end": 260.456,
+     "conf": 0.664
+    },
+    {
+     "w": "on",
+     "start": 260.577,
+     "end": 260.617,
+     "conf": 0.499
+    },
+    {
+     "w": "just",
+     "start": 260.697,
+     "end": 260.857,
+     "conf": 0.757
+    },
+    {
+     "w": "his",
+     "start": 260.918,
+     "end": 261.018,
+     "conf": 0.776
+    },
+    {
+     "w": "second",
+     "start": 261.138,
+     "end": 261.459,
+     "conf": 0.831
+    },
+    {
+     "w": "shift",
+     "start": 261.559,
+     "end": 261.8,
+     "conf": 0.712
+    },
+    {
+     "w": "there",
+     "start": 261.88,
+     "end": 262.081,
+     "conf": 0.733
+    },
+    {
+     "w": "with",
+     "start": 262.221,
+     "end": 262.342,
+     "conf": 0.757
+    },
+    {
+     "w": "no",
+     "start": 262.462,
+     "end": 262.522,
+     "conf": 0.5
+    },
+    {
+     "w": "real",
+     "start": 262.703,
+     "end": 262.863,
+     "conf": 0.783
+    },
+    {
+     "w": "training",
+     "start": 262.963,
+     "end": 263.425,
+     "conf": 0.861
+    },
+    {
+     "w": "and",
+     "start": 263.545,
+     "end": 263.625,
+     "conf": 0.663
+    },
+    {
+     "w": "nobody",
+     "start": 263.726,
+     "end": 264.067,
+     "conf": 0.853
+    },
+    {
+     "w": "to",
+     "start": 264.167,
+     "end": 264.227,
+     "conf": 0.501
+    },
+    {
+     "w": "help",
+     "start": 264.327,
+     "end": 264.528,
+     "conf": 0.869
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "And Tyler had a theory.",
+   "idea": false,
+   "start": 265.04,
+   "end": 266.431,
+   "words": [
+    {
+     "w": "and",
+     "start": 265.04,
+     "end": 265.12,
+     "conf": 0.542
+    },
+    {
+     "w": "tyler",
+     "start": 265.181,
+     "end": 265.604,
+     "conf": 0.57
+    },
+    {
+     "w": "had",
+     "start": 265.745,
+     "end": 265.967,
+     "conf": 0.737
+    },
+    {
+     "w": "a",
+     "start": 266.048,
+     "end": 266.068,
+     "conf": 0.016
+    },
+    {
+     "w": "theory",
+     "start": 266.169,
+     "end": 266.431,
+     "conf": 0.63
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "A flight of American B-17 bombers was due in from California that very morning, and on his drive in, he'd heard a Honolulu radio station playing Hawaiian music all night, which a friend told him happened when bombers were flying in and used the signal to find the islands.",
+   "idea": false,
+   "start": 266.941,
+   "end": 282.538,
+   "words": [
+    {
+     "w": "a",
+     "start": 266.941,
+     "end": 266.961,
+     "conf": 0.001
+    },
+    {
+     "w": "flight",
+     "start": 267.041,
+     "end": 267.302,
+     "conf": 0.852
+    },
+    {
+     "w": "of",
+     "start": 267.322,
+     "end": 267.382,
+     "conf": 0.995
+    },
+    {
+     "w": "american",
+     "start": 267.442,
+     "end": 267.902,
+     "conf": 0.873
+    },
+    {
+     "w": "b-17",
+     "start": 267.982,
+     "end": 268.002,
+     "conf": 0.002
+    },
+    {
+     "w": "bombers",
+     "start": 268.743,
+     "end": 269.143,
+     "conf": 0.786
+    },
+    {
+     "w": "was",
+     "start": 269.244,
+     "end": 269.364,
+     "conf": 0.664
+    },
+    {
+     "w": "due",
+     "start": 269.544,
+     "end": 269.764,
+     "conf": 0.706
+    },
+    {
+     "w": "in",
+     "start": 269.884,
+     "end": 269.984,
+     "conf": 0.499
+    },
+    {
+     "w": "from",
+     "start": 270.084,
+     "end": 270.225,
+     "conf": 0.999
+    },
+    {
+     "w": "california",
+     "start": 270.305,
+     "end": 270.905,
+     "conf": 0.899
+    },
+    {
+     "w": "that",
+     "start": 270.965,
+     "end": 271.126,
+     "conf": 0.777
+    },
+    {
+     "w": "very",
+     "start": 271.206,
+     "end": 271.406,
+     "conf": 0.774
+    },
+    {
+     "w": "morning",
+     "start": 271.526,
+     "end": 271.866,
+     "conf": 0.857
+    },
+    {
+     "w": "and",
+     "start": 271.967,
+     "end": 272.027,
+     "conf": 0.641
+    },
+    {
+     "w": "on",
+     "start": 272.047,
+     "end": 272.147,
+     "conf": 0.666
+    },
+    {
+     "w": "his",
+     "start": 272.247,
+     "end": 272.387,
+     "conf": 0.667
+    },
+    {
+     "w": "drive",
+     "start": 272.467,
+     "end": 272.787,
+     "conf": 0.798
+    },
+    {
+     "w": "in",
+     "start": 272.867,
+     "end": 272.988,
+     "conf": 0.499
+    },
+    {
+     "w": "he'd",
+     "start": 273.148,
+     "end": 273.288,
+     "conf": 0.525
+    },
+    {
+     "w": "heard",
+     "start": 273.368,
+     "end": 273.548,
+     "conf": 0.912
+    },
+    {
+     "w": "a",
+     "start": 273.628,
+     "end": 273.648,
+     "conf": 0.001
+    },
+    {
+     "w": "honolulu",
+     "start": 273.728,
+     "end": 274.329,
+     "conf": 0.809
+    },
+    {
+     "w": "radio",
+     "start": 274.449,
+     "end": 274.75,
+     "conf": 0.801
+    },
+    {
+     "w": "station",
+     "start": 274.89,
+     "end": 275.29,
+     "conf": 0.853
+    },
+    {
+     "w": "playing",
+     "start": 275.43,
+     "end": 275.691,
+     "conf": 0.846
+    },
+    {
+     "w": "hawaiian",
+     "start": 275.751,
+     "end": 276.131,
+     "conf": 0.452
+    },
+    {
+     "w": "music",
+     "start": 276.211,
+     "end": 276.531,
+     "conf": 0.798
+    },
+    {
+     "w": "all",
+     "start": 276.712,
+     "end": 276.812,
+     "conf": 0.659
+    },
+    {
+     "w": "night",
+     "start": 276.892,
+     "end": 277.112,
+     "conf": 0.881
+    },
+    {
+     "w": "which",
+     "start": 277.292,
+     "end": 277.452,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 277.512,
+     "end": 277.532,
+     "conf": 0.003
+    },
+    {
+     "w": "friend",
+     "start": 277.673,
+     "end": 277.893,
+     "conf": 0.69
+    },
+    {
+     "w": "told",
+     "start": 277.933,
+     "end": 278.173,
+     "conf": 0.971
+    },
+    {
+     "w": "him",
+     "start": 278.233,
+     "end": 278.333,
+     "conf": 0.798
+    },
+    {
+     "w": "happened",
+     "start": 278.433,
+     "end": 278.794,
+     "conf": 0.749
+    },
+    {
+     "w": "when",
+     "start": 278.814,
+     "end": 278.954,
+     "conf": 0.803
+    },
+    {
+     "w": "bombers",
+     "start": 279.074,
+     "end": 279.435,
+     "conf": 0.653
+    },
+    {
+     "w": "were",
+     "start": 279.455,
+     "end": 279.615,
+     "conf": 0.799
+    },
+    {
+     "w": "flying",
+     "start": 279.635,
+     "end": 280.035,
+     "conf": 0.868
+    },
+    {
+     "w": "in",
+     "start": 280.215,
+     "end": 280.255,
+     "conf": 0.499
+    },
+    {
+     "w": "and",
+     "start": 280.436,
+     "end": 280.536,
+     "conf": 0.718
+    },
+    {
+     "w": "used",
+     "start": 280.736,
+     "end": 281.016,
+     "conf": 0.749
+    },
+    {
+     "w": "the",
+     "start": 281.136,
+     "end": 281.216,
+     "conf": 0.66
+    },
+    {
+     "w": "signal",
+     "start": 281.357,
+     "end": 281.677,
+     "conf": 0.833
+    },
+    {
+     "w": "to",
+     "start": 281.737,
+     "end": 281.777,
+     "conf": 0.502
+    },
+    {
+     "w": "find",
+     "start": 281.857,
+     "end": 282.077,
+     "conf": 0.803
+    },
+    {
+     "w": "the",
+     "start": 282.097,
+     "end": 282.177,
+     "conf": 0.929
+    },
+    {
+     "w": "islands",
+     "start": 282.338,
+     "end": 282.538,
+     "conf": 0.462
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "So he put two and two together, and got bombers.",
+   "idea": false,
+   "start": 282.928,
+   "end": 285.408,
+   "words": [
+    {
+     "w": "so",
+     "start": 282.928,
+     "end": 282.989,
+     "conf": 0.999
+    },
+    {
+     "w": "he",
+     "start": 283.069,
+     "end": 283.11,
+     "conf": 0.657
+    },
+    {
+     "w": "put",
+     "start": 283.19,
+     "end": 283.331,
+     "conf": 0.668
+    },
+    {
+     "w": "two",
+     "start": 283.392,
+     "end": 283.553,
+     "conf": 0.905
+    },
+    {
+     "w": "and",
+     "start": 283.614,
+     "end": 283.694,
+     "conf": 0.496
+    },
+    {
+     "w": "two",
+     "start": 283.734,
+     "end": 283.896,
+     "conf": 0.811
+    },
+    {
+     "w": "together",
+     "start": 283.956,
+     "end": 284.339,
+     "conf": 0.872
+    },
+    {
+     "w": "and",
+     "start": 284.581,
+     "end": 284.662,
+     "conf": 0.656
+    },
+    {
+     "w": "got",
+     "start": 284.722,
+     "end": 284.843,
+     "conf": 0.662
+    },
+    {
+     "w": "bombers",
+     "start": 284.924,
+     "end": 285.408,
+     "conf": 0.597
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "Don't worry about it, he told them.",
+   "idea": true,
+   "start": 286.059,
+   "end": 287.611,
+   "words": [
+    {
+     "w": "don't",
+     "start": 286.059,
+     "end": 286.241,
+     "conf": 0.827
+    },
+    {
+     "w": "worry",
+     "start": 286.261,
+     "end": 286.442,
+     "conf": 0.961
+    },
+    {
+     "w": "about",
+     "start": 286.523,
+     "end": 286.765,
+     "conf": 0.995
+    },
+    {
+     "w": "it",
+     "start": 286.785,
+     "end": 286.866,
+     "conf": 0.661
+    },
+    {
+     "w": "he",
+     "start": 287.128,
+     "end": 287.188,
+     "conf": 0.987
+    },
+    {
+     "w": "told",
+     "start": 287.289,
+     "end": 287.47,
+     "conf": 0.738
+    },
+    {
+     "w": "them",
+     "start": 287.49,
+     "end": 287.611,
+     "conf": 0.989
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "Nobody made clear to Tyler just how big the blip was, and nobody told the privates that bombers were expected.",
+   "idea": false,
+   "start": 288.642,
+   "end": 294.756,
+   "words": [
+    {
+     "w": "nobody",
+     "start": 288.642,
+     "end": 288.963,
+     "conf": 0.925
+    },
+    {
+     "w": "made",
+     "start": 289.063,
+     "end": 289.243,
+     "conf": 0.748
+    },
+    {
+     "w": "clear",
+     "start": 289.304,
+     "end": 289.504,
+     "conf": 0.799
+    },
+    {
+     "w": "to",
+     "start": 289.564,
+     "end": 289.624,
+     "conf": 0.107
+    },
+    {
+     "w": "tyler",
+     "start": 289.704,
+     "end": 290.085,
+     "conf": 0.643
+    },
+    {
+     "w": "just",
+     "start": 290.206,
+     "end": 290.386,
+     "conf": 0.749
+    },
+    {
+     "w": "how",
+     "start": 290.446,
+     "end": 290.566,
+     "conf": 0.916
+    },
+    {
+     "w": "big",
+     "start": 290.667,
+     "end": 290.787,
+     "conf": 0.921
+    },
+    {
+     "w": "the",
+     "start": 290.887,
+     "end": 290.967,
+     "conf": 0.866
+    },
+    {
+     "w": "blip",
+     "start": 291.027,
+     "end": 291.248,
+     "conf": 0.746
+    },
+    {
+     "w": "was",
+     "start": 291.348,
+     "end": 291.609,
+     "conf": 0.679
+    },
+    {
+     "w": "and",
+     "start": 291.789,
+     "end": 291.869,
+     "conf": 0.661
+    },
+    {
+     "w": "nobody",
+     "start": 291.929,
+     "end": 292.21,
+     "conf": 0.84
+    },
+    {
+     "w": "told",
+     "start": 292.31,
+     "end": 292.491,
+     "conf": 0.73
+    },
+    {
+     "w": "the",
+     "start": 292.511,
+     "end": 292.591,
+     "conf": 0.754
+    },
+    {
+     "w": "privates",
+     "start": 292.731,
+     "end": 293.272,
+     "conf": 0.795
+    },
+    {
+     "w": "that",
+     "start": 293.352,
+     "end": 293.493,
+     "conf": 0.975
+    },
+    {
+     "w": "bombers",
+     "start": 293.593,
+     "end": 293.994,
+     "conf": 0.606
+    },
+    {
+     "w": "were",
+     "start": 294.054,
+     "end": 294.194,
+     "conf": 0.746
+    },
+    {
+     "w": "expected",
+     "start": 294.214,
+     "end": 294.756,
+     "conf": 0.996
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "To be fair, the B-17s really were coming, from roughly the same direction, and they would arrive right in the middle of the attack, unarmed and nearly out of fuel.",
+   "idea": false,
+   "start": 295.226,
+   "end": 304.587,
+   "words": [
+    {
+     "w": "to",
+     "start": 295.226,
+     "end": 295.266,
+     "conf": 0.508
+    },
+    {
+     "w": "be",
+     "start": 295.306,
+     "end": 295.346,
+     "conf": 0.974
+    },
+    {
+     "w": "fair",
+     "start": 295.427,
+     "end": 295.607,
+     "conf": 0.869
+    },
+    {
+     "w": "the",
+     "start": 295.647,
+     "end": 295.727,
+     "conf": 0.922
+    },
+    {
+     "w": "b-17s",
+     "start": 295.787,
+     "end": 296.008,
+     "conf": 0.496
+    },
+    {
+     "w": "really",
+     "start": 296.79,
+     "end": 297.05,
+     "conf": 0.975
+    },
+    {
+     "w": "were",
+     "start": 297.13,
+     "end": 297.271,
+     "conf": 0.785
+    },
+    {
+     "w": "coming",
+     "start": 297.331,
+     "end": 297.692,
+     "conf": 0.832
+    },
+    {
+     "w": "from",
+     "start": 298.173,
+     "end": 298.293,
+     "conf": 0.738
+    },
+    {
+     "w": "roughly",
+     "start": 298.594,
+     "end": 298.955,
+     "conf": 0.671
+    },
+    {
+     "w": "the",
+     "start": 299.055,
+     "end": 299.115,
+     "conf": 0.661
+    },
+    {
+     "w": "same",
+     "start": 299.215,
+     "end": 299.416,
+     "conf": 0.75
+    },
+    {
+     "w": "direction",
+     "start": 299.476,
+     "end": 299.977,
+     "conf": 0.883
+    },
+    {
+     "w": "and",
+     "start": 300.137,
+     "end": 300.217,
+     "conf": 0.87
+    },
+    {
+     "w": "they",
+     "start": 300.238,
+     "end": 300.358,
+     "conf": 0.929
+    },
+    {
+     "w": "would",
+     "start": 300.378,
+     "end": 300.498,
+     "conf": 0.881
+    },
+    {
+     "w": "arrive",
+     "start": 300.518,
+     "end": 300.939,
+     "conf": 0.846
+    },
+    {
+     "w": "right",
+     "start": 301.059,
+     "end": 301.28,
+     "conf": 0.852
+    },
+    {
+     "w": "in",
+     "start": 301.32,
+     "end": 301.36,
+     "conf": 0.504
+    },
+    {
+     "w": "the",
+     "start": 301.38,
+     "end": 301.46,
+     "conf": 0.997
+    },
+    {
+     "w": "middle",
+     "start": 301.48,
+     "end": 301.721,
+     "conf": 0.878
+    },
+    {
+     "w": "of",
+     "start": 301.741,
+     "end": 301.801,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 301.821,
+     "end": 301.921,
+     "conf": 0.715
+    },
+    {
+     "w": "attack",
+     "start": 301.981,
+     "end": 302.382,
+     "conf": 0.851
+    },
+    {
+     "w": "unarmed",
+     "start": 302.803,
+     "end": 303.325,
+     "conf": 0.841
+    },
+    {
+     "w": "and",
+     "start": 303.465,
+     "end": 303.565,
+     "conf": 0.712
+    },
+    {
+     "w": "nearly",
+     "start": 303.645,
+     "end": 303.946,
+     "conf": 0.802
+    },
+    {
+     "w": "out",
+     "start": 304.086,
+     "end": 304.186,
+     "conf": 0.666
+    },
+    {
+     "w": "of",
+     "start": 304.207,
+     "end": 304.267,
+     "conf": 0.983
+    },
+    {
+     "w": "fuel",
+     "start": 304.347,
+     "end": 304.587,
+     "conf": 0.523
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "The two privates kept tracking the blob anyway, purely for practice, until they lost it near the island at about seven forty.",
+   "idea": false,
+   "start": 305.097,
+   "end": 311.984,
+   "words": [
+    {
+     "w": "the",
+     "start": 305.097,
+     "end": 305.157,
+     "conf": 0.658
+    },
+    {
+     "w": "two",
+     "start": 305.217,
+     "end": 305.377,
+     "conf": 0.998
+    },
+    {
+     "w": "privates",
+     "start": 305.458,
+     "end": 305.918,
+     "conf": 0.871
+    },
+    {
+     "w": "kept",
+     "start": 305.938,
+     "end": 306.138,
+     "conf": 0.998
+    },
+    {
+     "w": "tracking",
+     "start": 306.178,
+     "end": 306.619,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 306.639,
+     "end": 306.739,
+     "conf": 0.745
+    },
+    {
+     "w": "blob",
+     "start": 306.799,
+     "end": 307.119,
+     "conf": 0.747
+    },
+    {
+     "w": "anyway",
+     "start": 307.259,
+     "end": 307.68,
+     "conf": 0.832
+    },
+    {
+     "w": "purely",
+     "start": 307.82,
+     "end": 308.18,
+     "conf": 0.763
+    },
+    {
+     "w": "for",
+     "start": 308.28,
+     "end": 308.381,
+     "conf": 0.664
+    },
+    {
+     "w": "practice",
+     "start": 308.461,
+     "end": 309.041,
+     "conf": 0.875
+    },
+    {
+     "w": "until",
+     "start": 309.181,
+     "end": 309.382,
+     "conf": 0.799
+    },
+    {
+     "w": "they",
+     "start": 309.402,
+     "end": 309.522,
+     "conf": 0.799
+    },
+    {
+     "w": "lost",
+     "start": 309.622,
+     "end": 309.882,
+     "conf": 0.749
+    },
+    {
+     "w": "it",
+     "start": 309.962,
+     "end": 310.022,
+     "conf": 0.499
+    },
+    {
+     "w": "near",
+     "start": 310.042,
+     "end": 310.182,
+     "conf": 0.809
+    },
+    {
+     "w": "the",
+     "start": 310.203,
+     "end": 310.303,
+     "conf": 0.748
+    },
+    {
+     "w": "island",
+     "start": 310.483,
+     "end": 310.723,
+     "conf": 0.849
+    },
+    {
+     "w": "at",
+     "start": 310.843,
+     "end": 310.903,
+     "conf": 0.496
+    },
+    {
+     "w": "about",
+     "start": 310.963,
+     "end": 311.184,
+     "conf": 0.806
+    },
+    {
+     "w": "seven",
+     "start": 311.204,
+     "end": 311.544,
+     "conf": 0.269
+    },
+    {
+     "w": "forty",
+     "start": 311.564,
+     "end": 311.984,
+     "conf": 0.109
+    }
+   ]
+  },
+  {
+   "section": "The second alarm",
+   "act": "",
+   "text": "Then they finally drove off to breakfast.",
+   "idea": true,
+   "start": 312.415,
+   "end": 314.59,
+   "words": [
+    {
+     "w": "then",
+     "start": 312.415,
+     "end": 312.496,
+     "conf": 0.329
+    },
+    {
+     "w": "they",
+     "start": 312.516,
+     "end": 312.637,
+     "conf": 0.805
+    },
+    {
+     "w": "finally",
+     "start": 312.697,
+     "end": 313.1,
+     "conf": 0.839
+    },
+    {
+     "w": "drove",
+     "start": 313.201,
+     "end": 313.483,
+     "conf": 0.797
+    },
+    {
+     "w": "off",
+     "start": 313.503,
+     "end": 313.664,
+     "conf": 0.687
+    },
+    {
+     "w": "to",
+     "start": 313.825,
+     "end": 313.906,
+     "conf": 0.986
+    },
+    {
+     "w": "breakfast",
+     "start": 314.006,
+     "end": 314.59,
+     "conf": 0.713
+    }
+   ]
+  },
+  {
+   "section": "The third alarm",
+   "act": "",
+   "text": "Meanwhile, in Washington, it was already lunchtime.",
+   "idea": false,
+   "start": 316.472,
+   "end": 319.19,
+   "words": [
+    {
+     "w": "meanwhile",
+     "start": 316.472,
+     "end": 317.036,
+     "conf": 0.975
+    },
+    {
+     "w": "in",
+     "start": 317.137,
+     "end": 317.197,
+     "conf": 0.999
+    },
+    {
+     "w": "washington",
+     "start": 317.278,
+     "end": 317.821,
+     "conf": 0.957
+    },
+    {
+     "w": "it",
+     "start": 317.841,
+     "end": 317.942,
+     "conf": 0.498
+    },
+    {
+     "w": "was",
+     "start": 317.962,
+     "end": 318.083,
+     "conf": 0.999
+    },
+    {
+     "w": "already",
+     "start": 318.183,
+     "end": 318.506,
+     "conf": 0.993
+    },
+    {
+     "w": "lunchtime",
+     "start": 318.646,
+     "end": 319.19,
+     "conf": 0.839
+    }
+   ]
+  },
+  {
+   "section": "The third alarm",
+   "act": "",
+   "text": "American codebreakers had cracked a Japanese message telling its diplomats to deliver a final note at exactly one o'clock in the afternoon, Washington time.",
+   "idea": false,
+   "start": 319.64,
+   "end": 328.575,
+   "words": [
+    {
+     "w": "american",
+     "start": 319.64,
+     "end": 320.061,
+     "conf": 0.873
+    },
+    {
+     "w": "codebreakers",
+     "start": 320.141,
+     "end": 320.762,
+     "conf": 0.75
+    },
+    {
+     "w": "had",
+     "start": 320.782,
+     "end": 320.902,
+     "conf": 0.772
+    },
+    {
+     "w": "cracked",
+     "start": 321.002,
+     "end": 321.343,
+     "conf": 0.845
+    },
+    {
+     "w": "a",
+     "start": 321.403,
+     "end": 321.423,
+     "conf": 0.001
+    },
+    {
+     "w": "japanese",
+     "start": 321.503,
+     "end": 321.964,
+     "conf": 0.848
+    },
+    {
+     "w": "message",
+     "start": 322.004,
+     "end": 322.405,
+     "conf": 0.979
+    },
+    {
+     "w": "telling",
+     "start": 322.505,
+     "end": 322.785,
+     "conf": 0.857
+    },
+    {
+     "w": "its",
+     "start": 322.845,
+     "end": 322.966,
+     "conf": 0.662
+    },
+    {
+     "w": "diplomats",
+     "start": 323.066,
+     "end": 323.727,
+     "conf": 0.887
+    },
+    {
+     "w": "to",
+     "start": 323.987,
+     "end": 324.027,
+     "conf": 0.499
+    },
+    {
+     "w": "deliver",
+     "start": 324.107,
+     "end": 324.408,
+     "conf": 0.857
+    },
+    {
+     "w": "a",
+     "start": 324.488,
+     "end": 324.508,
+     "conf": 0.001
+    },
+    {
+     "w": "final",
+     "start": 324.608,
+     "end": 324.929,
+     "conf": 0.8
+    },
+    {
+     "w": "note",
+     "start": 325.029,
+     "end": 325.309,
+     "conf": 0.938
+    },
+    {
+     "w": "at",
+     "start": 325.47,
+     "end": 325.51,
+     "conf": 0.495
+    },
+    {
+     "w": "exactly",
+     "start": 325.53,
+     "end": 326.111,
+     "conf": 0.851
+    },
+    {
+     "w": "one",
+     "start": 326.411,
+     "end": 326.531,
+     "conf": 0.113
+    },
+    {
+     "w": "o'clock",
+     "start": 326.551,
+     "end": 326.912,
+     "conf": 0.499
+    },
+    {
+     "w": "in",
+     "start": 326.932,
+     "end": 327.012,
+     "conf": 0.492
+    },
+    {
+     "w": "the",
+     "start": 327.032,
+     "end": 327.112,
+     "conf": 0.945
+    },
+    {
+     "w": "afternoon",
+     "start": 327.212,
+     "end": 327.633,
+     "conf": 0.808
+    },
+    {
+     "w": "washington",
+     "start": 327.773,
+     "end": 328.274,
+     "conf": 0.854
+    },
+    {
+     "w": "time",
+     "start": 328.334,
+     "end": 328.575,
+     "conf": 0.751
+    }
+   ]
+  },
+  {
+   "section": "The third alarm",
+   "act": "",
+   "text": "General George Marshall, the head of the Army, thought one p m on a Sunday was a strange time to schedule anything, and in Hawaii, it would be early morning.",
+   "idea": false,
+   "start": 328.964,
+   "end": 337.568,
+   "words": [
+    {
+     "w": "general",
+     "start": 328.964,
+     "end": 329.225,
+     "conf": 0.856
+    },
+    {
+     "w": "george",
+     "start": 329.265,
+     "end": 329.566,
+     "conf": 0.998
+    },
+    {
+     "w": "marshall",
+     "start": 329.626,
+     "end": 330.047,
+     "conf": 0.69
+    },
+    {
+     "w": "the",
+     "start": 330.067,
+     "end": 330.248,
+     "conf": 0.664
+    },
+    {
+     "w": "head",
+     "start": 330.328,
+     "end": 330.468,
+     "conf": 0.896
+    },
+    {
+     "w": "of",
+     "start": 330.488,
+     "end": 330.569,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 330.589,
+     "end": 330.669,
+     "conf": 0.891
+    },
+    {
+     "w": "army",
+     "start": 330.829,
+     "end": 331.05,
+     "conf": 0.749
+    },
+    {
+     "w": "thought",
+     "start": 331.23,
+     "end": 331.411,
+     "conf": 0.779
+    },
+    {
+     "w": "one",
+     "start": 331.612,
+     "end": 331.752,
+     "conf": 0.629
+    },
+    {
+     "w": "p",
+     "start": 331.832,
+     "end": 331.852,
+     "conf": 0.0
+    },
+    {
+     "w": "m",
+     "start": 332.213,
+     "end": 332.233,
+     "conf": 0.005
+    },
+    {
+     "w": "on",
+     "start": 332.334,
+     "end": 332.374,
+     "conf": 0.311
+    },
+    {
+     "w": "a",
+     "start": 332.394,
+     "end": 332.434,
+     "conf": 0.932
+    },
+    {
+     "w": "sunday",
+     "start": 332.574,
+     "end": 332.895,
+     "conf": 0.795
+    },
+    {
+     "w": "was",
+     "start": 332.975,
+     "end": 333.076,
+     "conf": 0.666
+    },
+    {
+     "w": "a",
+     "start": 333.156,
+     "end": 333.176,
+     "conf": 0.001
+    },
+    {
+     "w": "strange",
+     "start": 333.256,
+     "end": 333.657,
+     "conf": 0.857
+    },
+    {
+     "w": "time",
+     "start": 333.717,
+     "end": 333.938,
+     "conf": 0.797
+    },
+    {
+     "w": "to",
+     "start": 333.958,
+     "end": 334.018,
+     "conf": 0.996
+    },
+    {
+     "w": "schedule",
+     "start": 334.119,
+     "end": 334.54,
+     "conf": 0.692
+    },
+    {
+     "w": "anything",
+     "start": 334.64,
+     "end": 335.081,
+     "conf": 0.884
+    },
+    {
+     "w": "and",
+     "start": 335.282,
+     "end": 335.342,
+     "conf": 0.652
+    },
+    {
+     "w": "in",
+     "start": 335.362,
+     "end": 335.442,
+     "conf": 0.996
+    },
+    {
+     "w": "hawaii",
+     "start": 335.523,
+     "end": 336.205,
+     "conf": 0.576
+    },
+    {
+     "w": "it",
+     "start": 336.225,
+     "end": 336.265,
+     "conf": 0.491
+    },
+    {
+     "w": "would",
+     "start": 336.285,
+     "end": 336.445,
+     "conf": 0.955
+    },
+    {
+     "w": "be",
+     "start": 336.505,
+     "end": 336.566,
+     "conf": 0.496
+    },
+    {
+     "w": "early",
+     "start": 336.907,
+     "end": 337.147,
+     "conf": 0.946
+    },
+    {
+     "w": "morning",
+     "start": 337.268,
+     "end": 337.568,
+     "conf": 0.856
+    }
+   ]
+  },
+  {
+   "section": "The third alarm",
+   "act": "",
+   "text": "So he wrote a warning to the Pacific commands, and told them to be on alert.",
+   "idea": true,
+   "start": 338.08,
+   "end": 342.041,
+   "words": [
+    {
+     "w": "so",
+     "start": 338.08,
+     "end": 338.14,
+     "conf": 0.999
+    },
+    {
+     "w": "he",
+     "start": 338.22,
+     "end": 338.281,
+     "conf": 0.939
+    },
+    {
+     "w": "wrote",
+     "start": 338.361,
+     "end": 338.602,
+     "conf": 0.793
+    },
+    {
+     "w": "a",
+     "start": 338.663,
+     "end": 338.683,
+     "conf": 0.002
+    },
+    {
+     "w": "warning",
+     "start": 338.783,
+     "end": 339.226,
+     "conf": 0.881
+    },
+    {
+     "w": "to",
+     "start": 339.306,
+     "end": 339.367,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 339.387,
+     "end": 339.487,
+     "conf": 0.747
+    },
+    {
+     "w": "pacific",
+     "start": 339.548,
+     "end": 339.93,
+     "conf": 0.857
+    },
+    {
+     "w": "commands",
+     "start": 339.99,
+     "end": 340.473,
+     "conf": 0.978
+    },
+    {
+     "w": "and",
+     "start": 340.613,
+     "end": 340.694,
+     "conf": 0.664
+    },
+    {
+     "w": "told",
+     "start": 340.774,
+     "end": 341.015,
+     "conf": 0.788
+    },
+    {
+     "w": "them",
+     "start": 341.036,
+     "end": 341.156,
+     "conf": 0.999
+    },
+    {
+     "w": "to",
+     "start": 341.257,
+     "end": 341.297,
+     "conf": 0.499
+    },
+    {
+     "w": "be",
+     "start": 341.377,
+     "end": 341.438,
+     "conf": 0.5
+    },
+    {
+     "w": "on",
+     "start": 341.599,
+     "end": 341.639,
+     "conf": 0.495
+    },
+    {
+     "w": "alert",
+     "start": 341.719,
+     "end": 342.041,
+     "conf": 0.674
+    }
+   ]
+  },
+  {
+   "section": "The third alarm",
+   "act": "",
+   "text": "Then the Army's radio couldn't get through to Hawaii, because of static.",
+   "idea": false,
+   "start": 343.071,
+   "end": 346.913,
+   "words": [
+    {
+     "w": "then",
+     "start": 343.071,
+     "end": 343.152,
+     "conf": 0.246
+    },
+    {
+     "w": "the",
+     "start": 343.172,
+     "end": 343.272,
+     "conf": 0.736
+    },
+    {
+     "w": "army's",
+     "start": 343.413,
+     "end": 343.755,
+     "conf": 0.771
+    },
+    {
+     "w": "radio",
+     "start": 343.856,
+     "end": 344.177,
+     "conf": 0.997
+    },
+    {
+     "w": "couldn't",
+     "start": 344.318,
+     "end": 344.62,
+     "conf": 0.824
+    },
+    {
+     "w": "get",
+     "start": 344.66,
+     "end": 344.801,
+     "conf": 0.999
+    },
+    {
+     "w": "through",
+     "start": 344.881,
+     "end": 345.082,
+     "conf": 0.762
+    },
+    {
+     "w": "to",
+     "start": 345.103,
+     "end": 345.183,
+     "conf": 0.976
+    },
+    {
+     "w": "hawaii",
+     "start": 345.304,
+     "end": 345.766,
+     "conf": 0.366
+    },
+    {
+     "w": "because",
+     "start": 346.008,
+     "end": 346.309,
+     "conf": 0.856
+    },
+    {
+     "w": "of",
+     "start": 346.33,
+     "end": 346.41,
+     "conf": 0.995
+    },
+    {
+     "w": "static",
+     "start": 346.511,
+     "end": 346.913,
+     "conf": 0.804
+    }
+   ]
+  },
+  {
+   "section": "The third alarm",
+   "act": "",
+   "text": "So the most important warning of the war went out by commercial telegram, the same way you'd send your aunt birthday wishes, and it wasn't even marked urgent.",
+   "idea": false,
+   "start": 347.343,
+   "end": 356.124,
+   "words": [
+    {
+     "w": "so",
+     "start": 347.343,
+     "end": 347.383,
+     "conf": 0.998
+    },
+    {
+     "w": "the",
+     "start": 347.443,
+     "end": 347.503,
+     "conf": 0.664
+    },
+    {
+     "w": "most",
+     "start": 347.523,
+     "end": 347.784,
+     "conf": 0.986
+    },
+    {
+     "w": "important",
+     "start": 347.884,
+     "end": 348.365,
+     "conf": 0.897
+    },
+    {
+     "w": "warning",
+     "start": 348.446,
+     "end": 348.746,
+     "conf": 0.851
+    },
+    {
+     "w": "of",
+     "start": 348.766,
+     "end": 348.847,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 348.867,
+     "end": 348.967,
+     "conf": 0.747
+    },
+    {
+     "w": "war",
+     "start": 349.047,
+     "end": 349.308,
+     "conf": 0.666
+    },
+    {
+     "w": "went",
+     "start": 349.649,
+     "end": 349.829,
+     "conf": 0.996
+    },
+    {
+     "w": "out",
+     "start": 349.889,
+     "end": 350.029,
+     "conf": 0.665
+    },
+    {
+     "w": "by",
+     "start": 350.11,
+     "end": 350.21,
+     "conf": 0.498
+    },
+    {
+     "w": "commercial",
+     "start": 350.31,
+     "end": 350.851,
+     "conf": 0.884
+    },
+    {
+     "w": "telegram",
+     "start": 350.932,
+     "end": 351.533,
+     "conf": 0.885
+    },
+    {
+     "w": "the",
+     "start": 351.553,
+     "end": 351.794,
+     "conf": 0.737
+    },
+    {
+     "w": "same",
+     "start": 351.914,
+     "end": 352.134,
+     "conf": 0.75
+    },
+    {
+     "w": "way",
+     "start": 352.195,
+     "end": 352.315,
+     "conf": 0.666
+    },
+    {
+     "w": "you'd",
+     "start": 352.395,
+     "end": 352.535,
+     "conf": 0.699
+    },
+    {
+     "w": "send",
+     "start": 352.636,
+     "end": 352.856,
+     "conf": 0.992
+    },
+    {
+     "w": "your",
+     "start": 352.876,
+     "end": 353.017,
+     "conf": 0.759
+    },
+    {
+     "w": "aunt",
+     "start": 353.177,
+     "end": 353.337,
+     "conf": 0.495
+    },
+    {
+     "w": "birthday",
+     "start": 353.458,
+     "end": 353.818,
+     "conf": 0.933
+    },
+    {
+     "w": "wishes",
+     "start": 353.899,
+     "end": 354.28,
+     "conf": 0.828
+    },
+    {
+     "w": "and",
+     "start": 354.56,
+     "end": 354.66,
+     "conf": 0.99
+    },
+    {
+     "w": "it",
+     "start": 354.68,
+     "end": 354.761,
+     "conf": 0.987
+    },
+    {
+     "w": "wasn't",
+     "start": 354.841,
+     "end": 355.101,
+     "conf": 0.681
+    },
+    {
+     "w": "even",
+     "start": 355.122,
+     "end": 355.302,
+     "conf": 0.997
+    },
+    {
+     "w": "marked",
+     "start": 355.402,
+     "end": 355.663,
+     "conf": 0.832
+    },
+    {
+     "w": "urgent",
+     "start": 355.803,
+     "end": 356.124,
+     "conf": 0.829
+    }
+   ]
+  },
+  {
+   "section": "The third alarm",
+   "act": "",
+   "text": "It reached the telegraph office in Honolulu at about seven thirty-three, and since the new teletype link to the Army wasn't working yet, it went into a messenger's bag, on a motorcycle.",
+   "idea": false,
+   "start": 356.654,
+   "end": 366.965,
+   "words": [
+    {
+     "w": "it",
+     "start": 356.654,
+     "end": 356.734,
+     "conf": 0.996
+    },
+    {
+     "w": "reached",
+     "start": 356.774,
+     "end": 357.035,
+     "conf": 0.983
+    },
+    {
+     "w": "the",
+     "start": 357.055,
+     "end": 357.115,
+     "conf": 0.993
+    },
+    {
+     "w": "telegraph",
+     "start": 357.175,
+     "end": 357.775,
+     "conf": 0.913
+    },
+    {
+     "w": "office",
+     "start": 357.875,
+     "end": 358.156,
+     "conf": 0.791
+    },
+    {
+     "w": "in",
+     "start": 358.176,
+     "end": 358.256,
+     "conf": 0.977
+    },
+    {
+     "w": "honolulu",
+     "start": 358.336,
+     "end": 358.877,
+     "conf": 0.738
+    },
+    {
+     "w": "at",
+     "start": 358.997,
+     "end": 359.057,
+     "conf": 0.489
+    },
+    {
+     "w": "about",
+     "start": 359.077,
+     "end": 359.317,
+     "conf": 0.952
+    },
+    {
+     "w": "seven",
+     "start": 359.337,
+     "end": 359.737,
+     "conf": 0.001
+    },
+    {
+     "w": "thirty-three",
+     "start": 359.757,
+     "end": 360.418,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 360.779,
+     "end": 360.839,
+     "conf": 0.662
+    },
+    {
+     "w": "since",
+     "start": 360.859,
+     "end": 361.059,
+     "conf": 0.833
+    },
+    {
+     "w": "the",
+     "start": 361.079,
+     "end": 361.159,
+     "conf": 0.978
+    },
+    {
+     "w": "new",
+     "start": 361.219,
+     "end": 361.339,
+     "conf": 0.953
+    },
+    {
+     "w": "teletype",
+     "start": 361.419,
+     "end": 361.94,
+     "conf": 0.78
+    },
+    {
+     "w": "link",
+     "start": 362.0,
+     "end": 362.16,
+     "conf": 0.757
+    },
+    {
+     "w": "to",
+     "start": 362.18,
+     "end": 362.24,
+     "conf": 0.614
+    },
+    {
+     "w": "the",
+     "start": 362.26,
+     "end": 362.36,
+     "conf": 0.715
+    },
+    {
+     "w": "army",
+     "start": 362.5,
+     "end": 362.701,
+     "conf": 0.75
+    },
+    {
+     "w": "wasn't",
+     "start": 362.841,
+     "end": 363.101,
+     "conf": 0.708
+    },
+    {
+     "w": "working",
+     "start": 363.181,
+     "end": 363.582,
+     "conf": 0.99
+    },
+    {
+     "w": "yet",
+     "start": 363.642,
+     "end": 363.802,
+     "conf": 0.666
+    },
+    {
+     "w": "it",
+     "start": 363.982,
+     "end": 364.042,
+     "conf": 0.496
+    },
+    {
+     "w": "went",
+     "start": 364.122,
+     "end": 364.302,
+     "conf": 0.749
+    },
+    {
+     "w": "into",
+     "start": 364.422,
+     "end": 364.583,
+     "conf": 0.748
+    },
+    {
+     "w": "a",
+     "start": 364.663,
+     "end": 364.683,
+     "conf": 0.006
+    },
+    {
+     "w": "messenger's",
+     "start": 364.763,
+     "end": 365.263,
+     "conf": 0.849
+    },
+    {
+     "w": "bag",
+     "start": 365.404,
+     "end": 365.804,
+     "conf": 0.655
+    },
+    {
+     "w": "on",
+     "start": 366.024,
+     "end": 366.064,
+     "conf": 0.497
+    },
+    {
+     "w": "a",
+     "start": 366.124,
+     "end": 366.144,
+     "conf": 0.002
+    },
+    {
+     "w": "motorcycle",
+     "start": 366.284,
+     "end": 366.965,
+     "conf": 0.849
+    }
+   ]
+  },
+  {
+   "section": "The third alarm",
+   "act": "",
+   "text": "That messenger was still on his way when the bombs started falling, and the warning didn't reach General Short until that afternoon.",
+   "idea": true,
+   "start": 367.355,
+   "end": 374.792,
+   "words": [
+    {
+     "w": "that",
+     "start": 367.355,
+     "end": 367.495,
+     "conf": 0.735
+    },
+    {
+     "w": "messenger",
+     "start": 367.596,
+     "end": 368.097,
+     "conf": 0.881
+    },
+    {
+     "w": "was",
+     "start": 368.177,
+     "end": 368.297,
+     "conf": 0.666
+    },
+    {
+     "w": "still",
+     "start": 368.377,
+     "end": 368.698,
+     "conf": 0.944
+    },
+    {
+     "w": "on",
+     "start": 368.818,
+     "end": 368.919,
+     "conf": 0.5
+    },
+    {
+     "w": "his",
+     "start": 368.999,
+     "end": 369.139,
+     "conf": 0.819
+    },
+    {
+     "w": "way",
+     "start": 369.239,
+     "end": 369.42,
+     "conf": 0.668
+    },
+    {
+     "w": "when",
+     "start": 369.48,
+     "end": 369.6,
+     "conf": 0.985
+    },
+    {
+     "w": "the",
+     "start": 369.62,
+     "end": 369.7,
+     "conf": 0.991
+    },
+    {
+     "w": "bombs",
+     "start": 369.801,
+     "end": 370.181,
+     "conf": 0.74
+    },
+    {
+     "w": "started",
+     "start": 370.382,
+     "end": 370.723,
+     "conf": 0.856
+    },
+    {
+     "w": "falling",
+     "start": 370.843,
+     "end": 371.284,
+     "conf": 0.862
+    },
+    {
+     "w": "and",
+     "start": 371.404,
+     "end": 371.504,
+     "conf": 0.995
+    },
+    {
+     "w": "the",
+     "start": 371.524,
+     "end": 371.605,
+     "conf": 0.995
+    },
+    {
+     "w": "warning",
+     "start": 371.665,
+     "end": 372.005,
+     "conf": 0.991
+    },
+    {
+     "w": "didn't",
+     "start": 372.066,
+     "end": 372.306,
+     "conf": 0.812
+    },
+    {
+     "w": "reach",
+     "start": 372.386,
+     "end": 372.587,
+     "conf": 0.83
+    },
+    {
+     "w": "general",
+     "start": 372.667,
+     "end": 373.008,
+     "conf": 0.856
+    },
+    {
+     "w": "short",
+     "start": 373.168,
+     "end": 373.489,
+     "conf": 0.982
+    },
+    {
+     "w": "until",
+     "start": 373.689,
+     "end": 373.99,
+     "conf": 0.798
+    },
+    {
+     "w": "that",
+     "start": 374.01,
+     "end": 374.17,
+     "conf": 0.792
+    },
+    {
+     "w": "afternoon",
+     "start": 374.27,
+     "end": 374.792,
+     "conf": 0.851
+    }
+   ]
+  },
+  {
+   "section": "Just before eight",
+   "act": "",
+   "text": "At about seven fifty-five, the first wave of a hundred and eighty-three Japanese planes came over the island.",
+   "idea": false,
+   "start": 376.512,
+   "end": 382.594,
+   "words": [
+    {
+     "w": "at",
+     "start": 376.512,
+     "end": 376.593,
+     "conf": 0.968
+    },
+    {
+     "w": "about",
+     "start": 376.613,
+     "end": 376.853,
+     "conf": 0.99
+    },
+    {
+     "w": "seven",
+     "start": 376.894,
+     "end": 377.195,
+     "conf": 0.021
+    },
+    {
+     "w": "fifty-five",
+     "start": 377.215,
+     "end": 377.877,
+     "conf": 0.003
+    },
+    {
+     "w": "the",
+     "start": 377.897,
+     "end": 377.977,
+     "conf": 0.953
+    },
+    {
+     "w": "first",
+     "start": 378.178,
+     "end": 378.479,
+     "conf": 0.826
+    },
+    {
+     "w": "wave",
+     "start": 378.6,
+     "end": 378.86,
+     "conf": 0.749
+    },
+    {
+     "w": "of",
+     "start": 378.881,
+     "end": 378.961,
+     "conf": 0.996
+    },
+    {
+     "w": "a",
+     "start": 379.021,
+     "end": 379.041,
+     "conf": 0.004
+    },
+    {
+     "w": "hundred",
+     "start": 379.061,
+     "end": 379.463,
+     "conf": 0.005
+    },
+    {
+     "w": "and",
+     "start": 379.483,
+     "end": 379.583,
+     "conf": 0.007
+    },
+    {
+     "w": "eighty-three",
+     "start": 379.603,
+     "end": 380.306,
+     "conf": 0.001
+    },
+    {
+     "w": "japanese",
+     "start": 380.546,
+     "end": 381.088,
+     "conf": 0.884
+    },
+    {
+     "w": "planes",
+     "start": 381.148,
+     "end": 381.55,
+     "conf": 0.765
+    },
+    {
+     "w": "came",
+     "start": 381.63,
+     "end": 381.871,
+     "conf": 0.796
+    },
+    {
+     "w": "over",
+     "start": 381.911,
+     "end": 382.092,
+     "conf": 0.788
+    },
+    {
+     "w": "the",
+     "start": 382.132,
+     "end": 382.192,
+     "conf": 0.66
+    },
+    {
+     "w": "island",
+     "start": 382.373,
+     "end": 382.594,
+     "conf": 0.842
+    }
+   ]
+  },
+  {
+   "section": "Just before eight",
+   "act": "",
+   "text": "Torpedo bombers went for the neat row of battleships, and dive bombers went for the planes parked wingtip to wingtip, which, as it turns out, made them very easy to hit.",
+   "idea": false,
+   "start": 383.064,
+   "end": 392.434,
+   "words": [
+    {
+     "w": "torpedo",
+     "start": 383.064,
+     "end": 383.485,
+     "conf": 0.697
+    },
+    {
+     "w": "bombers",
+     "start": 383.605,
+     "end": 384.025,
+     "conf": 0.638
+    },
+    {
+     "w": "went",
+     "start": 384.125,
+     "end": 384.265,
+     "conf": 0.749
+    },
+    {
+     "w": "for",
+     "start": 384.285,
+     "end": 384.385,
+     "conf": 0.744
+    },
+    {
+     "w": "the",
+     "start": 384.405,
+     "end": 384.506,
+     "conf": 0.74
+    },
+    {
+     "w": "neat",
+     "start": 384.606,
+     "end": 384.786,
+     "conf": 0.645
+    },
+    {
+     "w": "row",
+     "start": 384.886,
+     "end": 385.026,
+     "conf": 0.573
+    },
+    {
+     "w": "of",
+     "start": 385.126,
+     "end": 385.166,
+     "conf": 0.493
+    },
+    {
+     "w": "battleships",
+     "start": 385.386,
+     "end": 386.107,
+     "conf": 0.885
+    },
+    {
+     "w": "and",
+     "start": 386.247,
+     "end": 386.327,
+     "conf": 0.66
+    },
+    {
+     "w": "dive",
+     "start": 386.388,
+     "end": 386.648,
+     "conf": 0.713
+    },
+    {
+     "w": "bombers",
+     "start": 386.688,
+     "end": 387.028,
+     "conf": 0.652
+    },
+    {
+     "w": "went",
+     "start": 387.108,
+     "end": 387.228,
+     "conf": 0.749
+    },
+    {
+     "w": "for",
+     "start": 387.288,
+     "end": 387.349,
+     "conf": 0.654
+    },
+    {
+     "w": "the",
+     "start": 387.369,
+     "end": 387.469,
+     "conf": 0.74
+    },
+    {
+     "w": "planes",
+     "start": 387.529,
+     "end": 387.909,
+     "conf": 0.701
+    },
+    {
+     "w": "parked",
+     "start": 387.989,
+     "end": 388.289,
+     "conf": 0.829
+    },
+    {
+     "w": "wingtip",
+     "start": 388.37,
+     "end": 388.85,
+     "conf": 0.85
+    },
+    {
+     "w": "to",
+     "start": 388.97,
+     "end": 389.03,
+     "conf": 0.499
+    },
+    {
+     "w": "wingtip",
+     "start": 389.13,
+     "end": 389.551,
+     "conf": 0.867
+    },
+    {
+     "w": "which",
+     "start": 389.711,
+     "end": 389.891,
+     "conf": 0.881
+    },
+    {
+     "w": "as",
+     "start": 390.051,
+     "end": 390.131,
+     "conf": 0.497
+    },
+    {
+     "w": "it",
+     "start": 390.191,
+     "end": 390.231,
+     "conf": 0.497
+    },
+    {
+     "w": "turns",
+     "start": 390.292,
+     "end": 390.552,
+     "conf": 0.776
+    },
+    {
+     "w": "out",
+     "start": 390.672,
+     "end": 390.872,
+     "conf": 0.724
+    },
+    {
+     "w": "made",
+     "start": 391.052,
+     "end": 391.232,
+     "conf": 0.748
+    },
+    {
+     "w": "them",
+     "start": 391.253,
+     "end": 391.393,
+     "conf": 0.836
+    },
+    {
+     "w": "very",
+     "start": 391.573,
+     "end": 391.793,
+     "conf": 0.749
+    },
+    {
+     "w": "easy",
+     "start": 391.973,
+     "end": 392.133,
+     "conf": 0.747
+    },
+    {
+     "w": "to",
+     "start": 392.214,
+     "end": 392.254,
+     "conf": 0.501
+    },
+    {
+     "w": "hit",
+     "start": 392.334,
+     "end": 392.434,
+     "conf": 0.914
+    }
+   ]
+  },
+  {
+   "section": "Just before eight",
+   "act": "",
+   "text": "At eight oh six, a bomb broke through the deck of the battleship Arizona and set off her ammunition, and the ship exploded.",
+   "idea": false,
+   "start": 392.965,
+   "end": 399.668,
+   "words": [
+    {
+     "w": "at",
+     "start": 392.965,
+     "end": 393.045,
+     "conf": 0.902
+    },
+    {
+     "w": "eight",
+     "start": 393.145,
+     "end": 393.246,
+     "conf": 0.067
+    },
+    {
+     "w": "oh",
+     "start": 393.266,
+     "end": 393.366,
+     "conf": 0.259
+    },
+    {
+     "w": "six",
+     "start": 393.386,
+     "end": 393.647,
+     "conf": 0.045
+    },
+    {
+     "w": "a",
+     "start": 393.888,
+     "end": 393.908,
+     "conf": 0.0
+    },
+    {
+     "w": "bomb",
+     "start": 394.048,
+     "end": 394.41,
+     "conf": 0.426
+    },
+    {
+     "w": "broke",
+     "start": 394.57,
+     "end": 394.851,
+     "conf": 0.799
+    },
+    {
+     "w": "through",
+     "start": 394.952,
+     "end": 395.132,
+     "conf": 0.763
+    },
+    {
+     "w": "the",
+     "start": 395.152,
+     "end": 395.233,
+     "conf": 0.946
+    },
+    {
+     "w": "deck",
+     "start": 395.353,
+     "end": 395.514,
+     "conf": 0.74
+    },
+    {
+     "w": "of",
+     "start": 395.534,
+     "end": 395.614,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 395.634,
+     "end": 395.734,
+     "conf": 0.747
+    },
+    {
+     "w": "battleship",
+     "start": 395.795,
+     "end": 396.256,
+     "conf": 0.861
+    },
+    {
+     "w": "arizona",
+     "start": 396.397,
+     "end": 396.898,
+     "conf": 0.829
+    },
+    {
+     "w": "and",
+     "start": 397.139,
+     "end": 397.22,
+     "conf": 0.664
+    },
+    {
+     "w": "set",
+     "start": 397.32,
+     "end": 397.46,
+     "conf": 0.644
+    },
+    {
+     "w": "off",
+     "start": 397.521,
+     "end": 397.621,
+     "conf": 0.722
+    },
+    {
+     "w": "her",
+     "start": 397.701,
+     "end": 397.782,
+     "conf": 0.431
+    },
+    {
+     "w": "ammunition",
+     "start": 397.862,
+     "end": 398.464,
+     "conf": 0.887
+    },
+    {
+     "w": "and",
+     "start": 398.645,
+     "end": 398.725,
+     "conf": 0.937
+    },
+    {
+     "w": "the",
+     "start": 398.745,
+     "end": 398.825,
+     "conf": 0.964
+    },
+    {
+     "w": "ship",
+     "start": 398.906,
+     "end": 399.046,
+     "conf": 0.734
+    },
+    {
+     "w": "exploded",
+     "start": 399.126,
+     "end": 399.668,
+     "conf": 0.87
+    }
+   ]
+  },
+  {
+   "section": "Just before eight",
+   "act": "",
+   "text": "One thousand one hundred and seventy-seven men died on the Arizona alone.",
+   "idea": true,
+   "start": 400.078,
+   "end": 404.215,
+   "words": [
+    {
+     "w": "one",
+     "start": 400.078,
+     "end": 400.279,
+     "conf": 0.001
+    },
+    {
+     "w": "thousand",
+     "start": 400.299,
+     "end": 400.681,
+     "conf": 0.002
+    },
+    {
+     "w": "one",
+     "start": 400.701,
+     "end": 400.881,
+     "conf": 0.0
+    },
+    {
+     "w": "hundred",
+     "start": 400.901,
+     "end": 401.183,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 401.203,
+     "end": 401.283,
+     "conf": 0.014
+    },
+    {
+     "w": "seventy-seven",
+     "start": 401.303,
+     "end": 401.986,
+     "conf": 0.004
+    },
+    {
+     "w": "men",
+     "start": 402.086,
+     "end": 402.307,
+     "conf": 0.663
+    },
+    {
+     "w": "died",
+     "start": 402.568,
+     "end": 402.909,
+     "conf": 0.743
+    },
+    {
+     "w": "on",
+     "start": 403.01,
+     "end": 403.05,
+     "conf": 0.497
+    },
+    {
+     "w": "the",
+     "start": 403.07,
+     "end": 403.15,
+     "conf": 0.979
+    },
+    {
+     "w": "arizona",
+     "start": 403.271,
+     "end": 403.793,
+     "conf": 0.794
+    },
+    {
+     "w": "alone",
+     "start": 404.034,
+     "end": 404.215,
+     "conf": 0.399
+    }
+   ]
+  },
+  {
+   "section": "Just before eight",
+   "act": "",
+   "text": "A second wave followed, and by ten o'clock it was over.",
+   "idea": false,
+   "start": 405.265,
+   "end": 408.091,
+   "words": [
+    {
+     "w": "a",
+     "start": 405.265,
+     "end": 405.285,
+     "conf": 0.002
+    },
+    {
+     "w": "second",
+     "start": 405.385,
+     "end": 405.666,
+     "conf": 0.83
+    },
+    {
+     "w": "wave",
+     "start": 405.686,
+     "end": 405.906,
+     "conf": 0.668
+    },
+    {
+     "w": "followed",
+     "start": 405.926,
+     "end": 406.407,
+     "conf": 0.887
+    },
+    {
+     "w": "and",
+     "start": 406.648,
+     "end": 406.768,
+     "conf": 0.66
+    },
+    {
+     "w": "by",
+     "start": 406.828,
+     "end": 406.928,
+     "conf": 0.498
+    },
+    {
+     "w": "ten",
+     "start": 407.029,
+     "end": 407.149,
+     "conf": 0.545
+    },
+    {
+     "w": "o'clock",
+     "start": 407.169,
+     "end": 407.509,
+     "conf": 0.6
+    },
+    {
+     "w": "it",
+     "start": 407.59,
+     "end": 407.63,
+     "conf": 0.499
+    },
+    {
+     "w": "was",
+     "start": 407.65,
+     "end": 407.77,
+     "conf": 0.996
+    },
+    {
+     "w": "over",
+     "start": 407.87,
+     "end": 408.091,
+     "conf": 0.749
+    }
+   ]
+  },
+  {
+   "section": "Just before eight",
+   "act": "",
+   "text": "Two thousand four hundred and three Americans were killed, sixty-eight of them civilians, and more than eleven hundred were wounded.",
+   "idea": false,
+   "start": 408.741,
+   "end": 416.098,
+   "words": [
+    {
+     "w": "two",
+     "start": 408.741,
+     "end": 408.941,
+     "conf": 0.047
+    },
+    {
+     "w": "thousand",
+     "start": 408.981,
+     "end": 409.442,
+     "conf": 0.07
+    },
+    {
+     "w": "four",
+     "start": 409.462,
+     "end": 409.703,
+     "conf": 0.003
+    },
+    {
+     "w": "hundred",
+     "start": 409.723,
+     "end": 410.044,
+     "conf": 0.003
+    },
+    {
+     "w": "and",
+     "start": 410.064,
+     "end": 410.144,
+     "conf": 0.045
+    },
+    {
+     "w": "three",
+     "start": 410.164,
+     "end": 410.425,
+     "conf": 0.063
+    },
+    {
+     "w": "americans",
+     "start": 410.505,
+     "end": 411.126,
+     "conf": 0.886
+    },
+    {
+     "w": "were",
+     "start": 411.146,
+     "end": 411.307,
+     "conf": 0.799
+    },
+    {
+     "w": "killed",
+     "start": 411.387,
+     "end": 411.728,
+     "conf": 0.855
+    },
+    {
+     "w": "sixty-eight",
+     "start": 411.748,
+     "end": 412.55,
+     "conf": 0.122
+    },
+    {
+     "w": "of",
+     "start": 412.57,
+     "end": 412.65,
+     "conf": 0.653
+    },
+    {
+     "w": "them",
+     "start": 412.67,
+     "end": 412.831,
+     "conf": 0.796
+    },
+    {
+     "w": "civilians",
+     "start": 412.931,
+     "end": 413.572,
+     "conf": 0.874
+    },
+    {
+     "w": "and",
+     "start": 413.793,
+     "end": 413.893,
+     "conf": 0.667
+    },
+    {
+     "w": "more",
+     "start": 414.013,
+     "end": 414.274,
+     "conf": 0.775
+    },
+    {
+     "w": "than",
+     "start": 414.354,
+     "end": 414.454,
+     "conf": 0.502
+    },
+    {
+     "w": "eleven",
+     "start": 414.595,
+     "end": 415.016,
+     "conf": 0.742
+    },
+    {
+     "w": "hundred",
+     "start": 415.116,
+     "end": 415.437,
+     "conf": 0.368
+    },
+    {
+     "w": "were",
+     "start": 415.517,
+     "end": 415.677,
+     "conf": 0.731
+    },
+    {
+     "w": "wounded",
+     "start": 415.738,
+     "end": 416.098,
+     "conf": 0.763
+    }
+   ]
+  },
+  {
+   "section": "Just before eight",
+   "act": "",
+   "text": "Four battleships were sunk, four more were damaged, and almost two hundred planes were destroyed, most of them on the ground.",
+   "idea": true,
+   "start": 416.509,
+   "end": 423.55,
+   "words": [
+    {
+     "w": "four",
+     "start": 416.509,
+     "end": 416.75,
+     "conf": 0.924
+    },
+    {
+     "w": "battleships",
+     "start": 416.85,
+     "end": 417.552,
+     "conf": 0.954
+    },
+    {
+     "w": "were",
+     "start": 417.572,
+     "end": 417.733,
+     "conf": 0.797
+    },
+    {
+     "w": "sunk",
+     "start": 417.913,
+     "end": 418.234,
+     "conf": 0.738
+    },
+    {
+     "w": "four",
+     "start": 418.515,
+     "end": 418.756,
+     "conf": 0.829
+    },
+    {
+     "w": "more",
+     "start": 418.896,
+     "end": 419.117,
+     "conf": 0.72
+    },
+    {
+     "w": "were",
+     "start": 419.137,
+     "end": 419.317,
+     "conf": 0.796
+    },
+    {
+     "w": "damaged",
+     "start": 419.377,
+     "end": 419.939,
+     "conf": 0.857
+    },
+    {
+     "w": "and",
+     "start": 420.059,
+     "end": 420.14,
+     "conf": 0.664
+    },
+    {
+     "w": "almost",
+     "start": 420.26,
+     "end": 420.621,
+     "conf": 0.784
+    },
+    {
+     "w": "two",
+     "start": 420.701,
+     "end": 420.862,
+     "conf": 0.316
+    },
+    {
+     "w": "hundred",
+     "start": 420.922,
+     "end": 421.183,
+     "conf": 0.297
+    },
+    {
+     "w": "planes",
+     "start": 421.243,
+     "end": 421.564,
+     "conf": 0.73
+    },
+    {
+     "w": "were",
+     "start": 421.584,
+     "end": 421.744,
+     "conf": 0.798
+    },
+    {
+     "w": "destroyed",
+     "start": 421.764,
+     "end": 422.266,
+     "conf": 0.993
+    },
+    {
+     "w": "most",
+     "start": 422.386,
+     "end": 422.627,
+     "conf": 0.785
+    },
+    {
+     "w": "of",
+     "start": 422.687,
+     "end": 422.727,
+     "conf": 0.499
+    },
+    {
+     "w": "them",
+     "start": 422.747,
+     "end": 422.888,
+     "conf": 0.993
+    },
+    {
+     "w": "on",
+     "start": 422.908,
+     "end": 423.008,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 423.028,
+     "end": 423.128,
+     "conf": 0.768
+    },
+    {
+     "w": "ground",
+     "start": 423.189,
+     "end": 423.55,
+     "conf": 0.846
+    }
+   ]
+  },
+  {
+   "section": "Japan hits snooze too",
+   "act": "",
+   "text": "But Japan had its own tiny mistakes that morning.",
+   "idea": false,
+   "start": 425.19,
+   "end": 427.858,
+   "words": [
+    {
+     "w": "but",
+     "start": 425.19,
+     "end": 425.25,
+     "conf": 0.331
+    },
+    {
+     "w": "japan",
+     "start": 425.27,
+     "end": 425.611,
+     "conf": 0.963
+    },
+    {
+     "w": "had",
+     "start": 425.692,
+     "end": 425.812,
+     "conf": 0.666
+    },
+    {
+     "w": "its",
+     "start": 425.852,
+     "end": 425.952,
+     "conf": 0.998
+    },
+    {
+     "w": "own",
+     "start": 426.133,
+     "end": 426.273,
+     "conf": 0.665
+    },
+    {
+     "w": "tiny",
+     "start": 426.434,
+     "end": 426.795,
+     "conf": 0.745
+    },
+    {
+     "w": "mistakes",
+     "start": 426.915,
+     "end": 427.377,
+     "conf": 0.786
+    },
+    {
+     "w": "that",
+     "start": 427.417,
+     "end": 427.557,
+     "conf": 0.984
+    },
+    {
+     "w": "morning",
+     "start": 427.637,
+     "end": 427.858,
+     "conf": 0.493
+    }
+   ]
+  },
+  {
+   "section": "Japan hits snooze too",
+   "act": "",
+   "text": "The big prize, the American aircraft carriers, weren't even there, because all three of them happened to be away from the harbor.",
+   "idea": false,
+   "start": 428.328,
+   "end": 435.524,
+   "words": [
+    {
+     "w": "the",
+     "start": 428.328,
+     "end": 428.388,
+     "conf": 0.648
+    },
+    {
+     "w": "big",
+     "start": 428.448,
+     "end": 428.629,
+     "conf": 1.0
+    },
+    {
+     "w": "prize",
+     "start": 428.709,
+     "end": 429.29,
+     "conf": 0.755
+    },
+    {
+     "w": "the",
+     "start": 429.451,
+     "end": 429.531,
+     "conf": 0.948
+    },
+    {
+     "w": "american",
+     "start": 429.591,
+     "end": 430.012,
+     "conf": 0.874
+    },
+    {
+     "w": "aircraft",
+     "start": 430.132,
+     "end": 430.593,
+     "conf": 0.909
+    },
+    {
+     "w": "carriers",
+     "start": 430.713,
+     "end": 431.235,
+     "conf": 0.839
+    },
+    {
+     "w": "weren't",
+     "start": 431.375,
+     "end": 431.575,
+     "conf": 0.663
+    },
+    {
+     "w": "even",
+     "start": 431.595,
+     "end": 431.776,
+     "conf": 0.997
+    },
+    {
+     "w": "there",
+     "start": 431.856,
+     "end": 432.097,
+     "conf": 0.814
+    },
+    {
+     "w": "because",
+     "start": 432.197,
+     "end": 432.437,
+     "conf": 0.867
+    },
+    {
+     "w": "all",
+     "start": 432.618,
+     "end": 432.778,
+     "conf": 0.737
+    },
+    {
+     "w": "three",
+     "start": 433.039,
+     "end": 433.299,
+     "conf": 0.853
+    },
+    {
+     "w": "of",
+     "start": 433.319,
+     "end": 433.419,
+     "conf": 0.666
+    },
+    {
+     "w": "them",
+     "start": 433.48,
+     "end": 433.64,
+     "conf": 0.748
+    },
+    {
+     "w": "happened",
+     "start": 433.82,
+     "end": 434.141,
+     "conf": 0.904
+    },
+    {
+     "w": "to",
+     "start": 434.161,
+     "end": 434.221,
+     "conf": 0.666
+    },
+    {
+     "w": "be",
+     "start": 434.301,
+     "end": 434.382,
+     "conf": 0.499
+    },
+    {
+     "w": "away",
+     "start": 434.622,
+     "end": 434.883,
+     "conf": 0.749
+    },
+    {
+     "w": "from",
+     "start": 435.003,
+     "end": 435.123,
+     "conf": 0.749
+    },
+    {
+     "w": "the",
+     "start": 435.143,
+     "end": 435.223,
+     "conf": 0.74
+    },
+    {
+     "w": "harbor",
+     "start": 435.304,
+     "end": 435.524,
+     "conf": 0.575
+    }
+   ]
+  },
+  {
+   "section": "Japan hits snooze too",
+   "act": "",
+   "text": "And the Japanese pilots ignored the huge tanks of fuel oil and the repair yards, so most of the damaged ships were raised, fixed, and sent back to fight.",
+   "idea": true,
+   "start": 435.914,
+   "end": 444.406,
+   "words": [
+    {
+     "w": "and",
+     "start": 435.914,
+     "end": 435.974,
+     "conf": 0.906
+    },
+    {
+     "w": "the",
+     "start": 435.994,
+     "end": 436.054,
+     "conf": 0.91
+    },
+    {
+     "w": "japanese",
+     "start": 436.074,
+     "end": 436.535,
+     "conf": 0.884
+    },
+    {
+     "w": "pilots",
+     "start": 436.575,
+     "end": 437.016,
+     "conf": 0.877
+    },
+    {
+     "w": "ignored",
+     "start": 437.136,
+     "end": 437.516,
+     "conf": 0.856
+    },
+    {
+     "w": "the",
+     "start": 437.536,
+     "end": 437.616,
+     "conf": 0.939
+    },
+    {
+     "w": "huge",
+     "start": 437.717,
+     "end": 438.037,
+     "conf": 0.889
+    },
+    {
+     "w": "tanks",
+     "start": 438.157,
+     "end": 438.438,
+     "conf": 0.787
+    },
+    {
+     "w": "of",
+     "start": 438.518,
+     "end": 438.558,
+     "conf": 0.49
+    },
+    {
+     "w": "fuel",
+     "start": 438.598,
+     "end": 438.858,
+     "conf": 0.702
+    },
+    {
+     "w": "oil",
+     "start": 438.958,
+     "end": 439.139,
+     "conf": 0.888
+    },
+    {
+     "w": "and",
+     "start": 439.159,
+     "end": 439.279,
+     "conf": 0.583
+    },
+    {
+     "w": "the",
+     "start": 439.299,
+     "end": 439.359,
+     "conf": 0.922
+    },
+    {
+     "w": "repair",
+     "start": 439.379,
+     "end": 439.72,
+     "conf": 0.693
+    },
+    {
+     "w": "yards",
+     "start": 439.8,
+     "end": 440.08,
+     "conf": 0.766
+    },
+    {
+     "w": "so",
+     "start": 440.18,
+     "end": 440.24,
+     "conf": 0.499
+    },
+    {
+     "w": "most",
+     "start": 440.481,
+     "end": 440.781,
+     "conf": 0.775
+    },
+    {
+     "w": "of",
+     "start": 440.841,
+     "end": 440.881,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 440.961,
+     "end": 441.021,
+     "conf": 0.376
+    },
+    {
+     "w": "damaged",
+     "start": 441.122,
+     "end": 441.562,
+     "conf": 0.75
+    },
+    {
+     "w": "ships",
+     "start": 441.662,
+     "end": 441.943,
+     "conf": 0.785
+    },
+    {
+     "w": "were",
+     "start": 442.063,
+     "end": 442.223,
+     "conf": 0.713
+    },
+    {
+     "w": "raised",
+     "start": 442.303,
+     "end": 442.704,
+     "conf": 0.853
+    },
+    {
+     "w": "fixed",
+     "start": 442.884,
+     "end": 443.225,
+     "conf": 0.794
+    },
+    {
+     "w": "and",
+     "start": 443.325,
+     "end": 443.405,
+     "conf": 0.664
+    },
+    {
+     "w": "sent",
+     "start": 443.525,
+     "end": 443.705,
+     "conf": 0.754
+    },
+    {
+     "w": "back",
+     "start": 443.765,
+     "end": 443.946,
+     "conf": 0.75
+    },
+    {
+     "w": "to",
+     "start": 444.026,
+     "end": 444.066,
+     "conf": 0.499
+    },
+    {
+     "w": "fight",
+     "start": 444.166,
+     "end": 444.406,
+     "conf": 0.791
+    }
+   ]
+  },
+  {
+   "section": "Japan hits snooze too",
+   "act": "",
+   "text": "Then there was the declaration of war, sort of.",
+   "idea": false,
+   "start": 445.396,
+   "end": 447.842,
+   "words": [
+    {
+     "w": "then",
+     "start": 445.396,
+     "end": 445.496,
+     "conf": 0.994
+    },
+    {
+     "w": "there",
+     "start": 445.516,
+     "end": 445.657,
+     "conf": 0.828
+    },
+    {
+     "w": "was",
+     "start": 445.677,
+     "end": 445.757,
+     "conf": 0.992
+    },
+    {
+     "w": "the",
+     "start": 445.777,
+     "end": 445.877,
+     "conf": 0.687
+    },
+    {
+     "w": "declaration",
+     "start": 445.977,
+     "end": 446.619,
+     "conf": 0.904
+    },
+    {
+     "w": "of",
+     "start": 446.639,
+     "end": 446.739,
+     "conf": 0.659
+    },
+    {
+     "w": "war",
+     "start": 446.9,
+     "end": 447.2,
+     "conf": 0.661
+    },
+    {
+     "w": "sort",
+     "start": 447.521,
+     "end": 447.721,
+     "conf": 0.648
+    },
+    {
+     "w": "of",
+     "start": 447.742,
+     "end": 447.842,
+     "conf": 0.36
+    }
+   ]
+  },
+  {
+   "section": "Japan hits snooze too",
+   "act": "",
+   "text": "That note was supposed to be handed over in Washington at one o'clock, less than half an hour before the bombs.",
+   "idea": false,
+   "start": 448.372,
+   "end": 454.433,
+   "words": [
+    {
+     "w": "that",
+     "start": 448.372,
+     "end": 448.513,
+     "conf": 0.519
+    },
+    {
+     "w": "note",
+     "start": 448.593,
+     "end": 448.834,
+     "conf": 0.884
+    },
+    {
+     "w": "was",
+     "start": 448.854,
+     "end": 448.974,
+     "conf": 0.998
+    },
+    {
+     "w": "supposed",
+     "start": 448.994,
+     "end": 449.356,
+     "conf": 0.827
+    },
+    {
+     "w": "to",
+     "start": 449.376,
+     "end": 449.456,
+     "conf": 0.746
+    },
+    {
+     "w": "be",
+     "start": 449.496,
+     "end": 449.536,
+     "conf": 0.498
+    },
+    {
+     "w": "handed",
+     "start": 449.637,
+     "end": 449.918,
+     "conf": 0.99
+    },
+    {
+     "w": "over",
+     "start": 449.938,
+     "end": 450.178,
+     "conf": 0.799
+    },
+    {
+     "w": "in",
+     "start": 450.279,
+     "end": 450.319,
+     "conf": 0.498
+    },
+    {
+     "w": "washington",
+     "start": 450.439,
+     "end": 451.041,
+     "conf": 0.879
+    },
+    {
+     "w": "at",
+     "start": 451.142,
+     "end": 451.202,
+     "conf": 0.494
+    },
+    {
+     "w": "one",
+     "start": 451.222,
+     "end": 451.483,
+     "conf": 0.147
+    },
+    {
+     "w": "o'clock",
+     "start": 451.503,
+     "end": 451.984,
+     "conf": 0.598
+    },
+    {
+     "w": "less",
+     "start": 452.285,
+     "end": 452.486,
+     "conf": 0.765
+    },
+    {
+     "w": "than",
+     "start": 452.506,
+     "end": 452.707,
+     "conf": 0.779
+    },
+    {
+     "w": "half",
+     "start": 452.827,
+     "end": 453.028,
+     "conf": 0.714
+    },
+    {
+     "w": "an",
+     "start": 453.108,
+     "end": 453.168,
+     "conf": 0.491
+    },
+    {
+     "w": "hour",
+     "start": 453.188,
+     "end": 453.429,
+     "conf": 0.895
+    },
+    {
+     "w": "before",
+     "start": 453.53,
+     "end": 453.811,
+     "conf": 0.824
+    },
+    {
+     "w": "the",
+     "start": 453.831,
+     "end": 453.931,
+     "conf": 0.743
+    },
+    {
+     "w": "bombs",
+     "start": 453.991,
+     "end": 454.433,
+     "conf": 0.858
+    }
+   ]
+  },
+  {
+   "section": "Japan hits snooze too",
+   "act": "",
+   "text": "But the long message had to be decoded and typed up at the Japanese embassy, the typing went slowly, and the diplomats arrived more than an hour late.",
+   "idea": false,
+   "start": 454.863,
+   "end": 463.17,
+   "words": [
+    {
+     "w": "but",
+     "start": 454.863,
+     "end": 454.943,
+     "conf": 0.335
+    },
+    {
+     "w": "the",
+     "start": 454.963,
+     "end": 455.023,
+     "conf": 0.993
+    },
+    {
+     "w": "long",
+     "start": 455.123,
+     "end": 455.363,
+     "conf": 0.756
+    },
+    {
+     "w": "message",
+     "start": 455.444,
+     "end": 455.784,
+     "conf": 0.851
+    },
+    {
+     "w": "had",
+     "start": 455.804,
+     "end": 455.924,
+     "conf": 0.748
+    },
+    {
+     "w": "to",
+     "start": 455.944,
+     "end": 456.004,
+     "conf": 0.709
+    },
+    {
+     "w": "be",
+     "start": 456.024,
+     "end": 456.104,
+     "conf": 0.663
+    },
+    {
+     "w": "decoded",
+     "start": 456.204,
+     "end": 456.885,
+     "conf": 0.98
+    },
+    {
+     "w": "and",
+     "start": 457.065,
+     "end": 457.165,
+     "conf": 0.871
+    },
+    {
+     "w": "typed",
+     "start": 457.245,
+     "end": 457.545,
+     "conf": 0.715
+    },
+    {
+     "w": "up",
+     "start": 457.625,
+     "end": 457.705,
+     "conf": 0.5
+    },
+    {
+     "w": "at",
+     "start": 457.786,
+     "end": 457.846,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 457.866,
+     "end": 457.946,
+     "conf": 0.744
+    },
+    {
+     "w": "japanese",
+     "start": 458.066,
+     "end": 458.586,
+     "conf": 0.853
+    },
+    {
+     "w": "embassy",
+     "start": 458.646,
+     "end": 458.987,
+     "conf": 0.636
+    },
+    {
+     "w": "the",
+     "start": 459.147,
+     "end": 459.207,
+     "conf": 0.512
+    },
+    {
+     "w": "typing",
+     "start": 459.287,
+     "end": 459.647,
+     "conf": 0.806
+    },
+    {
+     "w": "went",
+     "start": 459.667,
+     "end": 459.867,
+     "conf": 0.74
+    },
+    {
+     "w": "slowly",
+     "start": 459.967,
+     "end": 460.328,
+     "conf": 0.831
+    },
+    {
+     "w": "and",
+     "start": 460.488,
+     "end": 460.548,
+     "conf": 0.664
+    },
+    {
+     "w": "the",
+     "start": 460.568,
+     "end": 460.648,
+     "conf": 0.885
+    },
+    {
+     "w": "diplomats",
+     "start": 460.728,
+     "end": 461.269,
+     "conf": 0.888
+    },
+    {
+     "w": "arrived",
+     "start": 461.329,
+     "end": 461.789,
+     "conf": 0.856
+    },
+    {
+     "w": "more",
+     "start": 461.929,
+     "end": 462.149,
+     "conf": 0.775
+    },
+    {
+     "w": "than",
+     "start": 462.169,
+     "end": 462.33,
+     "conf": 0.706
+    },
+    {
+     "w": "an",
+     "start": 462.39,
+     "end": 462.47,
+     "conf": 0.556
+    },
+    {
+     "w": "hour",
+     "start": 462.53,
+     "end": 462.79,
+     "conf": 0.816
+    },
+    {
+     "w": "late",
+     "start": 462.89,
+     "end": 463.17,
+     "conf": 0.732
+    }
+   ]
+  },
+  {
+   "section": "Japan hits snooze too",
+   "act": "",
+   "text": "By the time they handed it over, Pearl Harbor had already been burning for an hour.",
+   "idea": false,
+   "start": 463.56,
+   "end": 468.006,
+   "words": [
+    {
+     "w": "by",
+     "start": 463.56,
+     "end": 463.64,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 463.66,
+     "end": 463.76,
+     "conf": 0.748
+    },
+    {
+     "w": "time",
+     "start": 463.82,
+     "end": 464.061,
+     "conf": 0.999
+    },
+    {
+     "w": "they",
+     "start": 464.081,
+     "end": 464.201,
+     "conf": 0.993
+    },
+    {
+     "w": "handed",
+     "start": 464.261,
+     "end": 464.601,
+     "conf": 0.992
+    },
+    {
+     "w": "it",
+     "start": 464.661,
+     "end": 464.742,
+     "conf": 0.494
+    },
+    {
+     "w": "over",
+     "start": 464.882,
+     "end": 465.102,
+     "conf": 0.749
+    },
+    {
+     "w": "pearl",
+     "start": 465.402,
+     "end": 465.643,
+     "conf": 0.381
+    },
+    {
+     "w": "harbor",
+     "start": 465.743,
+     "end": 466.043,
+     "conf": 0.828
+    },
+    {
+     "w": "had",
+     "start": 466.103,
+     "end": 466.203,
+     "conf": 0.986
+    },
+    {
+     "w": "already",
+     "start": 466.324,
+     "end": 466.604,
+     "conf": 0.854
+    },
+    {
+     "w": "been",
+     "start": 466.684,
+     "end": 466.824,
+     "conf": 0.751
+    },
+    {
+     "w": "burning",
+     "start": 466.924,
+     "end": 467.265,
+     "conf": 0.865
+    },
+    {
+     "w": "for",
+     "start": 467.365,
+     "end": 467.485,
+     "conf": 0.665
+    },
+    {
+     "w": "an",
+     "start": 467.545,
+     "end": 467.605,
+     "conf": 0.501
+    },
+    {
+     "w": "hour",
+     "start": 467.705,
+     "end": 468.006,
+     "conf": 0.935
+    }
+   ]
+  },
+  {
+   "section": "Japan hits snooze too",
+   "act": "",
+   "text": "Which is how a surprise attack became, in American eyes, a sneak attack, and an entire country woke up very angry.",
+   "idea": true,
+   "start": 468.476,
+   "end": 474.709,
+   "words": [
+    {
+     "w": "which",
+     "start": 468.476,
+     "end": 468.616,
+     "conf": 0.737
+    },
+    {
+     "w": "is",
+     "start": 468.636,
+     "end": 468.757,
+     "conf": 0.654
+    },
+    {
+     "w": "how",
+     "start": 468.837,
+     "end": 469.017,
+     "conf": 0.989
+    },
+    {
+     "w": "a",
+     "start": 469.158,
+     "end": 469.178,
+     "conf": 0.993
+    },
+    {
+     "w": "surprise",
+     "start": 469.278,
+     "end": 469.779,
+     "conf": 0.756
+    },
+    {
+     "w": "attack",
+     "start": 469.839,
+     "end": 470.14,
+     "conf": 0.827
+    },
+    {
+     "w": "became",
+     "start": 470.22,
+     "end": 470.621,
+     "conf": 0.832
+    },
+    {
+     "w": "in",
+     "start": 470.741,
+     "end": 470.781,
+     "conf": 0.498
+    },
+    {
+     "w": "american",
+     "start": 470.801,
+     "end": 471.182,
+     "conf": 0.919
+    },
+    {
+     "w": "eyes",
+     "start": 471.202,
+     "end": 471.482,
+     "conf": 0.236
+    },
+    {
+     "w": "a",
+     "start": 471.663,
+     "end": 471.683,
+     "conf": 0.002
+    },
+    {
+     "w": "sneak",
+     "start": 471.823,
+     "end": 472.064,
+     "conf": 0.634
+    },
+    {
+     "w": "attack",
+     "start": 472.144,
+     "end": 472.484,
+     "conf": 0.759
+    },
+    {
+     "w": "and",
+     "start": 472.625,
+     "end": 472.705,
+     "conf": 0.987
+    },
+    {
+     "w": "an",
+     "start": 472.725,
+     "end": 472.805,
+     "conf": 0.947
+    },
+    {
+     "w": "entire",
+     "start": 472.825,
+     "end": 473.246,
+     "conf": 0.869
+    },
+    {
+     "w": "country",
+     "start": 473.306,
+     "end": 473.587,
+     "conf": 0.844
+    },
+    {
+     "w": "woke",
+     "start": 473.687,
+     "end": 473.867,
+     "conf": 0.784
+    },
+    {
+     "w": "up",
+     "start": 473.887,
+     "end": 473.988,
+     "conf": 0.998
+    },
+    {
+     "w": "very",
+     "start": 474.088,
+     "end": 474.308,
+     "conf": 0.749
+    },
+    {
+     "w": "angry",
+     "start": 474.428,
+     "end": 474.709,
+     "conf": 0.961
+    }
+   ]
+  },
+  {
+   "section": "The bill",
+   "act": "",
+   "text": "The next day, President Roosevelt called December seventh a date which will live in infamy, and Congress declared war on Japan within the hour.",
+   "idea": false,
+   "start": 476.389,
+   "end": 484.454,
+   "words": [
+    {
+     "w": "the",
+     "start": 476.389,
+     "end": 476.449,
+     "conf": 0.996
+    },
+    {
+     "w": "next",
+     "start": 476.489,
+     "end": 476.769,
+     "conf": 0.927
+    },
+    {
+     "w": "day",
+     "start": 476.809,
+     "end": 476.989,
+     "conf": 0.673
+    },
+    {
+     "w": "president",
+     "start": 477.129,
+     "end": 477.53,
+     "conf": 0.841
+    },
+    {
+     "w": "roosevelt",
+     "start": 477.59,
+     "end": 478.09,
+     "conf": 0.663
+    },
+    {
+     "w": "called",
+     "start": 478.21,
+     "end": 478.47,
+     "conf": 0.832
+    },
+    {
+     "w": "december",
+     "start": 478.55,
+     "end": 479.091,
+     "conf": 0.819
+    },
+    {
+     "w": "seventh",
+     "start": 479.211,
+     "end": 479.611,
+     "conf": 0.434
+    },
+    {
+     "w": "a",
+     "start": 479.711,
+     "end": 479.731,
+     "conf": 0.001
+    },
+    {
+     "w": "date",
+     "start": 479.871,
+     "end": 480.131,
+     "conf": 0.622
+    },
+    {
+     "w": "which",
+     "start": 480.232,
+     "end": 480.372,
+     "conf": 0.998
+    },
+    {
+     "w": "will",
+     "start": 480.392,
+     "end": 480.512,
+     "conf": 0.935
+    },
+    {
+     "w": "live",
+     "start": 480.572,
+     "end": 480.692,
+     "conf": 0.749
+    },
+    {
+     "w": "in",
+     "start": 480.712,
+     "end": 480.772,
+     "conf": 0.988
+    },
+    {
+     "w": "infamy",
+     "start": 480.872,
+     "end": 481.212,
+     "conf": 0.817
+    },
+    {
+     "w": "and",
+     "start": 481.472,
+     "end": 481.572,
+     "conf": 0.661
+    },
+    {
+     "w": "congress",
+     "start": 481.652,
+     "end": 482.093,
+     "conf": 0.874
+    },
+    {
+     "w": "declared",
+     "start": 482.173,
+     "end": 482.573,
+     "conf": 0.87
+    },
+    {
+     "w": "war",
+     "start": 482.693,
+     "end": 482.953,
+     "conf": 0.664
+    },
+    {
+     "w": "on",
+     "start": 483.193,
+     "end": 483.233,
+     "conf": 0.499
+    },
+    {
+     "w": "japan",
+     "start": 483.314,
+     "end": 483.714,
+     "conf": 0.799
+    },
+    {
+     "w": "within",
+     "start": 483.794,
+     "end": 484.014,
+     "conf": 0.828
+    },
+    {
+     "w": "the",
+     "start": 484.034,
+     "end": 484.134,
+     "conf": 0.733
+    },
+    {
+     "w": "hour",
+     "start": 484.194,
+     "end": 484.454,
+     "conf": 0.982
+    }
+   ]
+  },
+  {
+   "section": "The bill",
+   "act": "",
+   "text": "Three days later, Germany and Italy declared war on the United States, and just like that, America was in the Second World War, all the way.",
+   "idea": false,
+   "start": 484.884,
+   "end": 492.615,
+   "words": [
+    {
+     "w": "three",
+     "start": 484.884,
+     "end": 485.044,
+     "conf": 0.601
+    },
+    {
+     "w": "days",
+     "start": 485.064,
+     "end": 485.305,
+     "conf": 0.8
+    },
+    {
+     "w": "later",
+     "start": 485.385,
+     "end": 485.645,
+     "conf": 0.8
+    },
+    {
+     "w": "germany",
+     "start": 485.785,
+     "end": 486.126,
+     "conf": 0.857
+    },
+    {
+     "w": "and",
+     "start": 486.246,
+     "end": 486.306,
+     "conf": 0.525
+    },
+    {
+     "w": "italy",
+     "start": 486.426,
+     "end": 486.687,
+     "conf": 0.8
+    },
+    {
+     "w": "declared",
+     "start": 486.847,
+     "end": 487.267,
+     "conf": 0.854
+    },
+    {
+     "w": "war",
+     "start": 487.388,
+     "end": 487.628,
+     "conf": 0.664
+    },
+    {
+     "w": "on",
+     "start": 487.788,
+     "end": 487.828,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 487.848,
+     "end": 487.908,
+     "conf": 0.856
+    },
+    {
+     "w": "united",
+     "start": 487.989,
+     "end": 488.289,
+     "conf": 0.853
+    },
+    {
+     "w": "states",
+     "start": 488.389,
+     "end": 488.79,
+     "conf": 0.853
+    },
+    {
+     "w": "and",
+     "start": 488.87,
+     "end": 488.95,
+     "conf": 0.723
+    },
+    {
+     "w": "just",
+     "start": 489.01,
+     "end": 489.17,
+     "conf": 0.751
+    },
+    {
+     "w": "like",
+     "start": 489.23,
+     "end": 489.411,
+     "conf": 0.791
+    },
+    {
+     "w": "that",
+     "start": 489.431,
+     "end": 489.671,
+     "conf": 0.991
+    },
+    {
+     "w": "america",
+     "start": 489.871,
+     "end": 490.372,
+     "conf": 0.847
+    },
+    {
+     "w": "was",
+     "start": 490.512,
+     "end": 490.632,
+     "conf": 0.666
+    },
+    {
+     "w": "in",
+     "start": 490.712,
+     "end": 490.753,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 490.773,
+     "end": 490.873,
+     "conf": 0.739
+    },
+    {
+     "w": "second",
+     "start": 490.973,
+     "end": 491.253,
+     "conf": 0.83
+    },
+    {
+     "w": "world",
+     "start": 491.273,
+     "end": 491.534,
+     "conf": 0.747
+    },
+    {
+     "w": "war",
+     "start": 491.614,
+     "end": 491.834,
+     "conf": 0.664
+    },
+    {
+     "w": "all",
+     "start": 492.175,
+     "end": 492.275,
+     "conf": 0.641
+    },
+    {
+     "w": "the",
+     "start": 492.335,
+     "end": 492.395,
+     "conf": 0.556
+    },
+    {
+     "w": "way",
+     "start": 492.455,
+     "end": 492.615,
+     "conf": 0.634
+    }
+   ]
+  },
+  {
+   "section": "The bill",
+   "act": "",
+   "text": "Japan had wanted to knock America out of the fight, and instead, it had dragged the strongest industrial power on Earth right into it.",
+   "idea": true,
+   "start": 493.166,
+   "end": 500.543,
+   "words": [
+    {
+     "w": "japan",
+     "start": 493.166,
+     "end": 493.487,
+     "conf": 0.999
+    },
+    {
+     "w": "had",
+     "start": 493.527,
+     "end": 493.627,
+     "conf": 0.999
+    },
+    {
+     "w": "wanted",
+     "start": 493.708,
+     "end": 493.968,
+     "conf": 0.855
+    },
+    {
+     "w": "to",
+     "start": 493.988,
+     "end": 494.068,
+     "conf": 0.665
+    },
+    {
+     "w": "knock",
+     "start": 494.089,
+     "end": 494.369,
+     "conf": 0.753
+    },
+    {
+     "w": "america",
+     "start": 494.469,
+     "end": 494.85,
+     "conf": 0.855
+    },
+    {
+     "w": "out",
+     "start": 495.051,
+     "end": 495.151,
+     "conf": 0.666
+    },
+    {
+     "w": "of",
+     "start": 495.171,
+     "end": 495.251,
+     "conf": 0.665
+    },
+    {
+     "w": "the",
+     "start": 495.271,
+     "end": 495.351,
+     "conf": 0.767
+    },
+    {
+     "w": "fight",
+     "start": 495.452,
+     "end": 495.752,
+     "conf": 0.768
+    },
+    {
+     "w": "and",
+     "start": 495.953,
+     "end": 496.033,
+     "conf": 0.652
+    },
+    {
+     "w": "instead",
+     "start": 496.073,
+     "end": 496.534,
+     "conf": 0.865
+    },
+    {
+     "w": "it",
+     "start": 496.735,
+     "end": 496.795,
+     "conf": 0.499
+    },
+    {
+     "w": "had",
+     "start": 496.815,
+     "end": 496.935,
+     "conf": 0.973
+    },
+    {
+     "w": "dragged",
+     "start": 497.015,
+     "end": 497.376,
+     "conf": 0.792
+    },
+    {
+     "w": "the",
+     "start": 497.396,
+     "end": 497.476,
+     "conf": 0.996
+    },
+    {
+     "w": "strongest",
+     "start": 497.637,
+     "end": 498.178,
+     "conf": 0.894
+    },
+    {
+     "w": "industrial",
+     "start": 498.238,
+     "end": 498.759,
+     "conf": 0.906
+    },
+    {
+     "w": "power",
+     "start": 498.84,
+     "end": 499.18,
+     "conf": 0.844
+    },
+    {
+     "w": "on",
+     "start": 499.281,
+     "end": 499.361,
+     "conf": 0.5
+    },
+    {
+     "w": "earth",
+     "start": 499.521,
+     "end": 499.762,
+     "conf": 0.975
+    },
+    {
+     "w": "right",
+     "start": 499.922,
+     "end": 500.122,
+     "conf": 0.85
+    },
+    {
+     "w": "into",
+     "start": 500.183,
+     "end": 500.403,
+     "conf": 0.747
+    },
+    {
+     "w": "it",
+     "start": 500.503,
+     "end": 500.543,
+     "conf": 0.496
+    }
+   ]
+  },
+  {
+   "section": "The bill",
+   "act": "",
+   "text": "And no, despite all the theories, the long official investigations never found proof that anyone in Washington knew the target was Pearl Harbor and let it happen.",
+   "idea": false,
+   "start": 501.633,
+   "end": 510.739,
+   "words": [
+    {
+     "w": "and",
+     "start": 501.633,
+     "end": 501.753,
+     "conf": 0.941
+    },
+    {
+     "w": "no",
+     "start": 501.793,
+     "end": 501.893,
+     "conf": 0.994
+    },
+    {
+     "w": "despite",
+     "start": 502.193,
+     "end": 502.694,
+     "conf": 0.99
+    },
+    {
+     "w": "all",
+     "start": 502.794,
+     "end": 502.934,
+     "conf": 0.798
+    },
+    {
+     "w": "the",
+     "start": 502.974,
+     "end": 503.054,
+     "conf": 0.998
+    },
+    {
+     "w": "theories",
+     "start": 503.134,
+     "end": 503.554,
+     "conf": 0.809
+    },
+    {
+     "w": "the",
+     "start": 503.674,
+     "end": 503.734,
+     "conf": 0.532
+    },
+    {
+     "w": "long",
+     "start": 503.815,
+     "end": 503.975,
+     "conf": 0.768
+    },
+    {
+     "w": "official",
+     "start": 503.995,
+     "end": 504.335,
+     "conf": 0.887
+    },
+    {
+     "w": "investigations",
+     "start": 504.355,
+     "end": 505.256,
+     "conf": 0.999
+    },
+    {
+     "w": "never",
+     "start": 505.396,
+     "end": 505.616,
+     "conf": 0.772
+    },
+    {
+     "w": "found",
+     "start": 505.696,
+     "end": 505.956,
+     "conf": 0.811
+    },
+    {
+     "w": "proof",
+     "start": 506.056,
+     "end": 506.356,
+     "conf": 0.799
+    },
+    {
+     "w": "that",
+     "start": 506.556,
+     "end": 506.676,
+     "conf": 0.515
+    },
+    {
+     "w": "anyone",
+     "start": 506.857,
+     "end": 507.217,
+     "conf": 0.832
+    },
+    {
+     "w": "in",
+     "start": 507.237,
+     "end": 507.317,
+     "conf": 0.998
+    },
+    {
+     "w": "washington",
+     "start": 507.397,
+     "end": 507.897,
+     "conf": 0.905
+    },
+    {
+     "w": "knew",
+     "start": 507.957,
+     "end": 508.117,
+     "conf": 0.996
+    },
+    {
+     "w": "the",
+     "start": 508.197,
+     "end": 508.278,
+     "conf": 0.653
+    },
+    {
+     "w": "target",
+     "start": 508.378,
+     "end": 508.758,
+     "conf": 0.833
+    },
+    {
+     "w": "was",
+     "start": 508.818,
+     "end": 508.918,
+     "conf": 0.669
+    },
+    {
+     "w": "pearl",
+     "start": 509.018,
+     "end": 509.278,
+     "conf": 0.512
+    },
+    {
+     "w": "harbor",
+     "start": 509.338,
+     "end": 509.719,
+     "conf": 0.931
+    },
+    {
+     "w": "and",
+     "start": 510.059,
+     "end": 510.119,
+     "conf": 0.659
+    },
+    {
+     "w": "let",
+     "start": 510.179,
+     "end": 510.299,
+     "conf": 0.686
+    },
+    {
+     "w": "it",
+     "start": 510.319,
+     "end": 510.399,
+     "conf": 0.997
+    },
+    {
+     "w": "happen",
+     "start": 510.459,
+     "end": 510.739,
+     "conf": 0.978
+    }
+   ]
+  },
+  {
+   "section": "The bill",
+   "act": "",
+   "text": "What they found was much more ordinary, and honestly, much scarier.",
+   "idea": false,
+   "start": 511.169,
+   "end": 514.936,
+   "words": [
+    {
+     "w": "what",
+     "start": 511.169,
+     "end": 511.269,
+     "conf": 0.797
+    },
+    {
+     "w": "they",
+     "start": 511.289,
+     "end": 511.409,
+     "conf": 0.807
+    },
+    {
+     "w": "found",
+     "start": 511.47,
+     "end": 511.73,
+     "conf": 0.836
+    },
+    {
+     "w": "was",
+     "start": 511.75,
+     "end": 511.89,
+     "conf": 0.768
+    },
+    {
+     "w": "much",
+     "start": 511.991,
+     "end": 512.151,
+     "conf": 0.743
+    },
+    {
+     "w": "more",
+     "start": 512.231,
+     "end": 512.371,
+     "conf": 0.726
+    },
+    {
+     "w": "ordinary",
+     "start": 512.512,
+     "end": 512.993,
+     "conf": 0.873
+    },
+    {
+     "w": "and",
+     "start": 513.233,
+     "end": 513.373,
+     "conf": 0.688
+    },
+    {
+     "w": "honestly",
+     "start": 513.554,
+     "end": 513.974,
+     "conf": 0.833
+    },
+    {
+     "w": "much",
+     "start": 514.135,
+     "end": 514.335,
+     "conf": 0.751
+    },
+    {
+     "w": "scarier",
+     "start": 514.495,
+     "end": 514.936,
+     "conf": 0.708
+    }
+   ]
+  },
+  {
+   "section": "The bill",
+   "act": "",
+   "text": "A sub report nobody rushed, a radar blip nobody believed, and a warning sent like a birthday card.",
+   "idea": true,
+   "start": 515.327,
+   "end": 520.745,
+   "words": [
+    {
+     "w": "a",
+     "start": 515.327,
+     "end": 515.347,
+     "conf": 0.996
+    },
+    {
+     "w": "sub",
+     "start": 515.447,
+     "end": 515.608,
+     "conf": 0.999
+    },
+    {
+     "w": "report",
+     "start": 515.688,
+     "end": 516.009,
+     "conf": 0.832
+    },
+    {
+     "w": "nobody",
+     "start": 516.11,
+     "end": 516.411,
+     "conf": 0.853
+    },
+    {
+     "w": "rushed",
+     "start": 516.511,
+     "end": 516.872,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 516.973,
+     "end": 516.993,
+     "conf": 0.989
+    },
+    {
+     "w": "radar",
+     "start": 517.113,
+     "end": 517.414,
+     "conf": 0.713
+    },
+    {
+     "w": "blip",
+     "start": 517.494,
+     "end": 517.675,
+     "conf": 0.705
+    },
+    {
+     "w": "nobody",
+     "start": 517.755,
+     "end": 518.016,
+     "conf": 0.994
+    },
+    {
+     "w": "believed",
+     "start": 518.116,
+     "end": 518.598,
+     "conf": 0.867
+    },
+    {
+     "w": "and",
+     "start": 518.839,
+     "end": 518.919,
+     "conf": 0.631
+    },
+    {
+     "w": "a",
+     "start": 518.939,
+     "end": 518.959,
+     "conf": 0.994
+    },
+    {
+     "w": "warning",
+     "start": 519.08,
+     "end": 519.421,
+     "conf": 0.854
+    },
+    {
+     "w": "sent",
+     "start": 519.521,
+     "end": 519.661,
+     "conf": 0.736
+    },
+    {
+     "w": "like",
+     "start": 519.682,
+     "end": 519.862,
+     "conf": 0.822
+    },
+    {
+     "w": "a",
+     "start": 519.902,
+     "end": 519.922,
+     "conf": 0.005
+    },
+    {
+     "w": "birthday",
+     "start": 520.003,
+     "end": 520.384,
+     "conf": 0.832
+    },
+    {
+     "w": "card",
+     "start": 520.464,
+     "end": 520.745,
+     "conf": 0.653
+    }
+   ]
+  },
+  {
+   "section": "Outro",
+   "act": "",
+   "text": "So, did one man saying don't worry about it cause Pearl Harbor?",
+   "idea": false,
+   "start": 522.385,
+   "end": 525.813,
+   "words": [
+    {
+     "w": "so",
+     "start": 522.385,
+     "end": 522.485,
+     "conf": 0.663
+    },
+    {
+     "w": "did",
+     "start": 522.786,
+     "end": 522.926,
+     "conf": 0.997
+    },
+    {
+     "w": "one",
+     "start": 523.087,
+     "end": 523.207,
+     "conf": 0.71
+    },
+    {
+     "w": "man",
+     "start": 523.227,
+     "end": 523.468,
+     "conf": 0.996
+    },
+    {
+     "w": "saying",
+     "start": 523.628,
+     "end": 523.949,
+     "conf": 0.83
+    },
+    {
+     "w": "don't",
+     "start": 524.069,
+     "end": 524.25,
+     "conf": 0.734
+    },
+    {
+     "w": "worry",
+     "start": 524.27,
+     "end": 524.47,
+     "conf": 0.83
+    },
+    {
+     "w": "about",
+     "start": 524.55,
+     "end": 524.731,
+     "conf": 0.782
+    },
+    {
+     "w": "it",
+     "start": 524.751,
+     "end": 524.811,
+     "conf": 0.925
+    },
+    {
+     "w": "cause",
+     "start": 524.871,
+     "end": 525.152,
+     "conf": 0.755
+    },
+    {
+     "w": "pearl",
+     "start": 525.232,
+     "end": 525.452,
+     "conf": 0.341
+    },
+    {
+     "w": "harbor",
+     "start": 525.513,
+     "end": 525.813,
+     "conf": 0.933
+    }
+   ]
+  },
+  {
+   "section": "Outro",
+   "act": "",
+   "text": "Not really, because six aircraft carriers were already on their way, and an hour's warning would not have stopped them.",
+   "idea": false,
+   "start": 526.303,
+   "end": 532.909,
+   "words": [
+    {
+     "w": "not",
+     "start": 526.303,
+     "end": 526.463,
+     "conf": 0.918
+    },
+    {
+     "w": "really",
+     "start": 526.543,
+     "end": 526.824,
+     "conf": 0.907
+    },
+    {
+     "w": "because",
+     "start": 526.944,
+     "end": 527.304,
+     "conf": 0.856
+    },
+    {
+     "w": "six",
+     "start": 527.544,
+     "end": 527.724,
+     "conf": 0.661
+    },
+    {
+     "w": "aircraft",
+     "start": 527.925,
+     "end": 528.505,
+     "conf": 0.279
+    },
+    {
+     "w": "carriers",
+     "start": 528.525,
+     "end": 529.026,
+     "conf": 0.782
+    },
+    {
+     "w": "were",
+     "start": 529.046,
+     "end": 529.226,
+     "conf": 0.798
+    },
+    {
+     "w": "already",
+     "start": 529.306,
+     "end": 529.626,
+     "conf": 0.883
+    },
+    {
+     "w": "on",
+     "start": 529.806,
+     "end": 529.906,
+     "conf": 0.999
+    },
+    {
+     "w": "their",
+     "start": 529.926,
+     "end": 530.087,
+     "conf": 0.846
+    },
+    {
+     "w": "way",
+     "start": 530.187,
+     "end": 530.427,
+     "conf": 0.668
+    },
+    {
+     "w": "and",
+     "start": 530.727,
+     "end": 530.807,
+     "conf": 0.663
+    },
+    {
+     "w": "an",
+     "start": 530.827,
+     "end": 530.907,
+     "conf": 0.987
+    },
+    {
+     "w": "hour's",
+     "start": 531.007,
+     "end": 531.328,
+     "conf": 0.899
+    },
+    {
+     "w": "warning",
+     "start": 531.448,
+     "end": 531.768,
+     "conf": 0.816
+    },
+    {
+     "w": "would",
+     "start": 531.788,
+     "end": 531.968,
+     "conf": 0.853
+    },
+    {
+     "w": "not",
+     "start": 532.048,
+     "end": 532.189,
+     "conf": 0.798
+    },
+    {
+     "w": "have",
+     "start": 532.209,
+     "end": 532.329,
+     "conf": 0.996
+    },
+    {
+     "w": "stopped",
+     "start": 532.389,
+     "end": 532.729,
+     "conf": 0.942
+    },
+    {
+     "w": "them",
+     "start": 532.749,
+     "end": 532.909,
+     "conf": 0.928
+    }
+   ]
+  },
+  {
+   "section": "Outro",
+   "act": "",
+   "text": "But it could have filled those guns with ammunition, pulled those planes apart, and sent fighters into the air, and some of those two thousand four hundred lives might have been saved.",
+   "idea": false,
+   "start": 533.419,
+   "end": 543.742,
+   "words": [
+    {
+     "w": "but",
+     "start": 533.419,
+     "end": 533.519,
+     "conf": 0.999
+    },
+    {
+     "w": "it",
+     "start": 533.539,
+     "end": 533.62,
+     "conf": 0.665
+    },
+    {
+     "w": "could",
+     "start": 533.72,
+     "end": 533.92,
+     "conf": 0.79
+    },
+    {
+     "w": "have",
+     "start": 533.94,
+     "end": 534.061,
+     "conf": 0.962
+    },
+    {
+     "w": "filled",
+     "start": 534.181,
+     "end": 534.462,
+     "conf": 0.855
+    },
+    {
+     "w": "those",
+     "start": 534.522,
+     "end": 534.782,
+     "conf": 0.999
+    },
+    {
+     "w": "guns",
+     "start": 534.862,
+     "end": 535.203,
+     "conf": 0.713
+    },
+    {
+     "w": "with",
+     "start": 535.223,
+     "end": 535.364,
+     "conf": 0.958
+    },
+    {
+     "w": "ammunition",
+     "start": 535.444,
+     "end": 536.065,
+     "conf": 0.859
+    },
+    {
+     "w": "pulled",
+     "start": 536.366,
+     "end": 536.787,
+     "conf": 0.851
+    },
+    {
+     "w": "those",
+     "start": 536.887,
+     "end": 537.127,
+     "conf": 0.753
+    },
+    {
+     "w": "planes",
+     "start": 537.188,
+     "end": 537.448,
+     "conf": 0.673
+    },
+    {
+     "w": "apart",
+     "start": 537.468,
+     "end": 537.849,
+     "conf": 0.995
+    },
+    {
+     "w": "and",
+     "start": 538.31,
+     "end": 538.41,
+     "conf": 0.687
+    },
+    {
+     "w": "sent",
+     "start": 538.571,
+     "end": 538.771,
+     "conf": 0.749
+    },
+    {
+     "w": "fighters",
+     "start": 538.911,
+     "end": 539.272,
+     "conf": 0.832
+    },
+    {
+     "w": "into",
+     "start": 539.332,
+     "end": 539.493,
+     "conf": 0.749
+    },
+    {
+     "w": "the",
+     "start": 539.553,
+     "end": 539.633,
+     "conf": 0.632
+    },
+    {
+     "w": "air",
+     "start": 539.733,
+     "end": 539.914,
+     "conf": 0.626
+    },
+    {
+     "w": "and",
+     "start": 540.114,
+     "end": 540.174,
+     "conf": 0.665
+    },
+    {
+     "w": "some",
+     "start": 540.254,
+     "end": 540.375,
+     "conf": 0.747
+    },
+    {
+     "w": "of",
+     "start": 540.395,
+     "end": 540.455,
+     "conf": 0.993
+    },
+    {
+     "w": "those",
+     "start": 540.475,
+     "end": 540.695,
+     "conf": 0.979
+    },
+    {
+     "w": "two",
+     "start": 540.715,
+     "end": 540.996,
+     "conf": 0.042
+    },
+    {
+     "w": "thousand",
+     "start": 541.016,
+     "end": 541.537,
+     "conf": 0.049
+    },
+    {
+     "w": "four",
+     "start": 541.557,
+     "end": 541.838,
+     "conf": 0.021
+    },
+    {
+     "w": "hundred",
+     "start": 541.858,
+     "end": 542.199,
+     "conf": 0.032
+    },
+    {
+     "w": "lives",
+     "start": 542.279,
+     "end": 542.66,
+     "conf": 0.813
+    },
+    {
+     "w": "might",
+     "start": 542.74,
+     "end": 542.88,
+     "conf": 0.757
+    },
+    {
+     "w": "have",
+     "start": 542.9,
+     "end": 542.98,
+     "conf": 0.984
+    },
+    {
+     "w": "been",
+     "start": 543.0,
+     "end": 543.141,
+     "conf": 0.93
+    },
+    {
+     "w": "saved",
+     "start": 543.301,
+     "end": 543.742,
+     "conf": 0.798
+    }
+   ]
+  },
+  {
+   "section": "Outro",
+   "act": "",
+   "text": "Kermit Tyler was never punished, by the way, and a Navy board later said he'd been put in a job with no training, no staff and no supervision.",
+   "idea": false,
+   "start": 544.293,
+   "end": 551.962,
+   "words": [
+    {
+     "w": "kermit",
+     "start": 544.293,
+     "end": 544.594,
+     "conf": 0.566
+    },
+    {
+     "w": "tyler",
+     "start": 544.614,
+     "end": 544.994,
+     "conf": 0.701
+    },
+    {
+     "w": "was",
+     "start": 545.014,
+     "end": 545.134,
+     "conf": 0.749
+    },
+    {
+     "w": "never",
+     "start": 545.194,
+     "end": 545.394,
+     "conf": 0.999
+    },
+    {
+     "w": "punished",
+     "start": 545.495,
+     "end": 545.895,
+     "conf": 0.837
+    },
+    {
+     "w": "by",
+     "start": 545.915,
+     "end": 546.055,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 546.075,
+     "end": 546.155,
+     "conf": 0.748
+    },
+    {
+     "w": "way",
+     "start": 546.215,
+     "end": 546.376,
+     "conf": 0.668
+    },
+    {
+     "w": "and",
+     "start": 546.596,
+     "end": 546.676,
+     "conf": 0.66
+    },
+    {
+     "w": "a",
+     "start": 546.696,
+     "end": 546.716,
+     "conf": 0.997
+    },
+    {
+     "w": "navy",
+     "start": 546.796,
+     "end": 547.036,
+     "conf": 0.997
+    },
+    {
+     "w": "board",
+     "start": 547.157,
+     "end": 547.357,
+     "conf": 0.795
+    },
+    {
+     "w": "later",
+     "start": 547.457,
+     "end": 547.697,
+     "conf": 0.801
+    },
+    {
+     "w": "said",
+     "start": 547.837,
+     "end": 548.058,
+     "conf": 0.749
+    },
+    {
+     "w": "he'd",
+     "start": 548.158,
+     "end": 548.338,
+     "conf": 0.55
+    },
+    {
+     "w": "been",
+     "start": 548.398,
+     "end": 548.518,
+     "conf": 0.748
+    },
+    {
+     "w": "put",
+     "start": 548.578,
+     "end": 548.698,
+     "conf": 0.666
+    },
+    {
+     "w": "in",
+     "start": 548.718,
+     "end": 548.778,
+     "conf": 0.706
+    },
+    {
+     "w": "a",
+     "start": 548.798,
+     "end": 548.838,
+     "conf": 0.497
+    },
+    {
+     "w": "job",
+     "start": 548.939,
+     "end": 549.159,
+     "conf": 0.667
+    },
+    {
+     "w": "with",
+     "start": 549.239,
+     "end": 549.359,
+     "conf": 0.711
+    },
+    {
+     "w": "no",
+     "start": 549.459,
+     "end": 549.519,
+     "conf": 0.501
+    },
+    {
+     "w": "training",
+     "start": 549.679,
+     "end": 550.1,
+     "conf": 0.875
+    },
+    {
+     "w": "no",
+     "start": 550.2,
+     "end": 550.26,
+     "conf": 0.499
+    },
+    {
+     "w": "staff",
+     "start": 550.44,
+     "end": 550.781,
+     "conf": 0.785
+    },
+    {
+     "w": "and",
+     "start": 550.981,
+     "end": 551.061,
+     "conf": 0.663
+    },
+    {
+     "w": "no",
+     "start": 551.081,
+     "end": 551.181,
+     "conf": 0.667
+    },
+    {
+     "w": "supervision",
+     "start": 551.341,
+     "end": 551.962,
+     "conf": 0.894
+    }
+   ]
+  },
+  {
+   "section": "Outro",
+   "act": "",
+   "text": "He retired as a lieutenant colonel, and he spent the rest of his long life being remembered for four words.",
+   "idea": true,
+   "start": 552.492,
+   "end": 558.256,
+   "words": [
+    {
+     "w": "he",
+     "start": 552.492,
+     "end": 552.533,
+     "conf": 0.859
+    },
+    {
+     "w": "retired",
+     "start": 552.593,
+     "end": 553.095,
+     "conf": 0.956
+    },
+    {
+     "w": "as",
+     "start": 553.155,
+     "end": 553.215,
+     "conf": 0.484
+    },
+    {
+     "w": "a",
+     "start": 553.296,
+     "end": 553.316,
+     "conf": 0.06
+    },
+    {
+     "w": "lieutenant",
+     "start": 553.396,
+     "end": 553.878,
+     "conf": 0.607
+    },
+    {
+     "w": "colonel",
+     "start": 553.938,
+     "end": 554.26,
+     "conf": 0.398
+    },
+    {
+     "w": "and",
+     "start": 554.46,
+     "end": 554.521,
+     "conf": 0.994
+    },
+    {
+     "w": "he",
+     "start": 554.541,
+     "end": 554.601,
+     "conf": 0.977
+    },
+    {
+     "w": "spent",
+     "start": 554.701,
+     "end": 554.902,
+     "conf": 0.799
+    },
+    {
+     "w": "the",
+     "start": 554.922,
+     "end": 555.023,
+     "conf": 0.79
+    },
+    {
+     "w": "rest",
+     "start": 555.083,
+     "end": 555.284,
+     "conf": 0.927
+    },
+    {
+     "w": "of",
+     "start": 555.304,
+     "end": 555.384,
+     "conf": 0.665
+    },
+    {
+     "w": "his",
+     "start": 555.404,
+     "end": 555.545,
+     "conf": 0.747
+    },
+    {
+     "w": "long",
+     "start": 555.645,
+     "end": 555.846,
+     "conf": 0.749
+    },
+    {
+     "w": "life",
+     "start": 555.947,
+     "end": 556.167,
+     "conf": 0.748
+    },
+    {
+     "w": "being",
+     "start": 556.228,
+     "end": 556.408,
+     "conf": 0.821
+    },
+    {
+     "w": "remembered",
+     "start": 556.489,
+     "end": 556.931,
+     "conf": 0.885
+    },
+    {
+     "w": "for",
+     "start": 557.011,
+     "end": 557.111,
+     "conf": 0.657
+    },
+    {
+     "w": "four",
+     "start": 557.332,
+     "end": 557.633,
+     "conf": 0.669
+    },
+    {
+     "w": "words",
+     "start": 557.794,
+     "end": 558.256,
+     "conf": 0.787
+    }
+   ]
+  },
+  {
+   "section": "Outro",
+   "act": "",
+   "text": "And the Ward, the little destroyer that fired the first shot?",
+   "idea": false,
+   "start": 559.306,
+   "end": 562.573,
+   "words": [
+    {
+     "w": "and",
+     "start": 559.306,
+     "end": 559.386,
+     "conf": 0.985
+    },
+    {
+     "w": "the",
+     "start": 559.406,
+     "end": 559.486,
+     "conf": 0.789
+    },
+    {
+     "w": "ward",
+     "start": 559.587,
+     "end": 559.988,
+     "conf": 0.756
+    },
+    {
+     "w": "the",
+     "start": 560.268,
+     "end": 560.328,
+     "conf": 0.354
+    },
+    {
+     "w": "little",
+     "start": 560.449,
+     "end": 560.669,
+     "conf": 0.727
+    },
+    {
+     "w": "destroyer",
+     "start": 560.749,
+     "end": 561.25,
+     "conf": 0.882
+    },
+    {
+     "w": "that",
+     "start": 561.27,
+     "end": 561.431,
+     "conf": 0.745
+    },
+    {
+     "w": "fired",
+     "start": 561.531,
+     "end": 561.872,
+     "conf": 0.826
+    },
+    {
+     "w": "the",
+     "start": 561.992,
+     "end": 562.052,
+     "conf": 0.334
+    },
+    {
+     "w": "first",
+     "start": 562.112,
+     "end": 562.333,
+     "conf": 0.788
+    },
+    {
+     "w": "shot",
+     "start": 562.353,
+     "end": 562.573,
+     "conf": 0.867
+    }
+   ]
+  },
+  {
+   "section": "Outro",
+   "act": "",
+   "text": "It was sunk exactly three years later, on December seventh, nineteen forty-four, and the ship that finished her off was commanded by the same man who had been her captain at Pearl Harbor.",
+   "idea": false,
+   "start": 563.023,
+   "end": 573.503,
+   "words": [
+    {
+     "w": "it",
+     "start": 563.023,
+     "end": 563.063,
+     "conf": 0.992
+    },
+    {
+     "w": "was",
+     "start": 563.083,
+     "end": 563.204,
+     "conf": 0.976
+    },
+    {
+     "w": "sunk",
+     "start": 563.264,
+     "end": 563.464,
+     "conf": 0.993
+    },
+    {
+     "w": "exactly",
+     "start": 563.524,
+     "end": 563.985,
+     "conf": 0.984
+    },
+    {
+     "w": "three",
+     "start": 564.125,
+     "end": 564.366,
+     "conf": 0.775
+    },
+    {
+     "w": "years",
+     "start": 564.386,
+     "end": 564.686,
+     "conf": 0.823
+    },
+    {
+     "w": "later",
+     "start": 564.807,
+     "end": 565.087,
+     "conf": 0.798
+    },
+    {
+     "w": "on",
+     "start": 565.368,
+     "end": 565.428,
+     "conf": 0.499
+    },
+    {
+     "w": "december",
+     "start": 565.528,
+     "end": 565.949,
+     "conf": 0.868
+    },
+    {
+     "w": "seventh",
+     "start": 565.969,
+     "end": 566.39,
+     "conf": 0.017
+    },
+    {
+     "w": "nineteen",
+     "start": 566.41,
+     "end": 566.891,
+     "conf": 0.0
+    },
+    {
+     "w": "forty-four",
+     "start": 566.911,
+     "end": 567.552,
+     "conf": 0.0
+    },
+    {
+     "w": "and",
+     "start": 567.632,
+     "end": 567.692,
+     "conf": 0.663
+    },
+    {
+     "w": "the",
+     "start": 567.712,
+     "end": 567.792,
+     "conf": 0.975
+    },
+    {
+     "w": "ship",
+     "start": 567.893,
+     "end": 568.073,
+     "conf": 0.994
+    },
+    {
+     "w": "that",
+     "start": 568.133,
+     "end": 568.273,
+     "conf": 0.993
+    },
+    {
+     "w": "finished",
+     "start": 568.434,
+     "end": 568.794,
+     "conf": 0.853
+    },
+    {
+     "w": "her",
+     "start": 568.814,
+     "end": 568.914,
+     "conf": 0.988
+    },
+    {
+     "w": "off",
+     "start": 569.035,
+     "end": 569.175,
+     "conf": 0.709
+    },
+    {
+     "w": "was",
+     "start": 569.335,
+     "end": 569.435,
+     "conf": 0.666
+    },
+    {
+     "w": "commanded",
+     "start": 569.536,
+     "end": 570.157,
+     "conf": 0.888
+    },
+    {
+     "w": "by",
+     "start": 570.217,
+     "end": 570.317,
+     "conf": 0.5
+    },
+    {
+     "w": "the",
+     "start": 570.337,
+     "end": 570.437,
+     "conf": 0.766
+    },
+    {
+     "w": "same",
+     "start": 570.618,
+     "end": 570.898,
+     "conf": 0.795
+    },
+    {
+     "w": "man",
+     "start": 570.958,
+     "end": 571.199,
+     "conf": 0.666
+    },
+    {
+     "w": "who",
+     "start": 571.279,
+     "end": 571.339,
+     "conf": 0.665
+    },
+    {
+     "w": "had",
+     "start": 571.359,
+     "end": 571.479,
+     "conf": 0.749
+    },
+    {
+     "w": "been",
+     "start": 571.54,
+     "end": 571.68,
+     "conf": 0.749
+    },
+    {
+     "w": "her",
+     "start": 571.74,
+     "end": 571.84,
+     "conf": 0.73
+    },
+    {
+     "w": "captain",
+     "start": 571.92,
+     "end": 572.481,
+     "conf": 0.825
+    },
+    {
+     "w": "at",
+     "start": 572.742,
+     "end": 572.822,
+     "conf": 0.498
+    },
+    {
+     "w": "pearl",
+     "start": 572.902,
+     "end": 573.143,
+     "conf": 0.502
+    },
+    {
+     "w": "harbor",
+     "start": 573.223,
+     "end": 573.503,
+     "conf": 0.776
+    }
+   ]
+  },
+  {
+   "section": "Outro",
+   "act": "",
+   "text": "History, it turns out, also has a sense of humor.",
+   "idea": false,
+   "start": 574.014,
+   "end": 576.477,
+   "words": [
+    {
+     "w": "history",
+     "start": 574.014,
+     "end": 574.418,
+     "conf": 0.991
+    },
+    {
+     "w": "it",
+     "start": 574.64,
+     "end": 574.68,
+     "conf": 0.499
+    },
+    {
+     "w": "turns",
+     "start": 574.741,
+     "end": 575.003,
+     "conf": 0.999
+    },
+    {
+     "w": "out",
+     "start": 575.084,
+     "end": 575.185,
+     "conf": 0.666
+    },
+    {
+     "w": "also",
+     "start": 575.306,
+     "end": 575.488,
+     "conf": 0.782
+    },
+    {
+     "w": "has",
+     "start": 575.589,
+     "end": 575.69,
+     "conf": 0.363
+    },
+    {
+     "w": "a",
+     "start": 575.77,
+     "end": 575.791,
+     "conf": 0.001
+    },
+    {
+     "w": "sense",
+     "start": 575.811,
+     "end": 576.073,
+     "conf": 0.748
+    },
+    {
+     "w": "of",
+     "start": 576.093,
+     "end": 576.154,
+     "conf": 0.993
+    },
+    {
+     "w": "humor",
+     "start": 576.214,
+     "end": 576.477,
+     "conf": 0.87
+    }
+   ]
+  },
+  {
+   "section": "Outro",
+   "act": "",
+   "text": "Next time, a German minister sends the most secret message of the war through America's own cables, and when people call it a fake, he stands up and says, nope, that was me.",
+   "idea": false,
+   "start": 577.027,
+   "end": 586.277,
+   "words": [
+    {
+     "w": "next",
+     "start": 577.027,
+     "end": 577.267,
+     "conf": 0.95
+    },
+    {
+     "w": "time",
+     "start": 577.307,
+     "end": 577.588,
+     "conf": 0.999
+    },
+    {
+     "w": "a",
+     "start": 577.648,
+     "end": 577.668,
+     "conf": 0.999
+    },
+    {
+     "w": "german",
+     "start": 577.788,
+     "end": 578.148,
+     "conf": 0.998
+    },
+    {
+     "w": "minister",
+     "start": 578.249,
+     "end": 578.729,
+     "conf": 0.874
+    },
+    {
+     "w": "sends",
+     "start": 578.949,
+     "end": 579.21,
+     "conf": 0.996
+    },
+    {
+     "w": "the",
+     "start": 579.23,
+     "end": 579.33,
+     "conf": 0.749
+    },
+    {
+     "w": "most",
+     "start": 579.43,
+     "end": 579.69,
+     "conf": 0.749
+    },
+    {
+     "w": "secret",
+     "start": 579.77,
+     "end": 580.07,
+     "conf": 0.833
+    },
+    {
+     "w": "message",
+     "start": 580.131,
+     "end": 580.451,
+     "conf": 0.811
+    },
+    {
+     "w": "of",
+     "start": 580.491,
+     "end": 580.551,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 580.571,
+     "end": 580.671,
+     "conf": 0.746
+    },
+    {
+     "w": "war",
+     "start": 580.751,
+     "end": 580.931,
+     "conf": 0.666
+    },
+    {
+     "w": "through",
+     "start": 580.951,
+     "end": 581.152,
+     "conf": 0.81
+    },
+    {
+     "w": "america's",
+     "start": 581.172,
+     "end": 581.452,
+     "conf": 0.925
+    },
+    {
+     "w": "own",
+     "start": 581.532,
+     "end": 581.612,
+     "conf": 0.654
+    },
+    {
+     "w": "cables",
+     "start": 581.692,
+     "end": 582.113,
+     "conf": 0.805
+    },
+    {
+     "w": "and",
+     "start": 582.233,
+     "end": 582.293,
+     "conf": 0.669
+    },
+    {
+     "w": "when",
+     "start": 582.313,
+     "end": 582.413,
+     "conf": 0.999
+    },
+    {
+     "w": "people",
+     "start": 582.473,
+     "end": 582.693,
+     "conf": 0.841
+    },
+    {
+     "w": "call",
+     "start": 582.753,
+     "end": 582.894,
+     "conf": 0.749
+    },
+    {
+     "w": "it",
+     "start": 582.914,
+     "end": 582.974,
+     "conf": 0.966
+    },
+    {
+     "w": "a",
+     "start": 582.994,
+     "end": 583.014,
+     "conf": 0.991
+    },
+    {
+     "w": "fake",
+     "start": 583.194,
+     "end": 583.534,
+     "conf": 0.599
+    },
+    {
+     "w": "he",
+     "start": 583.634,
+     "end": 583.694,
+     "conf": 0.758
+    },
+    {
+     "w": "stands",
+     "start": 583.835,
+     "end": 584.235,
+     "conf": 0.81
+    },
+    {
+     "w": "up",
+     "start": 584.315,
+     "end": 584.435,
+     "conf": 0.5
+    },
+    {
+     "w": "and",
+     "start": 584.575,
+     "end": 584.655,
+     "conf": 0.665
+    },
+    {
+     "w": "says",
+     "start": 584.756,
+     "end": 584.996,
+     "conf": 0.746
+    },
+    {
+     "w": "nope",
+     "start": 585.256,
+     "end": 585.576,
+     "conf": 0.649
+    },
+    {
+     "w": "that",
+     "start": 585.797,
+     "end": 585.957,
+     "conf": 0.727
+    },
+    {
+     "w": "was",
+     "start": 585.977,
+     "end": 586.097,
+     "conf": 0.815
+    },
+    {
+     "w": "me",
+     "start": 586.197,
+     "end": 586.277,
+     "conf": 0.485
+    }
+   ]
+  }
+ ]
+}

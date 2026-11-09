@@ -1,0 +1,21 @@
+{
+ "_why": "Mốc bắt đầu câu phân xử tay giữa 3 nguồn (whisper trên stem Demucs, whisper trên lead vocal Suno, CTC lời gốc trên lead vocal). Luật: CTC conf ≥ 0.45 > đường bao lead vocal (mốc rơi đúng chỗ trũng-rồi-bật) > whisper trên lead. Ảnh bằng chứng: data/disputes.png.",
+ "starts": {
+  "Backward question.": [60.20, "whisper-lead; mốc rơi đúng chỗ bật sau trũng"],
+  "Now the unknown": [72.46, "cả hai whisper nghe 'now'@72.46; bản ghép cũ lệch vì 'the' đảo thứ tự"],
+  "A logarithm isn't magic.": [87.94, "CTC conf 0.79; bản lead ghép nhầm sang 'it's a magic' 88.96"],
+  "was waiting there all along—": [95.81, "CTC conf 0.67"],
+  "Logarithm beside it—": [130.56, "đuôi 'right' tắt dần, âm tiết mới bật đúng 130.56; whisper-lead 130.04 nằm giữa đuôi ngân"],
+  "Y becomes X.": [141.19, "CTC conf 0.46"],
+  "different track.#3": [151.29, "CTC conf 0.68 (lần thứ 3 — Beat Re-Entry)"],
+  "That's why the question": [177.91, "'anywhere'@177.07 dài 3 âm tiết, 177.30 chưa hết từ đó"],
+  "Exponential goes forward.": [190.78, "'match'@190.52 rồi bật ở 190.78"],
+  "Same law.": [202.96, "bật rõ sau trũng; 'same'@203.48 của lead là bè vọng"],
+  "Same curve.": [205.46, "cả hai whisper nghe 'same'@205.44"],
+  "Why does it work?": [207.44, "bật rõ sau trũng"],
+  "Two directions.": [216.36, "whisper-lead, bật sau trũng"],
+  "One story.": [218.12, "217.86 là cuối âm tiết trước, bật ở 218.12"]
+ },
+ "repeat": [{"_why": "lead vocal hát FROM SCRATCH BA lần, lời gốc ghi hai", "section": "Group Chant", "before": "Final Hook", "text": "From scratch!",
+   "words": [["from", 0, 0.2], ["scratch", 0.22, null]], "dur": 0.52, "starts": [208.60, 209.54, 210.58]}]
+}

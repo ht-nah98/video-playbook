@@ -1,0 +1,16 @@
+{
+ "id": "hist",
+ "name": "Blunderstory",
+ "lang": "en",
+ "voice": {
+  "lang": "en",
+  "id": "f9997cc2",
+  "tempo": 1.0,
+  "speed": 1.1
+ },
+ "intro": null,
+ "projects": "projects/hist/<p>",
+ "outro": null,
+ "handle": "@blunderstorytv",
+ "youtube_id": "UC0cRXjNUYaAWDG6AtJO8prA"
+}

@@ -1,0 +1,160 @@
+## Cold open   []
+p1 0 0.02 2.51 here's a quick one answer it before you think too hard
+p1 1 2.92 9.53 there are three cards in a bag one is red on both sides one is white on both sides and one is red on one side and white on the other
+p1 2 9.98 13.87 i pull out a card without looking and put it on the table the side facing up is red
+p1 3 14.30 15.96 what's the chance that the other side is red too
+p1 4 16.97 19.94 i'm guessing a number just popped into your head fifty percent
+p1 5 20.39 24.77 it's either the red-red card or the red-white card two cards one of each it feels obvious
+p1 6 25.20 30.31 it's also wrong the answer is two out of three and by the end of the first part you'll see exactly why
+p1 7 31.76 36.06 that instant answer the one that arrives before any thinking is what we call intuition
+p1 8 36.45 39.34 and some puzzles are built so that the instant answer is a trap
+p1 9 39.73 47.80 there's one puzzle that thousands of smart people including professors of mathematics argued about by mail because they trusted their gut over the calculation
+p1 10 48.81 51.43 so in this video i want to answer three questions with you
+p1 11 51.98 54.17 one when does intuition lead you wrong and why
+p1 12 54.58 57.85 two what do you do when the proof is right and your gut still says no
+p1 13 58.38 61.41 and three does math need intuition at all or is logic enough
+p1 14 62.41 66.89 we'll use two famous puzzles one where intuition loses an argument it was sure it would win
+p1 15 67.30 70.78 and one where intuition loses the argument and still refuses to give up
+## The game   [ACT ONE — Three doors]
+p2 0 0.02 5.71 the first puzzle is called the monty hall problem after the host of an american game show called let's make a deal
+p2 1 6.12 15.92 if you've seen the movie twenty-one you've seen it on screen a professor puts it to a student in the middle of a class and the student's answer is what gets him invited onto a team of card counters
+p2 2 16.93 17.68 here are the rules
+p2 3 18.09 21.93 in front of you are three doors behind one is a car behind the other two goats
+p2 4 22.38 25.37 you pick a door say door number one but it stays closed for now
+p2 5 25.76 30.40 the host knows where the car is he opens one of the two doors you didn't pick and it's always a goat
+p2 6 30.87 33.37 now two doors are still closed yours and one other
+p2 7 33.76 35.66 and the host asks you do you want to switch
+## Fifty-fifty?   [ACT ONE — Three doors]
+p2 8 37.66 39.11 almost everyone has the same reflex
+p2 9 39.92 44.41 two doors left one car one goat that's fifty-fifty so switching can't make any difference
+p2 10 44.84 48.62 in one study out of more than two hundred people only thirteen percent switched
+p2 11 49.65 53.37 it sounds completely reasonable but the right answer is that you should switch
+p2 12 53.84 58.15 if you stay you win the car one time in three if you switch you win two times in three
+p2 13 58.60 60.15 switching doubles your chances
+## What the host knows   [ACT ONE — Three doors]
+p2 14 61.83 64.15 the reason is hiding in the moment you made your first pick
+p2 15 64.58 69.38 at that point you knew nothing so your door has exactly a one in three chance of hiding the car
+p2 16 69.78 73.04 the other two doors taken together hold the remaining two in three
+p2 17 74.03 76.59 here is the key the host doesn't open a door at random
+p2 18 77.03 79.60 he knows where the car is and he deliberately opens a goat
+p2 19 80.06 86.05 so when he opens one of those two doors the two in three doesn't vanish all of it moves onto the one door he left closed
+p2 20 86.46 89.84 your door is still one in three the other door now holds two in three
+## Ten thousand letters   [ACT ONE — Three doors]
+p2 21 91.48 94.18 if that still feels wrong to you you're in very good company
+p2 22 94.61 99.46 in nineteen ninety marilyn vos savant gave exactly this answer in her magazine column switch
+p2 23 99.93 105.91 around ten thousand letters arrived most of them telling her she was wrong nearly a thousand were signed by people with doctorates
+p2 24 106.78 114.76 even paul erd s one of the most brilliant mathematicians of the twentieth century wasn't convinced until he watched a computer play the game over and over
+## A hundred doors   [ACT ONE — Three doors]
+p2 25 116.42 118.35 so let's give your intuition a better picture
+p2 26 118.74 120.71 instead of three doors imagine a hundred
+p2 27 121.12 124.30 you pick one your chance of having the car is one in a hundred tiny
+p2 28 124.73 129.75 then the host who knows where the car is opens ninety-eight doors goat goat goat all the way along
+p2 29 130.20 131.97 he leaves exactly one other door closed
+p2 30 133.00 133.93 now it's obvious isn't it
+p2 31 134.32 138.70 out of ninety-nine other doors he carefully skipped that one it almost certainly has the car
+p2 32 139.11 142.23 your door is still the wild guess it always was one in a hundred
+p2 33 142.62 143.70 of course you switch
+p2 34 144.75 148.97 the three-door game is exactly the same the numbers are just small enough to fool you
+## Play it a thousand times   [ACT ONE — Three doors]
+p2 35 150.61 152.25 and you can do what convinced erd s
+p2 36 152.68 158.84 here are a thousand games played by a computer on the left a player who always stays on the right one who always switches
+p2 37 159.25 163.73 the staying player wins about a third of the time the switching player wins about two thirds
+p2 38 164.18 166.75 not because of a formula you can just watch it happen
+## The rules nobody said   [ACT ONE — Three doors]
+p2 39 168.41 171.61 before we call this settled there's one detail that matters a lot
+p2 40 172.04 178.93 the answer two in three depends on the rules the host always knows where the car is he always opens a goat and he always offers you the switch
+p2 41 180.00 181.78 change the rules and the answer changes
+p2 42 182.24 187.46 suppose the host opens one of the other doors at random and sometimes by accident he reveals the car
+p2 43 187.89 193.05 in the games where he happens to show a goat switching and staying are now exactly even one half each
+p2 44 194.10 201.90 monty hall himself made this point if the host is required to open a door and offer a switch every time he said take the switch but if he has the choice beware
+p2 45 202.29 208.97 and look back at that classroom scene in twenty-one the professor says the host decides to open a door he never says the host has to
+p2 46 209.80 214.69 the student's answer is right but only under rules that nobody in the scene actually says out loud
+p2 47 215.70 222.75 that's what makes this puzzle so good the answer depends on the host working to hide the car and that's exactly the detail intuition skips
+## Back to the cards   [ACT ONE — Three doors]
+p2 48 224.44 226.27 now we can finish the cards from the start
+p2 49 226.72 229.64 your gut counted cards two cards could show red so fifty-fifty
+p2 50 230.07 233.90 but count the sides instead there are three red sides you could be looking at
+p2 51 234.61 238.31 two of them belong to the red-red card only one belongs to the red-white card
+p2 52 238.70 245.51 so the other side is red two times out of three just like the doors what you see isn't chosen fairly between the two possibilities
+## Intuition, rebuilt   [ACT ONE — Three doors]
+p2 53 247.17 249.29 here's what i find most interesting about monty hall
+p2 54 249.70 254.26 your first intuition led you to the wrong answer but intuition didn't turn out to be useless
+p2 55 254.75 259.82 the moment you pictured a hundred doors intuition switched sides and agreed with the calculation
+p2 56 260.25 265.29 a small change in how you look at the problem and intuition is walking in the right direction again
+## Always a little short   [ACT TWO — Zero point nine, repeating]
+p2 57 267.76 269.05 the second puzzle is different
+p2 58 269.48 273.00 here even after hearing the explanation many people still feel uneasy
+p2 59 273.43 278.63 the fact is this zero point nine nine nine with the nines going on forever is exactly equal to one
+p2 60 279.64 281.20 the natural reaction is to refuse
+p2 61 281.61 287.48 it feels like zero point nine repeating is still just a tiny bit short of one an infinitely small gap but still a gap
+p2 62 287.88 293.39 and the feeling is strong people hear the explanation nod and then quietly think it's still a little short
+## Two quick proofs   [ACT TWO — Zero point nine, repeating]
+p2 63 295.43 298.70 there are a couple of familiar arguments that the two numbers are equal
+p2 64 299.13 305.81 the first starts with a fraction one third written as a decimal is zero point three three three with the threes going on forever
+p2 65 306.24 312.11 multiply both sides by three the left side becomes one the right side becomes zero point nine nine nine forever
+p2 66 312.52 314.08 so zero point nine repeating is one
+p2 67 315.08 316.48 the second is an algebra trick
+p2 68 316.91 322.07 call zero point nine repeating x multiply by ten and you get ten x equals nine point nine repeating
+p2 69 322.46 327.06 subtract x from ten x and the endless tails cancel nine x equals nine so x equals one
+p2 70 328.40 330.89 both are easy to remember and both are pretty convincing
+p2 71 331.28 332.57 but honestly they take a shortcut
+p2 72 332.98 341.23 they assume we're allowed to add subtract multiply and divide endless decimals just like ordinary numbers and that's exactly the part your gut doesn't trust
+## What the dots mean   [ACT TWO — Zero point nine, repeating]
+p2 73 342.91 348.42 the real reason is in a different place it's in the question what does zero point nine repeating actually mean
+p2 74 349.47 354.27 when we write nines that go on forever we're talking about a list of numbers that keeps getting longer
+p2 75 354.68 359.01 zero point nine then zero point nine nine then zero point nine nine nine and so on
+p2 76 359.40 362.19 the gap to one is a tenth then a hundredth then a thousandth
+p2 77 362.64 367.79 the list keeps closing in on one and you can push it as close as you like just by writing enough nines
+p2 78 368.80 376.02 in the real numbers the numbers we use every day the symbol zero point nine repeating is defined to be exactly where that list is heading
+p2 79 376.68 377.99 and where it's heading is one
+p2 80 378.38 383.05 so zero point nine repeating doesn't hover somewhere just before one it sits exactly on one
+## Nothing fits in between   [ACT TWO — Zero point nine, repeating]
+p2 81 384.69 386.34 here's another way to feel safer about it
+p2 82 386.73 392.78 take any two different real numbers and there are always more numbers squeezed between them their average for a start
+p2 83 393.23 399.69 so try to find a number between zero point nine repeating and one bigger than zero point nine repeating and smaller than one
+p2 84 400.08 402.11 you won't find one because there isn't one
+p2 85 402.50 406.35 and if nothing at all fits between two numbers they can't be two different numbers
+## The gap your gut can feel   [ACT TWO — Zero point nine, repeating]
+p2 86 408.01 411.40 i suspect some of you still feel there's a tiny gap left over somewhere
+p2 87 411.83 413.59 and honestly that feeling isn't silly
+p2 88 414.00 420.24 the problem is that in the real numbers there's no distance that is bigger than zero but smaller than every positive number
+p2 89 420.82 422.61 so there's simply nowhere to put that gap
+p2 90 423.82 429.20 but mathematics has built other number systems where distances that small really are allowed to exist
+p2 91 429.61 437.14 newton and leibniz worked with quantities like that when they invented calculus and in the nineteen sixties abraham robinson made them rigorous
+p2 92 437.59 440.07 your intuition is pointing toward systems like those
+p2 93 440.46 445.72 it's just that the symbol we're talking about lives in the familiar real numbers and there it equals one
+## A different question   [ACT TWO — Zero point nine, repeating]
+p2 94 447.38 448.82 that's the difference from monty hall
+p2 95 449.27 452.56 with monty hall intuition got a probability wrong plain and simple
+p2 96 452.95 458.66 here the intuition about a gap isn't exactly wrong it's answering a slightly different question from the one we asked
+p2 97 459.07 466.77 you're feeling your way through a world with infinitely small distances while zero point nine repeating is defined in a world that doesn't have them
+p2 98 467.30 472.23 once it's clear which number system we're talking about there's nothing left to argue about the symbol
+## The engine and the brakes   [ACT THREE — Does math need intuition?]
+p2 99 474.67 478.77 so back to the question from the beginning when you do math do you need intuition
+p2 100 479.76 482.89 the two puzzles show us two different sides of it let's put them together
+p2 101 483.28 486.84 with monty hall intuition made a real mistake and logic pulled us back
+p2 102 487.27 494.39 but once the logic was done we could build a better intuition like the hundred doors so the next puzzle of that kind doesn't fool us again
+p2 103 494.78 501.44 with zero point nine repeating logic didn't throw your feeling away it showed you where the feeling came from a different number system
+p2 104 502.45 504.26 here's my view after those two examples
+p2 105 504.71 508.25 math does need intuition but intuition shouldn't get the final word
+p2 106 508.64 516.18 intuition is the engine it's how people sense that something is true or false and guess which way to go often long before they know how to prove it
+p2 107 516.57 522.62 logic and careful proof are the brakes they keep intuition from driving off a cliff the way it nearly did with the doors
+## Prove and discover   [ACT THREE — Does math need intuition?]
+p2 108 524.32 528.07 the mathematician henri poincaré put it in one line in nineteen oh eight
+p2 109 528.50 531.58 it is by logic that we prove but by intuition that we discover
+p2 110 531.99 532.90 i think that's still true
+p2 111 533.43 542.89 the goal isn't to trust your intuition completely or to distrust it completely it's to recognize which situation you're in so you know when to trust it and when to check it again
+## Putting it together   [ACT FOUR — Putting it together]
+p2 112 545.35 552.62 when does intuition lead you wrong when there's information you didn't count like a host who knows where the car is or a card with two red sides
+p2 113 553.05 561.17 what do you do when the proof is right and your gut still says no ask what your gut is actually answering often it's a different question in a different system
+p2 114 561.56 565.25 and does math need intuition yes as the engine with logic as the brakes
+p2 115 566.32 571.19 sometimes like monty hall the moment you feel most certain is exactly the moment to stop and check
+p2 116 571.62 577.90 sometimes like zero point nine repeating the feeling that won't give up is pointing at a deeper question one worth digging into
+p2 117 578.34 581.48 telling those two apart is the hard part and the interesting part
+## Next time   [ACT FOUR — Putting it together]
+p2 118 583.63 584.94 here's something to try on your own
+p2 119 585.37 588.69 the next time an answer pops into your head instantly ask two questions
+p2 120 589.52 593.38 who knows something i haven't counted and which system of numbers am i standing in
+p2 121 594.51 596.46 thank you for watching all the way to the end
+p2 122 596.97 600.62 which puzzle fooled you more the doors or the nines tell me in the comments
+p2 123 601.05 605.85 and subscribe to ninety-nine percent from scratch so you don't miss the next one see you soon

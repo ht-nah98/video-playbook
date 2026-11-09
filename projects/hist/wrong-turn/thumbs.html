@@ -1,0 +1,99 @@
+<!doctype html><meta charset="utf-8">
+<title>wrong-turn — thumbnail thử theo 3 khuôn thắng của ngách</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Thumbnail tự dựng (2026-10-28) — học KHUÔN của kênh thắng (channels/hist/market/2026-10-28/VIRAL.md §2), chất liệu của mình:
+// ảnh thật PD + người dẫn vẽ nét + chữ. t 0 = tách đôi trước / sau (Animated History) · t 1 = nền trắng + chữ + mũi tên
+// (Serious History) · t 2 = cảm xúc tiền cảnh, câu chuyện hậu cảnh (Historically). Không chép nét vẽ / nhân vật của họ.
+import { INK, loadMap, cutout } from '../_kit/mapkit.js';
+import * as S from '../_kit/stage.js';
+import { bindNarrator, narrator } from '../_kit/narrator.js';
+const g = document.getElementById('cv').getContext('2d');
+const { W, H } = S;
+const IM = {}; let ready = false, M = null;
+const img = (k, src) => { const im = new Image(); im.src = src; return im.decode().then(() => { IM[k] = im; }); };
+const SA = '../sarajevo/assets/';
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f)),
+  ...['car', 'boom1', 'ff_bust', 'sophie_bust'].map(k => img(k, `${SA}cut/${k}.png`)),
+  img('sarajevo', `${SA}photos/sarajevo.jpg`), img('trench', 'assets/photos/trench.jpg'), loadMap('../_kit/maps/europe1914.json').then(m => { M = m; })])
+  .then(() => { S.bindStage(g, { IM, M }); bindNarrator(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+/** chữ thumbnail: đậm 900, viền đen dày, (tuỳ) bóng đổ cứng */
+function big(txt, x, y, size, col = '#FFF', o = {}) { g.save(); g.font = `900 ${size}px Archivo, sans-serif`; g.textAlign = o.align ?? 'center'; g.textBaseline = 'alphabetic';
+  g.lineJoin = 'round'; if (o.shadow !== false) { g.fillStyle = 'rgba(0,0,0,0.55)'; g.fillText(txt, x + size * 0.04, y + size * 0.05); }
+  if (o.stroke !== false) { g.strokeStyle = o.stroke ?? INK; g.lineWidth = size * (o.sw ?? 0.14); g.strokeText(txt, x, y); }
+  g.fillStyle = col; g.fillText(txt, x, y); g.restore(); }
+/** ô năm: nền đen, chữ trắng (khuôn Animated History) */
+function yearBox(txt, x, y, size) { g.save(); g.font = `900 ${size}px Archivo, sans-serif`; const w = g.measureText(txt).width + size * 0.4;
+  g.fillStyle = '#0B0B0C'; g.fillRect(x - w / 2, y - size * 0.95, w, size * 1.2); g.fillStyle = '#FFF'; g.textAlign = 'center'; g.fillText(txt, x, y); g.restore(); }
+function tint(col, mode = 'multiply', a = 1) { g.save(); g.globalCompositeOperation = mode; g.globalAlpha = a; g.fillStyle = col; g.fillRect(0, 0, W, H); g.restore(); }
+/** mũi tên tay vẽ đỏ (Serious History): thân cong + đầu tam giác */
+function redArrow(x0, y0, x1, y1, bend, w = 34) { const mx = (x0 + x1) / 2 + bend[0], my = (y0 + y1) / 2 + bend[1], a = Math.atan2(y1 - my, x1 - mx);
+  g.save(); g.strokeStyle = '#E3141B'; g.lineWidth = w; g.lineCap = 'round'; g.beginPath(); g.moveTo(x0, y0); g.quadraticCurveTo(mx, my, x1 - Math.cos(a) * w * 1.2, y1 - Math.sin(a) * w * 1.2); g.stroke();
+  g.fillStyle = '#E3141B'; g.translate(x1, y1); g.rotate(a); g.beginPath(); g.moveTo(w * 0.6, 0); g.lineTo(-w * 2.2, -w * 1.9); g.lineTo(-w * 2.2, w * 1.9); g.closePath(); g.fill(); g.restore(); }
+function sticker(im, x, y, h, o = {}) { const w = im.width * h / im.height; g.save(); g.imageSmoothingQuality = 'high'; g.translate(x, y); g.scale(o.flip ? -1 : 1, 1); g.drawImage(im, -w / 2, -h, w, h); g.restore(); }
+
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  if (!ready) { g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, W, H); return; }
+  if (t >= 3) return more(t);
+  if (t < 1) {                                   // T2 — tách đôi: 1914 phố nắng + Thái tử ↔ 1918 chiến hào + nổ + người dẫn lính
+    g.save(); g.beginPath(); g.moveTo(0, 0); g.lineTo(1010, 0); g.lineTo(930, H); g.lineTo(0, H); g.clip();
+    S.photoBg(IM.sarajevo, 0, { zoom: 1.25, fx: 0.35, fy: 0.45 }); tint('#F2B35A', 'multiply', 0.55); tint('#FFE2A8', 'screen', 0.18);
+    sticker(IM.ff_bust, 430, H + 40, 900); g.restore();
+    g.save(); g.beginPath(); g.moveTo(1010, 0); g.lineTo(W, 0); g.lineTo(W, H); g.lineTo(930, H); g.closePath(); g.clip();
+    S.photoBg(IM.trench, 0, { zoom: 1.15, fx: 0.5, fy: 0.55 }); tint('#C8281E', 'multiply', 0.65); tint('#000', 'source-over', 0.18);
+    sticker(IM.boom1, 1480, 820, 880); narrator(1560, H + 30, 760, { outfit: 'soldier', arms: 'cover', mood: 'shock', mouth: 'o' }); g.restore();
+    g.save(); g.strokeStyle = '#FFF'; g.lineWidth = 14; g.beginPath(); g.moveTo(1010, 0); g.lineTo(930, H); g.stroke(); g.restore();
+    yearBox('1914', 640, 150, 120); yearBox('1918', 1300, 150, 120);
+    big('ONE TURN?', 960, 1010, 190, '#FFF', { sw: 0.16 }); return; }
+  if (t < 2) {                                   // T1 — nền trắng, xe thật to, người dẫn = tài xế nhún vai, chữ 2 dòng + mũi tên đỏ
+    g.fillStyle = '#FBFAF6'; g.fillRect(0, 0, W, H);
+    sticker(IM.car, 640, 1050, 600);
+    narrator(1600, H + 140, 760, { outfit: 'plain', arms: 'shrug', mood: 'smug', mouth: 'grit', look: -1 });
+    big('WRONG', 1000, 200, 190, INK, { stroke: false, shadow: false, align: 'left' }); big('TURN', 1000, 380, 190, INK, { stroke: false, shadow: false, align: 'left' });
+    redArrow(960, 250, 470, 560, [-60, -190]); return; }
+  // T3 — cảm xúc tiền cảnh (người dẫn mũ quả dưa hoảng, mồ hôi), câu chuyện hậu cảnh (xe + sát thủ chĩa súng), không chữ
+  S.photoBg(IM.sarajevo, 0, { zoom: 1.3, fx: 0.62, fy: 0.5 }); tint('#E9B36A', 'multiply', 0.45); tint('#1A1410', 'source-over', 0.12);
+  sticker(IM.car, 1640, 880, 430, { flip: true });
+  { const x = 1180, y = 1010, h = 620, a = -0.22, sx = x + h * 0.42 * 0.4, sy = y - h * 0.48, ex = sx + Math.cos(a) * h * 0.62, ey = sy + Math.sin(a) * h * 0.62;   // viền trắng tay + súng để không chìm vào xe đen
+    g.save(); g.strokeStyle = '#FFF'; g.lineCap = 'round'; g.lineWidth = 24; g.beginPath(); g.moveTo(sx, sy); g.lineTo(ex + Math.cos(a) * 40, ey + Math.sin(a) * 40); g.stroke(); g.lineWidth = 40; g.beginPath(); g.moveTo(ex, ey + 14); g.lineTo(ex - 6, ey + 30); g.stroke(); g.restore();
+    S.assassin(x, y, h, { gun: a, look: 1 }); }
+  narrator(420, H + 330, 1120, { v: 'C', outfit: 'bowler', mood: 'shock', mouth: 'o', look: 1 });
+  S.sweat(660, 560, 2.0); S.sweat(170, 600, 1.6);
+}
+
+// ── vòng 2 (người dùng 2026-10-28: Thanh Pahm / OverSimplified không gen ảnh thật — thumbnail = nhân vật + đồ của chính video) ──
+const AH = 'Austro-Hungarian Empire', SRB = 'Serbia', GER = 'German Empire', RUS = 'Russian Empire', FRA = 'France', UK = 'United Kingdom of Great Britain and Ireland';
+function burst(cx, cy, R, cols) { for (let i = 0; i < 24; i++) { const a0 = i / 24 * Math.PI * 2, a1 = (i + 1) / 24 * Math.PI * 2; g.fillStyle = cols[i % 2]; g.beginPath(); g.moveTo(cx, cy); g.arc(cx, cy, R, a0, a1); g.closePath(); g.fill(); } }
+function wheel(x, y, r) { g.save(); g.strokeStyle = INK; g.lineWidth = r * 0.16; g.beginPath(); g.arc(x, y, r, 0, 7); g.stroke(); for (let i = 0; i < 3; i++) { const a = i * 2.094 + 0.5; g.beginPath(); g.moveTo(x, y); g.lineTo(x + Math.cos(a) * r, y + Math.sin(a) * r); g.stroke(); } g.fillStyle = INK; g.beginPath(); g.arc(x, y, r * 0.18, 0, 7); g.fill(); g.restore(); }
+function more(t) {
+  if (t < 4) {                                   // D — kiểu Thanh Pahm: nền tia màu, hai nước đấm nhau, người dẫn to bên phải cầm vô-lăng, chữ chủ đề to
+    burst(760, 470, 2200, ['#F7C948', '#F2A93B']);
+    g.save(); g.globalAlpha = 0.9; S.realBoom(760, 640, 760, 0.45, 2); g.restore();
+    cutout(g, M, AH, 470, 860, 560, { mood: 'angry', arms: 'none' }); cutout(g, M, SRB, 1010, 880, 420, { mood: 'shock', arms: 'none', flip: true });
+    sticker(IM.ff_bust, 760, 640, 300);
+    narrator(1600, H + 380, 1250, { v: 'C', outfit: 'plain', mood: 'smug', mouth: 'grin', look: -1 }); wheel(1420, 960, 140);
+    big('WORLD WAR 1', 620, 1010, 160, '#FFF', { sw: 0.18 }); return; }
+  if (t < 5) {                                   // E — kiểu OverSimplified: cảnh vẽ phẳng của tập, chữ vàng viền tối trên đầu
+    const sky = g.createLinearGradient(0, 0, 0, H); sky.addColorStop(0, '#4E7FC4'); sky.addColorStop(1, '#BFD8EE'); g.fillStyle = sky; g.fillRect(0, 0, W, H);
+    g.fillStyle = '#D9C7A5'; for (let i = 0; i < 9; i++) { const x = i * 230 - 40, h = 300 + 160 * S.hash(i + 3); g.fillRect(x, 760 - h, 210, h); g.fillStyle = i % 2 ? '#CDB892' : '#E3D3B3'; }
+    g.fillStyle = '#9A9590'; g.fillRect(0, 760, W, H - 760);
+    sticker(IM.car, 900, 1000, 520);
+    sticker(IM.ff_bust, 1060, 600, 230);
+    { const x = 300, y = 1020, h = 640, a = -0.08, sx = x + h * 0.42 * 0.4, sy = y - h * 0.48, ex = sx + Math.cos(a) * h * 0.62, ey = sy + Math.sin(a) * h * 0.62;
+      g.save(); g.strokeStyle = '#FFF'; g.lineCap = 'round'; g.lineWidth = 24; g.beginPath(); g.moveTo(sx, sy); g.lineTo(ex + 40, ey); g.stroke(); g.restore(); S.assassin(x, y, h, { gun: a, look: 1 }); }
+    narrator(1640, H + 300, 1000, { v: 'C', outfit: 'plain', arms: 'cover', mood: 'shock', mouth: 'wide' });
+    big('THE WRONG TURN', 960, 170, 150, '#FFD23F', { sw: 0.16 }); return; }
+  if (t < 6) {                                   // F — luận đề kênh: domino (xe tí hon đẩy ngã cả châu Âu), người dẫn búng ngón tay
+    g.fillStyle = '#FBF6EA'; g.fillRect(0, 0, W, H);
+    const row = [[SRB, 270], [AH, 360], [GER, 450], [FRA, 530], [UK, 610]];   // Nga bỏ: cutout Nga đè lẫn vào Đức ở cỡ thumbnail
+    sticker(IM.car, 420, 1010, 170);
+    row.forEach(([n, h], i) => { const x = [640, 880, 1190, 1530, 1790][i]; g.save(); g.translate(x, 960); g.rotate(i < 3 ? 0.25 + 0.08 * (2 - i) : 0.04 * i - 0.05); g.translate(-x, -960);
+      cutout(g, M, n, x, 960, h, { mood: i < 2 ? 'shock' : 'angry', arms: 'none' }); g.restore(); });
+    narrator(175, 1060, 660, { outfit: 'plain', arms: 'point', mood: 'smug', mouth: 'grin' });
+    big('OOPS.', 600, 250, 250, '#E3141B', { sw: 0.12 }); return; }
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 6, LEAD: 0, error: null };
+</script>

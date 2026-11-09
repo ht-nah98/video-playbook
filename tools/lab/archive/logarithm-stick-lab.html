@@ -1,0 +1,34 @@
+<!doctype html><meta charset="utf-8"><title>Logarithm stick lab</title>
+<style>html,body{margin:0;background:#E3EDF1;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+import { actor, block, H, DIR, GY, SCENE } from './logarithm-stick-scene.js';
+import { hero, PAPER, INK } from '../../engine/hero.js';
+const g = document.getElementById('cv').getContext('2d');
+let fontsReady = false;
+Promise.all([new FontFace('Archivo','url("../../assets/fonts/Archivo[wdth,wght].ttf")',{weight:'100 900'}).load().then(f=>document.fonts.add(f)).catch(()=>{})]).then(()=>{fontsReady=true;});
+const clamp=(v,a=0,b=1)=>Math.max(a,Math.min(b,v));
+function text(txt,x,y,size=34,col=INK,align='left'){g.fillStyle=col;g.font=`800 ${size}px Archivo,sans-serif`;g.textAlign=align;g.textBaseline='middle';g.fillText(txt,x,y);}
+function frame(t){
+  g.setTransform(1,0,0,1,0,0); g.fillStyle=PAPER; g.fillRect(0,0,1920,1080);
+  g.fillStyle='#EEF2EE'; g.fillRect(0,GY,1920,180); g.strokeStyle='rgba(34,48,60,.4)'; g.lineWidth=4; g.beginPath(); g.moveTo(120,GY); g.lineTo(1800,GY); g.stroke();
+  const phase=t<4.3?'MONEY DOUBLES':t<8?'FORWARD: ×2 ×2 ×2 → 8':'BACKWARD: 8 → THREE BRICKS';
+  text(phase,96,84,42,'#5132B0'); text(`t = ${t.toFixed(2)} s`,1824,84,28,'rgba(34,48,60,.55)','right');
+  if(t<4.3){
+    text('$1,000',520,650,42,'#8A5200','center'); block(g,520,GY,160,'$1,000','#F2B33D',1);
+    const k=clamp((t-1.7)/1.4); block(g,860,GY,160,'$2,000','#F2B33D',k); text('×2',860,690,38,'#C83A26','center');
+    text('actor pulls the first stack → sees the doubled target',960,1018,26,'rgba(34,48,60,.65)','center');
+  } else if(t<8){
+    text('1',620,700,34,'#22303C','center');
+    for(let i=0;i<3;i++) block(g,900+i*92,GY,86,'×2','#C83A26',clamp((t-6.25-i*.35)/.25));
+    text('8',1190,700,42,'#5132B0','center'); text('each placement adds one brick',960,1018,26,'rgba(34,48,60,.65)','center');
+  } else {
+    for(let i=0;i<3;i++) block(g,900+i*92,GY,86,'×2','#C83A26',clamp(1-(t-8.15-i*.38)/.25));
+    text('8',900,700,42,'#5132B0','center'); text('3',1190,700,42,'#5132B0','center'); text('remove one brick at a time',960,1018,26,'rgba(34,48,60,.65)','center');
+  }
+  const A=actor(t); const J=hero(g,'C',A.hip[0],0,A.pose,{h:H,dir:DIR,hip:A.hip,feet:A.feet,hands:A.hands,squash:A.squash??1,eye:A.eye,wind:A.wind??0,t});
+  if(A.hands){g.strokeStyle=INK;g.lineWidth=.06*H;g.lineCap='round';for(const arm of [J.armL,J.armR]){g.beginPath();g.moveTo(...arm.m);g.lineTo(...arm.e);g.stroke();}}
+  text(`semantic target: ${A.phase}`,96,1040,24,'rgba(34,48,60,.6)');
+}
+window.__intro={get ready(){return fontsReady},still:frame,frame,DUR:SCENE.dur};
+</script>

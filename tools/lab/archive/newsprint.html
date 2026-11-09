@@ -1,0 +1,327 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — newsprint</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#EEE7D3;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Newsprint: trang báo và bút dạ" (sudoku). Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/newsprint.html --dur 2 --t 0.5,1.5 --outdir out/_lab/newsprint
+// Ý trung tâm: đếm mà không cần biết — sudoku sống ở trang giải trí của tờ báo; người giải cầm HAI cây bút dạ. Một hàng/cột/
+//   khối đủ = một bộ 1–9, nên quét bút cả vùng là biết vùng chứa gì. "Tô màu" = vệt bút dạ multiply lên giấy, mép răng cưa,
+//   đầu vệt đậm (mực đọng); bút CAM quét NGANG (theo hàng), bút LAM quét DỌC (theo cột) → thớ vệt khác hướng = hoạ tiết phân
+//   biệt cho người mù màu, cộng độ sáng cam/lam chênh ~25%. "Ô hai màu" = hai vệt chồng thành màu bùn sẫm. "Gỡ ra" = gạch
+//   chì chéo dày + vệt màu phai (tẩy không sạch được bút dạ). Ghi chú lề = chữ nghiêng bút chì.
+// Màu: giấy báo ngà #EEE7D3 (sợi, xám lấm tấm, ố mép) · mực in #151412 (lưới, số: ≥ 10:1 trên giấy, ≥ 8:1 trên vệt) · cam
+//   #FFC94F ×0.8 · lam #6FBCEF ×0.8 · chì #4A4945 (ghi chú, 7:1) · tím renban #7A4FA0 · đỏ KHÔNG dùng (cam/lam là màu tập hợp).
+// Chữ: Archivo đặc hẹp đậm (tít báo, số in trong ô) · Cormorant nghiêng (lời dẫn, phương trình, nét chì) · IBM Plex Mono (folio).
+// Tiếng: page (lật trang báo) · pen (quét bút dạ — xin thêm tiếng marker CC0) · pen nhẹ (gạch chì) · tick (đếm ô) · snap (cặp
+//   số khớp) · correct (vòng = góc) · tear (cắt mẩu báo).
+// Phần khác: lịch sử = mẩu báo cắt dán: "NUMBER PLACE · 1979" (trang tạp chí vẽ lại), Nikoli 1984, tít báo Anh 2004 · 6.7 × 10²¹
+//   = con số in tít đen kín cả trang · 5×5 − 4×4 = hai vuông bút dạ, ô chung gạch chì, dư một bộ ghi lề "+45" · McGuire =
+//   mẩu tin khoa học + dòng "7 million CPU hours" in chữ chì đếm vạch · hình chữ nhật 7/9 = bốn ô khoanh bút chì, mũi tên đổi
+//   chỗ · "máy giải tức thì" = trang báo in sẵn lời giải ở góc lộn ngược · gói lại = trang báo gấp đôi, bút dạ đặt lên.
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { paper: '#EEE7D3', ink: '#151412', lead: '#4A4945', leadA: a => `rgba(74,73,69,${a})`, orange: '#FFC94F', blue: '#6FBCEF',
+  purple: '#7A4FA0', rule: '#2A2824' };
+const ARC = '"Archivo"', CG = '"Cormorant Garamond"', MONO = '"IBM Plex Mono"';
+const IM = {}; let PAPER, ready = false;
+const must = (name, v, want) => { if (v !== want) throw new Error(`sai: ${name} = ${v} ≠ ${want}`); return v; };
+
+// ── lưới đã giải (Difference of Squares, MathGuy_12) + 27 ràng buộc ──
+const SOL = '572946381634851297981732564768429153459318672213567948825194736197683425346275819';
+const G = [...Array(9)].map((_, r) => [...Array(9)].map((_, c) => +SOL[r * 9 + c]));
+const bag = a => a.slice().sort((p, q) => p - q).join('');
+for (let i = 0; i < 9; i++) {
+  must(`hàng ${i + 1}`, bag(G[i]), '123456789');
+  must(`cột ${i + 1}`, bag(G.map(row => row[i])), '123456789');
+  must(`khối ${i + 1}`, bag([...Array(9)].map((_, k) => G[3 * (i / 3 | 0) + (k / 3 | 0)][3 * (i % 3) + k % 3])), '123456789');
+}
+// ── Phistomefel: cam = hàng 3, 7 + khối 4, 6; lam = cột 1, 2, 8, 9; gỡ ô hai màu ──
+const ORANGE = new Set(), BLUE = new Set(), key = (r, c) => r * 9 + c;
+for (let r = 0; r < 9; r++) for (let c = 0; c < 9; c++) {
+  if (r === 2 || r === 6 || (r >= 3 && r <= 5 && (c <= 2 || c >= 6))) ORANGE.add(key(r, c));
+  if (c <= 1 || c >= 7) BLUE.add(key(r, c));
+}
+const BOTH = new Set([...ORANGE].filter(k => BLUE.has(k)));
+const RING = [...ORANGE].filter(k => !BOTH.has(k)), CORN = [...BLUE].filter(k => !BOTH.has(k));
+must('ô hai màu', BOTH.size, 20); must('vòng', RING.length, 16); must('góc', CORN.length, 16);
+RING.forEach(k => { const r = k / 9 | 0, c = k % 9; if (!(r >= 2 && r <= 6 && c >= 2 && c <= 6 && !(r >= 3 && r <= 5 && c >= 3 && c <= 5))) throw new Error('vòng lệch ' + k); });
+const ringD = RING.map(k => G[k / 9 | 0][k % 9]).sort((a, b) => a - b), cornD = CORN.map(k => G[k / 9 | 0][k % 9]).sort((a, b) => a - b);
+must('đa tập vòng = góc', ringD.join(''), cornD.join(''));
+
+// ── câu đố: lồng, mũi tên, renban — toạ độ [hàng, cột] 0-based, đúng dữ liệu SudokuPad gốc ──
+const CAGES = [
+  { v: '15', cells: [[6, 0], [6, 1], [6, 2]], want: 15 },
+  { v: 'x', cells: [[0, 8], [1, 8]], want: 8, set: 'o' },
+  { v: 'y²', cells: [[0, 3], [1, 3], [2, 3], [3, 0], [3, 1], [3, 2], [3, 3]], want: 49, set: 'o' },
+  { v: 'x − y', cells: [[6, 3]], want: 1 },
+  { v: 'x − y', cells: [[8, 7]], want: 1 },
+  { v: 'y', cells: [[8, 0], [8, 1]], want: 7, set: 'o' },
+  { v: 'x²', cells: [[4, 4], [4, 5], [4, 6], [5, 4], [5, 5], [5, 6], [5, 7], [6, 4], [6, 5], [6, 6], [7, 5]], want: 64, set: 'b' },
+];
+CAGES.forEach(K => must(`lồng ${K.v}`, K.cells.reduce((s, [r, c]) => s + G[r][c], 0), K.want));
+const RENBAN = [[[0.5, 1.5], [0.5, 0.5], [1.5, 0.5]], [[0.5, 3.5], [1.5, 3.5], [2.5, 3.5]], [[3.5, 2.5], [3.5, 1.5], [3.5, 0.5]], [[0.5, 7.5], [1.5, 8.5]],
+  [[3.5, 4.5], [4.5, 3.5], [4.5, 4.5]], [[7.5, 3.5], [8.5, 4.5]], [[8.5, 5.5], [7.5, 6.5]]];
+RENBAN.forEach((L, i) => { const d = L.map(([y, x]) => G[y | 0][x | 0]).sort((a, b) => a - b); d.forEach((v, j) => j && must(`renban ${i + 1}`, v - d[j - 1], 1)); });
+const ARROWS = [
+  { o: [4.5, 7.5], wp: [[4.22, 7.78], [3.5, 8.5], [2.5, 8.5]] }, { o: [7.5, 4.5], wp: [[7.78, 4.22], [8.5, 3.5], [8.5, 2.5]] },
+  { o: [8.5, 8.5], wp: [[8.22, 8.22], [7.5, 7.5], [6.5, 7.5], [7.5, 6.5]] }, { o: [2.5, 6.5], wp: [[2.22, 6.22], [1.5, 5.5], [0.5, 4.5]] },
+  { o: [3.5, 3.5], wp: [[3.22, 3.22], [2.5, 2.5], [1.5, 1.5]] }, { o: [6.5, 2.5], wp: [[6.22, 2.22], [5.5, 1.5], [4.5, 0.5]] },
+];
+ARROWS.forEach((A, i) => must(`mũi tên ${i + 1}`, A.wp.slice(1).reduce((s, [y, x]) => s + G[y | 0][x | 0], 0), G[A.o[0] | 0][A.o[1] | 0]));
+const X = 8, Y = 7; must('x² = y² + x + y', X * X, Y * Y + X + Y); must('x − y', X - Y, 1);
+
+// ── giấy báo: ngà, sợi, lấm tấm xám, ố mép; vài dòng chữ mặt sau thấm qua rất mờ ──
+function paper() {
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H);
+  for (let i = 0; i < W * H; i++) {
+    const px = i % W, py = (i / W) | 0, r = Math.hypot((px - W * 0.5) / W, (py - H * 0.45) / H);
+    const v = 1.012 - 0.12 * r * r, n = (hash(i * 0.731) - 0.5) * 9 + (hash(((px >> 2) + (py >> 2) * 977) * 0.13) - 0.5) * 5;
+    d.data[i * 4] = 238 * v + n; d.data[i * 4 + 1] = 231 * v + n; d.data[i * 4 + 2] = 211 * v * (1 - 0.04 * r) + n * 0.9; d.data[i * 4 + 3] = 255;
+  }
+  x.putImageData(d, 0, 0);
+  for (let k = 0; k < 1400; k++) {                      // sợi giấy + hạt xám (giấy tái chế)
+    const sx = hash(k * 1.37) * W, sy = hash(k * 2.71) * H, a = hash(k * 3.9) * Math.PI, l = 5 + hash(k * 5.3) * 18;
+    x.strokeStyle = hash(k * 7.7) > 0.4 ? 'rgba(120,108,85,0.10)' : 'rgba(255,252,240,0.30)'; x.lineWidth = 0.8;
+    x.beginPath(); x.moveTo(sx, sy); x.lineTo(sx + l * Math.cos(a), sy + l * Math.sin(a)); x.stroke();
+    if (k % 3 === 0) { x.fillStyle = 'rgba(60,55,45,0.12)'; x.fillRect(hash(k * 9.1) * W, hash(k * 4.3) * H, 1.4, 1.4); }
+  }
+  x.fillStyle = 'rgba(40,36,30,0.028)';                // chữ mặt sau thấm qua: các dòng xám ngắn theo cột báo
+  for (let col = 0; col < 6; col++) for (let ln = 0; ln < 62; ln++) {
+    const cx = 60 + col * 310, y = 40 + ln * 16.5, w = 280 * (ln % 9 === 8 ? 0.45 : 0.86 + 0.14 * hash(col * 99 + ln));
+    if (hash(col * 31 + ln * 7.3) > 0.06) x.fillRect(cx, y, w, 6);
+  }
+  return c;
+}
+
+// ── chữ ──
+function text(s, x, y, font, color, align = 'left', ls = 0, stretch = 'normal') {
+  g.font = font; g.fontStretch = stretch; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.letterSpacing = ls + 'px'; g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; g.fontStretch = 'normal'; return w;
+}
+const head = (s, x, y, size, color = C.ink, align = 'left') => text(s, x, y, `800 ${size}px ${ARC}`, color, align, 0, 'extra-condensed');
+const it = (s, x, y, size, color = C.ink, align = 'left', wt = 600) => text(s, x, y, `italic ${wt} ${size}px ${CG}`, color, align);
+const folio = (s, x, y, color = C.lead, align = 'left', size = 20) => text(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 3);
+function fits(name, w, max) { if (w > max) throw new Error(`chữ tràn: ${name} ${Math.round(w)} > ${max}`); }
+// chữ chì: nghiêng nhẹ, nét hơi run (hai lớp lệch nửa điểm ảnh)
+function pencil(s, x, y, size, rot = -0.02, color = C.lead, max = 9999) {
+  g.save(); g.translate(x, y); g.rotate(rot);
+  g.globalAlpha = 0.55; it(s, 0.7, 0.5, size, color, 'left', 500); g.globalAlpha = 1; const w = it(s, 0, 0, size, color, 'left', 500);
+  g.restore(); fits(s, w, max); return w;
+}
+function pline(pts, w = 2.6, color = C.leadA(0.85), seed = 1) {   // nét chì: run nhẹ, hai lần kẻ
+  g.save(); g.strokeStyle = color; g.lineCap = g.lineJoin = 'round';
+  for (let pass = 0; pass < 2; pass++) {
+    g.lineWidth = pass ? w * 0.6 : w; g.globalAlpha = pass ? 0.5 : 1; g.beginPath();
+    pts.forEach(([px, py], i) => { const j = (hash(seed * 13 + i * 3.1 + pass) - 0.5) * 2.2; i ? g.lineTo(px + j, py - j) : g.moveTo(px + j, py + j); });
+    g.stroke();
+  }
+  g.restore();
+}
+
+// ── bút dạ: vệt multiply, đầu vát, mép răng cưa, thớ dọc theo hướng quét, đầu vệt đậm ──
+// (x, y) góc trên trái; len dọc hướng quét; dir 'h' | 'v'; thick = bề ngang ngòi
+function marker(x, y, len, thick, color, dir, seed, alpha = 0.8) {
+  g.save(); g.globalCompositeOperation = 'multiply';
+  g.translate(x, y); if (dir === 'v') { g.translate(thick, 0); g.rotate(Math.PI / 2); }
+  const n = Math.max(3, Math.round(len / 14)), over = 5, top = [], bot = [];
+  for (let i = 0; i <= n; i++) { const u = -over + (len + 2 * over) * i / n;
+    top.push([u, -2 + (hash(seed * 7.1 + i * 1.3) - 0.5) * 4.5]); bot.push([u, thick + 2 + (hash(seed * 5.7 + i * 2.1) - 0.5) * 4.5]); }
+  const sl = thick * 0.18;                              // đầu ngòi vát
+  g.beginPath(); g.moveTo(top[0][0] + sl, top[0][1]); top.forEach(p => g.lineTo(p[0], p[1]));
+  g.lineTo(bot[n][0] - sl, bot[n][1]); for (let i = n; i >= 0; i--) g.lineTo(bot[i][0], bot[i][1]); g.closePath();
+  g.globalAlpha = alpha; g.fillStyle = color; g.fill();
+  g.clip();
+  g.globalAlpha = alpha * 0.22;                         // mực đọng ở hai đầu vệt
+  g.fillRect(-over - 2, -6, 9, thick + 12); g.fillRect(len + over - 7, -6, 9, thick + 12);
+  g.globalAlpha = alpha * 0.14; g.strokeStyle = color; g.lineWidth = 1.6;   // thớ dọc hướng quét
+  for (let k = 0; k < 5; k++) { const v = thick * (0.12 + 0.19 * k) + (hash(seed + k) - 0.5) * 3; g.beginPath(); g.moveTo(-over, v); g.lineTo(len + over, v); g.stroke(); }
+  g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.fillStyle = 'rgba(238,231,211,0.16)';   // khe ngòi khô
+  g.fillRect(-over, thick * 0.62 + (hash(seed * 3) - 0.5) * 4, len + 2 * over, 1.6);
+  g.restore();
+}
+// gộp ô liền nhau thành vệt: 'h' theo hàng, 'v' theo cột
+function runs(cells, dir) {
+  const S = new Set(cells.map(([r, c]) => key(r, c))), out = [];
+  const lines = dir === 'h' ? [...Array(9)].map((_, r) => [...Array(9)].map((_, c) => [r, c])) : [...Array(9)].map((_, c) => [...Array(9)].map((_, r) => [r, c]));
+  lines.forEach(L => { let cur = null; L.forEach(([r, c]) => { if (S.has(key(r, c))) { if (cur) cur.n++; else out.push(cur = { r, c, n: 1 }); } else cur = null; }); });
+  return out;
+}
+function sweep(G0, cells, color, dir, seed, alpha = 0.8) {
+  const { x0, y0, cs } = G0, pad = cs * 0.07;
+  runs(cells, dir).forEach((R, i) => {
+    if (dir === 'h') marker(x0 + R.c * cs + pad, y0 + R.r * cs + pad, R.n * cs - 2 * pad, cs - 2 * pad, color, 'h', seed + i * 17, alpha);
+    else marker(x0 + R.c * cs + pad, y0 + R.r * cs + pad, R.n * cs - 2 * pad, cs - 2 * pad, color, 'v', seed + i * 17, alpha);
+  });
+}
+// ── lưới in ──
+function grid(G0, digits) {
+  const { x0, y0, cs } = G0, S = cs * 9;
+  g.save(); g.strokeStyle = C.ink; g.lineCap = 'square';
+  for (let i = 0; i <= 9; i++) { g.lineWidth = i % 3 ? 1.6 : 4.2;
+    g.beginPath(); g.moveTo(x0 + i * cs, y0); g.lineTo(x0 + i * cs, y0 + S); g.stroke();
+    g.beginPath(); g.moveTo(x0, y0 + i * cs); g.lineTo(x0 + S, y0 + i * cs); g.stroke(); }
+  g.restore();
+  if (digits) for (let r = 0; r < 9; r++) for (let c = 0; c < 9; c++) { const d = digits(r, c); if (d)
+    text(String(d), x0 + (c + 0.5) * cs, y0 + (r + 0.5) * cs + cs * 0.22, `700 ${Math.round(cs * 0.6)}px ${ARC}`, C.ink, 'center'); }
+}
+// ô đã gỡ: vệt hai màu phai + gạch chì chéo dày
+function erased(G0, r, c, seed) {
+  const { x0, y0, cs } = G0, x = x0 + c * cs, y = y0 + r * cs, pad = cs * 0.07;
+  marker(x + pad, y + pad, cs - 2 * pad, cs - 2 * pad, C.orange, 'h', seed, 0.22);
+  marker(x + pad, y + pad, cs - 2 * pad, cs - 2 * pad, C.blue, 'v', seed + 5, 0.22);
+  g.save(); g.beginPath(); g.rect(x + 3, y + 3, cs - 6, cs - 6); g.clip();
+  for (let k = -3; k <= 3; k++) { const o = k * cs * 0.15;
+    pline([[x + o - 2, y + cs + 2], [x + o + cs + 2, y - 2]], 1.5, C.leadA(0.30), seed * 3 + k); }
+  g.restore();
+}
+// ── lồng nét đứt (thụt vào d, nối góc lồi/lõm đúng) ──
+function cage(G0, cells, label) {
+  const { x0, y0, cs } = G0, d = cs * 0.09, S = new Set(cells.map(([r, c]) => key(r, c)));
+  const In = (r, c) => r >= 0 && r < 9 && c >= 0 && c < 9 && S.has(key(r, c));
+  g.save(); g.strokeStyle = C.ink; g.lineWidth = 2; g.setLineDash([7, 6]); g.lineCap = 'butt';
+  const edges = [[-1, 0], [0, 1], [1, 0], [0, -1]];      // trên, phải, dưới, trái (dr, dc ra ngoài)
+  cells.forEach(([r, c]) => edges.forEach(([dr, dc]) => {
+    if (In(r + dr, c + dc)) return;
+    const [ar, ac] = dr !== 0 ? [0, 1] : [1, 0];
+    const cx = x0 + (c + 0.5) * cs, cy = y0 + (r + 0.5) * cs, ox = dc * (cs / 2 - d), oy = dr * (cs / 2 - d);
+    const end = s => {                                   // s = ±1: hai đầu cạnh
+      const nr = r + ar * s, nc = c + ac * s, A = In(nr, nc), B = In(nr + dr, nc + dc);
+      const ext = !A ? cs / 2 - d : B ? cs / 2 + d : cs / 2;
+      return [cx + ox + ac * s * ext, cy + oy + ar * s * ext];
+    };
+    const p = end(-1), q = end(1); g.beginPath(); g.moveTo(p[0], p[1]); g.lineTo(q[0], q[1]); g.stroke();
+  }));
+  g.restore();
+  if (label) {                                           // nhãn góc trên trái của ô đầu lồng, nền giấy cắt nét đứt
+    const [r, c] = cells.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1])[0], x = x0 + c * cs + d - 1, y = y0 + r * cs + d - 1;
+    g.font = `italic 700 ${Math.round(cs * 0.33)}px ${CG}`; const w = g.measureText(label).width;
+    g.fillStyle = C.paper; g.fillRect(x, y, w + 8, cs * 0.32);
+    it(label, x + 4, y + cs * 0.25, Math.round(cs * 0.33), C.ink, 'left', 700);
+  }
+}
+function arrow(G0, A) {
+  const { x0, y0, cs } = G0, P = ([yy, xx]) => [x0 + xx * cs, y0 + yy * cs], o = P(A.o), pts = A.wp.map(P);
+  g.save(); g.strokeStyle = C.ink; g.lineWidth = 2.2; g.lineJoin = g.lineCap = 'round';
+  g.fillStyle = 'rgba(238,231,211,0.0)'; g.beginPath(); g.arc(o[0], o[1], cs * 0.415, 0, 7); g.stroke();
+  g.beginPath(); pts.forEach(([px, py], i) => i ? g.lineTo(px, py) : g.moveTo(px, py)); g.stroke();
+  const [a, b] = pts.slice(-2), ang = Math.atan2(b[1] - a[1], b[0] - a[0]), hl = cs * 0.22;
+  g.beginPath(); g.moveTo(b[0] - hl * Math.cos(ang - 0.5), b[1] - hl * Math.sin(ang - 0.5)); g.lineTo(b[0], b[1]);
+  g.lineTo(b[0] - hl * Math.cos(ang + 0.5), b[1] - hl * Math.sin(ang + 0.5)); g.stroke();
+  g.restore();
+}
+function renban(G0, L) {
+  const { x0, y0, cs } = G0;
+  g.save(); g.strokeStyle = C.purple; g.globalAlpha = 0.5; g.lineWidth = cs * 0.24; g.lineCap = g.lineJoin = 'round';
+  g.beginPath(); L.forEach(([yy, xx], i) => i ? g.lineTo(x0 + xx * cs, y0 + yy * cs) : g.moveTo(x0 + xx * cs, y0 + yy * cs)); g.stroke(); g.restore();
+}
+// ── khung trang: folio trên, hai đường kẻ báo; chân trang ──
+function masthead(right) {
+  text('THE PUZZLE PAGE', 96, 92, `800 30px ${ARC}`, C.ink, 'left', 4, 'condensed');
+  folio(right, 1824, 90, C.lead, 'right', 20);
+  g.fillStyle = C.rule; g.fillRect(96, 110, 1728, 3.5); g.fillRect(96, 118, 1728, 1.2);
+}
+function footer(left, right, x0 = 96, x1 = 1824) {
+  g.fillStyle = C.rule; g.fillRect(x0, 986, x1 - x0, 1.2);
+  folio(left, x0, 1014, C.lead, 'left', 18); if (right) folio(right, x1, 1014, C.lead, 'right', 18);
+}
+function figure(name, x, foot, h, crop) {
+  const im = IM[name], sh0 = im.height * crop, s = h / sh0, w = im.width * s;
+  g.drawImage(im, 0, 0, im.width, sh0, x, foot - h, w, h); return { x, y: foot - h, w, h };
+}
+
+const frames = [
+  () => {                                               // 0 · Hồi 2 — What's left
+    masthead('Act II · what’s left');
+    const G0 = { x0: 806, y0: 150, cs: 72 };
+    BOTH.forEach(k => erased(G0, k / 9 | 0, k % 9, k));
+    sweep(G0, RING.map(k => [k / 9 | 0, k % 9]), C.orange, 'h', 3);
+    sweep(G0, CORN.map(k => [k / 9 | 0, k % 9]), C.blue, 'v', 11);
+    grid(G0, (r, c) => G[r][c]);
+    // hai dãy đã sắp: cam trên, lam dưới, khớp từng cặp
+    const sx = G0.x0, cw = G0.cs * 9 / 16, ry = 836, by = 900, ch = 50;
+    folio('ring', sx - 18, ry + 33, C.lead, 'right', 18); folio('corners', sx - 18, by + 33, C.lead, 'right', 18);
+    marker(sx + 2, ry, 16 * cw - 4, ch, C.orange, 'h', 41); marker(sx + 2, by, 16 * cw - 4, ch, C.blue, 'h', 43);
+    ringD.forEach((v, i) => {
+      const cx = sx + (i + 0.5) * cw;
+      text(String(v), cx, ry + 38, `700 34px ${ARC}`, C.ink, 'center'); text(String(cornD[i]), cx, by + 38, `700 34px ${ARC}`, C.ink, 'center');
+      pline([[cx, ry + ch + 2], [cx, by - 2]], 1.8, C.leadA(0.8), i);
+      if (i && v !== ringD[i - 1]) pline([[sx + i * cw, ry + 6], [sx + i * cw, by + ch - 6]], 1.2, C.leadA(0.35), 50 + i);
+    });
+    // tít + lời dẫn (cột trái, trên đầu mascot)
+    head('Ring', 96, 300, 170); fits('= corners.', head('= corners.', 96, 440, 150), 680);
+    fits('dẫn', it('Rub out every cell that got both pens.', 98, 506, 36, C.lead, 'left', 600), 680);
+    // ghi chú chì ở lề phải
+    const nx = 1498, mx = 326;
+    pencil('orange: rows 3, 7', nx, 200, 31, -0.025, C.lead, mx);
+    pencil('+ the two side boxes', nx, 240, 31, -0.025, C.lead, mx);
+    pencil('= 4 full sets', nx + 22, 282, 31, -0.025, C.lead, mx - 22);
+    pencil('blue: columns 1, 2, 8, 9', nx, 400, 31, -0.025, C.lead, mx);
+    pencil('= 4 full sets', nx + 22, 442, 31, -0.025, C.lead, mx - 22);
+    pencil('20 cells had both —', nx, 560, 31, -0.025, C.lead, mx);
+    pencil('cross them out', nx, 600, 31, -0.025, C.lead, mx);
+    pencil('16 left = 16 left', nx, 720, 31, -0.025, C.lead, mx);
+    pencil('same digits, always', nx, 760, 31, -0.025, C.lead, mx);
+    pline([[nx + 4, 836], [nx + 20, 856], [nx + 58, 806]], 4, C.leadA(0.9), 7);                // dấu tick
+    footer('99% from scratch · puzzle page', 'ring 16 · corners 16', 760);
+    figure('pose-point', -76, H, 560, 0.45);             // tay chỉ sang phải → đứng bên trái lưới
+  },
+  () => {                                               // 1 · Hồi 4 — The equation
+    masthead('Act IV · the equation');
+    const G0 = { x0: 120, y0: 150, cs: 80 };
+    const set = s => CAGES.filter(K => K.set === s).flatMap(K => K.cells);
+    sweep(G0, set('o'), C.orange, 'h', 5);
+    sweep(G0, set('b'), C.blue, 'v', 9);
+    RENBAN.forEach(L => renban(G0, L));
+    grid(G0, null);
+    CAGES.forEach(K => cage(G0, K.cells, K.v));
+    [[6, 3], [8, 7]].forEach(([r, c]) => text(String(must('ô cho sẵn', G[r][c], 1)), G0.x0 + (c + 0.55) * G0.cs, G0.y0 + (r + 0.88) * G0.cs,
+      `700 44px ${ARC}`, C.ink, 'center'));           // số cho sẵn: thấp hơn tâm ô, nhường góc trên cho nhãn lồng
+    ARROWS.forEach(A => arrow(G0, A));
+    // chú giải dưới lưới
+    const ly = 936;
+    marker(122, ly - 34, 54, 44, C.orange, 'h', 61); it('y² + x + y', 196, ly, 38, C.ink, 'left', 600);
+    marker(440, ly - 34, 54, 44, C.blue, 'v', 63); it('x²', 514, ly, 38, C.ink, 'left', 600);
+    // phương trình
+    const ex = 930;
+    marker(ex - 6, 236, 104, 104, C.blue, 'v', 71, 0.7);
+    const w1a = it('x²', ex, 320, 112); let w = it(' = ', ex + w1a, 320, 112);
+    const sx = ex + w1a + w; const w1b = it('y² + x + y', sx, 320, 112, C.ink, 'left', 600);
+    marker(sx - 8, 236, w1b + 16, 104, C.orange, 'h', 73, 0.7);
+    it('y² + x + y', sx, 320, 112, C.ink, 'left', 600); it('x²', ex, 320, 112);   // vẽ lại chữ trên vệt (multiply làm chữ nhạt)
+    fits('pt1', ex + w1a + w + w1b, 1824);
+    pline([[ex + 60, 372], [ex + 60, 440]], 3, C.leadA(0.9), 3); pline([[ex + 46, 424], [ex + 60, 442], [ex + 74, 424]], 3, C.leadA(0.9), 4);
+    pencil('move x² − y² together, factor it', ex + 100, 418, 31, -0.02, C.lead, 900);
+    fits('pt2', it('(x − y)(x + y) = x + y', ex, 548, 98), 924);
+    pline([[ex + 60, 590], [ex + 60, 658]], 3, C.leadA(0.9), 5); pline([[ex + 46, 642], [ex + 60, 660], [ex + 74, 642]], 3, C.leadA(0.9), 6);
+    pencil('x + y is positive, so divide by it', ex + 100, 636, 31, -0.02, C.lead, 900);
+    const w3 = it('x − y = 1', ex, 790, 136);
+    g.save(); g.strokeStyle = C.leadA(0.8); g.lineWidth = 3; g.beginPath();      // khoanh chì, hở một chút ở cuối nét
+    g.ellipse(ex + w3 / 2, 752, w3 / 2 + 46, 86, -0.03, 0.15, Math.PI * 2 + 0.05); g.stroke(); g.restore();
+    footer('Difference of Squares · puzzle by MathGuy_12 · SudokuPad', null, 96, 1620);
+    figure('pose-ok', 1650, H, 400, 0.62);
+  },
+];
+
+(async () => {
+  await Promise.all([
+    ...['800 170px', '800 150px', '800 30px', '700 43px', '700 34px', '700 44px'].map(f => document.fonts.load(`${f} ${ARC}`)),
+    ...['italic 600 36px', 'italic 500 31px', 'italic 600 112px', 'italic 600 98px', 'italic 600 136px', 'italic 700 24px', 'italic 700 26px', 'italic 600 38px'].map(f => document.fonts.load(`${f} ${CG}`)),
+    ...['500 20px', '500 18px'].map(f => document.fonts.load(`${f} ${MONO}`)),
+  ]);
+  await Promise.all(['pose-point', 'pose-ok'].map(n => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[n] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + n)); im.src = `../../../assets/character-v2/cut/${n}.png`; })));
+  PAPER = paper(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.drawImage(PAPER, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

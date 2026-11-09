@@ -1,0 +1,86 @@
+{
+ "duration": 29.422,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "lang": "en",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "What number is exactly halfway between one and minus one?",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "What number is exactly halfway between one and minus one?",
+   "start": 0.0,
+   "end": 2.761,
+   "wav": "audio/voice/3c556b5dbe59a487.wav"
+  },
+  {
+   "text": "Zero, if you walk along the line. But turn instead, and halfway through the turn you land on a number that isn't on the line at all.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Zero, if you walk along the line. But turn instead, and halfway through the turn you land on a number that isn't on the line at all.",
+   "start": 3.111,
+   "end": 9.764,
+   "wav": "audio/voice/4d1db3f62087b5cb.wav"
+  },
+  {
+   "text": "In the fifteen hundreds, that number was the only road to a correct answer.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "In the fifteen hundreds, that number was the only road to a correct answer.",
+   "start": 10.114,
+   "end": 13.552,
+   "wav": "audio/voice/265610cb2b1a80d1.wav"
+  },
+  {
+   "text": "Descartes called it imaginary, and he meant it as an insult.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Descartes called it imaginary, and he meant it as an insult.",
+   "start": 13.902,
+   "end": 16.979,
+   "wav": "audio/voice/886bdc035d63fc11.wav"
+  },
+  {
+   "text": "Today, it helps engineers run the power grid.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Today, it helps engineers run the power grid.",
+   "start": 17.329,
+   "end": 19.499,
+   "wav": "audio/voice/6e513b0ba3c286bb.wav"
+  },
+  {
+   "text": "By the end of this video, you'll be able to point at it, and you'll see exactly why real machines use it.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "By the end of this video, you'll be able to point at it, and you'll see exactly why real machines use it.",
+   "start": 19.849,
+   "end": 24.773,
+   "wav": "audio/voice/e15427a9ef6704c8.wav"
+  },
+  {
+   "text": "It all starts with one question: what does multiplying actually do?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "It all starts with one question: what does multiplying actually do?",
+   "start": 25.123,
+   "end": 28.472,
+   "wav": "audio/voice/0e7c001ef3354bc5.wav"
+  }
+ ]
+}

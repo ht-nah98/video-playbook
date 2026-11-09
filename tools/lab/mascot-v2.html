@@ -1,0 +1,22 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — mascot v2</title>
+<style>
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Regular.ttf");}
+  html,body{margin:0;background:#0B0F1E;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// node engine/render/shoot.js stills --page tools/lab/mascot-v2.html --dur 1 --t 0.5 --outdir out/_lab/mv2
+import { Mascot, POSES_V2 } from '../../engine/mascot.js';
+const g = document.getElementById('cv').getContext('2d');
+const m = new Mascot(); let ready = false;
+(async () => { await document.fonts.load('400 20px "IBM Plex Mono"'); await m.load('../../assets/character-v2/cut', POSES_V2); ready = true; })();
+function frame(t) {
+  g.setTransform(1,0,0,1,0,0); g.fillStyle = '#0B0F1E'; g.fillRect(0,0,1920,1080);
+  // hàng trên: 8 pose PNG; hàng dưới: 4 pose mosaic màu ảnh
+  POSES_V2.forEach((p, i) => m.draw(g, p, 120 + i * 240, 520, 460, { ring: 0 }));
+  ['wave','point','crossed','jump'].forEach((p, i) => m.mosaic(g, p, 240 + i * 480, 1060, 500, { t, cell: 8, colorMode: 'image' }));
+}
+window.__intro = { get ready(){ return ready; }, still: frame, frame, DUR: 1 };
+</script>

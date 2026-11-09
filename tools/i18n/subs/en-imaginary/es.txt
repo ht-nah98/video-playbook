@@ -1,0 +1,87 @@
+¿Qué número está justo a medio camino entre 1 y −1?
+Cero, si caminas por la línea. Pero si giras, a mitad del giro llegas a un número que no está en la línea.
+En el siglo XVI, ese número era el único camino hacia una respuesta correcta.
+Descartes lo llamó imaginario, y lo dijo como un insulto.
+Hoy ayuda a los ingenieros a operar la red eléctrica.
+Al final de este video podrás señalarlo, y verás exactamente por qué las máquinas reales lo usan.
+Todo empieza con una pregunta: ¿qué hace realmente multiplicar?
+Dibuja la recta numérica y trata cada número como una flecha que sale de cero.
+Ahora multiplica por 2. Cada flecha se hace el doble de larga. El 3 llega a 6, y −1 llega a −2.
+Así que multiplicar por 2 no es solo una cuenta. Es un movimiento que aplicas a toda la recta: un estiramiento.
+¿Qué movimiento es multiplicar por −1?
+El 3 va a −3. El 5 va a −5. El −2 va a 2.
+Todo cambia de lado. Es una inversión a través de cero.
+E inviértelo dos veces, y vuelves al punto de partida. Esa es una forma de ver por qué negativo por negativo es positivo.
+Y ahora, la pregunta que causa todos los problemas.
+¿Hay algún número que, multiplicado por sí mismo, dé −1?
+En otras palabras, ¿hay un movimiento que, hecho dos veces, dé una inversión?
+Pruébalo en la recta. Un número positivo mantiene cada flecha en su lado, y hacerlo dos veces la sigue manteniendo ahí.
+Un número negativo cambia de lado, y cambiar dos veces te devuelve al inicio.
+En ambos casos, el mismo movimiento hecho dos veces nunca termina en el lado opuesto. Así que en esta recta, ningún número al cuadrado da −1.
+Durante mucho tiempo, ahí se acabó todo. Si pedías la raíz cuadrada de un negativo, la respuesta honesta era: esa pregunta está mal planteada.
+Y así habría seguido, de no ser por una ecuación que ya tenía una respuesta perfectamente buena.
+En 1545, el erudito italiano Gerolamo Cardano publicó una fórmula para resolver ecuaciones cúbicas, las que tienen x al cubo.
+Pero la fórmula tenía un problema extraño.
+Toma x³ = 15x + 4.
+Puedes comprobar a mano que x = 4 funciona. 4 al cubo es 64, y 15 por 4 más 4 también es 64.
+Así que hay una respuesta real, y es un número entero pequeño.
+Pero mete la ecuación en la fórmula, y a mitad de camino te pide la raíz cuadrada de −121.
+Podrías pensar que eso significa que la fórmula simplemente no sirve aquí. Es lo que normalmente concluirías cuando un cálculo pide algo imposible.
+Pero la respuesta existe. Acabamos de comprobarla. La fórmula apuntaba a un resultado verdadero, y su único camino pasaba por un número que no estaba permitido.
+En 1572, un ingeniero llamado Rafael Bombelli intentó algo audaz. Ignoró la objeción y siguió calculando.
+Trató la raíz cuadrada de −1 como un símbolo desconocido, con una sola regla: su cuadrado es −1. Por lo demás, álgebra normal.
+La fórmula pedía entonces dos raíces cúbicas, y Bombelli las encontró: 2 más ese símbolo, y 2 menos ese símbolo.
+Ahora súmalas. El 2 y el 2 hacen 4. Los símbolos, uno con más y otro con menos, se cancelan.
+Cuatro. La respuesta exacta, y la parte imposible había desaparecido por el camino.
+Así que nadie aceptó este número porque sonara bien. Se aceptó porque seguía dando resultados correctos, aunque nadie supiera decir qué era.
+En 1637, René Descartes usó la palabra imaginario para cantidades como esta, y no era un cumplido.
+El símbolo que usamos hoy, la letra i, llegó después. Pero la verdadera pregunta seguía abierta. Una regla no es una explicación. ¿Qué es esta cosa?
+La respuesta apareció hacia 1800, publicada por Caspar Wessel y luego por Jean-Robert Argand, cada uno por su cuenta.
+Y es casi vergonzosamente simple. Ya vimos que ningún movimiento en la recta funciona. Así que deja de quedarte en la recta.
+Mira otra vez esa inversión. Hay otra forma de enviar 1 a −1, 3 a −3, y todo a su opuesto.
+Gira toda la recta media vuelta alrededor de cero.
+El resultado se ve exactamente igual que la inversión, pero ahora el movimiento tiene un punto medio.
+Detente a mitad de la rotación. Has dado un cuarto de vuelta, y la flecha de 0 a 1 ahora apunta hacia arriba, fuera de la recta.
+Ahí está tu movimiento. Un cuarto de vuelta, hecho dos veces, es media vuelta, y media vuelta es multiplicar por −1.
+Así que la raíz cuadrada de −1 no es una cantidad misteriosa. Es un cuarto de vuelta. Y el punto un paso arriba de cero es lo que llamamos i.
+Ahora podemos responder bien la pregunta inicial. Camina por la recta de 1 a −1, y la mitad es 0.
+Gira de 1 a −1, y la mitad es i. Gira en sentido contrario, y la mitad es −i.
+Sigue multiplicando por i, y simplemente sigues girando.
+1, luego i, luego −1, luego −i, y de vuelta a 1. Cuatro cuartos de vuelta, un círculo completo.
+Así que una pregunta que parece aterradora, como i a la 100, es fácil. 100 son 25 círculos completos, y terminas justo donde empezaste: en 1.
+El nombre imaginario hace que esto suene más misterioso de lo que es.
+Tampoco −1 es algo que puedas tener en la mano. Es una dirección en una recta. Y i es solo una dirección más, la que no estábamos mirando.
+Una vez que hay una dirección hacia arriba, cada punto de la página se convierte en un número.
+3 a la derecha y 2 arriba es 3 + 2i. Los llamamos números complejos, y complejo aquí significa formado por partes, no difícil.
+Ahora pongamos a prueba la idea. Multiplica 3 + 2i por i, con álgebra normal.
+3 por i es 3i. 2i por i es 2i², que es −2.
+Obtienes −2 + 3i. Ahora mira dónde cayó ese punto.
+Es la misma flecha, la misma longitud, girada exactamente un cuarto de vuelta. El álgebra hizo geometría sin que se lo pidieran.
+Y funciona con todo número complejo, no solo con i. Cada uno es una flecha con una longitud y un ángulo.
+Al multiplicar dos, las longitudes se multiplican y los ángulos se suman. Esa es toda la regla.
+Toma 1 + i. Apunta a 45 grados, y su longitud es la raíz cuadrada de 2.
+Elévalo al cuadrado. El ángulo se duplica a 90 grados, y la longitud se vuelve exactamente 2. Eso predice 2i.
+Compruébalo con álgebra: 1, más 2i, más i². El 1 y el −1 se cancelan, y queda 2i.
+Esa regla por fin explica el truco de 1572.
+El 2 + i de Bombelli es una flecha con un ángulo de unos 26,5 grados. Al cubo, el ángulo se triplica a casi 80 grados, casi vertical, y cae justo en 2 + 11i.
+Su imagen espejo, 2 − i, al cubo da 2 − 11i, y ese 11i es la raíz cuadrada de −121.
+Ahora suma las dos flechas. Una sube, su espejo baja lo mismo, y lo que queda está sobre la recta común. 2 + 2: 4.
+Por eso una respuesta real tenía que pasar por lo imaginario. El camino de la fórmula salió de la recta y volvió. El número real era la sombra de algo que ocurría en el plano.
+Entonces, ¿por qué le importa esto a la red eléctrica?
+La electricidad de un enchufe oscila adelante y atrás en una onda suave, unas 50 o 60 veces por segundo.
+Imagina una flecha que gira de forma constante en un círculo, y mira solo su altura. Arriba, abajo, arriba, abajo. Esa altura traza exactamente esa onda.
+Así que toda onda suave puede tratarse como la sombra de una flecha que gira. Y ahora tenemos números que giran.
+Por esto ayuda. Supón que dos ondas pasan por el mismo circuito, una con pico de 3 voltios, la otra de 4 voltios, y la segunda va un cuarto de ciclo detrás de la primera.
+¿Cuál es el pico al combinarlas? Podrías decir 7. No lo es, porque nunca alcanzan el pico al mismo tiempo.
+Con flechas, un cuarto de ciclo es un cuarto de vuelta. Así que las dos ondas son 3 y 4i, en ángulo recto.
+Súmalas, y la longitud es 5. La onda combinada tiene un pico de exactamente 5 voltios.
+Sin números complejos también podrías llegar a esa respuesta, pero con páginas de trigonometría. Con ellos, es una suma corta.
+Llévalo a un circuito entero, lleno de bobinas y condensadores que desplazan las ondas en el tiempo, y es la diferencia entre una página de álgebra y algo verdaderamente doloroso.
+Los ingenieros eléctricos lo usan tanto que escriben el número como j, porque la i ya se usaba para la corriente.
+Las señales de radio, el procesamiento de audio y las ecuaciones de la mecánica cuántica también dependen de él, por la misma razón básica. Lo que oscila es lo que gira.
+¿Por qué alguien se vio obligado a aceptarlo? Porque a la respuesta correcta, 4, solo se podía llegar pasando por la raíz cuadrada de un negativo.
+¿Qué es? Un cuarto de vuelta. Y el punto un paso arriba de cero, en una dirección que la recta numérica nunca nos mostró.
+¿Por qué es útil? Porque multiplicar números complejos hace girar, y todo lo que oscila puede tratarse como algo que gira.
+Así que pruébalo con un lápiz. Marca cualquier punto de una hoja como un número, por ejemplo 2 + i, y multiplícalo por i cuatro veces.
+Luego dibuja cada resultado. Nadie tendrá que decirte qué significa i. Verás tu punto dar la vuelta a un círculo y volver a casa.
+Gracias por ver, y si esto hizo que una idea extraña pareciera obvia, suscríbete a 99% from scratch.

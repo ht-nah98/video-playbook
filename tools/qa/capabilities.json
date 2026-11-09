@@ -1,0 +1,91 @@
+{
+ "_doc": "SỔ NĂNG LỰC — kỹ thuật đã làm được + nơi nó sống + lối vào nào BẮT BUỘC dùng nó. test_capabilities.py ép: thư viện còn đó, lối vào còn gọi nó, bài học có thật. Hook (.claude/settings.json) đọc sổ này khi tạo file mới trong vùng và khi mở / nén phiên. Đúc kết kỹ thuật mới = thêm một dòng ở đây (LESSONS §295).",
+ "areas": [
+  {
+   "area": "video bài học toán (engine 2D)",
+   "dirs": [
+    "engine/",
+    "templates/lesson/",
+    "tools/lesson/",
+    "tools/voice/",
+    "tools/thumb/"
+   ],
+   "read": [
+    "docs/CRAFT.md",
+    "docs/lesson/LESSON-VIDEO.md",
+    "docs/ENGINE.md"
+   ],
+   "caps": [
+    {
+     "name": "render tất định + chạy khô shoot.js check",
+     "lesson": "§60",
+     "lib": "engine/render/shoot.js",
+     "used_by": {}
+    },
+    {
+     "name": "golden từng bài trước khi đổi engine / kit",
+     "lesson": "§115",
+     "lib": "tools/qa/lesson_golden.py",
+     "used_by": {}
+    },
+    {
+     "name": "thumbnail luôn kèm title đi cặp: check.py --pair đo độ dài + từ khoá chung",
+     "lesson": "§297",
+     "lib": "tools/thumb/check.py",
+     "used_by": {}
+    },
+    {
+     "name": "thumbnail kênh Anh vẽ bằng code với λ (không anime): trang stills + bảng mẫu λ đính kèm AI",
+     "lesson": "§296",
+     "lib": "projects/en/_kit/lambda.js",
+     "used_by": {}
+    }
+   ]
+  },
+  {
+   "area": "kênh sử (3D + 2D)",
+   "dirs": [
+    "projects/hist/",
+    "tools/hist/"
+   ],
+   "read": [
+    "channels/hist/PLAYBOOK.md",
+    "channels/hist/PACKAGING.md"
+   ],
+   "caps": []
+  },
+  {
+   "area": "đóng gói: title + thumbnail mọi kênh",
+   "dirs": [
+    "tools/thumb/",
+    "out/hist/_market/",
+    "channels/"
+   ],
+   "read": [
+    "docs/TITLE.md",
+    "channels/hist/PACKAGING.md",
+    "docs/lesson/PACKAGING.md"
+   ],
+   "caps": [
+    {
+     "name": "công thức title (phép thử câu hỏi bật ra, 6 khuôn, chấm 5 tiêu chí)",
+     "lesson": "§301",
+     "lib": "docs/TITLE.md",
+     "used_by": {}
+    },
+    {
+     "name": "soát cặp chữ trên ảnh ↔ title (độ dài, 50 ký tự đầu, trùng từ / số)",
+     "lesson": "§297",
+     "lib": "tools/thumb/check.py",
+     "used_by": {}
+    },
+    {
+     "name": "khuôn title nào thắng trong một đề (YouTube API công khai)",
+     "lesson": "§301",
+     "lib": "tools/yt/topic_titles.py",
+     "used_by": {}
+    }
+   ]
+  }
+ ]
+}

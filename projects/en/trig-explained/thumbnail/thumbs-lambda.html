@@ -1,0 +1,78 @@
+<!doctype html><meta charset="utf-8">
+<title>en/trig-explained — thumbnail λ (v2, 2026-11-06)</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Thumbnail v2 cho trig-explained: KHÔNG cậu bé anime, ký tự λ (projects/en/_kit/lambda.js) nhỏ, gọn.
+// Căn cứ: A/B zero-div 10-27 → 11-05 (THUMB-LOG): bản không anime (lỗ giấy + màn terminal + người que nhỏ) 58,6% vs 41,4%.
+// t 0–1: A "SAME KEYS?" (màn tối kiểu terminal, hai kết quả) · 1–2: B "FORGET SOH CAH TOA" (nền lưới sáng của video, đường tròn)
+// 2–3: bảng mẫu λ để đính kèm khi gen AI. Tất định: không random.
+import { lambda, MODES, LAMBDA_COLOR } from '../../_kit/lambda.js';
+import { C } from '../../_kit/system.js';
+const g = document.getElementById('cv').getContext('2d'), W = 1920, H = 1080;
+let ready = false;
+const FONTS = [['Archivo', 'Archivo[wdth,wght].ttf', '100 900'], ['IBM Plex Mono', 'IBMPlexMono-Medium.ttf', '500']];
+Promise.all(FONTS.map(([n, f, w]) => new FontFace(n, `url("../../../../assets/fonts/${f}")`, { weight: w }).load().then(ff => document.fonts.add(ff))))
+  .then(() => { ready = true; }).catch(e => { window.__intro.error = String(e); });
+
+function txt(s, x, y, px, o = {}) { g.save(); g.font = `${o.w ?? 900} ${px}px "${o.font ?? 'Archivo'}"`; g.textAlign = o.align ?? 'left'; g.textBaseline = 'middle';
+  if (o.stroke) { g.lineJoin = 'round'; g.strokeStyle = o.stroke; g.lineWidth = px * (o.sw ?? 0.14); g.strokeText(s, x, y); }
+  g.fillStyle = o.fill ?? '#FFF'; g.fillText(s, x, y); const w = g.measureText(s).width; g.restore(); return w; }
+function grid(bg, line, step = 60) { g.fillStyle = bg; g.fillRect(0, 0, W, H); g.strokeStyle = line; g.lineWidth = 2; g.beginPath();
+  for (let x = 0; x <= W; x += step) { g.moveTo(x, 0); g.lineTo(x, H); } for (let y = 0; y <= H; y += step) { g.moveTo(0, y); g.lineTo(W, y); } g.stroke(); }
+// bóng mềm bằng các lớp rect trong suốt (không shadowBlur)
+function softShadow(x, y, w, h, r, col, n = 8, spread = 26) { g.save(); for (let i = n; i > 0; i--) { const d = spread * i / n; g.fillStyle = col; g.globalAlpha = 0.05; g.beginPath(); g.roundRect(x - d, y - d + 14, w + 2 * d, h + 2 * d, r + d); g.fill(); } g.restore(); }
+
+// ---------- A: SAME KEYS? — màn tối, hai màn máy tính phát sáng ----------
+function screen(x, y, w, h, tag, val, col, glow) {
+  g.save(); for (let i = 10; i > 0; i--) { g.globalAlpha = 0.035; g.fillStyle = glow; g.beginPath(); g.roundRect(x - i * 6, y - i * 6, w + i * 12, h + i * 12, 30 + i * 6); g.fill(); } g.restore();
+  g.save(); g.fillStyle = '#0B1424'; g.strokeStyle = '#E8EDF7'; g.lineWidth = 7; g.beginPath(); g.roundRect(x, y, w, h, 28); g.fill(); g.stroke(); g.restore();
+  g.save(); g.fillStyle = glow; g.globalAlpha = 0.9; g.beginPath(); g.roundRect(x + 28, y + 26, 120, 52, 12); g.fill(); g.restore();
+  txt(tag, x + 88, y + 53, 38, { font: 'IBM Plex Mono', w: 500, fill: '#0B1424', align: 'center' });
+  txt('sin 30', x + w - 34, y + 120, 64, { font: 'IBM Plex Mono', w: 500, fill: '#C9D3E6', align: 'right' });
+  txt(val, x + w - 34, y + h - 104, 158, { fill: col, align: 'right' });
+}
+function sA() {
+  grid('#0E1A2E', 'rgba(150,180,230,0.07)');
+  const vg = g.createRadialGradient(760, 560, 200, 760, 560, 1300); vg.addColorStop(0, 'rgba(0,0,0,0)'); vg.addColorStop(1, 'rgba(0,0,0,0.55)'); g.fillStyle = vg; g.fillRect(0, 0, W, H);
+  txt('SAME KEYS?', 90, 170, 190, { fill: '#FFF' });
+  screen(90, 360, 500, 420, 'DEG', '0.5', '#F5B82E', '#F5B82E');
+  screen(640, 360, 720, 420, 'RAD', '−0.988', '#FF5A6A', '#FF5A6A');
+  // λ bối rối, nhìn sang hai màn; né góc nhãn giờ (x > 1680, y > 980)
+  lambda(g, 1585, 940, 540, { ...MODES.confused, look: [0.9, 0.15], lean: -0.04 }, { flip: true });
+  txt('?', 1700, 330, 180, { fill: '#F5B82E' });
+}
+
+// ---------- B: FORGET SOH CAH TOA — nền lưới sáng của video, đường tròn ----------
+function sB() {
+  grid(C.bg, 'rgba(60,80,130,.09)');
+  txt('FORGET', 90, 200, 210, { fill: C.ink });
+  // thẻ soh cah toa bị gạch
+  const cx = 96, cy = 330, cw = 840, ch = 180; softShadow(cx, cy, cw, ch, 24, '#1E2A44', 6, 18);
+  g.save(); g.fillStyle = '#FFF'; g.strokeStyle = C.ink; g.lineWidth = 7; g.beginPath(); g.roundRect(cx, cy, cw, ch, 24); g.fill(); g.stroke(); g.restore();
+  txt('soh cah toa', cx + cw / 2, cy + ch / 2 + 4, 112, { fill: C.ink, align: 'center', w: 800 });
+  g.save(); g.strokeStyle = C.neg; g.lineCap = 'round'; g.lineWidth = 16; g.beginPath(); g.moveTo(cx - 20, cy + ch / 2 + 46); g.lineTo(cx + cw + 20, cy + ch / 2 - 30); g.stroke(); g.restore();
+  // đường tròn đơn vị + chiều cao
+  const ox = 1380, oy = 500, r = 330, th = 52 * Math.PI / 180, px = ox + r * Math.cos(th), py = oy - r * Math.sin(th);
+  g.save(); g.strokeStyle = C.dim; g.lineWidth = 4; g.beginPath(); g.moveTo(ox - r - 70, oy); g.lineTo(ox + r + 70, oy); g.moveTo(ox, oy + r + 60); g.lineTo(ox, oy - r - 60); g.stroke();
+  g.strokeStyle = C.ink; g.lineWidth = 12; g.beginPath(); g.arc(ox, oy, r, 0, 7); g.stroke();
+  g.strokeStyle = 'rgba(30,42,68,.35)'; g.lineWidth = 5; g.setLineDash([16, 14]); g.beginPath(); g.moveTo(ox, oy); g.lineTo(px, py); g.stroke(); g.setLineDash([]);
+  g.strokeStyle = C.sin; g.lineWidth = 30; g.lineCap = 'round'; g.beginPath(); g.moveTo(px, oy); g.lineTo(px, py); g.stroke();
+  g.fillStyle = C.ink; g.beginPath(); g.arc(px, py, 26, 0, 7); g.fill(); g.restore();
+  // λ nhìn lên đường tròn, ngỡ ngàng; nhỏ, dưới trái
+  lambda(g, 760, 1010, 400, { ...MODES.awe, look: [0.9, -0.8] });
+}
+
+// ---------- bảng mẫu λ (đính kèm cho AI) ----------
+function sRef() {
+  g.fillStyle = '#FFFFFF'; g.fillRect(0, 0, W, H);
+  txt('character reference: "λ" (lambda) — green #17907A, big eyes on the top of the letter', 60, 70, 40, { fill: '#333', w: 700 });
+  const list = [['plain', {}], ['confused', MODES.confused], ['surprised', MODES.surprised], ['tease', MODES.tease], ['awe', MODES.awe], ['hooray', MODES.hooray]];
+  list.forEach(([n, m], i) => { const x = 190 + i * 308; lambda(g, x - 10, 760, 430, m); txt(n, x, 860, 40, { fill: '#555', w: 700, align: 'center' }); });
+  txt('same letter shape every time; only eyes / lids / tiny mouth / lean change', 960, 960, 34, { fill: '#777', w: 600, align: 'center' });
+}
+
+const F = [sA, sB, sRef];
+function frame(t) { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.fillStyle = '#222'; g.fillRect(0, 0, W, H); if (!ready) return; F[Math.min(F.length - 1, Math.floor(t))](); }
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 3, LEAD: 0, error: null };
+</script>

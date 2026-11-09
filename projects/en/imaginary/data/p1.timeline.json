@@ -1,0 +1,700 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 29.422
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "What number is exactly halfway between one and minus one?",
+   "idea": false,
+   "start": 0.02,
+   "end": 2.741,
+   "words": [
+    {
+     "w": "what",
+     "start": 0.02,
+     "end": 0.141,
+     "conf": 0.966
+    },
+    {
+     "w": "number",
+     "start": 0.202,
+     "end": 0.423,
+     "conf": 0.917
+    },
+    {
+     "w": "is",
+     "start": 0.585,
+     "end": 0.625,
+     "conf": 0.497
+    },
+    {
+     "w": "exactly",
+     "start": 0.705,
+     "end": 1.088,
+     "conf": 0.792
+    },
+    {
+     "w": "halfway",
+     "start": 1.169,
+     "end": 1.492,
+     "conf": 0.772
+    },
+    {
+     "w": "between",
+     "start": 1.512,
+     "end": 1.895,
+     "conf": 0.775
+    },
+    {
+     "w": "one",
+     "start": 2.056,
+     "end": 2.116,
+     "conf": 0.601
+    },
+    {
+     "w": "and",
+     "start": 2.137,
+     "end": 2.237,
+     "conf": 0.888
+    },
+    {
+     "w": "minus",
+     "start": 2.278,
+     "end": 2.54,
+     "conf": 0.646
+    },
+    {
+     "w": "one",
+     "start": 2.681,
+     "end": 2.741,
+     "conf": 0.29
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Zero, if you walk along the line. But turn instead, and halfway through the turn you land on a number that isn't on the line at all.",
+   "idea": false,
+   "start": 3.171,
+   "end": 9.704,
+   "words": [
+    {
+     "w": "zero",
+     "start": 3.171,
+     "end": 3.432,
+     "conf": 0.498
+    },
+    {
+     "w": "if",
+     "start": 3.852,
+     "end": 3.933,
+     "conf": 0.998
+    },
+    {
+     "w": "you",
+     "start": 3.953,
+     "end": 4.053,
+     "conf": 0.994
+    },
+    {
+     "w": "walk",
+     "start": 4.093,
+     "end": 4.253,
+     "conf": 0.795
+    },
+    {
+     "w": "along",
+     "start": 4.273,
+     "end": 4.454,
+     "conf": 0.855
+    },
+    {
+     "w": "the",
+     "start": 4.474,
+     "end": 4.554,
+     "conf": 0.958
+    },
+    {
+     "w": "line",
+     "start": 4.594,
+     "end": 4.895,
+     "conf": 0.955
+    },
+    {
+     "w": "but",
+     "start": 5.375,
+     "end": 5.456,
+     "conf": 0.338
+    },
+    {
+     "w": "turn",
+     "start": 5.516,
+     "end": 5.716,
+     "conf": 0.751
+    },
+    {
+     "w": "instead",
+     "start": 5.776,
+     "end": 6.177,
+     "conf": 0.855
+    },
+    {
+     "w": "and",
+     "start": 6.417,
+     "end": 6.498,
+     "conf": 0.646
+    },
+    {
+     "w": "halfway",
+     "start": 6.558,
+     "end": 6.878,
+     "conf": 0.952
+    },
+    {
+     "w": "through",
+     "start": 6.898,
+     "end": 7.059,
+     "conf": 0.745
+    },
+    {
+     "w": "the",
+     "start": 7.079,
+     "end": 7.139,
+     "conf": 0.992
+    },
+    {
+     "w": "turn",
+     "start": 7.199,
+     "end": 7.379,
+     "conf": 0.637
+    },
+    {
+     "w": "you",
+     "start": 7.399,
+     "end": 7.52,
+     "conf": 0.573
+    },
+    {
+     "w": "land",
+     "start": 7.56,
+     "end": 7.76,
+     "conf": 0.752
+    },
+    {
+     "w": "on",
+     "start": 7.78,
+     "end": 7.86,
+     "conf": 0.873
+    },
+    {
+     "w": "a",
+     "start": 7.9,
+     "end": 7.92,
+     "conf": 0.001
+    },
+    {
+     "w": "number",
+     "start": 7.94,
+     "end": 8.221,
+     "conf": 0.984
+    },
+    {
+     "w": "that",
+     "start": 8.401,
+     "end": 8.522,
+     "conf": 0.809
+    },
+    {
+     "w": "isn't",
+     "start": 8.622,
+     "end": 8.822,
+     "conf": 0.738
+    },
+    {
+     "w": "on",
+     "start": 8.902,
+     "end": 8.942,
+     "conf": 0.498
+    },
+    {
+     "w": "the",
+     "start": 8.962,
+     "end": 9.023,
+     "conf": 0.746
+    },
+    {
+     "w": "line",
+     "start": 9.083,
+     "end": 9.323,
+     "conf": 0.711
+    },
+    {
+     "w": "at",
+     "start": 9.383,
+     "end": 9.463,
+     "conf": 0.5
+    },
+    {
+     "w": "all",
+     "start": 9.584,
+     "end": 9.704,
+     "conf": 0.461
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "In the fifteen hundreds, that number was the only road to a correct answer.",
+   "idea": false,
+   "start": 10.134,
+   "end": 13.531,
+   "words": [
+    {
+     "w": "in",
+     "start": 10.134,
+     "end": 10.174,
+     "conf": 0.987
+    },
+    {
+     "w": "the",
+     "start": 10.194,
+     "end": 10.255,
+     "conf": 0.975
+    },
+    {
+     "w": "fifteen",
+     "start": 10.275,
+     "end": 10.596,
+     "conf": 0.287
+    },
+    {
+     "w": "hundreds",
+     "start": 10.677,
+     "end": 11.099,
+     "conf": 0.471
+    },
+    {
+     "w": "that",
+     "start": 11.36,
+     "end": 11.481,
+     "conf": 0.551
+    },
+    {
+     "w": "number",
+     "start": 11.561,
+     "end": 11.802,
+     "conf": 0.835
+    },
+    {
+     "w": "was",
+     "start": 11.863,
+     "end": 11.963,
+     "conf": 0.667
+    },
+    {
+     "w": "the",
+     "start": 11.983,
+     "end": 12.044,
+     "conf": 0.994
+    },
+    {
+     "w": "only",
+     "start": 12.104,
+     "end": 12.225,
+     "conf": 0.723
+    },
+    {
+     "w": "road",
+     "start": 12.305,
+     "end": 12.486,
+     "conf": 0.716
+    },
+    {
+     "w": "to",
+     "start": 12.506,
+     "end": 12.586,
+     "conf": 0.982
+    },
+    {
+     "w": "a",
+     "start": 12.667,
+     "end": 12.687,
+     "conf": 0.034
+    },
+    {
+     "w": "correct",
+     "start": 12.787,
+     "end": 13.109,
+     "conf": 0.867
+    },
+    {
+     "w": "answer",
+     "start": 13.21,
+     "end": 13.531,
+     "conf": 0.7
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Descartes called it imaginary, and he meant it as an insult.",
+   "idea": false,
+   "start": 13.922,
+   "end": 16.94,
+   "words": [
+    {
+     "w": "descartes",
+     "start": 13.922,
+     "end": 14.365,
+     "conf": 0.37
+    },
+    {
+     "w": "called",
+     "start": 14.385,
+     "end": 14.606,
+     "conf": 0.995
+    },
+    {
+     "w": "it",
+     "start": 14.626,
+     "end": 14.687,
+     "conf": 0.995
+    },
+    {
+     "w": "imaginary",
+     "start": 14.787,
+     "end": 15.29,
+     "conf": 0.882
+    },
+    {
+     "w": "and",
+     "start": 15.632,
+     "end": 15.692,
+     "conf": 0.792
+    },
+    {
+     "w": "he",
+     "start": 15.713,
+     "end": 15.753,
+     "conf": 0.997
+    },
+    {
+     "w": "meant",
+     "start": 15.833,
+     "end": 16.014,
+     "conf": 0.655
+    },
+    {
+     "w": "it",
+     "start": 16.095,
+     "end": 16.175,
+     "conf": 0.5
+    },
+    {
+     "w": "as",
+     "start": 16.316,
+     "end": 16.376,
+     "conf": 0.499
+    },
+    {
+     "w": "an",
+     "start": 16.437,
+     "end": 16.497,
+     "conf": 0.631
+    },
+    {
+     "w": "insult",
+     "start": 16.557,
+     "end": 16.94,
+     "conf": 0.832
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Today, it helps engineers run the power grid.",
+   "idea": false,
+   "start": 17.349,
+   "end": 19.478,
+   "words": [
+    {
+     "w": "today",
+     "start": 17.349,
+     "end": 17.61,
+     "conf": 0.978
+    },
+    {
+     "w": "it",
+     "start": 17.992,
+     "end": 18.072,
+     "conf": 0.997
+    },
+    {
+     "w": "helps",
+     "start": 18.132,
+     "end": 18.333,
+     "conf": 0.877
+    },
+    {
+     "w": "engineers",
+     "start": 18.373,
+     "end": 18.775,
+     "conf": 0.699
+    },
+    {
+     "w": "run",
+     "start": 18.795,
+     "end": 18.876,
+     "conf": 0.701
+    },
+    {
+     "w": "the",
+     "start": 18.936,
+     "end": 18.996,
+     "conf": 0.899
+    },
+    {
+     "w": "power",
+     "start": 19.016,
+     "end": 19.257,
+     "conf": 0.882
+    },
+    {
+     "w": "grid",
+     "start": 19.317,
+     "end": 19.478,
+     "conf": 0.641
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "By the end of this video, you'll be able to point at it, and you'll see exactly why real machines use it.",
+   "idea": false,
+   "start": 19.869,
+   "end": 24.754,
+   "words": [
+    {
+     "w": "by",
+     "start": 19.869,
+     "end": 19.929,
+     "conf": 0.504
+    },
+    {
+     "w": "the",
+     "start": 19.95,
+     "end": 20.01,
+     "conf": 0.998
+    },
+    {
+     "w": "end",
+     "start": 20.07,
+     "end": 20.151,
+     "conf": 0.667
+    },
+    {
+     "w": "of",
+     "start": 20.171,
+     "end": 20.231,
+     "conf": 0.998
+    },
+    {
+     "w": "this",
+     "start": 20.251,
+     "end": 20.392,
+     "conf": 1.0
+    },
+    {
+     "w": "video",
+     "start": 20.412,
+     "end": 20.653,
+     "conf": 0.833
+    },
+    {
+     "w": "you'll",
+     "start": 20.673,
+     "end": 21.236,
+     "conf": 0.538
+    },
+    {
+     "w": "be",
+     "start": 21.256,
+     "end": 21.296,
+     "conf": 1.0
+    },
+    {
+     "w": "able",
+     "start": 21.397,
+     "end": 21.558,
+     "conf": 0.767
+    },
+    {
+     "w": "to",
+     "start": 21.578,
+     "end": 21.638,
+     "conf": 0.999
+    },
+    {
+     "w": "point",
+     "start": 21.718,
+     "end": 21.96,
+     "conf": 0.796
+    },
+    {
+     "w": "at",
+     "start": 21.98,
+     "end": 22.06,
+     "conf": 0.184
+    },
+    {
+     "w": "it",
+     "start": 22.12,
+     "end": 22.201,
+     "conf": 0.499
+    },
+    {
+     "w": "and",
+     "start": 22.563,
+     "end": 22.623,
+     "conf": 0.665
+    },
+    {
+     "w": "you'll",
+     "start": 22.643,
+     "end": 22.784,
+     "conf": 0.65
+    },
+    {
+     "w": "see",
+     "start": 22.804,
+     "end": 22.924,
+     "conf": 0.941
+    },
+    {
+     "w": "exactly",
+     "start": 22.945,
+     "end": 23.387,
+     "conf": 0.963
+    },
+    {
+     "w": "why",
+     "start": 23.467,
+     "end": 23.648,
+     "conf": 0.997
+    },
+    {
+     "w": "real",
+     "start": 23.789,
+     "end": 23.95,
+     "conf": 0.75
+    },
+    {
+     "w": "machines",
+     "start": 23.97,
+     "end": 24.412,
+     "conf": 0.839
+    },
+    {
+     "w": "use",
+     "start": 24.533,
+     "end": 24.653,
+     "conf": 0.737
+    },
+    {
+     "w": "it",
+     "start": 24.673,
+     "end": 24.754,
+     "conf": 0.991
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It all starts with one question: what does multiplying actually do?",
+   "idea": true,
+   "start": 25.143,
+   "end": 28.271,
+   "words": [
+    {
+     "w": "it",
+     "start": 25.143,
+     "end": 25.203,
+     "conf": 0.995
+    },
+    {
+     "w": "all",
+     "start": 25.243,
+     "end": 25.344,
+     "conf": 0.923
+    },
+    {
+     "w": "starts",
+     "start": 25.404,
+     "end": 25.664,
+     "conf": 0.987
+    },
+    {
+     "w": "with",
+     "start": 25.704,
+     "end": 25.805,
+     "conf": 0.999
+    },
+    {
+     "w": "one",
+     "start": 25.925,
+     "end": 25.985,
+     "conf": 0.666
+    },
+    {
+     "w": "question",
+     "start": 26.045,
+     "end": 26.446,
+     "conf": 0.898
+    },
+    {
+     "w": "what",
+     "start": 26.807,
+     "end": 26.948,
+     "conf": 0.993
+    },
+    {
+     "w": "does",
+     "start": 26.968,
+     "end": 27.128,
+     "conf": 0.788
+    },
+    {
+     "w": "multiplying",
+     "start": 27.188,
+     "end": 27.73,
+     "conf": 0.906
+    },
+    {
+     "w": "actually",
+     "start": 27.83,
+     "end": 28.131,
+     "conf": 0.881
+    },
+    {
+     "w": "do",
+     "start": 28.211,
+     "end": 28.271,
+     "conf": 0.5
+    }
+   ]
+  }
+ ]
+}

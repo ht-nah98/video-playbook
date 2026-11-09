@@ -1,0 +1,71 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — chữ là vật thể</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Regular.ttf");font-weight:400;}
+  html,body{margin:0;background:#05070f;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử "chữ LÀ vật thể". KHÔNG thuộc MV nào.
+//   node engine/render/shoot.js stills --page tools/lab/typeobj.html \
+//     --t 0,0.3,0.6,1 --outdir out/_lab
+import { textOrb, textWall, textDissolve, textPlane, arcText } from '../../engine/typeobj.js';
+import { C, W, H } from '../../engine/lib.js';
+
+const g = document.getElementById('cv').getContext('2d');
+let ready = false;
+(async () => {
+  await Promise.all([
+    document.fonts.load('900 120px "Archivo"'),
+    document.fonts.load('700 40px "Archivo"'),
+    document.fonts.load('700 54px "Archivo"'),
+    document.fonts.load('900 96px "Archivo"'),
+  ]);
+  await document.fonts.ready;
+  ready = true;
+})();
+
+const CELLS = [
+  ['textOrb', (x, y, w, h, k, t) => {
+    textOrb(g, 'FROM SCRATCH ', x, y, h * 0.62, t,
+            { rings: 3, gap: 62, grow: k, rays: 12, font: '700 40px "Archivo"' });
+  }],
+  ['textWall', (x, y, w, h, k, t) => {
+    textWall(g, 'HOC TU CON SO KHONG', x - w / 2, y - h / 2, w, h, t,
+             { alpha: 0.30, drift: -60, font: '700 46px "Archivo"' });
+  }],
+  ['textDissolve', (x, y, w, h, k, t) => {
+    textDissolve(g, 'QUESTION', x, y + 20, t, k,
+                 { font: '900 96px "Archivo"', align: 'center', color: C.bone });
+  }],
+  ['textPlane', (x, y, w, h, k, t) => {
+    textPlane(g, ['LINES TURN', 'NUMBERS MOVE', 'WATCH IT', 'COME AROUND'],
+              x, y, t, k * 3, { font: '900 64px "Archivo"', color: C.goldHot, spacing: 118 });
+  }],
+];
+
+function frame(t) {
+  const k = Math.min(1, t);
+  g.fillStyle = C.navy; g.fillRect(0, 0, W, H);
+  const cols = 2, rows = 2, cw = W / cols, ch = H / rows;
+  CELLS.forEach((cell, i) => {
+    const cx = (i % cols + 0.5) * cw, cy = (Math.floor(i / cols) + 0.5) * ch;
+    g.save();
+    g.beginPath();
+    g.rect((i % cols) * cw + 8, Math.floor(i / cols) * ch + 8, cw - 16, ch - 16);
+    g.clip();
+    cell[1](cx, cy, cw - 16, ch - 16, k, t * 1.6);
+    g.restore();
+    g.fillStyle = C.boneDim;
+    g.font = '400 26px "IBM Plex Mono", monospace';
+    g.textAlign = 'left';
+    g.fillText(`${cell[0]}  k=${k.toFixed(2)}`, (i % cols) * cw + 22,
+               Math.floor(i / cols) * ch + ch - 26);
+  });
+}
+window.__intro = { get ready(){ return ready; }, still: frame, frame, DUR: 1 };
+const PREVIEW = !/headless/i.test(navigator.userAgent);
+if (PREVIEW) (function loop(){ if (ready) frame((Date.now()/2500) % 1); requestAnimationFrame(loop); })();
+</script>

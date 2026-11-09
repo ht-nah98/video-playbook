@@ -1,0 +1,185 @@
+{
+ "duration": 82.508,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "lang": "en",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "In sixteen fifty-four, a French gambler made two bets he was sure were exactly the same, and only one of them was a good bet.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "In sixteen fifty-four, a French gambler made two bets he was sure were exactly the same, and only one of them was a good bet.",
+   "start": 0.0,
+   "end": 5.917,
+   "wav": "audio/voice/852b3f674c89a4a6.wav"
+  },
+  {
+   "text": "The mistake behind it is one you have almost certainly made yourself.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "The mistake behind it is one you have almost certainly made yourself.",
+   "start": 6.267,
+   "end": 9.408,
+   "wav": "audio/voice/13cdebc14fecc0be.wav"
+  },
+  {
+   "text": "The first bet: roll one die four times. You win if a six shows up at least once.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "The first bet: roll one die four times. You win if a six shows up at least once.",
+   "start": 10.358,
+   "end": 14.277,
+   "wav": "audio/voice/9040307935659cc5.wav"
+  },
+  {
+   "text": "The second bet: roll two dice twenty-four times. You win if a double six shows up at least once.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "The second bet: roll two dice twenty-four times. You win if a double six shows up at least once.",
+   "start": 14.627,
+   "end": 19.073,
+   "wav": "audio/voice/76c3a02def974745.wav"
+  },
+  {
+   "text": "His reasoning sounded perfect. A six comes up one time in six, and four rolls is four sixths, so two thirds.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "His reasoning sounded perfect. A six comes up one time in six, and four rolls is four sixths, so two thirds.",
+   "start": 20.023,
+   "end": 25.415,
+   "wav": "audio/voice/f4898e04c5285a25.wav"
+  },
+  {
+   "text": "A double six comes up one time in thirty-six, and twenty-four rolls is twenty-four thirty-sixths. Two thirds again.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "A double six comes up one time in thirty-six, and twenty-four rolls is twenty-four thirty-sixths. Two thirds again.",
+   "start": 25.765,
+   "end": 31.758,
+   "wav": "audio/voice/5a37854d1c7a01a8.wav"
+  },
+  {
+   "text": "So let us play ten thousand games of each and watch.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "So let us play ten thousand games of each and watch.",
+   "start": 32.708,
+   "end": 35.009,
+   "wav": "audio/voice/3eafae6060863ff8.wav"
+  },
+  {
+   "text": "The first bet wins fifty-one point eight percent of the time. The second wins only forty-nine point one.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "The first bet wins fifty-one point eight percent of the time. The second wins only forty-nine point one.",
+   "start": 35.359,
+   "end": 40.771,
+   "wav": "audio/voice/8413e4af5dd826a7.wav"
+  },
+  {
+   "text": "One makes money, and the other slowly loses it.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "One makes money, and the other slowly loses it.",
+   "start": 41.121,
+   "end": 43.433,
+   "wav": "audio/voice/77c843a28bb5726b.wav"
+  },
+  {
+   "text": "That is not bad luck, and it is not a rounding error. He was counting the wrong thing.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "That is not bad luck, and it is not a rounding error. He was counting the wrong thing.",
+   "start": 44.383,
+   "end": 48.556,
+   "wav": "audio/voice/beef77671a5f1df9.wav"
+  },
+  {
+   "text": "His complaint reached Blaise Pascal, who wrote about it to Pierre de Fermat, and the letters they exchanged that summer are where the mathematics of probability begins.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "His complaint reached Blaise Pascal, who wrote about it to Pierre de Fermat, and the letters they exchanged that summer are where the mathematics of probability begins.",
+   "start": 49.506,
+   "end": 58.465,
+   "wav": "audio/voice/e86906bf0958f865.wav"
+  },
+  {
+   "text": "By the end of this video you will be able to settle both of his bets in one line each.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "By the end of this video you will be able to settle both of his bets in one line each.",
+   "start": 59.415,
+   "end": 63.365,
+   "wav": "audio/voice/5dc30485a73fd901.wav"
+  },
+  {
+   "text": "And you will have five moves that take apart almost any probability problem, including the ones on an exam.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "And you will have five moves that take apart almost any probability problem, including the ones on an exam.",
+   "start": 63.715,
+   "end": 69.044,
+   "wav": "audio/voice/fc95a248f95c19d4.wav"
+  },
+  {
+   "text": "Three questions get us there.",
+   "idea": false,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "Three questions get us there.",
+   "start": 69.994,
+   "end": 71.192,
+   "wav": "audio/voice/9d0bf04171c88330.wav"
+  },
+  {
+   "text": "What is a probability, really? Why does our instinct count the wrong thing? And how do you solve a probability problem without guessing?",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "What is a probability, really? Why does our instinct count the wrong thing? And how do you solve a probability problem without guessing?",
+   "start": 71.542,
+   "end": 78.454,
+   "wav": "audio/voice/64e8c9dfd4f3e322.wav"
+  },
+  {
+   "text": "The answer to the first one fits on a single die.",
+   "idea": true,
+   "act": "",
+   "section": "Cold open",
+   "opens": null,
+   "spoken": "The answer to the first one fits on a single die.",
+   "start": 79.404,
+   "end": 81.559,
+   "wav": "audio/voice/f211ce6e7c505b28.wav"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+<!doctype html><meta charset="utf-8">
+<title>hist lab — pearl vai + đạo cụ</title>
+<style>html,body{margin:0;background:#111;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn xem vai + đạo cụ chung của tập pearl (scenes/common.js): t 0.5 = 15 vai · t 1.5 = đạo cụ.
+import * as S from '../_kit/stage.js';
+import { bindCast } from '../_kit/cast.js';
+import { bindCommon, P, alarm, scope, phone, telegram, battleship, plane, carrier, sea } from '../pearl/scenes/common.js';
+const g = document.getElementById('cv').getContext('2d'); let ready = false;
+Promise.all([new FontFace('Archivo', 'url("../../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load().then(f => document.fonts.add(f))])
+  .then(() => { S.bindStage(g, {}); bindCast(g); bindCommon(g); ready = true; }).catch(e => { window.__intro.error = String(e); });
+function frame(t) { g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = S.PAPER; g.fillRect(0, 0, 1920, 1080); if (!ready) return;
+  if (t < 1) { Object.keys(P).forEach((k, i) => { const x = 130 + (i % 8) * 235, y = 470 + Math.floor(i / 8) * 520; P[k](x, y, 330, { look: 0 }); S.label(k, x, y + 50, 30, 1); }); return; }
+  sea(760, 0); battleship(500, 780, 700, {}); battleship(1300, 800, 600, { fire: 0.8, sink: 0.4 }); carrier(1500, 300, 600, { flag: 'jp' });
+  alarm(250, 250, 140, { time: [7, 55], ring: 1, t: 0.1, snooze: 0.6 }); scope(800, 280, 200, { blob: 1, dist: 0.2, ring: 1 }); phone(1150, 520, 160);
+  telegram(1650, 640, 360, -0.1, { stamp: 'NOT URGENT' }); plane(300, 640, 260, 'jp'); plane(1100, 130, 300, 'b17', { flip: true });
+}
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2, LEAD: 0, error: null };
+</script>

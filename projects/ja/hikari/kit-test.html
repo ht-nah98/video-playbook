@@ -1,0 +1,177 @@
+<!doctype html><meta charset="utf-8">
+<title>ja/hikari — khung phong cách + tờ thử kit</title>
+<style>
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  html,body{margin:0;background:#0B0B0E;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử DNA「節穴の暗室」(BRIEF-LAB.md). Khung i (giây i → i+1):
+//   0 SF1 mở bài: chùm qua 節穴 tới quả táo · 1 SF2 hồi 4: thước phổ log + khe thấy được · 2 SF3 hồi 5: giọt mưa 42° / 40°
+//   3 dải phổ thử (liên tục + vạch H / Na / Ne + chip) · [4,8) A bậc năng lượng, photon, mắt, táo dưới natri (k = KS[i % 4])
+//   [8,12) B thẻ hứa ①②③④, ảnh, chữ sai · [12,16) C thẻ hồi · [16,20) D 雨戸 cùng ERA · [20,24) E vòng sáng khác ERA · 24 SF1 trên ERA eye/sky/day
+//   node engine/render/shoot.js stills --page projects/ja/hikari/kit-test.html --dur 25 --t 0.5,1.5,… --outdir out/_lab/hikari/lab
+import { W, H, C, JP, MIN, FONTS, FONT_SAMPLE, APT, WALL_X, FLOOR, H_LINES, NA_LINES, NE_LINES, NA_EDGE, SUN_S, VIS_FRAC, CONES, loadKit, ground, grain, dark,
+  aperture, amado, ray, shaft, spot, photon, wave, spectrumStrip, specRuler, pow10, ladder, ladderDrop, raindrop, dropRay, descartes, angleArc, eye, apple, chabudai,
+  SODIUM, write, telop, wrong, strike, chip, plate, title, actCard, promiseCards, tick, cross, arrow, photo, imgs, figure, transition, wlHex, eV, must, fmt } from './kit.js';
+const g = document.getElementById('cv').getContext('2d'), KS = [0.25, 0.5, 0.75, 1];
+let ready = false;
+(async () => {
+  await Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE)));
+  const P = '../../../assets/character-v2/cut/';
+  await loadKit({ 'pose-ponder': P + 'pose-ponder.png', 'pose-point': P + 'pose-point.png', 'pose-pointer': P + 'pose-pointer.png',
+    ...imgs('young', 'rainbow-double', 'spectrum-na', 'einstein-1921') });
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const lab = (s, y = 1004) => write(g, s, 1824, y, 1, { font: `500 28px ${JP}`, color: '@faint', align: 'right', sweep: false });
+
+// ── SF1 · Cold open 「毎秒何十兆個もの光の粒が、皆さんの目に飛び込んでいます」 ──
+function sf1(t, era = 'darkroom') {
+  ground(g, era);
+  const ay = 300, TX = 1150, ty = 812;
+  aperture(g, 'knot', { y: ay });
+  shaft(g, APT.x, ay, TX - 175, 872, TX + 165, 872, { a: 0.2, t, dust: 110, spot: false });
+  chabudai(g, TX, 880, 380, { lit: 0.9 });
+  spot(g, TX, 872, 230, { a: 0.35, sy: 0.16 });
+  apple(g, TX, ty, 50, { lit: 1 });
+  // ánh trắng = mọi màu: vài bó sóng nhiều bước sóng bay dọc luồng (khoảng cách hash, trôi theo t)
+  const dir = Math.atan2(860 - ay, TX - APT.x);
+  [650, 470, 560, 410, 600, 520, 700, 440].forEach((nm, i) => {
+    const u = (0.12 + i * 0.1 + t * 0.03) % 0.88, x = APT.x + (TX - APT.x) * u, y = ay + (860 - ay) * u + (hash01(i) - 0.5) * 70 * u;
+    photon(g, x, y, nm, { dir, size: 34, amp: 8, w: 4, phase: t * 9 + i, scale: 0.045 });
+  });
+  figure(g, 'ponder', 1590, H, 800, 1, { flip: true });
+  telop(g, '毎秒　何十兆個もの', 140, 760, 1, { size: 64, weight: 900 });
+  telop(g, '光の粒', 140, 852, 1, { size: 76, mincho: true });
+  const m = Math.floor(SUN_S / 60), s = Math.round(SUN_S % 60);
+  must(`'${m}分${s}秒'`, '8分19秒');
+  telop(g, `1億5000万km　${m}分${s}秒前に太陽を出た光`, 140, 930, 1, { size: 32, weight: 500, color: '@dim' });
+}
+const hash01 = i => { const s = Math.sin(i * 127.1 + 3.7) * 43758.5453; return s - Math.floor(s); };
+
+// ── SF2 · ACT 4 「ほんの一握り」 thước phổ log + khe thấy được ──
+function sf2(t) {
+  ground(g, 'darkroom');
+  title(g, 'ほんの一握り', t, -5, { act: 4 });
+  const R = specRuler(g, { y: 600, h: 64, window: 1, dim: 0.15 });
+  const ix = 560, iw = 800, iy = 330, ih = 60;                // khe nở ra thành dải 380–780 phía trên
+  g.save(); g.globalCompositeOperation = 'lighter';
+  const gr = g.createLinearGradient(0, R.y, 0, iy + ih); gr.addColorStop(0, 'rgba(246,242,234,0.16)'); gr.addColorStop(1, 'rgba(246,242,234,0.04)');
+  g.fillStyle = gr; g.beginPath(); g.moveTo(R.va, R.y - 10); g.lineTo(R.vb, R.y - 10); g.lineTo(ix + iw, iy + ih + 4); g.lineTo(ix, iy + ih + 4); g.closePath(); g.fill(); g.restore();
+  spectrumStrip(g, ix, iy, iw, ih, { ticks: [400, 500, 600, 700] });
+  telop(g, '可視光', ix, iy - 26, 1, { size: 40 });
+  telop(g, '380〜780 nm', ix + iw, iy - 26, 1, { size: 32, weight: 500, align: 'right', color: '@dim' });
+  must(`'${(VIS_FRAC * 100).toFixed(0)}'`, '2');
+  telop(g, '目に見えるのは、ほんの細いすき間だけ', 960, 850, 1, { size: 48, align: 'center' });
+  telop(g, '目盛りは1つで10倍（対数目盛り）・帯の幅のおよそ2%', 960, 920, 1, { size: 30, weight: 500, color: '@dim', align: 'center' });
+}
+
+// ── SF3 · ACT 5 「虹」 giọt mưa: đỏ 42.4°, tím 40.6° ──
+function sf3(t) {
+  ground(g, 'darkroom');
+  const cx = 700, cy = 470, R = 270, red = 656, vio = 404.7;
+  const iy = cy + R * dropRay(red).pts[0][1];
+  aperture(g, 'window', { y: iy });
+  const res = raindrop(g, cx, cy, R, { nms: [red, vio], outLen: 640 });
+  const [rr, vv] = res;
+  const arcs = [[rr, 250, red], [vv, 175, vio]];
+  for (const [r, rad] of arcs) {
+    const ex = r.exit, an = Math.atan2(r.out[1], r.out[0]);
+    g.save(); g.setLineDash([10, 10]); g.strokeStyle = 'rgba(154,149,140,0.8)'; g.lineWidth = 2; g.beginPath(); g.moveTo(ex[0], ex[1]); g.lineTo(ex[0] - rad - 60, ex[1]); g.stroke(); g.restore();
+    angleArc(g, ex, an, Math.PI, rad, 1, { color: '@ink' });
+  }
+  const dr = descartes(red).theta.toFixed(1), dv = descartes(vio).theta.toFixed(1);
+  must(`'${dr},${dv}'`, '42.4,40.6');
+  const er = rr.exit, ev = vv.exit;
+  const ar = Math.atan2(rr.out[1], rr.out[0]), av = Math.atan2(vv.out[1], vv.out[0]);
+  const mid = (a, b) => (a + b) / 2;
+  const lr = [er[0] + Math.cos(mid(ar, Math.PI)) * 300, er[1] + Math.sin(mid(ar, Math.PI)) * 300];
+  const lv = [ev[0] + Math.cos(mid(av, Math.PI)) * 112, ev[1] + Math.sin(mid(av, Math.PI)) * 112];
+  plate(g, lr[0] - 92, lr[1] - 34, 150, 52, { a: 0.8 }); write(g, `${dr}°`, lr[0] - 20, lr[1] + 8, 1, { font: `700 34px ${JP}`, align: 'center' });
+  chip(g, lr[0] + 40, lr[1] - 8, red, 10);
+  plate(g, lv[0] - 150, lv[1] - 4, 150, 52, { a: 0.8 }); write(g, `${dv}°`, lv[0] - 78, lv[1] + 38, 1, { font: `700 34px ${JP}`, align: 'center' });
+  chip(g, lv[0] - 18, lv[1] + 22, vio, 10);
+  telop(g, '雨つぶ', cx, cy - R - 28, 1, { size: 32, weight: 500, color: '@dim', align: 'center' });
+  telop(g, '太陽の光', 140, iy - 30, 1, { size: 30, weight: 500, color: '@dim' });
+  title(g, '虹', t, -5, { act: 5, x: 1200, size: 72, y: 200 });
+  const RX = 1200;
+  chip(g, RX + 16, 300, red, 13); telop(g, '赤　およそ42°', RX + 48, 314, 1, { size: 40 });
+  chip(g, RX + 16, 380, vio, 13); telop(g, '紫　およそ40°', RX + 48, 394, 1, { size: 40 });
+  telop(g, '外側が赤、内側が紫', RX, 480, 1, { size: 44, mincho: true });
+  photo(g, 'rainbow-double', RX, 580, 300, 1, { labelSize: 30 });
+}
+
+// ── SF4 · dải phổ thử: vạch đã biết + chip ──
+function sf4() {
+  ground(g, 'lab');
+  telop(g, 'スペクトル試験（CIE 1931 2°）', 140, 120, 1, { size: 40 });
+  const x0 = 380, w = 1300;
+  const X = spectrumStrip(g, x0, 170, w, 70, { ticks: [400, 450, 500, 550, 600, 650, 700, 750] });
+  telop(g, '連続', 140, 222, 1, { size: 32, weight: 500, color: '@dim' });
+  const rows = [['水素 H', H_LINES, 330], ['ナトリウム Na', NA_LINES, 470], ['ネオン Ne', NE_LINES, 610]];
+  for (const [name, L, y] of rows) {
+    spectrumStrip(g, x0, y, w, 64, { continuous: false, lines: L });
+    telop(g, name, 140, y + 44, 1, { size: 32, weight: 500 });
+  }
+  H_LINES.forEach((nm, i) => write(g, nm.toFixed(1), X(nm), 330 + 64 + 40 + (i === 3 ? 34 : 0), 1, { font: `500 28px ${JP}`, align: 'center', color: '@dim' }));
+  write(g, '589.0 / 589.6', X(589.3), 470 + 64 + 40, 1, { font: `500 28px ${JP}`, align: 'center', color: '@dim' });
+  write(g, '640.2', X(640.2), 610 + 64 + 40, 1, { font: `500 28px ${JP}`, align: 'center', color: '@dim' });
+  [380, 405, 434, 450, 486, 546, 589, 656, 700].forEach((nm, i) => {
+    const x = x0 + 40 + i * 150; chip(g, x, 830, nm, 22);
+    write(g, `${nm}`, x, 896, 1, { font: `700 30px ${JP}`, align: 'center' });
+    write(g, wlHex(nm).toUpperCase(), x, 940, 1, { font: `500 28px ${JP}`, align: 'center', color: '@dim' });
+  });
+}
+
+// ── A · bậc năng lượng, photon, mắt, táo natri ──
+function groupA(t, k) {
+  ground(g, 'lab');
+  const L = ladder(g, { x: 330, w: 380, y0: 200, sc: 150, gap: 160, k });
+  [3, 4, 5, 6].forEach((n, i) => ladderDrop(g, L, n, 2, 60 + i * 80, k));
+  [700, 545, 450].forEach((nm, i) => { photon(g, 980, 230 + i * 110, nm, { size: 80 * k + 10, amp: 18 }); write(g, `${nm} nm　${fmt(eV(nm), 2)} eV`, 1090, 242 + i * 110, k, { font: `500 30px ${JP}` }); });
+  must(`'${fmt(eV(700), 2)},${fmt(eV(450), 2)},${fmt(NA_EDGE)}'`, '1.77,2.76,544');
+  wave(g, 900, 620, 1400, 'white', { lamPx: 90, amp: 24, k });
+  const E = eye(g, 1560, 560, 190, { k, thick: k, lit: k });
+  ray(g, [[1300, 560], E.pupil, E.lens, E.fovea], { nm: 'white', w: 4, k });
+  chabudai(g, 260, 1000, 220, { lit: 0.6 }); apple(g, 200, 950, 38, { lit: 1 }); apple(g, 330, 950, 38, { illum: SODIUM, lit: 3 });
+  lab(`A · k = ${k}`, 1004);
+}
+// ── B · thẻ hứa, ảnh, chữ sai, mũi tên ──
+function groupB(t, k) {
+  ground(g, 'darkroom');
+  promiseCards(g, { k: [k, 1, 1, 1], lit: [1, k, 1, 0], flip: [0, 0, k, 1], t });
+  photo(g, 'einstein-1921', 140, 140, 360, k);
+  photo(g, 'spectrum-na', 140, 640, 180, k);
+  const B = wrong(g, '目から光が出る', 520, 200, 1); strike(g, B, k);
+  telop(g, '目は受け取るだけ', 520, 270, k);
+  tick(g, 560, 360, 22, k); cross(g, 650, 360, 18, k); arrow(g, [[720, 360], [900, 360]], k);
+  lab(`B · k = ${k}`);
+}
+// ── C · thẻ hồi ở 4 mốc (FROM 10, START 12.6) ──
+function groupC(t, i) {
+  ground(g, 'darkroom'); aperture(g, 'knot');
+  const tt = [10.95, 11.6, 12.3, 13.3][i];
+  actCard(g, tt, 10, 12.6, [1, 2, 4, 5][i]);
+  lab(`C · actCard t = START ${(tt - 12.6).toFixed(2)}`);
+}
+const FAKE = (era, fn) => ({ constructor: { ERA: era }, render: (gg, T) => { ground(gg, era); fn(gg); } });
+const SA = FAKE('darkroom', gg => { aperture(gg, 'knot'); write(gg, '前の場面', 300, 500, 1, { font: `700 64px ${MIN}` }); });
+const SB = FAKE('darkroom', gg => { aperture(gg, 'double'); write(gg, '次の場面', 1100, 500, 1, { font: `700 64px ${MIN}` }); });
+const SS = FAKE('sky', gg => { write(gg, '雨上がりの空', 600, 500, 1, { font: `700 64px ${MIN}` }); });
+
+const frame = t => {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over';
+  const i = Math.floor(t), k = KS[i % 4];
+  if (i === 0) sf1(t); else if (i === 1) sf2(t); else if (i === 2) sf3(t); else if (i === 3) sf4();
+  else if (i < 8) groupA(t, k);
+  else if (i < 12) groupB(t, k);
+  else if (i < 16) groupC(t, i - 12);
+  else if (i < 24) { const same = i < 20; transition(g, 0, SA, same ? SB : SS, k, same); lab(`${same ? 'D 雨戸（同じERA）' : 'E 光の輪（ERAちがい）'} · k = ${k}`); }
+  else { ground(g, 'day'); amado(g, 0.5, { from: 'right' }); write(g, 'ご視聴ありがとうございました', 960, 540, 1, { font: `700 56px ${MIN}`, align: 'center', color: '@dark', shadow: false }); }
+  grain(g, t);
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 25 };
+</script>

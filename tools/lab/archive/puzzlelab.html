@@ -1,0 +1,302 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — puzzlelab</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  html,body{margin:0;background:#0A111D;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Puzzlelab / bàn giải tối" (sudoku). Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/puzzlelab.html --dur 2 --t 0.5,1.5 --outdir out/_lab/puzzlelab
+// Ý trung tâm: đếm mà không cần biết — lưới là bảng điều khiển tối; vùng đủ 1–9 bật SÁNG thì ta biết nó chứa gì.
+//   Tô màu = ô phát sáng mờ (nền màu α 0.24 + viền vùng phát quang shadowBlur) · ô hai màu = sọc chéo cam/xanh xen nhau
+//   (đọc được không cần màu) · gỡ ra = ô TẮT SÁNG: còn sọc ma α 0.13 + khung đứt mờ, số vẫn đọc được nhưng lùi lại.
+// Màu: nền mực #0A111D→#121D2E · lưới #B4C8E6 (α .22 / khối .62) · số ngà #F4EEDF · phụ #8EA0BA · đỏ tập hợp = cam kênh
+//   #FF6A2B (L .317) · xanh = lam sáng #4FC3FF (L .479, sáng hơn 51% → phân biệt khi mù đỏ–lục) · renban tím #B05CE8 · mũi tên #CFD8E6.
+// Chữ: Archivo 600 (số trong ô, phương trình, tiêu đề) · IBM Plex Mono (nhãn lồng, nhãn hồi, credit). ² − × → có sẵn trong cả hai.
+// Tiếng: beep/chip (ô bật sáng) · tick (đếm ô) · shimmer (cả vùng sáng lên) · snap (ô hai màu tắt) · coin (khớp từng số) · correct.
+// Phần khác: lịch sử 1979/1984/2004 = dòng thời gian ba đèn trên nền tối, "NUMBER PLACE" in mono như thẻ lưu trữ · 6.7 × 10²¹
+//   = bộ đếm số chạy rồi khoá · 5×5 − 4×4 = hai vuông sáng cam/lam, 9 ô dư nhấp nháy theo thứ tự 1–9 · McGuire = thẻ tên + đèn
+//   cụm máy chạy 7 triệu giờ CPU · hình chữ nhật 7/9 = bốn ô lật số 7↔9 có sọc cảnh báo · máy tính giải tức thì = lưới tự điền
+//   chớp nhoáng mà không bật vùng nào · gói lại = cả lưới tắt dần, chỉ còn vòng và bốn góc sáng.
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { bg: '#0A111D', cell: '#101A2A', line: '180,200,230', ink: '#F4EEDF', dim: '#8EA0BA', off: '#B9C2CF',
+  red: '#FF6A2B', redRGB: '255,106,43', blue: '#4FC3FF', blueRGB: '79,195,255', ren: '176,92,232', arr: '#CFD8E6' };
+const ARC = '"Archivo"', MONO = '"IBM Plex Mono"';
+const IM = {}; let BG, ready = false;
+const must = (ok, msg) => { if (!ok) throw new Error('sai: ' + msg); };
+const SOL = '572946381634851297981732564768429153459318672213567948825194736197683425346275819';
+const D = (r, c) => +SOL[r * 9 + c];                             // r, c từ 0
+const key = (r, c) => r * 9 + c;
+const sum = cells => cells.reduce((a, [r, c]) => a + D(r, c), 0);
+const sorted = cells => cells.map(([r, c]) => D(r, c)).sort((a, b) => a - b);
+
+// ── kiểm lưới: 27 ràng buộc ──
+(() => {
+  const full = a => a.slice().sort().join('') === '123456789';
+  for (let i = 0; i < 9; i++) {
+    must(full([...Array(9)].map((_, j) => D(i, j))), 'hàng ' + (i + 1));
+    must(full([...Array(9)].map((_, j) => D(j, i))), 'cột ' + (i + 1));
+    must(full([...Array(9)].map((_, j) => D(3 * ((i / 3) | 0) + ((j / 3) | 0), 3 * (i % 3) + (j % 3)))), 'khối ' + (i + 1));
+  }
+})();
+
+function bg() {                                       // nền mực: chuyển sắc + quầng giữa + hạt hash rất nhẹ + chấm lưới mờ
+  const c = mk(), x = c.getContext('2d');
+  const gr = x.createRadialGradient(W * 0.52, H * 0.46, 80, W * 0.52, H * 0.46, W * 0.75);
+  gr.addColorStop(0, '#15223A'); gr.addColorStop(0.55, '#0D1626'); gr.addColorStop(1, '#070C15');
+  x.fillStyle = gr; x.fillRect(0, 0, W, H);
+  const d = x.getImageData(0, 0, W, H);
+  for (let i = 0; i < W * H; i++) { const n = (hash(i * 0.731) - 0.5) * 4; d.data[i * 4] += n; d.data[i * 4 + 1] += n; d.data[i * 4 + 2] += n; }
+  x.putImageData(d, 0, 0);
+  x.fillStyle = 'rgba(150,175,215,0.07)';
+  for (let yy = 30; yy < H; yy += 40) for (let xx = 30; xx < W; xx += 40) x.fillRect(xx - 1, yy - 1, 2, 2);
+  return c;
+}
+function text(s, x, y, font, color, align = 'left', ls = 0) { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.letterSpacing = ls + 'px'; g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; return w; }
+const note = (s, x, y) => text(s, x, y, `500 24px ${MONO}`, C.dim, 'left', 1);
+const label = (s, x, y, color = C.dim, align = 'left', size = 22) => text(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 3);
+function eq(parts, x, y, size, maxW = 1e9) {          // phương trình nhiều màu, tự thu nhỏ cho vừa maxW; trả về [x0,x1] từng phần
+  let font = `600 ${size}px ${ARC}`; g.font = font; let ws = parts.map(([s]) => g.measureText(s).width), tot = ws.reduce((a, b) => a + b, 0);
+  if (tot > maxW) { size = Math.floor(size * maxW / tot); font = `600 ${size}px ${ARC}`; g.font = font; ws = parts.map(([s]) => g.measureText(s).width); }
+  let cx = x; const out = [];
+  parts.forEach(([s, col, glow], i) => {
+    g.save(); if (glow) { g.shadowColor = glow; g.shadowBlur = 28; }
+    text(s, cx, y, font, col || C.ink); g.restore(); out.push([cx, cx + ws[i]]); cx += ws[i]; });
+  return out;
+}
+
+// ── lưới ──
+function Grid(x0, y0, S) { return { x0, y0, S, X: c => x0 + c * S, Y: r => y0 + r * S, cx: c => x0 + (c + 0.5) * S, cy: r => y0 + (r + 0.5) * S }; }
+function gridLines(G) {
+  const { x0, y0, S } = G, L = 9 * S;
+  g.fillStyle = C.cell; g.fillRect(x0, y0, L, L);
+  g.save(); g.lineCap = 'square';
+  for (let k = 0; k <= 9; k++) {
+    const box = k % 3 === 0; g.strokeStyle = `rgba(${C.line},${box ? 0.62 : 0.22})`; g.lineWidth = box ? (k % 9 ? 3 : 3.5) : 1.5;
+    g.beginPath(); g.moveTo(x0 + k * S, y0); g.lineTo(x0 + k * S, y0 + L); g.moveTo(x0, y0 + k * S); g.lineTo(x0 + L, y0 + k * S); g.stroke();
+  }
+  g.restore();
+}
+function glowSet(G, cells, rgb, a = 0.24) {           // tô = ô phát sáng: nền màu + viền vùng phát quang
+  const set = new Set(cells.map(([r, c]) => key(r, c))), S = G.S;
+  cells.forEach(([r, c]) => {
+    const gr = g.createRadialGradient(G.cx(c), G.cy(r), S * 0.1, G.cx(c), G.cy(r), S * 0.75);
+    gr.addColorStop(0, `rgba(${rgb},${a * 0.88})`); gr.addColorStop(1, `rgba(${rgb},${a * 1.08})`);
+    g.fillStyle = gr; g.fillRect(G.X(c), G.Y(r), S, S);
+  });
+  g.save(); g.strokeStyle = `rgba(${rgb},0.95)`; g.lineWidth = 3; g.lineCap = 'round'; g.shadowColor = `rgba(${rgb},0.9)`; g.shadowBlur = 18;
+  g.beginPath();
+  cells.forEach(([r, c]) => {
+    const x = G.X(c), y = G.Y(r);
+    if (!set.has(key(r - 1, c)) || r === 0) { g.moveTo(x, y); g.lineTo(x + S, y); }
+    if (!set.has(key(r + 1, c)) || r === 8) { g.moveTo(x, y + S); g.lineTo(x + S, y + S); }
+    if (c === 0 || !set.has(key(r, c - 1))) { g.moveTo(x, y); g.lineTo(x, y + S); }
+    if (c === 8 || !set.has(key(r, c + 1))) { g.moveTo(x + S, y); g.lineTo(x + S, y + S); }
+  });
+  g.stroke(); g.stroke(); g.restore();
+}
+function removedCell(G, r, c) {                       // ô hai màu đã gỡ: sọc cam/lam ma + khung đứt mờ — "tắt sáng"
+  const x = G.X(c), y = G.Y(r), S = G.S, step = 14;
+  g.save(); g.beginPath(); g.rect(x, y, S, S); g.clip();
+  g.fillStyle = 'rgba(5,9,16,0.55)'; g.fillRect(x, y, S, S);
+  g.lineWidth = 5;
+  for (let k = -S, i = 0; k < S * 2; k += step, i++) {
+    g.strokeStyle = i % 2 ? `rgba(${C.redRGB},0.13)` : `rgba(${C.blueRGB},0.13)`;
+    g.beginPath(); g.moveTo(x + k, y + S); g.lineTo(x + k + S, y); g.stroke();
+  }
+  g.restore();
+  g.save(); g.strokeStyle = 'rgba(180,200,230,0.28)'; g.lineWidth = 1.5; g.setLineDash([5, 5]);
+  g.strokeRect(x + 7, y + 7, S - 14, S - 14); g.restore();
+}
+function digits(G, getD, colorOf) {
+  const S = G.S;
+  for (let r = 0; r < 9; r++) for (let c = 0; c < 9; c++) { const d = getD(r, c); if (!d) continue;
+    text(String(d), G.cx(c), G.cy(r) + S * 0.21, `600 ${Math.round(S * 0.6)}px ${ARC}`, colorOf(r, c), 'center'); }
+}
+function chip(x, y, s, d, rgb) {
+  g.save(); g.fillStyle = `rgba(${rgb},${rgb === C.blueRGB ? 0.18 : 0.24})`; g.strokeStyle = `rgba(${rgb},0.95)`; g.lineWidth = 2; g.shadowColor = `rgba(${rgb},0.8)`; g.shadowBlur = 12;
+  g.beginPath(); g.roundRect(x, y, s, s, 7); g.fill(); g.stroke(); g.restore();
+  text(String(d), x + s / 2, y + s * 0.71, `600 ${Math.round(s * 0.62)}px ${ARC}`, C.ink, 'center');
+}
+
+// ── nhân vật: ảnh cắt + viền sáng lạnh (áo đen/tóc đen tách khỏi nền mực) ──
+function sprite(name) {
+  const im = IM[name], p = 8, c = mk(im.width + 2 * p, im.height + 2 * p), x = c.getContext('2d');
+  const sil = mk(im.width, im.height), sx = sil.getContext('2d'); sx.drawImage(im, 0, 0); sx.globalCompositeOperation = 'source-in';
+  sx.fillStyle = 'rgba(150,190,255,0.55)'; sx.fillRect(0, 0, im.width, im.height);
+  for (let k = 0; k < 16; k++) { const a = k / 16 * 2 * Math.PI; x.drawImage(sil, p + 3.5 * Math.cos(a), p + 3.5 * Math.sin(a)); }
+  x.drawImage(im, p, p); return { c, p, w: im.width, h: im.height };
+}
+function figure(S, x, foot, h, crop) {                // crop: phần trên của ảnh (0.45 = nửa trên), x = mép trái ảnh gốc
+  const sh0 = S.h * crop, s = h / sh0;
+  g.drawImage(S.c, 0, 0, S.c.width, sh0 + S.p, x - S.p * s, foot - h - S.p * s, S.c.width * s, (sh0 + S.p) * s);
+  return { x, y: foot - h, w: S.w * s, h, s };
+}
+
+// ── câu đố Difference of Squares (CONTENT.md, dữ liệu gốc [hàng, cột] từ 0) ──
+const CAGES = [
+  { cells: [[6, 0], [6, 1], [6, 2]], v: '15' },
+  { cells: [[0, 8], [1, 8]], v: 'x', set: 'red' },
+  { cells: [[0, 3], [1, 3], [2, 3], [3, 0], [3, 1], [3, 2], [3, 3]], v: 'y²', set: 'red' },
+  { cells: [[6, 3]], v: 'x − y' },
+  { cells: [[8, 7]], v: 'x − y' },
+  { cells: [[8, 0], [8, 1]], v: 'y', set: 'red' },
+  { cells: [[4, 4], [4, 5], [4, 6], [5, 4], [5, 5], [5, 6], [5, 7], [6, 4], [6, 5], [6, 6], [7, 5]], v: 'x²', set: 'blue' },
+];
+const ARROWS = [                                      // vòng [hàng, cột] + thân (toạ độ tâm ô, đơn vị ô, [y, x])
+  { o: [4, 7], wp: [[3.5, 8.5], [2.5, 8.5]] }, { o: [7, 4], wp: [[8.5, 3.5], [8.5, 2.5]] },
+  { o: [8, 8], wp: [[7.5, 7.5], [6.5, 7.5], [7.5, 6.5]] }, { o: [2, 6], wp: [[1.5, 5.5], [0.5, 4.5]] },
+  { o: [3, 3], wp: [[2.5, 2.5], [1.5, 1.5]] }, { o: [6, 2], wp: [[5.5, 1.5], [4.5, 0.5]] },
+];
+const RENBAN = [[[0.5, 1.5], [0.5, 0.5], [1.5, 0.5]], [[0.5, 3.5], [1.5, 3.5], [2.5, 3.5]], [[3.5, 2.5], [3.5, 1.5], [3.5, 0.5]],
+  [[0.5, 7.5], [1.5, 8.5]], [[3.5, 4.5], [4.5, 3.5], [4.5, 4.5]], [[7.5, 3.5], [8.5, 4.5]], [[8.5, 5.5], [7.5, 6.5]]];
+(() => {                                              // kiểm câu đố trên lời giải gốc
+  const cg = v => CAGES.find(k => k.v === v), X = sum(cg('x').cells), Y = sum(cg('y').cells);
+  must(X === 8 && Y === 7, 'x = 8, y = 7');
+  must(sum(cg('x²').cells) === X * X && sum(cg('y²').cells) === Y * Y, 'lồng bình phương');
+  must(sum(cg('15').cells) === 15, 'lồng 15');
+  CAGES.filter(k => k.v === 'x − y').forEach(k => must(sum(k.cells) === X - Y, 'ô x − y'));
+  must(X * X === Y * Y + X + Y && X - Y === 1, 'phương trình');
+  ARROWS.forEach(a => must(D(...a.o) === a.wp.reduce((s, [y, x]) => s + D(y - 0.5, x - 0.5), 0), 'mũi tên ' + a.o));
+  RENBAN.forEach(l => { const v = l.map(([y, x]) => D(y - 0.5, x - 0.5)).sort((a, b) => a - b);
+    must(v.every((d, i) => !i || d === v[i - 1] + 1), 'renban'); });
+})();
+
+function cageOutline(G, cells, d) {                   // nét đứt lồng, thụt vào d; xử lý góc lồi/lõm
+  const S = G.S, inC = (r, c) => cells.some(([a, b]) => a === r && b === c);
+  g.beginPath();
+  // mỗi cạnh biên: (dr, dc) là phía ngoài; t = hướng dọc cạnh
+  for (const [r, c] of cells) for (const [dr, dc] of [[-1, 0], [1, 0], [0, -1], [0, 1]]) {
+    if (inC(r + dr, c + dc)) continue;
+    const tr = dc, tc = dr;                           // hướng dọc cạnh (vuông góc với pháp tuyến)
+    const cx = G.cx(c), cy = G.cy(r);
+    const px = cx + dc * (S / 2 - d), py = cy + dr * (S / 2 - d);   // điểm giữa cạnh đã thụt
+    const ends = [-1, 1].map(sg => {
+      const nr = r + sg * tr, nc = c + sg * tc;                     // ô kề dọc cạnh
+      let ext;
+      if (!inC(nr, nc)) ext = S / 2 - d;                            // góc lồi
+      else if (inC(nr + dr, nc + dc)) ext = S / 2 + d;              // góc lõm
+      else ext = S / 2;                                             // thẳng tiếp
+      return [px + sg * tc * ext, py + sg * tr * ext];
+    });
+    g.moveTo(...ends[0]); g.lineTo(...ends[1]);
+  }
+  g.stroke();
+}
+function cageLabel(G, cage) {
+  const [r, c] = cage.cells.slice().sort((a, b) => a[0] - b[0] || a[1] - b[1])[0];
+  const x = G.X(c) + 4, y = G.Y(r) + 4, font = `600 19px ${ARC}`; g.font = font;
+  const w = g.measureText(cage.v).width + 10;
+  g.fillStyle = '#0C1422'; g.fillRect(x, y, w, 23);
+  const col = cage.set === 'red' ? '#FF9466' : cage.set === 'blue' ? '#8AD8FF' : C.ink;
+  text(cage.v, x + 5, y + 17, font, col);
+}
+function circleArrow(G, a) {
+  const S = G.S, R = S * 0.415, ox = G.cx(a.o[1]), oy = G.cy(a.o[0]);
+  g.save(); g.strokeStyle = C.arr; g.lineWidth = 3; g.lineJoin = g.lineCap = 'round';
+  g.beginPath(); g.arc(ox, oy, R, 0, 2 * Math.PI); g.stroke();
+  const pts = a.wp.map(([y, x]) => [G.x0 + x * S, G.y0 + y * S]);
+  const [fx, fy] = pts[0], L = Math.hypot(fx - ox, fy - oy), sx = ox + (fx - ox) / L * R, sy = oy + (fy - oy) / L * R;
+  g.beginPath(); g.moveTo(sx, sy); pts.forEach(p => g.lineTo(...p)); g.stroke();
+  const [bx, by] = pts.at(-2) || [sx, sy], [ex, ey] = pts.at(-1), an = Math.atan2(ey - by, ex - bx), h = 16;
+  g.beginPath(); g.moveTo(ex - h * Math.cos(an - 0.5), ey - h * Math.sin(an - 0.5)); g.lineTo(ex, ey);
+  g.lineTo(ex - h * Math.cos(an + 0.5), ey - h * Math.sin(an + 0.5)); g.stroke(); g.restore();
+}
+function renban(G, l) {
+  const pts = l.map(([y, x]) => [G.x0 + x * G.S, G.y0 + y * G.S]);
+  g.save(); g.strokeStyle = `rgba(${C.ren},0.62)`; g.lineWidth = G.S * 0.24; g.lineCap = g.lineJoin = 'round';
+  g.beginPath(); pts.forEach((p, i) => i ? g.lineTo(...p) : g.moveTo(...p)); g.stroke(); g.restore();
+}
+
+const frames = [
+  () => {                                             // 0 · HỒI 2 — What's left
+    const G = Grid(600, 166, 84);
+    const R = [], B = [], RB = [];
+    for (let r = 0; r < 9; r++) for (let c = 0; c < 9; c++) {
+      const red = r === 2 || r === 6 || (r >= 3 && r <= 5 && c !== 3 && c !== 4 && c !== 5);
+      const blue = c <= 1 || c >= 7;
+      if (red && blue) RB.push([r, c]); else if (red) R.push([r, c]); else if (blue) B.push([r, c]);
+    }
+    must(R.length === 16 && B.length === 16 && RB.length === 20, 'đếm ô');
+    must(R.every(([r, c]) => r >= 2 && r <= 6 && c >= 2 && c <= 6 && !(r >= 3 && r <= 5 && c >= 3 && c <= 5)), 'vòng');
+    const sr = sorted(R), sb = sorted(B);
+    must(sr.join() === sb.join(), 'vòng = góc (đa tập)');
+    gridLines(G);
+    RB.forEach(([r, c]) => removedCell(G, r, c));
+    glowSet(G, R, C.redRGB); glowSet(G, B, C.blueRGB, 0.19);
+    const isRB = new Set(RB.map(([r, c]) => key(r, c)));
+    digits(G, D, (r, c) => isRB.has(key(r, c)) ? C.off : C.ink);
+    // trái: tiêu đề
+    label('Act II · what’s left', 96, 112);
+    text('ring', 96, 290, `600 120px ${ARC}`, C.red);
+    text('=', 96, 418, `600 120px ${ARC}`, C.ink);
+    text('corners', 96, 546, `600 120px ${ARC}`, C.blue);
+    // phải: hai dãy đã sắp, khớp từng số
+    const x0 = 1416, s = 44, gap = 7;
+    label('sorted', x0, 214, C.dim, 'left', 20);
+    [0, 1].forEach(row => {
+      const y = 246 + row * 176;
+      for (let i = 0; i < 8; i++) {
+        const k = row * 8 + i, x = x0 + i * (s + gap);
+        chip(x, y, s, sr[k], C.redRGB); chip(x, y + s + 30, s, sb[k], C.blueRGB);
+        text('=', x + s / 2, y + s + 23, `600 22px ${ARC}`, C.dim, 'center');
+      }
+    });
+    label('ring', x0, 246 + 2 * 176 + 26, C.red, 'left', 20);
+    label('16 cells', x0 + 120, 246 + 2 * 176 + 26, C.dim, 'left', 20);
+    label('corners', x0, 246 + 2 * 176 + 60, C.blue, 'left', 20);
+    label('16 cells', x0 + 120, 246 + 2 * 176 + 60, C.dim, 'left', 20);
+    label('same digits', x0, 246 + 2 * 176 + 128, C.ink, 'left', 24);
+    label('every sudoku', x0, 246 + 2 * 176 + 162, C.dim, 'left', 20);
+    // chú giải ô gỡ
+    const lx = 1416, ly = 856; removedCell({ X: () => lx, Y: () => ly, S: 56 }, 0, 0);
+    label('both colours', lx + 72, ly + 24, C.dim, 'left', 18); label('removed', lx + 72, ly + 50, C.dim, 'left', 18);
+    figure(IM.point, -40, H, 430, 0.45);
+  },
+  () => {                                             // 1 · HỒI 4 — The equation
+    const G = Grid(120, 170, 84);
+    gridLines(G);
+    glowSet(G, CAGES.filter(k => k.set === 'red').flatMap(k => k.cells), C.redRGB);
+    glowSet(G, CAGES.find(k => k.set === 'blue').cells, C.blueRGB, 0.19);
+    RENBAN.forEach(l => renban(G, l));
+    ARROWS.forEach(a => circleArrow(G, a));
+    g.save(); g.strokeStyle = 'rgba(244,238,223,0.78)'; g.lineWidth = 2; g.setLineDash([7, 6]);
+    CAGES.forEach(k => cageOutline(G, k.cells, 6)); g.restore();
+    CAGES.forEach(k => cageLabel(G, k));
+    const one = CAGES.filter(k => k.v === 'x − y').map(k => k.cells[0]);
+    one.forEach(([r, c]) => text('1', G.cx(c), G.cy(r) + 30, `600 46px ${ARC}`, C.ink, 'center'));
+    label('Act IV · the equation', 120, 128);
+    text('Difference of Squares · puzzle by MathGuy_12 · SudokuPad', 120, 984, `500 19px ${MONO}`, C.dim);
+    // phải: phương trình
+    const ex = 990, mw = 834;
+    label('the two colours balance', ex, 236, C.dim);
+    eq([['x²', C.blue], [' = '], ['y²', C.red], [' + '], ['x', C.red], [' + '], ['y', C.red]], ex, 340, 104, mw);
+    note('move y² across, then factor', ex, 446);
+    eq([['(x − y)(x + y) = x + y']], ex, 540, 84, mw);
+    note('x + y > 0, so divide both sides by it', ex, 646);
+    eq([['x − y = ', C.ink], ['1', C.ink, `rgba(${C.redRGB},0.9)`]], ex, 790, 140, 560);
+    figure(IM.ok, 1640, H, 330, 0.45);
+  },
+];
+
+(async () => {
+  await Promise.all(['600 120px', '600 104px', '600 84px', '600 140px', '600 50px', '600 27px', '600 22px', '600 19px', '600 46px']
+    .map(f => document.fonts.load(`${f} ${ARC}`))
+    .concat(['500 24px', '500 22px', '500 20px', '500 19px', '500 18px'].map(f => document.fonts.load(`${f} ${MONO}`))));
+  await Promise.all([['point', 'pose-point'], ['ok', 'pose-ok']].map(([k, n]) => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[k + '0'] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + n));
+    im.src = `../../../assets/character-v2/cut/${n}.png`; })));
+  IM.point = sprite('point0'); IM.ok = sprite('ok0');
+  BG = bg(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.drawImage(BG, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

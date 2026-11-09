@@ -1,0 +1,28 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — sport poses</title>
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bảng 70 tư thế thể thao (engine/poses-sport.js — chuyển từ lemo-opuscar pictogram-motion, MIT) diễn bằng người que
+// khăn đỏ (engine/hero.js): soát bộ chuyển đổi góc trước khi đưa vào engine.
+// node engine/render/shoot.js stills --page tools/lab/sport-poses.html --t 0.5 --outdir out/_lab/sport-poses
+import { P } from '../../engine/stick.js';
+import { hero, INK } from '../../engine/hero.js';
+import { SPORT, sport } from '../../engine/poses-sport.js';
+const g = document.getElementById('cv').getContext('2d');
+let fontsReady = false;
+Promise.all([new FontFace('Archivo', 'url("../../assets/fonts/Archivo[wdth,wght].ttf")', { weight: '100 900' }).load()
+  .then(f => document.fonts.add(f)).catch(() => {})]).then(() => { fontsReady = true; });
+function frame() {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, 1920, 1080);
+  const names = Object.keys(SPORT), cols = 10, cw = 192, ch = 154, h = 92;
+  names.forEach((n, i) => {
+    const cx = cw / 2 + (i % cols) * cw, gy = 112 + Math.floor(i / cols) * ch, s = SPORT[n];
+    g.strokeStyle = 'rgba(34,48,60,0.2)'; g.lineWidth = 2; g.beginPath(); g.moveTo(cx - 70, gy); g.lineTo(cx + 70, gy); g.stroke();
+    const hip = [cx + (s.dx || 0) * h, gy - 0.4 * h * 0.985 + (s.dy || 0) * h];
+    hero(g, 'C', hip[0], 0, { ...P.stand, ...sport(n) }, { h, dir: 1, hip, eye: { look: [1, 0] } });
+    g.fillStyle = s._second ? '#B02A24' : INK; g.font = '700 15px Archivo, sans-serif'; g.textAlign = 'center'; g.fillText(n, cx, gy + 22);
+  });
+}
+window.__intro = { get ready() { return fontsReady; }, still: frame, frame, DUR: 1 };
+</script>

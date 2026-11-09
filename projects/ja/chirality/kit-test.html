@@ -1,0 +1,118 @@
+<!doctype html><meta charset="utf-8">
+<title>ja/chirality — tờ thử kit</title>
+<style>
+  @font-face{font-family:"Noto Sans JP";src:url("../../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  html,body{margin:0;background:#0E1424;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Tờ thử MỌI hàm kit có tham số k ở k = 0.25 / 0.5 / 0.75 / 1 (LESSONS §89). Khung i: k = KS[i % 4].
+//   [0,4) A gương rạn + tiêu đề lật + CHFClBr (khung lab 0) · [4,8) B đồ thị + mạng nhện (khung lab 1) · [8,12) C ô kính, chữ
+//   [12,16) D vật dùng chung + ảnh + mascot · [16,20) E phân tử các cặp · [20,24) F thẻ hồi · [24,28) G ERA note, gương hạ/mờ/tối
+//   [28,32) H chuyển cảnh cùng ERA · [32,36) I chuyển cảnh khác ERA
+//   node engine/render/shoot.js stills --page projects/ja/chirality/kit-test.html --dur 36 --t 0.5,1.5,…,35.5 --outdir out/_lab/chirality/kit
+import { W, H, C, MX, JP, MIN, FONTS, FONT_SAMPLE, MODEL, SOAI_1995, QUESTIONS, FRANK, loadKit, ground, dark, mirror, write, telop, wrong, strike, mismatch,
+  nobelText, title, actCard, tick, cross, badge, arrow, molecule, trialFit, stereo, cip, placeMol, graph, pane, panes, PANES, nobel, tube, crystal, hand, coin,
+  photo, figure, transition, floorShadow, benchReflect, must, BENCH } from './kit.js';
+const g = document.getElementById('cv').getContext('2d'), KS = [0.25, 0.5, 0.75, 1];
+let ready = false;
+(async () => {
+  await Promise.all(FONTS.map(f => document.fonts.load(f, FONT_SAMPLE)));
+  const P = '../../../assets/character-v2/cut/', A = './assets/history/';
+  await loadKit({ 'pose-halt': P + 'pose-halt.png', 'pose-point': P + 'pose-point.png', 'pose-pointer': P + 'pose-pointer.png', kagan: A + 'kagan.jpg', soai: A + 'soai.jpg' });
+  ready = true;
+})().catch(e => { window.__intro.error = String(e.stack || e); });
+const lab = (s, y = 1000) => write(g, s, 1824, y, 1, { font: `500 28px ${JP}`, color: '@dim', align: 'right' });
+const FAKE = (era, fn) => ({ constructor: { ERA: era }, render: (gg, T) => { ground(gg, era, T); fn(gg); } });
+const SA = FAKE('mirror', gg => { mirror(gg); write(gg, '前の場面', 300, 500, 1, { font: `700 64px ${MIN}` }); });
+const SB = FAKE('mirror', gg => { mirror(gg, { crack: 1, cy: 400 }); write(gg, '次の場面', 1100, 500, 1, { font: `700 64px ${MIN}`, color: '@R' }); });
+const SN = FAKE('note', gg => { mirror(gg); write(gg, '1848 · パリ', 200, 300, 1, { font: `700 64px ${MIN}` }); });
+const frame = t => {
+  g.setTransform(1, 0, 0, 1, 0, 0);
+  const i = Math.floor(t), k = KS[i % 4];
+  if (i < 4) {                                                       // ── A: khung lab 0 ──
+    ground(g, 'mirror');
+    const key = 'R-CHFClBr', L = placeMol(key), ci = 3, tr = trialFit(key);
+    const LX = 560, RX = 2 * MX - LX, CY = 480, S = 142;
+    floorShadow(g, LX, 230); floorShadow(g, RX, 230);
+    benchReflect(g, BENCH + 60, () => { molecule(g, key, { x: LX, y: CY, scale: S, k }); molecule(g, key, { x: RX, y: CY, scale: S, mirror: true, k }); });
+    mirror(g, { crack: k, cy: CY - 10 });
+    const AL = molecule(g, key, { x: LX, y: CY, scale: S, k });
+    molecule(g, key, { x: RX, y: CY, scale: S, mirror: true, k });
+    const AG = molecule(g, key, { x: RX, y: CY, scale: S, atoms: tr.atoms, ghost: { letters: ['F', 'Cl'] }, k });
+    if (k >= 1) { tr.fit.forEach(j => { const a = AG[j]; badge(g, a.x + a.r + 26, a.y - 10, 22); tick(g, a.x + a.r + 26, a.y - 8, 14, 1, { color: C.R }); });
+ }
+    must(`'${stereo(key)[0].cip}${stereo(key, { mirror: true })[0].cip}'`, 'RS');
+    title(g, '手の形をした分子', t, t - k * 0.9, { act: 1 });
+    telop(g, '不斉炭素原子', 130, 330, k, { color: '@L', size: 38 });
+    telop(g, '4種類のちがう原子', 130, 376, k, { size: 28, weight: 400, color: '@dim' });
+    arrow(g, [[LX + 40, 236], [MX, 150], [RX - 40, 236]], k, { color: C.L });
+    telop(g, '2つしか重ならない', RX, 836, k, { size: 32, align: 'center' });
+    telop(g, '鏡像異性体', MX, 964, k, { mincho: true, align: 'center' });
+    figure(g, 'halt', 1600, H, 740, k, { flip: false });
+    lab(`A · k = ${k} · tiêu đề t − a = ${(k * 0.9).toFixed(2)}`);
+  } else if (i < 8) {                                                // ── B: khung lab 1 ──
+    ground(g, 'mirror');
+    const G = graph(g, { axes: k, line: k, curve: k, web: { x0: 0.02, k, labels: true } });
+    must(`[${G.iter.map(v => Math.round(v * 100))}].join()`, '2,4,8,16,31,56,86,99');
+    title(g, '曲線を何度もたどる', t, t - k * 0.9, { act: 6 });
+    write(g, 'y＝2x/(1+x²)', 1632, 290, k, { font: `700 44px ${JP}`, align: 'center' });
+    write(g, SOAI_1995.map(v => v + '%').join(' → '), 1824, 420, k, { font: `700 32px ${JP}`, align: 'right' });
+    figure(g, 'pointer', 150, H, 800, k);
+    lab(`B · k = ${k}`);
+  } else if (i < 12) {                                               // ── C: ô kính, chữ ──
+    ground(g, 'mirror'); mirror(g);
+    panes(g, { texts: QUESTIONS, k: [k, 1, 1], kText: [null, k, 1], tick: [0, 0, k], flip: [0, 0, 0] });
+    pane(g, 1, PANES.x, 790, PANES.w, 150, 1, { text: FRANK[0], flip: k, back: '体は手袋だから' });
+    const B = wrong(g, 'いつも半分ずつ？', 120, 260, 1); strike(g, B, k);
+    telop(g, 'ほぼ同じ数', 120, 340, k);
+    mismatch(g, '重ならない', 120, 470, k, { size: 56, mincho: true });
+    nobelText(g, 'ノーベル化学賞', 120, 580, k, { size: 52, mincho: true });
+    tick(g, 160, 680, 22, k); cross(g, 260, 680, 18, k); arrow(g, [[340, 680], [600, 680]], k, { color: C.dim });
+    telop(g, [['左', `700 56px ${JP}`, '@L'], [' ⇄ ', `700 56px ${JP}`, '@dim'], ['右', `700 56px ${JP}`, '@R']], 120, 800, k);
+    lab(`C · k = ${k}`);
+  } else if (i < 16) {                                               // ── D: vật dùng chung ──
+    ground(g, 'mirror'); mirror(g);
+    nobel(g, 200, 200, 80, k, { spin: (1 - k) * 3 });
+    tube(g, 380, 420, 300, k, { fill: k, mix: 0.5 }); tube(g, 480, 420, 300, k, { fill: 0.7, mix: 1, seed: 3 });
+    crystal(g, 700, 230, 110, k, { rot: -0.6 + k * 0.5 }); crystal(g, 2 * MX - 700, 230, 110, k, { mirror: true, rot: -0.6 + k * 0.5 });
+    hand(g, 640, 560, 70, k, { side: 'L' }); hand(g, 2 * MX - 640, 560, 70, k, { side: 'R' }); hand(g, 2 * MX - 640, 560, 70, k, { side: 'L', ghost: true });
+    hand(g, 1500, 560, 60, k, { side: 'R', glove: true });
+    coin(g, 1700, 220, 60, k, { spin: k * 2.2 });
+    photo(g, 'kagan', 120, 560, 280, k, { sub: '95歳' });
+    photo(g, 'soai', 1200, 120, 160, k, { sub: '76歳', align: 'left' });
+    figure(g, 'point', 1560, H, 420, k, { flip: true });
+    lab(`D · k = ${k}`);
+  } else if (i < 20) {                                               // ── E: phân tử các cặp ──
+    ground(g, 'mirror'); mirror(g);
+    const rot = k * 2;
+    [['L-alanine', 200, 130], ['R-carvone', 420, 70], ['R-thalidomide', 640, 48], ['L-tartaric_2R3R', 860, 70]].forEach(([key, y, sc]) => {
+      molecule(g, key, { x: 560, y, scale: sc, rot, k }); molecule(g, key, { x: 2 * MX - 560, y, scale: sc, rot, k, mirror: true });
+      const a = stereo(key).map(s => s.cip).join(''), b = stereo(key, { mirror: true }).map(s => s.cip).join('');
+      write(g, `${key}  ${a}`, 100, y + 10, 1, { font: `500 28px ${JP}`, color: '@L' }); write(g, b, 1824, y + 10, 1, { font: `500 28px ${JP}`, color: '@R', align: 'right' });
+    });
+    molecule(g, 'R-soai1995', { x: 1500, y: 520, scale: 40, rot, k, hideH: true, mirror: true });
+    lab(`E · k = ${k} · rot = ${rot}`);
+  } else if (i < 24) {                                               // ── F: thẻ hồi ở 4 mốc (FROM 10, START 12.6) ──
+    ground(g, 'mirror'); mirror(g);
+    const tt = [10.95, 11.6, 12.3, 13.3][i - 20];
+    actCard(g, tt, 10, 12.6, [1, 3, 6, 8][i - 20]);
+    lab(`F · actCard t = START ${(tt - 12.6).toFixed(2)}`);
+  } else if (i < 28) {                                               // ── G: ERA note + gương hạ / mờ / tối ──
+    ground(g, 'note', t, { lamp: k });
+    mirror(g, { lower: i === 27 ? 1 : k * 0.8, fog: k, dim: i === 26 ? k : 0 });
+    crystal(g, 520, 700, 90, 1, { rot: -0.4 }); crystal(g, 2 * MX - 520, 700, 90, 1, { mirror: true, rot: -0.4 });
+    title(g, 'パスツールのピンセット', t, -5, { act: 1 });
+    dark(g, i === 26 ? 1 - k * 0.5 : 1);
+    lab(`G · note lamp = ${k} · lower / fog / dim`);
+  } else {                                                           // ── H/I: chuyển cảnh ──
+    const same = i < 32;
+    transition(g, 0, same ? SA : SA, same ? SB : SN, k, same);
+    lab(`${same ? 'H cùng ERA' : 'I khác ERA'} · k = ${k}`);
+  }
+};
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 36 };
+</script>

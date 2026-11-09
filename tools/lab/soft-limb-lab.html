@@ -1,0 +1,66 @@
+<!doctype html><meta charset="utf-8"><title>Soft limb lab</title>
+<!-- Bàn thử nét tay chân (2026-10-26, so với "Animation vs. Coding" — Alan Becker). Cùng khớp từ engine/stick.js,
+     ba cách vẽ: A polyline hiện tại · B bo góc khuỷu/gối · C cả chi là một đường cong qua khớp + thân cong + bàn tay/chân.
+     Chỉ là lab: không đổi engine/hero.js. -->
+<style>html,body{margin:0;background:#F4F1E8;overflow:hidden}canvas{display:block;width:100vw;height:100vh;object-fit:contain}</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+import { stick, P, mix, walk } from '../../engine/stick.js';
+import { headOf, ARM, INK, RED } from '../../engine/hero.js';
+const g = document.getElementById('cv').getContext('2d');
+const H = 250, GY = [470, 1000];
+const lerp2 = (a, b, k) => [a[0] + (b[0] - a[0]) * k, a[1] + (b[1] - a[1]) * k];
+
+// đường qua a → m → e. mode 'poly' | 'round' (bo góc, s = phần mỗi đoạn bị bo) | 'arc' (một cung bậc hai đi QUA m)
+function limb(a, m, e, mode) {
+  g.beginPath(); g.moveTo(...a);
+  if (mode === 'poly') { g.lineTo(...m); g.lineTo(...e); }
+  else if (mode === 'round') { const s = 0.55, p = lerp2(m, a, s), q = lerp2(m, e, s); g.lineTo(...p); g.quadraticCurveTo(...m, ...q); g.lineTo(...e); }
+  else { const c = [2 * m[0] - (a[0] + e[0]) / 2, 2 * m[1] - (a[1] + e[1]) / 2]; g.quadraticCurveTo(...c, ...e); }
+  g.stroke();
+}
+function figure(x, y, pose, mode, t, o = {}) {
+  const w = 0.06 * H;
+  const J = stick(g, x, 0, pose, { h: H, arm: ARM, alpha: 0, ground: () => y, ...o });
+  const Hd = headOf(J, H), C = Hd.C, r = Hd.r, top = [C[0] - Hd.v[0] * r, C[1] - Hd.v[1] * r];
+  g.save(); g.strokeStyle = INK; g.lineCap = 'round'; g.lineJoin = 'round';
+  const soft = mode !== 'poly', lw = soft ? w * 1.25 : w;       // B/C: nét dày hơn chút như Becker (≈ 0.3 bán kính đầu)
+  g.lineWidth = lw;
+  const end = (p, from, k) => { if (mode !== 'arc') return;      // bàn tay / bàn chân: chấm tròn hơi to hơn nét
+    g.fillStyle = INK; g.beginPath(); g.arc(p[0], p[1], lw * k, 0, 7); g.fill(); };
+  const foot = (L) => { if (mode !== 'arc') return;              // bàn chân: móc ngắn về phía mặt
+    const d = o.dir ?? 1; g.beginPath(); g.moveTo(...L.e); g.lineTo(L.e[0] + d * 0.05 * H, L.e[1] + 0.004 * H); g.stroke(); };
+  limb(J.armL.a, J.armL.m, J.armL.e, mode); end(J.armL.e, J.armL.m, 0.6);
+  limb(J.legL.a, J.legL.m, J.legL.e, mode); foot(J.legL);
+  limb(J.legR.a, J.legR.m, J.legR.e, mode); foot(J.legR);
+  // thân: A/B thẳng; C cong nhẹ theo độ nghiêng đầu–hông (lưng là một nét liền tới đầu)
+  if (mode === 'arc') { const mid = lerp2(J.hip, top, 0.5), dx = (top[0] - J.hip[0]), bow = -0.06 * H * Math.sign(dx || 1) * Math.min(1, Math.abs(dx) / (0.3 * H));
+    g.beginPath(); g.moveTo(...J.hip); g.quadraticCurveTo(mid[0] + bow, mid[1], ...top); g.stroke(); }
+  else { g.beginPath(); g.moveTo(...J.hip); g.lineTo(...J.neck); g.lineTo(...top); g.stroke(); }
+  g.fillStyle = '#FFF'; g.lineWidth = w; g.beginPath(); g.arc(C[0], C[1], r, 0, 7); g.fill(); g.stroke();
+  // khăn (giữ nhận diện)
+  const n = J.neck; g.strokeStyle = RED; g.lineWidth = w * 1.5; g.beginPath(); g.moveTo(n[0] - 0.05 * H, n[1]); g.lineTo(n[0] + 0.05 * H, n[1]); g.stroke();
+  g.strokeStyle = INK; g.lineWidth = lw;
+  limb(J.armR.a, J.armR.m, J.armR.e, mode); end(J.armR.e, J.armR.m, 0.6);
+  g.fillStyle = INK; for (const s of [-1, 1]) { g.beginPath(); g.ellipse(C[0] + s * 0.32 * r, C[1] - 0.05 * r, 0.13 * r, 0.2 * r, 0, 0, 7); g.fill(); }
+  g.restore();
+}
+const POSES = ['think', 'push', 'crouch', 'throw', 'surprised', 'sneak'];
+const MODES = [['poly', 'A · hiện tại (đoạn thẳng)'], ['round', 'B · bo góc khớp'], ['arc', 'C · chi cong + thân cong (kiểu Becker)']];
+function frame(t) {
+  g.setTransform(1, 0, 0, 1, 0, 0); g.fillStyle = '#F4F1E8'; g.fillRect(0, 0, 1920, 1080);
+  // hàng trên: 3 cách vẽ × 1 tư thế đổi dần (t chạy qua danh sách), hàng dưới: đi bộ 3 cách vẽ
+  const i = Math.floor(t / 2) % POSES.length, k = (t % 2) / 0.6;
+  const pose = mix(P[POSES[i]], P[POSES[(i + 1) % POSES.length]], Math.max(0, k - 2.33));
+  g.font = '700 30px sans-serif'; g.fillStyle = INK; g.textAlign = 'center';
+  MODES.forEach(([m, label], c) => {
+    const x = 340 + c * 620;
+    g.fillText(label, x, 60); g.fillText(POSES[i], x, 520);
+    g.strokeStyle = 'rgba(34,48,60,.3)'; g.lineWidth = 3; g.beginPath(); g.moveTo(x - 260, GY[0]); g.lineTo(x + 260, GY[0]); g.moveTo(x - 260, GY[1]); g.lineTo(x + 260, GY[1]); g.stroke();
+    figure(x, GY[0], pose, m, t, { dir: 1 });
+    figure(x, GY[1], walk(t * 0.9), m, t, { dir: 1 });
+  });
+  g.fillStyle = 'rgba(34,48,60,.55)'; g.font = '24px sans-serif'; g.textAlign = 'right'; g.fillText(`t = ${t.toFixed(2)} s`, 1890, 1060);
+}
+window.__intro = { ready: true, still: frame, frame, DUR: 12 };
+</script>

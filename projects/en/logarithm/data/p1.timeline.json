@@ -1,0 +1,482 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 25.072
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "At eight percent, one number tells you when your money doubles: seventy-two divided by eight — about nine years.",
+   "idea": true,
+   "start": 0.02,
+   "end": 5.466,
+   "words": [
+    {
+     "w": "at",
+     "start": 0.02,
+     "end": 0.1,
+     "conf": 0.995
+    },
+    {
+     "w": "eight",
+     "start": 0.16,
+     "end": 0.28,
+     "conf": 0.429
+    },
+    {
+     "w": "percent",
+     "start": 0.3,
+     "end": 0.641,
+     "conf": 0.95
+    },
+    {
+     "w": "one",
+     "start": 0.841,
+     "end": 0.921,
+     "conf": 0.666
+    },
+    {
+     "w": "number",
+     "start": 0.941,
+     "end": 1.161,
+     "conf": 0.9
+    },
+    {
+     "w": "tells",
+     "start": 1.201,
+     "end": 1.442,
+     "conf": 1.0
+    },
+    {
+     "w": "you",
+     "start": 1.462,
+     "end": 1.562,
+     "conf": 0.995
+    },
+    {
+     "w": "when",
+     "start": 1.602,
+     "end": 1.702,
+     "conf": 0.914
+    },
+    {
+     "w": "your",
+     "start": 1.762,
+     "end": 1.862,
+     "conf": 0.694
+    },
+    {
+     "w": "money",
+     "start": 1.882,
+     "end": 2.082,
+     "conf": 0.951
+    },
+    {
+     "w": "doubles",
+     "start": 2.202,
+     "end": 2.603,
+     "conf": 0.712
+    },
+    {
+     "w": "seventy-two",
+     "start": 2.623,
+     "end": 3.544,
+     "conf": 0.121
+    },
+    {
+     "w": "divided",
+     "start": 3.624,
+     "end": 3.964,
+     "conf": 0.848
+    },
+    {
+     "w": "by",
+     "start": 4.004,
+     "end": 4.105,
+     "conf": 0.498
+    },
+    {
+     "w": "eight",
+     "start": 4.125,
+     "end": 4.445,
+     "conf": 0.193
+    },
+    {
+     "w": "about",
+     "start": 4.645,
+     "end": 4.845,
+     "conf": 0.794
+    },
+    {
+     "w": "nine",
+     "start": 4.925,
+     "end": 5.126,
+     "conf": 0.471
+    },
+    {
+     "w": "years",
+     "start": 5.146,
+     "end": 5.466,
+     "conf": 0.925
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "At six percent, twelve years. At twelve percent, six. At three percent, twenty-four.",
+   "idea": true,
+   "start": 6.536,
+   "end": 10.615,
+   "words": [
+    {
+     "w": "at",
+     "start": 6.536,
+     "end": 6.576,
+     "conf": 0.45
+    },
+    {
+     "w": "six",
+     "start": 6.697,
+     "end": 6.838,
+     "conf": 0.632
+    },
+    {
+     "w": "percent",
+     "start": 6.958,
+     "end": 7.26,
+     "conf": 0.779
+    },
+    {
+     "w": "twelve",
+     "start": 7.36,
+     "end": 7.681,
+     "conf": 0.771
+    },
+    {
+     "w": "years",
+     "start": 7.742,
+     "end": 7.983,
+     "conf": 0.818
+    },
+    {
+     "w": "at",
+     "start": 8.164,
+     "end": 8.204,
+     "conf": 0.453
+    },
+    {
+     "w": "twelve",
+     "start": 8.224,
+     "end": 8.425,
+     "conf": 0.805
+    },
+    {
+     "w": "percent",
+     "start": 8.445,
+     "end": 8.706,
+     "conf": 0.756
+    },
+    {
+     "w": "six",
+     "start": 8.786,
+     "end": 8.967,
+     "conf": 0.59
+    },
+    {
+     "w": "at",
+     "start": 9.349,
+     "end": 9.389,
+     "conf": 0.479
+    },
+    {
+     "w": "three",
+     "start": 9.469,
+     "end": 9.65,
+     "conf": 0.578
+    },
+    {
+     "w": "percent",
+     "start": 9.67,
+     "end": 9.992,
+     "conf": 0.767
+    },
+    {
+     "w": "twenty-four",
+     "start": 10.012,
+     "end": 10.615,
+     "conf": 0.195
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "The exact answer at eight percent is nine years and two days.",
+   "idea": true,
+   "start": 11.645,
+   "end": 14.413,
+   "words": [
+    {
+     "w": "the",
+     "start": 11.645,
+     "end": 11.725,
+     "conf": 0.591
+    },
+    {
+     "w": "exact",
+     "start": 11.745,
+     "end": 12.026,
+     "conf": 0.798
+    },
+    {
+     "w": "answer",
+     "start": 12.147,
+     "end": 12.347,
+     "conf": 0.726
+    },
+    {
+     "w": "at",
+     "start": 12.367,
+     "end": 12.427,
+     "conf": 0.979
+    },
+    {
+     "w": "eight",
+     "start": 12.488,
+     "end": 12.608,
+     "conf": 0.166
+    },
+    {
+     "w": "percent",
+     "start": 12.628,
+     "end": 12.949,
+     "conf": 0.839
+    },
+    {
+     "w": "is",
+     "start": 13.029,
+     "end": 13.109,
+     "conf": 0.979
+    },
+    {
+     "w": "nine",
+     "start": 13.129,
+     "end": 13.531,
+     "conf": 0.314
+    },
+    {
+     "w": "years",
+     "start": 13.551,
+     "end": 13.771,
+     "conf": 0.822
+    },
+    {
+     "w": "and",
+     "start": 13.791,
+     "end": 13.872,
+     "conf": 0.678
+    },
+    {
+     "w": "two",
+     "start": 13.932,
+     "end": 14.072,
+     "conf": 0.605
+    },
+    {
+     "w": "days",
+     "start": 14.092,
+     "end": 14.413,
+     "conf": 0.991
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It is not a banker's superstition. It is a logarithm. So why does seventy-two work — and what is a logarithm, really?",
+   "idea": true,
+   "start": 15.463,
+   "end": 21.231,
+   "words": [
+    {
+     "w": "it",
+     "start": 15.463,
+     "end": 15.523,
+     "conf": 0.995
+    },
+    {
+     "w": "is",
+     "start": 15.543,
+     "end": 15.623,
+     "conf": 0.989
+    },
+    {
+     "w": "not",
+     "start": 15.663,
+     "end": 15.804,
+     "conf": 0.957
+    },
+    {
+     "w": "a",
+     "start": 15.844,
+     "end": 15.864,
+     "conf": 0.995
+    },
+    {
+     "w": "banker's",
+     "start": 15.964,
+     "end": 16.324,
+     "conf": 0.742
+    },
+    {
+     "w": "superstition",
+     "start": 16.424,
+     "end": 17.005,
+     "conf": 0.906
+    },
+    {
+     "w": "it",
+     "start": 17.226,
+     "end": 17.286,
+     "conf": 0.498
+    },
+    {
+     "w": "is",
+     "start": 17.306,
+     "end": 17.366,
+     "conf": 0.997
+    },
+    {
+     "w": "a",
+     "start": 17.426,
+     "end": 17.446,
+     "conf": 0.003
+    },
+    {
+     "w": "logarithm",
+     "start": 17.506,
+     "end": 17.927,
+     "conf": 0.701
+    },
+    {
+     "w": "so",
+     "start": 18.307,
+     "end": 18.347,
+     "conf": 0.492
+    },
+    {
+     "w": "why",
+     "start": 18.427,
+     "end": 18.548,
+     "conf": 0.327
+    },
+    {
+     "w": "does",
+     "start": 18.868,
+     "end": 19.008,
+     "conf": 0.508
+    },
+    {
+     "w": "seventy-two",
+     "start": 19.028,
+     "end": 19.609,
+     "conf": 0.491
+    },
+    {
+     "w": "work",
+     "start": 19.709,
+     "end": 19.95,
+     "conf": 0.748
+    },
+    {
+     "w": "and",
+     "start": 20.23,
+     "end": 20.29,
+     "conf": 0.419
+    },
+    {
+     "w": "what",
+     "start": 20.31,
+     "end": 20.41,
+     "conf": 0.993
+    },
+    {
+     "w": "is",
+     "start": 20.43,
+     "end": 20.53,
+     "conf": 0.664
+    },
+    {
+     "w": "a",
+     "start": 20.55,
+     "end": 20.591,
+     "conf": 0.493
+    },
+    {
+     "w": "logarithm",
+     "start": 20.651,
+     "end": 20.971,
+     "conf": 0.71
+    },
+    {
+     "w": "really",
+     "start": 21.051,
+     "end": 21.231,
+     "conf": 0.734
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Let's ask a power question backwards.",
+   "idea": true,
+   "start": 22.485,
+   "end": 24.082,
+   "words": [
+    {
+     "w": "let's",
+     "start": 22.485,
+     "end": 22.667,
+     "conf": 0.743
+    },
+    {
+     "w": "ask",
+     "start": 22.768,
+     "end": 22.93,
+     "conf": 0.599
+    },
+    {
+     "w": "a",
+     "start": 22.99,
+     "end": 23.01,
+     "conf": 0.025
+    },
+    {
+     "w": "power",
+     "start": 23.031,
+     "end": 23.253,
+     "conf": 0.493
+    },
+    {
+     "w": "question",
+     "start": 23.273,
+     "end": 23.617,
+     "conf": 0.972
+    },
+    {
+     "w": "backwards",
+     "start": 23.698,
+     "end": 24.082,
+     "conf": 0.834
+    }
+   ]
+  }
+ ]
+}

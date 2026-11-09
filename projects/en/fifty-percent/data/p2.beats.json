@@ -1,0 +1,1338 @@
+{
+ "duration": 762.447,
+ "tempo": 1.08,
+ "voice": "03572937",
+ "leak_retries": [],
+ "beats": [
+  {
+   "text": "The most common way to understand probability, and the one most of us meet first, is to see it as a frequency.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": "act",
+   "start": 0.0,
+   "end": 5.26,
+   "wav": "audio/voice/a3296b7f08589a34.wav"
+  },
+  {
+   "text": "In this view, when you say the chance of heads is one half, you are saying that if you flipped this coin many, many times, the share of heads would settle closer and closer to one half.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 5.61,
+   "end": 14.788,
+   "wav": "audio/voice/7b71b9bb7b2575fb.wav"
+  },
+  {
+   "text": "Flip it ten times, and you might well get seven heads.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 15.738,
+   "end": 18.179,
+   "wav": "audio/voice/18b81ec32568da63.wav"
+  },
+  {
+   "text": "Flip it a hundred times, and the share is already closer.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 18.529,
+   "end": 21.386,
+   "wav": "audio/voice/646901c87893e9a0.wav"
+  },
+  {
+   "text": "Flip it a million times, and it is practically glued to fifty percent.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 21.736,
+   "end": 25.22,
+   "wav": "audio/voice/2fcb3f7b0386a0e2.wav"
+  },
+  {
+   "text": "People have actually done this, by hand.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 26.17,
+   "end": 27.955,
+   "wav": "audio/voice/3bd2c206a5bee7be.wav"
+  },
+  {
+   "text": "In the eighteenth century, the naturalist Buffon flipped a coin four thousand and forty times, and got two thousand and forty-eight heads.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 28.305,
+   "end": 35.653,
+   "wav": "audio/voice/adf9056bef31bfbb.wav"
+  },
+  {
+   "text": "The statistician Karl Pearson flipped twenty-four thousand times, and got twelve thousand and twelve.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 36.003,
+   "end": 41.101,
+   "wav": "audio/voice/926fe43327c52880.wav"
+  },
+  {
+   "text": "And during the Second World War, a mathematician named John Kerrich, held in an internment camp in Denmark, flipped ten thousand times, and got five thousand and sixty-seven heads.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 41.45,
+   "end": 51.012,
+   "wav": "audio/voice/8a57bb4f170d0157.wav"
+  },
+  {
+   "text": "Every one of them, a hair away from one half.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 51.362,
+   "end": 53.354,
+   "wav": "audio/voice/299baae0c520b901.wav"
+  },
+  {
+   "text": "This is the law of large numbers, first proved by Jacob Bernoulli in a book published in seventeen thirteen.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 54.304,
+   "end": 59.784,
+   "wav": "audio/voice/3d3efbfa9a4b4c20.wav"
+  },
+  {
+   "text": "It says that the frequency you observe will converge to the theoretical value as the number of trials grows.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "Flip it again, and again",
+   "opens": null,
+   "start": 60.134,
+   "end": 65.664,
+   "wav": "audio/voice/592d19e226e4e03b.wav"
+  },
+  {
+   "text": "This way of seeing things is enormously useful, and a huge number of systems around us are built on it.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "The world that runs on frequencies",
+   "opens": "stop",
+   "start": 67.264,
+   "end": 72.349,
+   "wav": "audio/voice/a200653897e05908.wav"
+  },
+  {
+   "text": "A casino makes money not because it cares who wins this round, but because it cares about millions of rounds.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "The world that runs on frequencies",
+   "opens": null,
+   "start": 72.699,
+   "end": 78.273,
+   "wav": "audio/voice/432fc7c7651013d9.wav"
+  },
+  {
+   "text": "An insurance company doesn't need to know whether you will have an accident. It needs to know how many, out of a million customers, will.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "The world that runs on frequencies",
+   "opens": null,
+   "start": 78.623,
+   "end": 85.497,
+   "wav": "audio/voice/33461139a539bce5.wav"
+  },
+  {
+   "text": "A factory checking the quality of its products works by the very same logic.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "The world that runs on frequencies",
+   "opens": null,
+   "start": 85.847,
+   "end": 89.474,
+   "wav": "audio/voice/3e100da7d0cbf65f.wav"
+  },
+  {
+   "text": "The key thing in all these examples is that they can be repeated.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "The world that runs on frequencies",
+   "opens": null,
+   "start": 90.424,
+   "end": 93.468,
+   "wav": "audio/voice/3e7a0a8210f11fff.wav"
+  },
+  {
+   "text": "You can keep flipping the coin, keep making new batches, keep selling new insurance policies.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "The world that runs on frequencies",
+   "opens": null,
+   "start": 93.818,
+   "end": 98.863,
+   "wav": "audio/voice/dd63aaad5a40e781.wav"
+  },
+  {
+   "text": "That repeatability turns a frequency into a number you can measure and test, so any argument can be settled with real data.",
+   "idea": false,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "The world that runs on frequencies",
+   "opens": null,
+   "start": 99.213,
+   "end": 105.629,
+   "wav": "audio/voice/89de3471bca505b8.wav"
+  },
+  {
+   "text": "For problems of this kind, the frequency view is almost the natural choice. The trouble lies with the problems that are not of this kind.",
+   "idea": true,
+   "act": "ACT ONE \u2014 Probability as frequency",
+   "section": "The world that runs on frequencies",
+   "opens": null,
+   "start": 105.979,
+   "end": 113.031,
+   "wav": "audio/voice/5ee34f5a253e165c.wav"
+  },
+  {
+   "text": "Try applying the frequency view to sentences like these.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Things that happen once",
+   "opens": "act",
+   "start": 115.431,
+   "end": 118.424,
+   "wav": "audio/voice/dccb018a1d1435ec.wav"
+  },
+  {
+   "text": "The probability that it rains in Hanoi tomorrow is seventy percent.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Things that happen once",
+   "opens": null,
+   "start": 118.774,
+   "end": 122.228,
+   "wav": "audio/voice/a0b7b37a5ccc42f1.wav"
+  },
+  {
+   "text": "The probability that a new drug passes its phase three trial is thirty percent.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Things that happen once",
+   "opens": null,
+   "start": 122.578,
+   "end": 126.652,
+   "wav": "audio/voice/ac5394058616ece2.wav"
+  },
+  {
+   "text": "The probability that this candidate wins the election is sixty percent.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Things that happen once",
+   "opens": null,
+   "start": 127.002,
+   "end": 130.586,
+   "wav": "audio/voice/0016bf8e01ea2dd2.wav"
+  },
+  {
+   "text": "There is only one tomorrow, and it will not repeat.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Things that happen once",
+   "opens": null,
+   "start": 131.536,
+   "end": 133.642,
+   "wav": "audio/voice/5e82eed8075884a8.wav"
+  },
+  {
+   "text": "That drug is tested only once, in exactly the way it is being tested.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Things that happen once",
+   "opens": null,
+   "start": 133.992,
+   "end": 137.368,
+   "wav": "audio/voice/ebfcc7f3efd53f2e.wav"
+  },
+  {
+   "text": "That election happens exactly once in history. There are no million tomorrows for you to count how many were rainy.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Things that happen once",
+   "opens": null,
+   "start": 137.718,
+   "end": 143.508,
+   "wav": "audio/voice/5fb4b148a139eec7.wav"
+  },
+  {
+   "text": "People who hold the frequency view have a rather clever answer for the weather.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "A clever escape",
+   "opens": "stop",
+   "start": 145.108,
+   "end": 148.62,
+   "wav": "audio/voice/25964a3fc7e44d31.wav"
+  },
+  {
+   "text": "They say the seventy percent is not about tomorrow at all. It is about the whole collection of days on which the forecast said seventy percent.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "A clever escape",
+   "opens": null,
+   "start": 148.97,
+   "end": 156.181,
+   "wav": "audio/voice/731c7dcd5ea6b2df.wav"
+  },
+  {
+   "text": "If, among all those days, roughly seven in ten really did turn out rainy, the forecast is called well calibrated.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "A clever escape",
+   "opens": null,
+   "start": 156.531,
+   "end": 162.426,
+   "wav": "audio/voice/fe1e4f0657850ec4.wav"
+  },
+  {
+   "text": "It is a lovely idea, and it is exactly how forecasting models are scored in practice.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "A clever escape",
+   "opens": null,
+   "start": 162.776,
+   "end": 167.013,
+   "wav": "audio/voice/6c91d6981ca6fcaf.wav"
+  },
+  {
+   "text": "But that answer cannot rescue every case.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "A clever escape",
+   "opens": null,
+   "start": 167.363,
+   "end": 169.259,
+   "wav": "audio/voice/dc11f317befa4dfc.wav"
+  },
+  {
+   "text": "Go back to the coin lying under my hand. It has already landed. There is no collection to put it in.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Back to the coin under my hand",
+   "opens": "stop",
+   "start": 170.859,
+   "end": 175.717,
+   "wav": "audio/voice/0d483fdb9af2d4b1.wav"
+  },
+  {
+   "text": "The event has happened, and the result is fixed.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Back to the coin under my hand",
+   "opens": null,
+   "start": 176.067,
+   "end": 178.224,
+   "wav": "audio/voice/83273be1485390b6.wav"
+  },
+  {
+   "text": "And this is the point where I feel I need to stop and think a little harder.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Back to the coin under my hand",
+   "opens": null,
+   "start": 178.574,
+   "end": 181.995,
+   "wav": "audio/voice/d70736ae9be47970.wav"
+  },
+  {
+   "text": "Suppose I sneak a look at the coin, and you don't.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Back to the coin under my hand",
+   "opens": null,
+   "start": 182.945,
+   "end": 185.131,
+   "wav": "audio/voice/f79853e78227aa9a.wav"
+  },
+  {
+   "text": "For me, the probability is now one hundred percent, or zero. For you, it is still fifty.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Back to the coin under my hand",
+   "opens": null,
+   "start": 185.481,
+   "end": 189.872,
+   "wav": "audio/voice/e19c3ee4029ec9d6.wav"
+  },
+  {
+   "text": "The coin did not change at all in the instant I looked. Only the information changed.",
+   "idea": false,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Back to the coin under my hand",
+   "opens": null,
+   "start": 190.222,
+   "end": 194.289,
+   "wav": "audio/voice/db60247814c9a999.wav"
+  },
+  {
+   "text": "And that small observation leads straight to the second way of understanding probability.",
+   "idea": true,
+   "act": "ACT TWO \u2014 Where frequency runs out of breath",
+   "section": "Back to the coin under my hand",
+   "opens": null,
+   "start": 194.639,
+   "end": 199.311,
+   "wav": "audio/voice/5223f599d08605d8.wav"
+  },
+  {
+   "text": "The second view says that probability measures how strongly you believe a statement, given the information you have.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "A property of you, not of the coin",
+   "opens": "act",
+   "start": 201.711,
+   "end": 207.738,
+   "wav": "audio/voice/cf8b64cc9f1f3bbc.wav"
+  },
+  {
+   "text": "In this view, probability is a property of the relationship between you and the event. It doesn't live inside the coin, or the cloud, or the ballot.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "A property of you, not of the coin",
+   "opens": null,
+   "start": 208.088,
+   "end": 215.774,
+   "wav": "audio/voice/320195c8c265828a.wav"
+  },
+  {
+   "text": "It describes the state of your knowledge.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "A property of you, not of the coin",
+   "opens": null,
+   "start": 216.124,
+   "end": 217.992,
+   "wav": "audio/voice/dc419e4d4c4ff9bf.wav"
+  },
+  {
+   "text": "At first this sounds far too loose, as if anyone could believe whatever they like.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": "stop",
+   "start": 219.592,
+   "end": 223.616,
+   "wav": "audio/voice/fc222e20001c8b52.wav"
+  },
+  {
+   "text": "But in fact it is tightly constrained.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 223.966,
+   "end": 225.777,
+   "wav": "audio/voice/4748f478dd3428e8.wav"
+  },
+  {
+   "text": "In the nineteen twenties and thirties, Frank Ramsey in England and Bruno de Finetti in Italy, working independently, showed that if you want your beliefs to be consistent, they are forced to obey exactly the rules of probability.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 226.127,
+   "end": 238.279,
+   "wav": "audio/voice/65d33df08a30cc61.wav"
+  },
+  {
+   "text": "Their argument is built on betting.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 239.229,
+   "end": 240.678,
+   "wav": "audio/voice/ce19844c8bccb057.wav"
+  },
+  {
+   "text": "Suppose you are willing to bet according to exactly how strongly you believe things.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 241.028,
+   "end": 245.13,
+   "wav": "audio/voice/de74dd05d04dbfad.wav"
+  },
+  {
+   "text": "Now suppose your numbers break the rules. In a match with only two possible outcomes, you believe team A will win with seventy percent, and at the same time you believe team B will win with fifty percent.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 245.48,
+   "end": 256.08,
+   "wav": "audio/voice/63eed1fbe6b9b58a.wav"
+  },
+  {
+   "text": "Then someone can sell you two tickets. One pays a dollar if A wins, and by your own belief it is worth seventy cents. The other pays a dollar if B wins, and by your own belief it is worth fifty cents.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 256.43,
+   "end": 266.52,
+   "wav": "audio/voice/0b7b8d9b25025f10.wav"
+  },
+  {
+   "text": "Each ticket looks perfectly fair to you, so you buy both, for a dollar twenty.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 266.87,
+   "end": 270.615,
+   "wav": "audio/voice/b91746250fccda02.wav"
+  },
+  {
+   "text": "But exactly one team will win, so you will collect exactly one dollar. Whatever happens, you lose twenty cents.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 270.965,
+   "end": 276.677,
+   "wav": "audio/voice/e797c43612d674ee.wav"
+  },
+  {
+   "text": "So the rules of probability don't fall from the sky. They are the conditions for your beliefs not to contradict themselves.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 277.627,
+   "end": 284.058,
+   "wav": "audio/voice/3febbde0a9c455e0.wav"
+  },
+  {
+   "text": "What I love about this view is that it handles events that happen only once.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 284.408,
+   "end": 288.103,
+   "wav": "audio/voice/7fe79d0bf829acee.wav"
+  },
+  {
+   "text": "You can perfectly well talk about how strongly you believe that Mars once had life, even though that is simply true or false, and will never be repeated.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Belief with rules",
+   "opens": null,
+   "start": 288.453,
+   "end": 295.929,
+   "wav": "audio/voice/3e9db7c1cb0dd457.wav"
+  },
+  {
+   "text": "Once probability is a belief, a new question appears. When new information arrives, how much should you change your mind?",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": "stop",
+   "start": 297.529,
+   "end": 303.641,
+   "wav": "audio/voice/808ebfa7f13c9c73.wav"
+  },
+  {
+   "text": "Bayes' theorem answers that question. Let me walk through a concrete situation, so it is easy to picture.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 303.991,
+   "end": 309.053,
+   "wav": "audio/voice/94113b73b0b8ca7d.wav"
+  },
+  {
+   "text": "A text message pops up on your phone, claiming to be from your bank.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 310.003,
+   "end": 313.23,
+   "wav": "audio/voice/cfe7c02773bd49d1.wav"
+  },
+  {
+   "text": "The hypothesis you are weighing is this. The message is a scam.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 313.58,
+   "end": 316.762,
+   "wav": "audio/voice/ebef3448ca80236f.wav"
+  },
+  {
+   "text": "Until now, messages from this number have almost always been genuine, so your starting belief leans heavily towards genuine.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 317.112,
+   "end": 323.856,
+   "wav": "audio/voice/f0c02e7def535c48.wav"
+  },
+  {
+   "text": "Picture it as a pair of scales, tipped deep to one side.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 324.206,
+   "end": 326.783,
+   "wav": "audio/voice/6046bdf060809f9b.wav"
+  },
+  {
+   "text": "The message opens with \"Dear valued customer\". So you ask yourself two questions.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 327.733,
+   "end": 331.791,
+   "wav": "audio/voice/29d0f5f28e7a4974.wav"
+  },
+  {
+   "text": "First, if this is a scam, how likely is it to open so politely? Quite likely.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 332.141,
+   "end": 335.792,
+   "wav": "audio/voice/7767ab21dd66c68e.wav"
+  },
+  {
+   "text": "Second, if this is genuine, how likely is it to open exactly like that? Also quite likely.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 336.142,
+   "end": 340.846,
+   "wav": "audio/voice/11e4769e9b5bfad4.wav"
+  },
+  {
+   "text": "The ratio between those two answers is the weight of the evidence.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 341.196,
+   "end": 344.386,
+   "wav": "audio/voice/f619f8a728f80465.wav"
+  },
+  {
+   "text": "Here the two numbers are almost equal, so the ratio is close to one. Multiply the scales by it, and they barely move.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 344.736,
+   "end": 350.426,
+   "wav": "audio/voice/a1991e794f7853bd.wav"
+  },
+  {
+   "text": "You have read the greeting, and you have really learned nothing.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 350.776,
+   "end": 353.801,
+   "wav": "audio/voice/34a5dc199206dd15.wav"
+  },
+  {
+   "text": "You read on, and the message asks you to reply with your one-time password.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 354.751,
+   "end": 358.402,
+   "wav": "audio/voice/afa8a9aaefe81650.wav"
+  },
+  {
+   "text": "If it is a scam, that request makes perfect sense. If it is really your bank, it almost never happens.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 358.752,
+   "end": 363.711,
+   "wav": "audio/voice/4542ebd29173b391.wav"
+  },
+  {
+   "text": "Now the two numbers are far apart, the weight is large, and the scales swing hard.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 364.061,
+   "end": 367.745,
+   "wav": "audio/voice/75202334dbb6275c.wav"
+  },
+  {
+   "text": "That is the heart of Bayes' theorem.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 368.695,
+   "end": 370.215,
+   "wav": "audio/voice/fd5198a6dc0f7962.wav"
+  },
+  {
+   "text": "A piece of evidence is convincing not because it fits your hypothesis, but because it would be unlikely if your hypothesis were wrong.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 370.565,
+   "end": 377.47,
+   "wav": "audio/voice/32327ea2c6366018.wav"
+  },
+  {
+   "text": "A sign that shows up about equally often whether the hypothesis is true or false tells you almost nothing, however impressive it looks.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 377.82,
+   "end": 384.907,
+   "wav": "audio/voice/fd15dcc402a0165b.wav"
+  },
+  {
+   "text": "And one more thing. The scales only shift. They are never reset from scratch.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 385.857,
+   "end": 389.773,
+   "wav": "audio/voice/3f8f8ba358a140d0.wav"
+  },
+  {
+   "text": "If you start from a hypothesis that is extremely unlikely, with the scales tipped very deep, a single piece of evidence is usually not enough to pull them back to the middle.",
+   "idea": false,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 390.123,
+   "end": 398.949,
+   "wav": "audio/voice/a9981d82efdcd91a.wav"
+  },
+  {
+   "text": "That sounds obvious. But in the next part I will show you just how easily it gets forgotten.",
+   "idea": true,
+   "act": "ACT THREE \u2014 Probability as degree of belief",
+   "section": "Evidence doesn't tell you right or wrong, it shifts the scales",
+   "opens": null,
+   "start": 399.299,
+   "end": 403.776,
+   "wav": "audio/voice/c5e4753d933886ac.wav"
+  },
+  {
+   "text": "Here is a classic example from medicine.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "A positive test",
+   "opens": "act",
+   "start": 406.176,
+   "end": 407.995,
+   "wav": "audio/voice/d949ba15aea27583.wav"
+  },
+  {
+   "text": "Suppose there is a disease that affects one person in every thousand. And there is a test for it.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "A positive test",
+   "opens": null,
+   "start": 408.345,
+   "end": 412.909,
+   "wav": "audio/voice/69bee73ab7d4782b.wav"
+  },
+  {
+   "text": "If you really have the disease, the test comes back positive ninety-nine percent of the time.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "A positive test",
+   "opens": null,
+   "start": 413.259,
+   "end": 417.885,
+   "wav": "audio/voice/dde7dc5a8e729f59.wav"
+  },
+  {
+   "text": "If you are perfectly healthy, there is still a five percent chance it comes back positive by mistake.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "A positive test",
+   "opens": null,
+   "start": 418.235,
+   "end": 423.467,
+   "wav": "audio/voice/c9021111859c70ff.wav"
+  },
+  {
+   "text": "You take the test, and it comes back positive. What do you think is the chance that you really have the disease?",
+   "idea": true,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "A positive test",
+   "opens": null,
+   "start": 423.817,
+   "end": 429.253,
+   "wav": "audio/voice/d561a306b0810255.wav"
+  },
+  {
+   "text": "The easiest way to see it is to count real people.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Count real people",
+   "opens": "stop",
+   "start": 430.853,
+   "end": 432.948,
+   "wav": "audio/voice/4fc007deaec2b41d.wav"
+  },
+  {
+   "text": "Imagine one hundred thousand people all taking the test.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Count real people",
+   "opens": null,
+   "start": 433.298,
+   "end": 436.011,
+   "wav": "audio/voice/5d74f96fdcb0a847.wav"
+  },
+  {
+   "text": "About one hundred of them really have the disease, and the test catches ninety-nine of them.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Count real people",
+   "opens": null,
+   "start": 436.361,
+   "end": 440.923,
+   "wav": "audio/voice/c18113d8c3f85f1c.wav"
+  },
+  {
+   "text": "That leaves ninety-nine thousand nine hundred healthy people. With a five percent false alarm rate, about four thousand nine hundred and ninety-five of them get a positive result too.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Count real people",
+   "opens": null,
+   "start": 441.273,
+   "end": 450.808,
+   "wav": "audio/voice/96aa454ace2515cd.wav"
+  },
+  {
+   "text": "So in total, about five thousand and ninety-four people are holding a positive result. And only ninety-nine of them are actually sick.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Count real people",
+   "opens": null,
+   "start": 451.158,
+   "end": 458.218,
+   "wav": "audio/voice/a57c12e80d6176cc.wav"
+  },
+  {
+   "text": "Ninety-nine out of five thousand and ninety-four, is about two percent.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Count real people",
+   "opens": null,
+   "start": 458.568,
+   "end": 462.377,
+   "wav": "audio/voice/3bdc6d232c0427c1.wav"
+  },
+  {
+   "text": "In other words, even with a positive result in your hand, the chance that you are really ill is only about two percent.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Count real people",
+   "opens": null,
+   "start": 463.327,
+   "end": 469.243,
+   "wav": "audio/voice/bddd0686bdd46608.wav"
+  },
+  {
+   "text": "That number surprises a lot of people, and not only beginners.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Why it catches us out",
+   "opens": "stop",
+   "start": 470.843,
+   "end": 473.932,
+   "wav": "audio/voice/7ca26c841c62cea2.wav"
+  },
+  {
+   "text": "In nineteen seventy-eight, researchers at Harvard put almost exactly this question to sixty doctors, residents and medical students. Nearly half of them answered ninety-five percent.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Why it catches us out",
+   "opens": null,
+   "start": 474.282,
+   "end": 483.813,
+   "wav": "audio/voice/040e1b0c7d7d423d.wav"
+  },
+  {
+   "text": "The reason is that most of us focus on how accurate the test is, and forget how rare the disease was to begin with.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Why it catches us out",
+   "opens": null,
+   "start": 484.763,
+   "end": 490.353,
+   "wav": "audio/voice/d5994653a2c8c494.wav"
+  },
+  {
+   "text": "That starting rate matters enormously, yet it slips out of view without a sound.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Why it catches us out",
+   "opens": null,
+   "start": 490.703,
+   "end": 494.736,
+   "wav": "audio/voice/331c5fb4dd09fddb.wav"
+  },
+  {
+   "text": "When a disease is rare, the healthy people are so numerous that just a few percent of false alarms is enough to swamp the people who are truly sick.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Why it catches us out",
+   "opens": null,
+   "start": 495.086,
+   "end": 502.542,
+   "wav": "audio/voice/dcfc321ffa1de3f2.wav"
+  },
+  {
+   "text": "And notice what made it easy. Counting people, instead of juggling percentages.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Why it catches us out",
+   "opens": null,
+   "start": 503.492,
+   "end": 507.414,
+   "wav": "audio/voice/789ea4123fd781c7.wav"
+  },
+  {
+   "text": "Psychologists call these natural frequencies, and simply rewriting the problem this way makes far more people get it right.",
+   "idea": false,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Why it catches us out",
+   "opens": null,
+   "start": 507.764,
+   "end": 514.136,
+   "wav": "audio/voice/4ada683e29abd508.wav"
+  },
+  {
+   "text": "Counting, the frequency view, turns out to be the best tool for updating a belief.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Why it catches us out",
+   "opens": null,
+   "start": 514.486,
+   "end": 518.564,
+   "wav": "audio/voice/5ceefe4fe90b00da.wav"
+  },
+  {
+   "text": "The lesson of this example is that the same test result can mean very different things, depending on the background information you start from.",
+   "idea": true,
+   "act": "ACT FOUR \u2014 The number that surprises experts",
+   "section": "Why it catches us out",
+   "opens": null,
+   "start": 519.514,
+   "end": 526.929,
+   "wav": "audio/voice/c063125b90e8af73.wav"
+  },
+  {
+   "text": "By now you might think these two views are two rival schools of mathematics. In fact, they are not.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Three rules",
+   "opens": "act",
+   "start": 529.329,
+   "end": 534.221,
+   "wav": "audio/voice/b14b6c34ec2937ac.wav"
+  },
+  {
+   "text": "In nineteen thirty-three, Andrey Kolmogorov put probability on a rigorous mathematical foundation, built on just three axioms, and they are surprisingly simple.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Three rules",
+   "opens": null,
+   "start": 534.571,
+   "end": 543.126,
+   "wav": "audio/voice/d27391db5cc6808b.wav"
+  },
+  {
+   "text": "He said that a probability is a rule that gives every event a number, such that, first, no value is ever negative.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Three rules",
+   "opens": null,
+   "start": 544.076,
+   "end": 549.701,
+   "wav": "audio/voice/3095202e976e8f99.wav"
+  },
+  {
+   "text": "Second, the certain event gets the value one.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Three rules",
+   "opens": null,
+   "start": 550.051,
+   "end": 552.046,
+   "wav": "audio/voice/e7228c52d61c4e82.wav"
+  },
+  {
+   "text": "And third, for events that are mutually exclusive, meaning they can't happen together, the probability that one of them happens is the sum of their separate probabilities.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Three rules",
+   "opens": null,
+   "start": 552.396,
+   "end": 561.347,
+   "wav": "audio/voice/f76b808aedd75def.wav"
+  },
+  {
+   "text": "That is all.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Three rules",
+   "opens": null,
+   "start": 561.697,
+   "end": 562.31,
+   "wav": "audio/voice/0d11b72a8fc5a258.wav"
+  },
+  {
+   "text": "The whole of modern probability theory is built on those three conditions.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Rules, not meaning",
+   "opens": "stop",
+   "start": 563.91,
+   "end": 567.701,
+   "wav": "audio/voice/79ce72bbd777074d.wav"
+  },
+  {
+   "text": "And what is remarkable is that nowhere in those three axioms is there a single line saying what probability means.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Rules, not meaning",
+   "opens": null,
+   "start": 568.051,
+   "end": 573.742,
+   "wav": "audio/voice/db96eccbd2277e7b.wav"
+  },
+  {
+   "text": "Kolmogorov gives you the rules of the game, not its meaning.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Rules, not meaning",
+   "opens": null,
+   "start": 574.092,
+   "end": 576.839,
+   "wav": "audio/voice/9f4eaa2a0a8978e1.wav"
+  },
+  {
+   "text": "Seen from mathematics, a probability is just a measure, from the same family as the way we measure area and volume, with the convention that the whole space of outcomes has measure one.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Rules, not meaning",
+   "opens": null,
+   "start": 577.789,
+   "end": 587.255,
+   "wav": "audio/voice/edac5d9461995adc.wav"
+  },
+  {
+   "text": "When you say an event has probability three tenths, you are saying it takes up three tenths of that space.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Rules, not meaning",
+   "opens": null,
+   "start": 587.605,
+   "end": 592.611,
+   "wav": "audio/voice/d9120bc912fb643c.wav"
+  },
+  {
+   "text": "The frequency view and the belief view both satisfy these axioms.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Rules, not meaning",
+   "opens": null,
+   "start": 593.561,
+   "end": 596.835,
+   "wav": "audio/voice/d26ddff2808aae1e.wav"
+  },
+  {
+   "text": "That is why the two sides can argue fiercely about meaning, and still share the very same set of tools for calculation.",
+   "idea": false,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Rules, not meaning",
+   "opens": null,
+   "start": 597.185,
+   "end": 603.367,
+   "wav": "audio/voice/80a9edf97ad67986.wav"
+  },
+  {
+   "text": "Frequentists and Bayesians build different statistical methods, and answer different questions. But neither of them is doing the mathematics wrong.",
+   "idea": true,
+   "act": "ACT FIVE \u2014 Mathematics doesn't take sides",
+   "section": "Rules, not meaning",
+   "opens": null,
+   "start": 603.717,
+   "end": 611.975,
+   "wav": "audio/voice/082aa6fe32640f8d.wav"
+  },
+  {
+   "text": "There is a deeper question, and to me it is the most fascinating question in this whole video.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "A coin is a machine",
+   "opens": "act",
+   "start": 614.375,
+   "end": 619.043,
+   "wav": "audio/voice/e089b29d22c163de.wav"
+  },
+  {
+   "text": "A coin flying through the air is a physical object obeying Newton's mechanics.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "A coin is a machine",
+   "opens": null,
+   "start": 619.393,
+   "end": 623.225,
+   "wav": "audio/voice/5024255bc6381927.wav"
+  },
+  {
+   "text": "If you knew exactly the force of the flick, the angle, the spin, the height, and the way the hand catches it, you could calculate the result. There is nothing mysterious in it at all.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "A coin is a machine",
+   "opens": null,
+   "start": 623.575,
+   "end": 632.505,
+   "wav": "audio/voice/4b5741ed3486bbf6.wav"
+  },
+  {
+   "text": "Persi Diaconis, a mathematician who was once a professional magician, showed this in a very practical way.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "A coin is a machine",
+   "opens": null,
+   "start": 633.455,
+   "end": 638.886,
+   "wav": "audio/voice/518711bd91216431.wav"
+  },
+  {
+   "text": "He and his colleagues built a coin-tossing machine with fixed settings, and it gave the same face every single time.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "A coin is a machine",
+   "opens": null,
+   "start": 639.236,
+   "end": 645.171,
+   "wav": "audio/voice/0026ff1178292a20.wav"
+  },
+  {
+   "text": "His team also showed that a coin flipped by hand and caught in the palm is slightly biased towards the face that started on top, about fifty-one percent of the time.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "A coin is a machine",
+   "opens": null,
+   "start": 645.521,
+   "end": 654.094,
+   "wav": "audio/voice/c2b55e4b5646d4bb.wav"
+  },
+  {
+   "text": "In twenty twenty-three, a team of researchers tested this with more than three hundred and fifty thousand real flips, and found fifty point eight percent. Almost exactly what the theory predicted.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "A coin is a machine",
+   "opens": null,
+   "start": 654.444,
+   "end": 664.667,
+   "wav": "audio/voice/d2f7eee810cabc4d.wav"
+  },
+  {
+   "text": "So if you had seen which face was up when I flicked my coin at the start of this video, your number would not be fifty percent. It would be fifty-one.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "A coin is a machine",
+   "opens": null,
+   "start": 665.617,
+   "end": 673.038,
+   "wav": "audio/voice/be9ecccb59ed6bf3.wav"
+  },
+  {
+   "text": "The coin is the same coin. Once again, only the information changed.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "A coin is a machine",
+   "opens": null,
+   "start": 673.388,
+   "end": 676.785,
+   "wav": "audio/voice/991309d3a77357a1.wav"
+  },
+  {
+   "text": "So the randomness of a coin is not inside the coin.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "Randomness as missing information",
+   "opens": "stop",
+   "start": 678.385,
+   "end": 680.73,
+   "wav": "audio/voice/762c317751a22a43.wav"
+  },
+  {
+   "text": "It lies in the fact that the result is extremely sensitive to starting conditions that our hands cannot control, and our eyes cannot measure.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "Randomness as missing information",
+   "opens": null,
+   "start": 681.08,
+   "end": 688.348,
+   "wav": "audio/voice/c043f6d0308af350.wav"
+  },
+  {
+   "text": "Randomness, here, is another name for missing information.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "Randomness as missing information",
+   "opens": null,
+   "start": 688.698,
+   "end": 691.457,
+   "wav": "audio/voice/07686901be4c314e.wav"
+  },
+  {
+   "text": "With the weather, with markets, with traffic, the story is much the same. They are complicated, and extremely sensitive to where they start, but they are not mystical.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "Randomness as missing information",
+   "opens": null,
+   "start": 691.807,
+   "end": 700.16,
+   "wav": "audio/voice/599ce8bd469a489a.wav"
+  },
+  {
+   "text": "To be fair, there is one place where this story is not settled.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "The one place the story isn't settled",
+   "opens": "stop",
+   "start": 701.76,
+   "end": 704.763,
+   "wav": "audio/voice/d2554d7bc3b31b2e.wav"
+  },
+  {
+   "text": "Down at the scale of single particles, quantum mechanics behaves very differently.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "The one place the story isn't settled",
+   "opens": null,
+   "start": 705.113,
+   "end": 709.256,
+   "wav": "audio/voice/0cbc3563e7fbea47.wav"
+  },
+  {
+   "text": "Experiments built on a result called Bell's theorem, which earned the Nobel Prize in Physics in twenty twenty-two, have ruled out the idea that each outcome is simply written in advance, in hidden information the particles carry with them.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "The one place the story isn't settled",
+   "opens": null,
+   "start": 709.606,
+   "end": 721.921,
+   "wav": "audio/voice/f00adb4219bfbd02.wav"
+  },
+  {
+   "text": "Whether that is true randomness, or something stranger still, physicists are still debating.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "The one place the story isn't settled",
+   "opens": null,
+   "start": 722.271,
+   "end": 726.85,
+   "wav": "audio/voice/a1f9d8f128567185.wav"
+  },
+  {
+   "text": "But a coin is not an electron. For the coin, the weather and almost everything in our daily lives, the uncertainty lives in us.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "The one place the story isn't settled",
+   "opens": null,
+   "start": 727.2,
+   "end": 733.638,
+   "wav": "audio/voice/08f6c83f67cb60cb.wav"
+  },
+  {
+   "text": "So, in the end, probability is often introduced as a tool for talking about how random the world is.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "The distance between you and the coin",
+   "opens": "stop",
+   "start": 735.238,
+   "end": 740.192,
+   "wav": "audio/voice/5f912ff3b63b205e.wav"
+  },
+  {
+   "text": "But look closely, and it is a disciplined way of writing down what you don't yet know.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "The distance between you and the coin",
+   "opens": null,
+   "start": 740.542,
+   "end": 744.961,
+   "wav": "audio/voice/195dcc5dafc43c8e.wav"
+  },
+  {
+   "text": "The fifty percent at the start of this video says nothing about the coin. It describes the distance between you, and the coin.",
+   "idea": true,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "The distance between you and the coin",
+   "opens": null,
+   "start": 745.311,
+   "end": 751.582,
+   "wav": "audio/voice/bf2012f20d885547.wav"
+  },
+  {
+   "text": "Thank you for watching all the way to the end.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "The distance between you and the coin",
+   "opens": null,
+   "start": 752.532,
+   "end": 754.489,
+   "wav": "audio/voice/68f0d722151e0fa3.wav"
+  },
+  {
+   "text": "If this changed the way you hear the word probability, subscribe to ninety-nine percent from scratch, so you don't miss the next one. See you soon.",
+   "idea": false,
+   "act": "ACT SIX \u2014 Is the world random, or are we just missing information?",
+   "section": "The distance between you and the coin",
+   "opens": null,
+   "start": 754.839,
+   "end": 762.097,
+   "wav": "audio/voice/ab427d861bd1beab.wav"
+  }
+ ]
+}

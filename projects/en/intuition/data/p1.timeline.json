@@ -1,0 +1,1684 @@
+{
+ "sections": [
+  {
+   "name": "Cold open",
+   "act": "",
+   "start": 0.02,
+   "end": 71.804
+  }
+ ],
+ "lines": [
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Here's a quick one. Answer it before you think too hard.",
+   "idea": false,
+   "start": 0.02,
+   "end": 2.509,
+   "words": [
+    {
+     "w": "here's",
+     "start": 0.02,
+     "end": 0.141,
+     "conf": 0.025
+    },
+    {
+     "w": "a",
+     "start": 0.161,
+     "end": 0.181,
+     "conf": 0.008
+    },
+    {
+     "w": "quick",
+     "start": 0.201,
+     "end": 0.381,
+     "conf": 0.998
+    },
+    {
+     "w": "one",
+     "start": 0.482,
+     "end": 0.582,
+     "conf": 0.666
+    },
+    {
+     "w": "answer",
+     "start": 1.044,
+     "end": 1.365,
+     "conf": 0.911
+    },
+    {
+     "w": "it",
+     "start": 1.405,
+     "end": 1.445,
+     "conf": 0.499
+    },
+    {
+     "w": "before",
+     "start": 1.466,
+     "end": 1.706,
+     "conf": 0.891
+    },
+    {
+     "w": "you",
+     "start": 1.727,
+     "end": 1.787,
+     "conf": 0.998
+    },
+    {
+     "w": "think",
+     "start": 1.807,
+     "end": 1.988,
+     "conf": 0.833
+    },
+    {
+     "w": "too",
+     "start": 2.028,
+     "end": 2.188,
+     "conf": 0.964
+    },
+    {
+     "w": "hard",
+     "start": 2.269,
+     "end": 2.509,
+     "conf": 0.989
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "There are three cards in a bag. One is red on both sides. One is white on both sides. And one is red on one side and white on the other.",
+   "idea": false,
+   "start": 2.92,
+   "end": 9.53,
+   "words": [
+    {
+     "w": "there",
+     "start": 2.92,
+     "end": 3.02,
+     "conf": 0.052
+    },
+    {
+     "w": "are",
+     "start": 3.04,
+     "end": 3.1,
+     "conf": 0.001
+    },
+    {
+     "w": "three",
+     "start": 3.12,
+     "end": 3.281,
+     "conf": 0.629
+    },
+    {
+     "w": "cards",
+     "start": 3.321,
+     "end": 3.641,
+     "conf": 0.765
+    },
+    {
+     "w": "in",
+     "start": 3.661,
+     "end": 3.721,
+     "conf": 0.998
+    },
+    {
+     "w": "a",
+     "start": 3.741,
+     "end": 3.761,
+     "conf": 0.993
+    },
+    {
+     "w": "bag",
+     "start": 3.841,
+     "end": 4.102,
+     "conf": 0.666
+    },
+    {
+     "w": "one",
+     "start": 4.342,
+     "end": 4.422,
+     "conf": 0.666
+    },
+    {
+     "w": "is",
+     "start": 4.442,
+     "end": 4.502,
+     "conf": 0.999
+    },
+    {
+     "w": "red",
+     "start": 4.603,
+     "end": 4.743,
+     "conf": 0.746
+    },
+    {
+     "w": "on",
+     "start": 4.763,
+     "end": 4.843,
+     "conf": 0.666
+    },
+    {
+     "w": "both",
+     "start": 4.963,
+     "end": 5.163,
+     "conf": 0.726
+    },
+    {
+     "w": "sides",
+     "start": 5.243,
+     "end": 5.604,
+     "conf": 0.783
+    },
+    {
+     "w": "one",
+     "start": 5.804,
+     "end": 5.864,
+     "conf": 0.634
+    },
+    {
+     "w": "is",
+     "start": 5.884,
+     "end": 5.965,
+     "conf": 0.702
+    },
+    {
+     "w": "white",
+     "start": 6.065,
+     "end": 6.265,
+     "conf": 0.793
+    },
+    {
+     "w": "on",
+     "start": 6.285,
+     "end": 6.365,
+     "conf": 0.666
+    },
+    {
+     "w": "both",
+     "start": 6.405,
+     "end": 6.605,
+     "conf": 0.995
+    },
+    {
+     "w": "sides",
+     "start": 6.666,
+     "end": 7.006,
+     "conf": 0.798
+    },
+    {
+     "w": "and",
+     "start": 7.266,
+     "end": 7.347,
+     "conf": 0.658
+    },
+    {
+     "w": "one",
+     "start": 7.447,
+     "end": 7.507,
+     "conf": 0.664
+    },
+    {
+     "w": "is",
+     "start": 7.527,
+     "end": 7.607,
+     "conf": 0.996
+    },
+    {
+     "w": "red",
+     "start": 7.707,
+     "end": 7.827,
+     "conf": 0.684
+    },
+    {
+     "w": "on",
+     "start": 7.847,
+     "end": 7.947,
+     "conf": 0.664
+    },
+    {
+     "w": "one",
+     "start": 8.068,
+     "end": 8.168,
+     "conf": 0.721
+    },
+    {
+     "w": "side",
+     "start": 8.248,
+     "end": 8.528,
+     "conf": 0.751
+    },
+    {
+     "w": "and",
+     "start": 8.628,
+     "end": 8.709,
+     "conf": 0.667
+    },
+    {
+     "w": "white",
+     "start": 8.829,
+     "end": 9.089,
+     "conf": 0.796
+    },
+    {
+     "w": "on",
+     "start": 9.149,
+     "end": 9.189,
+     "conf": 0.499
+    },
+    {
+     "w": "the",
+     "start": 9.209,
+     "end": 9.289,
+     "conf": 0.875
+    },
+    {
+     "w": "other",
+     "start": 9.37,
+     "end": 9.53,
+     "conf": 0.773
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "I pull out a card without looking, and put it on the table. The side facing up is red.",
+   "idea": false,
+   "start": 9.979,
+   "end": 13.868,
+   "words": [
+    {
+     "w": "i",
+     "start": 9.979,
+     "end": 9.999,
+     "conf": 0.004
+    },
+    {
+     "w": "pull",
+     "start": 10.019,
+     "end": 10.14,
+     "conf": 0.747
+    },
+    {
+     "w": "out",
+     "start": 10.16,
+     "end": 10.26,
+     "conf": 0.996
+    },
+    {
+     "w": "a",
+     "start": 10.28,
+     "end": 10.3,
+     "conf": 0.994
+    },
+    {
+     "w": "card",
+     "start": 10.32,
+     "end": 10.561,
+     "conf": 0.796
+    },
+    {
+     "w": "without",
+     "start": 10.581,
+     "end": 10.841,
+     "conf": 0.896
+    },
+    {
+     "w": "looking",
+     "start": 10.861,
+     "end": 11.202,
+     "conf": 0.984
+    },
+    {
+     "w": "and",
+     "start": 11.402,
+     "end": 11.483,
+     "conf": 0.668
+    },
+    {
+     "w": "put",
+     "start": 11.543,
+     "end": 11.643,
+     "conf": 0.667
+    },
+    {
+     "w": "it",
+     "start": 11.663,
+     "end": 11.723,
+     "conf": 0.997
+    },
+    {
+     "w": "on",
+     "start": 11.743,
+     "end": 11.803,
+     "conf": 0.999
+    },
+    {
+     "w": "the",
+     "start": 11.823,
+     "end": 11.904,
+     "conf": 0.981
+    },
+    {
+     "w": "table",
+     "start": 11.944,
+     "end": 12.244,
+     "conf": 0.823
+    },
+    {
+     "w": "the",
+     "start": 12.264,
+     "end": 12.585,
+     "conf": 0.66
+    },
+    {
+     "w": "side",
+     "start": 12.665,
+     "end": 12.886,
+     "conf": 0.64
+    },
+    {
+     "w": "facing",
+     "start": 12.906,
+     "end": 13.207,
+     "conf": 0.783
+    },
+    {
+     "w": "up",
+     "start": 13.247,
+     "end": 13.347,
+     "conf": 0.5
+    },
+    {
+     "w": "is",
+     "start": 13.527,
+     "end": 13.608,
+     "conf": 0.498
+    },
+    {
+     "w": "red",
+     "start": 13.688,
+     "end": 13.868,
+     "conf": 0.823
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "What's the chance that the other side is red too?",
+   "idea": true,
+   "start": 14.299,
+   "end": 15.956,
+   "words": [
+    {
+     "w": "what's",
+     "start": 14.299,
+     "end": 14.42,
+     "conf": 0.18
+    },
+    {
+     "w": "the",
+     "start": 14.441,
+     "end": 14.501,
+     "conf": 0.786
+    },
+    {
+     "w": "chance",
+     "start": 14.521,
+     "end": 14.804,
+     "conf": 0.791
+    },
+    {
+     "w": "that",
+     "start": 14.825,
+     "end": 14.905,
+     "conf": 0.302
+    },
+    {
+     "w": "the",
+     "start": 14.926,
+     "end": 14.986,
+     "conf": 0.603
+    },
+    {
+     "w": "other",
+     "start": 15.006,
+     "end": 15.148,
+     "conf": 0.993
+    },
+    {
+     "w": "side",
+     "start": 15.209,
+     "end": 15.431,
+     "conf": 0.729
+    },
+    {
+     "w": "is",
+     "start": 15.451,
+     "end": 15.532,
+     "conf": 0.654
+    },
+    {
+     "w": "red",
+     "start": 15.552,
+     "end": 15.714,
+     "conf": 0.717
+    },
+    {
+     "w": "too",
+     "start": 15.795,
+     "end": 15.956,
+     "conf": 0.59
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "I'm guessing a number just popped into your head. Fifty percent.",
+   "idea": false,
+   "start": 16.966,
+   "end": 19.941,
+   "words": [
+    {
+     "w": "i'm",
+     "start": 16.966,
+     "end": 17.026,
+     "conf": 0.314
+    },
+    {
+     "w": "guessing",
+     "start": 17.046,
+     "end": 17.328,
+     "conf": 0.76
+    },
+    {
+     "w": "a",
+     "start": 17.348,
+     "end": 17.368,
+     "conf": 0.995
+    },
+    {
+     "w": "number",
+     "start": 17.448,
+     "end": 17.69,
+     "conf": 0.942
+    },
+    {
+     "w": "just",
+     "start": 17.75,
+     "end": 17.891,
+     "conf": 0.703
+    },
+    {
+     "w": "popped",
+     "start": 17.971,
+     "end": 18.192,
+     "conf": 0.564
+    },
+    {
+     "w": "into",
+     "start": 18.273,
+     "end": 18.413,
+     "conf": 0.747
+    },
+    {
+     "w": "your",
+     "start": 18.433,
+     "end": 18.534,
+     "conf": 0.767
+    },
+    {
+     "w": "head",
+     "start": 18.594,
+     "end": 18.795,
+     "conf": 0.735
+    },
+    {
+     "w": "fifty",
+     "start": 18.815,
+     "end": 19.579,
+     "conf": 0.061
+    },
+    {
+     "w": "percent",
+     "start": 19.599,
+     "end": 19.941,
+     "conf": 0.287
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It's either the red-red card or the red-white card. Two cards, one of each. It feels obvious.",
+   "idea": false,
+   "start": 20.392,
+   "end": 24.771,
+   "words": [
+    {
+     "w": "it's",
+     "start": 20.392,
+     "end": 20.472,
+     "conf": 0.787
+    },
+    {
+     "w": "either",
+     "start": 20.513,
+     "end": 20.673,
+     "conf": 0.957
+    },
+    {
+     "w": "the",
+     "start": 20.693,
+     "end": 20.774,
+     "conf": 0.984
+    },
+    {
+     "w": "red-red",
+     "start": 20.854,
+     "end": 21.196,
+     "conf": 0.999
+    },
+    {
+     "w": "card",
+     "start": 21.276,
+     "end": 21.497,
+     "conf": 0.605
+    },
+    {
+     "w": "or",
+     "start": 21.557,
+     "end": 21.617,
+     "conf": 0.99
+    },
+    {
+     "w": "the",
+     "start": 21.638,
+     "end": 21.698,
+     "conf": 0.995
+    },
+    {
+     "w": "red-white",
+     "start": 21.758,
+     "end": 22.16,
+     "conf": 0.933
+    },
+    {
+     "w": "card",
+     "start": 22.18,
+     "end": 22.421,
+     "conf": 0.824
+    },
+    {
+     "w": "two",
+     "start": 22.903,
+     "end": 23.024,
+     "conf": 0.666
+    },
+    {
+     "w": "cards",
+     "start": 23.084,
+     "end": 23.385,
+     "conf": 0.796
+    },
+    {
+     "w": "one",
+     "start": 23.546,
+     "end": 23.646,
+     "conf": 0.982
+    },
+    {
+     "w": "of",
+     "start": 23.666,
+     "end": 23.707,
+     "conf": 0.985
+    },
+    {
+     "w": "each",
+     "start": 23.787,
+     "end": 23.948,
+     "conf": 0.997
+    },
+    {
+     "w": "it",
+     "start": 24.189,
+     "end": 24.229,
+     "conf": 0.499
+    },
+    {
+     "w": "feels",
+     "start": 24.249,
+     "end": 24.45,
+     "conf": 0.646
+    },
+    {
+     "w": "obvious",
+     "start": 24.47,
+     "end": 24.771,
+     "conf": 0.799
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "It's also wrong. The answer is two out of three, and by the end of the first part, you'll see exactly why.",
+   "idea": true,
+   "start": 25.201,
+   "end": 30.309,
+   "words": [
+    {
+     "w": "it's",
+     "start": 25.201,
+     "end": 25.281,
+     "conf": 0.737
+    },
+    {
+     "w": "also",
+     "start": 25.301,
+     "end": 25.522,
+     "conf": 0.799
+    },
+    {
+     "w": "wrong",
+     "start": 25.602,
+     "end": 25.842,
+     "conf": 0.817
+    },
+    {
+     "w": "the",
+     "start": 25.862,
+     "end": 26.343,
+     "conf": 0.665
+    },
+    {
+     "w": "answer",
+     "start": 26.403,
+     "end": 26.603,
+     "conf": 0.831
+    },
+    {
+     "w": "is",
+     "start": 26.663,
+     "end": 26.724,
+     "conf": 0.499
+    },
+    {
+     "w": "two",
+     "start": 26.924,
+     "end": 27.044,
+     "conf": 0.965
+    },
+    {
+     "w": "out",
+     "start": 27.064,
+     "end": 27.144,
+     "conf": 0.68
+    },
+    {
+     "w": "of",
+     "start": 27.164,
+     "end": 27.224,
+     "conf": 0.919
+    },
+    {
+     "w": "three",
+     "start": 27.284,
+     "end": 27.485,
+     "conf": 0.722
+    },
+    {
+     "w": "and",
+     "start": 27.765,
+     "end": 27.825,
+     "conf": 0.663
+    },
+    {
+     "w": "by",
+     "start": 27.845,
+     "end": 27.966,
+     "conf": 0.666
+    },
+    {
+     "w": "the",
+     "start": 27.986,
+     "end": 28.046,
+     "conf": 0.997
+    },
+    {
+     "w": "end",
+     "start": 28.066,
+     "end": 28.146,
+     "conf": 0.987
+    },
+    {
+     "w": "of",
+     "start": 28.166,
+     "end": 28.226,
+     "conf": 0.943
+    },
+    {
+     "w": "the",
+     "start": 28.246,
+     "end": 28.306,
+     "conf": 0.997
+    },
+    {
+     "w": "first",
+     "start": 28.366,
+     "end": 28.627,
+     "conf": 0.821
+    },
+    {
+     "w": "part",
+     "start": 28.647,
+     "end": 28.907,
+     "conf": 1.0
+    },
+    {
+     "w": "you'll",
+     "start": 29.007,
+     "end": 29.147,
+     "conf": 0.418
+    },
+    {
+     "w": "see",
+     "start": 29.248,
+     "end": 29.408,
+     "conf": 0.666
+    },
+    {
+     "w": "exactly",
+     "start": 29.588,
+     "end": 30.009,
+     "conf": 0.971
+    },
+    {
+     "w": "why",
+     "start": 30.109,
+     "end": 30.309,
+     "conf": 0.661
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "That instant answer, the one that arrives before any thinking, is what we call intuition.",
+   "idea": false,
+   "start": 31.762,
+   "end": 36.063,
+   "words": [
+    {
+     "w": "that",
+     "start": 31.762,
+     "end": 31.903,
+     "conf": 0.927
+    },
+    {
+     "w": "instant",
+     "start": 31.983,
+     "end": 32.244,
+     "conf": 0.847
+    },
+    {
+     "w": "answer",
+     "start": 32.285,
+     "end": 32.546,
+     "conf": 0.98
+    },
+    {
+     "w": "the",
+     "start": 32.646,
+     "end": 32.727,
+     "conf": 0.99
+    },
+    {
+     "w": "one",
+     "start": 32.807,
+     "end": 32.867,
+     "conf": 0.006
+    },
+    {
+     "w": "that",
+     "start": 32.888,
+     "end": 32.988,
+     "conf": 0.995
+    },
+    {
+     "w": "arrives",
+     "start": 33.008,
+     "end": 33.39,
+     "conf": 0.694
+    },
+    {
+     "w": "before",
+     "start": 33.41,
+     "end": 33.712,
+     "conf": 0.988
+    },
+    {
+     "w": "any",
+     "start": 33.792,
+     "end": 33.913,
+     "conf": 1.0
+    },
+    {
+     "w": "thinking",
+     "start": 33.993,
+     "end": 34.355,
+     "conf": 0.997
+    },
+    {
+     "w": "is",
+     "start": 34.857,
+     "end": 34.918,
+     "conf": 0.498
+    },
+    {
+     "w": "what",
+     "start": 34.938,
+     "end": 35.038,
+     "conf": 0.982
+    },
+    {
+     "w": "we",
+     "start": 35.058,
+     "end": 35.119,
+     "conf": 0.995
+    },
+    {
+     "w": "call",
+     "start": 35.199,
+     "end": 35.4,
+     "conf": 0.762
+    },
+    {
+     "w": "intuition",
+     "start": 35.541,
+     "end": 36.063,
+     "conf": 0.985
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And some puzzles are built so that the instant answer is a trap.",
+   "idea": false,
+   "start": 36.453,
+   "end": 39.34,
+   "words": [
+    {
+     "w": "and",
+     "start": 36.453,
+     "end": 36.513,
+     "conf": 0.995
+    },
+    {
+     "w": "some",
+     "start": 36.533,
+     "end": 36.674,
+     "conf": 0.8
+    },
+    {
+     "w": "puzzles",
+     "start": 36.694,
+     "end": 37.155,
+     "conf": 0.639
+    },
+    {
+     "w": "are",
+     "start": 37.315,
+     "end": 37.375,
+     "conf": 0.347
+    },
+    {
+     "w": "built",
+     "start": 37.395,
+     "end": 37.616,
+     "conf": 0.768
+    },
+    {
+     "w": "so",
+     "start": 37.896,
+     "end": 37.956,
+     "conf": 0.5
+    },
+    {
+     "w": "that",
+     "start": 37.976,
+     "end": 38.077,
+     "conf": 0.796
+    },
+    {
+     "w": "the",
+     "start": 38.097,
+     "end": 38.157,
+     "conf": 0.979
+    },
+    {
+     "w": "instant",
+     "start": 38.217,
+     "end": 38.498,
+     "conf": 0.839
+    },
+    {
+     "w": "answer",
+     "start": 38.638,
+     "end": 38.838,
+     "conf": 0.563
+    },
+    {
+     "w": "is",
+     "start": 38.899,
+     "end": 38.939,
+     "conf": 0.499
+    },
+    {
+     "w": "a",
+     "start": 38.999,
+     "end": 39.019,
+     "conf": 0.001
+    },
+    {
+     "w": "trap",
+     "start": 39.079,
+     "end": 39.34,
+     "conf": 0.737
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "There's one puzzle that thousands of smart people, including professors of mathematics, argued about by mail, because they trusted their gut over the calculation.",
+   "idea": true,
+   "start": 39.73,
+   "end": 47.799,
+   "words": [
+    {
+     "w": "there's",
+     "start": 39.73,
+     "end": 39.87,
+     "conf": 0.082
+    },
+    {
+     "w": "one",
+     "start": 40.01,
+     "end": 40.09,
+     "conf": 0.666
+    },
+    {
+     "w": "puzzle",
+     "start": 40.15,
+     "end": 40.471,
+     "conf": 0.52
+    },
+    {
+     "w": "that",
+     "start": 40.491,
+     "end": 40.611,
+     "conf": 0.98
+    },
+    {
+     "w": "thousands",
+     "start": 40.711,
+     "end": 41.092,
+     "conf": 0.89
+    },
+    {
+     "w": "of",
+     "start": 41.112,
+     "end": 41.192,
+     "conf": 0.99
+    },
+    {
+     "w": "smart",
+     "start": 41.292,
+     "end": 41.552,
+     "conf": 0.781
+    },
+    {
+     "w": "people",
+     "start": 41.612,
+     "end": 41.892,
+     "conf": 0.833
+    },
+    {
+     "w": "including",
+     "start": 42.113,
+     "end": 42.493,
+     "conf": 0.887
+    },
+    {
+     "w": "professors",
+     "start": 42.553,
+     "end": 43.054,
+     "conf": 0.898
+    },
+    {
+     "w": "of",
+     "start": 43.074,
+     "end": 43.154,
+     "conf": 0.666
+    },
+    {
+     "w": "mathematics",
+     "start": 43.174,
+     "end": 43.714,
+     "conf": 0.996
+    },
+    {
+     "w": "argued",
+     "start": 43.975,
+     "end": 44.235,
+     "conf": 0.854
+    },
+    {
+     "w": "about",
+     "start": 44.255,
+     "end": 44.435,
+     "conf": 0.842
+    },
+    {
+     "w": "by",
+     "start": 44.455,
+     "end": 44.555,
+     "conf": 0.999
+    },
+    {
+     "w": "mail",
+     "start": 44.635,
+     "end": 44.896,
+     "conf": 0.809
+    },
+    {
+     "w": "because",
+     "start": 45.196,
+     "end": 45.617,
+     "conf": 0.857
+    },
+    {
+     "w": "they",
+     "start": 45.637,
+     "end": 45.837,
+     "conf": 0.749
+    },
+    {
+     "w": "trusted",
+     "start": 45.937,
+     "end": 46.397,
+     "conf": 0.871
+    },
+    {
+     "w": "their",
+     "start": 46.498,
+     "end": 46.618,
+     "conf": 0.767
+    },
+    {
+     "w": "gut",
+     "start": 46.718,
+     "end": 46.918,
+     "conf": 0.649
+    },
+    {
+     "w": "over",
+     "start": 47.018,
+     "end": 47.118,
+     "conf": 0.748
+    },
+    {
+     "w": "the",
+     "start": 47.138,
+     "end": 47.198,
+     "conf": 0.996
+    },
+    {
+     "w": "calculation",
+     "start": 47.218,
+     "end": 47.799,
+     "conf": 0.999
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "So in this video, I want to answer three questions with you.",
+   "idea": false,
+   "start": 48.809,
+   "end": 51.426,
+   "words": [
+    {
+     "w": "so",
+     "start": 48.809,
+     "end": 48.87,
+     "conf": 0.998
+    },
+    {
+     "w": "in",
+     "start": 48.93,
+     "end": 48.97,
+     "conf": 0.988
+    },
+    {
+     "w": "this",
+     "start": 48.99,
+     "end": 49.111,
+     "conf": 0.997
+    },
+    {
+     "w": "video",
+     "start": 49.131,
+     "end": 49.373,
+     "conf": 0.833
+    },
+    {
+     "w": "i",
+     "start": 49.836,
+     "end": 49.856,
+     "conf": 1.0
+    },
+    {
+     "w": "want",
+     "start": 49.876,
+     "end": 49.977,
+     "conf": 0.992
+    },
+    {
+     "w": "to",
+     "start": 49.997,
+     "end": 50.057,
+     "conf": 0.713
+    },
+    {
+     "w": "answer",
+     "start": 50.138,
+     "end": 50.359,
+     "conf": 0.752
+    },
+    {
+     "w": "three",
+     "start": 50.44,
+     "end": 50.641,
+     "conf": 0.82
+    },
+    {
+     "w": "questions",
+     "start": 50.701,
+     "end": 51.104,
+     "conf": 0.888
+    },
+    {
+     "w": "with",
+     "start": 51.124,
+     "end": 51.285,
+     "conf": 0.8
+    },
+    {
+     "w": "you",
+     "start": 51.305,
+     "end": 51.426,
+     "conf": 0.78
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "One. When does intuition lead you wrong, and why?",
+   "idea": false,
+   "start": 51.977,
+   "end": 54.174,
+   "words": [
+    {
+     "w": "one",
+     "start": 51.977,
+     "end": 52.058,
+     "conf": 0.66
+    },
+    {
+     "w": "when",
+     "start": 52.461,
+     "end": 52.561,
+     "conf": 0.988
+    },
+    {
+     "w": "does",
+     "start": 52.582,
+     "end": 52.703,
+     "conf": 0.753
+    },
+    {
+     "w": "intuition",
+     "start": 52.763,
+     "end": 53.226,
+     "conf": 0.886
+    },
+    {
+     "w": "lead",
+     "start": 53.287,
+     "end": 53.408,
+     "conf": 0.969
+    },
+    {
+     "w": "you",
+     "start": 53.428,
+     "end": 53.509,
+     "conf": 0.747
+    },
+    {
+     "w": "wrong",
+     "start": 53.529,
+     "end": 53.75,
+     "conf": 0.871
+    },
+    {
+     "w": "and",
+     "start": 53.831,
+     "end": 53.912,
+     "conf": 0.653
+    },
+    {
+     "w": "why",
+     "start": 53.932,
+     "end": 54.174,
+     "conf": 0.914
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "Two. What do you do when the proof is right, and your gut still says no?",
+   "idea": false,
+   "start": 54.584,
+   "end": 57.851,
+   "words": [
+    {
+     "w": "two",
+     "start": 54.584,
+     "end": 54.804,
+     "conf": 0.001
+    },
+    {
+     "w": "what",
+     "start": 55.366,
+     "end": 55.466,
+     "conf": 0.616
+    },
+    {
+     "w": "do",
+     "start": 55.486,
+     "end": 55.546,
+     "conf": 0.998
+    },
+    {
+     "w": "you",
+     "start": 55.566,
+     "end": 55.666,
+     "conf": 0.942
+    },
+    {
+     "w": "do",
+     "start": 55.706,
+     "end": 55.746,
+     "conf": 0.5
+    },
+    {
+     "w": "when",
+     "start": 55.827,
+     "end": 55.907,
+     "conf": 0.399
+    },
+    {
+     "w": "the",
+     "start": 55.927,
+     "end": 55.987,
+     "conf": 0.997
+    },
+    {
+     "w": "proof",
+     "start": 56.047,
+     "end": 56.247,
+     "conf": 0.807
+    },
+    {
+     "w": "is",
+     "start": 56.328,
+     "end": 56.388,
+     "conf": 0.5
+    },
+    {
+     "w": "right",
+     "start": 56.468,
+     "end": 56.688,
+     "conf": 0.822
+    },
+    {
+     "w": "and",
+     "start": 56.708,
+     "end": 56.809,
+     "conf": 0.662
+    },
+    {
+     "w": "your",
+     "start": 56.829,
+     "end": 56.929,
+     "conf": 0.98
+    },
+    {
+     "w": "gut",
+     "start": 56.989,
+     "end": 57.169,
+     "conf": 0.638
+    },
+    {
+     "w": "still",
+     "start": 57.269,
+     "end": 57.45,
+     "conf": 0.976
+    },
+    {
+     "w": "says",
+     "start": 57.51,
+     "end": 57.69,
+     "conf": 0.741
+    },
+    {
+     "w": "no",
+     "start": 57.771,
+     "end": 57.851,
+     "conf": 0.678
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And three. Does math need intuition at all, or is logic enough?",
+   "idea": true,
+   "start": 58.381,
+   "end": 61.415,
+   "words": [
+    {
+     "w": "and",
+     "start": 58.381,
+     "end": 58.482,
+     "conf": 0.99
+    },
+    {
+     "w": "three",
+     "start": 58.542,
+     "end": 58.763,
+     "conf": 0.78
+    },
+    {
+     "w": "does",
+     "start": 58.964,
+     "end": 59.104,
+     "conf": 0.857
+    },
+    {
+     "w": "math",
+     "start": 59.165,
+     "end": 59.426,
+     "conf": 0.889
+    },
+    {
+     "w": "need",
+     "start": 59.506,
+     "end": 59.687,
+     "conf": 0.926
+    },
+    {
+     "w": "intuition",
+     "start": 59.787,
+     "end": 60.149,
+     "conf": 0.799
+    },
+    {
+     "w": "at",
+     "start": 60.189,
+     "end": 60.249,
+     "conf": 0.996
+    },
+    {
+     "w": "all",
+     "start": 60.35,
+     "end": 60.45,
+     "conf": 0.663
+    },
+    {
+     "w": "or",
+     "start": 60.591,
+     "end": 60.691,
+     "conf": 0.497
+    },
+    {
+     "w": "is",
+     "start": 60.832,
+     "end": 60.892,
+     "conf": 0.499
+    },
+    {
+     "w": "logic",
+     "start": 60.973,
+     "end": 61.194,
+     "conf": 0.801
+    },
+    {
+     "w": "enough",
+     "start": 61.214,
+     "end": 61.415,
+     "conf": 0.55
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "We'll use two famous puzzles. One where intuition loses an argument it was sure it would win.",
+   "idea": false,
+   "start": 62.405,
+   "end": 66.894,
+   "words": [
+    {
+     "w": "we'll",
+     "start": 62.405,
+     "end": 62.525,
+     "conf": 0.053
+    },
+    {
+     "w": "use",
+     "start": 62.545,
+     "end": 62.666,
+     "conf": 0.993
+    },
+    {
+     "w": "two",
+     "start": 62.726,
+     "end": 62.866,
+     "conf": 0.943
+    },
+    {
+     "w": "famous",
+     "start": 62.926,
+     "end": 63.167,
+     "conf": 0.844
+    },
+    {
+     "w": "puzzles",
+     "start": 63.187,
+     "end": 63.567,
+     "conf": 0.596
+    },
+    {
+     "w": "one",
+     "start": 64.008,
+     "end": 64.108,
+     "conf": 0.666
+    },
+    {
+     "w": "where",
+     "start": 64.128,
+     "end": 64.269,
+     "conf": 0.913
+    },
+    {
+     "w": "intuition",
+     "start": 64.349,
+     "end": 64.79,
+     "conf": 0.786
+    },
+    {
+     "w": "loses",
+     "start": 64.85,
+     "end": 65.09,
+     "conf": 0.801
+    },
+    {
+     "w": "an",
+     "start": 65.15,
+     "end": 65.191,
+     "conf": 0.499
+    },
+    {
+     "w": "argument",
+     "start": 65.291,
+     "end": 65.651,
+     "conf": 0.87
+    },
+    {
+     "w": "it",
+     "start": 65.792,
+     "end": 65.832,
+     "conf": 0.498
+    },
+    {
+     "w": "was",
+     "start": 65.852,
+     "end": 65.972,
+     "conf": 0.62
+    },
+    {
+     "w": "sure",
+     "start": 66.192,
+     "end": 66.473,
+     "conf": 0.729
+    },
+    {
+     "w": "it",
+     "start": 66.493,
+     "end": 66.553,
+     "conf": 0.333
+    },
+    {
+     "w": "would",
+     "start": 66.573,
+     "end": 66.714,
+     "conf": 0.984
+    },
+    {
+     "w": "win",
+     "start": 66.734,
+     "end": 66.894,
+     "conf": 0.997
+    }
+   ]
+  },
+  {
+   "section": "Cold open",
+   "act": "",
+   "text": "And one where intuition loses the argument, and still refuses to give up.",
+   "idea": true,
+   "start": 67.304,
+   "end": 70.775,
+   "words": [
+    {
+     "w": "and",
+     "start": 67.304,
+     "end": 67.384,
+     "conf": 0.723
+    },
+    {
+     "w": "one",
+     "start": 67.444,
+     "end": 67.565,
+     "conf": 0.995
+    },
+    {
+     "w": "where",
+     "start": 67.585,
+     "end": 67.765,
+     "conf": 0.587
+    },
+    {
+     "w": "intuition",
+     "start": 67.866,
+     "end": 68.387,
+     "conf": 0.861
+    },
+    {
+     "w": "loses",
+     "start": 68.568,
+     "end": 68.849,
+     "conf": 0.8
+    },
+    {
+     "w": "the",
+     "start": 68.869,
+     "end": 68.949,
+     "conf": 0.977
+    },
+    {
+     "w": "argument",
+     "start": 69.049,
+     "end": 69.39,
+     "conf": 0.884
+    },
+    {
+     "w": "and",
+     "start": 69.591,
+     "end": 69.671,
+     "conf": 0.666
+    },
+    {
+     "w": "still",
+     "start": 69.772,
+     "end": 69.932,
+     "conf": 0.831
+    },
+    {
+     "w": "refuses",
+     "start": 69.992,
+     "end": 70.373,
+     "conf": 0.855
+    },
+    {
+     "w": "to",
+     "start": 70.393,
+     "end": 70.454,
+     "conf": 0.666
+    },
+    {
+     "w": "give",
+     "start": 70.514,
+     "end": 70.654,
+     "conf": 0.734
+    },
+    {
+     "w": "up",
+     "start": 70.694,
+     "end": 70.775,
+     "conf": 0.499
+    }
+   ]
+  }
+ ]
+}

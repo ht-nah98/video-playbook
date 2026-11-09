@@ -1,0 +1,121 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — the game table</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#111;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// Bàn thử khung phong cách cho pemdas ("The Game Table"). KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/table.html --dur 4 --t 0.5,1.5,2.5,3.5 --outdir out/_lab/table
+// 0 = bài viral, hai người chơi hai đáp án · 1 = thang 4 bậc + ba ấn bản luật · 2 = 10 − 3 + 2 trái → phải · 3 = máy: −2²
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { felt: '#1D4A3E', ivory: '#F3ECDA', ink: '#1F2228', P: '#2A2A31', E: '#7A4FB0', MD: '#2E6CC0', AS: '#E08A2E',
+            gold: '#E9BE4E', red: '#D2402F', screen: '#0E1013', term: '#E6E2D6', dim: '#7D8590' };
+const LEVEL = { '(': 'P', ')': 'P', '^': 'E', '×': 'MD', '÷': 'MD', '+': 'AS', '−': 'AS' };
+const IM = {}; let FELT, ready = false;
+const A = '800 ', ARC = '"Archivo"';
+
+function felt() {                                     // nỉ: hạt mịn + sợi + quầng đèn treo (sinh một lần)
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H), b = [0x1D, 0x4A, 0x3E];
+  for (let i = 0; i < W * H; i++) {
+    const px = i % W, py = (i / W) | 0, n = (hash(i * 0.731) - 0.5) * 14 + (hash(((px >> 1) * 31 + (py >> 3)) * 0.37) - 0.5) * 5;
+    const r = Math.hypot((px - W / 2) / 1.25, py - H * 0.46) / 900, lit = 1.18 - 0.75 * Math.min(1, r * r);
+    for (let k = 0; k < 3; k++) d.data[i * 4 + k] = b[k] * lit + n; d.data[i * 4 + 3] = 255;
+  }
+  x.putImageData(d, 0, 0); return c;
+}
+function rr(x, y, w, h, r) { g.beginPath(); g.roundRect(x, y, w, h, r); }
+function tile(s, x, y, { size = 120, w = null, kind = null, ring = null } = {}) {   // quân cờ: cạnh dày + bóng đổ
+  const lv = kind ?? LEVEL[s], body = lv ? C[lv] : C.ivory, glyph = lv ? C.ivory : C.ink;
+  const tw = w ?? (s.length > 1 ? size * (0.55 + 0.42 * s.length) : size), th = size, d = size * 0.09;
+  g.save(); g.shadowColor = 'rgba(0,0,0,0.45)'; g.shadowBlur = size * 0.18; g.shadowOffsetY = size * 0.1;
+  g.fillStyle = shade(body, -0.35); rr(x, y + d, tw, th, size * 0.14); g.fill(); g.restore();
+  g.fillStyle = body; rr(x, y, tw, th, size * 0.14); g.fill();
+  if (ring) { g.strokeStyle = ring; g.lineWidth = size * 0.06; rr(x - size * 0.06, y - size * 0.06, tw + size * 0.12, th + d + size * 0.12, size * 0.18); g.stroke(); }
+  g.fillStyle = glyph; g.font = `${A}${size * 0.62}px ${ARC}`; g.textAlign = 'center'; g.textBaseline = 'middle';
+  g.fillText(s, x + tw / 2, y + th * 0.53); return tw;
+}
+function shade(hex, k) { const v = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) * (1 + k)); return `rgb(${v.map(c => Math.max(0, Math.min(255, c | 0)))})`; }
+function row(tokens, x, y, opt = {}) { const gap = (opt.size ?? 120) * 0.14; const xs = [];
+  for (const s of tokens) { xs.push(x); x += tile(s, x, y, opt) + gap; } return { xs, end: x - gap }; }
+function text(s, x, y, font, color, align = 'left') { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic'; g.fillText(s, x, y); }
+function hand(pts, color, w, seed = 1) { g.strokeStyle = color; g.lineWidth = w; g.lineCap = g.lineJoin = 'round'; g.beginPath();
+  pts.forEach(([px, py], i) => { const j = (hash(i * 3.1 + seed) - 0.5) * 3; i ? g.lineTo(px + j, py + j) : g.moveTo(px, py); }); g.stroke(); }
+const seg = (x0, y0, x1, y1, n = 16) => Array.from({ length: n + 1 }, (_, i) => [x0 + (x1 - x0) * i / n, y0 + (y1 - y0) * i / n]);
+const cross = (x, y, s) => { hand(seg(x - s, y - s, x + s, y + s), C.red, 9, 3); hand(seg(x + s, y - s, x - s, y + s), C.red, 9, 5); };
+const check = (x, y, s) => hand([...seg(x - s, y, x - s * 0.3, y + s * 0.7, 6), ...seg(x - s * 0.3, y + s * 0.7, x + s, y - s * 0.8, 10)], C.gold, 10, 9);
+function figure(pose, cx, foot, h, crop = 1, flip = false) {   // mascot nửa thân, bóng lệch tối trên nỉ
+  const im = IM[pose], sh = im.height * crop, s = h / sh, w = im.width * s;
+  g.save(); g.translate(cx, foot); if (flip) g.scale(-1, 1);
+  g.globalAlpha = 0.35; g.filter = 'brightness(0)'; g.drawImage(im, 0, 0, im.width, sh, -w / 2 + 16, -h + 12, w, h);
+  g.filter = 'none'; g.globalAlpha = 1; g.drawImage(im, 0, 0, im.width, sh, -w / 2, -h, w, h); g.restore();
+}
+const ev = s => Function(`return (${s.replace(/÷/g, '/').replace(/×/g, '*').replace(/−/g, '-')})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+
+const frames = [
+  () => {                                            // 0 · bài viral: hàng quân + "?" + hai người chơi
+    const r = row(['6', '÷', '2', '(', '1', '+', '2', ')'], 200, 300, { size: 120 });
+    text('=', r.end + 50, 395, `${A}96px ${ARC}`, C.ivory, 'center');
+    tile('?', r.end + 100, 300, { size: 120, kind: null, ring: C.gold });
+    const nine = must('6 ÷ 2 × (1 + 2)', 9), one = must('6 ÷ (2 × (1 + 2))', 1);
+    tile(String(nine), 520, 640, { size: 150, ring: C.gold }); tile(String(one), 1080, 640, { size: 150, ring: C.gold });
+    text('left to right', 595, 870, 'italic 600 46px "Cormorant Garamond"', C.ivory, 'center');
+    text('glued-on × first', 1155, 870, 'italic 600 46px "Cormorant Garamond"', C.ivory, 'center');
+    text('vs', 865, 740, `${A}64px ${ARC}`, C.gold, 'center');
+    figure('twoways', 1650, 1080, 640, 1);
+  },
+  () => {                                            // 1 · thang 4 bậc màu + ba ấn bản cuốn luật
+    const L = [['P', '( )', 'Parentheses'], ['E', 'x²', 'Exponents'], ['MD', '× ÷', 'Multiply · Divide'], ['AS', '+ −', 'Add · Subtract']];
+    L.forEach(([k, sym, name], i) => { const y = 200 + i * 170, x = 260 + i * 70, w = 1040 - i * 140;
+      g.save(); g.shadowColor = 'rgba(0,0,0,.45)'; g.shadowBlur = 24; g.shadowOffsetY = 14; g.fillStyle = C[k]; rr(x, y, w, 130, 16); g.fill(); g.restore();
+      text(sym, x + 40, y + 92, `${A}72px ${ARC}`, C.ivory); text(name, x + 230, y + 84, '600 48px "Cormorant Garamond"', C.ivory); });
+    ['PEMDAS', 'BODMAS', 'BEDMAS'].forEach((t, i) => { const x = 1380 + i * 22, y = 260 + i * 200;
+      g.save(); g.translate(x, y); g.rotate(-0.05 + i * 0.04); g.shadowColor = 'rgba(0,0,0,.5)'; g.shadowBlur = 20; g.shadowOffsetY = 12;
+      g.fillStyle = ['#8E2B22', '#24406E', '#2E5E3A'][i]; rr(0, 0, 360, 170, 10); g.fill(); g.shadowColor = 'transparent';
+      g.strokeStyle = C.gold; g.lineWidth = 3; rr(14, 14, 332, 142, 6); g.stroke();
+      text('RULEBOOK', 180, 62, '600 28px "Cormorant Garamond"', C.gold, 'center'); text(t, 180, 128, `${A}58px ${ARC}`, C.ivory, 'center'); g.restore(); });
+  },
+  () => {                                            // 2 · 10 − 3 + 2: con trỏ đọc, gộp 10 − 3 → 7, nhánh sai bị gạch
+    const ok1 = must('10 − 3', 7), ok = must('10 − 3 + 2', 9), bad = must('10 − (3 + 2)', 5);
+    row(['10', '−', '3', '+', '2'], 420, 170, { size: 120 });
+    g.fillStyle = C.gold; g.beginPath(); g.moveTo(420, 135); g.lineTo(450, 105); g.lineTo(390, 105); g.fill();     // con trỏ đọc
+    const r = row([String(ok1), '+', '2'], 420, 420, { size: 120 });
+    tile(String(ok), r.end + 120, 420, { size: 120, ring: C.gold }); text('=', r.end + 60, 510, `${A}80px ${ARC}`, C.ivory, 'center');
+    check(r.end + 330, 470, 46);
+    const b = row(['10', '−', String(must('3 + 2', 5))], 420, 700, { size: 104 });
+    tile(String(bad), b.end + 110, 700, { size: 104 }); text('=', b.end + 55, 780, `${A}70px ${ARC}`, C.ivory, 'center');
+    cross(b.end + 160, 752, 70); hand(seg(400, 760, b.end + 10, 760), C.red, 7, 11);
+    text('add first?', 1420, 780, 'italic 600 52px "Cormorant Garamond"', C.red);
+  },
+  () => {                                            // 3 · máy ngồi vào bàn: cùng −2², ba câu trả lời
+    g.save(); g.shadowColor = 'rgba(0,0,0,.6)'; g.shadowBlur = 40; g.shadowOffsetY = 20; g.fillStyle = C.screen; rr(200, 140, 1180, 760, 22); g.fill(); g.restore();
+    const M = '500 36px "IBM Plex Mono"', L = [['>>> -2**2', 'python'], ['-4', ''], ['> -2**2', 'node'], ['SyntaxError: Unary operator used immediately', ''],
+      ['before exponentiation expression. Parenthesis', ''], ['must be used to disambiguate operator precedence', ''], ['=-2^2', 'spreadsheet'], ['4', '']];
+    L.forEach(([s, tag], i) => { const y = 230 + i * 80, out = !tag, err = s.includes('Syntax') || s.startsWith('before') || s.startsWith('must');
+      text(s, 260, y, err ? '500 28px "IBM Plex Mono"' : M, err ? C.red : out ? C.gold : C.term); if (tag) text(tag, 1330, y, '500 24px "IBM Plex Mono"', C.dim, 'right'); });
+    figure('crossed', 1640, 1080, 640, 0.45);
+  },
+];
+
+(async () => {
+  await Promise.all(['800 128px', '800 96px', '800 150px', '800 120px', '800 104px', '800 80px', '800 72px', '800 64px', '800 58px'].map(f => document.fonts.load(f + ' "Archivo"'))
+    .concat(['500 36px', '500 28px', '500 24px'].map(f => document.fonts.load(f + ' "IBM Plex Mono"')))
+    .concat(['italic 600 52px', 'italic 600 46px', '600 48px', '600 28px'].map(f => document.fonts.load(f + ' "Cormorant Garamond"'))));
+  await Promise.all(['twoways', 'crossed'].map(p => new Promise((res, rej) => {
+    const im = new Image(); im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p));
+    im.src = `../../assets/character-v2/cut/pose-${p}.png`; })));
+  FELT = felt(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); const i = Math.min(3, Math.floor(t)); g.drawImage(i === 3 ? FELT : FELT, 0, 0); frames[i](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 4 };
+</script>

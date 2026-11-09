@@ -1,0 +1,398 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — banjo</title>
+<style>
+  @font-face{font-family:"Shippori Mincho";src:url("../../assets/fonts/ShipporiMincho-Regular.ttf");font-weight:400;}
+  @font-face{font-family:"Shippori Mincho";src:url("../../assets/fonts/ShipporiMincho-Bold.ttf");font-weight:700;}
+  @font-face{font-family:"Noto Sans JP";src:url("../../assets/fonts/NotoSansJP[wght].ttf");font-weight:100 900;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../assets/fonts/CormorantGaramond-LN[wght].ttf");font-weight:300 700;}
+  html,body{margin:0;background:#16130D;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "盤上 · Banjō" (ja/2048). Bàn thử, KHÔNG phải code video. Chụp: node engine/render/shoot.js stills --page tools/lab/banjo.html --dur 2 --t 0.5,1.5 --outdir out/_lab/banjo
+// Ý: 2048 là một ván cờ một người trên bàn 4×4 — nên bàn LÀ một 盤 gỗ 榧 dày như bàn 将棋/碁 thật, đặt trên chiếu 畳 tối, nắng xiên trên-trái; ô số LÀ quân 駒 gỗ 柘植 hình ngũ giác,
+//   số khắc điền mực (彫り埋め). Người Nhật nhận ra tức thì (将棋 trên TV, 盤 榧 là vật quý), và chất liệu nói đúng ý bài: kịch bản so 2048 với 将棋AI, đối thủ là 運 chứ không phải kỳ thủ.
+//   Cùng nhà với intro 漆と金 (quân lớn hoá sơn mài rồi vàng lá) nhưng KHÁC bài π: ấm, gỗ, ban ngày trong phòng chiếu — không trời chàm, không vành đồng.
+// Vật xuyên suốt: BÀN 榧 4×4 (đường kẻ 墨 nổi 太刀盛り, 星 ở giao điểm giữa) + 駒. 17 bậc đọc bằng CHẤT LIỆU và ĐỘ DÀY: 2→128 柘植 nhạt dần sẫm (黒柿 ở 128) · 256/512 溜塗 · 1024 黒漆
+//   · 2048→65536 金箔 ấm dần, chữ 墨 · 131072 黒漆 chữ 金箔. Quân cao dần 5→16 px. Bàn mini (cây trò chơi, điện thoại) là cùng bàn đó thu nhỏ. 駒台 bên bàn = chỗ của quân chưa có.
+// Màu: 畳 #2A2619→#15130D · 榧 #DDB062 (vân #B98A42, mặt cạnh #8E6229) · 墨 #17110C · 柘植 #F1DDA8→#8A5F2E · 溜 #5A2B19 · 黒漆 #15100D · 金 #E4C977→#C08A34 · 和紙 #ECE3CF (棋譜 / 短冊)
+//   · 胡粉 #F2EBDD chữ trên nền tối · 朱 #C53A20 (chữ #A42C16) CHỈ đáp án/khoảnh khắc chốt (= 131072, 期待値) · 浅葱 #3AA5B5 (chữ #156A78) = MAY RỦI (đồng xu 寛永通宝 gỉ xanh, nút 運, ô vừa rơi).
+// Chữ: Shippori Mincho Bold (テロップ, số trên quân — số khắc kiểu 彫り駒) · Noto Sans JP (mũ ¹⁷, mũi tên, nhãn phụ) · Cormorant Garamond LN (số thập phân nhỏ nếu cần).
+// Tiếng (~1/3 s): quân trượt = 駒音 "pachi" (snap/tick gỗ — mới: 駒を打つ音) · gộp = chip+snap, cao dần theo bậc; bậc 漆 thêm suzu nhẹ, bậc 金 shimmer · ô mới rơi = coin (浅葱) · 運 = coin búng / xúc xắc
+//   (mới: サイコロ) · テロップ = hyoshigi (hồi), pen (nhãn), hanko (朱 đáp án) · bậc thang dựng = soroban · 131072 = taiko (hiếm, ≤3 cả bài) · page = lật 棋譜 · error = 詰み/thua.
+// Các phần khác: Cirulli/Threes! = ba bàn gỗ nhỏ trên chiếu, bàn Threes quân 1·2·3 · 保存則 = cân đĩa đồng: hai quân 2 ⇄ một quân 4 thăng bằng; 質量保存 = bình thí nghiệm như thẻ đồ chơi
+//   · 930/1018 lượt = chuỗi 棋譜 ghi tay "第1018手" · bậc thang = 17 quân xếp chồng như tháp, 2¹⁷ khắc trên 駒台 · rắn + gộp dây chuyền = mũi 金 chạy dọc rắn, quân lật vàng từng chiếc · ↓←→↑ = bốn
+//   quân mũi tên trên 駒台 · 1.2垓 = 棋譜 kín trang, số 18¹⁶ · 将棋AI vs 運 = bàn 将棋 9×9 bên cạnh bàn 4×4, đối thủ là đồng xu 浅葱 · Michie = chân dung IMAGINED trên tờ 和紙 · 71.5%/96% = thanh
+//   khắc trên 駒台 · TD学習 afterstate = bàn "sau khi vuốt" với ô trống sáng 浅葱 chưa rơi · Szubert & Jaśkowski, 松崎 = 棋譜 tên + năm · Đài Loan 1/10000 = 10000 quân nhỏ, một quân 金 · bảng tra 86%/8.4%
+//   = sổ 定跡 · ô thứ 16 = ô 4 = quân 4 浅葱 rơi vào lỗ cuối, 1/10 · まとめ = 投了図: bàn cuối, ba câu trả lời trên ba 短冊.
+import { toCanvas } from '../../engine/mascot.js';
+import { hash } from '../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const MIN = '"Shippori Mincho"', NOTO = '"Noto Sans JP"', CG = '"Cormorant Garamond"';
+const C = { sumi: '#17110C', gofun: '#F2EBDD', gofunDim: '#CFC3A8', shu: '#C53A20', shuInk: '#A42C16', asagi: '#3AA5B5', asagiInk: '#156A78', asagiLt: '#7FD0DB',
+  gold: '#D9B45A', goldLt: '#F3DE9C', goldDk: '#8A6624', paper: '#ECE3CF', grey: '#5E5242', kaya: '#DDB062' };
+const IM = {}, SH = {}; let TATAMI, KAYA, BG, PHONE, ready = false;
+
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { const r = ev(s); if (r !== v) throw new Error(`sai: ${s} = ${r} ≠ ${v}`); return v; };
+const r1 = x => Math.round(x * 10) / 10;
+// độ tương phản WCAG — ĐO bằng số, ném lỗi nếu chữ chìm
+const lum = hex => { const v = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16) / 255).map(c => c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4); return 0.2126 * v[0] + 0.7152 * v[1] + 0.0722 * v[2]; };
+const contrast = (a, b) => { const [x, y] = [lum(a), lum(b)].sort((p, q) => q - p); return (x + 0.05) / (y + 0.05); };
+const needC = (a, b, k, what) => { const c = contrast(a, b); if (c < k) throw new Error(`tương phản ${what} ${c.toFixed(2)} < ${k}`); return c; };
+const comma = n => { const [i, d] = String(n).split('.'); return i.replace(/\B(?=(\d{3})+(?!\d))/g, ',') + (d ? '.' + d : ''); };
+
+function vnoise(x, y, seed) {
+  const xi = Math.floor(x), yi = Math.floor(y), xf = x - xi, yf = y - yi, s = t => t * t * (3 - 2 * t);
+  const h = (i, j) => hash(i * 12.9898 + j * 78.233 + seed * 3.17);
+  const a = h(xi, yi), b = h(xi + 1, yi), c = h(xi, yi + 1), d = h(xi + 1, yi + 1), u = s(xf), v = s(yf);
+  return a + (b - a) * u + (c - a) * v + (a - b - c + d) * u * v;
+}
+
+// ---- luật 2048 thật: trượt + gộp một lần mỗi ô mỗi lượt ----
+const slideLine = a => { const v = a.filter(x => x), o = []; for (let i = 0; i < v.length; i++) { if (v[i] === v[i + 1]) { o.push(2 * v[i]); i++; } else o.push(v[i]); } while (o.length < 4) o.push(0); return o; };
+const MOVES = { U: '↑', R: '→', L: '←', D: '↓' };
+function move(b, d) {
+  const r = b.map(x => x.slice()), at = (i, k) => d === 'L' ? [i, k] : d === 'R' ? [i, 3 - k] : d === 'U' ? [k, i] : [3 - k, i];
+  for (let i = 0; i < 4; i++) { const l = slideLine([0, 1, 2, 3].map(k => { const [y, x] = at(i, k); return b[y][x]; })); l.forEach((v, k) => { const [y, x] = at(i, k); r[y][x] = v; }); }
+  return r;
+}
+const same = (a, b) => a.flat().join() === b.flat().join();
+const total = b => b.flat().reduce((s, v) => s + v, 0);
+// 評価値 (như AI 将棋): tổng quân × trọng số rắn, góc trên-trái nặng nhất
+const WS = [[16, 15, 14, 13], [9, 10, 11, 12], [8, 7, 6, 5], [1, 2, 3, 4]];
+const evalB = b => b.flat().reduce((s, v, i) => s + v * WS[i >> 2][i & 3], 0);
+const spawns = a => { const out = []; a.flat().forEach((v, i) => { if (!v) for (const [t, p] of [[2, 0.9], [4, 0.1]]) { const c = a.map(x => x.slice()); c[i >> 2][i & 3] = t; out.push({ cell: i, t, p, c }); } }); return out; };
+const expect = a => { const s = spawns(a), n = s.length / 2; return s.reduce((acc, o) => acc + o.p / n * evalB(o.c), 0); };
+
+// ---- vật liệu nạp sẵn ----
+function tatami() {                                     // chiếu 畳 tối: sợi い草 ngang, sợi gai dọc, nắng xiên trên-trái
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H);
+  for (let py = 0; py < H; py++) {
+    const row = Math.floor(py / 4.2), rv = hash(row * 1.37) - 0.5, inRow = (py / 4.2) % 1;
+    for (let px = 0; px < W; px++) {
+      const k = (py * W + px) * 4;
+      const warp = (px % 46) < 1 ? -3 : 0;                                                    // sợi dọc
+      const bump = Math.sin(inRow * Math.PI) * 9 - 5 + (vnoise(px / 9, row * 1.3, 6) - 0.5) * 6;                                          // từng cọng tròn
+      const fib = (vnoise(px / 30, row * 0.7, 3) - 0.5) * 9 + (hash(px * 0.37 + row * 91.1) - 0.5) * 5;
+      const light = 26 - 44 * Math.min(1.25, Math.hypot(px + 200, py + 260) / 2300);
+      const vig = -26 * Math.max(0, Math.hypot((px - W / 2) / W, (py - H / 2) / H) - 0.32) * 2.4;
+      const n = rv * 7 + warp + bump + fib + light + vig;
+      d.data[k] = 46 + n; d.data[k + 1] = 41 + n * 0.95; d.data[k + 2] = 26 + n * 0.7; d.data[k + 3] = 255;
+    }
+  }
+  x.putImageData(d, 0, 0); return c;
+}
+function kaya(sz = 900) {                               // 榧 柾目: vân thẳng mịn dọc, vàng óng
+  const c = mk(sz, sz), x = c.getContext('2d'), d = x.createImageData(sz, sz), lo = [226, 184, 106], hi = [186, 136, 64];
+  for (let py = 0; py < sz; py++) for (let px = 0; px < sz; px++) {
+    const k = (py * sz + px) * 4;
+    const ph = (px + 14 * vnoise(px / 300, py / 500, 2) + 4 * vnoise(px / 60, py / 220, 5)) / (5.5 + 3 * vnoise(px / 700, 0, 8));
+    const f = ph - Math.floor(ph), band = vnoise(Math.floor(ph) * 1.9, 0.3, 11);
+    const late = Math.max(0, Math.sin(f * Math.PI) ** 6) * (0.25 + 0.7 * band);
+    const fib = (vnoise(px / 1.4, py / 40, 13) - 0.5) * 8 + (hash(py * sz + px) - 0.5) * 4;
+    const sheen = 10 * vnoise(px / 200, py / 900, 17);
+    for (let ch = 0; ch < 3; ch++) d.data[k + ch] = lo[ch] + (hi[ch] - lo[ch]) * late + (fib + sheen) * [1, 0.9, 0.7][ch];
+    d.data[k + 3] = 255;
+  }
+  x.putImageData(d, 0, 0); return c;
+}
+
+// ---- 駒: 17 bậc ----
+const rank = v => Math.round(Math.log2(v));
+const WOODS = ['#F1DDA8', '#EAD093', '#E1C07B', '#D5AC63', '#C6964F', '#AE7C3E', '#8A5F2E'];          // 2 … 128 柘植 → 黒柿
+const GOLDS = ['#E6C455', '#DFB84A', '#D8AC40', '#D09E37', '#C78F30', '#BC7F29'];                   // 2048 … 65536 金箔 ấm dần
+function mat(v) {
+  const r = rank(v);
+  if (r <= 7) return { kind: 'wood', face: WOODS[r - 1], num: null };
+  if (r <= 9) return { kind: 'lac', face: r === 8 ? '#6A341D' : '#4E2414', num: C.goldLt };       // 溜塗
+  if (r === 10) return { kind: 'lac', face: '#1C1511', num: C.goldLt };                           // 黒漆
+  if (r <= 16) return { kind: 'gold', face: GOLDS[r - 11], num: C.sumi };
+  return { kind: 'lac', face: '#120D0B', num: C.goldLt, rim: true };                                // 131072 黒漆 + 金
+}
+const shade = (hex, f) => '#' + [1, 3, 5].map(i => Math.max(0, Math.min(255, Math.round(parseInt(hex.slice(i, i + 2), 16) * f))).toString(16).padStart(2, '0')).join('');
+function numCol(m) { if (m.num) return m.num; return contrast(m.face, C.sumi) >= 4.5 ? C.sumi : C.gofun; }
+function komaPath(cx, cy, w, h) {
+  const p = new Path2D(), sh = h * 0.24;
+  p.moveTo(cx, cy - h / 2);
+  p.lineTo(cx + w * 0.40, cy - h / 2 + sh); p.lineTo(cx + w / 2, cy + h / 2); p.lineTo(cx - w / 2, cy + h / 2); p.lineTo(cx - w * 0.40, cy - h / 2 + sh); p.closePath();
+  return p;
+}
+// một quân: bóng đổ, thân dày (cao theo bậc), mặt chất liệu, số khắc
+function koma(cx, cy, s, v, { ghost = false, seed = 0, label = null, minPx = 30 } = {}) {
+  const m = mat(v), r = rank(v), w = s * 0.86, h = s * 0.9, th = (ghost ? 14 : 3.5 + r * 0.72) * s / 142 * 1.6;
+  const top = komaPath(cx, cy - th * 0.5, w, h);
+  g.save();
+  if (ghost) g.globalAlpha = 0.5;
+  if (!ghost) { g.save(); g.fillStyle = 'rgba(20,10,2,0.35)'; g.translate(th * 0.55 + 3, th * 0.9 + 4); g.fill(komaPath(cx, cy - th * 0.5, w * 1.02, h * 1.02)); g.restore();
+  const body = m.kind === 'wood' ? shade(m.face, 0.55) : m.kind === 'gold' ? '#22160E' : shade(m.face, 0.5);
+  for (let k = th; k > 0; k -= 1) { g.save(); g.translate(k * 0.25, k); g.fillStyle = body; g.fill(top); g.restore(); } }
+  if (m.kind === 'gold') { g.save(); g.translate(th * 0.25, th); g.strokeStyle = 'rgba(217,180,90,0.7)'; g.lineWidth = 1; g.stroke(top); g.restore(); }   // thân
+  g.save(); if (m.kind === 'gold') { const gf = g.createLinearGradient(cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2); gf.addColorStop(0, '#FFF3C4'); gf.addColorStop(0.2, shade(m.face, 1.1)); gf.addColorStop(0.46, shade(m.face, 0.72)); gf.addColorStop(0.62, shade(m.face, 1.05)); gf.addColorStop(0.86, shade(m.face, 0.6)); gf.addColorStop(1, shade(m.face, 0.48)); g.fillStyle = gf; } else g.fillStyle = m.face;
+  g.fill(top); g.clip(top);
+  if (m.kind === 'wood') {                                                                     // thớ 柘植 rất mịn
+    for (let i = 0; i < 18; i++) { const gx = cx - w / 2 + hash(seed * 7.1 + i) * w, a = 0.05 + hash(seed + i * 3.3) * 0.08;
+      g.strokeStyle = `rgba(90,52,18,${a})`; g.lineWidth = 0.8 + hash(i + seed) * 1.2; g.beginPath(); g.moveTo(gx, cy - h); g.bezierCurveTo(gx + 6, cy - h / 3, gx - 5, cy + h / 3, gx + 3, cy + h); g.stroke(); }
+  } else if (m.kind === 'gold') {                                                             // tờ 金箔 vuông, mép nối
+    const q = s * 0.3;
+    for (let i = -2; i < 4; i++) for (let j = -2; j < 4; j++) { const hv = hash(i * 13.1 + j * 7.7 + seed);
+      g.fillStyle = hv > 0.5 ? `rgba(255,246,206,${(hv - 0.5) * 0.4})` : `rgba(110,72,16,${(0.5 - hv) * 0.22})`; g.fillRect(cx - w / 2 + i * q, cy - h / 2 + j * q, q, q);
+      g.strokeStyle = 'rgba(120,82,24,0.28)'; g.lineWidth = 0.8; g.strokeRect(cx - w / 2 + i * q, cy - h / 2 + j * q, q, q); }
+  }
+  const lt = g.createLinearGradient(cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2);                // nắng xiên + bóng sơn
+  if (m.kind === 'wood') { lt.addColorStop(0, 'rgba(255,250,232,0.22)'); lt.addColorStop(1, 'rgba(60,30,8,0.16)'); }
+  else { lt.addColorStop(0, 'rgba(255,248,226,0.30)'); lt.addColorStop(0.32, 'rgba(255,248,226,0.04)'); lt.addColorStop(0.36, 'rgba(255,248,226,0.10)'); lt.addColorStop(0.42, 'rgba(255,248,226,0)'); lt.addColorStop(1, 'rgba(0,0,0,0.22)'); }
+  g.fillStyle = lt; g.fillRect(cx - w, cy - h, 2 * w, 2 * h); g.restore();
+  g.lineJoin = 'round'; g.strokeStyle = 'rgba(255,244,214,0.45)'; g.lineWidth = 1.2; g.stroke(top);                                     // mép vát sáng
+  if (m.rim) { g.strokeStyle = C.gold; g.lineWidth = s * 0.03; g.stroke(komaPath(cx, cy - th * 0.5, w * 0.84, h * 0.86)); }
+  // số khắc: cỡ vừa thân quân, KHÔNG dưới minPx
+  const txt = label ?? String(v), maxW = w * (txt.length >= 5 ? 0.84 : 0.74);
+  let fs = Math.max(minPx, s * (txt.length <= 2 ? 0.46 : txt.length === 3 ? 0.42 : 0.38)); g.font = `700 ${fs}px ${MIN}`;
+  let sx = 1, mw = g.measureText(txt).width;
+  if (mw > maxW) { fs = Math.max(minPx, fs * maxW / mw); g.font = `700 ${fs}px ${MIN}`; mw = g.measureText(txt).width; if (mw > maxW) sx = maxW / mw; }
+  if (fs < minPx - 0.01) throw new Error(`số ${txt} nhỏ hơn ${minPx}px`);
+  const ty = cy - th * 0.5 + h * 0.13, col = numCol(m), font = g.font;
+  g.save(); g.translate(cx, ty); g.scale(sx, 1); g.textAlign = 'center'; g.textBaseline = 'middle';
+  if (!ghost && m.kind !== 'lac') { g.fillStyle = 'rgba(255,246,220,0.5)'; g.fillText(txt, 0.9, 1.2); }                                // mép rãnh khắc bắt sáng
+  g.fillStyle = col; g.fillText(txt, 0, 0); g.restore();
+  g.restore();
+  return { fs, col, face: m.face, th, ty, sx, font };
+}
+
+// ---- 盤 榧 ----
+function ban(x, y, S, cells, { m = S * 0.045, thick = S * 0.08, legs = true, hl = null, chev = null, seed = 1 } = {}) {
+  const cs = (S - 2 * m) / 4, ox = x + m, oy = y + m;
+  g.save(); g.shadowColor = 'rgba(8,5,2,0.62)'; g.shadowBlur = S * 0.07; g.shadowOffsetX = S * 0.03; g.shadowOffsetY = S * 0.05;
+  g.fillStyle = '#7A5424'; g.fillRect(x, y, S, S + thick); g.restore();
+  if (legs) { g.fillStyle = '#3A2410'; const lw = S * 0.14, lh = thick * 0.6; for (const lx of [x + S * 0.09, x + S * 0.77]) g.fillRect(lx, y + S + thick - 2, lw, lh); }
+  const side = g.createLinearGradient(0, y + S, 0, y + S + thick); side.addColorStop(0, '#B07C35'); side.addColorStop(0.15, '#94652A'); side.addColorStop(1, '#5E3E17');
+  g.fillStyle = side; g.fillRect(x, y + S, S, thick);
+  g.fillStyle = 'rgba(70,44,14,0.35)'; for (let i = 0; i < 9; i++) g.fillRect(x, y + S + 3 + i * thick / 9, S, 0.8);       // vân đầu ván
+  g.drawImage(KAYA, (seed * 97) % 120, (seed * 61) % 120, 780, 780, x, y, S, S);
+  const lt = g.createLinearGradient(x, y, x + S, y + S); lt.addColorStop(0, 'rgba(255,244,214,0.20)'); lt.addColorStop(0.6, 'rgba(255,244,214,0)'); lt.addColorStop(1, 'rgba(60,32,6,0.18)');
+  g.fillStyle = lt; g.fillRect(x, y, S, S);
+  g.strokeStyle = 'rgba(255,240,200,0.55)'; g.lineWidth = 1.5; g.beginPath(); g.moveTo(x, y + S); g.lineTo(x, y); g.lineTo(x + S, y); g.stroke();   // mép trên-trái bắt nắng
+  // đường kẻ 墨 nổi (太刀盛り): bóng sáng lệch dưới-phải + nét mực
+  const lw = Math.max(1.4, S * 0.0042);
+  const grid = (dx, dy, col, w) => { g.strokeStyle = col; g.lineWidth = w; g.beginPath();
+    for (let i = 0; i <= 4; i++) { g.moveTo(ox + i * cs + dx, oy + dy); g.lineTo(ox + i * cs + dx, oy + 4 * cs + dy); g.moveTo(ox + dx, oy + i * cs + dy); g.lineTo(ox + 4 * cs + dx, oy + i * cs + dy); } g.stroke(); };
+  grid(0.9, 1.1, 'rgba(255,236,190,0.55)', lw); grid(0, 0, C.sumi, lw);
+  g.strokeStyle = C.sumi; g.lineWidth = lw * 2.2; g.strokeRect(ox - lw * 2, oy - lw * 2, 4 * cs + lw * 4, 4 * cs + lw * 4);
+  g.fillStyle = C.sumi; g.beginPath(); g.arc(ox + 2 * cs, oy + 2 * cs, Math.max(2.5, S * 0.008), 0, 7); g.fill();   // 星
+  if (hl) { const [r, c] = hl; g.save(); g.fillStyle = 'rgba(58,165,181,0.28)'; g.fillRect(ox + c * cs + 2, oy + r * cs + 2, cs - 4, cs - 4); g.restore(); }
+  const ctr = (r, c) => [ox + c * cs + cs / 2, oy + r * cs + cs / 2];
+  const order = [];
+  for (let r = 0; r < 4; r++) for (let c = 0; c < 4; c++) if (cells[r][c]) order.push([r, c]);
+  order.forEach(([r, c]) => koma(...ctr(r, c), cs, cells[r][c], { seed: r * 4 + c + seed * 17 }));
+  if (hl) { const [r, c] = hl, [cx, cy] = ctr(r, c); g.save(); g.strokeStyle = C.asagi; g.lineWidth = 4; g.setLineDash([8, 6]); g.strokeRect(ox + c * cs + 3, oy + r * cs + 3, cs - 6, cs - 6); g.restore(); }
+  if (chev) chev.forEach(([a, b]) => {                                                           // 金 mũi nhỏ trên đường kẻ: gộp chảy về góc
+    const [ax, ay] = ctr(...a), [bx, by] = ctr(...b), mx = (ax + bx) / 2, my = (ay + by) / 2, an = Math.atan2(by - ay, bx - ax), z = cs * 0.085;
+    g.save(); g.translate(mx, my); g.rotate(an); g.beginPath(); g.moveTo(z, 0); g.lineTo(-z * 0.7, -z * 0.85); g.lineTo(-z * 0.7, z * 0.85); g.closePath();
+    g.fillStyle = C.goldLt; g.fill(); g.strokeStyle = C.sumi; g.lineWidth = 1.6; g.stroke(); g.restore(); });
+  return { ox, oy, cs, ctr };
+}
+// 駒台: bệ nhỏ cùng gỗ, chỗ của quân chưa có
+function komadai(x, y, w, h, thick) {
+  g.save(); g.shadowColor = 'rgba(8,5,2,0.6)'; g.shadowBlur = 30; g.shadowOffsetX = 10; g.shadowOffsetY = 16; g.fillStyle = '#7A5424'; g.fillRect(x, y, w, h + thick); g.restore();
+  const side = g.createLinearGradient(0, y + h, 0, y + h + thick); side.addColorStop(0, '#A87434'); side.addColorStop(1, '#5A3B16'); g.fillStyle = side; g.fillRect(x, y + h, w, thick);
+  g.drawImage(KAYA, 300, 400, w * 1.2, h * 1.2, x, y, w, h);
+  g.strokeStyle = 'rgba(80,48,14,0.6)'; g.lineWidth = 3; g.strokeRect(x + 12, y + 12, w - 24, h - 24);                      // gờ khay
+  g.strokeStyle = 'rgba(255,240,200,0.5)'; g.lineWidth = 1.5; g.beginPath(); g.moveTo(x, y + h); g.lineTo(x, y); g.lineTo(x + w, y); g.stroke();
+}
+
+// ---- chữ ----
+function txt(s, x, y, font, col, align = 'left', base = 'alphabetic') { g.save(); g.font = font; g.textAlign = align; g.textBaseline = base; g.fillStyle = col; g.fillText(s, x, y); const w = g.measureText(s).width; g.restore(); return w; }
+function runs(parts, x, y, align = 'left') {                 // [chữ, font, màu, khoảng sau, nâng]
+  const ws = parts.map(([s, f]) => { g.font = f; return g.measureText(s).width; }), tot = ws.reduce((a, w, i) => a + w + (parts[i][3] ?? 0), 0);
+  let cx = align === 'right' ? x - tot : align === 'center' ? x - tot / 2 : x; const x0 = cx;
+  parts.forEach(([s, f, col, gap = 0, rise = 0], i) => { txt(s, cx, y - rise, f, col); cx += ws[i] + gap; });
+  return [x0, tot];
+}
+// テロップ trên nền tối: chữ 胡粉 + bóng mực mềm
+function telop(s, x, y, size, col = C.gofun, align = 'left', wt = 700) {
+  g.save(); g.font = `${wt} ${size}px ${MIN}`; g.textAlign = align; g.shadowColor = 'rgba(0,0,0,0.7)'; g.shadowBlur = 12; g.shadowOffsetY = 3; g.fillStyle = col; g.fillText(s, x, y);
+  const w = g.measureText(s).width; g.restore(); return w;
+}
+// tờ 和紙: sợi 楮, mép xơ, bóng mềm
+function washi(x, y, w, h, seed = 0) {
+  g.save(); g.shadowColor = 'rgba(0,0,0,0.5)'; g.shadowBlur = 24; g.shadowOffsetX = 6; g.shadowOffsetY = 10; g.fillStyle = C.paper; g.fillRect(x, y, w, h); g.restore();
+  g.save(); g.beginPath(); g.rect(x, y, w, h); g.clip();
+  for (let i = 0; i < Math.round(w * h / 900); i++) { const fx = x + hash(i * 1.7 + seed) * w, fy = y + hash(i * 3.1 + seed) * h, an = hash(i * 5.3 + seed) * Math.PI, L = 6 + hash(i * 2.9) * 22;
+    g.strokeStyle = `rgba(150,128,90,${0.05 + hash(i * 0.7) * 0.1})`; g.lineWidth = 0.7; g.beginPath(); g.moveTo(fx, fy); g.quadraticCurveTo(fx + L * 0.5 * Math.cos(an + 0.4), fy + L * 0.5 * Math.sin(an + 0.4), fx + L * Math.cos(an), fy + L * Math.sin(an)); g.stroke(); }
+  const lt = g.createLinearGradient(x, y, x + w, y + h); lt.addColorStop(0, 'rgba(255,252,240,0.25)'); lt.addColorStop(1, 'rgba(80,60,30,0.10)'); g.fillStyle = lt; g.fillRect(x, y, w, h);
+  g.restore();
+}
+function brush(pts, w, col, alpha = 0.9) { g.save(); g.lineCap = g.lineJoin = 'round'; g.strokeStyle = col; g.globalAlpha = alpha * 0.2; g.lineWidth = w + 2.5; const p = new Path2D(); pts.forEach(([x, y], k) => k ? p.lineTo(x, y) : p.moveTo(x, y)); g.stroke(p); g.globalAlpha = alpha; g.lineWidth = w; g.stroke(p); g.restore(); }
+function curve(a, b, w, col, alpha = 0.9) { const pts = []; for (let i = 0; i <= 30; i++) { const t = i / 30, e = t * t * (3 - 2 * t); pts.push([a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * e]); } brush(pts, w, col, alpha); }
+function seal(s, x, y, size) {                                                                    // 判子 朱 (đáp án)
+  const w = size * 1.45 * [...s].length, h = size * 1.45; g.save(); g.fillStyle = C.shu; g.globalAlpha = 0.95;
+  const p = new Path2D(); p.roundRect(x, y, w, h, 5); g.fill(p); g.clip(p); g.fillStyle = 'rgba(236,227,207,0.8)';
+  for (let i = 0; i < 18; i++) { g.beginPath(); g.arc(x + hash(i * 3.7) * w, y + hash(i * 9.1) * h, 0.6 + hash(i * 1.3), 0, 7); g.fill(); } g.restore();
+  txt(s, x + w / 2, y + h / 2 + 1, `700 ${size}px ${MIN}`, '#FBF3E2', 'center', 'middle'); return { x, y, w, h };
+}
+// 寛永通宝 gỉ 浅葱 — đồng xu của 運
+function coin(cx, cy, R, tilt = 1, { label = true } = {}) {
+  g.save(); g.translate(cx, cy); g.scale(1, tilt);
+  g.fillStyle = 'rgba(0,0,0,0.35)'; g.beginPath(); g.arc(4, 6, R, 0, 7); g.fill();
+  const rimC = g.createLinearGradient(-R, -R, R, R); rimC.addColorStop(0, '#9FE0E6'); rimC.addColorStop(0.45, '#3AA5B5'); rimC.addColorStop(1, '#1A5A64');
+  g.fillStyle = rimC; g.beginPath(); g.arc(0, 0, R, 0, 7); g.fill();
+  g.fillStyle = '#2C8E9C'; g.beginPath(); g.arc(0, 0, R * 0.86, 0, 7); g.fill();
+  for (let i = 0; i < 40; i++) { const a = hash(i * 2.3) * 7, rr = hash(i * 4.1) * R * 0.85; g.fillStyle = hash(i) > 0.5 ? 'rgba(190,240,236,0.25)' : 'rgba(10,50,56,0.25)'; g.beginPath(); g.arc(rr * Math.cos(a), rr * Math.sin(a), 1 + hash(i * 7) * 2.2, 0, 7); g.fill(); }
+  const hs = R * 0.3; g.fillStyle = '#0F2A2E'; g.fillRect(-hs, -hs, 2 * hs, 2 * hs);
+  g.strokeStyle = '#8ED6DD'; g.lineWidth = Math.max(1.2, R * 0.05); g.strokeRect(-hs - R * 0.06, -hs - R * 0.06, 2 * hs + R * 0.12, 2 * hs + R * 0.12);
+  g.strokeStyle = 'rgba(220,250,250,0.7)'; g.lineWidth = R * 0.07; g.beginPath(); g.arc(0, 0, R * 0.93, -2.6, -1.3); g.stroke();
+  g.restore();
+}
+function figure(pose, cx, foot, h, src = IM) {
+  const im = src[pose], s = h / im.height, w = im.width * s, x0 = cx - w / 2, y0 = foot - h, S = SH[pose];
+  g.save(); g.globalAlpha = 0.4; g.drawImage(S, x0 + 24 - 30 * s, y0 + 16 - 30 * s, S.width * s, S.height * s); g.restore();
+  const c = mk(Math.ceil(w), Math.ceil(h)), x = c.getContext('2d'); x.drawImage(im, 0, 0, w, h); x.globalCompositeOperation = 'source-atop';
+  x.fillStyle = 'rgba(255,212,150,0.06)'; x.fillRect(0, 0, w, h);
+  const gr = x.createLinearGradient(0, 0, w, h * 0.7); gr.addColorStop(0.5, 'rgba(30,16,4,0)'); gr.addColorStop(1, 'rgba(30,16,4,0.26)'); x.fillStyle = gr; x.fillRect(0, 0, w, h);
+  g.drawImage(c, x0, y0); return { x: x0, y: y0, w, h, s };
+}
+
+// ---- bậc thang 16 ô (dùng ở khung 0 và màn điện thoại) ----
+const LADDER = [4, ...Array.from({ length: 15 }, (_, k) => 2 ** (k + 2))].sort((a, b) => b - a);   // 65536 … 8, 4, 4
+const SNAKE = [[0, 0], [0, 1], [0, 2], [0, 3], [1, 3], [1, 2], [1, 1], [1, 0], [2, 0], [2, 1], [2, 2], [2, 3], [3, 3], [3, 2], [3, 1], [3, 0]];
+const STAIR = Array.from({ length: 4 }, () => [0, 0, 0, 0]); SNAKE.forEach(([r, c], i) => { STAIR[r][c] = LADDER[i]; });
+
+const frames = [
+  () => {                                              // 0 · 131072の壁: bàn kín 16 quân xếp rắn, 駒台 giữ bóng 131072
+    must(`${LADDER.length}`, 16);
+    must(`[${LADDER}].reduce((a, b) => a + b, 0)`, 131072);
+    must('2 ** 17', 131072);
+    must(`${LADDER[0]}`, 65536); must(`${LADDER[14]} === 4 && ${LADDER[15]} === 4`, true);
+    for (let i = 0; i + 1 < 16; i++) { const [a, b] = [SNAKE[i], SNAKE[i + 1]]; if (Math.abs(a[0] - b[0]) + Math.abs(a[1] - b[1]) !== 1) throw new Error('rắn đứt');
+      if (i < 14 && LADDER[i] !== 2 * LADDER[i + 1]) throw new Error('bậc thang không nhân đôi'); }
+    const sum = LADDER.reduce((a, b) => a + b, 0);
+    const F = figure('pose-phone', 1645, 1080, 770, { 'pose-phone': PHONE });
+    const B = ban(120, 112, 640, STAIR, { thick: 54, chev: SNAKE.slice(0, 15).map((_, i) => [SNAKE[15 - i], SNAKE[14 - i]]) });
+    // cột phải: tên mục + テロップ
+    telop('16マスにぴったりの階段', 860, 168, 36, C.gofunDim, 'left', 400);
+    const tw = runs([['131072', `700 104px ${MIN}`, C.gofun, 6], ['の壁', `700 104px ${MIN}`, C.gofun]], 856, 292)[1];
+    g.save(); g.globalCompositeOperation = 'destination-over'; g.restore();
+    if (856 + tw > F.x + 40) throw new Error('テロップ đè mascot');
+    // 駒台 + bóng 131072
+    komadai(880, 470, 290, 300, 34);
+    g.fillStyle = '#3A2410'; for (const lx of [900, 1112]) g.fillRect(lx, 804, 40, 18);
+    telop('たたむと、1枚に', 880 + 145, 446, 32, C.gofun, 'center', 400);
+    const gk = koma(1025, 630, 230, 131072, { ghost: true, seed: 5 });
+    g.save(); g.setLineDash([10, 8]); g.strokeStyle = C.goldLt; g.lineWidth = 2.5; g.stroke(komaPath(1025, 630 - gk.th * 0.5, 230 * 0.86 + 14, 230 * 0.9 + 14)); g.restore();
+    g.save(); g.font = gk.font; g.textAlign = 'center'; g.textBaseline = 'middle'; g.translate(1025, gk.ty); g.scale(gk.sx, 1); g.fillStyle = C.goldLt; g.globalAlpha = 0.92; g.fillText('131072', 0, 0); g.restore();
+    // 短冊: phương trình bậc thang
+    washi(110, 880, 1240, 112, 3);
+    const big = `700 54px ${MIN}`, sm = `700 30px ${NOTO}`;
+    const [x0, tot] = runs([[`4 + 4 + 8 + 16 + … + ${LADDER[0]}  =  `, big, C.sumi], ['2', big, C.sumi, 2], ['17', sm, C.sumi, 0, 26],
+      [`  =  `, big, C.sumi], [String(sum), big, C.shuInk]], 730, 956, 'center');
+    if (x0 < 130 || x0 + tot > 1330) throw new Error('phương trình tràn 短冊');
+    needC(C.shuInk, C.paper, 4.5, 'son/giấy'); needC(C.sumi, C.paper, 4.5, 'mực/giấy'); needC(C.gofun, '#3A3424', 4.5, 'テロップ/chiếu');
+    for (let r = 1; r <= 17; r++) { const m = mat(2 ** r); needC(numCol(m), m.face, 4.5, `số trên quân ${2 ** r}`); }
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], title: [856, 200, tw, 104], board: [120, 112, 640, 694], ghostFs: gk.fs };
+  },
+  () => {                                              // 1 · 相手の名は「運」: cây エクスペクティマックス như 棋譜 trên 和紙
+    must('Math.round((0.9 * 2 + 0.1 * 4) * 10) / 10', 2.2);
+    const ROOT = [[256, 128, 64, 32], [4, 16, 16, 8], [2, 8, 4, 8], [4, 2, 8, 2]];
+    const opts = Object.keys(MOVES).map(d => { const a = move(ROOT, d); if (same(a, ROOT)) return { d, ok: false };
+      if (total(a) !== total(ROOT)) throw new Error('vuốt làm đổi tổng');                    // 保存則
+      return { d, ok: true, a, E: r1(expect(a)) }; });
+    const best = opts.filter(o => o.ok).reduce((p, q) => q.E > p.E ? q : p);
+    must(`'${best.d}'`, 'U');
+    const kids = spawns(best.a); must(`${kids.length}`, 2);                                   // một ô trống → ô 2 (0.9) / ô 4 (0.1)
+    const [k2, k4] = kids, v2 = evalB(k2.c), v4 = evalB(k4.c), E = r1(0.9 * v2 + 0.1 * v4);
+    must(`${E}`, best.E);
+    const F = figure('pose-coin-flip', 292, 1080, 750);
+    // đồng xu búng: trên ngón cái, đang xoay (elip) + vệt quay
+    const tx = F.x + 125 * F.s, ty = F.y + 322 * F.s;
+    g.save(); g.strokeStyle = 'rgba(127,208,219,0.55)'; g.lineWidth = 2.5; g.setLineDash([2, 9]); g.lineCap = 'round';
+    g.beginPath(); g.moveTo(tx + 4, ty - 16); g.quadraticCurveTo(tx + 20, ty - 70, tx + 44, ty - 104); g.stroke(); g.restore();
+    const ccx = tx + 62, ccy = ty - 150;
+    for (const k of [0, 1]) { g.save(); g.strokeStyle = `rgba(160,225,232,${0.6 - k * 0.25})`; g.lineWidth = 2.5; g.beginPath(); g.ellipse(ccx, ccy, 72 + k * 16, 40 + k * 10, -0.35, 3.5, 5.6); g.stroke(); g.restore(); }
+    coin(ccx, ccy, 54, 0.62);
+    // テロップ
+    telop('エクスペクティマックス', 600, 142, 70);
+    // 棋譜 sheet
+    washi(568, 186, 1294, 840, 9);
+    const RX = 612, RS = 292, RY = 412;
+    txt('いまの局面', RX + RS / 2, RY - 22, `700 30px ${MIN}`, C.sumi, 'center');
+    const R = ban(RX, RY, RS, ROOT, { thick: 22, legs: false, seed: 2 });
+    // nút TA: bốn quân mũi tên + 評価値 kỳ vọng
+    const MX = 1010, rows = opts.slice().sort((p, q) => (q.E ?? -1) - (p.E ?? -1)), my0 = 300, mdy = 150;
+    txt('自分の番', MX, 250, `700 30px ${MIN}`, C.sumi, 'center');
+    txt('最大をえらぶ', MX + 4, 282 + 6, `400 28px ${MIN}`, C.grey, 'center');
+    rows.forEach((o, i) => { const y = my0 + 56 + i * mdy, on = o.d === best.d;
+      curve([RX + RS + 6, RY + RS / 2], [MX - 46, y], on ? 5 : 2.2, on ? C.goldDk : C.grey, on ? 0.95 : 0.55);
+      if (on) curve([RX + RS + 6, RY + RS / 2], [MX - 46, y], 2.2, C.goldLt, 0.9);
+      koma(MX, y, 92, on ? 2048 : 2, { label: MOVES[o.d], seed: i + 30 });
+      txt(comma(o.E.toFixed(1)), MX + 56, y + 12, `700 32px ${MIN}`, on ? C.sumi : C.grey); });
+    txt('評価値', MX + 108, 330 - 2 + 0, `400 28px ${MIN}`, C.grey, 'center');
+    // nút 運: đồng xu 浅葱
+    const by = my0 + 56, CX = 1268, CY = by + 210;
+    curve([MX + 184, by - 4], [CX - 40, CY], 5, C.goldDk, 0.95); curve([MX + 184, by - 4], [CX - 40, CY], 2.2, C.goldLt, 0.9);
+    coin(CX, CY, 46, 1);
+    txt('運の番', CX, CY + 92, `700 30px ${MIN}`, C.asagiInk, 'center');
+    txt('期待値', CX, CY + 128, `400 28px ${MIN}`, C.asagiInk, 'center');
+    // con: ô mới rơi vào chỗ trống duy nhất
+    const KX = 1384, KS = 292, ky = [262, 262 + KS + 72];
+    [[k2, v2, '2', '9/10'], [k4, v4, '4', '1/10']].forEach(([k, v, t, p], i) => {
+      const y0 = ky[i], cell = [k.cell >> 2, k.cell & 3];
+      curve([CX + 40, CY], [KX - 8, y0 + KS / 2], 3, C.asagiInk, 0.9);
+      runs([[t, `700 36px ${MIN}`, C.asagiInk, 6], ['が出る', `700 28px ${MIN}`, C.asagiInk, 16], ['確率', `400 28px ${MIN}`, C.asagiInk, 8], [p, `700 32px ${NOTO}`, C.asagiInk]], KX + 4, y0 - 14);
+      ban(KX, y0, KS, k.c, { thick: 20, legs: false, hl: cell, seed: 3 + i });
+      txt(comma(v.toFixed(0)), KX + KS + 18, y0 + KS - 24, `700 32px ${MIN}`, C.sumi);
+    });
+    // 期待値: dòng đáp án
+    const fy = 990, f = `700 40px ${MIN}`;
+    const [fx0, ftot] = runs([['期待値', `700 36px ${MIN}`, C.asagiInk, 22], ['= 0.9 × ', f, C.sumi], [comma(String(v2)), f, C.sumi], ['  + 0.1 × ', f, C.sumi], [comma(String(v4)), f, C.sumi],
+      ['  = ', f, C.sumi], [comma(E.toFixed(1)), `700 44px ${MIN}`, C.shuInk]], 1700, fy, 'right');
+    seal('答', 1712, fy - 42, 32);
+    if (fx0 < RX || fx0 + ftot > 1706) throw new Error('dòng 期待値 tràn');
+    needC(C.asagiInk, C.paper, 4.5, '浅葱/giấy'); needC(C.grey, C.paper, 4.5, 'xám/giấy'); needC(C.shuInk, C.paper, 4.5, 'son/giấy');
+    window.__boxes = { fig: [F.x, F.y, F.w, F.h], E, v2, v4, best: best.d, opts: opts.map(o => [o.d, o.E]) };
+  },
+];
+
+// màn điện thoại: bàn 4×4 mini (ô màu theo bậc, không số — màn quá nhỏ), chỉ vẽ lên điểm ảnh màn hình (ngón tay giữ nguyên)
+function phoneComposite(im) {
+  const c = toCanvas(im), x = c.getContext('2d', { willReadFrequently: true });
+  const quad = [[137, 370], [260, 367], [155, 637]];                         // TL, TR, BL (ảnh gốc)
+  const src = x.getImageData(0, 0, c.width, c.height), mask = mk(c.width, c.height), mx = mask.getContext('2d'), md = mx.createImageData(c.width, c.height);
+  const inQuad = (px, py) => { const [a, b, d] = quad, ux = [b[0] - a[0], b[1] - a[1]], vy = [d[0] - a[0], d[1] - a[1]], det = ux[0] * vy[1] - ux[1] * vy[0];
+    const u = ((px - a[0]) * vy[1] - (py - a[1]) * vy[0]) / det, v = (ux[0] * (py - a[1]) - ux[1] * (px - a[0])) / det; return u > 0.02 && u < 1.0 && v > 0.01 && v < 0.99; };
+  for (let py = 340; py < 680; py++) for (let px = 110; px < 320; px++) { const k = (py * c.width + px) * 4, r = src.data[k], gg = src.data[k + 1], b = src.data[k + 2];
+    if (inQuad(px, py) && b > 180 && r > 170 && b >= r - 8 && Math.abs(r - gg) < 22) md.data[k + 3] = 255; }
+  mx.putImageData(md, 0, 0);
+  const s = mk(c.width, c.height), sx = s.getContext('2d'), [a, b, d] = quad;
+  sx.setTransform((b[0] - a[0]) / 100, (b[1] - a[1]) / 100, (d[0] - a[0]) / 220, (d[1] - a[1]) / 220, a[0], a[1]);
+  sx.fillStyle = '#1D1812'; sx.fillRect(-5, -5, 115, 235);
+  sx.fillStyle = '#DDB062'; sx.fillRect(8, 60, 88, 88);
+  const cs = 80 / 4;
+  for (let r = 0; r < 4; r++) for (let q = 0; q < 4; q++) { const v = STAIR[r][q], m = mat(v); sx.fillStyle = m.face; sx.fillRect(12 + q * cs + 1.5, 64 + r * cs + 1.5, cs - 3, cs - 3); }
+  sx.strokeStyle = '#17110C'; sx.lineWidth = 0.8; sx.strokeRect(12, 64, 80, 80);
+  sx.fillStyle = 'rgba(242,235,221,0.75)'; sx.fillRect(14, 26, 46, 6); sx.fillStyle = 'rgba(242,235,221,0.35)'; sx.fillRect(14, 38, 30, 4); sx.fillRect(14, 168, 76, 4); sx.fillRect(14, 178, 52, 4);
+  sx.setTransform(1, 0, 0, 1, 0, 0); sx.globalCompositeOperation = 'destination-in'; sx.drawImage(mask, 0, 0);
+  x.drawImage(s, 0, 0);
+  const gl = x.createLinearGradient(140, 370, 280, 630); gl.addColorStop(0, 'rgba(255,255,255,0.10)'); gl.addColorStop(0.5, 'rgba(255,255,255,0)'); x.save(); x.globalCompositeOperation = 'source-atop';
+  x.restore();
+  return c;
+}
+
+(async () => {
+  const JA = '16マスにぴったりの階段たたむと、1枚に壁エクスペクティマックスいまの局面自分の番最大をえらぶ評価値運の番期待値答←→↑↓…+=×.,0123456789/';
+  await Promise.all([
+    ...['400 28px', '700 30px', '700 104px'].map(f => document.fonts.load(`${f} ${MIN}`, JA)),
+    document.fonts.load(`700 30px ${NOTO}`, '0123456789/'),
+  ]);
+  await Promise.all(['pose-phone', 'pose-coin-flip'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im);
+      const s = mk(im.width + 60, im.height + 60), x = s.getContext('2d'); x.filter = 'blur(18px) brightness(0)'; x.drawImage(im, 30, 30); x.filter = 'none'; SH[p] = s;
+      if (p === 'pose-phone') PHONE = phoneComposite(im); res(); };
+    im.onerror = () => rej(new Error('img ' + p)); im.src = `../../assets/character-v2/cut/${p}.png`; })));
+  TATAMI = tatami(); KAYA = kaya(); BG = TATAMI; ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalAlpha = 1; g.globalCompositeOperation = 'source-over'; g.drawImage(BG, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>

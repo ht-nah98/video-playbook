@@ -1,0 +1,275 @@
+<!doctype html><meta charset="utf-8">
+<title>Lab — fold</title>
+<style>
+  @font-face{font-family:"Archivo";src:url("../../../assets/fonts/Archivo[wdth,wght].ttf");font-weight:100 900;font-stretch:62% 125%;}
+  @font-face{font-family:"IBM Plex Mono";src:url("../../../assets/fonts/IBMPlexMono-Medium.ttf");font-weight:500;}
+  @font-face{font-family:"Cormorant Garamond";src:url("../../../assets/fonts/CormorantGaramond-Italic-LN[wght].ttf");font-style:italic;font-weight:300 700;}
+  html,body{margin:0;background:#24221F;overflow:hidden}
+  canvas{display:block;width:100vw;height:100vh;object-fit:contain}
+</style>
+<canvas id=cv width=1920 height=1080></canvas>
+<script type="module">
+// DNA tóm tắt — "Fold" (zero-power). Bàn thử, KHÔNG phải code video.
+//   node engine/render/shoot.js stills --page tools/lab/fold.html --dur 2 --t 0.5,1.5 --outdir out/_lab/fold
+// Ý trung tâm: lũy thừa 2 là đồ vật trong tay — gấp tờ giấy n lần được 2ⁿ lớp, mở một nếp là chia 2. Số mũ = số nếp gấp,
+//   giá trị = số lớp. Gấp 0 lần không phải "không có giấy": tờ giấy NGUYÊN vẫn nằm đó = 1. Phép nhân chưa bắt đầu đứng ở 1.
+// Vật xuyên suốt: TỜ GIẤY CHƯA GẤP (viền cam, không nếp) — đáy cầu thang hồi 1, cái còn lại khi mở hết nếp hồi 2, "1 cách
+//   điền 0 ô" hồi 4 (tờ trắng, không ô nào phải điền), một ứng viên ô 0⁰ hồi 3/5. "0" = Ô KHOÉT (lỗ cắt thấy mặt bàn tối).
+//   Ô 0⁰ = tờ giấy nguyên trượt nửa chừng lên miệng lỗ khoét, viền đứt tím — hai thứ chồng trên cùng một ô bảng kẻ.
+// Màu: bàn bìa xám than #24221F · giấy ngà #F2ECE0 (bóng đổ ấm) · "1" cam #FFA052 trên bàn / #9C3B06 trên giấy · "0" xanh
+//   #86B6F2 trên bàn / #2A5EA6 trên giấy · tranh chấp 0⁰ tím #C3A6FF / #6A3DBE + viền đứt · "SAI" = vết XÉ giấy (mép răng cưa)
+//   + mực hồng sen #E0457B (khác cả ba) · chữ bàn #EFE8DA / phụ #A9A193 · chữ giấy #2B2724 / phụ #5C554B.
+// Chữ: Archivo (phương trình, số mũ vẽ nâng bằng chữ nhỏ) · IBM Plex Mono (nhãn đếm nếp/lớp) · Cormorant LN nghiêng (lời dẫn).
+// Tiếng: page (tờ giấy đặt xuống) · whoosh (gấp) · snap (miết nếp) · tick (đếm lớp) · tear (gạch sai = xé) · question (0⁰).
+// Phần khác: mở bài máy cãi nhau = hai mẩu giấy in hoá đơn "1" / "ERROR" thò ra · cầu thang 16→1 = chồng 16 lớp mở dần ·
+//   1000→1 = tờ gấp ba (mỗi nếp chia 10, gấp quạt) · aᵐ·aⁿ = hai tờ gấp chồng lên nhau, số nếp cộng · x·x = x = tờ chồng lên
+//   chính nó không dày thêm: chỉ tờ trống (0) hay tờ nguyên (1) · đếm cách điền ô = lưới ô giấy, 0 ô = tờ trắng, đúng 1 cách ·
+//   nhị thức / đa thức / eˣ = hạng tử đầu là tờ nguyên "1" · Knuth 1992 = phiếu ghi chú kẹp ghim · hai đường tới góc (0,0) =
+//   hai nếp gấp chéo chạy về một góc, xʸ = 2 là nếp cong · xˣ → 1 = tờ mở dần phẳng · Cauchy 1821 / Libri 1833 / Möbius =
+//   trang sách in gấp góc · tóm tắt = xấp giấy đã mở phẳng · lần sau 0! = 1 = tờ gấp đôi chưa mở, góc hé chữ "0!".
+import { toCanvas } from '../../../engine/mascot.js';
+import { hash } from '../../../engine/lib.js';
+
+const W = 1920, H = 1080, g = document.getElementById('cv').getContext('2d');
+const mk = (w = W, h = H) => { const c = document.createElement('canvas'); c.width = w; c.height = h; return c; };
+const C = { desk: '#24221F', ink: '#EFE8DA', dim: '#A9A193', paper: '#F2ECE0', pInk: '#2B2724', pDim: '#5C554B',
+  one: '#FFA052', oneP: '#9C3B06', zero: '#86B6F2', zeroP: '#2A5EA6', vs: '#C3A6FF', vsP: '#6A3DBE', hole: '#1A1816' };
+const ARC = '"Archivo"', MONO = '"IBM Plex Mono"', CG = '"Cormorant Garamond"';
+const IM = {}; let DESK, FIB, ready = false;
+const ev = s => Function(`return (${s})`)();
+const must = (s, v) => { if (ev(s) !== v) throw new Error(`sai: ${s} ≠ ${v}`); return v; };
+
+function desk() {                                     // bìa xám than: hạt mịn, vân sợi ngang, sáng giữa
+  const c = mk(), x = c.getContext('2d'), d = x.createImageData(W, H), b = [0x24, 0x22, 0x1F];
+  for (let i = 0; i < W * H; i++) {
+    const px = i % W, py = (i / W) | 0, n = (hash(i * 0.517) - 0.5) * 6 + (hash(((py * 3.1) | 0) * 7.7) - 0.5) * 2;
+    const r = Math.hypot((px - W * 0.5) / W, (py - H * 0.42) / H), v = 1.1 - 0.55 * r * r;
+    d.data[i * 4] = b[0] * v + n; d.data[i * 4 + 1] = b[1] * v + n; d.data[i * 4 + 2] = b[2] * v + n; d.data[i * 4 + 3] = 255;
+  }
+  x.putImageData(d, 0, 0); return c;
+}
+function fibres() {                                   // vân giấy: mẫu 512² lặp lại, sợi mảnh tất định
+  const c = mk(512, 512), x = c.getContext('2d');
+  for (let k = 0; k < 900; k++) {
+    const sx = hash(k * 1.7) * 512, sy = hash(k * 3.3) * 512, a = hash(k * 5.1) * Math.PI, l = 4 + hash(k * 7.9) * 16;
+    x.strokeStyle = hash(k * 2.2) < 0.5 ? 'rgba(120,100,70,0.07)' : 'rgba(255,255,255,0.10)'; x.lineWidth = 0.8;
+    x.beginPath(); x.moveTo(sx, sy); x.lineTo(sx + l * Math.cos(a), sy + l * Math.sin(a)); x.stroke();
+  }
+  return g.createPattern(c, 'repeat');
+}
+function text(s, x, y, font, color, align = 'left', ls = 0) { g.font = font; g.fillStyle = color; g.textAlign = align; g.textBaseline = 'alphabetic';
+  g.letterSpacing = ls + 'px'; g.fillText(s, x, y); const w = g.measureText(s).width; g.letterSpacing = '0px'; return w; }
+const label = (s, x, y, color = C.dim, align = 'left', size = 20) => text(s.toUpperCase(), x, y, `500 ${size}px ${MONO}`, color, align, 2.5);
+// một "chữ" có thể có số mũ: [chữ, màu, mũ?, màuMũ?] — số mũ là chữ nhỏ 0.58 nâng 0.42 cỡ (đồng nhất, không dùng ²³⁰)
+function runW(p, size) { g.font = `600 ${size}px ${ARC}`; let w = g.measureText(p[0]).width;
+  if (p[2] != null) { g.font = `600 ${size * 0.58}px ${ARC}`; w += g.measureText(p[2]).width + size * 0.04; } return w; }
+function run(p, x, y, size, def) {
+  const w0 = text(p[0], x, y, `600 ${size}px ${ARC}`, p[1] || def);
+  if (p[2] != null) text(p[2], x + w0 + size * 0.04, y - size * 0.42, `600 ${size * 0.58}px ${ARC}`, p[3] || p[1] || def);
+  return runW(p, size);
+}
+function eq(parts, x, y, size, def = C.ink, align = 'left') {
+  const ws = parts.map(p => runW(p, size)), tot = ws.reduce((a, b) => a + b, 0);
+  let cx = align === 'center' ? x - tot / 2 : align === 'right' ? x - tot : x; const out = [];
+  parts.forEach((p, i) => { run(p, cx, y, size, def); out.push([cx, cx + ws[i]]); cx += ws[i]; });
+  return out;
+}
+function line(pts, color, w, dash = []) { g.save(); g.strokeStyle = color; g.lineWidth = w; g.setLineDash(dash); g.lineCap = 'round';
+  g.beginPath(); pts.forEach(([a, b], i) => i ? g.lineTo(a, b) : g.moveTo(a, b)); g.stroke(); g.restore(); }
+function arrowHead(x, y, ang, color, s = 14) { g.save(); g.translate(x, y); g.rotate(ang); g.fillStyle = color;
+  g.beginPath(); g.moveTo(0, 0); g.lineTo(-s, -s * 0.55); g.lineTo(-s, s * 0.55); g.closePath(); g.fill(); g.restore(); }
+
+// tờ giấy: hình chữ nhật ngà, bóng đổ mềm, vân sợi, mép sáng; o.edge = viền cam của "tờ nguyên"
+function sheet(x, y, w, h, o = {}) {
+  g.save();
+  g.shadowColor = 'rgba(0,0,0,0.5)'; g.shadowBlur = o.blur ?? 22; g.shadowOffsetX = 4; g.shadowOffsetY = o.lift ?? 10;
+  g.fillStyle = o.fill || C.paper; g.fillRect(x, y, w, h); g.restore();
+  g.save(); g.beginPath(); g.rect(x, y, w, h); g.clip();
+  g.fillStyle = FIB; g.fillRect(x, y, w, h);
+  const gr = g.createLinearGradient(x, y, x + w, y + h); gr.addColorStop(0, 'rgba(255,255,255,0.18)'); gr.addColorStop(1, 'rgba(120,95,60,0.10)');
+  g.fillStyle = gr; g.fillRect(x, y, w, h); g.restore();
+  if (o.edge) { g.save(); g.strokeStyle = o.edge; g.lineWidth = o.edgeW || 4; g.strokeRect(x + 2, y + 2, w - 4, h - 4); g.restore(); }
+}
+// chồng n lớp (gấp): các lớp dưới lệch chéo, mép lộ ra thành vạch đếm được
+function stack(x, y, w, h, n) {
+  const d = Math.min(4, 26 / n);
+  for (let k = n - 1; k >= 0; k--) {
+    const ox = x + k * d, oy = y - k * d;
+    g.save(); if (k === n - 1) { g.shadowColor = 'rgba(0,0,0,0.5)'; g.shadowBlur = 20; g.shadowOffsetX = 4; g.shadowOffsetY = 10; }
+    g.fillStyle = k ? '#DCD3C2' : C.paper; g.fillRect(ox, oy, w, h); g.restore();
+    g.strokeStyle = 'rgba(90,75,55,0.55)'; g.lineWidth = 1; g.strokeRect(ox + 0.5, oy + 0.5, w - 1, h - 1);
+  }
+  g.save(); g.beginPath(); g.rect(x, y, w, h); g.clip(); g.fillStyle = FIB; g.fillRect(x, y, w, h); g.restore();
+  // nếp gấp: mép gấp (cạnh trái) đậm hơn, như giấy cuộn tròn
+  const gr = g.createLinearGradient(x, 0, x + 14, 0); gr.addColorStop(0, 'rgba(110,90,60,0.35)'); gr.addColorStop(1, 'rgba(110,90,60,0)');
+  g.fillStyle = gr; g.fillRect(x, y, 14, h);
+}
+// ô khoét: lỗ cắt thấy mặt bàn tối, bóng trong ở mép trên-trái
+function hole(x, y, w, h) {
+  g.fillStyle = C.hole; g.fillRect(x, y, w, h);
+  const a = g.createLinearGradient(0, y, 0, y + 16); a.addColorStop(0, 'rgba(0,0,0,0.6)'); a.addColorStop(1, 'rgba(0,0,0,0)');
+  g.fillStyle = a; g.fillRect(x, y, w, 16);
+  const b = g.createLinearGradient(x, 0, x + 12, 0); b.addColorStop(0, 'rgba(0,0,0,0.5)'); b.addColorStop(1, 'rgba(0,0,0,0)');
+  g.fillStyle = b; g.fillRect(x, y, 12, h);
+  g.strokeStyle = 'rgba(255,255,255,0.55)'; g.lineWidth = 1.2; g.strokeRect(x - 0.5, y - 0.5, w + 1, h + 1);
+}
+function sprite(pose) {                               // nhân vật + viền tối 3px để áo trắng tách khỏi bàn
+  const im = IM[pose], p = 6, c = mk(im.width + 2 * p, im.height + 2 * p), x = c.getContext('2d');
+  const sil = mk(im.width, im.height), sx = sil.getContext('2d'); sx.drawImage(im, 0, 0); sx.globalCompositeOperation = 'source-in';
+  sx.fillStyle = '#100E0C'; sx.fillRect(0, 0, im.width, im.height);
+  for (let k = 0; k < 16; k++) { const a = k / 16 * 2 * Math.PI; x.drawImage(sil, p + 3.2 * Math.cos(a), p + 3.2 * Math.sin(a)); }
+  x.drawImage(im, p, p); return { c, p, h: im.height, w: im.width };
+}
+function figure(S, cx, foot, h) { const s = h / S.h, w = S.c.width * s; g.drawImage(S.c, cx - w / 2, foot - h - S.p * s, w, S.c.height * s);
+  return [cx - S.w * s / 2, cx + S.w * s / 2]; }
+const frac = (v) => { const d = 1 / v; if (!Number.isInteger(d)) throw new Error('phân số lạ ' + v); return d; };
+function fracAt(d, cx, y, size, color) {               // 1/d xếp chồng, căn giữa ở cx, baseline mẫu số = y
+  const s = size * 0.62;
+  text('1', cx, y - s * 1.05, `600 ${s}px ${ARC}`, color, 'center'); text(String(d), cx, y, `600 ${s}px ${ARC}`, color, 'center');
+  g.font = `600 ${s}px ${ARC}`; const w = Math.max(g.measureText(String(d)).width, s * 0.7) + 8;
+  g.fillStyle = color; g.fillRect(cx - w / 2, y - s * 0.95 - 1.5, w, 3);
+}
+
+const frames = [
+  () => {                                             // 0 · HỒI 2: rút từng số 2 → còn tờ giấy nguyên = 1
+    const v = [must('2 ** 3', 8), must('2 ** 2', 4), must('2 ** 1', 2), must('2 ** 0', 1)];
+    must('1 * 2 * 2 * 2', 8); must('1 * 2 * 2', 4); must('1 * 2', 2);
+    label('Act II · multiplying zero times', 96, 92, C.dim);
+    const S = 66, X = 96, ys = [222, 390, 574, 812];
+    // cột cố định lấy từ hàng dài nhất
+    const pw = runW(['2', null, '3'], S), ew = runW([' = '], S), w1 = runW(['1'], S), wf = runW([' × 2'], S);
+    const xEq = X + pw, x1 = xEq + ew, xf = [0, 1, 2].map(i => x1 + w1 + i * wf), xR = x1 + w1 + 3 * wf;
+    let lastRight = 0;
+    [3, 2, 1, 0].forEach((n, r) => {
+      const y = ys[r], hi = n === 0;
+      run(['2', C.ink, String(n)], X, y, S, C.ink);
+      run([' = '], xEq, y, S, C.ink);
+      run(['1', C.one], x1, y, S, C.ink);
+      for (let i = 0; i < 3; i++) {
+        if (i < n) run([' × 2'], xf[i], y, S, C.ink);
+        else {                                         // số 2 đã rút: chỗ trống viền đứt (nếp đã mở)
+          g.save(); g.strokeStyle = 'rgba(169,161,147,0.45)'; g.lineWidth = 2; g.setLineDash([6, 7]);
+          g.beginPath(); g.roundRect(xf[i] + 16, y - S * 0.74, wf - 22, S * 0.86, 8); g.stroke(); g.restore();
+        }
+      }
+      const R = eq([[' = '], [String(v[r]), hi ? C.one : C.ink]], xR, y, S, C.ink);
+      lastRight = Math.max(lastRight, R[1][1]);
+    });
+    // cột giấy: gấp n lần → 2ⁿ lớp; mở một nếp → diện tích ×2, số lớp ÷2
+    const PX = lastRight + 76, FW = 300, FH = 212;
+    const dims = [[FW / 4 + 4, FH / 2], [FW / 2, FH / 2], [FW / 2, FH], [FW, FH]];
+    const tops = [ys[0] - 78, ys[1] - 74, ys[2] - 128, ys[3] - 128];
+    [3, 2, 1, 0].forEach((n, r) => {
+      const [w, h] = dims[r], y0 = tops[r], layers = v[r];
+      if (n) {
+        stack(PX, y0, w, h, layers);
+        label(`${n} fold${n > 1 ? 's' : ''}`, PX + w + 34, y0 + h / 2 - 4, C.dim);
+        label(`${layers} layers`, PX + w + 34, y0 + h / 2 + 24, C.ink);
+      } else {
+        sheet(PX, y0, w, h, { edge: C.one, edgeW: 5 });
+        text('1', PX + w / 2, y0 + h / 2 + 50, `600 140px ${ARC}`, C.oneP, 'center');
+        label('no folds', PX + w + 34, y0 + h / 2 - 4, C.dim);
+        label('one whole sheet', PX + w + 34, y0 + h / 2 + 24, C.one);
+      }
+    });
+    // mở từng nếp: một mũi tên dọc chạy suốt cầu thang, mỗi bậc ÷2
+    const ax = PX - 34, a0 = tops[0] + 8, a1 = tops[3] + 40;
+    line([[ax, a0], [ax, a1]], C.dim, 2, [3, 7]); arrowHead(ax, a1 + 6, Math.PI / 2, C.dim, 13);
+    label('unfold', ax - 14, (ys[1] + ys[2]) / 2 - 30, C.dim, 'right', 18);
+    label('÷ 2 each', ax - 14, (ys[1] + ys[2]) / 2 - 4, C.dim, 'right', 18);
+    // bên cạnh nhỏ: tổng rỗng = 0, tích rỗng = 1
+    const yb = 1000, e1 = eq([['empty sum = '], ['0', C.zero]], 96, yb, 34);
+    const e2 = eq([['empty product = '], ['1', C.one]], e1[1][1] + 56, yb, 34);
+    g.fillStyle = C.dim; g.beginPath(); g.arc(e1[1][1] + 28, yb - 12, 3.5, 0, 7); g.fill();
+    text('adding starts from 0, multiplying from 1', e2[1][1] + 44, yb, `italic 600 34px ${CG}`, C.dim);
+    g.font = `italic 600 34px ${CG}`; const capEnd = e2[1][1] + 44 + g.measureText('adding starts from 0, multiplying from 1').width;
+    const F = figure(IM.noteS, 1676, 1080, 760);
+    if (Math.max(lastRight, PX + FW + 34 + 290, capEnd + 20) > F[0]) throw new Error('chữ đè nhân vật ' + F[0]);
+    window.__dbg = { F, PX, lastRight, capEnd };
+  },
+  () => {                                             // 1 · HỒI 3: bảng xʸ, hàng y=0 toàn 1, cột x=0 toàn 0, ô (0,0) bị giành
+    const xs = [0, 0.5, 2, 5], ys = [0, 1, 2, 3];
+    must('0 ** 1', 0); must('0 ** 3', 0); must('5 ** 3', 125); must('0.5 ** 3', 0.125); must('2 ** 0', 1); must('5 ** 0', 1);
+    const F = figure(IM.twoS, 236, 1080, 760);
+    label('Act III · two patterns, one square', 1824, 92, C.dim, 'right');
+    // tờ giấy lớn kẻ bảng
+    const SX = 580, SY = 126, SW = 1244, SH = 868;
+    if (SX < F[1] + 20) throw new Error('bảng đè nhân vật ' + F[1]);
+    sheet(SX, SY, SW, SH, { blur: 34, lift: 16 });
+    const HW = 150, HH = 104, CW = 206, CH = 142, TX = SX + 70, TY = SY + 66;
+    const cx = i => TX + HW + i * CW, cy = j => TY + HH + j * CH;
+    // dải tô: hàng y=0 cam nhạt, cột x=0 xanh nhạt
+    g.fillStyle = 'rgba(176,70,12,0.08)'; g.fillRect(cx(0), cy(0), 4 * CW, CH);
+    g.fillStyle = 'rgba(42,94,166,0.08)'; g.fillRect(cx(0), cy(0), CW, 4 * CH);
+    // kẻ bảng
+    g.strokeStyle = 'rgba(43,39,36,0.28)'; g.lineWidth = 1.5;
+    for (let i = 0; i <= 4; i++) { g.beginPath(); g.moveTo(cx(i), TY); g.lineTo(cx(i), cy(4)); g.stroke(); }
+    for (let j = 0; j <= 4; j++) { g.beginPath(); g.moveTo(TX, cy(j)); g.lineTo(cx(4), cy(j)); g.stroke(); }
+    g.strokeStyle = C.pInk; g.lineWidth = 2.5;
+    g.beginPath(); g.moveTo(TX, cy(0)); g.lineTo(cx(4), cy(0)); g.moveTo(cx(0), TY); g.lineTo(cx(0), cy(4)); g.stroke();
+    // góc: xʸ ; đầu cột x ; đầu hàng y
+    eq([['x', C.pInk, 'y']], TX + HW / 2, TY + HH / 2 + 22, 60, C.pInk, 'center');
+    xs.forEach((x, i) => {
+      const col = i === 0 ? C.zeroP : C.pInk, mx = cx(i) + CW / 2;
+      if (x === 0.5) fracAt(2, mx, TY + HH / 2 + 34, 70, col); else text(String(x), mx, TY + HH / 2 + 24, `600 64px ${ARC}`, col, 'center');
+    });
+    label('base x', (cx(0) + cx(4)) / 2, TY - 18, C.pDim, 'center', 18);
+    ys.forEach((y, j) => text(String(y), TX + HW / 2, cy(j) + CH / 2 + 22, `600 64px ${ARC}`, j === 0 ? C.oneP : C.pInk, 'center'));
+    g.save(); g.translate(TX - 26, (cy(0) + cy(4)) / 2); g.rotate(-Math.PI / 2); label('exponent y', 0, 0, C.pDim, 'center', 18); g.restore();
+    // ô
+    ys.forEach((y, j) => xs.forEach((x, i) => {
+      if (i === 0 && j === 0) return;
+      const v = x ** y, mx = cx(i) + CW / 2, my = cy(j) + CH / 2;
+      if (j === 0) {                                   // hàng mũ 0: một tờ nguyên nhỏ, in "1"
+        if (v !== 1) throw new Error('hàng y=0');
+        sheet(mx - 62, my - 44, 124, 88, { edge: C.oneP, edgeW: 3, blur: 10, lift: 5 });
+        text('1', mx, my + 24, `600 64px ${ARC}`, C.oneP, 'center');
+      } else if (i === 0) {                            // cột cơ số 0: ô khoét, "0"
+        if (v !== 0) throw new Error('cột x=0');
+        hole(mx - 62, my - 44, 124, 88);
+        text('0', mx, my + 24, `600 64px ${ARC}`, C.zero, 'center');
+      } else if (v < 1) fracAt(frac(v), mx, my + 34, 64, C.pDim);
+      else text(String(v), mx, my + 22, `600 58px ${ARC}`, C.pDim, 'center');
+    }));
+    // ô (0,0): lỗ khoét, tờ nguyên trượt nửa chừng lên — viền đứt tím
+    const mx = cx(0) + CW / 2, my = cy(0) + CH / 2;
+    hole(mx - 62, my - 44, 124, 88);
+    g.save(); g.beginPath(); g.rect(cx(0) + 4, cy(0) + 4, CW - 8, CH - 8); g.clip();
+    g.translate(mx + 2, my - 2); g.rotate(-0.14);
+    sheet(-2, -44, 124, 88, { edge: C.oneP, edgeW: 3, blur: 12, lift: 6 });
+    g.restore();
+    text('0?', mx - 34, my + 20, `600 48px ${ARC}`, C.zero, 'center');
+    g.save(); g.translate(mx + 2, my - 2); g.rotate(-0.14); text('1?', 54, 22, `600 48px ${ARC}`, C.oneP, 'center'); g.restore();
+    g.save(); g.strokeStyle = C.vsP; g.lineWidth = 4; g.setLineDash([12, 8]); g.strokeRect(cx(0) + 3, cy(0) + 3, CW - 6, CH - 6); g.restore();
+    // hai mũi tên: dọc hàng (cam, từ phải về) và dọc cột (xanh, từ dưới lên)
+    const ay = cy(0) + CH - 14, ax = cx(0) + CW - 14;
+    line([[cx(4) - 16, ay], [ax + 18, ay]], C.oneP, 3); arrowHead(ax + 12, ay, Math.PI, C.oneP, 16);
+    line([[ax, cy(4) - 16], [ax, ay + 18]], C.zeroP, 3); arrowHead(ax, ay + 12, -Math.PI / 2, C.zeroP, 16);
+    // chú thích lề phải tờ giấy
+    const LX = cx(4) + 34;
+    label('row y = 0', LX, cy(0) + CH / 2 - 12, C.pDim, 'left', 18);
+    label('always 1', LX, cy(0) + CH / 2 + 18, C.oneP, 'left', 20);
+    label('column x = 0', cx(0) + CW / 2, cy(4) + 40, C.pDim, 'center', 18);
+    label('always 0', cx(0) + CW / 2, cy(4) + 70, C.zeroP, 'center', 20);
+    eq([['0', C.vsP, '0']], LX + 40, cy(1) + 42, 56, C.vsP, 'center');
+    label('claimed', LX + 40, cy(1) + 80, C.vsP, 'center', 18);
+    label('by both', LX + 40, cy(1) + 106, C.vsP, 'center', 18);
+    text('One pattern says one. The other says zero.', cx(1) + 30, cy(4) + 62, `italic 600 40px ${CG}`, C.pInk);
+    window.__dbg = { F, LX, right: SX + SW, capEnd: cx(1) + 30 };
+  },
+];
+
+(async () => {
+  await Promise.all(['600 140px', '600 70px', '600 66px', '600 64px', '600 60px', '600 58px', '600 56px', '600 48px', '600 43.4px',
+    '600 40px', '600 38.3px', '600 34px', '600 32px', '600 30px']
+    .map(f => document.fonts.load(`${f} ${ARC}`))
+    .concat(['500 22px', '500 20px', '500 18px'].map(f => document.fonts.load(`${f} ${MONO}`)))
+    .concat(['italic 600 40px', 'italic 600 34px'].map(f => document.fonts.load(`${f} ${CG}`))));
+  await Promise.all(['notebook', 'twoways'].map(p => new Promise((res, rej) => { const im = new Image();
+    im.onload = () => { IM[p] = toCanvas(im); res(); }; im.onerror = () => rej(new Error('img ' + p)); im.src = `../../../assets/character-v2/cut/pose-${p}.png`; })));
+  IM.noteS = sprite('notebook'); IM.twoS = sprite('twoways');
+  DESK = desk(); FIB = fibres(); ready = true;
+})().catch(e => { window.__intro.error = String(e); });
+const frame = t => { g.setTransform(1, 0, 0, 1, 0, 0); g.drawImage(DESK, 0, 0); frames[Math.min(1, Math.floor(t))](); };
+window.__intro = { get ready() { return ready; }, still: frame, frame, DUR: 2 };
+</script>
